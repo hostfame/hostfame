@@ -1,6 +1,6 @@
 "use client";
 import { WebHostingData } from "@/data/hosting.data";
-import { Search } from "lucide-react";
+import { IoSearch } from "react-icons/io5";
 import React from "react";
 import { useForm } from "react-hook-form";
 
@@ -28,9 +28,9 @@ const SubmitDomainName = () => {
       />
       <button
         type="submit"
-        className="flex items-center justify-center cursor-pointer gap-1 sm:gap-2 bg-gradient-to-r from-primary-blue to-secondary-blue text-white font-semibold text-sm sm:text-base px-4 sm:px-7 md:px-9 py-3 sm:py-4 rounded-l-none rounded-r-md hover:opacity-90 transition"
+        className="flex items-center justify-center cursor-pointer gap-1 sbg-gradient-to-r from-primary-blue to-secondary-blue text-white font-semibold text-sm sm:text-base px-4 sm:px-7 md:px-9 py-3 sm:py-4 rounded-l-none rounded-r-md hover:opacity-90 transition"
       >
-        <Search /> Search
+        <IoSearch size={20}/> Search
       </button>
     </form>
   );
