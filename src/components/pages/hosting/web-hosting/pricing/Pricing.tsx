@@ -9,16 +9,11 @@ import { useState } from "react"
 
 export function Pricing() {
   const [billingPeriod, setBillingPeriod] = useState<BillingPeriod>("monthly")
-  const [expandedCards, setExpandedCards] = useState<Set<string>>(new Set())
+  // Always expanded → single state instead of per-card
+  const [isExpanded, setIsExpanded] = useState(true)
 
-  const handleToggleExpand = (planId: string) => {
-    const newExpanded = new Set(expandedCards)
-    if (newExpanded.has(planId)) {
-      newExpanded.delete(planId)
-    } else {
-      newExpanded.add(planId)
-    }
-    setExpandedCards(newExpanded)
+  const handleToggleExpand = () => {
+    setIsExpanded((prev) => !prev)
   }
 
   return (
@@ -55,8 +50,8 @@ export function Pricing() {
               <PricingCard
                 plan={plan}
                 billingPeriod={billingPeriod}
-                isExpanded={expandedCards.has(plan.id)}
-                onToggleExpand={() => handleToggleExpand(plan.id)}
+                isExpanded={isExpanded}
+                onToggleExpand={handleToggleExpand}
                 className="w-full max-w-sm animate-fade-in-up"
               />
             </div>
