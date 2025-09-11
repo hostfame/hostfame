@@ -54,6 +54,13 @@ export const WebHostingData = {
     buttonText: "Live Chat With Sales",
     buttonLink: "#",
     image: "/assets/web-hosting/question-section/man-attending-online-meeting.png"
+  },
+  migrateYourSiteSection: {
+    title: "Migrate Your Site Instantly without any single hour downtime",
+    description: "Migrating a website can be daunting, which is why we have team of experts who are always ready to migrate your website smoothly.",
+    image: "/assets/web-hosting/lock.png",
+    buttonText: "Request Free Migration",
+    buttonLink: "/contact",
   }
 };
 
