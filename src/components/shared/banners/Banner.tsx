@@ -47,7 +47,7 @@ export const Banner: React.FC<BannerProps> = ({
 }) => {
   return (
     <section
-      className={`relative w-full text-white bg-no-repeat h-screen max-h-[780px] overflow-hidden ${className}`}
+      className={`relative w-full text-white bg-no-repeat h-fit xl:h-[740px] xl:max-h-[740px] overflow-hidden ${className}`}
       style={{
         backgroundPosition: "left center, center center",
         backgroundSize: "contain",
