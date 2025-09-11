@@ -2,7 +2,7 @@ import React from "react";
 
 interface CenteredSectionHeaderProps {
   title: string | React.ReactNode;
-  description: string;
+  description?: string;
   className?: string;
   classNameForTitle?: string;
   classNameForDescription?: string;
@@ -20,7 +20,7 @@ const CenteredSectionHeader = ({
       className={`mx-auto space-y-3 max-w-7xl px-6 text-center ${className}`}
     >
       <h2
-        className={`text-3xl md:text-4xl font-bold tracking-tight text-slate-900 ${classNameForTitle}`}
+        className={`text-4xl md:text-5xl font-bold tracking-tight text-slate-900 ${classNameForTitle}`}
       >
         {title}
       </h2>
