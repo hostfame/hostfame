@@ -3,10 +3,12 @@ import HostingBenefits from "@/components/pages/hosting/web-hosting/HostingBenef
 import ReviewsSection from "@/components/pages/hosting/web-hosting/reviews/ReviewSection";
 import WebHosting from "@/components/pages/hosting/web-hosting/WebHosting";
 import { Banner } from "@/components/shared/banners/Banner";
+import PromoTopBar from "@/components/shared/promo/PromoTopbar";
 
 export default function Home() {
   return (
     <section>
+      <PromoTopBar />
       <Banner
         title={
           <>
@@ -26,7 +28,7 @@ export default function Home() {
         lists={[
           "Free .COM Domain on Trinnially",
           "Genuine & Latest Control Panel",
-          "Free WildCard SSL for Lifetime"
+          "Free WildCard SSL for Lifetime",
         ]}
       />
       <HostingBenefits />
