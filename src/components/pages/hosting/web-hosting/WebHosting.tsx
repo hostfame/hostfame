@@ -3,6 +3,7 @@ import SearchDomainName from "./searchDomainName/SearchDomainName";
 import SectionWrapper from "@/components/shared/wrappers/SectionWrapper";
 import WebHostingPartners from "./WebHostingPartners";
 import MoneyBack from "./MoneyBack";
+import WebHostingFeatures from "./WebHostingFeatures";
 
 const WebHosting = () => {
   return (
@@ -15,6 +16,10 @@ const WebHosting = () => {
 
       <SectionWrapper>
         <MoneyBack/>
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <WebHostingFeatures/>
       </SectionWrapper>
     </section>
   );
