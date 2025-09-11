@@ -10,21 +10,20 @@ import {
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#071B57] text-white">
+    <footer className="bg-gradient-to-br from-[#001466] to-[#001158] text-white">
       <div className="mx-auto max-w-7xl px-6 py-10">
         {/* Payment / SSL banner */}
-        <div className="mx-auto max-w-5xl rounded-md bg-white p-3 shadow">
-          <div className="relative h-24 w-full">
-            <Image
-              src="/assets/ssl-commerce-all.webp"
-              alt="Supported payment methods"
-              fill
-              sizes="(max-width: 768px) 100vw, 800px"
-              className="object-contain"
-              priority
-            />
-          </div>
+        <div className="mx-auto max-w-7xl rounded-md shadow w-full">
+          <Image
+            src="/assets/ssl-commerce-all.webp"
+            alt="Supported payment methods"
+            width={1920}
+            height={400}
+            className="w-full h-auto object-contain"
+            priority
+          />
         </div>
+
 
         <hr className="my-6 border-white/15" />
 
@@ -38,11 +37,10 @@ const Footer: React.FC = () => {
                   <li key={lnk.label}>
                     <a
                       href={lnk.href}
-                      className={`text-sm text-white/80 hover:text-white transition-colors ${
-                        lnk.highlight
+                      className={`text-sm text-white/80 hover:text-white transition-colors ${lnk.highlight
                           ? "text-amber-300 hover:text-amber-200"
                           : ""
-                      }`}
+                        }`}
                     >
                       {lnk.label}
                     </a>
