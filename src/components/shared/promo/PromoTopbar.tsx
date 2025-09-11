@@ -54,7 +54,7 @@ export default function PromoTopBar({
           {/* Right: view link + close button */}
           <div className="flex min-w-max items-center  sm:gap-4 pl-2">
             <Link
-              href="#"
+              href="#pricing-section"
               className="flex items-center text-xs  gap-1 whitespace-nowrap sm:text-sm md:text-lg  underline underline-offset-4 hover:opacity-90"
             >
               View Details <FiChevronDown className="mt-[1px]" />
