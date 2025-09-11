@@ -4,6 +4,7 @@ import { CATEGORIES, FAQS } from "@/data/faqs.data";
 import { FaqCategory, FaqItem } from "@/types/faqs.types";
 import React, { useEffect, useMemo, useState } from "react";
 import { AiOutlinePlus } from "react-icons/ai";
+import { FiMinus } from "react-icons/fi";
 
 type Props = {
   categories?: FaqCategory[];
@@ -124,16 +125,16 @@ const AccordionItem: React.FC<{
 
         {/* plus icon rotates when open */}
         <span
-          className={`inline-flex h-7 w-7 items-center justify-center rounded-md transition-all duration-300
+          className={`inline-flex h-7 w-7 items-center justify-center rounded-full transition-all duration-300
           ${
             isOpen
-              ? "bg-blue-50 text-blue-600 rotate-45"
+              ? "bg-blue-50 text-blue-600"
               : "bg-transparent text-blue-600"
           }
         `}
           aria-hidden
         >
-          <AiOutlinePlus className="h-5 w-5" />
+          {isOpen ? <FiMinus className="size-5"/> : <AiOutlinePlus className="h-5 w-5" />}
         </span>
       </button>
 
