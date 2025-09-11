@@ -6,6 +6,7 @@
   --text-primary: #0A1440;
   --primary-blue: #0A8AFF;
   --secondary-blue: #3B82F6;
+  --blue-dark: #03206B;
 }
 
 @theme inline {
@@ -15,6 +16,7 @@
   --color-foreground: var(--foreground);
   --color-primary-blue: var(--primary-blue);
   --color-secondary-blue: var(--secondary-blue);
+  --color-blue-dark: var(--blue-dark);
 }
 
 body {
