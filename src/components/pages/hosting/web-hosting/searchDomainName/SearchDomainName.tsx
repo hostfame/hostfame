@@ -9,12 +9,12 @@ const SearchDomainName = () => {
   }
 
   return (
-    <section className="relative overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-[0_10px_40px_-15px_rgb(0,0,0,0.15)]">
+    <section className="relative overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-[0_10px_40px_-15px_rgb(0,0,0,0.15)]">
       {/* Subtle radial background accents */}
       <div className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-gradient-to-br from-primary-blue/20 to-secondary-blue/10 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-gradient-to-br from-primary-blue/10 to-secondary-blue/20 blur-3xl" />
 
-      <div className="relative grid gap-10 sm:p-6 lg:p-8 lg:grid-cols-2">
+      <div className="relative grid gap-10 p-2 py-8 md:p-8 lg:py-0 lg:p-12 lg:grid-cols-2">
         {/* Left */}
         <div className="flex flex-col justify-center gap-6">
           <header className="space-y-3">
