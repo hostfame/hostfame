@@ -6,6 +6,9 @@ import WebHosting from "@/components/pages/hosting/web-hosting/WebHosting";
 import { Banner } from "@/components/shared/banners/Banner";
 import PromoTopBar from "@/components/shared/promo/PromoTopbar";
 
+export const dynamic = "force-static";
+export const revalidate = 3600;
+
 export default function Home() {
   return (
     <section>
