@@ -3,37 +3,42 @@ import React from "react";
 
 const MoneyBack = () => {
   return (
-    <section className="relative w-full flex flex-col items-center bg-white py-8 md:py-16 px-4 sm:px-8 lg:px-16 text-center shadow-sm overflow-hidden ">
+    <section className="relative w-full bg-gradient-to-r from-blue-950 to-blue-800 py-8 md:py-16 px-4 sm:px-8 lg:px-16 text-white rounded-2xl overflow-hidden">
       {/* Background Circles */}
-      <div className="absolute -top-20 -left-20 w-56 h-56 bg-gradient-to-bl from-[#3b82f6] to-[#a5b4fc] rounded-full z-10 opacity-20" />
-      <div className="absolute -bottom-20 -right-20 w-56 h-56 bg-gradient-to-tr from-[#f87171] to-[#fbbf24] rounded-full z-10 opacity-20" />
+      <div className="absolute -top-20 -left-20 w-56 h-56 bg-gradient-to-bl from-white to-gray-300 rounded-full opacity-15" />
+      <div className="absolute -bottom-20 -right-20 w-56 h-56 bg-gradient-to-tr from-white to-gray-400 rounded-full opacity-15" />
 
-      {/* Heading */}
-      <h2 className="text-2xl md:text-3xl font-bold text-gray-800">
-        {WebHostingData.moneyBackSection.title}
-      </h2>
-      <p className="text-gray-500 mt-2 text-sm md:text-base max-w-2xl mx-auto">
-        {WebHostingData.moneyBackSection.description}
-      </p>
+      <div className="relative z-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        {/* Left: Heading + Description */}
+        <div className="text-center lg:text-left space-y-4">
+          <h2 className="text-3xl md:text-4xl font-bold">
+            {WebHostingData.moneyBackSection.title}
+          </h2>
+          <p className="text-white text-sm md:text-base max-w-xl mx-auto lg:mx-0">
+            {WebHostingData.moneyBackSection.description}
+          </p>
+        </div>
 
-      {/* Features */}
-      <div className="mt-8 flex flex-col md:flex-row items-center justify-center gap-8">
-        {moneyBackFeatures.map((feature, idx) => {
-          const Icon = feature.icon;
+        {/* Right: Features */}
+        <div className="grid grid-cols-1 gap-6">
+          {moneyBackFeatures.map((feature, idx) => {
+            const Icon = feature.icon;
 
-          return (
-            <div key={idx} className="flex items-center gap-3">
-              <div className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-600 shadow-md">
-                <span className="text-white text-xl">
-                  <Icon className="w-5 h-5" />
+            return (
+              <div
+                key={idx}
+                className="flex items-center gap-3 bg-blue-700/50 p-4 rounded-2xl shadow-md hover:bg-blue-700/60 transition"
+              >
+                <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-600 shadow-md flex-shrink-0">
+                  <Icon className="w-6 h-6 text-white" />
+                </div>
+                <span className="text-sm sm:text-base font-medium">
+                  {feature.text}
                 </span>
               </div>
-              <span className="text-sm sm:text-base font-medium">
-                {feature.text}
-              </span>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </section>
   );
