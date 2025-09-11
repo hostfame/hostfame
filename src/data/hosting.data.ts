@@ -1,8 +1,10 @@
 import { Feature } from "@/types/hosting.types";
-import { TbAward, TbHeadset, TbPhone, TbRocket } from "react-icons/tb";
+import { FaCalendarCheck, FaRegClock } from "react-icons/fa";
+import { RiArrowUpDownLine } from "react-icons/ri";
+import { TbAward, TbHeadset, TbRocket } from "react-icons/tb";
 
 export const WebHostingData = {
-  "domainNameSection": {
+  domainNameSection: {
     title: "Search your Domain Name",
     searchPlaceholder: "yourdomain.com",
     pricing: {
@@ -24,7 +26,7 @@ export const WebHostingData = {
       }
     }
   },
-  "webHostingPartnersSection": {
+  webHostingPartnersSection: {
     title: "Web Hosting Infrastructure",
     highlighted: "Partners",
     partners: [
@@ -37,10 +39,30 @@ export const WebHostingData = {
       "/assets/web-hosting/partners/mailchannels.jpeg", //mailchannels
       "/assets/web-hosting/partners/intel.png", //intel
       "/assets/web-hosting/partners/jetbackup.png", //jetbackup
-      "/assets/web-hosting/partners/imunify360.png", //imunify360
+      "/assets/web-hosting/partners/imunify360.png" //imunify360
     ]
+  },
+  moneyBackSection: {
+    title: "30 Day Money-back Guarantee",
+    description:
+      "There is no risk with our 30-day money back guarantee. Stay safe with assurance of refund."
   }
 };
+
+export const moneyBackFeatures = [
+  {
+    icon: RiArrowUpDownLine,
+    text: "Easily Upgrade or Downgrade"
+  },
+  {
+    icon: FaCalendarCheck,
+    text: "Get Notified before suspension"
+  },
+  {
+    icon: FaRegClock,
+    text: "Refund process is easy"
+  }
+];
 
 export const features: Feature[] = [
   {
@@ -48,20 +70,20 @@ export const features: Feature[] = [
     description:
       "You create your website and we take care of the rest. This is the promise of NVMe SSD of super fast enhanced website performance.",
     icon: TbRocket,
-    bgIcon: TbRocket,
+    bgIcon: TbRocket
   },
   {
     title: "24/7 Dedicated Support",
     description:
       "We provide 24/7 LiveChat support for you to help anytime you need. Support is provided through calls, chat, and ticket systems.",
     icon: TbHeadset,
-    bgIcon: TbHeadset,
+    bgIcon: TbHeadset
   },
   {
     title: "99.9% Uptime Guarantee",
     description:
       "There is no way a professional website can go down. Stay always online with our web hosting with a 99.9% uptime guarantee.",
     icon: TbAward,
-    bgIcon: TbAward,
-  },
+    bgIcon: TbAward
+  }
 ];

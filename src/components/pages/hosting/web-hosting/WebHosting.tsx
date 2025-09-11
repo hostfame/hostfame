@@ -2,6 +2,7 @@ import React from "react";
 import SearchDomainName from "./searchDomainName/SearchDomainName";
 import SectionWrapper from "@/components/shared/wrappers/SectionWrapper";
 import WebHostingPartners from "./WebHostingPartners";
+import MoneyBack from "./MoneyBack";
 import { Pricing } from "./pricing/Pricing";
 
 const WebHosting = () => {
@@ -13,6 +14,10 @@ const WebHosting = () => {
       </SectionWrapper>
 
       <WebHostingPartners />
+
+      <SectionWrapper>
+        <MoneyBack/>
+      </SectionWrapper>
     </section>
   );
 };

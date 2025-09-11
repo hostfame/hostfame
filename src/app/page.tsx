@@ -1,4 +1,5 @@
 import FaqSection from "@/components/pages/hosting/faqs/FaqSection";
+import AdvancedFeatures from "@/components/pages/hosting/web-hosting/advance-features/AdvanceFeatures";
 import HostingBenefits from "@/components/pages/hosting/web-hosting/HostingBenefits";
 import ReviewsSection from "@/components/pages/hosting/web-hosting/reviews/ReviewSection";
 import WebHosting from "@/components/pages/hosting/web-hosting/WebHosting";
@@ -34,6 +35,7 @@ export default function Home() {
       <HostingBenefits />
       <WebHosting />
       <ReviewsSection />
+      <AdvancedFeatures />
       <FaqSection />
     </section>
   );
