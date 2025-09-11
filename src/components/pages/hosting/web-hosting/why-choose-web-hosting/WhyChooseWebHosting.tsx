@@ -4,7 +4,6 @@ import CenteredSectionHeader from "@/components/shared/headers/CenteredSectionHe
 import { whyChooseWebHosting } from "@/data/web-hosting/whyChooseWebHosting.data";
 import { WhyChooseWebHostingProps } from "@/types/web-hosting/whyChooseWebHosting.types";
 
-/* Card kept in same file (per your request) */
 const FeatureCard: React.FC<WhyChooseWebHostingProps & { className?: string }> = ({
   title,
   description,
@@ -62,10 +61,8 @@ export default function WhyChooseWebHosting() {
       <div className="mx-auto max-w-7xl px-6">
         {/* Modern staggered grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
-          {whyChooseWebHosting.map((f, idx) => {
-            // create a subtle stagger at md+ for a more dynamic layout
-            const offset = [1, 4, 7].includes(idx) ? "md:-translate-y-2" : "md:translate-y-2";
-            return <FeatureCard key={f.title} {...f} className={offset} />;
+          {whyChooseWebHosting.map((f) => {
+            return <FeatureCard key={f.title} {...f} />;
           })}
         </div>
 

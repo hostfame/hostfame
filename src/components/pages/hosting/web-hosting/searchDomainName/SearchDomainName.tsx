@@ -4,48 +4,81 @@ import SubmitDomainName from "./SubmitDomainName";
 import Image from "next/image";
 
 const SearchDomainName = () => {
+  function classNames(...cn: (string | false | null | undefined)[]) {
+    return cn.filter(Boolean).join(" ");
+  }
+
   return (
-    <section className="bg-white rounded-2xl shadow-lg md:px-8 lg:px-16 py-5 px-4 flex flex-col md:flex-row items-center md:items-center justify-between gap-8">
-      <section className="flex-1 w-full flex flex-col justify-center ">
-        <h2 className="text-2xl md:text-3xl font-bold text-text-primary mb-6 text-center md:text-start">
-          {WebHostingData.domainNameSection.title}
-        </h2>
+    <section className="relative overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-[0_10px_40px_-15px_rgb(0,0,0,0.15)]">
+      {/* Subtle radial background accents */}
+      <div className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-gradient-to-br from-primary-blue/20 to-secondary-blue/10 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-gradient-to-br from-primary-blue/10 to-secondary-blue/20 blur-3xl" />
 
-        <SubmitDomainName/>
+      <div className="relative grid gap-10 sm:p-6 lg:p-8 lg:grid-cols-2">
+        {/* Left */}
+        <div className="flex flex-col justify-center gap-6">
+          <header className="space-y-3">
+            <h2 className="text-center lg:text-left text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900">
+              {WebHostingData.domainNameSection.title}
+            </h2>
+          </header>
 
-        <section className="flex md:gap-6 gap-4 flex-wrap mx-auto md:mx-0 mt-4">
-          <div className="text-start md:min-w-[80px] min-w-[50px]">
-            <p className="font-bold text-xl sm:text-2xl text-[#00B6F3]">{WebHostingData.domainNameSection.pricing.dotCom.title}</p>
-            <p className="text-gray-600 font-medium text-xs md:text-base">{WebHostingData.domainNameSection.pricing.dotCom.price}</p>
+          {/* Search Form */}
+          <SubmitDomainName />
+
+          {/* Pricing */}
+          <div className="pt-2">
+            <div className="grid grid-cols-2 sm:grid-cols-2 gap-3 sm:gap-4">
+              {Object.values(WebHostingData.domainNameSection.pricing).map(
+                (pricing, idx) => (
+                  <div
+                    key={`${pricing.title}-${idx}`}
+                    className="relative rounded-2xl border border-gray-200 bg-white p-4 shadow-sm hover:shadow-md transition"
+                  >
+                    {idx === 0 && (
+                      <span className="absolute -top-2 right-3 rounded-full bg-blue-600 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white shadow">
+                        Popular
+                      </span>
+                    )}
+                    <div className="flex items-baseline justify-between gap-2">
+                      <p
+                        className={classNames(
+                          "text-xl sm:text-2xl font-extrabold",
+                          idx === 0 && "text-sky-600",
+                          idx === 1 && "text-red-500",
+                          idx === 2 && "text-emerald-600",
+                          idx === 3 && "text-amber-500"
+                        )}
+                      >
+                        {pricing.title}
+                      </p>
+
+                      <p className=" text-gray-700 font-semibold">
+                        {pricing.price}
+                      </p>
+                    </div>
+                  </div>
+                )
+              )}
+            </div>
           </div>
+        </div>
 
-          <div className="text-start md:min-w-[80px] min-w-[50px]">
-            <p className="font-bold text-xl sm:text-2xl text-[#FF3B3B]">{WebHostingData.domainNameSection.pricing.dotNet.title}</p>
-            <p className="text-gray-600 font-medium text-xs md:text-base">{WebHostingData.domainNameSection.pricing.dotNet.price}</p>
+        {/* Right */}
+        <div className="flex items-center justify-center lg:justify-end">
+          <div className="relative">
+            <Image
+              width={420}
+              height={420}
+              priority={false}
+              loading="lazy"
+              alt="Domain deals visual"
+              src="/assets/web-hosting/com-domain-offer.png"
+              className=""
+            />
           </div>
-
-          <div className="text-start md:min-w-[80px] min-w-[50px]">
-            <p className="font-bold text-xl sm:text-2xl text-[#00C853]">{WebHostingData.domainNameSection.pricing.dotOrg.title}</p>
-            <p className="text-gray-600 font-medium text-xs md:text-base">{WebHostingData.domainNameSection.pricing.dotOrg.price}</p>
-          </div>
-
-          <div className="text-start md:min-w-[80px] min-w-[50px]">
-            <p className="font-bold text-xl sm:text-2xl text-[#FFD600]">{WebHostingData.domainNameSection.pricing.dotXyz.title}</p>
-            <p className="text-gray-600 font-medium text-xs md:text-base">{WebHostingData.domainNameSection.pricing.dotXyz.price}</p>
-          </div>
-        </section>
-      </section>
-
-      <section className="w-full md:w-auto flex justify-center items-center">
-        <Image
-          width={300}
-          height={300}
-          loading="lazy"
-          alt=".com domain offer"
-          src="/assets/web-hosting/com-domain-offer.png"
-        />
-
-      </section>
+        </div>
+      </div>
     </section>
   );
 };
