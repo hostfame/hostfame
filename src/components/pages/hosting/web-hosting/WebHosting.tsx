@@ -14,6 +14,7 @@ import FaqSection from "../faqs/FaqSection";
 import QuestionSection from "./QuestionSection";
 import MigrateYourSite from "./MigrateYourSite";
 import WhatMakesUsDifferent from "./WhatMakesUsDifferent";
+import WhyChooseWebHosting from "./why-choose-web-hosting/WhyChooseWebHosting";
 
 const WebHosting = () => {
   return (
@@ -54,7 +55,6 @@ const WebHosting = () => {
       </SectionWrapper>
 
       <WebHostingPartners />
-      <WhatMakesUsDifferent />
 
       <SectionWrapper className="my-12 md:my-16">
         <MoneyBack />
@@ -65,13 +65,13 @@ const WebHosting = () => {
       </SectionWrapper>
 
       <SectionWrapper>
-        <QuestionSection/>
+        <QuestionSection />
       </SectionWrapper>
 
       <AdvancedFeatures />
- 
+
       <SectionWrapper>
-        <MigrateYourSite/>
+        <MigrateYourSite />
       </SectionWrapper>
 
       <FaqSection />
