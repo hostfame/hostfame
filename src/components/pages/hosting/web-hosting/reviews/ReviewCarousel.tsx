@@ -65,17 +65,14 @@ const ReviewCarousel: React.FC<ReviewCarouselProps> = ({
           pauseOnMouseEnter: false,
         }}
         pagination={{ clickable: true }}
-        className="h-full"
+        className="h-full !rounded-2xl"
       >
         {reviews.map((r, i) => (
-          <SwiperSlide key={i} className="!h-full flex">
+          <SwiperSlide key={i} className="!h-full flex ">
             {/* Card fills slide height */}
-            <article className="relative h-full min-h-0 w-full rounded-2xl bg-white p-6 shadow-[0_8px_24px_rgba(10,30,70,0.08)] md:p-8 flex flex-col">
+            <article className="relative h-full min-h-0 w-full  bg-white p-6 shadow-[0_8px_24px_rgba(10,30,70,0.08)] md:p-8 flex flex-col">
               {/* watermark quote icon */}
-              <FaQuoteLeft
-                className="pointer-events-none absolute -bottom-2 left-6 h-16 w-16 text-slate-300/25"
-                aria-hidden
-              />
+              
 
               {/* Header (avatar + name + stars) */}
               <div className="flex items-start gap-4">
@@ -96,6 +93,11 @@ const ReviewCarousel: React.FC<ReviewCarouselProps> = ({
               <div className="mt-4 flex-1 min-h-0 overflow-y-auto pr-1">
                 <p className="text-[15px] leading-7 text-slate-600">{r.text}</p>
               </div>
+
+              <FaQuoteLeft
+                className="pointer-events-none  -bottom-2 left-6 h-16 w-16 text-slate-300/25"
+                aria-hidden
+              />
             </article>
           </SwiperSlide>
         ))}
