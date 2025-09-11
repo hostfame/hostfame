@@ -12,6 +12,7 @@ import ReviewsSection from "./reviews/ReviewSection";
 import AdvancedFeatures from "./advance-features/AdvanceFeatures";
 import FaqSection from "../faqs/FaqSection";
 import QuestionSection from "./QuestionSection";
+import MigrateYourSite from "./MigrateYourSite";
 
 const WebHosting = () => {
   return (
@@ -64,7 +65,13 @@ const WebHosting = () => {
       <SectionWrapper>
         <QuestionSection/>
       </SectionWrapper>
+
       <AdvancedFeatures />
+ 
+      <SectionWrapper>
+        <MigrateYourSite/>
+      </SectionWrapper>
+
       <FaqSection />
     </section>
   );
