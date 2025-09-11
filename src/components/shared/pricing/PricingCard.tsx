@@ -2,27 +2,15 @@
 
 import { PricingCardProps } from "@/types/pricing.types"
 import { Card, CardContent, CardHeader } from "../html/Card"
-import { FaCheckCircle, FaChevronDown, FaChevronUp } from "react-icons/fa"
-import { RxCross2 } from "react-icons/rx"
+import { FaChevronDown, FaChevronUp } from "react-icons/fa"
 import { PrimaryButton } from "../html/PrimaryButton"
+import Image from "next/image"
+import { Tooltip } from "react-tooltip"
 
 export function PricingCard({ plan, billingPeriod, isExpanded, onToggleExpand, className }: PricingCardProps) {
   const price = billingPeriod === "monthly" ? plan.monthlyPrice : plan.yearlyPrice
   const formattedPrice = (price / 1000).toLocaleString("en-BD")
   const period = billingPeriod === "monthly" ? "Per Month" : "Per Year"
-
-  const getTierIcon = () => {
-    switch (plan.name.toLowerCase()) {
-      case "starter":
-        return "⚡"
-      case "pro":
-        return "👑"
-      case "ultimate":
-        return "🚀"
-      default:
-        return plan.icon
-    }
-  }
 
   // Show only first 8 features when collapsed
   const visibleFeatures = isExpanded
@@ -37,14 +25,22 @@ export function PricingCard({ plan, billingPeriod, isExpanded, onToggleExpand, c
   return (
     <Card
       className={
-        `relative transition-all duration-500 hover:shadow-2xl group overflow-hidden bg-gradient-to-br from-card to-card/80 backdrop-blur-sm border-border/50 ${plan.isPopular && "ring-2 ring-secondary/50 shadow-2xl scale-105 z-10 bg-gradient-to-br from-secondary/5 to-secondary/10"} ${isExpanded && "shadow-xl"} ${className}`
+        `relative transition-all duration-500 hover:shadow-2xl group overflow-hidden bg-gradient-to-br from-card to-card/80 backdrop-blur-sm border-border/50 ${plan.isPopular && "ring-2 ring-primary/50 shadow-2xl z-10 bg-gradient-to-br from-primary/5 to-primary/10"} ${isExpanded && "shadow-xl"} ${plan.isPopular ? isExpanded ? "scale-102" : "scale-105" : ""} ${className}`
       }
     >
       {
         plan.isPopular && (
           <div className=" w-fit mx-auto">
             <section className="rounded-xl bg-gradient-to-r from-secondary to-secondary/80 text-secondary-foreground px-6 py-2 text-sm font-bold shadow-lg animate-pulse">
-              👑 Most Popular
+              <span className=" flex justify-center items-center gap-3">
+                <Image
+                  src={plan.icon}
+                  alt={plan.name}
+                  width={20}
+                  height={20}
+                />
+                <p>Most Popular</p>
+              </span>
             </section>
           </div>
         )
@@ -54,10 +50,15 @@ export function PricingCard({ plan, billingPeriod, isExpanded, onToggleExpand, c
         <div className="flex flex-col items-center gap-4">
           <div
             className={
-              `p-4 rounded-2xl transition-all duration-300 group-hover:scale-110 text-4xl ${plan.isPopular ? "bg-gradient-to-br from-secondary to-secondary/80 shadow-lg" : "bg-muted"}`
+              `h-18 rounded-2xl transition-all duration-300 group-hover:scale-110 text-4xl }`
             }
           >
-            {getTierIcon()}
+            <Image
+              src={plan.icon}
+              alt={plan.name}
+              width={60}
+              height={60}
+            />
           </div>
 
           <div>
@@ -82,13 +83,13 @@ export function PricingCard({ plan, billingPeriod, isExpanded, onToggleExpand, c
 
         <div className="">
           <section
-            className="text-emerald-600 border-emerald-200 bg-emerald-100 rounded-full"
+            className="text-emerald-600 border border-emerald-300 bg-emerald-100 rounded-full py-1.5"
           >
             {plan.guarantee}
           </section>
         </div>
 
-        <PrimaryButton variant={plan.isPopular ? "dark" : "light"}>
+        <PrimaryButton variant={plan.isPopular ? "light" : "bordered"}>
           {plan.ctaText}
         </PrimaryButton>
 
@@ -111,23 +112,41 @@ export function PricingCard({ plan, billingPeriod, isExpanded, onToggleExpand, c
 
         <div className="space-y-8">
           {visibleFeatures.map((section) => (
-            <div key={section.title}>
-              <h4 className="font-bold text-foreground flex items-center gap-2">
-                <div className="w-1 h-6 bg-gradient-to-b from-secondary to-secondary/50 rounded-full" />
+            <div key={section.title} className=" space-y-5">
+              <h4 className="bg-gray-100 py-2 px-5 font-bold text-foreground text-xl rounded-xl flex items-center gap-2">
                 {section.title}
               </h4>
               <div className="space-y-3 ml-3">
                 {section.features.map((feature, index) => (
-                  <div key={index} className="flex items-center gap-3 text-sm group/feature">
+                  <div
+                    data-tooltip-id="my-tooltip"
+                    data-tooltip-content="Hello world!"
+                    key={index}
+                    className="flex items-center gap-3 text-sm group/feature"
+                  >
                     <div
                       className={
                         `p-1 rounded-full transition-all duration-200 ${feature.included ? " group-hover/feature:scale-110" : ""}`
                       }
                     >
                       {feature.included ? (
-                        <FaCheckCircle className="h-5 w-5 text-emerald-500 " />
+                        <div className=" bg-emerald-200 p-1 rounded-full">
+                          <Image
+                            src={"/assets/pricing/check.svg"}
+                            alt={"check"}
+                            width={10}
+                            height={10}
+                          />
+                        </div>
                       ) : (
-                        <RxCross2 className="h-5 w-5 text-red-500" />
+                        <div className=" bg-red-200 p-1 rounded-full">
+                          <Image
+                            src={"/assets/pricing/cross.svg"}
+                            alt={"cross"}
+                            width={10}
+                            height={10}
+                          />
+                        </div>
                       )}
                     </div>
                     <span
@@ -146,18 +165,17 @@ export function PricingCard({ plan, billingPeriod, isExpanded, onToggleExpand, c
 
         <div className="border-t border-border/50">
           <button
-            // variant="ghost"
             onClick={onToggleExpand}
-            className={` cursor-pointer w-full h-12 flex justify-center items-center rounded-2xl font-medium transition-all duration-300 hover:scale-105 text-foreground hover:bg-secondary/10 hover:text-secondary border border-transparent hover:border-secondary/20`}
+            className={` cursor-pointer w-full h-12 flex justify-center items-center rounded-2xl font-medium transition-all duration-300 hover:scale-105 text-foreground hover:bg-primary/20 hover:text-secondary border border-primary/40 hover:border-primary/80 `}
           >
             {isExpanded ? (
               <>
-                <FaChevronUp className="h-5 w-5 mr-2" />
+                <FaChevronUp className="h-3 w-3 mr-2" />
                 Show Less Features
               </>
             ) : (
               <>
-                <FaChevronDown className="h-5 w-5 mr-2" />
+                <FaChevronDown className="h-3 w-3 mr-2" />
                 See More Features
               </>
             )}
