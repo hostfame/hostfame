@@ -13,6 +13,7 @@ import AdvancedFeatures from "./advance-features/AdvanceFeatures";
 import FaqSection from "../faqs/FaqSection";
 import QuestionSection from "./QuestionSection";
 import MigrateYourSite from "./MigrateYourSite";
+import WhatMakesUsDifferent from "./WhatMakesUsDifferent";
 
 const WebHosting = () => {
   return (
@@ -53,6 +54,7 @@ const WebHosting = () => {
       </SectionWrapper>
 
       <WebHostingPartners />
+      <WhatMakesUsDifferent />
 
       <SectionWrapper className="my-12 md:my-16">
         <MoneyBack />
