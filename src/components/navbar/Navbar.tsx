@@ -63,8 +63,8 @@ const Navbar = () => {
                         {item.label}
                         <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
                       </button>
-                      <div className="absolute left-0 mt-2 w-96 bg-white rounded-xl shadow-2xl border border-gray-100 py-4 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform group-hover:-translate-y-1">
-                        <div className="grid grid-cols-2 gap-1 px-4">
+                      <div className={` ${item.label === "Hosting" ? "w-96" : "w-56"} absolute left-0 mt-2 bg-white rounded-xl shadow-2xl border border-gray-100 py-4 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform group-hover:-translate-y-1`}>
+                        <div className={`grid ${item.label === "Hosting" ? "grid-cols-2" : "grid-cols-1"} gap-1 px-4`}>
                           {item.subItems.map((subItem) => (
                             <Link
                               key={subItem.label}
@@ -99,20 +99,20 @@ const Navbar = () => {
                   )}
                 </div>
               ))}
-            </div>
 
-            {/* Dashboard Button */}
-            <div className="hidden min-[840px]:flex">
-              <PrimaryButton
-                href="/dashboard"
-                size="sm"
-                className={`rounded-full ${pathname === "/dashboard"
-                  ? "text-blue-600"
-                  : "text-gray-600 hover:text-blue-600"
-                  }`}
-              >
-                Dashboard
-              </PrimaryButton>
+              {/* Dashboard Button */}
+              <div className="hidden min-[840px]:flex">
+                <PrimaryButton
+                  href="/dashboard"
+                  size="sm"
+                  className={`rounded-full ${pathname === "/dashboard"
+                    ? "text-blue-600"
+                    : "text-gray-600 hover:text-blue-600"
+                    }`}
+                >
+                  Dashboard
+                </PrimaryButton>
+              </div>
             </div>
 
             {/* Mobile menu button */}
