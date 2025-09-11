@@ -62,7 +62,7 @@ const Navbar = () => {
                       {item.label}
                       <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
                     </button>
-                    <div className="absolute left-0 mt-2  w-full bg-white rounded-xl shadow-2xl border border-gray-100 py-4 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform group-hover:-translate-y-1">
+                    <div className="absolute left-0 mt-2  w-96 bg-white rounded-xl shadow-2xl border border-gray-100 py-4 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform group-hover:-translate-y-1">
                       <div className="grid grid-cols-2 gap-1 px-4">
                         {item.subItems.map((subItem) => (
                           <Link
