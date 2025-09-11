@@ -55,12 +55,11 @@ const WebHosting = () => {
       </SectionWrapper>
 
       <WebHostingPartners />
-      <WhatMakesUsDifferent />
       <WhyChooseWebHosting />
-
       <SectionWrapper className="my-12 md:my-16">
         <MoneyBack />
       </SectionWrapper>
+      <WhatMakesUsDifferent />
 
       <SectionWrapper>
         <WebHostingFeatures />
