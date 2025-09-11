@@ -9,13 +9,10 @@ interface SectionWrapperProps {
 const SectionWrapper = ({
   className,
   children,
-  hideBottomPadding,
 }: SectionWrapperProps) => {
   return (
     <section
-      className={`max-w-7xl mx-auto ${
-        hideBottomPadding ? "" : " pb-8 md:pb-16"
-      }  ${className}`}
+      className={`max-w-7xl mx-auto ${className}`}
     >
       {children}
     </section>
