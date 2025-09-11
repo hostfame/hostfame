@@ -17,14 +17,14 @@ const SubmitDomainName = () => {
 
   return (
     <form
-      className="flex flex-row border border-gray-200 rounded-xl max-w-xs md:max-w-md lg:max-w-xl mx-auto md:mx-0"
+      className="flex flex-row border border-gray-200 rounded-xl w-full mx-auto md:mx-0"
       onSubmit={handleSubmit(handleSearch)}
     >
       <input
         type="text"
         {...register("domain", { required: true })}
         placeholder={WebHostingData.domainNameSection.searchPlaceholder}
-        className="flex-1 px-3 py-3 sm:px-4 sm:py-4 bg-gray-100 text-lg sm:text-2xl outline-none border-none rounded-t-md sm:rounded-t-none sm:rounded-l-xl font-medium"
+        className="flex-1 px-3 py-3 sm:px-4 sm:py-4 bg-gray-100 text-lg sm:text-2xl outline-none border-none rounded-l-xl font-medium"
       />
       <button
         type="submit"
