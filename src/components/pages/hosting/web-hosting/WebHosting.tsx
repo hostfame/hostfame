@@ -11,6 +11,7 @@ import HostingBenefits from "./HostingBenefits";
 import ReviewsSection from "./reviews/ReviewSection";
 import AdvancedFeatures from "./advance-features/AdvanceFeatures";
 import FaqSection from "../faqs/FaqSection";
+import QuestionSection from "./QuestionSection";
 
 const WebHosting = () => {
   return (
@@ -58,6 +59,10 @@ const WebHosting = () => {
 
       <SectionWrapper>
         <WebHostingFeatures />
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <QuestionSection/>
       </SectionWrapper>
       <AdvancedFeatures />
       <FaqSection />
