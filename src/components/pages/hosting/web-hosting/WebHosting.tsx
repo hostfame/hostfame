@@ -13,6 +13,7 @@ import AdvancedFeatures from "./advance-features/AdvanceFeatures";
 import FaqSection from "../faqs/FaqSection";
 import QuestionSection from "./QuestionSection";
 import MigrateYourSite from "./MigrateYourSite";
+import WhyChooseWebHosting from "./why-choose-web-hosting/WhyChooseWebHosting";
 
 const WebHosting = () => {
   return (
@@ -54,6 +55,8 @@ const WebHosting = () => {
 
       <WebHostingPartners />
 
+      <WhyChooseWebHosting />
+
       <SectionWrapper className="my-12 md:my-16">
         <MoneyBack />
       </SectionWrapper>
@@ -63,13 +66,13 @@ const WebHosting = () => {
       </SectionWrapper>
 
       <SectionWrapper>
-        <QuestionSection/>
+        <QuestionSection />
       </SectionWrapper>
 
       <AdvancedFeatures />
- 
+
       <SectionWrapper>
-        <MigrateYourSite/>
+        <MigrateYourSite />
       </SectionWrapper>
 
       <FaqSection />
