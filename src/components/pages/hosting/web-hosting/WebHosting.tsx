@@ -16,7 +16,6 @@ const WebHosting = () => {
   return (
     <section className="">
       <PromoTopBar />
-
       <Banner
         title={
           <>
@@ -47,13 +46,13 @@ const WebHosting = () => {
 
       <ReviewsSection />
 
-      <SectionWrapper>
+      <SectionWrapper className="my-12 md:my-16">
         <SearchDomainName />
       </SectionWrapper>
 
       <WebHostingPartners />
 
-      <SectionWrapper className="mt-12 md:mt-16">
+      <SectionWrapper className="my-12 md:my-16">
         <MoneyBack />
       </SectionWrapper>
 
