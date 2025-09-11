@@ -1,6 +1,5 @@
 import { WebHostingData } from "@/data/hosting.data";
 import React from "react";
-import { Form } from "react-hook-form";
 import SubmitDomainName from "./SubmitDomainName";
 import Image from "next/image";
 
