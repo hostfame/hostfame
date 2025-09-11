@@ -38,8 +38,8 @@ const Footer: React.FC = () => {
                     <a
                       href={lnk.href}
                       className={`text-sm text-white/80 hover:text-white transition-colors ${lnk.highlight
-                          ? "text-amber-300 hover:text-amber-200"
-                          : ""
+                        ? "text-amber-300 hover:text-amber-200"
+                        : ""
                         }`}
                     >
                       {lnk.label}
