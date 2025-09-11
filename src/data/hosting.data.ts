@@ -46,6 +46,14 @@ export const WebHostingData = {
     title: "30 Day Money-back Guarantee",
     description:
       "There is no risk with our 30-day money back guarantee. Stay safe with assurance of refund."
+  },
+  questionSection: {
+    title1: "Do You Have Questions?",
+    title2: "Feel free to ask anything!",
+    description: "Feel free to contact our friendly technical advisors at any time. Our team of professionals is available 24/7 via live chat, ticket, and WhatsApp to assist you.",
+    buttonText: "Live Chat With Sales",
+    buttonLink: "#",
+    image: "/assets/web-hosting/question-section/man-attending-online-meeting.png"
   }
 };
 

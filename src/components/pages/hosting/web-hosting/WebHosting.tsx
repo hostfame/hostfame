@@ -5,6 +5,7 @@ import WebHostingPartners from "./WebHostingPartners";
 import MoneyBack from "./MoneyBack";
 import { Pricing } from "./pricing/Pricing";
 import WebHostingFeatures from "./WebHostingFeatures";
+import QuestionSection from "./QuestionSection";
 
 const WebHosting = () => {
   return (
@@ -25,6 +26,10 @@ const WebHosting = () => {
 
       <SectionWrapper>
         <WebHostingFeatures/>
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <QuestionSection/>
       </SectionWrapper>
     </section>
   );
