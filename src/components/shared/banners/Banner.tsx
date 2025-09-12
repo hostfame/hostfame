@@ -38,7 +38,7 @@ export const Banner: React.FC<BannerProps> = ({
   imageAlt = "Banner visual",
   waveImage,
   waveAlt = "",
-  bgGradient = "linear-gradient(278deg, #008081 16%, #069999 98%)",
+  // bgGradient = "linear-gradient(278deg, #008081 16%, #069999 98%)",
   cta,
   countdownTarget,
   className = "",
