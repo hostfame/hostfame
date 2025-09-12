@@ -20,12 +20,12 @@ const CenteredSectionHeader = ({
       className={`mx-auto space-y-3 max-w-7xl px-6 text-center ${className}`}
     >
       <h2
-        className={`text-4xl md:text-5xl font-bold tracking-tight text-slate-900 ${classNameForTitle}`}
+        className={`text-4xl md:text-5xl font-bold tracking-tight text-text ${classNameForTitle}`}
       >
         {title}
       </h2>
       <p
-        className={`text-sm sm:text-base text-gray-500 max-w-2xl mx-auto ${classNameForDescription}`}
+        className={`text-sm sm:text-base text-text max-w-2xl mx-auto ${classNameForDescription}`}
       >
         {description}
       </p>
