@@ -7,7 +7,7 @@ import { Menu, X, ChevronDown } from "lucide-react"
 import { navItems } from "@/data/navbar.data"
 import { getIcon } from "./Icon"
 import Image from "next/image"
-import { PrimaryButton } from "../shared/html/PrimaryButton"
+import { Button } from "../shared/html/Button"
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -102,7 +102,7 @@ const Navbar = () => {
 
               {/* Dashboard Button */}
               <div className="hidden min-[840px]:flex">
-                <PrimaryButton
+                <Button
                   href="/dashboard"
                   size="sm"
                   className={`rounded-full ${pathname === "/dashboard"
@@ -111,7 +111,7 @@ const Navbar = () => {
                     }`}
                 >
                   Dashboard
-                </PrimaryButton>
+                </Button>
               </div>
             </div>
 
@@ -188,7 +188,7 @@ const Navbar = () => {
               </div>
             ))}
             <div className="pt-4 mt-4 border-t border-gray-200">
-              <PrimaryButton
+              <Button
                 href="/dashboard"
                 className={`block w-full ${pathname === "/dashboard"
                   ? "text-teal-600"
@@ -197,7 +197,7 @@ const Navbar = () => {
                 onClick={() => setIsOpen(false)}
               >
                 Dashboard
-              </PrimaryButton>
+              </Button>
             </div>
           </div>
         </div>
