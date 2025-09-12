@@ -1,8 +1,9 @@
 import React from "react";
-import ManagedWordPressHosting from "./ManagedWordPressHosting";
 import SectionWrapper from "@/components/shared/wrappers/SectionWrapper";
 import { Banner } from "@/components/shared/banners/Banner";
 import WordPressHostingFeatures from "./WordPressHostingFeatures";
+import { wordpressHostingData } from "@/types/wordpress-hosting/wordpress-hosting.data";
+import ManagedHostingHighlights from "@/components/shared/sections/ManagedHostingHighlights";
 import FAQ from "@/components/shared/faq/Faq";
 import FaqSection from "../faqs/FaqSection";
 
@@ -32,7 +33,7 @@ const WordPressHosting = () => {
       />
       <WordPressHostingFeatures />
       <SectionWrapper>
-        <ManagedWordPressHosting />
+        <ManagedHostingHighlights data={wordpressHostingData}/>
       </SectionWrapper>
       <FaqSection />
     </section>
