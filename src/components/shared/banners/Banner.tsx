@@ -17,6 +17,7 @@ export type BannerProps = {
 
   /** Left-side lists  */
   lists?: string[];
+  description?: string;
 
   /** Background gradient (string passed directly to `background` CSS) */
   // bgGradient: string;
@@ -36,8 +37,7 @@ export const Banner: React.FC<BannerProps> = ({
   title,
   image,
   imageAlt = "Banner visual",
-  waveImage,
-  waveAlt = "",
+  description,
   // bgGradient = "linear-gradient(278deg, #008081 16%, #069999 98%)",
   cta,
   countdownTarget,
@@ -79,16 +79,24 @@ export const Banner: React.FC<BannerProps> = ({
             {title}
           </h1>
 
-          <ul className="space-y-2 flex flex-col items-center lg:items-start">
-            {lists.map((list) => (
-              <li
-                key={list}
-                className="flex items-center justify-center lg:justify-start gap-x-1 text-base md:text-lg"
-              >
-                <IoCheckmark className="text-lg md:text-xl" /> {list}
-              </li>
-            ))}
-          </ul>
+          {description && (
+            <p className="text-base md:text-lg max-w-xl mx-auto lg:mx-0">
+              {description}
+            </p>
+          )}
+
+          {lists.length > 0 && (
+            <ul className="space-y-2 flex flex-col items-center lg:items-start">
+              {lists.map((list) => (
+                <li
+                  key={list}
+                  className="flex items-center justify-center lg:justify-start gap-x-1 text-base md:text-lg"
+                >
+                  <IoCheckmark className="text-lg md:text-xl" /> {list}
+                </li>
+              ))}
+            </ul>
+          )}
 
           {typeof countdownTarget !== "undefined" && (
             <BannerTimer target={countdownTarget} />

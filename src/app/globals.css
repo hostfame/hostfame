@@ -62,12 +62,18 @@
 
   --color-toggle: #1e2a3b;
   --color-toggle-text: white;
+
+  --color-slider-background: white;
+  --color-white-background: white;
+
+  --color-card-background: white;
 }
 
 @layer base {
   :root,
   [data-theme="light"] {
     --color-background: var(--background);
+    --color-white-background: white;
     --color-text: black;
     --color-description-text: #6b7280;
     --color-gray-background: #f8fafc;
@@ -75,17 +81,24 @@
     --color-border-dark-gray: #3f3f46;
     --color-toggle: #1e2a3b;
     --color-toggle-text: white;
+
+    --color-slider-background: white;
+    --color-card-background: white;
   }
 
   [data-theme="dark"] {
     --color-background: var(--background-dark);
+    --color-white-background: var(--background-dark);
     --color-text: white;
-    --color-description-text: #9ca3af;
+    --color-description-text: white;
     --color-gray-background: #282825;
     --color-border-light-gray: #52525b;
     --color-border-dark-gray: #71717a;
     --color-toggle: white;
     --color-toggle-text: #1e2a3b;
+
+    --color-slider-background: #282825;
+    --color-card-background: #282825;
   }
 }
 

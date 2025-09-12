@@ -48,12 +48,12 @@ export default function SupportBanner({ data, className = "", ...rest }: Support
       <div className="relative z-10 grid gap-6 md:grid-cols-12 md:items-center">
         {/* Left: Badge + Title */}
         <div className="md:col-span-7">
-          <div className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-medium tracking-wide backdrop-blur">
-            <span className="inline-block h-2 w-2 animate-pulse rounded-full bg-white/80" />
+          <div className="inline-flex items-center gap-2 !text-white rounded-full bg-white/10 px-3 py-1 text-xs font-medium tracking-wide backdrop-blur">
+            <span className="inline-block h-2 w-2 animate-pulse  rounded-full  bg-white/80" />
             {merged.badge}
           </div>
 
-          <h2 className="mt-3 text-pretty text-2xl font-semibold leading-snug md:text-3xl">
+          <h2 className="mt-3 text-pretty text-2xl !text-white font-semibold leading-snug md:text-3xl">
             {merged.title}
           </h2>
 
@@ -77,7 +77,7 @@ export default function SupportBanner({ data, className = "", ...rest }: Support
         <div className="md:col-span-5">
           <div className="rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur">
             <div className="flex sm:block lg:flex  max-lg:space-y-3 items-center justify-between gap-3">
-              <div className="text-sm/5">
+              <div className="text-sm/5 !text-white">
                 <div className="font-medium">Chat with us</div>
                 <div className="text-white/80">Real-time answers from our team</div>
               </div>

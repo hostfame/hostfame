@@ -70,7 +70,7 @@ const ReviewCarousel: React.FC<ReviewCarouselProps> = ({
         {reviews.map((r, i) => (
           <SwiperSlide key={i} className="!h-full flex ">
             {/* Card fills slide height */}
-            <article className="relative h-full min-h-0 w-full  bg-white p-6 shadow-[0_8px_24px_rgba(10,30,70,0.08)] md:p-8 flex flex-col">
+            <article className="relative h-full min-h-0 w-full  bg-slider-background p-6 shadow-[0_8px_24px_rgba(10,30,70,0.08)] md:p-8 flex flex-col">
               {/* watermark quote icon */}
               
 
@@ -82,7 +82,7 @@ const ReviewCarousel: React.FC<ReviewCarouselProps> = ({
                   aria-hidden
                 />
                 <div>
-                  <h4 className="text-lg font-semibold text-slate-900">
+                  <h4 className="text-lg font-semibold text-text">
                     {r.name}
                   </h4>
                   <Stars rating={r.rating} />
@@ -91,7 +91,7 @@ const ReviewCarousel: React.FC<ReviewCarouselProps> = ({
 
               {/* Body that can scroll if long */}
               <div className="mt-4 flex-1 min-h-0 overflow-y-auto pr-1">
-                <p className="text-[15px] leading-7 text-slate-600">{r.text}</p>
+                <p className="text-[15px] leading-7 text-description-text">{r.text}</p>
               </div>
 
               <FaQuoteLeft
