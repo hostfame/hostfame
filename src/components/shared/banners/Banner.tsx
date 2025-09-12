@@ -19,7 +19,7 @@ export type BannerProps = {
   lists?: string[];
 
   /** Background gradient (string passed directly to `background` CSS) */
-  bgGradient: string;
+  // bgGradient: string;
 
   /** CTA */
   cta?: Omit<CtaButtonProps, "className"> & { className?: string };
