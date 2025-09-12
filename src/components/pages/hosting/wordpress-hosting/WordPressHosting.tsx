@@ -3,9 +3,10 @@ import SectionWrapper from "@/components/shared/wrappers/SectionWrapper";
 import { Banner } from "@/components/shared/banners/Banner";
 import WordPressHostingFeatures from "./WordPressHostingFeatures";
 import WhyChooseWordpressHosting from "@/components/shared/sections/WhyChooseWordpressHosting";
-import { wordpressHostingData } from "@/types/wordpress-hosting/wordpress-hosting.data";
+import { wordpressHostingAllHostingPlans, wordpressHostingManagedHostingHighlightsData } from "@/types/wordpress-hosting/wordpress-hosting.data";
 import ManagedHostingHighlights from "@/components/shared/sections/ManagedHostingHighlights";
 import FaqSection from "../faqs/FaqSection";
+import AllHostingPlans from "@/components/shared/sections/AllHostingPlans";
 
 const WordPressHosting = () => {
   return (
@@ -33,7 +34,11 @@ const WordPressHosting = () => {
       />
       <WordPressHostingFeatures />
       <SectionWrapper>
-        <ManagedHostingHighlights data={wordpressHostingData}/>
+        <ManagedHostingHighlights data={wordpressHostingManagedHostingHighlightsData}/>
+      </SectionWrapper>
+
+      <SectionWrapper>
+        <AllHostingPlans data={wordpressHostingAllHostingPlans} />
       </SectionWrapper>
       <WhyChooseWordpressHosting />
       <FaqSection />
