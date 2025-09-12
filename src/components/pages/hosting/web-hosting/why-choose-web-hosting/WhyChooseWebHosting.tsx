@@ -4,12 +4,9 @@ import CenteredSectionHeader from "@/components/shared/headers/CenteredSectionHe
 import { whyChooseWebHosting } from "@/data/web-hosting/whyChooseWebHosting.data";
 import { WhyChooseWebHostingProps } from "@/types/web-hosting/whyChooseWebHosting.types";
 
-const FeatureCard: React.FC<WhyChooseWebHostingProps & { className?: string }> = ({
-  title,
-  description,
-  img,
-  className = "",
-}) => {
+const FeatureCard: React.FC<
+  WhyChooseWebHostingProps & { className?: string }
+> = ({ title, description, img, className = "" }) => {
   return (
     <article
       className={`group relative rounded-2xl border border-slate-200/70 bg-white
@@ -18,7 +15,7 @@ const FeatureCard: React.FC<WhyChooseWebHostingProps & { className?: string }> =
                   ${className}`}
     >
       {/* subtle gradient ring on hover */}
-      <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-transparent group-hover:ring-blue-500/30 transition-all" />
+      <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-transparent group-hover:ring-teal-500/30 transition-all" />
 
       <div className="p-5 md:p-6">
         <div className="flex items-center gap-3">
@@ -38,7 +35,7 @@ export default function WhyChooseWebHosting() {
   return (
     <section className="relative isolate overflow-hidden py-14 md:py-20">
       {/* Curved background */}
-      <div className="absolute inset-0 -z-10">
+      {/* <div className="absolute inset-0 -z-10">
         <Image
           src="/assets/web-hosting/why-choose-web-hosting/why-choose-bg.png"
           alt=""
@@ -46,9 +43,9 @@ export default function WhyChooseWebHosting() {
           className="object-cover opacity-95"
           priority
         />
-        {/* soft top overlay for contrast */}
+        
         <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white to-transparent" />
-      </div>
+      </div> */}
 
       <CenteredSectionHeader
         title="Why Choose Web Hosting?"
@@ -67,7 +64,7 @@ export default function WhyChooseWebHosting() {
         </div>
 
         {/* Decorative line / accent under grid (adds depth) */}
-        <div className="pointer-events-none mx-auto h-1 w-32 rounded-full bg-gradient-to-r from-blue-400 to-blue-700 opacity-40" />
+        <div className="pointer-events-none mx-auto h-1 w-32 rounded-full bg-gradient-to-r from-teal-400 to-teal-700 opacity-40" />
       </div>
     </section>
   );

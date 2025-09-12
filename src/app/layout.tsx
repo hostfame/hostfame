@@ -3,6 +3,7 @@ import { Urbanist } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/shared/footer/Footer";
 import Navbar from "@/components/navbar/Navbar";
+import { ThemeProvider } from "next-themes";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -22,12 +23,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${urbanist.variable}`}>
-      <body
-        className={`${urbanist.className} antialiased`}
-      >
-        <Navbar />
-        {children}
-        <Footer />
+      <body className={`${urbanist.className} antialiased  text-text`}>
+        <ThemeProvider
+          attribute={"data-theme"}
+          defaultTheme="dark"
+        >
+          <Navbar />
+          {children}
+          <Footer />
+        </ThemeProvider>
       </body>
     </html>
   );

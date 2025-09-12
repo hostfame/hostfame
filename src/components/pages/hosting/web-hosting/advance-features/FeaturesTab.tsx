@@ -105,7 +105,7 @@ export default function FeatureTabsClient({
                 data-slug={tab.slug}
                 onClick={(e) => handleTab(e, tab.slug, idx)}
                 className={`relative pb-2 text-sm font-semibold border-b-2 ${
-                  isActive ? "text-slate-900 border-blue-600" : "text-slate-500 border-transparent hover:text-slate-800"
+                  isActive ? "text-slate-900 border-teal-600" : "text-slate-500 border-transparent hover:text-slate-800"
                 }`}
               >
                 {tab.label}
@@ -115,7 +115,7 @@ export default function FeatureTabsClient({
 
           {/* Underline — no transition initially, slides after first interaction */}
           {/* <span
-            className={`absolute bottom-0 h-[2px] rounded bg-blue-600 ${
+            className={`absolute bottom-0 h-[2px] rounded bg-teal-600 ${
               animate ? "transition-all duration-300" : ""
             }`}
             style={{ left: underline.left, width: underline.width }}
@@ -155,9 +155,9 @@ export default function FeatureTabsClient({
               <Link
                 href={active.cta.href}
                 className="inline-flex items-center rounded-lg
-                           bg-gradient-to-r from-blue-500 to-blue-700
+                           bg-gradient-to-r from-teal-500 to-teal-700
                            px-5 py-3 text-sm font-semibold text-white shadow
-                           transition-colors hover:from-blue-600 hover:to-blue-800"
+                           transition-colors hover:from-teal-600 hover:to-teal-800"
               >
                 {active.cta.label}
               </Link>

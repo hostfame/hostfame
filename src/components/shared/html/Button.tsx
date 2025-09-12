@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { IconType } from "react-icons";
 
-export type PrimaryButtonProps = {
+export type ButtonProps = {
   children: string;
   onClick?: () => void;
   href?: string;
@@ -13,7 +13,7 @@ export type PrimaryButtonProps = {
   className?: string;
 };
 
-export const PrimaryButton: React.FC<PrimaryButtonProps> = ({
+export const Button: React.FC<ButtonProps> = ({
   children,
   onClick,
   href,
@@ -34,10 +34,10 @@ export const PrimaryButton: React.FC<PrimaryButtonProps> = ({
 
   const variantClasses =
     variant === "dark"
-      ? "text-white bg-gradient-to-r from-blue-600 via-blue-700 to-indigo-700 hover:from-blue-800 hover:via-indigo-700 hover:to-purple-700 border-blue-500 hover:border-indigo-600"
+      ? "text-white bg-gradient-to-r from-teal-600 via-teal-700 to-teal-700 hover:from-teal-800 hover:via-teal-700 hover:to-teal-700 border-teal-500 hover:border-teal-600"
       : variant === "light"
-      ? "text-white bg-gradient-to-r from-blue-400 via-blue-500 to-indigo-500 hover:from-blue-500 hover:via-indigo-500 hover:to-purple-500 border-blue-300 hover:border-indigo-400"
-      : "bg-transparent text-blue-600 border-blue-600 hover:text-white hover:bg-gradient-to-r hover:from-blue-500 hover:via-indigo-500 hover:to-purple-500 hover:border-indigo-400";
+      ? "text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-500 hover:from-teal-500 hover:via-teal-500 hover:to-teal-500 border-teal-300 hover:border-teal-400"
+      : "bg-transparent text-teal-600 border-teal-600 hover:text-white hover:bg-gradient-to-r hover:from-teal-500 hover:via-teal-600 hover:to-teal-700 hover:border-teal-400";
 
   const content = (
     <>
@@ -68,7 +68,7 @@ export const PrimaryButton: React.FC<PrimaryButtonProps> = ({
       {content}
       {/* Glow effect only for dark variant */}
       {variant === "dark" && (
-        <div className="absolute pointer-events-none inset-0 bg-gradient-to-r from-blue-300/20 to-indigo-300/20 rounded-xl opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="absolute pointer-events-none inset-0 bg-gradient-to-r from-teal-300/20 to-teal-300/20 rounded-xl opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
       )}
     </button>
   );

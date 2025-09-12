@@ -12,7 +12,7 @@ const SectionWrapper = ({
 }: SectionWrapperProps) => {
   return (
     <section
-      className={`max-w-7xl mx-auto ${className}`}
+      className={`max-w-7xl mx-auto px-[2%] ${className}`}
     >
       {children}
     </section>
