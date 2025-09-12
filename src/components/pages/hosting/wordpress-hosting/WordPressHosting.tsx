@@ -2,9 +2,11 @@ import React from "react";
 import SectionWrapper from "@/components/shared/wrappers/SectionWrapper";
 import { Banner } from "@/components/shared/banners/Banner";
 import WordPressHostingFeatures from "./WordPressHostingFeatures";
-import { wordpressHostingData } from "@/types/wordpress-hosting/wordpress-hosting.data";
+import WhyChooseWordpressHosting from "@/components/shared/sections/WhyChooseWordpressHosting";
+import { wordpressHostingAllHostingPlans, wordpressHostingManagedHostingHighlightsData } from "@/types/wordpress-hosting/wordpress-hosting.data";
 import ManagedHostingHighlights from "@/components/shared/sections/ManagedHostingHighlights";
 import FaqSection from "../faqs/FaqSection";
+import AllHostingPlans from "@/components/shared/sections/AllHostingPlans";
 import HostingBenefits from "../web-hosting/HostingBenefits";
 import SupportBanner from "@/components/shared/sections/SupportBanner";
 
@@ -34,9 +36,8 @@ const WordPressHosting = () => {
       <WordPressHostingFeatures />
       <HostingBenefits />
       <SectionWrapper>
-        <ManagedHostingHighlights data={wordpressHostingData} />
+        <ManagedHostingHighlights data={wordpressHostingData}/>
       </SectionWrapper>
-
       <FaqSection />
       <SectionWrapper className="my-12 md:my-16">
         <SupportBanner />

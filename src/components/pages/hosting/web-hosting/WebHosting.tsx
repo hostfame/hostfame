@@ -59,11 +59,11 @@ const WebHosting = () => {
       </SectionWrapper>
       <WhatMakesUsDifferent />
 
-      <SectionWrapper>
+      {/* <SectionWrapper>
         <WebHostingFeatures />
-      </SectionWrapper>
+      </SectionWrapper> */}
 
-      <SectionWrapper>
+      <SectionWrapper className="my-12 md:my-16">
         <QuestionSection />
       </SectionWrapper>
 
