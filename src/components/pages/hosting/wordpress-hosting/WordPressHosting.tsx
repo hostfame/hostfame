@@ -2,8 +2,10 @@ import React from "react";
 import SectionWrapper from "@/components/shared/wrappers/SectionWrapper";
 import { Banner } from "@/components/shared/banners/Banner";
 import WordPressHostingFeatures from "./WordPressHostingFeatures";
+import WhyChooseWordpressHosting from "@/components/shared/sections/WhyChooseWordpressHosting";
 import { wordpressHostingData } from "@/types/wordpress-hosting/wordpress-hosting.data";
 import ManagedHostingHighlights from "@/components/shared/sections/ManagedHostingHighlights";
+import FaqSection from "../faqs/FaqSection";
 
 const WordPressHosting = () => {
   return (
@@ -33,6 +35,8 @@ const WordPressHosting = () => {
       <SectionWrapper>
         <ManagedHostingHighlights data={wordpressHostingData}/>
       </SectionWrapper>
+      <WhyChooseWordpressHosting />
+      <FaqSection />
     </section>
   );
 };

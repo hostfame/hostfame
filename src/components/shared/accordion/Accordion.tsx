@@ -86,7 +86,7 @@ export const AccordionItem: React.FC<{
         aria-controls={panelId}
         id={triggerId}
       >
-        <span className="text-[15px] max-md:text-left font-medium text-slate-900">
+        <span className="text-[15px] max-md:text-left font-medium text-text">
           {header}
         </span>
 
@@ -115,7 +115,7 @@ export const AccordionItem: React.FC<{
         }`}
       >
         <div className="min-h-0">
-          <div className="pb-5 text-[15px] leading-6 text-slate-600">
+          <div className="pb-5 text-[15px] leading-6 text-text">
             {children}
           </div>
         </div>
