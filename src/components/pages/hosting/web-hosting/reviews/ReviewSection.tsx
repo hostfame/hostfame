@@ -30,12 +30,12 @@ const REVIEWS: Review[] = [
 
 export default function ReviewsSection() {
   return (
-    <section className="bg-[#f6f6f8] py-12 md:py-16">
+    <section className="bg-background py-12 md:py-16">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:grid-cols-2">
         {/* Left column */}
         <div className="relative sm:ml-[10vw] lg:ml-0">
           {/* subtle circular backdrop to match screenshot */}
-          <div className="pointer-events-none absolute -left-24 -top-20 hidden h-96 w-96 rounded-full bg-white/70 blur-md md:block" />
+          {/* <div className="pointer-events-none absolute -left-24 -top-20 hidden h-96 w-96 rounded-full bg-white/70 blur-md md:block" /> */}
           <div className="relative">
             <div className="flex flex-col gap-3">
               <Image
@@ -51,16 +51,16 @@ export default function ReviewsSection() {
               </div>
             </div>
 
-            <p className="mt-2  font-semibold text-base text-gray-700 sm:text-lg">
+            <p className="mt-2  font-semibold text-base text-text sm:text-lg">
               4.8 out of 5 based on 147+ reviews.
             </p>
 
-            <h2 className="mt-6 text-3xl font-extrabold leading-tight text-blue-dark md:text-4xl">
+            <h2 className="mt-6 text-3xl font-extrabold leading-tight  text-primary md:text-4xl">
               Hear from our
               <br /> happy customers
             </h2>
 
-            <p className="mt-4 max-w-md text-[15px] leading-6 text-gray-700">
+            <p className="mt-4 max-w-md text-[15px] leading-6  text-description-text">
               Getting positive reviews from hundreds of clients means a lot to
               us. We care about every feedback and adjust our services
               accordingly.
@@ -80,7 +80,7 @@ export default function ReviewsSection() {
 
               <a
                 href="#more-reviews"
-                className="group inline-flex items-center gap-2 text-sm font-medium text-blue-700"
+                className="group inline-flex items-center gap-2 text-sm font-medium text-primary-light"
               >
                 More Review
                 <HiOutlineArrowRight className="transition-transform group-hover:translate-x-0.5" />

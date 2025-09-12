@@ -54,7 +54,7 @@ export const BannerTimer: React.FC<BannerTimerProps> = ({
       {boxes.map(({ label, value }) => (
         <div
           key={label}
-          className={`bg-white/95 text-blue-900 rounded-lg
+          className={`bg-white/95 text-teal-900 rounded-lg
                       w-14 h-14
                       sm:w-20 sm:h-20
                       md:w-20 md:h-20

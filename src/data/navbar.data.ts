@@ -1,8 +1,8 @@
 export const navItems = [
-  {
-    label: "Pricing",
-    href: "/pricing",
-  },
+  // {
+  //   label: "Pricing",
+  //   href: "/pricing",
+  // },
   {
     label: "Hosting",
     subItems: [
@@ -49,17 +49,17 @@ export const navItems = [
     href: "/domain",
   },
   {
-    label: "Server",
+    label: "Business",
     subItems: [
       {
-        label: "VPS",
+        label: "Manage Hosting",
         // description: "Virtual Private Server",
         description: "",
         href: "/server/vps",
         icon: "vps",
       },
       {
-        label: "Dedicated",
+        label: "VPS Hosting",
         // description: "High Performance Server",
         description: "",
         href: "/server/dedicated",
@@ -68,36 +68,36 @@ export const navItems = [
     ],
   },
   {
-    label: "About",
+    label: "Help Center",
     subItems: [
       {
-        label: "Privacy Policy",
+        label: "Support",
         // description: "Learn about our company privacy policy",
         description: "",
-        href: "/privacy-policy",
+        href: "/support",
         icon: "policy",
       },
       {
-        label: "Terms Conditions",
+        label: "Contact",
         // description: "Learn about our company terms conditions",
         description: "",
-        href: "/terms-conditions",
+        href: "/contact",
         icon: "terms",
       },
-      {
-        label: "Careers",
-        // description: "Learn about our company",
-        description: "",
-        href: "/careers",
-        icon: "career",
-      },
-      {
-        label: "Contact",
-        // description: "Get in touch with us",
-        description: "",
-        href: "/contact",
-        icon: "contact",
-      },
+      // {
+      //   label: "Careers",
+      //   // description: "Learn about our company",
+      //   description: "",
+      //   href: "/careers",
+      //   icon: "career",
+      // },
+      // {
+      //   label: "Contact",
+      //   // description: "Get in touch with us",
+      //   description: "",
+      //   href: "/contact",
+      //   icon: "contact",
+      // },
     ],
   },
 ];

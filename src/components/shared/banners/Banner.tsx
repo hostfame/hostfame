@@ -17,9 +17,10 @@ export type BannerProps = {
 
   /** Left-side lists  */
   lists?: string[];
+  description?: string;
 
   /** Background gradient (string passed directly to `background` CSS) */
-  bgGradient: string;
+  // bgGradient: string;
 
   /** CTA */
   cta?: Omit<CtaButtonProps, "className"> & { className?: string };
@@ -36,9 +37,8 @@ export const Banner: React.FC<BannerProps> = ({
   title,
   image,
   imageAlt = "Banner visual",
-  waveImage,
-  waveAlt = "",
-  bgGradient,
+  description,
+  // bgGradient = "linear-gradient(278deg, #008081 16%, #069999 98%)",
   cta,
   countdownTarget,
   className = "",
@@ -47,15 +47,15 @@ export const Banner: React.FC<BannerProps> = ({
 }) => {
   return (
     <section
-      className={`relative w-full text-white bg-no-repeat h-fit xl:h-[740px] xl:max-h-[740px] overflow-hidden ${className}`}
+      className={`relative w-full bg-gradient-to-r from-primary to-primary-light text-white bg-no-repeat h-fit xl:h-[740px] xl:max-h-[740px] overflow-hidden ${className}`}
       style={{
         backgroundPosition: "left center, center center",
         backgroundSize: "contain",
-        backgroundImage: `url(${waveImage}), ${bgGradient}`,
+        // backgroundImage: `${bgGradient}`,
       }}
     >
       {/* Left decorative wave */}
-      {waveImage && (
+      {/* {waveImage && (
         <Image
           src={waveImage}
           alt={waveAlt}
@@ -63,7 +63,7 @@ export const Banner: React.FC<BannerProps> = ({
           className="pointer-events-none select-none object-cover opacity-70"
           priority
         />
-      )}
+      )} */}
 
       <div
         className={`relative z-10 max-w-7xl mx-auto px-6 py-16 md:py-20 grid lg:grid-cols-2 gap-10 items-center
@@ -79,16 +79,24 @@ export const Banner: React.FC<BannerProps> = ({
             {title}
           </h1>
 
-          <ul className="space-y-2 flex flex-col items-center lg:items-start">
-            {lists.map((list) => (
-              <li
-                key={list}
-                className="flex items-center justify-center lg:justify-start gap-x-1 text-base md:text-lg"
-              >
-                <IoCheckmark className="text-lg md:text-xl" /> {list}
-              </li>
-            ))}
-          </ul>
+          {description && (
+            <p className="text-base md:text-lg max-w-xl mx-auto lg:mx-0">
+              {description}
+            </p>
+          )}
+
+          {lists.length > 0 && (
+            <ul className="space-y-2 flex flex-col items-center lg:items-start">
+              {lists.map((list) => (
+                <li
+                  key={list}
+                  className="flex items-center justify-center lg:justify-start gap-x-1 text-base md:text-lg"
+                >
+                  <IoCheckmark className="text-lg md:text-xl" /> {list}
+                </li>
+              ))}
+            </ul>
+          )}
 
           {typeof countdownTarget !== "undefined" && (
             <BannerTimer target={countdownTarget} />

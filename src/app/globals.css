@@ -1,13 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #F8F8F8;
+  --background: #f4f9ff;
   --foreground: #1f2937;
   --card: #f8fafc;
   --card-foreground: #1f2937;
   --popover: #ffffff;
   --popover-foreground: #6b7280;
-  --primary: #0a8aff;
+  --primary: #008081;
+  --primary-light: #069999;
   --primary-foreground: #ffffff;
   --secondary: #002491;
   --secondary-foreground: #ffffff;
@@ -18,14 +19,16 @@
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.577 0.245 27.325);
   --border: #e2e8f0;
-
   --text-primary: #0a1440;
   --primary-blue: #0a8aff;
   --secondary-blue: #3b82f6;
   --blue-dark: #03206b;
+
+  /* dark mode */
+  --background-dark: #1a1a18;
 }
 
-@theme inline {
+@theme {
   /* Colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -34,6 +37,7 @@
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
@@ -49,10 +53,57 @@
   --color-primary-blue: var(--primary-blue);
   --color-secondary-blue: var(--secondary-blue);
   --color-blue-dark: var(--blue-dark);
+  --color-text: white;
+  --color-description-text: #6b7280;
+  --color-gray-background: #f8fafc;
+
+  --color-border-light-gray: #e5e7eb;
+  --color-border-dark-gray: #3f3f46;
+
+  --color-toggle: #1e2a3b;
+  --color-toggle-text: white;
+
+  --color-slider-background: white;
+  --color-white-background: white;
+
+  --color-card-background: white;
+}
+
+@layer base {
+  :root,
+  [data-theme="light"] {
+    --color-background: var(--background);
+    --color-white-background: white;
+    --color-text: black;
+    --color-description-text: #6b7280;
+    --color-gray-background: #f8fafc;
+    --color-border-light-gray: #e5e7eb;
+    --color-border-dark-gray: #3f3f46;
+    --color-toggle: #1e2a3b;
+    --color-toggle-text: white;
+
+    --color-slider-background: white;
+    --color-card-background: white;
+  }
+
+  [data-theme="dark"] {
+    --color-background: var(--background-dark);
+    --color-white-background: var(--background-dark);
+    --color-text: white;
+    --color-description-text: white;
+    --color-gray-background: #282825;
+    --color-border-light-gray: #52525b;
+    --color-border-dark-gray: #71717a;
+    --color-toggle: white;
+    --color-toggle-text: #1e2a3b;
+
+    --color-slider-background: #282825;
+    --color-card-background: #282825;
+  }
 }
 
 body {
-  background: var(--background);
-  color: var(--text-foreground);
+  /* background: var(--background);
+  color: var(--text-foreground); */
   font-family: var(--font-geist), var(--font-geist-fallback), sans-serif;
 }
