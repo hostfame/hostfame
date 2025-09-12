@@ -55,7 +55,7 @@ export const Banner: React.FC<BannerProps> = ({
       }}
     >
       {/* Left decorative wave */}
-      {waveImage && (
+      {/* {waveImage && (
         <Image
           src={waveImage}
           alt={waveAlt}
@@ -63,7 +63,7 @@ export const Banner: React.FC<BannerProps> = ({
           className="pointer-events-none select-none object-cover opacity-70"
           priority
         />
-      )}
+      )} */}
 
       <div
         className={`relative z-10 max-w-7xl mx-auto px-6 py-16 md:py-20 grid lg:grid-cols-2 gap-10 items-center
