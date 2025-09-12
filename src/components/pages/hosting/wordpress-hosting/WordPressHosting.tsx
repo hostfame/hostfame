@@ -36,9 +36,11 @@ const WordPressHosting = () => {
       <WordPressHostingFeatures />
       <HostingBenefits />
       <SectionWrapper>
-        <ManagedHostingHighlights data={wordpressHostingData}/>
+        <ManagedHostingHighlights data={wordpressHostingManagedHostingHighlightsData}/>
       </SectionWrapper>
+      <AllHostingPlans data={wordpressHostingAllHostingPlans}/>
       <FaqSection />
+      <WhyChooseWordpressHosting/>
       <SectionWrapper className="my-12 md:my-16">
         <SupportBanner />
       </SectionWrapper>

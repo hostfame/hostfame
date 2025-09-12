@@ -15,10 +15,9 @@ const CenteredSectionHeader = ({
   classNameForTitle = "",
   classNameForDescription = "",
 }: CenteredSectionHeaderProps) => {
+  
   return (
-    <div
-      className={`mx-auto space-y-3 max-w-7xl text-center ${className}`}
-    >
+    <div className={`mx-auto space-y-3 max-w-7xl text-center ${className}`}>
       <h2
         className={`text-4xl md:text-5xl font-bold tracking-tight text-text ${classNameForTitle}`}
       >
