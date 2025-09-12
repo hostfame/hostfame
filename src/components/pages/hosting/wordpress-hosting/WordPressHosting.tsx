@@ -3,6 +3,7 @@ import ManagedWordPressHosting from "./ManagedWordPressHosting";
 import SectionWrapper from "@/components/shared/wrappers/SectionWrapper";
 import { Banner } from "@/components/shared/banners/Banner";
 import WordPressHostingFeatures from "./WordPressHostingFeatures";
+import WhyChooseWordpressHosting from "@/components/shared/sections/WhyChooseWordpressHosting";
 
 const WordPressHosting = () => {
   return (
@@ -32,6 +33,7 @@ const WordPressHosting = () => {
       <SectionWrapper>
         <ManagedWordPressHosting />
       </SectionWrapper>
+      <WhyChooseWordpressHosting />
     </section>
   );
 };
