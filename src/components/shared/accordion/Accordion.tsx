@@ -93,7 +93,7 @@ export const AccordionItem: React.FC<{
         {/* plus icon rotates when open */}
         <span
           className={`inline-flex h-7 w-7 items-center justify-center rounded-full transition-all duration-300 ${
-            isOpen ? "bg-blue-50 text-teal-600" : "bg-transparent text-teal-600"
+            isOpen ? "bg-gray-background text-teal-600" : "bg-transparent text-teal-600"
           }`}
           aria-hidden
         >

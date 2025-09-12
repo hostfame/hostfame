@@ -5,6 +5,8 @@ import WordPressHostingFeatures from "./WordPressHostingFeatures";
 import { wordpressHostingData } from "@/types/wordpress-hosting/wordpress-hosting.data";
 import ManagedHostingHighlights from "@/components/shared/sections/ManagedHostingHighlights";
 import FaqSection from "../faqs/FaqSection";
+import HostingBenefits from "../web-hosting/HostingBenefits";
+import SupportBanner from "@/components/shared/sections/SupportBanner";
 
 const WordPressHosting = () => {
   return (
@@ -12,10 +14,9 @@ const WordPressHosting = () => {
       <Banner
         title={
           <>
-            Get Fastest Hosting
+            Turbocharge Your
             <br className="hidden md:block" />
-            <span className="sr-only"> — </span>
-            <span className="block">Up to 76% Discount</span>
+            <span className="block">WordPress Website</span>
           </>
         }
         image="/assets/web-hosting/webhero.webp"
@@ -25,16 +26,21 @@ const WordPressHosting = () => {
           text: "Claim Offer Now",
         }}
         lists={[
-          "Free .COM Domain on Trinnially",
-          "Genuine & Latest Control Panel",
-          "Free WildCard SSL for Lifetime",
+          "Blazing speed to keep your WordPress site running fast.",
+          "Free backups so your data is always safe.",
+          "Human support designed for creators, consultants, and small businesses.",
         ]}
       />
       <WordPressHostingFeatures />
+      <HostingBenefits />
       <SectionWrapper>
-        <ManagedHostingHighlights data={wordpressHostingData}/>
+        <ManagedHostingHighlights data={wordpressHostingData} />
       </SectionWrapper>
+
       <FaqSection />
+      <SectionWrapper className="my-12 md:my-16">
+        <SupportBanner />
+      </SectionWrapper>
     </section>
   );
 };
