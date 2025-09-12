@@ -1,13 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #F8F8F8;
+  --background: #F4F9FF;
   --foreground: #1f2937;
   --card: #f8fafc;
   --card-foreground: #1f2937;
   --popover: #ffffff;
   --popover-foreground: #6b7280;
-  --primary: #0a8aff;
+  --primary: #008081;
+  --primary-light: #069999;
   --primary-foreground: #ffffff;
   --secondary: #002491;
   --secondary-foreground: #ffffff;
