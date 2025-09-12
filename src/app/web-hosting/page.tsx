@@ -1,9 +1,9 @@
-import React from 'react'
+import WebHosting from "@/components/pages/hosting/web-hosting/WebHosting";
 
-const page = () => {
-  return (
-    <div>page</div>
-  )
+
+export const dynamic = "force-static";
+export const revalidate = 3600;
+
+export default function WebHostingPage() {
+  return <WebHosting />;
 }
-
-export default page

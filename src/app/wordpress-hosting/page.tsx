@@ -1,7 +1,10 @@
 import WordPressHosting from "@/components/pages/hosting/wordpress-hosting/WordPressHosting";
 
-const page = () => {
+export const dynamic = "force-static";
+export const revalidate = 3600;
+
+const WordPressHostingPage = () => {
   return <WordPressHosting />;
 };
 
-export default page;
+export default WordPressHostingPage;
