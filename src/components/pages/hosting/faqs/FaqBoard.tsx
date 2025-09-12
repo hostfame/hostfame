@@ -51,15 +51,15 @@ const FaqBoard: React.FC<Props> = ({
                 ${
                   selected
                     ? "bg-teal-600 text-white shadow-md"
-                    : "bg-white text-slate-800 hover:shadow"
+                    : "bg-gray-background text-text hover:shadow"
                 }
               `}
               >
                 <span
-                  className={`inline-flex h-10 w-10 items-center justify-center rounded-full shadow ring-1 ring-black/5 transition-colors ${
+                  className={`inline-flex h-10 w-10 items-center justify-center rounded-full shadow ring-1 ring-black/10 transition-colors ${
                     selected
                       ? "bg-white/20 text-white"
-                      : "bg-white text-teal-600"
+                      : "bg-gray-background text-teal-600"
                   }`}
                 >
                   <Icon className="h-5 w-5" />
@@ -72,7 +72,7 @@ const FaqBoard: React.FC<Props> = ({
       </ul>
 
       {/* Right: FAQs list (accordion) */}
-      <div className="rounded-2xl bg-white p-2 md:p-3 shadow-md ring-1 ring-black/5">
+      <div className="rounded-2xl bg-background p-2 md:p-3 shadow-md  ring-1 ring-border-light-gray">
         {/* Key by active so it resets when category changes */}
         <Accordion
           key={active}
