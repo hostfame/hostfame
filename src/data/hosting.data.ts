@@ -31,12 +31,12 @@ export const WebHostingData = {
     highlighted: "Partners",
     partners: [
       "/assets/web-hosting/partners/cpanel.png", //cpanel
-      "/assets/web-hosting/partners/cloud-linux.jpeg", //cloudlinux
+      "/assets/web-hosting/partners/cloud-linux.webp", //cloudlinux
       "/assets/web-hosting/partners/litespeed.png", //litespeed
-      "/assets/web-hosting/partners/webuzu.jpeg", //webuzu
+      "/assets/web-hosting/partners/webuzu.webp", //webuzu
       "/assets/web-hosting/partners/spam-expert.png", //spamexpert
-      "/assets/web-hosting/partners/cloudflare.jpeg", //cloudflare
-      "/assets/web-hosting/partners/mailchannels.jpeg", //mailchannels
+      "/assets/web-hosting/partners/cloudflare.webp", //cloudflare
+      "/assets/web-hosting/partners/mailchannels.webp", //mailchannels
       "/assets/web-hosting/partners/intel.png", //intel
       "/assets/web-hosting/partners/jetbackup.png", //jetbackup
       "/assets/web-hosting/partners/imunify360.png" //imunify360

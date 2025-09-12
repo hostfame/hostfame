@@ -4,6 +4,8 @@ import React from "react";
 import ReviewsSection from "../hosting/web-hosting/reviews/ReviewSection";
 import SupportBanner from "@/components/shared/sections/SupportBanner";
 import SectionWrapper from "@/components/shared/wrappers/SectionWrapper";
+import HostingSupport from "./HostingSupport";
+import { hostingSupportData } from "@/data/support.data";
 
 const Support = () => {
   return (
@@ -25,6 +27,9 @@ const Support = () => {
         description="At Hostfame, we don’t just offer support; we deliver solutions.Our expert team is available 24/7 to help you with any questions, big or small."
       />
       <SkilledDedicatedExperts />
+      <SectionWrapper>
+        <HostingSupport data={hostingSupportData}/>
+      </SectionWrapper>
       <ReviewsSection />
       <SectionWrapper className="my-12 md:my-16">
         <SupportBanner />
