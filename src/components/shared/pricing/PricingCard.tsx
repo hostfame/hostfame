@@ -26,7 +26,7 @@ export function PricingCard({ plan, billingPeriod, isExpanded, onToggleExpand, c
       {
         plan.isPopular && (
           <div className=" absolute -top-17 w-full mx-auto z-20">
-            <section className="ring-2 ring-primary/80 rounded-t-xl bg-gradient-to-r from-primary to-primary/80 text-primary-foreground py-5 text-sm font-bold ">
+            <section className="ring-2 ring-primary/80 rounded-t-xl bg-gradient-to-r from-primary to-primary/80 text-white py-5 text-sm font-bold ">
               <span className=" flex justify-center items-center gap-3 text-xl">
                 Most Popular
               </span>
@@ -37,7 +37,7 @@ export function PricingCard({ plan, billingPeriod, isExpanded, onToggleExpand, c
 
       <Card
         className={
-          `relative transition-all duration-500 hover:shadow-2xl group overflow-hidden bg-gradient-to-br from-card to-card/80 backdrop-blur-sm border-border/50 ${plan.isPopular && "rounded-t-none ring-2 ring-primary/50"} ${isExpanded && "shadow-xl"} ${className}`
+          `relative transition-all duration-500 hover:shadow-2xl group overflow-hidden bg-gray-background backdrop-blur-sm border-border/50 ${plan.isPopular && "rounded-t-none ring-2 ring-primary/50"} ${isExpanded && "shadow-xl"} ${className}`
         }
       >
 
@@ -59,21 +59,21 @@ export function PricingCard({ plan, billingPeriod, isExpanded, onToggleExpand, c
 
               <h3 className="text-2xl font-bold">{plan.name}</h3>
             </div>
-            <p className="text-muted-foreground text-balance">{plan.description}</p>
+            <p className="text-text text-balance">{plan.description}</p>
           </div>
 
           <div className="">
             <div className="flex items-baseline justify-center gap-1">
-              <span className="text-lg text-muted-foreground">{plan.currency}</span>
+              <span className="text-lg text-text">{plan.currency}</span>
               <span
                 className={
-                  `text-5xl font-black tracking-tight ${plan.isPopular ? "text-primary/90" : "text-foreground"}`
+                  `text-5xl font-black tracking-tight ${plan.isPopular ? "text-primary-light" : "text-text"}`
                 }
               >
                 {formattedPrice}
               </span>
             </div>
-            <div className="text-muted-foreground font-medium">/{period}</div>
+            <div className="text-text font-medium">/{period}</div>
           </div>
 
           <div className="">
@@ -88,7 +88,7 @@ export function PricingCard({ plan, billingPeriod, isExpanded, onToggleExpand, c
             {plan.ctaText}
           </Button>
 
-          <p className="text-xs text-muted-foreground">{plan.renewalText}</p>
+          <p className="text-xs text-text">{plan.renewalText}</p>
         </CardHeader>
 
         <CardContent className=" space-y-5 relative z-10">
@@ -100,7 +100,7 @@ export function PricingCard({ plan, billingPeriod, isExpanded, onToggleExpand, c
               </section>
               <div className="flex items-start gap-3 text-sm">
                 <span className="text-2xl">🎁</span>
-                <span className="text-muted-foreground leading-relaxed">{plan.specialOffer.description}</span>
+                <span className="text-black leading-relaxed">{plan.specialOffer.description}</span>
               </div>
             </div>
           )}
@@ -108,7 +108,7 @@ export function PricingCard({ plan, billingPeriod, isExpanded, onToggleExpand, c
           <div className="space-y-8">
             {visibleFeatures.map((section) => (
               <div key={section.title} className=" space-y-5">
-                <h4 className="bg-gray-100 py-2 px-5 font-bold text-foreground text-xl rounded-xl flex items-center gap-2">
+                <h4 className="font-bold text-text text-xl rounded-xl flex items-center gap-2 pl-1">
                   {section.title}
                 </h4>
                 <div className="space-y-3">
@@ -146,7 +146,7 @@ export function PricingCard({ plan, billingPeriod, isExpanded, onToggleExpand, c
                       </div>
                       <span
                         className={
-                          `leading-relaxed transition-colors duration-200 ${feature.included ? "text-foreground group-hover/feature:text-primary" : "text-muted-foreground line-through"}`
+                          `leading-relaxed transition-colors duration-200 ${feature.included ? "text-text group-hover/feature:text-primary" : "text-text line-through"}`
                         }
                       >
                         {feature.name}
@@ -158,24 +158,22 @@ export function PricingCard({ plan, billingPeriod, isExpanded, onToggleExpand, c
             ))}
           </div>
 
-          <div className="border-t border-border/50">
-            <button
-              onClick={onToggleExpand}
-              className={` cursor-pointer w-full h-12 flex justify-center items-center rounded-2xl font-medium transition-all duration-300 hover:scale-105 text-foreground hover:bg-primary/20 hover:text-primary border border-primary/40 hover:border-primary/80 `}
-            >
-              {isExpanded ? (
-                <>
-                  <FaChevronUp className="h-3 w-3 mr-2" />
-                  Show Less Features
-                </>
-              ) : (
-                <>
-                  <FaChevronDown className="h-3 w-3 mr-2" />
-                  See More Features
-                </>
-              )}
-            </button>
-          </div>
+          <button
+            onClick={onToggleExpand}
+            className={` cursor-pointer w-full h-12 flex justify-center items-center rounded-2xl font-medium transition-all duration-300 hover:scale-105 text-text hoverhover:text-text `}
+          >
+            {isExpanded ? (
+              <>
+                <FaChevronUp className="h-3 w-3 mr-2" />
+                Show Less Features
+              </>
+            ) : (
+              <>
+                <FaChevronDown className="h-3 w-3 mr-2" />
+                See More Features
+              </>
+            )}
+          </button>
         </CardContent>
       </Card >
     </section>
