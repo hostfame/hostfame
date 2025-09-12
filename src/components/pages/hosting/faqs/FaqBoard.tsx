@@ -53,7 +53,7 @@ const FaqBoard: React.FC<Props> = ({
                 flex items-center gap-4
                 ${
                   selected
-                    ? "bg-blue-600 text-white shadow-md"
+                    ? "bg-teal-600 text-white shadow-md"
                     : "bg-white text-slate-800 hover:shadow"
                 }
               `}
@@ -63,7 +63,7 @@ const FaqBoard: React.FC<Props> = ({
                     ${
                       selected
                         ? "bg-white/20 text-white"
-                        : "bg-white text-blue-600"
+                        : "bg-white text-teal-600"
                     }
                   `}
                 >
@@ -114,7 +114,7 @@ const AccordionItem: React.FC<{
     <div className="px-4">
       <button
         onClick={() => onToggle(id)}
-        className="flex w-full items-center justify-between gap-4 py-5 transition-colors duration-300 hover:text-blue-700"
+        className="flex w-full items-center justify-between gap-4 py-5 transition-colors duration-300 hover:text-teal-700"
         aria-expanded={isOpen}
         aria-controls={`faq-panel-${id}`}
         id={`faq-trigger-${id}`}
@@ -128,8 +128,8 @@ const AccordionItem: React.FC<{
           className={`inline-flex h-7 w-7 items-center justify-center rounded-full transition-all duration-300
           ${
             isOpen
-              ? "bg-blue-50 text-blue-600"
-              : "bg-transparent text-blue-600"
+              ? "bg-blue-50 text-teal-600"
+              : "bg-transparent text-teal-600"
           }
         `}
           aria-hidden

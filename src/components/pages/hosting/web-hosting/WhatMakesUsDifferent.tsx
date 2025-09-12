@@ -50,7 +50,7 @@ export default function WhatMakesUsDifferent({
                 key={title}
                 className="rounded-2xl bg-white/90 p-5 shadow-[0_10px_28px_rgba(10,30,70,0.08)] ring-1 ring-slate-200 backdrop-blur-sm transition-all duration-300 hover:-translate-y-1.5"
               >
-                <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-blue-600 ring-1 ring-blue-100">
+                <div className="mb-3 inline-flex h-10 w-10 items-center justify-center rounded-xl bg-blue-50 text-teal-600 ring-1 ring-blue-100">
                   <Icon className="h-5 w-5" />
                 </div>
                 <h3 className="text-base font-semibold text-slate-900">
