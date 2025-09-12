@@ -10,14 +10,14 @@ import { useState } from "react"
 export function Pricing() {
   const [billingPeriod, setBillingPeriod] = useState<BillingPeriod>("monthly")
   // Always expanded → single state instead of per-card
-  const [isExpanded, setIsExpanded] = useState(true)
+  const [isExpanded, setIsExpanded] = useState(false)
 
   const handleToggleExpand = () => {
     setIsExpanded((prev) => !prev)
   }
 
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-background via-muted/20 to-background relative overflow-hidden">
+    <section className="py-20 px-4 relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern opacity-5" />
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
@@ -38,7 +38,7 @@ export function Pricing() {
           yearlyDiscount={pricingData.yearlyDiscount}
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-14 lg:gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-14 lg:gap-6 max-w-7xl mx-auto pt-18">
           {pricingData.plans.map((plan, index) => (
             <div
               key={plan.id}
