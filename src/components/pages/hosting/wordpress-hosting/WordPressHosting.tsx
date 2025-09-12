@@ -1,11 +1,35 @@
 import React from "react";
 import SectionWrapper from "@/components/shared/wrappers/SectionWrapper";
+import { Banner } from "@/components/shared/banners/Banner";
+import WordPressHostingFeatures from "./WordPressHostingFeatures";
 import { wordpressHostingData } from "@/types/wordpress-hosting/wordpress-hosting.data";
 import ManagedHostingHighlights from "@/components/shared/sections/ManagedHostingHighlights";
 
 const WordPressHosting = () => {
   return (
-    <section>
+    <section className="">
+      <Banner
+        title={
+          <>
+            Get Fastest Hosting
+            <br className="hidden md:block" />
+            <span className="sr-only"> — </span>
+            <span className="block">Up to 76% Discount</span>
+          </>
+        }
+        image="/assets/web-hosting/webhero.webp"
+        waveImage="/assets/web-hosting/banner-left-wave.png"
+        countdownTarget={new Date(Date.now() + 15 * 60 * 60 * 1000)} // 15 hours
+        cta={{
+          text: "Claim Offer Now",
+        }}
+        lists={[
+          "Free .COM Domain on Trinnially",
+          "Genuine & Latest Control Panel",
+          "Free WildCard SSL for Lifetime",
+        ]}
+      />
+      <WordPressHostingFeatures />
       <SectionWrapper>
         <ManagedHostingHighlights data={wordpressHostingData}/>
       </SectionWrapper>
