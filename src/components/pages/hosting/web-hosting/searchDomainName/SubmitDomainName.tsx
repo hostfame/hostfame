@@ -24,11 +24,11 @@ const SubmitDomainName = () => {
         type="text"
         {...register("domain", { required: true })}
         placeholder={WebHostingData.domainNameSection.searchPlaceholder}
-        className="flex-1 px-3 py-3 sm:px-4 sm:py-4 bg-gray-100 text-lg sm:text-2xl outline-none border-none rounded-l-xl font-medium"
+        className="flex-1 px-3 py-3 sm:px-4 sm:py-4 bg-gray-100 text-lg lg:text-xl outline-none border-none rounded-l-xl font-medium"
       />
       <button
         type="submit"
-        className="flex items-center justify-center cursor-pointer gap-1 bg-gradient-to-r from-primary-blue to-secondary-blue text-white font-semibold text-lg sm:text-2xl px-4 sm:px-7 md:px-9 py-3 sm:py-4 rounded-l-none rounded-r-xl hover:opacity-90 transition"
+        className="flex items-center justify-center cursor-pointer gap-1 bg-gradient-to-r from-primary-blue to-secondary-blue text-white font-semibold text-lg lg:text-xl px-4 sm:px-7 md:px-9 py-3 sm:py-4 rounded-l-none rounded-r-xl hover:opacity-90 transition"
       >
         <IoSearch size={20}/> Search
       </button>
