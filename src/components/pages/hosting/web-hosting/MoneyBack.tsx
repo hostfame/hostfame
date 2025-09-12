@@ -27,12 +27,12 @@ const MoneyBack = () => {
             return (
               <div
                 key={idx}
-                className="flex items-center gap-3 bg-blue-700/50 p-4 rounded-2xl shadow-md hover:bg-blue-700/60 transition"
+                className="flex items-center gap-3 bg-background p-4 rounded-2xl shadow-md hover:bg-white/80 transition"
               >
                 <div className="flex items-center justify-center w-12 h-12 rounded-full bg-blue-600 shadow-md flex-shrink-0">
                   <Icon className="w-6 h-6 text-white" />
                 </div>
-                <span className="text-sm sm:text-base font-medium">
+                <span className="text-sm sm:text-base font-medium text-text-primary">
                   {feature.text}
                 </span>
               </div>

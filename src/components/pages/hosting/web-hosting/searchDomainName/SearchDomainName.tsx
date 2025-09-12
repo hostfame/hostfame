@@ -9,12 +9,12 @@ const SearchDomainName = () => {
   }
 
   return (
-    <section className="relative overflow-hidden rounded-3xl border border-gray-100 bg-white shadow-[0_10px_40px_-15px_rgb(0,0,0,0.15)]">
+    <section className="relative overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-[0_10px_20px_5px_rgb(0,0,0,0.15)]">
       {/* Subtle radial background accents */}
       <div className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-gradient-to-br from-primary-blue/20 to-secondary-blue/10 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-gradient-to-br from-primary-blue/10 to-secondary-blue/20 blur-3xl" />
 
-      <div className="relative grid gap-10 sm:p-6 lg:p-8 lg:grid-cols-2">
+      <div className="relative grid gap-10 p-2 py-8 md:p-8 lg:px-12 lg:py-20 lg:grid-cols-2">
         {/* Left */}
         <div className="flex flex-col justify-center gap-6">
           <header className="space-y-3">
@@ -25,48 +25,11 @@ const SearchDomainName = () => {
 
           {/* Search Form */}
           <SubmitDomainName />
-
-          {/* Pricing */}
-          <div className="pt-2">
-            <div className="grid grid-cols-2 sm:grid-cols-2 gap-3 sm:gap-4">
-              {Object.values(WebHostingData.domainNameSection.pricing).map(
-                (pricing, idx) => (
-                  <div
-                    key={`${pricing.title}-${idx}`}
-                    className="relative rounded-2xl border border-gray-200 bg-white p-4 shadow-sm hover:shadow-md transition"
-                  >
-                    {idx === 0 && (
-                      <span className="absolute -top-2 right-3 rounded-full bg-blue-600 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white shadow">
-                        Popular
-                      </span>
-                    )}
-                    <div className="flex items-baseline justify-between gap-2">
-                      <p
-                        className={classNames(
-                          "text-xl sm:text-2xl font-extrabold",
-                          idx === 0 && "text-sky-600",
-                          idx === 1 && "text-red-500",
-                          idx === 2 && "text-emerald-600",
-                          idx === 3 && "text-amber-500"
-                        )}
-                      >
-                        {pricing.title}
-                      </p>
-
-                      <p className=" text-gray-700 font-semibold">
-                        {pricing.price}
-                      </p>
-                    </div>
-                  </div>
-                )
-              )}
-            </div>
-          </div>
         </div>
 
         {/* Right */}
         <div className="flex items-center justify-center lg:justify-end">
-          <div className="relative">
+          {/* <div className="relative">
             <Image
               width={420}
               height={420}
@@ -76,6 +39,41 @@ const SearchDomainName = () => {
               src="/assets/web-hosting/com-domain-offer.png"
               className=""
             />
+          </div> */}
+
+          {/* Pricing */}
+          <div className="grid grid-cols-2 sm:grid-cols-2 gap-3 sm:gap-4">
+            {Object.values(WebHostingData.domainNameSection.pricing).map(
+              (pricing, idx) => (
+                <div
+                  key={`${pricing.title}-${idx}`}
+                  className="relative rounded-2xl border border-gray-200 bg-white p-4 shadow-sm hover:shadow-md transition"
+                >
+                  {idx === 0 && (
+                    <span className="absolute -top-2 right-3 rounded-full bg-blue-600 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white shadow">
+                      Popular
+                    </span>
+                  )}
+                  <div className="flex items-baseline justify-between gap-2">
+                    <p
+                      className={classNames(
+                        "text-xl sm:text-2xl font-extrabold",
+                        idx === 0 && "text-sky-600",
+                        idx === 1 && "text-red-500",
+                        idx === 2 && "text-emerald-600",
+                        idx === 3 && "text-amber-500"
+                      )}
+                    >
+                      {pricing.title}
+                    </p>
+
+                    <p className=" text-gray-700 font-semibold">
+                      {pricing.price}
+                    </p>
+                  </div>
+                </div>
+              )
+            )}
           </div>
         </div>
       </div>
