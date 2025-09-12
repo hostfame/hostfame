@@ -34,7 +34,7 @@ const Navbar = () => {
   }, [])
 
   return (
-    <nav className="bg-white shadow-lg border-b border-gray-200 sticky top-0 z-50">
+    <nav className="bg-background shadow-lg border-b border-border-light-gray sticky top-0 z-50">
       <section className=" max-w-7xl mx-auto ">
         <div className=" mx-auto px-4 ">
           <div className="flex justify-between items-center h-16">
@@ -58,12 +58,12 @@ const Navbar = () => {
                     <>
                       <button className={`flex items-center px-3 py-2 text-sm font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 ${item.subItems.some(subItem => subItem.href === pathname)
                         ? "text-teal-600"
-                        : "text-gray-600 hover:text-teal-600"
+                        : "text-text hover:text-teal-600"
                         }`}>
                         {item.label}
                         <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
                       </button>
-                      <div className={` ${item.label === "Hosting" ? "w-96" : "w-56"} absolute left-0 mt-2 bg-white rounded-xl shadow-2xl border border-gray-100 py-4 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform group-hover:-translate-y-1`}>
+                      <div className={` ${item.label === "Hosting" ? "w-96" : "w-56"} absolute left-0 mt-2 bg-gray-background rounded-xl shadow-2xl border border-background py-4 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform group-hover:-translate-y-1`}>
                         <div className={`grid ${item.label === "Hosting" ? "grid-cols-2" : "grid-cols-1"} gap-1 px-4`}>
                           {item.subItems.map((subItem) => (
                             <Link
@@ -71,15 +71,15 @@ const Navbar = () => {
                               href={subItem.href}
                               className={`flex items-start p-3 rounded-lg hover:bg-blue-50 transition-all duration-200 ease-in-out transform hover:scale-102 ${subItem.href === pathname
                                 ? "text-teal-600"
-                                : "text-gray-600 hover:text-teal-600"
+                                : "text-text hover:text-teal-600"
                                 }`}
                             >
-                              <div className={`flex-shrink-0 mr-3 mt-0.5 ${subItem.href === pathname ? "text-teal-600" : "text-teal-600"
+                              <div className={`flex-shrink-0 mr-3 mt-0.5 ${subItem.href === pathname ? "text-text" : "text-text"
                                 }`}>{getIcon(subItem.icon)}</div>
                               <div>
-                                <div className={`text-sm font-semibold ${subItem.href === pathname ? "text-teal-600" : "text-gray-900"
+                                <div className={`text-sm font-semibold ${subItem.href === pathname ? "text-teal-600" : "text-text"
                                   }`}>{subItem.label}</div>
-                                <div className="text-xs text-gray-500 mt-0.5">{subItem.description}</div>
+                                <div className="text-xs text-description-text mt-0.5">{subItem.description}</div>
                               </div>
                             </Link>
                           ))}
@@ -91,7 +91,7 @@ const Navbar = () => {
                       href={item.href!}
                       className={`px-3 py-2 text-sm font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 ${item.href === pathname
                         ? "text-teal-600"
-                        : "text-gray-600 hover:text-teal-600"
+                        : "text-text hover:text-teal-600"
                         }`}
                     >
                       {item.label}

@@ -7,7 +7,6 @@ import { Pricing } from "./pricing/Pricing";
 import WebHostingFeatures from "./WebHostingFeatures";
 import { Banner } from "@/components/shared/banners/Banner";
 import PromoTopBar from "@/components/shared/promo/PromoTopbar";
-import HostingBenefits from "./HostingBenefits";
 import ReviewsSection from "./reviews/ReviewSection";
 import AdvancedFeatures from "./advance-features/AdvanceFeatures";
 import FaqSection from "../faqs/FaqSection";
@@ -41,7 +40,7 @@ const WebHosting = () => {
           "Free WildCard SSL for Lifetime",
         ]}
       />
-      <HostingBenefits />
+      {/* <HostingBenefits /> */}
 
       <SectionWrapper>
         <Pricing />
