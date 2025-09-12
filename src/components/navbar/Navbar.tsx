@@ -69,17 +69,21 @@ const Navbar = () => {
                             <Link
                               key={subItem.label}
                               href={subItem.href}
-                              className={`flex items-start p-3 rounded-lg hover:bg-blue-50 transition-all duration-200 ease-in-out transform hover:scale-102 ${subItem.href === pathname
+                              className={`flex items-start p-3 rounded-lg hover:bg-primary-light transition-all duration-200 ease-in-out transform hover:scale-102 ${subItem.href === pathname
                                 ? "text-teal-600"
-                                : "text-text hover:text-teal-600"
+                                : "text-text hover:text-white"
                                 }`}
                             >
-                              <div className={`flex-shrink-0 mr-3 mt-0.5 ${subItem.href === pathname ? "text-text" : "text-text"
-                                }`}>{getIcon(subItem.icon)}</div>
+                              <div className={`flex-shrink-0 mr-3 mt-0.5 `}>
+                                {getIcon(subItem.icon)}
+                              </div>
                               <div>
-                                <div className={`text-sm font-semibold ${subItem.href === pathname ? "text-teal-600" : "text-text"
-                                  }`}>{subItem.label}</div>
-                                <div className="text-xs text-description-text mt-0.5">{subItem.description}</div>
+                                <div className={`text-sm font-semibold `}>
+                                  {subItem.label}
+                                </div>
+                                <div className="text-xs mt-0.5">
+                                  {subItem.description}
+                                </div>
                               </div>
                             </Link>
                           ))}
