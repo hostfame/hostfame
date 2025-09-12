@@ -85,7 +85,7 @@ const Navbar = () => {
                               key={subItem.label}
                               href={subItem.href}
                               className={`flex items-start p-3 rounded-lg hover:bg-primary-light transition-all duration-200 ease-in-out transform hover:scale-102 ${subItem.href === pathname
-                                ? "text-teal-600"
+                                ? "text-teal-600 hover:text-white"
                                 : "text-text hover:text-white"
                                 }`}
                             >
