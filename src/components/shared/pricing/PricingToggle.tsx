@@ -63,21 +63,21 @@ function FallbackToggle({
   onToggle: (p: BillingPeriod) => void;
 }) {
   return (
-    <div className="flex rounded-full bg-[#1E2A3B] p-1">
+    <div className="flex rounded-full bg-toggle p-1">
       <button
         onClick={() => onToggle("monthly")}
-        className={`px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${billingPeriod === "monthly"
+        className={` cursor-pointer px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${billingPeriod === "monthly"
           ? "bg-primary text-white"
-          : "text-white/70 hover:text-white"
+          : "text-toggle-text/70 hover:text-toggle-text"
           }`}
       >
         Monthly
       </button>
       <button
         onClick={() => onToggle("yearly")}
-        className={`px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${billingPeriod === "yearly"
+        className={` cursor-pointer px-6 py-2 rounded-full text-sm font-semibold transition-all duration-300 ${billingPeriod === "yearly"
           ? "bg-primary text-white"
-          : "text-white/70 hover:text-white"
+          : "text-toggle-text/70 hover:text-toggle-text"
           }`}
       >
         Yearly
