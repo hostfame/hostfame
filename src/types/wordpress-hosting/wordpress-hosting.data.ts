@@ -1,5 +1,19 @@
-import { FaServer, FaTools, FaBolt, FaCloud, FaShieldAlt, FaHeadset } from 'react-icons/fa';
-export const wordpressHostingData = {
+import {
+  FaServer,
+  FaTools,
+  FaBolt,
+  FaCloud,
+  FaShieldAlt,
+  FaHeadset,
+  FaKey,
+  FaLock,
+  FaShoppingCart,
+  FaDatabase,
+  FaClone,
+  FaGlobe
+} from "react-icons/fa";
+
+export const wordpressHostingManagedHostingHighlightsData = {
   title: "Managed WordPress Hosting Highlights",
   description:
     "Focus on growing your business while we handle your WordPress site. Enjoy top-tier speed, uptime, and expert support, all built into Hostfame’s managed hosting.",
@@ -40,5 +54,21 @@ export const wordpressHostingData = {
       description:
         "Get instant help anytime. Our U.S.-based WordPress experts are available 24/7/365, ready to solve issues fast."
     }
+  ]
+};
+
+export const wordpressHostingAllHostingPlans = {
+  title: "All WordPress Hosting Plans Include",
+  description: "Everything you need for speed, security, and scalability.",
+  items: [
+    { title: "Access Management", image: "/images/access.png" },
+    { title: "PHP Version Control", image: "/images/php.png" },
+    { title: "Free SSL Certificate", image: "/images/ssl.png" },
+    { title: "ECommerce Optimization", image: "/images/ecommerce.png" },
+    { title: "Free Site Migration", image: "/images/migration.png" },
+    { title: "Daily Regular Backups", image: "/images/backup.png" },
+    { title: "DDoS Protection", image: "/images/ddos.png" },
+    { title: "Auto Staging System", image: "/images/staging.png" },
+    { title: "Autoscaling Cloud Technology", image: "/images/cloud.png" }
   ]
 };
