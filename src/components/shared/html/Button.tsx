@@ -2,7 +2,7 @@ import Link from "next/link";
 import React from "react";
 import { IconType } from "react-icons";
 
-export type PrimaryButtonProps = {
+export type ButtonProps = {
   children: string;
   onClick?: () => void;
   href?: string;
@@ -13,7 +13,7 @@ export type PrimaryButtonProps = {
   className?: string;
 };
 
-export const PrimaryButton: React.FC<PrimaryButtonProps> = ({
+export const Button: React.FC<ButtonProps> = ({
   children,
   onClick,
   href,

@@ -3,9 +3,8 @@
 import { PricingCardProps } from "@/types/pricing.types"
 import { Card, CardContent, CardHeader } from "../html/Card"
 import { FaChevronDown, FaChevronUp } from "react-icons/fa"
-import { PrimaryButton } from "../html/PrimaryButton"
+import { Button } from "../html/Button"
 import Image from "next/image"
-import { Tooltip } from "react-tooltip"
 
 export function PricingCard({ plan, billingPeriod, isExpanded, onToggleExpand, className }: PricingCardProps) {
   const price = billingPeriod === "monthly" ? plan.monthlyPrice : plan.yearlyPrice
@@ -89,9 +88,9 @@ export function PricingCard({ plan, billingPeriod, isExpanded, onToggleExpand, c
           </section>
         </div>
 
-        <PrimaryButton variant={plan.isPopular ? "light" : "bordered"}>
+        <Button variant={plan.isPopular ? "light" : "bordered"}>
           {plan.ctaText}
-        </PrimaryButton>
+        </Button>
 
         <p className="text-xs text-muted-foreground">{plan.renewalText}</p>
       </CardHeader>
