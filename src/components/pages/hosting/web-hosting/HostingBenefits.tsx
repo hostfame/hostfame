@@ -42,10 +42,11 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 /** ----------------------------------------------------------------
  *  Section
  *  ---------------------------------------------------------------- */
+// md:-mt-[13%]  lg:-mt-[10.5%] 2xl:-mt-32  min-[1178px]:-mt-[10%]
 export default function HostingBenefits() {
   return (
     <section className="py-12 md:py-16 bg-white">
-      <div className="mx-auto max-w-7xl px-6 md:-mt-[13%]  lg:-mt-[10.5%] 2xl:-mt-32  min-[1178px]:-mt-[10%]">
+      <div className="mx-auto max-w-7xl px-6 ">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {features.map((f, i) => (
             <FeatureCard key={i} {...f} />
