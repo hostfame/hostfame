@@ -3,7 +3,7 @@ import FaqBoard from "./FaqBoard";
 
 export default function FaqSection() {
   return (
-    <section className="bg-[#f7f7f9] space-y-8 py-12 md:py-16">
+    <section className="bg-background space-y-8 py-12 md:py-16">
       <CenteredSectionHeader
         title={
           <>
