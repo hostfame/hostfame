@@ -26,7 +26,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
       {/* Small icon badge */}
       <div className="mb-5">
         <div className="inline-flex w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 items-center justify-center rounded-full bg-white shadow-lg ">
-          <Icon className=" size-[50%] text-blue-700" />
+          <Icon className=" size-[50%] text-teal-700" />
         </div>
       </div>
 

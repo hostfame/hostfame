@@ -18,7 +18,7 @@ const FeatureCard: React.FC<WhyChooseWebHostingProps & { className?: string }> =
                   ${className}`}
     >
       {/* subtle gradient ring on hover */}
-      <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-transparent group-hover:ring-blue-500/30 transition-all" />
+      <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-transparent group-hover:ring-teal-500/30 transition-all" />
 
       <div className="p-5 md:p-6">
         <div className="flex items-center gap-3">
@@ -67,7 +67,7 @@ export default function WhyChooseWebHosting() {
         </div>
 
         {/* Decorative line / accent under grid (adds depth) */}
-        <div className="pointer-events-none mx-auto h-1 w-32 rounded-full bg-gradient-to-r from-blue-400 to-blue-700 opacity-40" />
+        <div className="pointer-events-none mx-auto h-1 w-32 rounded-full bg-gradient-to-r from-teal-400 to-teal-700 opacity-40" />
       </div>
     </section>
   );

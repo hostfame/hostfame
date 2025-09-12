@@ -50,7 +50,7 @@ const SearchDomainName = () => {
                   className="relative rounded-2xl border border-gray-200 bg-white p-4 shadow-sm hover:shadow-md transition"
                 >
                   {idx === 0 && (
-                    <span className="absolute -top-2 right-3 rounded-full bg-blue-600 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white shadow">
+                    <span className="absolute -top-2 right-3 rounded-full bg-teal-600 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white shadow">
                       Popular
                     </span>
                   )}

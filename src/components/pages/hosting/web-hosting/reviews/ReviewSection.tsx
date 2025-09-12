@@ -80,7 +80,7 @@ export default function ReviewsSection() {
 
               <a
                 href="#more-reviews"
-                className="group inline-flex items-center gap-2 text-sm font-medium text-blue-700"
+                className="group inline-flex items-center gap-2 text-sm font-medium text-teal-700"
               >
                 More Review
                 <HiOutlineArrowRight className="transition-transform group-hover:translate-x-0.5" />

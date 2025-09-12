@@ -57,8 +57,8 @@ const Navbar = () => {
                   {item.subItems ? (
                     <>
                       <button className={`flex items-center px-3 py-2 text-sm font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 ${item.subItems.some(subItem => subItem.href === pathname)
-                        ? "text-blue-600"
-                        : "text-gray-600 hover:text-blue-600"
+                        ? "text-teal-600"
+                        : "text-gray-600 hover:text-teal-600"
                         }`}>
                         {item.label}
                         <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
@@ -70,14 +70,14 @@ const Navbar = () => {
                               key={subItem.label}
                               href={subItem.href}
                               className={`flex items-start p-3 rounded-lg hover:bg-blue-50 transition-all duration-200 ease-in-out transform hover:scale-102 ${subItem.href === pathname
-                                ? "text-blue-600"
-                                : "text-gray-600 hover:text-blue-600"
+                                ? "text-teal-600"
+                                : "text-gray-600 hover:text-teal-600"
                                 }`}
                             >
-                              <div className={`flex-shrink-0 mr-3 mt-0.5 ${subItem.href === pathname ? "text-blue-600" : "text-blue-600"
+                              <div className={`flex-shrink-0 mr-3 mt-0.5 ${subItem.href === pathname ? "text-teal-600" : "text-teal-600"
                                 }`}>{getIcon(subItem.icon)}</div>
                               <div>
-                                <div className={`text-sm font-semibold ${subItem.href === pathname ? "text-blue-600" : "text-gray-900"
+                                <div className={`text-sm font-semibold ${subItem.href === pathname ? "text-teal-600" : "text-gray-900"
                                   }`}>{subItem.label}</div>
                                 <div className="text-xs text-gray-500 mt-0.5">{subItem.description}</div>
                               </div>
@@ -90,8 +90,8 @@ const Navbar = () => {
                     <Link
                       href={item.href!}
                       className={`px-3 py-2 text-sm font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 ${item.href === pathname
-                        ? "text-blue-600"
-                        : "text-gray-600 hover:text-blue-600"
+                        ? "text-teal-600"
+                        : "text-gray-600 hover:text-teal-600"
                         }`}
                     >
                       {item.label}
@@ -106,8 +106,8 @@ const Navbar = () => {
                   href="/dashboard"
                   size="sm"
                   className={`rounded-full ${pathname === "/dashboard"
-                    ? "text-blue-600"
-                    : "text-gray-600 hover:text-blue-600"
+                    ? "text-teal-600"
+                    : "text-gray-600 hover:text-teal-600"
                     }`}
                 >
                   Dashboard
@@ -117,7 +117,7 @@ const Navbar = () => {
 
             {/* Mobile menu button */}
             <div className="min-[840px]:hidden">
-              <button onClick={toggleMenu} className="text-gray-600 hover:text-blue-600 p-2 transition-colors duration-200">
+              <button onClick={toggleMenu} className="text-gray-600 hover:text-teal-600 p-2 transition-colors duration-200">
                 {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
               </button>
             </div>
@@ -137,8 +137,8 @@ const Navbar = () => {
                     <button
                       onClick={() => toggleDropdown(item.label)}
                       className={`w-full flex items-center justify-between px-3 py-3 text-base font-medium rounded-md transition-colors duration-300 ${item.subItems.some(subItem => subItem.href === pathname)
-                        ? "text-blue-600"
-                        : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                        ? "text-teal-600"
+                        : "text-gray-700 hover:text-teal-600 hover:bg-gray-50"
                         }`}
                     >
                       {item.label}
@@ -158,13 +158,13 @@ const Navbar = () => {
                           key={subItem.label}
                           href={subItem.href}
                           className={`block px-3 py-2 text-sm rounded-md transition-colors duration-300 ${subItem.href === pathname
-                            ? "text-blue-600"
-                            : "text-gray-600 hover:text-blue-600 hover:bg-gray-50"
+                            ? "text-teal-600"
+                            : "text-gray-600 hover:text-teal-600 hover:bg-gray-50"
                             }`}
                           onClick={() => setIsOpen(false)}
                         >
                           <span className="flex items-center gap-2">
-                            <span className={subItem.href === pathname ? "text-blue-600" : "text-blue-600"}>
+                            <span className={subItem.href === pathname ? "text-teal-600" : "text-teal-600"}>
                               {getIcon(subItem.icon)}
                             </span>
                             {subItem.label}
@@ -177,8 +177,8 @@ const Navbar = () => {
                   <Link
                     href={item.href!}
                     className={`block px-3 py-3 text-base font-medium rounded-md transition-colors duration-300 ${item.href === pathname
-                      ? "text-blue-600"
-                      : "text-gray-700 hover:text-blue-600 hover:bg-gray-50"
+                      ? "text-teal-600"
+                      : "text-gray-700 hover:text-teal-600 hover:bg-gray-50"
                       }`}
                     onClick={() => setIsOpen(false)}
                   >
@@ -191,8 +191,8 @@ const Navbar = () => {
               <PrimaryButton
                 href="/dashboard"
                 className={`block w-full ${pathname === "/dashboard"
-                  ? "text-blue-600"
-                  : "text-gray-600 hover:text-blue-600"
+                  ? "text-teal-600"
+                  : "text-gray-600 hover:text-teal-600"
                   }`}
                 onClick={() => setIsOpen(false)}
               >

@@ -38,7 +38,7 @@ export const Banner: React.FC<BannerProps> = ({
   imageAlt = "Banner visual",
   waveImage,
   waveAlt = "",
-  bgGradient,
+  bgGradient = "linear-gradient(278deg, #008081 16%, #069999 98%)",
   cta,
   countdownTarget,
   className = "",
@@ -47,11 +47,11 @@ export const Banner: React.FC<BannerProps> = ({
 }) => {
   return (
     <section
-      className={`relative w-full text-white bg-no-repeat h-fit xl:h-[740px] xl:max-h-[740px] overflow-hidden ${className}`}
+      className={`relative w-full bg-gradient-to-r from-primary to-primary-light text-white bg-no-repeat h-fit xl:h-[740px] xl:max-h-[740px] overflow-hidden ${className}`}
       style={{
         backgroundPosition: "left center, center center",
         backgroundSize: "contain",
-        backgroundImage: `url(${waveImage}), ${bgGradient}`,
+        // backgroundImage: `${bgGradient}`,
       }}
     >
       {/* Left decorative wave */}

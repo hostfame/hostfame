@@ -31,7 +31,6 @@ const WebHosting = () => {
         }
         image="/assets/web-hosting/webhero.webp"
         waveImage="/assets/web-hosting/banner-left-wave.png"
-        bgGradient="linear-gradient(278deg, rgba(0, 40, 160, 0.9) 16%, rgba(0, 20, 80, 0.9) 98%)"
         countdownTarget={new Date(Date.now() + 15 * 60 * 60 * 1000)} // 15 hours
         cta={{
           text: "Claim Offer Now",
