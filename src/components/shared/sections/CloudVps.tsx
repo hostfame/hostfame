@@ -1,22 +1,9 @@
 import { LuCpu, LuMemoryStick, LuHardDrive, LuGauge, } from "react-icons/lu";
 import { Button } from "../html/Button";
 import CenteredSectionHeader from "../headers/CenteredSectionHeader";
+import { CloudVpsProps } from "@/types/cloudVps.types";
 
-type Feature = {
-  icon: React.ReactNode;
-  title: string;
-  subtitle: string;
-};
-
-type CloudVpsData = {
-  headline: string;
-  planLabel: string;
-  priceMonthly: string;
-  ctaText: string;
-  features: Feature[];
-};
-
-const data: CloudVpsData = {
+const cloudVpsData: CloudVpsProps = {
   headline: "High-Speed Cloud VPS",
   planLabel: "Starter Plus",
   priceMonthly: "$19.99/mo",
@@ -52,7 +39,7 @@ export default function CloudVps() {
       aria-label="VPS pricing"
     >
       {/* Headline */}
-      <CenteredSectionHeader title={data.headline} />
+      <CenteredSectionHeader title={cloudVpsData.headline} />
 
       {/* Plan Tag */}
       <div className="mt-6 flex justify-center">
@@ -61,7 +48,7 @@ export default function CloudVps() {
         >
           {/* A tiny dot to mimic a badge light */}
           <span className="h-2 w-2 rounded-full bg-toggle-text/70" />
-          {data.planLabel}
+          {cloudVpsData.planLabel}
         </span>
       </div>
 
@@ -77,7 +64,7 @@ export default function CloudVps() {
 
       {/* Features */}
       <ul className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {data.features.map((f, i) => (
+        {cloudVpsData.features.map((f, i) => (
           <li
             key={i}
             className=" group rounded-xl border bg-gradient-to-t from-primary-light to-primary-extralight border-border-light-gray px-4 py-5 transition-transform hover:-translate-y-0.5 "
@@ -101,12 +88,12 @@ export default function CloudVps() {
 
       {/* Price + CTA */}
       <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-        <p className="text-2xl font-semibold text-text">{data.priceMonthly}</p>
+        <p className="text-2xl font-semibold text-text">{cloudVpsData.priceMonthly}</p>
         <Button
           variant="bordered"
           size="sm"
         >
-          {data.ctaText}
+          {cloudVpsData.ctaText}
         </Button>
       </div>
     </section>
