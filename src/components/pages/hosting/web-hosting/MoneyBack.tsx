@@ -1,3 +1,4 @@
+import WhiteButton from "@/components/shared/html/WhiteButton";
 import { moneyBackFeatures, WebHostingData } from "@/data/hosting.data";
 import React from "react";
 
@@ -17,6 +18,7 @@ const MoneyBack = () => {
           <p className="text-white text-sm md:text-base max-w-xl mx-auto lg:mx-0">
             {WebHostingData.moneyBackSection.description}
           </p>
+          <WhiteButton showIcon={false}>Get Started Risk-Free</WhiteButton>
         </div>
 
         {/* Right: Features */}
