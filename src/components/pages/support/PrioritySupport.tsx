@@ -28,7 +28,7 @@ const FEATURES = [
 
 export default function PrioritySupport() {
   return (
-    <section className="mx-auto max-w-6xl px-4 py-12 sm:py-16">
+    <section className="mx-auto  py-12 sm:py-16">
       <div className="grid gap-10 lg:grid-cols-7 items-center">
         {/* Image side */}
         <div className="relative lg:col-span-3">
