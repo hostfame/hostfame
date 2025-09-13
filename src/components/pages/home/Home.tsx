@@ -8,7 +8,6 @@ import HostingPlan from '@/components/shared/sections/HostingPlan'
 const Home = () => {
   return (
     <section>
-      <HostingPlan />
       <Banner
         title={
           <>
@@ -31,6 +30,9 @@ const Home = () => {
       </SectionWrapper>
       <SectionWrapper className="my-12 lg:my-16">
         <ExperienceHostfameAdvantage />
+      </SectionWrapper>
+      <SectionWrapper>
+        <HostingPlan />
       </SectionWrapper>
     </section>
   );

@@ -1,14 +1,27 @@
-export type HostingFeature = {
+export type FeatureKey =
+  | "storage"
+  | "email"
+  | "liveChat"
+  | "callSupport"
+  | "moneyBack"
+  | "cdn"
+  | "migration"
+  | "accountMgr"
+  | "backups";
+
+export type FeatureRow = {
+  key: FeatureKey;
   label: string;
-  available: boolean;
 };
 
 export type HostingPlanProps = {
   id: string;
   name: string;
+  startingAtLabel: string;
   price: string;
+  priceSuffix: string;
+  cta: string;
   storage: string;
-  emailAccounts: string;
-  features: HostingFeature[];
-  buttonLabel: string;
+  email: string;
+  features: Record<Exclude<FeatureKey, "storage" | "email">, boolean>;
 };
