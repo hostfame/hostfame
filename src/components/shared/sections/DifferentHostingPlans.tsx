@@ -3,6 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useRef } from "react";
 import CenteredSectionHeader from "../headers/CenteredSectionHeader";
+import { FaArrowRightLong } from "react-icons/fa6";
+import { FaAngleLeft, FaAngleRight, FaArrowRight } from "react-icons/fa";
 
 interface DifferentHostingPlansProps {
   title: string;
@@ -27,86 +29,101 @@ export default function DifferentHostingPlans({
 }) {
   const sliderRef = useRef<HTMLDivElement>(null);
 
-  const scrollLeft = () => {
+  const scroll = (direction: "left" | "right") => {
     if (sliderRef.current) {
-      sliderRef.current.scrollBy({ left: -300, behavior: "smooth" });
-    }
-  };
-
-  const scrollRight = () => {
-    if (sliderRef.current) {
-      sliderRef.current.scrollBy({ left: 300, behavior: "smooth" });
+      const card = sliderRef.current.querySelector("div.flex-shrink-0");
+      if (card) {
+        const cardWidth = (card as HTMLElement).offsetWidth + 24; // card width + gap (24px = gap-6)
+        sliderRef.current.scrollBy({
+          left: direction === "left" ? -cardWidth : cardWidth,
+          behavior: "smooth"
+        });
+      }
     }
   };
 
   return (
-    <section className="py-12 bg-background text-foreground">
-      <div className="px-4">
+    <section className="py-12">
+      {/* Header row with arrows */}
+      <div className="flex items-start lg:items-center justify-between mb-6">
         <CenteredSectionHeader
           title={data.title}
           description={data.description}
+          className="!text-left !mx-0"
+          classNameForTitle="!text-left !mx-0"
+          classNameForDescription="!text-left !mx-0"
         />
 
-        {/* Slider */}
-        <section className="relative">
-          {/* Left Button */}
+        <div className="flex gap-2">
           <button
-            onClick={scrollLeft}
-            className="absolute left-0 top-1/2 -translate-y-1/2 bg-card p-2 rounded-full shadow-md hidden md:flex"
+            onClick={() => scroll("left")}
+            className="bg-primary/80 border border-border-light-gray h-12 w-12 flex items-center justify-center rounded-full shadow hover:bg-primary text-white transition cursor-pointer"
           >
-            ←
+            <FaAngleLeft size={20}/>
           </button>
+          <button
+            onClick={() => scroll("right")}
+            className="bg-primary/80 border border-border-light-gray h-12 w-12 flex items-center justify-center rounded-full shadow hover:bg-primary text-white transition cursor-pointer"
+          >
+            <FaAngleRight size={20}/>
+          </button>
+        </div>
+      </div>
 
+      {/* Slider */}
+      <div
+        ref={sliderRef}
+        className="
+             flex py-2 gap-4 overflow-x-auto hide-scrollbar snap-x snap-mandatory lg:grid lg:grid-cols-[repeat(auto-fit,minmax(0,1fr))] xl:overflow-visible
+          "
+      >
+        {data.hostingPlansData.map((plan) => (
           <div
-            ref={sliderRef}
-            className="flex gap-6 overflow-x-auto scroll-smooth scrollbar-hide snap-x snap-mandatory"
+            key={plan.id}
+            className="
+                flex-shrink-0 flex flex-col items-center justify-center
+                w-full sm:w-full md:w-1/2 lg:w-full
+                p-6 bg-background rounded-2xl shadow-md
+                transition-all duration-300
+                hover:bg-gradient-to-r hover:from-primary hover:to-primary-light
+                group snap-start
+              "
           >
-            {data.hostingPlansData.map((plan: HostingPlanFeatureProps) => (
-              <div
-                key={plan.id}
-                className="flex-shrink-0 w-72 p-6 bg-card rounded-2xl shadow-md transition-all duration-300 hover:bg-gradient-to-r hover:from-primary hover:to-primary-light group snap-start"
-              >
-                {/* Icon */}
-                <div className="w-12 h-12 mb-4">
-                  <Image
-                    width={200}
-                    height={200}
-                    src={plan.icon}
-                    alt={plan.title}
-                    className="w-full h-full object-contain"
-                  />
-                </div>
+            {/* Icon */}
+            <div className="w-20 h-20 mb-4 p-2 rounded-full bg-card">
+              <Image
+                width={100}
+                height={100}
+                loading="lazy"
+                src={plan.icon}
+                alt={plan.title}
+                className="w-full h-full object-contain"
+              />
+            </div>
 
-                {/* Content (scales up on hover) */}
-                <div className="transition-transform duration-300 group-hover:scale-105">
-                  <h3 className="text-xl font-semibold text-text-primary group-hover:text-white">
-                    {plan.title}
-                  </h3>
-                  <p className="mt-2 text-description-text group-hover:text-white">
-                    {plan.description}
-                  </p>
-                  <p className="mt-4 font-medium text-text-primary group-hover:text-white">
-                    {plan.price}
-                  </p>
-                  <Link
-                    href={plan.link}
-                    className="mt-6 inline-block w-full text-center py-2 px-4 rounded-lg bg-primary text-white font-medium hover:bg-primary-light transition"
-                  >
-                    {plan.buttonText}
-                  </Link>
-                </div>
+            {/* Content (scales up on hover) */}
+            <section className="flex flex-col h-[250px] transition-transform duration-300 group-hover:scale-105 text-center">
+              <div className="space-y-2">
+                <h3 className="text-xl font-semibold group-hover:text-white">
+                {plan.title}
+              </h3>
+              <p className="text-description-text group-hover:text-white">
+                {plan.description}
+              </p>
+              <p className="mt-4 font-semibold  group-hover:text-white">
+                {plan.price}
+              </p>
               </div>
-            ))}
+              <Link
+                href={plan.link}
+                className="flex items-center justify-center gap-2 mt-auto w-full text-center py-2 px-4 rounded-lg bg-primary text-white group-hover:bg-white group-hover:text-primary font-medium transition"
+              >
+                {plan.buttonText}
+                <FaArrowRight size={16} />
+              </Link>
+            </section>
           </div>
-
-          {/* Right Button */}
-          <button
-            onClick={scrollRight}
-            className="absolute right-0 top-1/2 -translate-y-1/2 bg-card p-2 rounded-full shadow-md hidden md:flex"
-          >
-            →
-          </button>
-        </section>
+        ))}
       </div>
     </section>
   );
