@@ -3,6 +3,7 @@ import { Banner } from "@/components/shared/banners/Banner";
 import SectionWrapper from "@/components/shared/wrappers/SectionWrapper";
 import HostingFlashSale from "./HostingFlashSale";
 import ExperienceHostfameAdvantage from "./ExperienceHostfameAdvantage";
+import HostingPlan from '@/components/shared/sections/HostingPlan'
 import DifferentHostingPlans from "@/components/shared/sections/DifferentHostingPlans";
 import { differentHostingPlansData } from "@/data/home.data";
 
@@ -35,6 +36,9 @@ const Home = () => {
       </SectionWrapper>
       <SectionWrapper className="my-12 lg:my-16">
         <ExperienceHostfameAdvantage />
+      </SectionWrapper>
+      <SectionWrapper className="my-12 lg:my-16">
+        <HostingPlan />
       </SectionWrapper>
     </section>
   );

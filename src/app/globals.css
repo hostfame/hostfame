@@ -56,6 +56,7 @@
   --color-secondary-blue: var(--secondary-blue);
   --color-blue-dark: var(--blue-dark);
   --color-text: white;
+  --color-text-accent: #111827;
   --color-description-text: #6b7280;
   --color-gray-background: #f8fafc;
 
@@ -77,6 +78,7 @@
     --color-background: var(--background);
     --color-white-background: white;
     --color-text: black;
+    --color-text-accent: #111827;
     --color-description-text: #6b7280;
     --color-gray-background: #f8fafc;
     --color-border-light-gray: #e5e7eb;
@@ -92,6 +94,7 @@
     --color-background: var(--background-dark);
     --color-white-background: var(--background-dark);
     --color-text: white;
+    --color-text-accent: white;
     --color-description-text: white;
     --color-gray-background: #282825;
     --color-border-light-gray: #52525b;
