@@ -10,6 +10,7 @@
   --primary: #008081;
   --primary-dark: #005859;
   --primary-light: #069999;
+  --primary-extralight: #02C9C9;
   --primary-foreground: #ffffff;
   --secondary: #002491;
   --secondary-foreground: #ffffff;
@@ -39,6 +40,7 @@
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
   --color-primary-light: var(--primary-light);
+  --color-primary-extralight: var(--primary-extralight);
   --color-primary-dark: var(--primary-dark);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);

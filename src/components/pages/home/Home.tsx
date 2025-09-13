@@ -6,6 +6,7 @@ import ExperienceHostfameAdvantage from "./ExperienceHostfameAdvantage";
 import HostingPlan from '@/components/shared/sections/HostingPlan'
 import DifferentHostingPlans from "@/components/shared/sections/DifferentHostingPlans";
 import { differentHostingPlansData } from "@/data/home.data";
+import SpeedAndSupport from "./SpeedAndSupport";
 
 const Home = () => {
   return (
@@ -27,13 +28,18 @@ const Home = () => {
         description="Launch your site in minutes with unmatched speed, free backups, and real human help anytime you need it."
       />
 
-      <SectionWrapper>
+      <SectionWrapper className="my-12 lg:my-16">
         <DifferentHostingPlans data={differentHostingPlansData} />
+      </SectionWrapper>
+
+      <SectionWrapper className="my-12 lg:my-16">
+        <SpeedAndSupport/>
       </SectionWrapper>
 
       <SectionWrapper className="my-12 lg:my-16">
         <HostingFlashSale />
       </SectionWrapper>
+
       <SectionWrapper className="my-12 lg:my-16">
         <ExperienceHostfameAdvantage />
       </SectionWrapper>
