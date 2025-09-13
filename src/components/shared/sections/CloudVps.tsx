@@ -1,5 +1,6 @@
-import { FaMicrochip, FaMemory, FaHdd, FaTachometerAlt } from "react-icons/fa";
+import { LuCpu, LuMemoryStick, LuHardDrive, LuGauge, } from "react-icons/lu";
 import { Button } from "../html/Button";
+import CenteredSectionHeader from "../headers/CenteredSectionHeader";
 
 type Feature = {
   icon: React.ReactNode;
@@ -22,22 +23,22 @@ const data: CloudVpsData = {
   ctaText: "Purchase Plan",
   features: [
     {
-      icon: <FaMicrochip className="text-xl" aria-hidden />,
+      icon: <LuCpu className="text-xl" aria-hidden />,
       title: "Shared vCPU",
       subtitle: "3 vCPU Cores",
     },
     {
-      icon: <FaMemory className="text-xl" aria-hidden />,
+      icon: <LuMemoryStick className="text-xl" aria-hidden />,
       title: "Dedicated RAM",
       subtitle: "4 GB RAM",
     },
     {
-      icon: <FaHdd className="text-xl" aria-hidden />,
+      icon: <LuHardDrive className="text-xl" aria-hidden />,
       title: "NVMe Storage",
       subtitle: "80 GB NVMe",
     },
     {
-      icon: <FaTachometerAlt className="text-xl" aria-hidden />,
+      icon: <LuGauge className="text-xl" aria-hidden />,
       title: "Port Speed",
       subtitle: "1 Gbit",
     },
@@ -51,9 +52,7 @@ export default function CloudVps() {
       aria-label="VPS pricing"
     >
       {/* Headline */}
-      <h2 className="text-center text-3xl md:text-4xl font-semibold tracking-tight">
-        {data.headline}
-      </h2>
+      <CenteredSectionHeader title={data.headline} />
 
       {/* Plan Tag */}
       <div className="mt-6 flex justify-center">
@@ -70,7 +69,7 @@ export default function CloudVps() {
       <div className="mt-10">
         <div className="relative h-2 rounded-full bg-border-light-gray">
           {/* “filled” part (purely decorative, not interactive) */}
-          <div className="absolute left-0 top-0 h-2 w-1/4 rounded-full bg-border-dark-gray/60" />
+          <div className="absolute left-0 top-0 h-2 w-1/4 rounded-full bg-primary-light" />
           {/* Static knob */}
           <div className="absolute left-1/4 -top-1.5 h-5 w-5 rounded-full border-2 border-border-dark-gray bg-slider-background shadow-sm" />
         </div>
@@ -81,7 +80,7 @@ export default function CloudVps() {
         {data.features.map((f, i) => (
           <li
             key={i}
-            className=" group rounded-xl border bg-gradient-to-t from-primary-light to primary-extralight border-border-light-gray px-4 py-5 transition-transform hover:-translate-y-0.5 "
+            className=" group rounded-xl border bg-gradient-to-t from-primary-light to-primary-extralight border-border-light-gray px-4 py-5 transition-transform hover:-translate-y-0.5 "
           >
             <div className="flex items-center gap-3">
               <span
@@ -90,8 +89,8 @@ export default function CloudVps() {
                 {f.icon}
               </span>
               <div>
-                <p className="text-sm font-medium">{f.title}</p>
-                <p className="text-xs text-description-text">
+                <p className="text-white text-sm font-medium">{f.title}</p>
+                <p className="text-white/80 text-xs">
                   {f.subtitle}
                 </p>
               </div>
@@ -102,7 +101,7 @@ export default function CloudVps() {
 
       {/* Price + CTA */}
       <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-        <p className="text-2xl font-semibold">{data.priceMonthly}</p>
+        <p className="text-2xl font-semibold text-text">{data.priceMonthly}</p>
         <Button
           variant="bordered"
           size="sm"
