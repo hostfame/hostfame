@@ -3,24 +3,9 @@ import { TbCpu, TbShieldCheck, TbServerBolt } from "react-icons/tb";
 import { LuHardDrive, LuCog, LuTerminal } from "react-icons/lu";
 import { HiOutlineBolt } from "react-icons/hi2";
 import CenteredSectionHeader from "../headers/CenteredSectionHeader";
+import { NextLevelVpsProps } from "@/types/nextLevelVps.types";
 
-type Feature = {
-  id: string;
-  icon: ReactElement;
-  title: string;
-  description: string;
-};
-
-type VpsData = {
-  eyebrow: string;
-  heading: string;
-  description: string;
-  progressLabel: string;
-  progressValue: number; // 0 - 100 (decorative only, static)
-  features: Feature[];
-};
-
-const data: VpsData = {
+const nextLevelVpsData: NextLevelVpsProps = {
   eyebrow: "VPS Toolkit",
   heading: "Performance, Control & Peace of Mind",
   description:
@@ -74,7 +59,7 @@ const data: VpsData = {
 };
 
 export default function VpsPerformance() {
-  const pct = Math.max(0, Math.min(100, data.progressValue));
+  const pct = Math.max(0, Math.min(100, nextLevelVpsData.progressValue));
 
   return (
     <section className="relative mx-auto text-text">
@@ -83,26 +68,26 @@ export default function VpsPerformance() {
         <div className=" w-full flex justify-center items-center">
           <div className="  inline-flex items-center gap-2 rounded-full border border-border-light-gray bg-primary-light text-white px-3 py-1 text-xs tracking-wide ">
             <HiOutlineBolt className="h-3.5 w-3.5" aria-hidden="true" />
-            <span>{data.eyebrow}</span>
+            <span>{nextLevelVpsData.eyebrow}</span>
           </div>
         </div>
 
         {/* Heading + copy */}
         <CenteredSectionHeader
-          title={data.heading}
-          description={data.description}
+          title={nextLevelVpsData.heading}
+          description={nextLevelVpsData.description}
         />
 
         {/* Static progress bar */}
         {/* <div className="0">
           <div className=" flex items-center justify-between text-xs text-description-text">
-            <span>{data.progressLabel}</span>
+            <span>{nextLevelVpsData.progressLabel}</span>
             <span aria-hidden="true">{pct}%</span>
           </div>
           <div
             className="relative h-2 w-full overflow-hidden rounded-full bg-border-light-gray"
             role="img"
-            aria-label={`${data.progressLabel}: ${pct}%`}
+            aria-label={`${nextLevelVpsData.progressLabel}: ${pct}%`}
           >
             <div
               className="absolute inset-y-0 left-0 rounded-full transition-[width] duration-700 bg-gradient-to-r from-toggle to-border-dark-gray"
@@ -113,7 +98,7 @@ export default function VpsPerformance() {
 
         {/* Feature grid */}
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {data.features.map((f) => (
+          {nextLevelVpsData.features.map((f) => (
             <article
               key={f.id}
               className=" space-y-4 group rounded-2xl border border-border-light-gray bg-card-background p-5 transition-transform hover:-translate-y-0.5 hover:bg-gradient-to-t from-primary-light to-primary-extralight shadow-lg"
