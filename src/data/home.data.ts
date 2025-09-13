@@ -45,3 +45,23 @@ export const differentHostingPlansData = {
     }
   ]
 };
+
+export const speedAndSupportData = {
+  title: "Optimized Hosting for WordPress & Beyond, Built for Speed and Support",
+  description:
+    "Hostfame delivers lightning-fast, secure, and scalable hosting perfect for blogs, businesses, eCommerce, and client projects. Launch with confidence, backed by 24/7 support.",
+  features: [
+    {
+      id: 1,
+      title: "Web Hosting",
+      desc: "Get fast, secure, and reliable hosting with 24/7 expert support all at competitive pricing.",
+      icon: "/assets/home/managed-hosting.png",
+    },
+    {
+      id: 2,
+      title: "Feature-Rich Solutions",
+      desc: "Enjoy lightning-fast speeds, 99.9% uptime, strong security, and easy site management. Everything you need, nothing you don’t.",
+      icon: "/assets/home/wordpress-hosting.png",
+    },
+  ],
+};
