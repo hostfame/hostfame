@@ -2,7 +2,6 @@ import { featureRows, hostingPlans } from "@/data/hostingPlan.data";
 import Image from "next/image";
 import { Button } from "../html/Button";
 
-// ---- UI Helpers
 const Check = () => (
   <svg
     aria-hidden
@@ -36,6 +35,18 @@ const Dot = () => (
   />
 );
 
+const HeaderImage = ({ width, height }: { width: string, height: string }) => {
+  return <div className={`relative ${width} ${height} shrink-0 overflow-hidden rounded-xl ring-1 ring-border-light-gray`}>
+    <Image
+      src="/assets/pricing-image.svg"
+      alt="Hosting illustration"
+      fill
+      className="object-contain"
+      priority
+    />
+  </div>
+}
+
 export default function HostingPlans() {
   return (
     <section className="">
@@ -45,16 +56,9 @@ export default function HostingPlans() {
           {/* Top bar with illustration */}
           <div className="flex flex-col items-start gap-6 border-b border-border-light-gray p-6 sm:flex-row sm:items-center sm:justify-between">
             <div className="flex items-start gap-4">
-              <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-xl ring-1 ring-border-light-gray">
-                <Image
-                  src="/assets/pricing-image.svg"
-                  alt="Hosting illustration"
-                  fill
-                  sizes="80px"
-                  className="object-contain"
-                  priority
-                />
-              </div>
+              <section className=" lg:hidden">
+                <HeaderImage width={"w-20"} height={"h-20"} />
+              </section>
               <div>
                 <h2 className="text-xl font-semibold tracking-tight text-text-accent sm:text-2xl">
                   Simple, scalable hosting
@@ -81,7 +85,7 @@ export default function HostingPlans() {
           </div>
 
           {/* Cards (mobile / small screens) */}
-          <div className="md:hidden grid grid-cols-1 gap-4 p-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="lg:hidden grid grid-cols-1 gap-4 p-4 sm:grid-cols-2 lg:grid-cols-4">
             {hostingPlans.map((plan) => (
               <article
                 key={plan.id}
@@ -159,26 +163,55 @@ export default function HostingPlans() {
           </div>
 
           {/* Comparison table (md+) */}
-          <div className="hidden md:block border-t border-border-light-gray px-4 pb-6 pt-4">
+          <div className="hidden lg:block border-t border-border-light-gray px-4 pb-6">
             <div className="overflow-x-auto">
               <table className="min-w-full text-sm text-center">
                 <thead>
-                  <tr className="[&>th]:py-2 [&>th]:pr-6">
-                    <th className="text-text text-center">Feature</th>
+                  <tr className="[&>th]:py-3 [&>th]:pr-6">
+                    <div className=" flex justify-center items-center py-4">
+                      <HeaderImage width={"w-56"} height={"h-56"} />
+                    </div>
                     {hostingPlans.map((p) => (
                       <th
                         key={`th-${p.id}`}
                         className="font-semibold text-text text-center"
                       >
-                        {p.name}
+                        <div className="space-y-2 flex flex-col items-center justify-center">
+                          <h3 className="text-base font-semibold text-text-accent">
+                            {p.name}
+                          </h3>
+                          <p className="text-xs text-description-text">
+                            {p.startingAtLabel}
+                          </p>
+                          <div className="flex items-baseline justify-center gap-1">
+                            <span className="text-2xl font-bold text-text-accent sm:text-3xl">
+                              {p.price}
+                            </span>
+                            <span className="text-xs text-description-text">
+                              {p.priceSuffix}
+                            </span>
+                          </div>
+                          <Button
+                            size="sm"
+                            variant="bordered"
+                            className="w-full"
+                          >
+                            {p.cta}
+                          </Button>
+                        </div>
                       </th>
                     ))}
                   </tr>
                 </thead>
+
                 <tbody className="align-top text-text/90">
                   {featureRows.map((row) => (
-                    <tr key={`row-${row.key}`} className="[&>td]:py-2 [&>td]:pr-6">
-                      <td className="whitespace-nowrap text-text text-center">
+                    <tr
+                      key={`row-${row.key}`}
+                      className="[&>td]:py-3 [&>td]:pr-6 border-t border-border-light-gray"
+                    >
+                      {/* Feature label centered now */}
+                      <td className="whitespace-nowrap text-text text-center font-medium">
                         {row.label}
                       </td>
                       {hostingPlans.map((plan) => {

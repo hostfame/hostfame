@@ -31,7 +31,7 @@ const Home = () => {
       <SectionWrapper className="my-12 lg:my-16">
         <ExperienceHostfameAdvantage />
       </SectionWrapper>
-      <SectionWrapper>
+      <SectionWrapper className="my-12 lg:my-16">
         <HostingPlan />
       </SectionWrapper>
     </section>
