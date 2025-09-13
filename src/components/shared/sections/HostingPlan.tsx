@@ -47,7 +47,7 @@ export default function HostingPlans() {
             <div className="flex items-start gap-4">
               <div className="relative h-20 w-20 shrink-0 overflow-hidden rounded-xl ring-1 ring-border-light-gray">
                 <Image
-                  src="https://hostfame.com/wp-content/uploads/2025/03/pricing-image.svg"
+                  src="/assets/pricing-image.svg"
                   alt="Hosting illustration"
                   fill
                   sizes="80px"
