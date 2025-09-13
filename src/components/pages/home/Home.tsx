@@ -42,52 +42,7 @@ const Home = () => {
         imageProps={{ width: 400, height: 400 }}
         heightClassName="h-fit xl:h-[580px] xl:max-h-[580px]"
         ctaSection={<HomeCtaSection />}
-        imageComponent={
-          <div
-            className={` lg:justify-center w-full max-w-md md:max-w-lg lg:max-w-xl  relative flex flex-col  items-center justify-end h-full`}
-          >
-            <Image
-              src={
-                "https://hostfame.com/wp-content/uploads/2024/01/hosting-01.svg"
-              }
-              alt={"Home Banner"}
-              width={600}
-              height={600}
-              className={`object-contain   w-[50%]  top-bottom2`}
-              priority
-            />
-            <Image
-              src={
-                "https://hostfame.com/wp-content/uploads/2024/01/hosting.svg"
-              }
-              width={600}
-              height={600}
-              alt="Hosting illustration"
-              className="absolute  -bottom-[30%]"
-            />
-            <Image
-              src={"https://hostfame.com/wp-content/uploads/2024/01/left.svg"}
-              width={50}
-              height={100}
-              alt="Hosting illustration"
-              className="absolute  h-[50%] left-0 top-0 top-bottom"
-            />
-            <Image
-              src={"https://hostfame.com/wp-content/uploads/2024/01/left.svg"}
-              width={50}
-              height={100}
-              alt="Hosting illustration"
-              className="absolute  h-[50%] right-0  -bottom-8 bottom-top"
-            />
-            <Image
-              src={"https://hostfame.com/wp-content/uploads/2024/01/top.svg"}
-              width={50}
-              height={100}
-              alt="Hosting illustration"
-              className="absolute  h-[50%] left-8 -bottom-8 bottom-top"
-            />
-          </div>
-        }
+        imageComponent={<AnimationBanner />}
       />
 
       <SectionWrapper className="my-12 lg:my-16">
@@ -128,6 +83,51 @@ const Home = () => {
     </section>
   );
 };
+
+export function AnimationBanner() {
+  return (
+    <div
+      className={` lg:justify-center w-full max-w-md md:max-w-lg lg:max-w-xl  relative flex flex-col  items-center justify-end h-full`}
+    >
+      <Image
+        src={"https://hostfame.com/wp-content/uploads/2024/01/hosting-01.svg"}
+        alt={"Home Banner"}
+        width={600}
+        height={600}
+        className={`object-contain   w-[50%]  top-bottom2`}
+        priority
+      />
+      <Image
+        src={"https://hostfame.com/wp-content/uploads/2024/01/hosting.svg"}
+        width={600}
+        height={600}
+        alt="Hosting illustration"
+        className="absolute  -bottom-[30%]"
+      />
+      <Image
+        src={"https://hostfame.com/wp-content/uploads/2024/01/left.svg"}
+        width={50}
+        height={100}
+        alt="Hosting illustration"
+        className="absolute  h-[50%] left-0 top-0 top-bottom"
+      />
+      <Image
+        src={"https://hostfame.com/wp-content/uploads/2024/01/left.svg"}
+        width={50}
+        height={100}
+        alt="Hosting illustration"
+        className="absolute  h-[50%] right-0  -bottom-8 bottom-top"
+      />
+      <Image
+        src={"https://hostfame.com/wp-content/uploads/2024/01/top.svg"}
+        width={50}
+        height={100}
+        alt="Hosting illustration"
+        className="absolute  h-[50%] left-8 -bottom-8 bottom-top"
+      />
+    </div>
+  );
+}
 
 function HomeCtaSection() {
   return (

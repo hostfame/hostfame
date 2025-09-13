@@ -42,7 +42,7 @@ const contactData: ContactItem[] = [
 export default function ContactTiles() {
   return (
     <section className="w-full bg-transparent py-10">
-      <div className="mx-auto max-w-6xl grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
+      <div className="mx-auto  grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
         {contactData.map((item) => (
           <Tile key={item.id}>
             <IconWrap>{item.icon}</IconWrap>
