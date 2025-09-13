@@ -49,7 +49,7 @@ export default function ExperienceHostfameAdvantage() {
                 className="group inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-primary transition hover:bg-white/90 focus:outline-none focus-visible:ring-4 focus-visible:ring-white/40"
               >
                 {data.cta.label}
-                <BsArrowRightShort size={20} className=" group-hover:-mr-2 mr-0 duration-200" />
+                <BsArrowRightShort size={20} className="" />
               </Link>
             </div>
           </div>
