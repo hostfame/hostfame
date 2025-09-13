@@ -20,7 +20,7 @@ export const hostingPlans: HostingPlanProps[] = [
     price: "$1.99",
     priceSuffix: "/ Mo*",
     cta: "See Plans",
-    storage: "50GB",
+    storage: "50 GB",
     email: "Unlimited",
     features: {
       liveChat: true,
@@ -39,7 +39,7 @@ export const hostingPlans: HostingPlanProps[] = [
     price: "$1.49",
     priceSuffix: "/ Mo*",
     cta: "See Plans",
-    storage: "75GB",
+    storage: "75 GB",
     email: "Unlimited",
     features: {
       liveChat: true,
@@ -58,7 +58,7 @@ export const hostingPlans: HostingPlanProps[] = [
     price: "$27.99",
     priceSuffix: "/ Mo*",
     cta: "See Plans",
-    storage: "150GB",
+    storage: "150 GB",
     email: "Unlimited",
     features: {
       liveChat: true,
