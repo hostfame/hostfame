@@ -10,7 +10,7 @@ import {
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-gradient-to-br from-primary-light to-primary text-white">
+    <footer className="bg-gradient-to-br from-primary via-primary-dark to-primary-dark text-white">
       <div className="mx-auto max-w-7xl px-6 py-10">
         {/* Payment / SSL banner */}
         <div className="mx-auto max-w-7xl rounded-md shadow w-full">

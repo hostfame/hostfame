@@ -125,6 +125,7 @@ const Navbar = () => {
                 <Button
                   href="/dashboard"
                   size="sm"
+                  variant="bordered"
                   className={`rounded-full ${
                     pathname === "/dashboard"
                       ? "text-teal-600"

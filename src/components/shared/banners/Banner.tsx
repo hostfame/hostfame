@@ -31,6 +31,9 @@ export type BannerProps = {
   /** Layout/Styling */
   className?: string;
   containerClassName?: string;
+  heightClassName?: string;
+
+  ctaSection?: React.ReactNode;
 };
 
 export const Banner: React.FC<BannerProps> = ({
@@ -44,10 +47,12 @@ export const Banner: React.FC<BannerProps> = ({
   className = "",
   containerClassName = "",
   lists = [],
+  heightClassName="h-fit xl:h-[740px] xl:max-h-[740px]",
+  ctaSection
 }) => {
   return (
     <section
-      className={`relative w-full bg-gradient-to-r from-primary to-primary-light text-white bg-no-repeat h-fit xl:h-[740px] xl:max-h-[740px] overflow-hidden ${className}`}
+      className={`relative w-full bg-gradient-to-r from-primary to-primary-light text-white bg-no-repeat  overflow-hidden ${heightClassName} ${className}`}
       style={{
         backgroundPosition: "left center, center center",
         backgroundSize: "contain",
@@ -102,9 +107,11 @@ export const Banner: React.FC<BannerProps> = ({
             <BannerTimer target={countdownTarget} />
           )}
 
-          {cta && (
+          {cta && !ctaSection && (
             <CtaButton {...cta} className={`mt-4 ${cta.className ?? ""}`} />
           )}
+
+          {ctaSection && ctaSection}
         </div>
 
         {/* Right visual */}
