@@ -42,7 +42,9 @@ const Navbar = () => {
             <div className="flex items-center">
               <Link href="/" className="flex-shrink-0">
                 <Image
-                  src={"https://hostfame.com/wp-content/uploads/2024/01/H-transparent-01-e1739570608669.png.webp"}
+                  src={
+                    "https://hostfame.com/wp-content/uploads/2024/01/H-transparent-01-e1739570608669.png.webp"
+                  }
                   alt={"logo"}
                   width={100}
                   height={100}
@@ -57,34 +59,38 @@ const Navbar = () => {
                   {item.subItems ? (
                     <>
                       <button
-                        className={`flex items-center px-3 py-2 text-sm font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 ${item.subItems.some(
-                          (subItem) => subItem.href === pathname
-                        )
-                          ? "text-teal-600"
-                          : "text-text hover:text-teal-600"
-                          }`}
+                        className={`flex items-center px-3 py-2 text-sm font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 ${
+                          item.subItems.some(
+                            (subItem) => subItem.href === pathname
+                          )
+                            ? "text-teal-600"
+                            : "text-text hover:text-teal-600"
+                        }`}
                       >
                         {item.label}
                         <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
                       </button>
                       <div
-                        className={` ${item.label === "Hosting" ? "w-96" : "w-56"
-                          } absolute left-0 mt-2 bg-gray-background rounded-xl shadow-2xl border border-background py-4 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform group-hover:-translate-y-1`}
+                        className={` ${
+                          item.label === "Hosting" ? "w-96" : "w-56"
+                        } absolute left-0 mt-2 bg-gray-background rounded-xl shadow-2xl border border-background py-4 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform group-hover:-translate-y-1`}
                       >
                         <div
-                          className={`grid ${item.label === "Hosting"
-                            ? "grid-cols-2"
-                            : "grid-cols-1"
-                            } gap-1 px-4`}
+                          className={`grid ${
+                            item.label === "Hosting"
+                              ? "grid-cols-2"
+                              : "grid-cols-1"
+                          } gap-1 px-4`}
                         >
                           {item.subItems.map((subItem) => (
                             <Link
                               key={subItem.label}
                               href={subItem.href}
-                              className={`flex items-start p-3 rounded-lg hover:bg-primary-light transition-all duration-200 ease-in-out transform hover:scale-102 ${subItem.href === pathname
-                                ? "text-teal-600 hover:text-white"
-                                : "text-text hover:text-white"
-                                }`}
+                              className={`flex items-start p-3 rounded-lg hover:bg-primary-light transition-all duration-200 ease-in-out transform hover:scale-102 ${
+                                subItem.href === pathname
+                                  ? "text-teal-600 hover:text-white"
+                                  : "text-text hover:text-white"
+                              }`}
                             >
                               <div className={`flex-shrink-0 mr-3 mt-0.5 `}>
                                 {getIcon(subItem.icon)}
@@ -105,10 +111,11 @@ const Navbar = () => {
                   ) : (
                     <Link
                       href={item.href!}
-                      className={`px-3 py-2 text-sm font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 ${item.href === pathname
-                        ? "text-teal-600"
-                        : "text-text hover:text-teal-600"
-                        }`}
+                      className={`px-3 py-2 text-sm font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 ${
+                        item.href === pathname
+                          ? "text-teal-600"
+                          : "text-text hover:text-teal-600"
+                      }`}
                     >
                       {item.label}
                     </Link>
@@ -119,12 +126,14 @@ const Navbar = () => {
               {/* Dashboard Button */}
               <div className="hidden min-[840px]:flex">
                 <Button
+                  variant="bordered"
                   href="/dashboard"
                   size="sm"
-                  className={`rounded-full ${pathname === "/dashboard"
-                    ? "text-teal-600"
-                    : "text-gray-600 hover:text-teal-600"
-                    }`}
+                  className={`rounded-full ${
+                    pathname === "/dashboard"
+                      ? "text-teal-600"
+                      : "text-gray-600 hover:text-teal-600"
+                  }`}
                 >
                   Dashboard
                 </Button>
@@ -148,7 +157,11 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu */}
-        <div className={`min-[840px]:hidden fixed inset-0 top-16 bg-background border-t border-border-light-gray overflow-y-auto transition-all duration-300 z-40 ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"} `} >
+        <div
+          className={`min-[840px]:hidden fixed inset-0 top-16 bg-background border-t border-border-light-gray overflow-y-auto transition-all duration-300 z-40 ${
+            isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+          } `}
+        >
           <div className="px-4 pt-4 pb-20 space-y-1 h-full">
             {navItems.map((item) => (
               <div key={item.label}>
@@ -156,37 +169,45 @@ const Navbar = () => {
                   <>
                     <button
                       onClick={() => toggleDropdown(item.label)}
-                      className={`w-full flex items-center justify-between px-3 py-3 text-base font-medium rounded-md transition-colors duration-300 ${item.subItems.some((subItem) => subItem.href === pathname)
-                        ? "text-teal-600"
-                        : "text-text hover:text-teal-600 hover:bg-primary-light"
-                        }`}
+                      className={`w-full flex items-center justify-between px-3 py-3 text-base font-medium rounded-md transition-colors duration-300 ${
+                        item.subItems.some(
+                          (subItem) => subItem.href === pathname
+                        )
+                          ? "text-teal-600"
+                          : "text-text hover:text-teal-600 hover:bg-primary-light"
+                      }`}
                     >
                       {item.label}
                       <ChevronDown
-                        className={`h-4 w-4 transition-transform duration-300 ${activeDropdown === item.label ? "rotate-180" : ""
-                          }`}
+                        className={`h-4 w-4 transition-transform duration-300 ${
+                          activeDropdown === item.label ? "rotate-180" : ""
+                        }`}
                       />
                     </button>
                     <div
-                      className={`pl-4 space-y-1 mt-1 overflow-hidden transition-all duration-300 ${activeDropdown === item.label
-                        ? "max-h-[500px] opacity-100"
-                        : "max-h-0 opacity-0"
-                        }`}
+                      className={`pl-4 space-y-1 mt-1 overflow-hidden transition-all duration-300 ${
+                        activeDropdown === item.label
+                          ? "max-h-[500px] opacity-100"
+                          : "max-h-0 opacity-0"
+                      }`}
                     >
                       {item.subItems.map((subItem) => (
                         <Link
                           key={subItem.label}
                           href={subItem.href}
-                          className={`block px-3 py-2 text-sm rounded-md transition-colors duration-300 ${subItem.href === pathname
-                            ? "text-teal-600"
-                            : "text-text hover:text-teal-600 hover:bg-primary-light"
-                            }`}
+                          className={`block px-3 py-2 text-sm rounded-md transition-colors duration-300 ${
+                            subItem.href === pathname
+                              ? "text-teal-600"
+                              : "text-text hover:text-teal-600 hover:bg-primary-light"
+                          }`}
                           onClick={() => setIsOpen(false)}
                         >
                           <span className="flex items-center gap-2">
                             <span
                               className={
-                                subItem.href === pathname ? "text-teal-600" : "text-text"
+                                subItem.href === pathname
+                                  ? "text-teal-600"
+                                  : "text-text"
                               }
                             >
                               {getIcon(subItem.icon)}
@@ -200,10 +221,11 @@ const Navbar = () => {
                 ) : (
                   <Link
                     href={item.href!}
-                    className={`block px-3 py-3 text-base font-medium rounded-md transition-colors duration-300 ${item.href === pathname
-                      ? "text-teal-600"
-                      : "text-text hover:text-teal-600 hover:bg-primary-light"
-                      }`}
+                    className={`block px-3 py-3 text-base font-medium rounded-md transition-colors duration-300 ${
+                      item.href === pathname
+                        ? "text-teal-600"
+                        : "text-text hover:text-teal-600 hover:bg-primary-light"
+                    }`}
                     onClick={() => setIsOpen(false)}
                   >
                     {item.label}
@@ -214,10 +236,11 @@ const Navbar = () => {
             <div className="pt-4 mt-4 border-t border-border-light-gray">
               <Button
                 href="/dashboard"
-                className={`block w-full ${pathname === "/dashboard"
-                  ? "text-teal-600"
-                  : "text-text hover:text-teal-600"
-                  }`}
+                className={`block w-full ${
+                  pathname === "/dashboard"
+                    ? "text-teal-600"
+                    : "text-text hover:text-teal-600"
+                }`}
                 onClick={() => setIsOpen(false)}
               >
                 Dashboard
@@ -225,7 +248,6 @@ const Navbar = () => {
             </div>
           </div>
         </div>
-
       </section>
     </nav>
   );

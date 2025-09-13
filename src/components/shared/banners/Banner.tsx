@@ -34,6 +34,14 @@ export type BannerProps = {
   heightClassName?: string;
 
   ctaSection?: React.ReactNode;
+
+  imageProps?: {
+    width: number;
+    height: number;
+  };
+  classNameForImage?: string;
+  classNameForImageWrapper?: string;
+  imageComponent?: React.ReactNode;
 };
 
 export const Banner: React.FC<BannerProps> = ({
@@ -47,12 +55,19 @@ export const Banner: React.FC<BannerProps> = ({
   className = "",
   containerClassName = "",
   lists = [],
-  heightClassName="h-fit xl:h-[740px] xl:max-h-[740px]",
-  ctaSection
+  heightClassName = "h-fit xl:h-[740px] xl:max-h-[740px]",
+  ctaSection,
+  imageProps = {
+    width: 600,
+    height: 600,
+  },
+  classNameForImage,
+  classNameForImageWrapper,
+  imageComponent
 }) => {
   return (
     <section
-      className={`relative w-full bg-gradient-to-r from-primary to-primary-light text-white bg-no-repeat  overflow-hidden ${heightClassName} ${className}`}
+      className={`relative w-full bg-gradient-to-br from-primary-dark via-primary to-primary-dark text-white bg-no-repeat  overflow-hidden ${heightClassName} ${className}`}
       style={{
         backgroundPosition: "left center, center center",
         backgroundSize: "contain",
@@ -75,7 +90,7 @@ export const Banner: React.FC<BannerProps> = ({
                     place-items-center lg:place-items-stretch ${containerClassName}`}
       >
         {/* Content */}
-        <div className="space-y-6 text-center lg:text-left">
+        <div className="space-y-6 text-center lg:text-left flex  flex-col justify-center">
           <p className="text-yellow-400 font-semibold text-base sm:text-xl">
             Expertly Crafted for Online Businesses
           </p>
@@ -115,18 +130,23 @@ export const Banner: React.FC<BannerProps> = ({
         </div>
 
         {/* Right visual */}
-        {image && (
-          <div className="flex justify-center lg:justify-end relative w-full max-w-md md:max-w-lg lg:max-w-xl">
+        {image && !imageComponent && (
+          <div
+            className={`flex justify-center lg:justify-end relative w-full max-w-md md:max-w-lg lg:max-w-xl  ${classNameForImageWrapper}`}
+          >
             <Image
               src={image}
               alt={imageAlt}
-              width={600}
-              height={600}
-              className="object-contain w-full h-auto"
+              width={imageProps?.width || 600}
+              height={imageProps?.height || 600}
+              className={`object-contain  h-auto ${
+                classNameForImage || "w-full"
+              }`}
               priority
             />
           </div>
         )}
+        {imageComponent}
       </div>
     </section>
   );
