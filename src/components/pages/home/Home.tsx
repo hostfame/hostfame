@@ -1,8 +1,13 @@
+import React from "react";
 import { Banner } from "@/components/shared/banners/Banner";
 import SectionWrapper from "@/components/shared/wrappers/SectionWrapper";
-import React from "react";
 import HostingFlashSale from "./HostingFlashSale";
 import ExperienceHostfameAdvantage from "./ExperienceHostfameAdvantage";
+import HostingPlan from '@/components/shared/sections/HostingPlan'
+import DifferentHostingPlans from "@/components/shared/sections/DifferentHostingPlans";
+import { differentHostingPlansData, hostingForGrowthData } from "@/data/home.data";
+import SpeedAndSupport from "./SpeedAndSupport";
+import HostingForGrowth from "./HostingForGrowth";
 import WhiteButton from "@/components/shared/html/WhiteButton";
 import { BsArrowRightShort } from "react-icons/bs";
 import Link from "next/link";
@@ -25,15 +30,29 @@ const Home = () => {
         //   text: "Claim Offer Now",
         // }}
         description="Launch your site in minutes with unmatched speed, free backups, and real human help anytime you need it."
-        heightClassName="h-fit xl:h-[610px] xl:max-h-[610px]"
-        ctaSection={<HomeCtaSection />}
       />
+
+      <SectionWrapper className="my-12 lg:my-16">
+        <DifferentHostingPlans data={differentHostingPlansData} />
+      </SectionWrapper>
+
+      <SectionWrapper className="my-12 lg:my-16">
+        <SpeedAndSupport/>
+      </SectionWrapper>
+
+      <SectionWrapper className="my-12 lg:my-16">
+        <HostingForGrowth data={hostingForGrowthData} />
+      </SectionWrapper>
 
       <SectionWrapper className="my-12 lg:my-16">
         <HostingFlashSale />
       </SectionWrapper>
+
       <SectionWrapper className="my-12 lg:my-16">
         <ExperienceHostfameAdvantage />
+      </SectionWrapper>
+      <SectionWrapper className="my-12 lg:my-16">
+        <HostingPlan />
       </SectionWrapper>
     </section>
   );
