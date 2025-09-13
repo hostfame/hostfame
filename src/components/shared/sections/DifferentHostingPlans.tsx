@@ -23,7 +23,7 @@ interface HostingPlanFeatureProps {
 }
 
 export default function DifferentHostingPlans({
-  data
+  data,
 }: {
   data: DifferentHostingPlansProps;
 }) {
@@ -36,7 +36,7 @@ export default function DifferentHostingPlans({
         const cardWidth = (card as HTMLElement).offsetWidth + 24; // card width + gap (24px = gap-6)
         sliderRef.current.scrollBy({
           left: direction === "left" ? -cardWidth : cardWidth,
-          behavior: "smooth"
+          behavior: "smooth",
         });
       }
     }
@@ -57,15 +57,17 @@ export default function DifferentHostingPlans({
         <div className="flex gap-2">
           <button
             onClick={() => scroll("left")}
-            className="bg-primary/80 border border-border-light-gray h-12 w-12 flex items-center justify-center rounded-full shadow hover:bg-primary text-white transition cursor-pointer"
+            className=" bg-toggle/90
+            0 border border-border-light-gray h-12 w-12 flex items-center justify-center rounded-full shadow hover:bg-toggle text-toggle-text transition cursor-pointer"
           >
-            <FaAngleLeft size={20}/>
+            <FaAngleLeft size={20} />
           </button>
           <button
             onClick={() => scroll("right")}
-            className="bg-primary/80 border border-border-light-gray h-12 w-12 flex items-center justify-center rounded-full shadow hover:bg-primary text-white transition cursor-pointer"
+            className="bg-toggle/90
+            0 border border-border-light-gray h-12 w-12 flex items-center justify-center rounded-full shadow hover:bg-toggle text-toggle-text transition cursor-pointer"
           >
-            <FaAngleRight size={20}/>
+            <FaAngleRight size={20} />
           </button>
         </div>
       </div>
@@ -105,14 +107,14 @@ export default function DifferentHostingPlans({
             <section className="flex flex-col h-[250px] transition-transform duration-300 group-hover:scale-105 text-center">
               <div className="space-y-2">
                 <h3 className="text-xl font-semibold group-hover:text-white">
-                {plan.title}
-              </h3>
-              <p className="text-description-text group-hover:text-white">
-                {plan.description}
-              </p>
-              <p className="mt-4 font-semibold  group-hover:text-white">
-                {plan.price}
-              </p>
+                  {plan.title}
+                </h3>
+                <p className="text-description-text group-hover:text-white">
+                  {plan.description}
+                </p>
+                <p className="mt-4 font-semibold  group-hover:text-white">
+                  {plan.price}
+                </p>
               </div>
               <Link
                 href={plan.link}

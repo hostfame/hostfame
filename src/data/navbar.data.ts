@@ -9,7 +9,7 @@ export const navItems = [
       {
         label: "Web Hosting",
         description: "NVMe SSD server",
-        href: "/hosting/web",
+        href: "/web-hosting",
         icon: "server",
       },
       {
@@ -21,7 +21,7 @@ export const navItems = [
       {
         label: "WordPress Hosting",
         description: "Fully Managed WordPress",
-        href: "/hosting/wordpress",
+        href: "/wordpress-hosting",
         icon: "wordpress",
       },
       {

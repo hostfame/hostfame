@@ -10,7 +10,7 @@
   --primary: #008081;
   --primary-dark: #005859;
   --primary-light: #069999;
-  --primary-extralight: #02C9C9;
+  --primary-extralight: #02c9c9;
   --primary-foreground: #ffffff;
   --secondary: #002491;
   --secondary-foreground: #ffffff;
@@ -65,6 +65,7 @@
   --color-border-light-gray: #e5e7eb;
   --color-border-dark-gray: #3f3f46;
 
+  --color-dark: #1e2a3b;
   --color-toggle: #1e2a3b;
   --color-toggle-text: white;
 
@@ -120,6 +121,64 @@ body {
 }
 
 .hide-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.top-bottom2 {
+  animation: moveTopToBottom2 8s linear infinite;
+}
+
+.top-bottom {
+  animation: moveTopToBottom 15s linear infinite;
+}
+
+.bottom-top {
+  animation: moveBottomToTop 15s linear infinite;
+}
+
+/** 
+  Key Frames
+*/
+
+@keyframes moveTopToBottom {
+  from {
+    transform: translateY(-20%);
+  }
+
+  50% {
+    transform: translateY(20%);
+  }
+
+  to {
+    transform: translateY(-20%);
+  }
+}
+
+@keyframes moveTopToBottom2 {
+  from {
+    transform: translateY(-2%);
+  }
+
+  50% {
+    transform: translateY(2%);
+  }
+
+  to {
+    transform: translateY(-2%);
+  }
+}
+
+@keyframes moveBottomToTop {
+  from {
+    transform: translateY(20%);
+  }
+
+  50% {
+    transform: translateY(-20%);
+  }
+
+  to {
+    transform: translateY(20%);
+  }
 }
