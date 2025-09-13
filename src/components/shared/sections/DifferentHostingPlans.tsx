@@ -43,7 +43,7 @@ export default function DifferentHostingPlans({
   };
 
   return (
-    <section className="py-12">
+    <section>
       {/* Header row with arrows */}
       <div className="flex items-start lg:items-center justify-between mb-6">
         <CenteredSectionHeader
