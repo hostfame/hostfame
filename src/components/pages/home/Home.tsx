@@ -5,8 +5,9 @@ import HostingFlashSale from "./HostingFlashSale";
 import ExperienceHostfameAdvantage from "./ExperienceHostfameAdvantage";
 import HostingPlan from '@/components/shared/sections/HostingPlan'
 import DifferentHostingPlans from "@/components/shared/sections/DifferentHostingPlans";
-import { differentHostingPlansData } from "@/data/home.data";
+import { differentHostingPlansData, hostingForGrowthData } from "@/data/home.data";
 import SpeedAndSupport from "./SpeedAndSupport";
+import HostingForGrowth from "./HostingForGrowth";
 
 const Home = () => {
   return (
@@ -34,6 +35,10 @@ const Home = () => {
 
       <SectionWrapper className="my-12 lg:my-16">
         <SpeedAndSupport/>
+      </SectionWrapper>
+
+      <SectionWrapper className="my-12 lg:my-16">
+        <HostingForGrowth data={hostingForGrowthData} />
       </SectionWrapper>
 
       <SectionWrapper className="my-12 lg:my-16">
