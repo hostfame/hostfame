@@ -11,7 +11,7 @@ export const differentHostingPlansData = {
       price: "Starting from $1.99/month",
       buttonText: "View Web Plan",
       link: "/web-hosting",
-      icon: "/icons/web-hosting.png"
+      icon: "/assets/home/web-hosting.png"
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ export const differentHostingPlansData = {
       price: "Starting from $1.49/month",
       buttonText: "WordPress Plan",
       link: "/wordpress-hosting",
-      icon: "/icons/wordpress.png"
+      icon: "/assets/home/wordpress-hosting.png"
     },
     {
       id: 3,
@@ -31,7 +31,7 @@ export const differentHostingPlansData = {
       price: "Starting from $2.95/month",
       buttonText: "Managed Plan",
       link: "/managed-hosting",
-      icon: "/icons/managed.png"
+      icon: "/assets/home/managed-hosting.png"
     },
     {
       id: 4,
@@ -41,7 +41,7 @@ export const differentHostingPlansData = {
       price: "Starting from $2.95/month",
       buttonText: "VPS Details",
       link: "/vps-hosting",
-      icon: "/icons/vps.png"
+      icon: "/assets/home/vps-hosting.png"
     }
   ]
 };

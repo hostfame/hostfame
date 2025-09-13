@@ -8,6 +8,7 @@
   --popover: #ffffff;
   --popover-foreground: #6b7280;
   --primary: #008081;
+  --primary-dark: #005859;
   --primary-light: #069999;
   --primary-foreground: #ffffff;
   --secondary: #002491;
@@ -38,6 +39,7 @@
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
   --color-primary-light: var(--primary-light);
+  --color-primary-dark: var(--primary-dark);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
   --color-secondary-foreground: var(--secondary-foreground);
@@ -106,4 +108,13 @@ body {
   /* background: var(--background);
   color: var(--text-foreground); */
   font-family: var(--font-geist), var(--font-geist-fallback), sans-serif;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;     /* Firefox */
 }
