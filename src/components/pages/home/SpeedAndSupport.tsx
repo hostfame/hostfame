@@ -28,19 +28,17 @@ export default function SpeedAndSupport() {
           {speedAndSupportData.features.map((feature) => (
             <div
               key={feature.id}
-              className="flex items-start space-x-3 border border-border-light-gray p-4 rounded-xl"
+              className="flex items-center space-x-4 border border-border-light-gray p-4 rounded-xl"
             >
-              <div className="w-10 h-10 p-2 bg-white rounded-lg">
-                <Image
-                  src={feature.icon}
-                  alt={feature.title}
-                  width={30}
-                  height={30}
-                  className="w-8 h-8 object-contain"
-                />
-              </div>
+              <Image
+                src={feature.icon}
+                alt={feature.title}
+                width={200}
+                height={200}
+                className="h-16 w-16 p-2 bg-card border border-border light-gray rounded-lg object-contain"
+              />
               <div>
-                <h2 className="font-semibold">{feature.title}</h2>
+                <h2 className="text-xl font-semibold">{feature.title}</h2>
                 <p>{feature.desc}</p>
               </div>
             </div>

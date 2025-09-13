@@ -47,7 +47,8 @@ export const differentHostingPlansData = {
 };
 
 export const speedAndSupportData = {
-  title: "Optimized Hosting for WordPress & Beyond, Built for Speed and Support",
+  title:
+    "Optimized Hosting for WordPress & Beyond, Built for Speed and Support",
   description:
     "Hostfame delivers lightning-fast, secure, and scalable hosting perfect for blogs, businesses, eCommerce, and client projects. Launch with confidence, backed by 24/7 support.",
   features: [
@@ -55,13 +56,53 @@ export const speedAndSupportData = {
       id: 1,
       title: "Web Hosting",
       desc: "Get fast, secure, and reliable hosting with 24/7 expert support all at competitive pricing.",
-      icon: "/assets/home/managed-hosting.png",
+      icon: "/assets/home/managed-hosting.png"
     },
     {
       id: 2,
       title: "Feature-Rich Solutions",
       desc: "Enjoy lightning-fast speeds, 99.9% uptime, strong security, and easy site management. Everything you need, nothing you don’t.",
-      icon: "/assets/home/wordpress-hosting.png",
+      icon: "/assets/home/feature-rich.png"
+    }
+  ]
+};
+
+export const hostingForGrowthData = {
+  title: "Fast, Secure, and Scalable Hosting For Growth",
+  description:
+    "Select the most suitable hosting package, and we will ensure it is tailored to your specific requirements.",
+  data: [
+    {
+      title: "Web Hosting",
+      description:
+        "Reliable and affordable hosting with 99.9% uptime, fast speeds, and easy management for all websites.",
+      image: "/assets/home/web-hosting.png",
+      link: "/web-hosting",
+      linkBtn: "View Details"
     },
-  ],
+    {
+      title: "WordPress Hosting",
+      description:
+        "Optimized for WordPress with one-click install, enhanced security, and high-speed performance.",
+      image: "/assets/home/wordpress-hosting.png",
+      link: "/wordpress-hosting",
+      linkBtn: "View Details"
+    },
+    {
+      title: "Managed Hosting",
+      description:
+        "Scalable, secure, and flexible cloud infrastructure for businesses needing reliability and growth.",
+      image: "/assets/home/managed-hosting.png",
+      link: "/managed-hosting",
+      linkBtn: "View Details"
+    },
+    {
+      title: "VPS Hosting",
+      description:
+        "Powerful VPS with dedicated resources, full control, and high-speed performance.",
+      image: "/assets/home/vps-hosting.png",
+      link: "/vps-hosting",
+      linkBtn: "View Details"
+    }
+  ]
 };
