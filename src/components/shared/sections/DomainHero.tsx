@@ -1,4 +1,5 @@
 // app/components/DomainHero.tsx
+import Link from "next/link";
 import { FiSearch } from "react-icons/fi";
 
 type PopularTLD = { tld: string; price: string; href?: string };
@@ -67,17 +68,20 @@ export default function DomainHero() {
             <span className="text-xs uppercase tracking-wider text-white">
               {data.popularLabel}
             </span>
-            <ul className="flex flex-wrap justify-center gap-2 sm:gap-3">
+            <ul className="flex flex-wrap justify-center gap-2 sm:gap-3 transition-all duration-300 ease-in-out">
               {data.popular.map((item) => (
-                <li key={item.tld}>
-                  <a
+                <li
+                  key={item.tld}
+                  className="transition-all duration-300 ease-in-out"
+                >
+                  <Link
                     href={item.href || "#"}
-                    className="group inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-sm text-white backdrop-blur transition hover:bg-white/20"
+                    className="group inline-flex w-[132px] hover:w-[153px]  items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-sm text-white backdrop-blur transition-all duration-300 ease-in-out hover:bg-white/20"
                   >
                     <span className="font-semibold">{item.tld}</span>
-                    <span className="text-white">only {item.price}</span>
-                    <FiSearch className="hidden text-xs opacity-70 group-hover:block" />
-                  </a>
+                    <span className="text-white text-nowrap">only {item.price}</span>
+                    <FiSearch className="text-xs absolute  group-hover:static opacity-0 scale-75 transition-all duration-300 ease-in-out group-hover:opacity-70 group-hover:scale-100" />
+                  </Link>
                 </li>
               ))}
             </ul>

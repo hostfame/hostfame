@@ -137,7 +137,7 @@ const SkilledDedicatedExperts = () => {
                       </h3>
                     </div>
 
-                    <p className="mt-1 text-sm leading-6 text-text/70">
+                    <p className="mt-1 text-sm leading-6 text-text/90">
                       {feature.description}
                     </p>
                   </div>
@@ -150,7 +150,7 @@ const SkilledDedicatedExperts = () => {
 
             {/* CTA block */}
             <div className="flex flex-col items-start gap-4 rounded-xl border border-dashed border-primary/30 p-4 sm:flex-row sm:items-center sm:justify-between">
-              <p className="max-w-xl text-sm text-text/70">
+              <p className="max-w-xl text-sm text-text/90">
                 Need a quick answer or tailored advice? Hop into a conversation
                 with our specialists right now.
               </p>
@@ -176,7 +176,7 @@ const SkilledDedicatedExperts = () => {
             </div>
 
             {/* small note */}
-            <p className="text-xs text-text/50">
+            <p className="text-xs text-text/80">
               Always-on coverage, optimized infrastructure, and human help—no
               tickets lost in the void.
             </p>

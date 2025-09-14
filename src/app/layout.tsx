@@ -26,7 +26,8 @@ export default function RootLayout({
       <body className={`${urbanist.className} antialiased  text-text`}>
         <ThemeProvider
           attribute={"data-theme"}
-          defaultTheme="dark"
+          defaultTheme="light"
+          storageKey="app-theme"
         >
           <Navbar />
           {children}

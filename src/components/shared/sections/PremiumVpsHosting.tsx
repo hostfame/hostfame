@@ -8,7 +8,7 @@ export default function PremiumVpsHosting() {
     <section
       className=" w-full text-text "
     >
-      <div className="grid grid-cols-1 gap-10 md:grid-cols-2 md:gap-12">
+      <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-[0.8fr_1fr]  md:gap-12">
         {/* Left: copy + features */}
         <div className=" space-y-6">
           <CenteredSectionHeader
@@ -36,7 +36,7 @@ export default function PremiumVpsHosting() {
         {/* Right: custom collage */}
         <div className="grid grid-cols-3 gap-4">
           {/* Tall left image */}
-          <div className="col-span-1 row-span-2 relative overflow-hidden rounded-2xl border border-border-light-gray bg-white-background">
+          <div className="col-span-1 row-span-2 relative overflow-hidden rounded-xl border border-border-light-gray bg-white-background">
             <Image
               src={premiumVpsHostingData.leftImage.src}
               alt={premiumVpsHostingData.leftImage.alt}
@@ -48,7 +48,7 @@ export default function PremiumVpsHosting() {
           </div>
 
           {/* Wide right image */}
-          <div className="col-span-2 row-span-2 relative overflow-hidden rounded-2xl border border-border-light-gray bg-white-background">
+          <div className="col-span-2 row-span-2 relative overflow-hidden rounded-xl border border-border-light-gray bg-white-background">
             <Image
               src={premiumVpsHostingData.rightImage.src}
               alt={premiumVpsHostingData.rightImage.alt}
