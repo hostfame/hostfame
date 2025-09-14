@@ -28,7 +28,7 @@ const Support = () => {
         description="At Hostfame, we don’t just offer support; we deliver solutions.Our expert team is available 24/7 to help you with any questions, big or small."
       />
       <SkilledDedicatedExperts />
-      <SectionWrapper>
+      <SectionWrapper className="mb-12 md:mb-16">
         <HostingSupport data={hostingSupportData}/>
       </SectionWrapper>
       <ReviewsSection />

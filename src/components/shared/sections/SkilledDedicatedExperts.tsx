@@ -1,7 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import { ReactNode } from "react";
-
 import { FaHeadset, FaBolt } from "react-icons/fa";
+import CenteredSectionHeader from "../headers/CenteredSectionHeader";
 
 interface Feature {
   icon: ReactNode;
@@ -44,55 +46,140 @@ export const skilledExpertsData: SkilledExpertsData = {
 
 const SkilledDedicatedExperts = () => {
   return (
-    <section className="w-full py-16">
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-12 items-center px-6">
-        {/* Left Section - Text */}
-        <div>
-          <h2 className="text-3xl lg:text-4xl font-bold text-text mb-6">
-            {skilledExpertsData.title}
-          </h2>
-          <p className="text-lg text-text/80 mb-10">
-            {skilledExpertsData.description}
-          </p>
+    <section
+      className="relative w-full overflow-hidden"
+      aria-labelledby="experts-heading"
+    >
+      {/* Decorative background */}
+      {/* <div className="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-primary/5 via-transparent to-primary/5" />
+      <div className="pointer-events-none absolute -top-24 right-[-10%] h-72 w-72 rounded-full bg-primary/20 blur-3xl" />
+      <div className="pointer-events-none absolute -bottom-24 left-[-10%] h-72 w-72 rounded-full bg-primary/20 blur-3xl" /> */}
 
-          <div className="space-y-8">
-            {skilledExpertsData.features.map((feature, idx) => (
-              <div key={idx} className="flex items-start gap-4">
-                <div className="flex-shrink-0 w-12 h-12 flex items-center justify-center rounded-full bg-primary/10 text-primary">
-                  {feature.icon}
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold text-text">
-                    {feature.title}
-                  </h3>
-                  <p className="text-text/70">{feature.description}</p>
+      {/* Container */}
+      <div className="mx-auto max-w-7xl space-y-4 px-6 py-16 lg:py-24">
+        {/* Header */}
+
+        <CenteredSectionHeader
+          title={skilledExpertsData.title}
+          description={skilledExpertsData.description}
+        />
+
+        {/* Content */}
+        <div className="grid items-start gap-10 lg:grid-cols-[0.8fr_1fr]">
+          {/* Collage / Media */}
+          <div className="relative">
+            {/* Frame */}
+            {/* <div className="absolute -inset-0.5 -z-10 rounded-2xl bg-gradient-to-tr from-primary/30 via-transparent to-primary/30 blur" /> */}
+            <div className="relative rounded-2xl border border-white/10 bg-white/60 p-4 backdrop-blur-md shadow-xl dark:bg-white/5">
+              {/* Main image */}
+              <div className="relative aspect-[16/10] w-full overflow-hidden rounded-xl ring-1 ring-black/5">
+                <Image
+                  src={skilledExpertsData.images[0]}
+                  alt="Expert working"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  className="object-cover"
+                  priority
+                />
+              </div>
+
+              {/* Floating secondary card */}
+              <div className="pointer-events-none absolute -bottom-6 -right-4 hidden w-[55%] rotate-3 overflow-hidden rounded-xl border border-black/10 bg-white/70 p-2 shadow-lg backdrop-blur md:block">
+                <div className="relative aspect-[4/3] w-full overflow-hidden rounded-lg">
+                  <Image
+                    src={skilledExpertsData.images[1]}
+                    alt="Technology workspace"
+                    fill
+                    sizes="40vw"
+                    className="object-cover"
+                  />
                 </div>
               </div>
-            ))}
+
+              {/* Accent badge */}
+              <div className="absolute -left-3 -top-3 hidden rounded-full bg-primary px-3 py-1 text-xs font-semibold text-white shadow md:block">
+                Live & Ready
+              </div>
+            </div>
+
+            {/* Dotted background accent */}
+            <div
+              aria-hidden
+              className="mt-8 grid grid-cols-12 gap-2 opacity-20"
+            >
+              {Array.from({ length: 96 }).map((_, i) => (
+                <span
+                  key={i}
+                  className="h-1 w-1 rounded-full bg-current"
+                  style={{ color: "var(--tw-prose-body, #94a3b8)" }}
+                />
+              ))}
+            </div>
           </div>
 
-          <button className="mt-10 px-6 py-3 bg-primary text-white font-semibold rounded-md hover:opacity-90 transition">
-            {skilledExpertsData.cta}
-          </button>
-        </div>
+          {/* Feature list */}
+          <div className="space-y-6">
+            {/* Feature cards */}
+            <ul className="grid grid-cols-1 gap-6 sm:grid-cols-2">
+              {skilledExpertsData.features.map((feature, idx) => (
+                <li
+                  key={idx}
+                  className="group relative rounded-xl border border-white/10 bg-white/60 p-5 shadow-sm backdrop-blur transition duration-300 hover:-translate-y-0.5 hover:shadow-md dark:bg-white/5"
+                >
+                  <div className="flex flex-col items-start gap-2">
+                    <div className="flex gap-2 items-center">
+                      <span className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-primary/10 text-primary ring-1 ring-primary/20">
+                        {/* wrap the icon to control color via parent */}
+                        <span className="inline-flex">{feature.icon}</span>
+                      </span>
+                      <h3 className="text-lg font-semibold text-text">
+                        {feature.title}
+                      </h3>
+                    </div>
 
-        {/* Right Section - Images */}
-        <div className="grid grid-cols-2 gap-6">
-          <div className="relative w-full h-64 rounded-lg overflow-hidden shadow-lg">
-            <Image
-              src={skilledExpertsData.images[0]}
-              alt="Expert working"
-              fill
-              className="object-cover"
-            />
-          </div>
-          <div className="relative w-full h-64 rounded-lg overflow-hidden shadow-lg mt-10">
-            <Image
-              src={skilledExpertsData.images[1]}
-              alt="Technology workspace"
-              fill
-              className="object-cover"
-            />
+                    <p className="mt-1 text-sm leading-6 text-text/70">
+                      {feature.description}
+                    </p>
+                  </div>
+
+                  {/* subtle gradient border on hover */}
+                  <div className="pointer-events-none absolute inset-0 rounded-xl ring-1 ring-black/5 transition-all duration-300 group-hover:ring-primary/30" />
+                </li>
+              ))}
+            </ul>
+
+            {/* CTA block */}
+            <div className="flex flex-col items-start gap-4 rounded-xl border border-dashed border-primary/30 p-4 sm:flex-row sm:items-center sm:justify-between">
+              <p className="max-w-xl text-sm text-text/70">
+                Need a quick answer or tailored advice? Hop into a conversation
+                with our specialists right now.
+              </p>
+              <button
+                className="inline-flex items-center justify-center rounded-md border border-primary bg-primary px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-90 text-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+                aria-label={skilledExpertsData.cta}
+                type="button"
+              >
+                {skilledExpertsData.cta}
+                <svg
+                  className="ml-2 h-4 w-4"
+                  viewBox="0 0 20 20"
+                  fill="currentColor"
+                  aria-hidden="true"
+                >
+                  <path
+                    fillRule="evenodd"
+                    d="M10.293 3.293a1 1 0 011.414 0l5 5a1.002 1.002 0 010 1.414l-5 5a1 1 0 11-1.414-1.414L12.586 11H4a1 1 0 110-2h8.586l-2.293-2.293a1 1 0 010-1.414z"
+                    clipRule="evenodd"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            {/* small note */}
+            <p className="text-xs text-text/50">
+              Always-on coverage, optimized infrastructure, and human help—no
+              tickets lost in the void.
+            </p>
           </div>
         </div>
       </div>
