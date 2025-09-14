@@ -1,6 +1,7 @@
 import { premiumVpsHostingData } from "@/data/premiumVpsHosting.data";
 import { FaCheckCircle } from "react-icons/fa";
 import CenteredSectionHeader from "../headers/CenteredSectionHeader";
+import Image from "next/image";
 
 export default function PremiumVpsHosting() {
   return (
@@ -35,22 +36,26 @@ export default function PremiumVpsHosting() {
         {/* Right: custom collage */}
         <div className="grid grid-cols-3 gap-4">
           {/* Tall left image */}
-          <div className="col-span-1 row-span-2 overflow-hidden rounded-2xl border border-border-light-gray bg-white-background">
-            <img
+          <div className="col-span-1 row-span-2 relative overflow-hidden rounded-2xl border border-border-light-gray bg-white-background">
+            <Image
               src={premiumVpsHostingData.leftImage.src}
               alt={premiumVpsHostingData.leftImage.alt}
-              className="h-full w-full object-cover  object-right"
-              loading="lazy"
+              fill
+              className="object-cover object-right"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 400px"
+              priority={false}
             />
           </div>
 
           {/* Wide right image */}
-          <div className="col-span-2 row-span-2 overflow-hidden rounded-2xl border border-border-light-gray bg-white-background">
-            <img
+          <div className="col-span-2 row-span-2 relative overflow-hidden rounded-2xl border border-border-light-gray bg-white-background">
+            <Image
               src={premiumVpsHostingData.rightImage.src}
               alt={premiumVpsHostingData.rightImage.alt}
-              className="h-full w-full object-cover object-left"
-              loading="lazy"
+              fill
+              className="object-cover object-left"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 66vw, 800px"
+              priority={false}
             />
           </div>
         </div>
