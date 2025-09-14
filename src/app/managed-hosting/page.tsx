@@ -1,5 +1,4 @@
-import ManagedHosting from "@/components/shared/sections/ManagedHostingThatGrows";
-
+import ManagedHosting from "@/components/pages/managed-hosting/ManagedHosting";
 
 export const dynamic = "force-static";
 export const revalidate = 3600;
