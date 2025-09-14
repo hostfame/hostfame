@@ -50,7 +50,7 @@ export const managedHostingData: ManagedHostingThatGrowsProps = {
 export default function ManagedHostingThatGrows() {
   return (
     <section
-      className="w-full bg-background text-text"
+      className="w-full text-text"
       aria-labelledby="benefits-heading"
     >
       <div className=" space-y-6">
