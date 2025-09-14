@@ -59,12 +59,13 @@ export default function WhyChooseHostFame() {
             </p>
           )} */}
 
-          <ul className="mt-8 space-y-6">
+          <ul className="mt-8 flex flex-col gap-y-6">
             {data.features.map(({ title, description, icon: Icon }) => (
               <li
                 key={title}
-                className="group flex items-start gap-4 rounded-2xl border border-border-light-gray bg-card-background p-4 shadow-sm backdrop-blur transition hover:shadow-md sm:p-5"
+                className=" flex h-full   items-center gap-4  bg-card-background  pr-4 py-2 transition "
               >
+                <div className="w-1  h-[55px]  bg-gradient-to-b from-primary-light via-primary to-primary-dark rounded-full"></div>
                 <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-white to-gray-200 ring-1 ring-black/5">
                   <Icon className="text-2xl text-primary-dark" aria-hidden />
                 </span>
