@@ -5,6 +5,7 @@ import { BannerTimer } from "./BannerTimer";
 import { IoCheckmark } from "react-icons/io5";
 
 export type BannerProps = {
+  topTitle: string;
   title: React.ReactNode;
 
   /** Right-hand illustration image */
@@ -45,6 +46,7 @@ export type BannerProps = {
 };
 
 export const Banner: React.FC<BannerProps> = ({
+  topTitle,
   title,
   image,
   imageAlt = "Banner visual",
@@ -92,7 +94,7 @@ export const Banner: React.FC<BannerProps> = ({
         {/* Content */}
         <div className="space-y-6 text-center lg:text-left flex  flex-col justify-center">
           <p className="text-yellow-400 font-semibold text-base sm:text-xl">
-            Expertly Crafted for Online Businesses
+            {topTitle}
           </p>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
@@ -139,9 +141,8 @@ export const Banner: React.FC<BannerProps> = ({
               alt={imageAlt}
               width={imageProps?.width || 600}
               height={imageProps?.height || 600}
-              className={`object-contain  h-auto ${
-                classNameForImage || "w-full"
-              }`}
+              className={`object-contain  h-auto ${classNameForImage || "w-full"
+                }`}
               priority
             />
           </div>

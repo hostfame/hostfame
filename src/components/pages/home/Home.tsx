@@ -26,6 +26,7 @@ const Home = () => {
     <section>
       <PromoTopBar />
       <Banner
+        topTitle={"Expertly Crafted for Online Businesses"}
         title={
           <>
             Reliable Hosting.
