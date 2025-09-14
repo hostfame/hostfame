@@ -87,7 +87,7 @@ const data: {
 };
 
 function PingDot() {
-  return <div className="animate-ping size-2 rounded-full bg-primary"></div>;
+  return <div className="animate-ping size-2 rounded-full bg-primary-dark"></div>;
 }
 
 export default function DataCenters() {
@@ -98,7 +98,7 @@ export default function DataCenters() {
         description={data.description}
       />
 
-      <div className="relative mx-auto mt-10 w-full overflow-hidden rounded-3xl bg-slate-50 p-2 shadow-sm sm:p-3">
+      <div className="relative mx-auto mt-10 w-full overflow-hidden rounded-3xl bg-gray-background p-2 shadow-sm sm:p-3">
         {/* Map wrapper keeps the aspect ratio of the background image */}
         <div className="relative mx-auto aspect-[1180/579] w-full">
           {/* Background map */}

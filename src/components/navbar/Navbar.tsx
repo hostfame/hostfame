@@ -8,6 +8,7 @@ import { navItems } from "@/data/navbar.data";
 import { getIcon } from "./Icon";
 import Image from "next/image";
 import { Button } from "../shared/html/Button";
+import ToggleTheme from "../shared/ToggleTheme";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -72,7 +73,7 @@ const Navbar = () => {
                       </button>
                       <div
                         className={` ${
-                          item.label === "Hosting" ? "w-96" : "w-56"
+                          item.label === "Hosting" ? " w-[400px]" : "w-56"
                         } absolute left-0 mt-2 bg-gray-background rounded-xl shadow-2xl border border-background py-4 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform group-hover:-translate-y-1`}
                       >
                         <div
@@ -99,7 +100,7 @@ const Navbar = () => {
                                 <div className={`text-sm font-semibold `}>
                                   {subItem.label}
                                 </div>
-                                <div className="text-xs mt-0.5">
+                                <div className="text-xs mt-0.5 text-nowrap">
                                   {subItem.description}
                                 </div>
                               </div>
@@ -124,7 +125,8 @@ const Navbar = () => {
               ))}
 
               {/* Dashboard Button */}
-              <div className="hidden min-[840px]:flex">
+              <div className="hidden items-center justify-end gap-x-4 min-[840px]:flex">
+                <ToggleTheme />
                 <Button
                   variant="bordered"
                   href="/dashboard"
