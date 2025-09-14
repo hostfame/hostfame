@@ -10,6 +10,7 @@ const Contact = () => {
   return (
     <section>
       <Banner
+        topTitle={"Get in Touch"}
         title={<>We’re Here to Help</>}
         image="/assets/web-hosting/webhero.webp"
         waveImage="/assets/web-hosting/banner-left-wave.png"

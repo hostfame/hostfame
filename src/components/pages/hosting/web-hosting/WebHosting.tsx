@@ -20,6 +20,7 @@ const WebHosting = () => {
     <section className="">
       <PromoTopBar />
       <Banner
+        topTitle={"Limited Offer: 90% OFF Hosting"}
         title={
           <>
             Get Fastest Hosting

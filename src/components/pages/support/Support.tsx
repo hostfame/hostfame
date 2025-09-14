@@ -11,6 +11,7 @@ const Support = () => {
   return (
     <section>
       <Banner
+        topTitle={"24/7 Support"}
         title={
           <>
             Reliable, Friendly, and Fast
@@ -29,7 +30,7 @@ const Support = () => {
       />
       <SkilledDedicatedExperts />
       <SectionWrapper className="mb-12 md:mb-16">
-        <HostingSupport data={hostingSupportData}/>
+        <HostingSupport data={hostingSupportData} />
       </SectionWrapper>
       <ReviewsSection />
       <SectionWrapper className="my-12 md:my-16">

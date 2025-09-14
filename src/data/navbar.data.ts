@@ -52,10 +52,10 @@ export const navItems = [
     label: "Business",
     subItems: [
       {
-        label: "Manage Hosting",
+        label: "Managed Hosting",
         // description: "Virtual Private Server",
         description: "",
-        href: "/server/vps",
+        href: "/managed-hosting",
         icon: "vps",
       },
       {

@@ -14,6 +14,7 @@ const WordPressHosting = () => {
   return (
     <section className="">
       <Banner
+        topTitle={"WordPress Hosting"}
         title={
           <>
             Turbocharge Your
@@ -36,11 +37,11 @@ const WordPressHosting = () => {
       <WordPressHostingFeatures />
       <HostingBenefits />
       <SectionWrapper>
-        <ManagedHostingHighlights data={wordpressHostingManagedHostingHighlightsData}/>
+        <ManagedHostingHighlights data={wordpressHostingManagedHostingHighlightsData} />
       </SectionWrapper>
-      <AllHostingPlans data={wordpressHostingAllHostingPlans}/>
+      <AllHostingPlans data={wordpressHostingAllHostingPlans} />
       <FaqSection />
-      <WhyChooseWordpressHosting/>
+      <WhyChooseWordpressHosting />
       <SectionWrapper className="my-12 md:my-16">
         <SupportBanner />
       </SectionWrapper>
