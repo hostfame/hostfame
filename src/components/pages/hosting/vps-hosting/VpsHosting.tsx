@@ -12,14 +12,16 @@ import { Banner } from "@/components/shared/banners/Banner";
 import Image from "next/image";
 import WhiteButton from "@/components/shared/html/WhiteButton";
 import Link from "next/link";
-import { BsArrowRightShort } from "react-icons/bs";
 
 const VpsHosting = () => {
   return (
     <div>
       <PromoTopBar />
       <Banner
-        topTitle={"Managed VPS Hosting"}
+        topTitle={{
+          content: "Managed VPS Hosting",
+          className: " bg-white/10 backdrop-blur-md",
+        }}
         title={
           <>
             High-Performance
@@ -80,7 +82,7 @@ export function AnimationBanner() {
         alt={"Home Banner"}
         width={250}
         height={250}
-        className={`absolute object-contain top-bottom2 top-0 left-[15%]`}
+        className={`absolute object-contain top-bottom2 top-0 left-20`}
         priority
       />
     </div>
@@ -90,7 +92,7 @@ export function AnimationBanner() {
 function VpsHostingCtaSection() {
   return (
     <section className="flex items-center gap-6">
-      <WhiteButton>View Plan</WhiteButton>
+      <WhiteButton className="!rounded">View Plan</WhiteButton>
       <Link
         href={"#"}
         className="flex text-lg items-center text-center max-lg:underline lg:gap-x-2 cursor-pointer text-white font-bold underline"
