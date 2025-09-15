@@ -1,4 +1,3 @@
-// app/components/WhyChooseHostFame.tsx
 import Image from "next/image";
 import { IconType } from "react-icons";
 import { FiZap, FiHeadphones, FiRotateCcw } from "react-icons/fi";
