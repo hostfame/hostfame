@@ -14,32 +14,60 @@ import QuestionSection from "./QuestionSection";
 import MigrateYourSite from "./MigrateYourSite";
 import WhatMakesUsDifferent from "./WhatMakesUsDifferent";
 import WhyChooseWebHosting from "./why-choose-web-hosting/WhyChooseWebHosting";
+import WhiteButton from "@/components/shared/html/WhiteButton";
+import Link from "next/link";
+import Image from "next/image";
 
 const WebHosting = () => {
   return (
     <section className="">
       <PromoTopBar />
       <Banner
-        topTitle={"Limited Offer: 90% OFF Hosting"}
+        topTitle={{
+          content: "Limited Offer: 90% OFF Hosting",
+          className: " bg-white/10 backdrop-blur-md",
+        }}
         title={
           <>
-            Get Fastest Hosting
+            Get Ultra-Fast
             <br className="hidden md:block" />
-            <span className="sr-only"> — </span>
-            <span className="block">Up to 76% Discount</span>
+            <span className="">Hosting With 24/7</span>
+            <br className="hidden md:block" />
+            <span className="">Expert Support</span>
           </>
         }
         image="/assets/web-hosting/webhero.webp"
         waveImage="/assets/web-hosting/banner-left-wave.png"
         countdownTarget={new Date(Date.now() + 15 * 60 * 60 * 1000)} // 15 hours
-        cta={{
-          text: "Claim Offer Now",
-        }}
-        lists={[
-          "Free .COM Domain on Trinnially",
-          "Genuine & Latest Control Panel",
-          "Free WildCard SSL for Lifetime",
-        ]}
+        description={
+          <section className=" space-y-6">
+            <p>
+              Perfect for local businesses, stores, and pros who need speed, uptime, and real human help.
+            </p>
+
+            <section className="flex gap-20">
+              <section className=" flex items-center">
+                <Image
+                  src={"/assets/diamond.svg"}
+                  alt={"diamond"}
+                  width={40}
+                  height={40}
+                />
+                <p>24/7 Chat & Call <br />30 Day Refund</p>
+              </section>
+              <section className=" flex items-center">
+                <Image
+                  src={"/assets/wordpress.svg"}
+                  alt={"wordpress"}
+                  width={40}
+                  height={40}
+                />
+                <p>One Click WordPress <br /> No Hassle. No Stress.</p>
+              </section>
+            </section>
+          </section>
+        }
+        ctaSection={<WebHostingCtaSection />}
       />
       {/* <HostingBenefits /> */}
 
@@ -79,4 +107,17 @@ const WebHosting = () => {
   );
 };
 
+function WebHostingCtaSection() {
+  return (
+    <section className="flex items-center gap-6">
+      <Link
+        href={"#"}
+        className=""
+      >
+
+        <WhiteButton className="">Get Started - Risk Free</WhiteButton>
+      </Link>
+    </section>
+  );
+}
 export default WebHosting;

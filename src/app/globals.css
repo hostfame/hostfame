@@ -137,6 +137,46 @@ body {
   animation: moveBottomToTop 15s linear infinite;
 }
 
+.left-right {
+  animation: moveLeftToRight 15s linear infinite;
+}
+
+.left-right2 {
+  animation: moveLeftToRight2 8s linear infinite;
+}
+
+.right-left {
+  animation: moveRightToLeft 15s linear infinite;
+}
+
+.rotate-clockwise {
+  animation: rotateClockwise 15s linear infinite;
+}
+
+.rotate-counterclockwise {
+  animation: rotateCounterClockwise 15s linear infinite;
+}
+
+.swing-left {
+  transform-origin: right center; /* anchor the right side */
+  animation: swingLeft 3s ease-in-out infinite;
+}
+
+.swing-right {
+  transform-origin: left center; /* anchor the left side */
+  animation: swingRight 3s ease-in-out infinite;
+}
+
+.swing-top {
+  transform-origin: top center; /* anchor the top */
+  animation: swingTop 4s ease-in-out infinite;
+}
+
+.swing-bottom {
+  transform-origin: bottom center; /* anchor the bottom */
+  animation: swingBottom 4s ease-in-out infinite;
+}
+
 /** 
   Key Frames
 */
@@ -180,5 +220,136 @@ body {
 
   to {
     transform: translateY(20%);
+  }
+}
+
+@keyframes moveLeftToRight {
+  from {
+    transform: translateX(-20%);
+  }
+
+  50% {
+    transform: translateX(20%);
+  }
+
+  to {
+    transform: translateX(-20%);
+  }
+}
+
+@keyframes moveLeftToRight2 {
+  from {
+    transform: translateX(-2%);
+  }
+
+  50% {
+    transform: translateX(2%);
+  }
+
+  to {
+    transform: translateX(-2%);
+  }
+}
+
+@keyframes moveRightToLeft {
+  from {
+    transform: translateX(20%);
+  }
+
+  50% {
+    transform: translateX(-20%);
+  }
+
+  to {
+    transform: translateX(20%);
+  }
+}
+
+/* 
+  Rotation Animations
+*/
+
+@keyframes rotateClockwise {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateCounterClockwise {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/*
+  Swing Animations
+  (One side fixed, other side up & down)
+*/
+
+/* Left side moves up/down, right side fixed */
+@keyframes swingLeft {
+  from {
+    transform: rotate(2deg);
+  }
+
+  50% {
+    transform: rotate(-2deg);
+  }
+
+  to {
+    transform: rotate(2deg);
+  }
+}
+
+/* Right side moves up/down, left side fixed */
+@keyframes swingRight {
+  from {
+    transform: rotate(-2deg);
+  }
+
+  50% {
+    transform: rotate(2deg);
+  }
+
+  to {
+    transform: rotate(-2deg);
+  }
+}
+
+/* Bottom moves up/down, top fixed */
+@keyframes swingTop {
+  from {
+    transform: rotate(2deg);
+  }
+
+  50% {
+    transform: rotate(-2deg);
+  }
+
+  to {
+    transform: rotate(2deg);
+  }
+}
+
+/* Top moves up/down, bottom fixed */
+@keyframes swingBottom {
+  from {
+    transform: rotate(-2deg);
+  }
+
+  50% {
+    transform: rotate(2deg);
+  }
+
+  to {
+    transform: rotate(-2deg);
   }
 }
