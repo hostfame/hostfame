@@ -5,10 +5,7 @@ import HostingFlashSale from "./HostingFlashSale";
 import ExperienceHostfameAdvantage from "./ExperienceHostfameAdvantage";
 import HostingPlan from "@/components/shared/sections/HostingPlan";
 import DifferentHostingPlans from "@/components/shared/sections/DifferentHostingPlans";
-import {
-  differentHostingPlansData,
-  hostingForGrowthData,
-} from "@/data/home.data";
+import { differentHostingPlansData, hostingForGrowthData, } from "@/data/home.data";
 import SpeedAndSupport from "./SpeedAndSupport";
 import HostingForGrowth from "./HostingForGrowth";
 import WhiteButton from "@/components/shared/html/WhiteButton";
@@ -26,7 +23,13 @@ const Home = () => {
     <section>
       <PromoTopBar />
       <Banner
-        topTitle={"Expertly Crafted for Online Businesses"}
+        topTitle={{
+          icon: <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M23.9799 11.9805C23.9799 10.3545 23.2659 8.8205 22.0549 7.8565C22.1949 6.2345 21.6149 4.6455 20.4649 3.4945C19.3149 2.3455 17.7299 1.7635 16.1879 1.9395C14.1739 -0.616499 9.82288 -0.664499 7.85588 1.9045C4.62288 1.5205 1.51388 4.5645 1.93988 7.7725C-0.616121 9.7865 -0.665121 14.1375 1.90488 16.1055C1.76488 17.7275 2.34488 19.3165 3.49488 20.4675C4.64488 21.6165 6.23188 22.1985 7.77188 22.0225C9.78588 24.5785 14.1369 24.6265 16.1039 22.0575C17.7239 22.1965 19.3139 21.6185 20.4649 20.4675C21.6139 19.3175 22.1939 17.7275 22.0199 16.1905C23.2659 15.1425 23.9799 13.6085 23.9799 11.9825V11.9805ZM7.97988 8.9805C7.98588 7.6725 9.97388 7.6725 9.97988 8.9805C9.97388 10.2885 7.98588 10.2885 7.97988 8.9805ZM10.8119 15.5355C10.5039 15.9985 9.87888 16.1165 9.42488 15.8125C8.96488 15.5065 8.84088 14.8855 9.14788 14.4255L13.1479 8.4255C13.4539 7.9665 14.0739 7.8405 14.5349 8.1485C14.9949 8.4545 15.1189 9.0755 14.8119 9.5355L10.8119 15.5355ZM14.9799 15.9805C13.6719 15.9745 13.6719 13.9865 14.9799 13.9805C16.2879 13.9865 16.2879 15.9745 14.9799 15.9805Z" fill="#FFC107"></path>
+          </svg>,
+          content: "Upto 90% Off on Web Hosting",
+          className: " border rounded-full",
+        }}
         title={
           <>
             Reliable Hosting.
@@ -91,7 +94,7 @@ export function AnimationBanner() {
       className={` lg:justify-center w-full max-w-md md:max-w-lg lg:max-w-xl  relative flex flex-col  items-center justify-end h-full`}
     >
       <Image
-        src={"https://hostfame.com/wp-content/uploads/2024/01/hosting-01.svg"}
+        src={"/assets/hosting-01.svg"}
         alt={"Home Banner"}
         width={600}
         height={600}
@@ -99,28 +102,28 @@ export function AnimationBanner() {
         priority
       />
       <Image
-        src={"https://hostfame.com/wp-content/uploads/2024/01/hosting.svg"}
+        src={"/assets/hosting.svg"}
         width={600}
         height={600}
         alt="Hosting illustration"
         className="absolute  -bottom-[30%]"
       />
       <Image
-        src={"https://hostfame.com/wp-content/uploads/2024/01/left.svg"}
+        src={"/assets/left.svg"}
         width={50}
         height={100}
         alt="Hosting illustration"
         className="absolute  h-[50%] left-0 top-0 top-bottom"
       />
       <Image
-        src={"https://hostfame.com/wp-content/uploads/2024/01/left.svg"}
+        src={"/assets/left.svg"}
         width={50}
         height={100}
         alt="Hosting illustration"
         className="absolute  h-[50%] right-0  -bottom-8 bottom-top"
       />
       <Image
-        src={"https://hostfame.com/wp-content/uploads/2024/01/top.svg"}
+        src={"/assets/top.svg"}
         width={50}
         height={100}
         alt="Hosting illustration"
@@ -132,15 +135,27 @@ export function AnimationBanner() {
 
 function HomeCtaSection() {
   return (
-    <section className=" space-y-5 flex flex-col max-lg:items-center">
-      <WhiteButton>Start My Hosting Now</WhiteButton>
-      <Link
-        href={"#"}
-        className="flex  text-lg items-center text-center max-lg:underline lg:gap-x-2 cursor-pointer text-white font-bold"
-      >
-        Trusted By Agencies & Startups
-        <BsArrowRightShort size={24} className="hidden lg:block" />
-      </Link>
+    <section className=" space-y-6">
+      <section className=" flex gap-10 items-center justify-center lg:justify-start flex-wrap">
+        <WhiteButton>Start My Hosting Now</WhiteButton>
+        <Link
+          href={"#"}
+          className="flex  text-lg items-center text-center max-lg:underline lg:gap-x-2 cursor-pointer text-white font-bold"
+        >
+          Trusted By Agencies & Startups
+          <BsArrowRightShort size={24} className="hidden lg:block" />
+        </Link>
+      </section>
+
+      <section className="flex gap-3 items-center justify-center lg:justify-start">
+        <Image
+          src={"/assets/dollar.svg"}
+          alt={"dollar"}
+          width={30}
+          height={30}
+        />
+        <p className=" text-nowrap">30-Day Money-Back Guarantee. Cancel Anytime.</p>
+      </section>
     </section>
   );
 }
