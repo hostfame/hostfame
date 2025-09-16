@@ -2,7 +2,7 @@ import { Banner } from "@/components/shared/banners/Banner";
 import SectionWrapper from "@/components/shared/wrappers/SectionWrapper";
 import React from "react";
 import ContactTiles from "./ContactTiles";
-import PrioritySupport from "../support/PrioritySupport";
+// import PrioritySupport from "../support/PrioritySupport";
 import SupportBanner from "@/components/shared/sections/SupportBanner";
 import Image from "next/image";
 import Link from "next/link";
@@ -31,10 +31,10 @@ const Contact = () => {
         imageComponent={<AnimationBanner />}
         classNameForTitle="text-nowrap"
       />
-      <SectionWrapper className="mb-8 mt-4">
+      {/* <SectionWrapper className="mb-8 mt-4">
         <PrioritySupport />
-      </SectionWrapper>
-      <SectionWrapper className="-mt-8 mb-4">
+      </SectionWrapper> */}
+      <SectionWrapper className=" mt-8">
         <ContactTiles />
       </SectionWrapper>
 
