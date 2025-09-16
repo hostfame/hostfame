@@ -30,7 +30,10 @@ const HostingForGrowth = ({ data }: { data: HostingPlansProps }) => {
         {data.data.map((plan, index) => (
           <div key={index} className="group relative">
             <div className="border border-x-0 border-y-1 md:border-x-1 md:border-y-0 border-primary/10 group-hover:border-primary/30 transition-all duration-300 bg-white-background p-6 h-[250px] md:h-[280px] space-y-2">
-              <Link href={plan.link} className="w-full h-full flex flex-col group-hover:scale-105 transition-all duration-300 gap-3 items-start">
+              <Link
+                href={plan.link}
+                className="w-full h-full flex flex-col group-hover:scale-105 transition-all duration-300 gap-3 items-start"
+              >
                 <Image
                   src={plan.image}
                   alt={plan.title}
@@ -42,9 +45,7 @@ const HostingForGrowth = ({ data }: { data: HostingPlansProps }) => {
                   {plan.title}
                 </h3>
                 <p>{plan.description}</p>
-                <button
-                  className="mt-auto inline-block text-sm font-medium group-hover:text-primary"
-                >
+                <button className="mt-auto inline-block text-sm font-medium group-hover:text-primary">
                   {plan.linkBtn} →
                 </button>
               </Link>

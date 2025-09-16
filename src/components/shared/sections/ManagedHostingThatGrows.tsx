@@ -1,5 +1,12 @@
 import { ManagedHostingThatGrowsProps } from "@/data/managedHostingThatGrows.data";
-import { FiSettings, FiShield, FiCreditCard, FiCpu, FiRotateCw, FiZap, } from "react-icons/fi";
+import {
+  FiSettings,
+  FiShield,
+  FiCreditCard,
+  FiCpu,
+  FiRotateCw,
+  FiZap,
+} from "react-icons/fi";
 import CenteredSectionHeader from "../headers/CenteredSectionHeader";
 
 export const managedHostingData: ManagedHostingThatGrowsProps = {
@@ -23,8 +30,7 @@ export const managedHostingData: ManagedHostingThatGrowsProps = {
     {
       icon: <FiCreditCard aria-hidden className="text-xl" />,
       title: "30-Day Refund",
-      description:
-        "Try us risk-free. If it’s not a fit, we’ll make it right.",
+      description: "Try us risk-free. If it’s not a fit, we’ll make it right.",
     },
     {
       icon: <FiCpu aria-hidden className="text-xl" />,
@@ -35,8 +41,7 @@ export const managedHostingData: ManagedHostingThatGrowsProps = {
     {
       icon: <FiRotateCw aria-hidden className="text-xl" />,
       title: "Daily Backups",
-      description:
-        "Point-in-time restores so recovery is never a fire drill.",
+      description: "Point-in-time restores so recovery is never a fire drill.",
     },
     {
       icon: <FiZap aria-hidden className="text-xl" />,
@@ -49,10 +54,7 @@ export const managedHostingData: ManagedHostingThatGrowsProps = {
 
 export default function ManagedHostingThatGrows() {
   return (
-    <section
-      className="w-full text-text"
-      aria-labelledby="benefits-heading"
-    >
+    <section className="w-full text-text" aria-labelledby="benefits-heading">
       <div className=" space-y-6">
         {/* Heading */}
         <div className="text-center">
@@ -71,17 +73,21 @@ export default function ManagedHostingThatGrows() {
           {managedHostingData.benefits.map((b, i) => (
             <li
               key={i}
-              className="group rounded-2xl border border-border-light-gray bg-card-background p-6 shadow-sm transition hover:-translate-y-0.5 hover:shadow hover:bg-gradient-to-t from-primary-light to-primary-extralight"
+              className="group relative overflow-hidden rounded-2xl border border-border-light-gray p-6 shadow-sm hover:-translate-y-0.5 hover:shadow transition-all duration-300"
             >
-              <div className="flex items-start gap-4">
+              {/* base gradient */}
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-card-background to-card-background transition-opacity duration-500 opacity-100 group-hover:opacity-0" />
+
+              {/* hover gradient */}
+              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-primary-light to-primary-extralight transition-opacity duration-500 opacity-0 group-hover:opacity-100" />
+
+              <div className="relative flex items-start gap-4">
                 {/* Icon chip with 'primary' accent */}
                 <span
                   className="inline-flex h-10 w-10 items-center justify-center rounded-xl ring-1 ring-border-light-gray bg-white shrink-0"
                   aria-hidden
                 >
-                  <span className="text-primary">
-                    {b.icon}
-                  </span>
+                  <span className="text-primary">{b.icon}</span>
                 </span>
 
                 <div className="group-hover:text-white">
@@ -91,7 +97,7 @@ export default function ManagedHostingThatGrows() {
               </div>
 
               {/* subtle bottom accent bar using 'primary' */}
-              <div className="h-0.5 w-10 rounded-full bg-primary/70" />
+              <div className="relative h-0.5 w-10 rounded-full bg-primary/70 mt-4" />
             </li>
           ))}
         </ul>

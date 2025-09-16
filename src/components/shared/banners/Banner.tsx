@@ -6,10 +6,10 @@ import { IoCheckmark } from "react-icons/io5";
 
 export type BannerProps = {
   topTitle: {
-    icon?: React.ReactNode,
-    content?: string,
-    className?: string,
-    classNameForContent?: string,
+    icon?: React.ReactNode;
+    content?: string;
+    className?: string;
+    classNameForContent?: string;
   };
   title: React.ReactNode;
 
@@ -48,6 +48,7 @@ export type BannerProps = {
   classNameForImage?: string;
   classNameForImageWrapper?: string;
   imageComponent?: React.ReactNode;
+  classNameForTitle?: string
 };
 
 export const Banner: React.FC<BannerProps> = ({
@@ -71,10 +72,11 @@ export const Banner: React.FC<BannerProps> = ({
   classNameForImage,
   classNameForImageWrapper,
   imageComponent,
+  classNameForTitle
 }) => {
   return (
     <section
-      className={`relative flex justify-center items-center w-full bg-gradient-to-br from-primary-dark via-primary to-primary-dark text-white bg-no-repeat overflow-hidden ${heightClassName} ${className}`}
+      className={`relative flex justify-center items-center w-full bg-gradient-to-br from-primary via-primary to-primary-dark text-white bg-no-repeat overflow-hidden ${heightClassName} ${className}`}
       style={{
         backgroundPosition: "left center, center center",
         backgroundSize: "contain",
@@ -97,11 +99,16 @@ export const Banner: React.FC<BannerProps> = ({
       >
         {/* Content */}
         <div className="space-y-6 text-center lg:text-left flex flex-col justify-center items-center lg:items-start">
-          <p className={`flex gap-2 items-center font-semibold w-fit px-3 py-2 ${topTitle.className}`}>
-            {topTitle.icon} <span className={` text-lg ${topTitle.classNameForContent}`}>{topTitle.content}</span>
+          <p
+            className={`flex gap-2 items-center font-semibold w-fit px-3 py-2 ${topTitle.className}`}
+          >
+            {topTitle.icon}{" "}
+            <span className={` text-lg ${topTitle.classNameForContent}`}>
+              {topTitle.content}
+            </span>
           </p>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">
+          <h1 className={`text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight ${classNameForTitle}`}>
             {title}
           </h1>
 
@@ -145,8 +152,9 @@ export const Banner: React.FC<BannerProps> = ({
               alt={imageAlt}
               width={imageProps?.width || 600}
               height={imageProps?.height || 600}
-              className={`object-contain  h-auto ${classNameForImage || "w-full"
-                }`}
+              className={`object-contain  h-auto ${
+                classNameForImage || "w-full"
+              }`}
               priority
             />
           </div>

@@ -72,15 +72,13 @@ export const navItems = [
     subItems: [
       {
         label: "Support",
-        // description: "Learn about our company privacy policy",
-        description: "",
+        description: "Get technical help",
         href: "/support",
         icon: "policy",
       },
       {
         label: "Contact",
-        // description: "Learn about our company terms conditions",
-        description: "",
+        description: "Reach out to us",
         href: "/contact",
         icon: "terms",
       },
