@@ -23,11 +23,13 @@ const Contact = () => {
         cta={{
           text: "Claim Offer Now"
         }}
+        
         description="Have a question, need support, or just want to chat? Our team is available 24/7 to make sure you get the help you need — quickly and easily."
-        heightClassName="h-fit xl:h-[640px] xl:max-h-[640px]"
+        heightClassName="h-fit lg:h-[550px] lg:max-h-[550px]"
         ctaSection={<ContactCtaSection />}
         imageProps={{ width: 400, height: 400 }}
         imageComponent={<AnimationBanner />}
+        classNameForTitle="text-nowrap"
       />
       <SectionWrapper className="mb-8 mt-4">
         <PrioritySupport />
@@ -50,45 +52,46 @@ const Contact = () => {
 export function AnimationBanner() {
   return (
     <div
-      className={` lg:justify-center w-full max-w-md md:max-w-lg lg:max-w-xl  relative flex flex-col items-center justify-end h-full`}
+      className={` w-full relative  max-lg:mt-[14%] flex justify-center items-center  max-sm:scale-90`}
     >
-      <section className=" flex justify-end items-end w-full h-full">
-        <Image
-          src="/assets/banner__contact__image.svg"
-          width={350}
-          height={350}
-          alt="Hosting illustration"
-          className="z-10 "
-        />
-      </section>
+      
       <Image
         src={"/assets/banner__contact__image-sm3.svg"}
         width={70}
         height={70}
         alt="Hosting illustration"
-        className=" z-10 absolute left-40 -top-12 swing-bottom"
+        className=" z-10 absolute left-[10%]   -top-[10%] swing-bottom"
       />
       <Image
         src={"/assets/banner__contact__image-sm1.svg"}
         alt={"Home Banner"}
         width={180}
         height={180}
-        className={`absolute left-38`}
+        className={` left-[25%] max-sm:scale-90`}
         priority
       />
+      <section className=" flex justify-end items-end w-fit h-fit -ml-[15%]">
+        <Image
+          src="/assets/banner__contact__image.svg"
+          width={350}
+          height={350}
+          alt="Hosting illustration"
+          className="z-10   "
+        />
+      </section>
       <Image
         src={"/assets/banner__contact__image-sm2.svg"}
         width={150}
         height={150}
         alt="Hosting illustration"
-        className=" absolute -top-12 left-70 top-bottom2"
+        className=" absolute max-sm:scale-90 -top-[20%] left-[40%] top-bottom2"
       />
       <Image
         src={"/assets/banner__contact__image-sm4.svg"}
         width={100}
         height={100}
         alt="Hosting illustration"
-        className=" absolute -top-18 right-5 left-right"
+        className=" absolute   right-0 top-0   left-right"
       />
     </div>
   );

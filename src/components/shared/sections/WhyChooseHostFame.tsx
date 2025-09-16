@@ -62,7 +62,7 @@ export default function WhyChooseHostFame() {
             {data.features.map(({ title, description, icon: Icon }) => (
               <li
                 key={title}
-                className=" flex h-full   items-center gap-4 rounded-xl  bg-card-background  pr-4 py-2 transition "
+                className=" flex h-full border    items-center gap-4 rounded-xl  bg-card-background  pr-4 py-2 transition "
               >
                 <div className="w-1  h-[55px]  bg-gradient-to-b from-primary-light via-primary to-primary-dark rounded-full"></div>
                 <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-white to-gray-200 ring-1 ring-black/5">

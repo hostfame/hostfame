@@ -28,69 +28,70 @@ const FEATURES = [
 
 export default function PrioritySupport() {
   return (
-    <section className="mx-auto  py-12 sm:py-16">
-      <div className="grid gap-10 lg:grid-cols-7 items-center">
-        {/* Image side */}
-        <div className="relative lg:col-span-3">
-          <div className="absolute -inset-2 -z-10 rounded-3xl  blur-xl opacity-70" />
-          <div className="overflow-hidden rounded-3xl ring-1 ring-black/5 shadow-xl bg-white">
+    <section className="relative mx-auto max-w-7xl px-6 py-16 sm:py-20">
+      {/* header */}
+      <div className="text-center max-w-2xl mx-auto space-y-4">
+        <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs md:text-sm font-semibold text-primary">
+          Priority Support
+        </span>
+
+        <CenteredSectionHeader
+          title="Priority Support, Powered by Real People"
+          description="Get faster help when you need it most. You won't encounter any bots or
+          delays."
+        />
+      </div>
+
+      {/* grid layout */}
+      <div className="mt-12 grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
+        {/* left: features in 2x2 cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {FEATURES.map(({ title, blurb, Icon }) => (
+            <div
+              key={title}
+              className="flex flex-col gap-3 rounded-2xl border border-border-light-gray bg-card-background p-6 shadow-sm transition hover:shadow-md"
+            >
+              <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                <Icon className="h-6 w-6" aria-hidden />
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg">{title}</h3>
+                <p className="text-sm text-description-text">{blurb}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        {/* right: image with overlay badges */}
+        <div className="relative">
+          <div className="overflow-hidden rounded-3xl shadow-lg ring-1 ring-border-dark-gray">
             <Image
-              src="https://hostfame.com/wp-content/uploads/2024/02/support__feature.png.webp"
+              src="/assets/support__feature.png.webp"
               alt="Real support agents at work"
-              width={600}
+              width={700}
               height={500}
               className="h-full w-full object-cover"
               priority
             />
           </div>
 
-          {/* small corner badge */}
-          <div className="absolute bottom-3 left-3 rounded-full bg-background px-3 py-1 text-xs font-medium shadow ring-1 ring-black/5">
+          {/* overlay badges */}
+          <div className="absolute top-4 left-4 flex flex-wrap gap-2">
+            <span className="rounded-full bg-card-background px-3 py-1 text-xs font-semibold text-primary shadow ring-1 ring-gray-200">
+              Faster Help
+            </span>
+            <span className="rounded-full bg-card-background px-3 py-1 text-xs font-semibold text-gray-700 shadow ring-1 ring-gray-200">
+              Human First
+            </span>
+          </div>
+          <div className="absolute bottom-4 right-4">
+            <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary shadow ring-1 ring-primary/20">
+              24/7
+            </span>
+          </div>
+          <div className="absolute bottom-4 left-4 bg-card-background/90 backdrop-blur px-4 py-2 rounded-xl text-sm font-medium text-gray-700 shadow">
             Real people. No bots.
           </div>
-        </div>
-
-        {/* Content side */}
-        <div className="space-y-2 lg:col-span-4">
-          <div className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary ring-1 ring-border-light-gray">
-            Priority Support
-          </div>
-
-          <CenteredSectionHeader
-            className="!text-left"
-            title="Priority Support, Powered by Real People"
-            description={
-              "Get faster help when you need it most. You won't encounter any bots or delays."
-            }
-            classNameForTitle="!text-3xl md:!text-4xl !text-wrap"
-            classNameForDescription="!ml-0"
-          />
-
-          <div className="grid sm:grid-cols-2 gap-5">
-            {FEATURES.map(({ title, blurb, Icon }) => (
-              <div
-                key={title}
-                className="group flex items-start gap-4 rounded-2xl border border-border-dark-gray bg-white-background p-4 shadow-sm hover:shadow-md transition-shadow"
-              >
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-gray-background ring-1 ring-border-light-gray">
-                  <Icon className="h-6 w-6" aria-hidden="true" />
-                </div>
-                <div>
-                  <h3 className="font-semibold">{title}</h3>
-                  <p className="text-sm text-description-text">{blurb}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          {/* reassurance bar */}
-          {/* <div className="flex flex-wrap items-center gap-x-4 gap-y-2 rounded-2xl bg-white-background p-3 text-xs text-text ring-1 ring-border-dark-gray">
-            <span className="font-semibold text-text">Get help faster</span>
-            <span className="hidden sm:inline">•</span>
-            <span>No bots or delays</span>
-            <span className="hidden sm:inline">•</span>
-            <span>Friendly, knowledgeable humans</span>
-          </div> */}
         </div>
       </div>
     </section>

@@ -89,13 +89,13 @@ export function AnimationBanner() {
   );
 }
 
-function VpsHostingCtaSection() {
+export function VpsHostingCtaSection() {
   return (
-    <section className="flex items-center gap-6">
+    <section className="flex max-[460px]:flex-col flex-row items-center gap-6">
       <WhiteButton className="!rounded">View Plan</WhiteButton>
       <Link
         href={"#"}
-        className="flex text-lg items-center text-center max-lg:underline lg:gap-x-2 cursor-pointer text-white font-bold underline"
+        className="flex text-lg items-center text-center max-lg:underline  lg:gap-x-2 cursor-pointer text-white font-bold underline"
       >
         Starting @ $19.99/mo
       </Link>
