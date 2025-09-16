@@ -5,9 +5,7 @@ import Image from "next/image";
 
 export default function PremiumVpsHosting() {
   return (
-    <section
-      className=" w-full text-text "
-    >
+    <section className=" w-full text-text ">
       <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-[0.8fr_1fr]  md:gap-12">
         {/* Left: copy + features */}
         <div className=" space-y-6">
@@ -23,7 +21,7 @@ export default function PremiumVpsHosting() {
               {premiumVpsHostingData.featuresCol.map((f, i) => (
                 <li
                   key={i}
-                  className=" group flex items-center gap-3 rounded-lg border border-border-light-gray bg-gradient-to-r from-primary-light to-primary-extralight text-white px-4 py-3 transition-transform hover:-translate-y-0.5 "
+                  className=" group flex items-center gap-3 rounded-lg border border-border-light-gray bg-gradient-to-r  from-primary/80  via-primary/90 to-primary-dark text-white px-4 py-3 transition-transform hover:-translate-y-0.5 "
                 >
                   <FaCheckCircle className="shrink-0" aria-hidden />
                   <span className="text-sm">{f.label}</span>
