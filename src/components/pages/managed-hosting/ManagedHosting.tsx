@@ -9,6 +9,8 @@ import HostingForGrowth from "../home/HostingForGrowth";
 import { whatAreSpecialsData } from "@/data/whatAreSpecials.data";
 import WhatAreSpecials from "@/components/shared/sections/WhatAreSpecials";
 import { Pricing } from "../hosting/web-hosting/pricing/Pricing";
+import FaqSection from "../hosting/faqs/FaqSection";
+import SupportBanner from "@/components/shared/sections/SupportBanner";
 
 const ManagedHosting = () => {
   return (
@@ -54,6 +56,10 @@ const ManagedHosting = () => {
 
       <SectionWrapper className="my-12 md:my-16">
         <PrioritySupport />
+      </SectionWrapper>
+      <FaqSection />
+      <SectionWrapper className="my-12 md:my-16">
+        <SupportBanner />
       </SectionWrapper>
     </section>
   );

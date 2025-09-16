@@ -49,14 +49,14 @@ const VpsHosting = () => {
       <SectionWrapper className="my-12 md:my-16">
         <CloudVps />
       </SectionWrapper>
-      <ReviewsSection />
+
       <SectionWrapper className="my-12 md:my-16">
         <PremiumVpsHosting />
       </SectionWrapper>
       <SectionWrapper className="my-12 md:my-16">
         <ExpectPerformanceVps />
       </SectionWrapper>
-
+      <ReviewsSection />
       <FaqSection />
       <SectionWrapper className="my-12 md:my-16">
         <SupportBanner />
