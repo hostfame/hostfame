@@ -61,14 +61,14 @@ export const wordpressHostingAllHostingPlans = {
   title: "All WordPress Hosting Plans Include",
   description: "Everything you need for speed, security, and scalability.",
   items: [
-    { title: "Access Management", image: "/images/access.png" },
-    { title: "PHP Version Control", image: "/images/php.png" },
-    { title: "Free SSL Certificate", image: "/images/ssl.png" },
-    { title: "ECommerce Optimization", image: "/images/ecommerce.png" },
-    { title: "Free Site Migration", image: "/images/migration.png" },
-    { title: "Daily Regular Backups", image: "/images/backup.png" },
-    { title: "DDoS Protection", image: "/images/ddos.png" },
-    { title: "Auto Staging System", image: "/images/staging.png" },
-    { title: "Autoscaling Cloud Technology", image: "/images/cloud.png" }
+    { title: "Access Management", image: "/assets/access.svg" },
+    { title: "PHP Version Control", image: "/assets/php-selector.svg" },
+    { title: "Free SSL Certificate", image: "/assets/ssl.svg" },
+    { title: "ECommerce Optimization", image: "/assets/ecommerce.svg" },
+    { title: "Free Site Migration", image: "/assets/migration.svg" },
+    { title: "Daily Regular Backups", image: "/assets/backup.svg" },
+    { title: "DDoS Protection", image: "/assets/ddos.svg" },
+    { title: "Auto Staging System", image: "/assets/staging.svg" },
+    { title: "Autoscaling Cloud Technology", image: "/assets/cloud.svg" }
   ]
 };
