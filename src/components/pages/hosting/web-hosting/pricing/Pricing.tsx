@@ -3,11 +3,10 @@
 import CenteredSectionHeader from "@/components/shared/headers/CenteredSectionHeader"
 import { PricingCard } from "@/components/shared/pricing/PricingCard"
 import { PricingToggle } from "@/components/shared/pricing/PricingToggle"
-import { pricingData } from "@/data/pricing.data"
-import { BillingPeriod } from "@/types/pricing.types"
+import { BillingPeriod, PricingData } from "@/types/pricing.types"
 import { useState } from "react"
 
-export function Pricing() {
+export function Pricing({ data }: { data: PricingData }) {
   const [billingPeriod, setBillingPeriod] = useState<BillingPeriod>("monthly")
   // Always expanded → single state instead of per-card
   const [isExpanded, setIsExpanded] = useState(false)
@@ -17,17 +16,17 @@ export function Pricing() {
   }
 
   return (
-    <section className="py-20 px-4 relative overflow-hidden">
+    <section className="relative overflow-hidden">
       <div className="absolute inset-0 bg-grid-pattern opacity-5" />
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" />
 
       <div className="mx-auto relative z-10 space-y-10">
         <div className="text-center ">
-          <CenteredSectionHeader title={pricingData.title} />
-          {pricingData.subtitle && (
+          <CenteredSectionHeader title={data.title} />
+          {data.subtitle && (
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed text-balance">
-              {pricingData.subtitle}
+              {data.subtitle}
             </p>
           )}
         </div>
@@ -35,28 +34,29 @@ export function Pricing() {
         <PricingToggle
           billingPeriod={billingPeriod}
           onToggle={setBillingPeriod}
-          yearlyDiscount={pricingData.yearlyDiscount}
+          yearlyDiscount={data.yearlyDiscount}
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-14 lg:gap-6 max-w-7xl mx-auto pt-18">
-          {pricingData.plans.map((plan, index) => (
+        <div
+          className={`grid grid-cols-1 lg:grid-cols-${data.plans.length} gap-14 lg:gap-6 mx-auto pt-18 items-stretch`}
+        >
+          {data.plans.map((plan, index) => (
             <div
               key={plan.id}
-              className="flex justify-center"
-              style={{
-                animationDelay: `${index * 0.1}s`,
-              }}
+              className="flex justify-center h-full"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               <PricingCard
                 plan={plan}
                 billingPeriod={billingPeriod}
                 isExpanded={isExpanded}
                 onToggleExpand={handleToggleExpand}
-                className="w-full max-w-sm animate-fade-in-up"
+                className="w-full max-w-sm h-full flex flex-col animate-fade-in-up"
               />
             </div>
           ))}
         </div>
+
 
         <div className="pt-8 text-center">
           <p className="text-sm text-muted-foreground">Trusted by thousands of businesses worldwide</p>
