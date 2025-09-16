@@ -12,21 +12,21 @@ export interface PricingFeatureSection {
 export interface PricingPlan {
   id: string
   name: string
-  description: string
+  description?: string
   icon: string
   monthlyPrice: number
   yearlyPrice: number
   currency: string
   isPopular?: boolean
-  guarantee: string
+  guarantee?: string
   specialOffer?: {
     title: string
     description: string
     badgeColor: "gray" | "green" | "teal"
   }
   features: PricingFeatureSection[]
-  ctaText: string
-  renewalText: string
+  ctaText?: string
+  renewalText?: string
 }
 
 export interface PricingData {

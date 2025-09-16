@@ -3,7 +3,7 @@ import React from "react";
 import { IconType } from "react-icons";
 
 export type ButtonProps = {
-  children: string;
+  children: React.ReactNode;
   onClick?: () => void;
   href?: string;
   icon?: IconType;

@@ -17,6 +17,7 @@ import WhyChooseWebHosting from "./why-choose-web-hosting/WhyChooseWebHosting";
 import WhiteButton from "@/components/shared/html/WhiteButton";
 import Link from "next/link";
 import Image from "next/image";
+import { webHostingPricingData } from "@/data/pricing.data";
 
 const WebHosting = () => {
   return (
@@ -71,8 +72,8 @@ const WebHosting = () => {
       />
       {/* <HostingBenefits /> */}
 
-      <SectionWrapper>
-        <Pricing />
+      <SectionWrapper className="my-12 lg:my-16">
+        <Pricing data={webHostingPricingData} />
       </SectionWrapper>
 
       <ReviewsSection />

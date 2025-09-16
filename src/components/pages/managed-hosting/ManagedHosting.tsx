@@ -11,6 +11,7 @@ import WhatAreSpecials from "@/components/shared/sections/WhatAreSpecials";
 import { Pricing } from "../hosting/web-hosting/pricing/Pricing";
 import FaqSection from "../hosting/faqs/FaqSection";
 import SupportBanner from "@/components/shared/sections/SupportBanner";
+import { manageHostingPricingData } from "@/data/pricing.data";
 
 const ManagedHosting = () => {
   return (
@@ -41,8 +42,8 @@ const ManagedHosting = () => {
         heightClassName="h-fit xl:h-[580px] xl:max-h-[580px]"
         ctaSection={<VpsHostingCtaSection />}
       />
-      <SectionWrapper>
-        <Pricing />
+      <SectionWrapper className="my-12 lg:my-16">
+        <Pricing data={manageHostingPricingData} />
       </SectionWrapper>
       <SectionWrapper className="my-12 md:my-16">
         <ManagedHostingThatGrows />

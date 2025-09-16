@@ -101,13 +101,12 @@ export function PricingToggle({
       )}
 
       {/* discount with arrow */}
-      <div className="relative flex items-start">
-        {/* nudge the arrow up a bit so it sits above the text like the mock */}
+      {/* <div className="relative flex items-start">
         <CurvedDottedArrow className="text-primary -mt-2 mr-2" />
         <span className="text-primary text-sm font-medium whitespace-nowrap self-center -ml-12 mt-7">
           Upto {yearlyDiscount}% save
         </span>
-      </div>
+      </div> */}
     </div>
   );
 }
