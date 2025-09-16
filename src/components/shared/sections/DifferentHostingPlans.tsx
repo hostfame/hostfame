@@ -86,9 +86,8 @@ export default function DifferentHostingPlans({
                 flex-shrink-0 flex flex-col items-center justify-center
                 w-full sm:w-full md:w-1/2 lg:w-full
                 p-6 bg-background rounded-2xl shadow-md
-                transition-all duration-300
                 hover:bg-gradient-to-r hover:from-primary hover:to-primary-light
-                group snap-start
+                group snap-start duration-700 transition
               "
           >
             {/* Icon */}
@@ -105,17 +104,18 @@ export default function DifferentHostingPlans({
 
             {/* Content (scales up on hover) */}
             <section className="flex flex-col h-[250px] transition-transform duration-300 group-hover:scale-105 text-center">
-              <div className="space-y-2">
+              <div className="space-y-2 flex-1">
                 <h3 className="text-xl font-semibold group-hover:text-white">
                   {plan.title}
                 </h3>
                 <p className="text-description-text group-hover:text-white">
                   {plan.description}
                 </p>
-                <p className="mt-4 font-semibold  group-hover:text-white">
-                  {plan.price}
-                </p>
               </div>
+              <div className=" space-y-3">
+                <p className="font-semibold  group-hover:text-white">
+                {plan.price}
+              </p>
               <Link
                 href={plan.link}
                 className="flex items-center justify-center gap-2 mt-auto w-full text-center py-2 px-4 rounded-lg bg-primary text-white group-hover:bg-white group-hover:text-primary font-medium transition"
@@ -123,6 +123,7 @@ export default function DifferentHostingPlans({
                 {plan.buttonText}
                 <FaArrowRight size={16} />
               </Link>
+              </div>
             </section>
           </div>
         ))}

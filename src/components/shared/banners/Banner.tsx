@@ -65,11 +65,11 @@ export const Banner: React.FC<BannerProps> = ({
   },
   classNameForImage,
   classNameForImageWrapper,
-  imageComponent
+  imageComponent,
 }) => {
   return (
     <section
-      className={`relative w-full bg-gradient-to-br from-primary-dark via-primary to-primary-dark text-white bg-no-repeat  overflow-hidden ${heightClassName} ${className}`}
+      className={`relative w-full bg-gradient-to-br from-primary via-primary to-primary-dark text-white bg-no-repeat  overflow-hidden ${heightClassName} ${className}`}
       style={{
         backgroundPosition: "left center, center center",
         backgroundSize: "contain",

@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { JSX } from "react";
 import {
   FiArrowRight,
@@ -9,6 +10,9 @@ import {
   FiZap,
   FiTerminal,
   FiUsers,
+  FiDatabase,
+  FiCloud,
+  FiGlobe,
 } from "react-icons/fi";
 
 type CTA = { label: string; href: string; variant?: "solid" | "ghost" };
@@ -61,6 +65,21 @@ const defaultData: VpsData = {
       title: "Full root control",
       desc: "Install what you want. No walled garden.",
     },
+    {
+      icon: <FiDatabase className="text-primary" aria-hidden />,
+      title: "Managed Databases",
+      desc: "Spin up MySQL, Postgres, or Redis with minimal setup.",
+    },
+    {
+      icon: <FiCloud className="text-primary" aria-hidden />,
+      title: "Automated Backups",
+      desc: "Daily snapshots ensure your data is always safe.",
+    },
+    {
+      icon: <FiGlobe className="text-primary" aria-hidden />,
+      title: "Global Reach",
+      desc: "Deploy closer to your users with multiple region options.",
+    },
   ],
   images: {
     big: {
@@ -100,30 +119,30 @@ export default function ExpectPerformanceVps({
           <div className="mt-6 flex flex-wrap gap-3">
             {d.ctas.map((cta) =>
               cta.variant === "ghost" ? (
-                <a
+                <Link
                   key={cta.label}
                   href={cta.href}
                   className="inline-flex items-center gap-2 rounded-lg border border-primary px-4 py-2 text-sm font-medium text-primary hover:bg-primary/5 transition"
                 >
                   {cta.label}
                   <FiArrowRight aria-hidden />
-                </a>
+                </Link>
               ) : (
-                <a
+                <Link
                   key={cta.label}
                   href={cta.href}
                   className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white hover:bg-primary/90 transition"
                 >
                   {cta.label}
                   <FiArrowRight aria-hidden />
-                </a>
+                </Link>
               )
             )}
           </div>
         </div>
 
         {/* Content grid */}
-        <div className="mt-12 grid items-start gap-10 lg:grid-cols-2">
+        <div className="mt-12 grid items-end gap-10 lg:grid-cols-2 h-full">
           {/* Feature cards (left) */}
           <ul className="grid gap-4 sm:grid-cols-2">
             {d.highlights.map((item, idx) => (
@@ -145,7 +164,7 @@ export default function ExpectPerformanceVps({
           </ul>
 
           {/* Image mosaic (right) — big right image + floating small one */}
-          <div className="relative">
+          <div className="relative     mb-6  flex-col flex   justify-end">
             <div className="relative aspect-[5/4] w-full overflow-hidden rounded-2xl">
               <Image
                 src={d.images.big.src}

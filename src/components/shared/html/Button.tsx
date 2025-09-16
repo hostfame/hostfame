@@ -24,7 +24,7 @@ export const Button: React.FC<ButtonProps> = ({
   className = "",
 }) => {
   const base =
-    "inline-flex items-center justify-center gap-2 relative font-semibold rounded-xl cursor-pointer duration-300 shadow-lg border-2";
+    "inline-flex items-center justify-center gap-2 relative font-semibold rounded-xl cursor-pointer duration-500 transition shadow-lg border-2";
 
   const sizeClasses = {
     sm: "px-6 py-2 text-sm",
@@ -37,7 +37,7 @@ export const Button: React.FC<ButtonProps> = ({
       ? "text-white bg-gradient-to-r from-teal-600 via-teal-700 to-teal-700 hover:from-teal-800 hover:via-teal-700 hover:to-teal-700 border-teal-500 hover:border-teal-600"
       : variant === "light"
       ? "text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-500 hover:from-teal-500 hover:via-teal-500 hover:to-teal-500 border-teal-300 hover:border-teal-400"
-      : "bg-transparent text-teal-600 border-teal-600 hover:text-white hover:bg-gradient-to-r hover:from-teal-500 hover:via-teal-600 hover:to-teal-700 hover:border-teal-400";
+      : "bg-transparent text-teal-600 border-teal-600 hover:text-white hover:bg-gradient-to-r hover:from-primary hover:via-primary hover:to-primary-dark hover:border-teal-400";
 
   const content = (
     <>
