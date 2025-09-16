@@ -5,7 +5,12 @@ import { BannerTimer } from "./BannerTimer";
 import { IoCheckmark } from "react-icons/io5";
 
 export type BannerProps = {
-  topTitle: string;
+  topTitle: {
+    icon?: React.ReactNode,
+    content?: string,
+    className?: string,
+    classNameForContent?: string,
+  };
   title: React.ReactNode;
 
   /** Right-hand illustration image */
@@ -18,7 +23,7 @@ export type BannerProps = {
 
   /** Left-side lists  */
   lists?: string[];
-  description?: string;
+  description?: React.ReactNode;
 
   /** Background gradient (string passed directly to `background` CSS) */
   // bgGradient: string;
@@ -69,7 +74,7 @@ export const Banner: React.FC<BannerProps> = ({
 }) => {
   return (
     <section
-      className={`relative w-full bg-gradient-to-br from-primary via-primary to-primary-dark text-white bg-no-repeat  overflow-hidden ${heightClassName} ${className}`}
+      className={`relative flex justify-center items-center w-full bg-gradient-to-br from-primary-dark via-primary to-primary-dark text-white bg-no-repeat overflow-hidden ${heightClassName} ${className}`}
       style={{
         backgroundPosition: "left center, center center",
         backgroundSize: "contain",
@@ -88,13 +93,12 @@ export const Banner: React.FC<BannerProps> = ({
       )} */}
 
       <div
-        className={`relative z-10 max-w-7xl mx-auto px-6 py-16 md:py-20 grid lg:grid-cols-2 gap-10 items-center
-                    place-items-center lg:place-items-stretch ${containerClassName}`}
+        className={`relative z-10 max-w-7xl mx-auto px-6 py-16 md:py-20 grid lg:grid-cols-2 gap-10 items-center place-items-center lg:place-items-stretch ${containerClassName}`}
       >
         {/* Content */}
-        <div className="space-y-6 text-center lg:text-left flex  flex-col justify-center">
-          <p className="text-yellow-400 font-semibold text-base sm:text-xl">
-            {topTitle}
+        <div className="space-y-6 text-center lg:text-left flex flex-col justify-center items-center lg:items-start">
+          <p className={`flex gap-2 items-center font-semibold w-fit px-3 py-2 ${topTitle.className}`}>
+            {topTitle.icon} <span className={` text-lg ${topTitle.classNameForContent}`}>{topTitle.content}</span>
           </p>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight">

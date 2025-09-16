@@ -45,7 +45,7 @@ export default function PrioritySupport() {
           </div>
 
           {/* small corner badge */}
-          <div className="absolute bottom-3 left-3 rounded-full bg-white/90 px-3 py-1 text-xs font-medium shadow ring-1 ring-black/5">
+          <div className="absolute bottom-3 left-3 rounded-full bg-background px-3 py-1 text-xs font-medium shadow ring-1 ring-black/5">
             Real people. No bots.
           </div>
         </div>
@@ -62,7 +62,8 @@ export default function PrioritySupport() {
             description={
               "Get faster help when you need it most. You won't encounter any bots or delays."
             }
-            classNameForTitle="!text-3xl md:!text-4xl"
+            classNameForTitle="!text-3xl md:!text-4xl !text-wrap"
+            classNameForDescription="!ml-0"
           />
 
           <div className="grid sm:grid-cols-2 gap-5">
