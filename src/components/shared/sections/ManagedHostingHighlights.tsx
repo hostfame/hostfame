@@ -1,6 +1,6 @@
-import CenteredSectionHeader from '@/components/shared/headers/CenteredSectionHeader';
-import React from 'react';
-import { IconType } from 'react-icons';
+import CenteredSectionHeader from "@/components/shared/headers/CenteredSectionHeader";
+import React from "react";
+import { IconType } from "react-icons";
 
 interface ManagedHostingHighlightsProps {
   title: string;
@@ -13,12 +13,19 @@ interface HighlightItem {
   description: string;
 }
 
-const ManagedHostingHighlights = ({ data }: { data: ManagedHostingHighlightsProps }) => {
+const ManagedHostingHighlights = ({
+  data,
+}: {
+  data: ManagedHostingHighlightsProps;
+}) => {
   return (
     <section className="space-y-4 lg:space-y-6 py-6 md:py-8 lg:py-12 xl:py-16">
       {/* Section Header */}
       <section className="flex flex-col gap-2 items-center justify-center mx-auto text-center">
-        <CenteredSectionHeader title={data.title} description={data.description} />
+        <CenteredSectionHeader
+          title={data.title}
+          description={data.description}
+        />
       </section>
 
       {/* Highlights Grid */}
@@ -30,7 +37,7 @@ const ManagedHostingHighlights = ({ data }: { data: ManagedHostingHighlightsProp
               key={index}
               className="group p-6 rounded-2xl shadow-md border border-border-light-gray 
                          bg-gray-background hover:bg-primary 
-                         transition-all duration-300 hover:shadow-lg"
+                         transition-all duration-500 transition hover:shadow-lg"
             >
               <div className="flex flex-col items-center text-center space-y-3">
                 <div
