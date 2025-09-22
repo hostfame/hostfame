@@ -6,7 +6,7 @@ import { PricingToggle } from "@/components/shared/pricing/PricingToggle"
 import { BillingPeriod, PricingData } from "@/types/pricing.types"
 import { useState } from "react"
 
-export function Pricing({ data }: { data: PricingData }) {
+export function Pricing({ data, toggleButton }: { data: PricingData, toggleButton: boolean }) {
   const [billingPeriod, setBillingPeriod] = useState<BillingPeriod>("monthly")
   // Always expanded → single state instead of per-card
   const [isExpanded, setIsExpanded] = useState(false)
@@ -31,19 +31,20 @@ export function Pricing({ data }: { data: PricingData }) {
           )}
         </div>
 
-        <PricingToggle
-          billingPeriod={billingPeriod}
-          onToggle={setBillingPeriod}
-          yearlyDiscount={data.yearlyDiscount}
-        />
+        {toggleButton &&
+          <PricingToggle
+            billingPeriod={billingPeriod}
+            onToggle={setBillingPeriod}
+            yearlyDiscount={data.yearlyDiscount}
+          />}
 
         <div
-          className={`grid grid-cols-1 lg:grid-cols-${data.plans.length} gap-14 lg:gap-6 mx-auto pt-18 items-stretch`}
+          className={`grid grid-cols-1 lg:grid-cols-${data.plans.length} gap-10 lg:gap-8 mx-auto pt-5 items-stretch`}
         >
           {data.plans.map((plan, index) => (
             <div
               key={plan.id}
-              className="flex justify-center h-full"
+              className="h-full"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <PricingCard
@@ -51,7 +52,7 @@ export function Pricing({ data }: { data: PricingData }) {
                 billingPeriod={billingPeriod}
                 isExpanded={isExpanded}
                 onToggleExpand={handleToggleExpand}
-                className="w-full max-w-sm h-full flex flex-col animate-fade-in-up"
+                className="w-full h-full flex flex-col animate-fade-in-up"
               />
             </div>
           ))}

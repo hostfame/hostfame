@@ -2,14 +2,15 @@
 
 import { PricingCardProps } from "@/types/pricing.types"
 import { Card, CardContent, CardHeader } from "../html/Card"
-import { FaChevronDown, FaChevronUp } from "react-icons/fa"
-import { Button } from "../html/Button"
+import { FaCheck, FaChevronDown, FaChevronUp } from "react-icons/fa"
 import Image from "next/image"
+import { PlainButton } from "../html/PlainButton"
+import { RxCross2 } from "react-icons/rx"
 
 export function PricingCard({ plan, billingPeriod, isExpanded, onToggleExpand, className }: PricingCardProps) {
   const price = billingPeriod === "monthly" ? plan.monthlyPrice : plan.yearlyPrice
+  const prevPrice = billingPeriod === "monthly" ? plan.monthlyPrevPrice : plan.yearlyPrevPrice
   // const formattedPrice = (price / 1000).toLocaleString("en-BD")
-  const period = billingPeriod === "monthly" ? "Per Month" : "Per Year"
 
   // Show only first 8 features when collapsed
   const visibleFeatures = isExpanded
@@ -17,17 +18,18 @@ export function PricingCard({ plan, billingPeriod, isExpanded, onToggleExpand, c
     : plan.features
       .map((section) => ({
         ...section,
-        features: section.features.slice(0, section.title === "Features" ? 8 : 0),
+        features: section.features.slice(0, section.title === "Features" ? 12 : 0),
       }))
       .filter((section) => section.features.length > 0)
 
   return (
-    <section className=" relative">
+    <section className="relative">
+
       {
         plan.isPopular && (
-          <div className=" absolute -top-17 w-full mx-auto z-20">
-            <section className="ring-2 ring-primary/80 rounded-t-xl bg-gradient-to-r from-primary to-primary/80 text-white py-5 text-sm font-bold ">
-              <span className=" flex justify-center items-center gap-3 text-xl">
+          <div className=" absolute -top-5 w-full mx-auto z-20">
+            <section className="mx-auto w-fit text-white bg-primary rounded-full px-8 py-2">
+              <span className=" flex justify-center items-center gap-3 uppercase">
                 Most Popular
               </span>
             </section>
@@ -35,18 +37,9 @@ export function PricingCard({ plan, billingPeriod, isExpanded, onToggleExpand, c
         )
       }
 
-      <Card
-        className={`
-    relative transition-all duration-500 hover:shadow-2xl group overflow-hidden 
-    bg-gray-background backdrop-blur-sm border-border/50 
-    flex flex-col h-full
-    ${plan.isPopular && "rounded-t-none ring-2 ring-primary/50"} 
-    ${isExpanded && "shadow-xl"} 
-    ${className}
-  `}
-      >
+      <Card className={`relative transition-all duration-500 hover:shadow-2xl group overflow-hidden bg-gray-background backdrop-blur-sm border-border/50 flex flex-col h-full ${plan.isPopular && "border-2 border-primary/50"}  ${isExpanded && "shadow-xl"}  ${className} `} >
 
-        <CardHeader className="space-y-5 text-center relative z-10">
+        <CardHeader className="space-y-3 text-center relative z-10">
           <div className="flex flex-col items-center gap-4">
             <div className=" flex justify-center items-center gap-3 h-14">
               <div
@@ -62,11 +55,17 @@ export function PricingCard({ plan, billingPeriod, isExpanded, onToggleExpand, c
                 />
               </div>
 
-              <h3 className="text-2xl font-bold">{plan.name}</h3>
+              <h3 className="text-2xl font-bold text-text">{plan.name}</h3>
             </div>
             {plan.description &&
               <p className="text-text text-balance">{plan.description}</p>
             }
+          </div>
+
+          <div className=" flex gap-2 justify-center items-center text-text">
+            <p className="line-through">{plan.currency}{prevPrice}</p>
+
+            <p className=" border rounded-full px-4 py-1">{plan.offer}% OFF</p>
           </div>
 
           <div className="">
@@ -74,13 +73,12 @@ export function PricingCard({ plan, billingPeriod, isExpanded, onToggleExpand, c
               <span className="text-lg text-text">{plan.currency}</span>
               <span
                 className={
-                  `text-5xl font-black tracking-tight ${plan.isPopular ? "text-primary-light" : "text-text"}`
+                  `text-5xl font-semibold tracking-tight ${plan.isPopular ? "text-primary" : "text-text"}`
                 }
               >
-                {price}
+                {price} <span className="text-2xl font-light">/mo</span>
               </span>
             </div>
-            <div className="text-text font-medium">/{period}</div>
           </div>
 
           {plan.guarantee &&
@@ -94,13 +92,13 @@ export function PricingCard({ plan, billingPeriod, isExpanded, onToggleExpand, c
           }
 
           {plan.ctaText &&
-            <Button variant={plan.isPopular ? "light" : "bordered"}>
+            <PlainButton variant={plan.isPopular ? "dark" : "bordered"} size="md">
               {plan.ctaText}
-            </Button>
+            </PlainButton>
           }
 
           {plan.renewalText &&
-            <p className="text-xs text-text">{plan.renewalText}</p>
+            <p className="text-base text-text">{plan.renewalText}</p>
           }
         </CardHeader>
 
@@ -122,7 +120,7 @@ export function PricingCard({ plan, billingPeriod, isExpanded, onToggleExpand, c
             {visibleFeatures.map((section) => (
               <div key={section.title} className=" space-y-5">
                 <h4 className="font-bold text-text text-xl rounded-xl flex items-center gap-2 pl-1">
-                  {section.title}
+                  {section.title !== "Features" && section.title}
                 </h4>
                 <div className="space-y-3">
                   {section.features.map((feature, index) => (
@@ -138,23 +136,9 @@ export function PricingCard({ plan, billingPeriod, isExpanded, onToggleExpand, c
                         }
                       >
                         {feature.included ? (
-                          <div className="w-4 h-4 flex items-center justify-center bg-emerald-200 rounded-full shrink-0">
-                            <Image
-                              src="/assets/pricing/check.svg"
-                              alt="check"
-                              width={10}
-                              height={10}
-                            />
-                          </div>
+                          <FaCheck className=" text-emerald-500" />
                         ) : (
-                          <div className="w-4 h-4 flex items-center justify-center bg-red-200 rounded-full shrink-0">
-                            <Image
-                              src="/assets/pricing/cross.svg"
-                              alt="cross"
-                              width={10}
-                              height={10}
-                            />
-                          </div>
+                          <RxCross2 className=" text-red-500" />
                         )}
 
                       </div>
