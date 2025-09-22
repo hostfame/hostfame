@@ -45,7 +45,7 @@ const data: {
 
 export default function WhyChooseHostFame() {
   return (
-    <section className="relative mx-auto max-w-7xl px-6 py-16 sm:px-8">
+    <section className="relative mx-auto max-w-7xl py-16">
       <div className="grid items-center gap-12 md:gap-16 lg:grid-cols-2">
         {/* Left: copy + features */}
         <div>
