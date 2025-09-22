@@ -28,7 +28,7 @@ const FEATURES = [
 
 export default function PrioritySupport() {
   return (
-    <section className="relative mx-auto max-w-7xl px-6 py-16 sm:py-20">
+    <section className="py-16 sm:py-20">
       {/* header */}
       <div className="text-center max-w-2xl mx-auto space-y-4">
         <span className="inline-flex items-center gap-2 rounded-full bg-primary/10 px-3 py-1 text-xs md:text-sm font-semibold text-primary">

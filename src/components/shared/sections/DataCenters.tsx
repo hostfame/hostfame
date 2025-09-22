@@ -26,61 +26,61 @@ const data: {
     {
       id: "ca",
       country: "Canada",
-      flag: "https://flagcdn.com/w40/ca.png",
+      flag: "/assets/flags/ca.png",
       pos: { top: "14.4%", left: "17.9%" },
     }, // done
     {
       id: "us",
       country: "United States",
-      flag: "https://flagcdn.com/w40/us.png",
+      flag: "/assets/flags/us.png",
       pos: { top: "35%", left: "18.6%" },
     }, // done
     {
       id: "br",
       country: "Brazil",
-      flag: "https://flagcdn.com/w40/br.png",
+      flag: "/assets/flags/br.png",
       pos: { top: "60.9%", left: "29.8%" },
     }, // done
     {
       id: "de",
       country: "Germany",
-      flag: "https://flagcdn.com/w40/de.png",
+      flag: "/assets/flags/de.png",
       pos: { top: "24%", left: "48.3%" },
     }, // done
     {
       id: "eg",
       country: "Egypt",
-      flag: "https://flagcdn.com/w40/eg.png",
+      flag: "/assets/flags/eg.png",
       pos: { top: "42.5%", left: "53.2%" },
     }, // done
     {
       id: "in",
       country: "India",
-      flag: "https://flagcdn.com/w40/in.png",
+      flag: "/assets/flags/in.png",
       pos: { top: "46.2%", left: "67.9%" },
     }, // done
     {
       id: "cn",
       country: "China",
-      flag: "https://flagcdn.com/w40/cn.png",
+      flag: "/assets/flags/cn.png",
       pos: { top: "32.7%", left: "75%" },
     }, // done
     {
       id: "ru",
       country: "Russia",
-      flag: "https://flagcdn.com/w40/ru.png",
+      flag: "/assets/flags/ru.png",
       pos: { top: "17.7%", left: "79%" },
     }, // done
     {
       id: "za",
       country: "South Africa",
-      flag: "https://flagcdn.com/w40/za.png",
+      flag: "/assets/flags/za.png",
       pos: { top: "76.3%", left: "52%" },
     }, // done
     {
       id: "au",
       country: "Australia",
-      flag: "https://flagcdn.com/w40/au.png",
+      flag: "/assets/flags/au.png",
       pos: { top: "73.8%", left: "82.6%" },
     },
   ],

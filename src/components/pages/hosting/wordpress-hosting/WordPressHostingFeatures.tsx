@@ -30,9 +30,9 @@ const WordPressHostingFeatures: React.FC<WordPressHostingFeaturesProps> = ({
 
       <ul
         className="
-  mx-auto grid max-w-7xl 
+  mx-auto grid 
   grid-cols-12 
-  gap-4 px-6 auto-rows-[1fr]
+  gap-4 auto-rows-[1fr]
 "
       >
         {features.map(({ title, description, Icon, className }, idx) => (

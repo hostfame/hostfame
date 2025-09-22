@@ -102,7 +102,7 @@ export default function ExpectPerformanceVps({
 
   return (
     <section aria-label="VPS showcase">
-      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
+      <div className="py-16">
         {/* Top copy */}
         <div className="max-w-2xl">
           <p className="text-sm font-medium tracking-wide text-primary">

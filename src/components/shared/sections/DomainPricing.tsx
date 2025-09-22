@@ -6,7 +6,7 @@ import { domainPricingData } from "@/data/domainPricing.data";
 export default function DomainPricing() {
   return (
     <section className="w-full text-text ">
-      <div className="mx-auto max-w-7xl px-4 py-16 space-y-10">
+      <div className="py-16 space-y-10">
         <CenteredSectionHeader
           title={domainPricingData.title}
           description={domainPricingData.description}

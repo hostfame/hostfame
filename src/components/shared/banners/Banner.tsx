@@ -1,8 +1,9 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import Image from "next/image";
 import { CtaButton, CtaButtonProps } from "../html/CtaButton";
 import { BannerTimer } from "./BannerTimer";
 import { IoCheckmark } from "react-icons/io5";
+import SectionWrapper from "../wrappers/SectionWrapper";
 
 export type BannerProps = {
   topTitle: {
@@ -48,7 +49,8 @@ export type BannerProps = {
   classNameForImage?: string;
   classNameForImageWrapper?: string;
   imageComponent?: React.ReactNode;
-  classNameForTitle?: string
+  classNameForTitle?: string;
+  promoTemplate?: ReactNode;
 };
 
 export const Banner: React.FC<BannerProps> = ({
@@ -72,17 +74,23 @@ export const Banner: React.FC<BannerProps> = ({
   classNameForImage,
   classNameForImageWrapper,
   imageComponent,
-  classNameForTitle
+  classNameForTitle,
+  promoTemplate,
 }) => {
   return (
     <section
-      className={`relative flex justify-center items-center w-full bg-gradient-to-br from-primary via-primary to-primary-dark text-white bg-no-repeat overflow-hidden ${heightClassName} ${className}`}
+      className={`relative  justify-center items-center w-full  text-white bg-no-repeat overflow-hidden ${
+        promoTemplate ? " pt-2" : ""
+      } ${heightClassName} ${className}`}
       style={{
         backgroundPosition: "left center, center center",
         backgroundSize: "contain",
+        backgroundImage: "linear-gradient(180deg, #08B1B1 0%, #005F5F 100%)",
         // backgroundImage: `${bgGradient}`,
       }}
     >
+      {promoTemplate && promoTemplate}
+
       {/* Left decorative wave */}
       {/* {waveImage && (
         <Image
@@ -94,8 +102,8 @@ export const Banner: React.FC<BannerProps> = ({
         />
       )} */}
 
-      <div
-        className={`relative z-10 max-w-7xl mx-auto py-16 md:py-20 grid lg:grid-cols-2 gap-10 items-center place-items-center lg:place-items-center ${containerClassName}`}
+      <SectionWrapper
+        className={`relative z-10  py-16 md:py-20 grid lg:grid-cols-2 gap-10 items-center place-items-center lg:place-items-center ${containerClassName}`}
       >
         {/* Content */}
         <div className="space-y-6 text-center lg:text-left flex flex-col justify-center items-center lg:items-start">
@@ -108,7 +116,9 @@ export const Banner: React.FC<BannerProps> = ({
             </span>
           </p>
 
-          <h1 className={`text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight ${classNameForTitle}`}>
+          <h1
+            className={`text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight ${classNameForTitle}`}
+          >
             {title}
           </h1>
 
@@ -160,7 +170,7 @@ export const Banner: React.FC<BannerProps> = ({
           </div>
         )}
         {imageComponent}
-      </div>
+      </SectionWrapper>
     </section>
   );
 };

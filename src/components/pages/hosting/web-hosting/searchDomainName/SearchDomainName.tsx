@@ -1,7 +1,7 @@
 import { WebHostingData } from "@/data/hosting.data";
 import React from "react";
 import SubmitDomainName from "./SubmitDomainName";
-import Image from "next/image";
+
 
 const SearchDomainName = () => {
   function classNames(...cn: (string | false | null | undefined)[]) {
@@ -14,7 +14,7 @@ const SearchDomainName = () => {
       <div className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-gradient-to-br from-primary-blue/20 to-secondary-blue/10 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-gradient-to-br from-primary-blue/10 to-secondary-blue/20 blur-3xl" />
 
-      <div className="relative grid gap-10 p-2 py-8 md:p-8 lg:px-12 lg:py-20 lg:grid-cols-2">
+      <div className="relative w-full grid gap-10 p-2 py-8 md:p-8 lg:px-12 lg:py-20 lg:grid-cols-2">
         {/* Left */}
         <div className="flex flex-col justify-center gap-6">
           <header className="space-y-3">

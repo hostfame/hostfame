@@ -6,7 +6,7 @@ import React from 'react';
 const WebHostingPartners = () => {
   return (
     <section className='bg-gradient-to-r from-primary-light  to-primary'>
-      <SectionWrapper className='py-8 sm:py-12 md:py-16 flex flex-col items-center px-4 sm:px-6 space-y-8 sm:space-y-10 md:space-y-12'>
+      <SectionWrapper className='py-8 sm:py-12 md:py-16 flex flex-col items-center space-y-8 sm:space-y-10 md:space-y-12'>
         <h2 className='text-2xl sm:text-3xl md:text-5xl font-bold text-center text-white '>{WebHostingData.webHostingPartnersSection.title} <span className='text-[#FFB800]'>{WebHostingData.webHostingPartnersSection.highlighted}</span></h2>
 
         <section className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 w-full'>

@@ -1,5 +1,6 @@
 import CenteredSectionHeader from "@/components/shared/headers/CenteredSectionHeader";
 import FaqBoard from "./FaqBoard";
+import SectionWrapper from "@/components/shared/wrappers/SectionWrapper";
 
 export default function FaqSection() {
   return (
@@ -15,9 +16,9 @@ export default function FaqSection() {
       />
 
       {/* Below: interactive board */}
-      <div className="mx-auto max-w-7xl px-[2%]">
+      <SectionWrapper className="">
         <FaqBoard defaultCategoryId="hosting" />
-      </div>
+      </SectionWrapper>
     </section>
   );
 }

@@ -4,6 +4,7 @@ import Image from "next/image";
 import { ReactNode } from "react";
 import { FaHeadset, FaBolt } from "react-icons/fa";
 import CenteredSectionHeader from "../headers/CenteredSectionHeader";
+import SectionWrapper from "../wrappers/SectionWrapper";
 
 interface Feature {
   icon: ReactNode;
@@ -56,7 +57,7 @@ const SkilledDedicatedExperts = () => {
       <div className="pointer-events-none absolute -bottom-24 left-[-10%] h-72 w-72 rounded-full bg-primary/20 blur-3xl" /> */}
 
       {/* Container */}
-      <div className="mx-auto max-w-7xl space-y-4 px-6 py-16 lg:py-24">
+      <SectionWrapper className=" space-y-4  py-16 lg:py-24">
         {/* Header */}
 
         <CenteredSectionHeader
@@ -182,7 +183,7 @@ const SkilledDedicatedExperts = () => {
             </p>
           </div>
         </div>
-      </div>
+      </SectionWrapper>
     </section>
   );
 };

@@ -11,6 +11,7 @@ import Image from "next/image";
 import AskAQuestion from "@/components/shared/sections/AskAQuestion";
 import FaqSection from "../hosting/faqs/FaqSection";
 
+
 const Support = () => {
   return (
     <section>
@@ -30,12 +31,12 @@ const Support = () => {
           text: "Claim Offer Now"
         }}
         heightClassName="h-fit xl:h-[680px] xl:max-h-[680px]"
-        description="At Hostfame, we don’t just offer support; we deliver solutions.Our expert team is available 24/7 to help you with any questions, big or small."
+        description="At Hostfame, we don't just offer support; we deliver solutions.Our expert team is available 24/7 to help you with any questions, big or small."
         ctaSection={<SupportCtaSection />}
         imageComponent={<AnimationBanner />}
       />
       <SkilledDedicatedExperts />
-      <SectionWrapper>
+      <SectionWrapper className=" mb-12 md:mb-16">
         <HostingSupport data={hostingSupportData} />
       </SectionWrapper>
 

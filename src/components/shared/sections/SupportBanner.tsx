@@ -33,7 +33,7 @@ export default function SupportBanner({ data, className = "", ...rest }: Support
     <section
       aria-label="Support and live chat"
       className={[
-        "relative overflow-hidden rounded-2xl bg-gradient-to-r from-teal-950 to-teal-800",
+        "relative overflow-hidden w-full rounded-2xl bg-gradient-to-r from-teal-950 to-teal-800",
         "text-text shadow-xl",
         "px-6 py-8 md:px-10 md:py-10",
         className,

@@ -3,6 +3,7 @@ import Image from "next/image";
 import { IconType } from "react-icons";
 import { FiShield, FiCheckCircle, FiZap, FiMessageSquare } from "react-icons/fi";
 import CenteredSectionHeader from "../headers/CenteredSectionHeader";
+import SectionWrapper from "../wrappers/SectionWrapper";
 
 const iconMap: Record<string, IconType> = {
   shield: FiShield,
@@ -20,7 +21,7 @@ export default function WhyChooseWordpressHosting() {
         className="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-transparent opacity-50"
       />
 
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+      <SectionWrapper className="">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 items-center">
           {/* Left: Copy + Features */}
           <div className="relative z-10 space-y-6">
@@ -31,6 +32,7 @@ export default function WhyChooseWordpressHosting() {
             <CenteredSectionHeader
               title={hostingCopy.heading}
               className="text-left "
+              classNameForTitle="!text-wrap"
             />
 
             <p className="max-w-lg text-lg text-text/80 leading-relaxed">
@@ -96,7 +98,7 @@ export default function WhyChooseWordpressHosting() {
             />
           </div>
         </div>
-      </div>
+      </SectionWrapper>
     </section>
   );
 }
