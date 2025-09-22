@@ -11,7 +11,7 @@ import {
 const Footer: React.FC = () => {
   return (
     <footer className="bg-gradient-to-br from-primary via-primary-dark to-primary-dark text-white">
-      <div className="mx-auto max-w-7xl px-6 py-10">
+      <div className="mx-auto max-w-7xl   px-[2%] py-10">
         {/* Payment / SSL banner */}
         <div className="mx-auto max-w-7xl rounded-md shadow w-full">
           <Image
@@ -54,7 +54,7 @@ const Footer: React.FC = () => {
         <hr className="my-8 border-white/15" />
 
         {/* Brand + socials */}
-        <div className="mx-auto max-w-7xl px-6 py-6">
+        <div className="mx-auto max-w-7xl py-6">
           {/* Row 1 */}
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:justify-between">
             {/* Bigger logo */}

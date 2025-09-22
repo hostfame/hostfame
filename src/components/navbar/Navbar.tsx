@@ -36,8 +36,8 @@ const Navbar = () => {
 
   return (
     <nav className="bg-background shadow-lg border-b border-border-light-gray sticky top-0 z-50">
-      <section className=" max-w-7xl mx-auto ">
-        <div className=" mx-auto px-4 ">
+      <section className=" max-w-7xl mx-auto  px-[2%] ">
+        <div className=" mx-auto pr-4 ">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <div className="flex items-center">
@@ -74,9 +74,7 @@ const Navbar = () => {
                       <div
                         className={` w-[400px] absolute -left-1/2 mt-2 bg-gray-background rounded-xl shadow-2xl border border-background py-4 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform group-hover:-translate-y-1`}
                       >
-                        <div
-                          className={`grid grid-cols-2 gap-1 px-4`}
-                        >
+                        <div className={`grid grid-cols-2 gap-1 px-4`}>
                           {item.subItems.map((subItem) => (
                             <Link
                               key={subItem.label}

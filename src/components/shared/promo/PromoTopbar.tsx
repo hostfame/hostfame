@@ -23,7 +23,7 @@ export default function PromoTopBar({
       id={id}
       className={`w-full bg-gradient-to-r from-primary-light via-primary-light to-primary text-white px-2 md:px-4 py-1 md:py-3 text-sm  ${className}`}
     >
-      <div className="mx-auto max-w-7xl  sm:px-4">
+      <div className="mx-auto max-w-7xl  sm:px-[2%]">
         {/* Always flex; allow horizontal scroll when cramped */}
         <div className="flex items-center justify-between gap-1 sm:gap-3 py-1 overflow-x-auto">
           {/* Left: texts + timer (kept as a single row using min-w-max) */}

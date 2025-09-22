@@ -15,7 +15,7 @@ export default function FaqSection() {
       />
 
       {/* Below: interactive board */}
-      <div className="mx-auto max-w-7xl px-6">
+      <div className="mx-auto max-w-7xl px-[2%]">
         <FaqBoard defaultCategoryId="hosting" />
       </div>
     </section>
