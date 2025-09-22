@@ -16,6 +16,9 @@ export interface PricingPlan {
   icon: string
   monthlyPrice: number
   yearlyPrice: number
+  monthlyPrevPrice: number
+  yearlyPrevPrice: number
+  offer: number
   currency: string
   isPopular?: boolean
   guarantee?: string

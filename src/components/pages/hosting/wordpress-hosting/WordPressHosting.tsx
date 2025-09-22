@@ -11,6 +11,8 @@ import HostingBenefits from "../web-hosting/HostingBenefits";
 import SupportBanner from "@/components/shared/sections/SupportBanner";
 import WhiteButton from "@/components/shared/html/WhiteButton";
 import Link from "next/link";
+import { Pricing } from "@/components/shared/pricing/Pricing";
+import { wordpressHostingPricingData } from "@/data/pricing.data";
 
 const WordPressHosting = () => {
   return (
@@ -35,6 +37,9 @@ const WordPressHosting = () => {
         description={`Blazing speed, free backups, and real human support optimized for creators, consultants, and small businesses who rely on WordPress to grow.`}
       />
       <WordPressHostingFeatures />
+      <SectionWrapper className="my-12 lg:my-16">
+        <Pricing data={wordpressHostingPricingData} toggleButton={true} />
+      </SectionWrapper>
       <HostingBenefits />
       <SectionWrapper>
         <ManagedHostingHighlights data={wordpressHostingManagedHostingHighlightsData} />

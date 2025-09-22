@@ -3,7 +3,7 @@ import SearchDomainName from "./searchDomainName/SearchDomainName";
 import SectionWrapper from "@/components/shared/wrappers/SectionWrapper";
 import WebHostingPartners from "./WebHostingPartners";
 import MoneyBack from "./MoneyBack";
-import { Pricing } from "./pricing/Pricing";
+import { Pricing } from "../../../shared/pricing/Pricing";
 import WebHostingFeatures from "./WebHostingFeatures";
 import { Banner } from "@/components/shared/banners/Banner";
 import PromoTopBar from "@/components/shared/promo/PromoTopbar";
@@ -73,7 +73,7 @@ const WebHosting = () => {
       {/* <HostingBenefits /> */}
 
       <SectionWrapper className="my-12 lg:my-16">
-        <Pricing data={webHostingPricingData} />
+        <Pricing data={webHostingPricingData} toggleButton={false} />
       </SectionWrapper>
 
       <ReviewsSection />
