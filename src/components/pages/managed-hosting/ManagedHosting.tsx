@@ -8,7 +8,7 @@ import ReviewsSection from "../hosting/web-hosting/reviews/ReviewSection";
 import HostingForGrowth from "../home/HostingForGrowth";
 import { whatAreSpecialsData } from "@/data/whatAreSpecials.data";
 import WhatAreSpecials from "@/components/shared/sections/WhatAreSpecials";
-import { Pricing } from "../hosting/web-hosting/pricing/Pricing";
+import { Pricing } from "../../shared/pricing/Pricing";
 import FaqSection from "../hosting/faqs/FaqSection";
 import SupportBanner from "@/components/shared/sections/SupportBanner";
 import { manageHostingPricingData } from "@/data/pricing.data";
@@ -43,7 +43,7 @@ const ManagedHosting = () => {
         ctaSection={<VpsHostingCtaSection />}
       />
       <SectionWrapper className="my-12 lg:my-16">
-        <Pricing data={manageHostingPricingData} />
+        <Pricing data={manageHostingPricingData} toggleButton={true}/>
       </SectionWrapper>
       <SectionWrapper className="my-12 md:my-16">
         <ManagedHostingThatGrows />
