@@ -99,7 +99,7 @@ const WebHosting = () => {
 
       <AdvancedFeatures />
 
-      <SectionWrapper>
+      <SectionWrapper className="my-12 md:my-16">
         <MigrateYourSite />
       </SectionWrapper>
 

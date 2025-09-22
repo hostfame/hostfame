@@ -15,7 +15,7 @@ type AllHostingPlansProps = {
 
 const AllHostingPlans = ({ data }: { data: AllHostingPlansProps }) => {
   return (
-    <section className="w-full py-12 px-4 sm:px-8 lg:px-16 space-y-4 lg:space-y-6">
+    <section className="w-full py-12 space-y-4 lg:space-y-6">
       <CenteredSectionHeader
         title={data.title}
         description={data.description}
@@ -25,7 +25,7 @@ const AllHostingPlans = ({ data }: { data: AllHostingPlansProps }) => {
         {data.items.map((item, index) => (
           <div
             key={index}
-            className="group bg-background rounded-xl shadow-md p-6 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105"
+            className="group bg-background border border-border-light-gray rounded-xl shadow-md p-6 flex flex-col items-center text-center transition-transform duration-300 hover:scale-105"
           >
             <div className="w-16 h-16 mb-4 relative">
               <Image

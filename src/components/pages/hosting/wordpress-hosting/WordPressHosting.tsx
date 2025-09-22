@@ -3,7 +3,10 @@ import SectionWrapper from "@/components/shared/wrappers/SectionWrapper";
 import { Banner } from "@/components/shared/banners/Banner";
 import WordPressHostingFeatures from "./WordPressHostingFeatures";
 import WhyChooseWordpressHosting from "@/components/shared/sections/WhyChooseWordpressHosting";
-import { wordpressHostingAllHostingPlans, wordpressHostingManagedHostingHighlightsData } from "@/types/wordpress-hosting/wordpress-hosting.data";
+import {
+  wordpressHostingAllHostingPlans,
+  wordpressHostingManagedHostingHighlightsData,
+} from "@/types/wordpress-hosting/wordpress-hosting.data";
 import ManagedHostingHighlights from "@/components/shared/sections/ManagedHostingHighlights";
 import FaqSection from "../faqs/FaqSection";
 import AllHostingPlans from "@/components/shared/sections/AllHostingPlans";
@@ -22,7 +25,6 @@ const WordPressHosting = () => {
           content: "WordPress Hosting",
           className: " bg-white/10 backdrop-blur-md",
         }}
-
         title={
           <>
             Turbocharge Your
@@ -36,15 +38,21 @@ const WordPressHosting = () => {
         ctaSection={<WordPressHostingCtaSection />}
         description={`Blazing speed, free backups, and real human support optimized for creators, consultants, and small businesses who rely on WordPress to grow.`}
       />
-      <WordPressHostingFeatures />
+      <SectionWrapper>
+        <WordPressHostingFeatures />
+      </SectionWrapper>
       <SectionWrapper className="my-12 lg:my-16">
         <Pricing data={wordpressHostingPricingData} toggleButton={true} />
       </SectionWrapper>
       <HostingBenefits />
       <SectionWrapper>
-        <ManagedHostingHighlights data={wordpressHostingManagedHostingHighlightsData} />
+        <ManagedHostingHighlights
+          data={wordpressHostingManagedHostingHighlightsData}
+        />
       </SectionWrapper>
-      <AllHostingPlans data={wordpressHostingAllHostingPlans} />
+      <SectionWrapper>
+        <AllHostingPlans data={wordpressHostingAllHostingPlans} />
+      </SectionWrapper>
       <FaqSection />
       <WhyChooseWordpressHosting />
       <SectionWrapper className="my-12 md:my-16">

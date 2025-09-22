@@ -25,7 +25,7 @@ export function Pricing({ data, toggleButton }: { data: PricingData, toggleButto
         <div className="text-center ">
           <CenteredSectionHeader title={data.title} />
           {data.subtitle && (
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed text-balance">
+            <p className="text-xl text-muted-foreground max-w-1.5xl mx-auto leading-relaxed text-balance">
               {data.subtitle}
             </p>
           )}
@@ -60,12 +60,12 @@ export function Pricing({ data, toggleButton }: { data: PricingData, toggleButto
 
 
         <div className="pt-8 text-center">
-          <p className="text-sm text-muted-foreground">Trusted by thousands of businesses worldwide</p>
-          <div className="flex items-center justify-center gap-8 text-foreground">
+          <p className="text-sm    text-description-text ">Trusted by thousands of businesses worldwide</p>
+          <div className="flex items-center justify-center gap-8 text-text">
             <div className="text-xs font-medium">30-Day Money Back</div>
-            <div className="w-1 h-1 bg-muted-foreground rounded-full" />
+            <div className=" w-1.5 h-1.5 max-w-1.5 max-h-1.5 min-w-1.5 min-h-1.5 rounded-full bg-toggle" />
             <div className="text-xs font-medium">No Setup Fees</div>
-            <div className="w-1 h-1 bg-muted-foreground rounded-full" />
+            <div className=" w-1.5 h-1.5 max-w-1.5 max-h-1.5 min-w-1.5 min-h-1.5 rounded-full bg-toggle" />
             <div className="text-xs font-medium">Cancel Anytime</div>
           </div>
         </div>

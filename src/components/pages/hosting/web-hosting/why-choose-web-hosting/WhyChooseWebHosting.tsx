@@ -3,6 +3,7 @@ import Image from "next/image";
 import CenteredSectionHeader from "@/components/shared/headers/CenteredSectionHeader";
 import { whyChooseWebHosting } from "@/data/web-hosting/whyChooseWebHosting.data";
 import { WhyChooseWebHostingProps } from "@/types/web-hosting/whyChooseWebHosting.types";
+import SectionWrapper from "@/components/shared/wrappers/SectionWrapper";
 
 const FeatureCard: React.FC<
   WhyChooseWebHostingProps & { className?: string }
@@ -55,7 +56,7 @@ export default function WhyChooseWebHosting() {
         classNameForDescription="text-slate-600"
       />
 
-      <div className="mx-auto max-w-7xl px-6">
+      <SectionWrapper className="">
         {/* Modern staggered grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5 md:gap-6">
           {whyChooseWebHosting.map((f) => {
@@ -65,7 +66,7 @@ export default function WhyChooseWebHosting() {
 
         {/* Decorative line / accent under grid (adds depth) */}
         <div className="pointer-events-none mx-auto h-1 w-32 rounded-full bg-gradient-to-r from-teal-400 to-teal-700 opacity-40" />
-      </div>
+      </SectionWrapper>
     </section>
   );
 }

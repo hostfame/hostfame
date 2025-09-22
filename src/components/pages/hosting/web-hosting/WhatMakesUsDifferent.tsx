@@ -1,3 +1,4 @@
+import SectionWrapper from "@/components/shared/wrappers/SectionWrapper";
 import { whatMakesUpDifferentCards } from "@/data/what-makes-up-dif.data";
 import Image from "next/image";
 
@@ -16,7 +17,7 @@ export default function WhatMakesUsDifferent({
         
       </div> */}
 
-      <div className="mx-auto grid max-w-7xl grid-cols-1 items-start gap-10 px-6 lg:grid-cols-[1fr_1.1fr]">
+      <SectionWrapper className="grid grid-cols-1 items-start gap-10 lg:grid-cols-[1fr_1.1fr]">
         {/* Left: Person */}
         <div className="relative mx-auto hidden lg:block w-full max-w-[620px]">
           <div className="relative aspect-[3/4] w-full">
@@ -61,7 +62,7 @@ export default function WhatMakesUsDifferent({
             ))}
           </div>
         </div>
-      </div>
+      </SectionWrapper>
     </section>
   );
 }

@@ -1,3 +1,4 @@
+import SectionWrapper from "@/components/shared/wrappers/SectionWrapper";
 import { features } from "@/data/hosting.data";
 import { Feature } from "@/types/hosting.types";
 import React from "react";
@@ -31,9 +32,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
       </div>
 
       {/* Content */}
-      <h3 className="text-xl md:text-2xl font-semibold text-text">
-        {title}
-      </h3>
+      <h3 className="text-xl md:text-2xl font-semibold text-text">{title}</h3>
       <p className="mt-3 text-[15px] leading-6 text-text">{description}</p>
     </div>
   );
@@ -46,13 +45,13 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 export default function HostingBenefits() {
   return (
     <section className="py-12 md:py-16 ">
-      <div className="mx-auto max-w-7xl px-6 ">
+      <SectionWrapper>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {features.map((f, i) => (
             <FeatureCard key={i} {...f} />
           ))}
         </div>
-      </div>
+      </SectionWrapper>
     </section>
   );
 }

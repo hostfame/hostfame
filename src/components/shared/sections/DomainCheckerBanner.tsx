@@ -1,3 +1,4 @@
+import SectionWrapper from "../wrappers/SectionWrapper";
 import DomainSearchBox from "./DomainSearchBox";
 
 type Popular = { tld: string; price: string };
@@ -28,6 +29,7 @@ export default function DomainCheckerBanner() {
         className="pointer-events-none absolute -top-28 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-white/10 blur-3xl"
         aria-hidden
       />
+
       <div
         className="pointer-events-none absolute -bottom-28 right-10 h-64 w-64 rounded-full bg-white/10 blur-3xl"
         aria-hidden
@@ -42,7 +44,7 @@ export default function DomainCheckerBanner() {
         <path d="M0 80 C200 120 300 20 500 60 C700 100 800 10 1200 40" stroke="white" strokeOpacity="0.25" strokeWidth="2" />
       </svg>
 
-      <div className="mx-auto max-w-7xl px-4 py-16 sm:py-20 lg:py-24">
+      <SectionWrapper className="py-12 lg:py-16">
         {/* Card layout: content left, action right */}
         <div className="grid items-center gap-10 rounded-3xl bg-white/10 p-6 shadow-xl backdrop-blur md:grid-cols-2 md:p-10">
           {/* Left: heading */}
@@ -121,7 +123,7 @@ export default function DomainCheckerBanner() {
             />
           </aside>
         </div>
-      </div>
+      </SectionWrapper>
     </section>
   );
 }

@@ -5,7 +5,7 @@ import React from "react";
 
 const MigrateYourSite = () => {
   return (
-    <section className="flex flex-col lg:flex-row bg-white rounded-2xl shadow-xl w-full px-4 sm:px-6 md:px-10 lg:px-16 py-8 sm:py-10 gap-6 sm:gap-8 md:gap-10 lg:gap-20 items-center">
+    <section className="flex flex-col lg:flex-row bg-white rounded-2xl shadow-xl w-full  py-8 sm:py-10 gap-6 sm:gap-8 md:gap-10 lg:gap-20 items-center">
       <section className="flex-[0.6] flex justify-center lg:justify-start w-full lg:w-[340px] order-2 lg:order-1">
         <Image
           src={WebHostingData.migrateYourSiteSection.image}
