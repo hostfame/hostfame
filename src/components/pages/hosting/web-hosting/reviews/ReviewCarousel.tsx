@@ -70,7 +70,7 @@ const ReviewCarousel: React.FC<ReviewCarouselProps> = ({
         {reviews.map((r, i) => (
           <SwiperSlide key={i} className="!h-full flex ">
             {/* Card fills slide height */}
-            <article className="relative h-full min-h-0 w-full  bg-slider-background p-6 shadow-[0_8px_24px_rgba(10,30,70,0.08)] md:p-8 flex flex-col">
+            <article className="bg-background relative h-full min-h-0 w-full p-6 shadow-[0_8px_24px_rgba(10,30,70,0.08)] md:p-8 flex flex-col">
               {/* watermark quote icon */}
               
 
