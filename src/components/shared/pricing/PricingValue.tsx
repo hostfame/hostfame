@@ -42,9 +42,8 @@ const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
         <div className="flex items-baseline justify-center gap-1">
           <span className="text-lg text-text">{mainCurrency}</span>
           <span
-            className={`text-5xl font-semibold tracking-tight ${
-              plan?.isPopular ? "text-primary" : "text-text"
-            }`}
+            className={`text-5xl font-semibold tracking-tight ${plan?.isPopular ? "text-primary" : "text-text"
+              }`}
           >
             {(price).toFixed(2)}{" "}
             <span className="text-2xl font-light">/mo</span>
@@ -52,10 +51,13 @@ const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
         </div>
       </div>
 
-      {children}
-      {plan.renewalText && (
-            <p className="text-base text-text">{ isBD ? plan.renewalTextBdt : plan.renewalText}</p>
-          )}
+      <div className=" w-full flex flex-col space-y-2">
+        {children}
+
+        {plan.renewalText && (
+          <p className=" text-text">{isBD ? plan.renewalTextBdt || plan.renewalText : plan.renewalText}</p>
+        )}
+      </div>
     </>
   );
 };

@@ -25,7 +25,7 @@ export const webHostingPricingData: PricingData = {
       yearlyPrevPriceBdt: 0.0,
       offer: 67, // % OFF
       ctaText: "Choose plan",
-      renewalText: "36 month term • Free .COM",
+      renewalText: "36 month term + Free .COM",
       features: [
         {
           title: "Features",
@@ -338,7 +338,7 @@ export const webHostingPricingData: PricingData = {
       offer: 64,
       isPopular: true,
       ctaText: "Choose plan",
-      renewalText: "36 month term • Free .COM",
+      renewalText: "36 month term + Free .COM",
       features: [
         {
           title: "Features",
@@ -623,7 +623,7 @@ export const webHostingPricingData: PricingData = {
     //   offer: 63,
     //   guarantee: "30-Day Money-Back Guarantee",
     //   ctaText: "Choose plan",
-    //   renewalText: "36 month term • Free .COM",
+    //   renewalText: "36 month term + Free .COM",
     //   features: [
     //     {
     //       title: "Features",
@@ -728,7 +728,7 @@ export const webHostingPricingData: PricingData = {
       yearlyPrevPriceBdt: 0.0,
       offer: 50,
       ctaText: "Choose plan",
-      renewalText: "36 month term • Free .COM",
+      renewalText: "36 month term + Free .COM",
       features: [
         {
           title: "Features",

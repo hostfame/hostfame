@@ -27,17 +27,17 @@ export const PlainButton: React.FC<PlainButtonProps> = ({
     "inline-flex items-center justify-center gap-2 relative font-semibold rounded-xl cursor-pointer duration-500 transition shadow-lg border-2 ";
 
   const sizeClasses = {
-    sm: "px-6 py-2 text-base",
-    md: "px-8 py-3 text-lg",
-    lg: "px-10 py-4 text-xl",
+    sm: "px-6 py-2 text-lg",
+    md: "px-8 py-3 text-xl",
+    lg: "px-10 py-4 text-2xl",
   }[size];
 
   const variantClasses =
     variant === "dark"
       ? " border-primary text-white bg-primary hover:bg-primary/90"
       : variant === "light"
-      ? ""
-      : "border-primary hover:bg-primary/90 hover:text-white text-text";
+      ? "border-primary text-white bg-primary hover:bg-primary"
+      : "border-primary hover:bg-primary/90 hover:text-white text-primary hover:text-white";
 
   const content = (
     <>
