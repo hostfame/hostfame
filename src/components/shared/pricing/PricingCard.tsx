@@ -47,19 +47,19 @@ export function PricingCard({
           plan.isPopular && "border-2 border-primary/50"
         }  ${isExpanded && "shadow-xl"}  ${className} `}
       >
-        <CardHeader className="space-y-3 text-center relative z-10">
+        <CardHeader className="space-y-5 text-center relative z-10">
           <div className="flex flex-col items-center gap-4">
             <div className=" flex justify-center items-center gap-3 h-14">
               <div
                 className={`transition-all duration-300 group-hover:scale-110 text-4xl`}
               >
-                <Image src={plan.icon} alt={plan.name} width={40} height={40} />
+                <Image src={plan.icon} alt={plan.name} width={30} height={30} />
               </div>
 
-              <h3 className="text-2xl font-bold text-text">{plan.name}</h3>
+              <h3 className="text-2xl font-bold text-dark-description-text">{plan.name}</h3>
             </div>
             {plan.description && (
-              <p className="text-text text-balance">{plan.description}</p>
+              <p className="text-dark-description-text text-balance">{plan.description}</p>
             )}
           </div>
 
@@ -99,7 +99,7 @@ export function PricingCard({
           <div className="space-y-8">
             {visibleFeatures.map((section) => (
               <div key={section.title} className=" space-y-5">
-                <h4 className="font-bold text-text text-xl rounded-xl flex items-center gap-2 pl-1">
+                <h4 className="font-bold text-dark-description-text text-xl rounded-xl flex items-center gap-2 pl-1">
                   {section.title !== "Features" && section.title}
                 </h4>
                 <div className="space-y-3">
@@ -108,7 +108,7 @@ export function PricingCard({
                       data-tooltip-id="my-tooltip"
                       data-tooltip-content="Hello world!"
                       key={index}
-                      className="flex items-center gap-3 text-sm group/feature"
+                      className="flex items-center gap-3 group/feature"
                     >
                       <div
                         className={`p-1 rounded-full transition-all duration-200 ${
@@ -126,8 +126,8 @@ export function PricingCard({
                       <span
                         className={`leading-relaxed transition-colors duration-200 ${
                           feature.included
-                            ? "text-text group-hover/feature:text-primary"
-                            : "text-text line-through"
+                            ? "text-dark-description-text group-hover/feature:text-primary"
+                            : "text-dark-description-text line-through"
                         }`}
                       >
                         {feature.name}
@@ -144,7 +144,7 @@ export function PricingCard({
               onClick={onToggleExpand}
               className="cursor-pointer w-full h-12 flex justify-center items-center 
                    rounded-2xl font-medium transition-all duration-300 
-                   hover:scale-105 text-text"
+                   hover:scale-105 text-dark-description-text"
             >
               {isExpanded ? (
                 <>

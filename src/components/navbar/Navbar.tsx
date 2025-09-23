@@ -47,8 +47,8 @@ const Navbar = () => {
                     "https://hostfame.com/wp-content/uploads/2024/01/H-transparent-01-e1739570608669.png.webp"
                   }
                   alt={"logo"}
-                  width={100}
-                  height={100}
+                  width={170}
+                  height={170}
                 />
               </Link>
             </div>
