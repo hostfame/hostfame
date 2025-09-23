@@ -18,7 +18,7 @@ export default function WhyChooseWordpressHosting() {
       {/* Decorative background element */}
       <div
         aria-hidden
-        className="absolute inset-0 bg-gradient-to-r from-primary/20 via-transparent to-transparent opacity-50"
+        className="absolute inset-0 "
       />
 
       <SectionWrapper className="">

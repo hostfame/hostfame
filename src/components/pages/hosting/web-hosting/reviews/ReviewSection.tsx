@@ -30,7 +30,7 @@ const REVIEWS: Review[] = [
 
 export default function ReviewsSection() {
   return (
-    <section className="bg-background py-12 md:py-16">
+    <section className=" py-12 md:py-16">
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-[2%]  lg:grid-cols-2">
         {/* Left column */}
         <div className="relative sm:ml-[10vw] lg:ml-0">
