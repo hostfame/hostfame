@@ -60,13 +60,12 @@ const Navbar = () => {
                   {item.subItems ? (
                     <>
                       <button
-                        className={`flex items-center px-3 py-2 text-sm font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 ${
-                          item.subItems.some(
-                            (subItem) => subItem.href === pathname
-                          )
+                        className={`flex items-center px-3 py-2 text-sm font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 ${item.subItems.some(
+                          (subItem) => subItem.href === pathname
+                        )
                             ? "text-teal-600"
                             : "text-text hover:text-teal-600"
-                        }`}
+                          }`}
                       >
                         {item.label}
                         <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
@@ -79,11 +78,10 @@ const Navbar = () => {
                             <Link
                               key={subItem.label}
                               href={subItem.href}
-                              className={`flex items-start p-3 rounded-lg hover:bg-primary-light transition-all duration-200 ease-in-out transform hover:scale-102 ${
-                                subItem.href === pathname
+                              className={`flex items-start p-3 rounded-lg hover:bg-primary-light transition-all duration-200 ease-in-out transform hover:scale-102 ${subItem.href === pathname
                                   ? "text-teal-600 hover:text-white"
                                   : "text-text hover:text-white"
-                              }`}
+                                }`}
                             >
                               <div className={`flex-shrink-0 mr-3 mt-0.5 `}>
                                 {getIcon(subItem.icon)}
@@ -104,11 +102,10 @@ const Navbar = () => {
                   ) : (
                     <Link
                       href={item.href!}
-                      className={`px-3 py-2 text-sm font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 ${
-                        item.href === pathname
+                      className={`px-3 py-2 text-sm font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 ${item.href === pathname
                           ? "text-teal-600"
                           : "text-text hover:text-teal-600"
-                      }`}
+                        }`}
                     >
                       {item.label}
                     </Link>
@@ -123,11 +120,10 @@ const Navbar = () => {
                   variant="bordered"
                   href="/dashboard"
                   size="sm"
-                  className={`rounded-full ${
-                    pathname === "/dashboard"
+                  className={`rounded-full ${pathname === "/dashboard"
                       ? "text-teal-600"
                       : "text-gray-600 hover:text-teal-600"
-                  }`}
+                    }`}
                 >
                   Dashboard
                 </Button>
@@ -152,9 +148,8 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`min-[840px]:hidden fixed inset-0 top-16 bg-background border-t border-border-light-gray overflow-y-auto transition-all duration-300 z-40 ${
-            isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-          } `}
+          className={`min-[840px]:hidden fixed inset-0 top-16 bg-background border-t border-border-light-gray overflow-y-auto transition-all duration-300 z-40 ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
+            } `}
         >
           <div className="px-4 pt-4 pb-20 space-y-1 h-full">
             {navItems.map((item) => (
@@ -163,37 +158,33 @@ const Navbar = () => {
                   <>
                     <button
                       onClick={() => toggleDropdown(item.label)}
-                      className={`w-full flex items-center justify-between px-3 py-3 text-base font-medium rounded-md transition-colors duration-300 ${
-                        item.subItems.some(
-                          (subItem) => subItem.href === pathname
-                        )
+                      className={`w-full flex items-center justify-between px-3 py-3 text-base font-medium rounded-md transition-colors duration-300 ${item.subItems.some(
+                        (subItem) => subItem.href === pathname
+                      )
                           ? "text-teal-600"
                           : "text-text hover:text-teal-600 hover:bg-primary-light"
-                      }`}
+                        }`}
                     >
                       {item.label}
                       <ChevronDown
-                        className={`h-4 w-4 transition-transform duration-300 ${
-                          activeDropdown === item.label ? "rotate-180" : ""
-                        }`}
+                        className={`h-4 w-4 transition-transform duration-300 ${activeDropdown === item.label ? "rotate-180" : ""
+                          }`}
                       />
                     </button>
                     <div
-                      className={`pl-4 space-y-1 mt-1 overflow-hidden transition-all duration-300 ${
-                        activeDropdown === item.label
+                      className={`pl-4 space-y-1 mt-1 overflow-hidden transition-all duration-300 ${activeDropdown === item.label
                           ? "max-h-[500px] opacity-100"
                           : "max-h-0 opacity-0"
-                      }`}
+                        }`}
                     >
                       {item.subItems.map((subItem) => (
                         <Link
                           key={subItem.label}
                           href={subItem.href}
-                          className={`block px-3 py-2 text-sm rounded-md transition-colors duration-300 ${
-                            subItem.href === pathname
+                          className={`block px-3 py-2 text-sm rounded-md transition-colors duration-300 ${subItem.href === pathname
                               ? "text-teal-600"
                               : "text-text hover:text-teal-600 hover:bg-primary-light"
-                          }`}
+                            }`}
                           onClick={() => setIsOpen(false)}
                         >
                           <span className="flex items-center gap-2">
@@ -215,11 +206,10 @@ const Navbar = () => {
                 ) : (
                   <Link
                     href={item.href!}
-                    className={`block px-3 py-3 text-base font-medium rounded-md transition-colors duration-300 ${
-                      item.href === pathname
+                    className={`block px-3 py-3 text-base font-medium rounded-md transition-colors duration-300 ${item.href === pathname
                         ? "text-teal-600"
                         : "text-text hover:text-teal-600 hover:bg-primary-light"
-                    }`}
+                      }`}
                     onClick={() => setIsOpen(false)}
                   >
                     {item.label}
@@ -230,11 +220,10 @@ const Navbar = () => {
             <div className="pt-4 mt-4 border-t border-border-light-gray">
               <Button
                 href="/dashboard"
-                className={`block w-full ${
-                  pathname === "/dashboard"
+                className={`block w-full ${pathname === "/dashboard"
                     ? "text-teal-600"
                     : "text-text hover:text-teal-600"
-                }`}
+                  }`}
                 onClick={() => setIsOpen(false)}
               >
                 Dashboard
