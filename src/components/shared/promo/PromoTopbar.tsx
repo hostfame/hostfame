@@ -18,7 +18,10 @@ export default function PromoTopBar({
   id = "promo-top-bar",
   className = "",
 }: PromoTopBarProps) {
+  return <></>
+  
   return (
+
     <div
       id={id}
       className={`w-full  absolute top-0 left-0  z-40 bg-transparent text-white px-2 md:px-4 py-1 md:py-3 text-sm  ${className}`}

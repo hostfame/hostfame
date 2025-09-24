@@ -1,10 +1,18 @@
-'use client';
+"use client";
 
-import { useEffect, useState } from 'react';
-import { useTheme } from 'next-themes';
-import { FiMoon, FiSun } from 'react-icons/fi';
+import { useEffect, useState } from "react";
+import { useTheme } from "next-themes";
+import { FiMoon, FiSun } from "react-icons/fi";
 
-export default function ToggleTheme() {
+export default function ToggleTheme({
+  classNameForSunIcon,
+  classNameForMoonIcon,
+  className
+}: {
+  classNameForSunIcon?: string;
+  classNameForMoonIcon?: string;
+  className?: string;
+}) {
   const { theme, setTheme, resolvedTheme, systemTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
 
@@ -12,8 +20,8 @@ export default function ToggleTheme() {
 
   useEffect(() => {
     if (!mounted) return;
-    const current = theme === 'system' ? (systemTheme ?? resolvedTheme) : theme;
-    if (current) localStorage.setItem('app-theme-mirror', current);
+    const current = theme === "system" ? systemTheme ?? resolvedTheme : theme;
+    if (current) localStorage.setItem("app-theme-mirror", current);
   }, [theme, systemTheme, resolvedTheme, mounted]);
 
   if (!mounted) {
@@ -29,20 +37,23 @@ export default function ToggleTheme() {
     );
   }
 
-  const isDark = (resolvedTheme ?? theme) === 'dark';
+  const isDark = (resolvedTheme ?? theme) === "dark";
 
   return (
     <button
       aria-label="Toggle theme"
       type="button"
-      onClick={() => setTheme(isDark ? 'light' : 'dark')}
-      title={`Switch to ${isDark ? 'light' : 'dark'} mode`}
-      className="
-        p-2 rounded-full border transition cursor-pointer 
+      onClick={() => setTheme(isDark ? "light" : "dark")}
+      title={`Switch to ${isDark ? "light" : "dark"} mode`}
+      className={`p-2 rounded-full border transition cursor-pointer 
         border-border-dark-gray/70 
-        text-text"
+        text-text ${className}`}
     >
-      {isDark ? <FiSun className="w-5 h-5 text-text" /> : <FiMoon className="w-5 h-5 text-text" />}
+      {isDark ? (
+        <FiSun className={`w-5 h-5 text-text ${classNameForSunIcon}`} />
+      ) : (
+        <FiMoon className={`w-5 h-5 text-text ${classNameForMoonIcon}`} />
+      )}
     </button>
   );
 }

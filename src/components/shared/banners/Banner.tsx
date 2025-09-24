@@ -4,6 +4,7 @@ import { CtaButton, CtaButtonProps } from "../html/CtaButton";
 import { BannerTimer } from "./BannerTimer";
 import { IoCheckmark } from "react-icons/io5";
 import SectionWrapper from "../wrappers/SectionWrapper";
+import Navbar from "@/components/navbar/Navbar";
 
 export type BannerProps = {
   topTitle: {
@@ -65,7 +66,7 @@ export const Banner: React.FC<BannerProps> = ({
   className = "",
   containerClassName = "",
   lists = [],
-  heightClassName = "h-fit xl:h-[740px] xl:max-h-[740px]",
+  heightClassName = "h-fit xl:h-[780px] xl:max-h-[780px]",
   ctaSection,
   imageProps = {
     width: 600,
@@ -79,7 +80,7 @@ export const Banner: React.FC<BannerProps> = ({
 }) => {
   return (
     <section
-      className={`relative  justify-center items-center w-full  text-white bg-no-repeat overflow-hidden ${
+      className={`relative  justify-center -mt-[1px] pt-2 items-center w-full  text-white bg-no-repeat overflow-hidden ${
         promoTemplate ? " pt-2" : ""
       } ${heightClassName} ${className}`}
       style={{
@@ -89,6 +90,8 @@ export const Banner: React.FC<BannerProps> = ({
         // backgroundImage: `${bgGradient}`,
       }}
     >
+       
+       <Navbar isTransparent />
       {promoTemplate && promoTemplate}
 
       {/* Left decorative wave */}
