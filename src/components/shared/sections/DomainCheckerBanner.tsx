@@ -1,3 +1,4 @@
+import Navbar from "@/components/navbar/Navbar";
 import SectionWrapper from "../wrappers/SectionWrapper";
 import DomainSearchBox from "./DomainSearchBox";
 
@@ -20,7 +21,8 @@ const data = {
 
 export default function DomainCheckerBanner() {
   return (
-    <section className="relative isolate">
+    <section className="relative isolate -mt-[1px] pt-3">
+      <Navbar isTransparent/>
       {/* Layered teal header */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary-dark via-primary to-primary/80" />
 

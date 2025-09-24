@@ -9,7 +9,7 @@ export type ButtonProps = {
   icon?: IconType;
   size?: "sm" | "md" | "lg";
   fullWidth?: boolean;
-  variant?: "dark" | "light" | "bordered";
+  variant?: "dark" | "light" | "bordered" | "whiteBordered";
   className?: string;
 };
 
@@ -37,7 +37,9 @@ export const Button: React.FC<ButtonProps> = ({
       ? "text-white bg-gradient-to-r from-teal-600 via-teal-700 to-teal-700 hover:from-teal-800 hover:via-teal-700 hover:to-teal-700 border-teal-500 hover:border-teal-600"
       : variant === "light"
       ? "text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-500 hover:from-teal-500 hover:via-teal-500 hover:to-teal-500 border-teal-300 hover:border-teal-400"
-      : "bg-transparent text-teal-600 border-teal-600 hover:text-white hover:bg-gradient-to-r hover:from-primary hover:via-primary hover:to-primary-dark hover:border-teal-400";
+      : variant === "bordered"
+      ? "bg-transparent text-teal-600 border-teal-600 hover:text-white hover:bg-gradient-to-r hover:from-primary hover:via-primary hover:to-primary-dark hover:border-teal-400"
+      : "bg-transparent text-white border-white hover:bg-white hover:text-primary";
 
   const content = (
     <>
@@ -50,8 +52,9 @@ export const Button: React.FC<ButtonProps> = ({
     return (
       <Link
         href={href}
-        className={`${base} ${sizeClasses} ${variantClasses} ${fullWidth ? "w-full" : ""
-          } ${className}`}
+        className={`${base} ${sizeClasses} ${variantClasses} ${
+          fullWidth ? "w-full" : ""
+        } ${className}`}
       >
         {content}
       </Link>
@@ -62,8 +65,9 @@ export const Button: React.FC<ButtonProps> = ({
     <button
       type="button"
       onClick={onClick}
-      className={`${base} ${sizeClasses} ${variantClasses} ${fullWidth ? "w-full" : ""
-        } ${className}`}
+      className={`${base} ${sizeClasses} ${variantClasses} ${
+        fullWidth ? "w-full" : ""
+      } ${className}`}
     >
       {content}
       {/* Glow effect only for dark variant */}

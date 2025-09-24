@@ -22,12 +22,13 @@ import { webHostingPricingData } from "@/data/pricing.data";
 const WebHosting = () => {
   return (
     <section className="">
-      <PromoTopBar />
+      {/* <PromoTopBar /> */}
       <Banner
         topTitle={{
           content: "Limited Offer: 90% OFF Hosting",
           className: " bg-white/10 backdrop-blur-md",
         }}
+        heightClassName="h-fit xl:h-[830px] xl:max-h-[830px]"
         title={
           <>
             Get Ultra-Fast
@@ -47,7 +48,7 @@ const WebHosting = () => {
             </p>
 
             <section className="flex gap-20">
-              <section className=" flex items-center">
+              <section className=" flex items-center gap-2">
                 <Image
                   src={"/assets/diamond.svg"}
                   alt={"diamond"}
@@ -56,7 +57,7 @@ const WebHosting = () => {
                 />
                 <p>24/7 Chat & Call <br />30 Day Refund</p>
               </section>
-              <section className=" flex items-center">
+              <section className=" flex items-center gap-2">
                 <Image
                   src={"/assets/wordpress.svg"}
                   alt={"wordpress"}
