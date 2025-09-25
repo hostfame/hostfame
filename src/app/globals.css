@@ -60,6 +60,7 @@
   --color-text: white;
   --color-text-accent: #111827;
   --color-description-text: #6b7280;
+  --color-dark-description-text: #3b3f46;
   --color-gray-background: #f8fafc;
 
   --color-border-light-gray: #e5e7eb;
@@ -100,6 +101,7 @@
     --color-text: white;
     --color-text-accent: white;
     --color-description-text: white;
+    --color-dark-description-text: white;
     --color-gray-background: #282825;
     --color-border-light-gray: #52525b;
     --color-border-dark-gray: #71717a;
