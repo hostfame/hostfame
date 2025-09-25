@@ -74,6 +74,7 @@
   --color-white-background: white;
 
   --color-card-background: white;
+  --color-offer-bg: var(--primary-light);
 }
 
 @layer base {
@@ -90,7 +91,7 @@
     --color-border-dark-gray: #3f3f46;
     --color-toggle: #1e2a3b;
     --color-toggle-text: white;
-
+    --color-offer-bg: var(--primary-light);
     --color-slider-background: white;
     --color-card-background: white;
   }
@@ -107,7 +108,7 @@
     --color-border-dark-gray: #71717a;
     --color-toggle: white;
     --color-toggle-text: #1e2a3b;
-
+    --color-offer-bg: #282825;
     --color-slider-background: #282825;
     --color-card-background: #282825;
   }
@@ -121,7 +122,7 @@ body {
 
 /* Light mode (default) */
 .banner-bg {
-  background-image: linear-gradient(180deg, #08B1B1 0%, #005F5F 100%);
+  background-image: linear-gradient(180deg, #08b1b1 0%, #005f5f 100%);
   background-position: left center, center center;
   background-size: contain;
 }

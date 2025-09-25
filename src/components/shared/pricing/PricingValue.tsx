@@ -1,5 +1,4 @@
 "use client";
-import { DOLLAR_TO_TK_CONVERTION_RATE } from "@/data/pricing.data";
 import useBrowserCountryCode from "@/hooks/useBrowserCountryCode";
 import { BillingPeriod, PricingPlan } from "@/types/pricing.types";
 import React from "react";

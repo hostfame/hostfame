@@ -1,3 +1,5 @@
+/* eslint-disable react-hooks/exhaustive-deps */
+/* eslint-disable @typescript-eslint/no-unused-expressions */
 import { useEffect, useState } from "react";
 
 type UseIpCountryOptions = {
@@ -68,10 +70,17 @@ export function useIpCountryCode(options: UseIpCountryOptions = {}) {
 
         const data = (await res.json()) as IpInfoResponse;
         const alpha2 = data.country ?? null;
-        const finalCode = alpha2 ? (transform ? transform(alpha2) : alpha2) : null;
+        const finalCode = alpha2
+          ? transform
+            ? transform(alpha2)
+            : alpha2
+          : null;
 
         if (cache && alpha2 && typeof sessionStorage !== "undefined") {
-          sessionStorage.setItem("ipinfo_country_alpha2", JSON.stringify(alpha2));
+          sessionStorage.setItem(
+            "ipinfo_country_alpha2",
+            JSON.stringify(alpha2)
+          );
         }
 
         if (active) setCountryCode(finalCode);
@@ -82,7 +91,7 @@ export function useIpCountryCode(options: UseIpCountryOptions = {}) {
       }
     }
 
-    fetchCountry();
+    !countryCode && fetchCountry();
 
     return () => {
       active = false;

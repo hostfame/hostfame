@@ -7,23 +7,14 @@ import {
   FaLinkedinIn,
   FaYoutube,
 } from "react-icons/fa";
+import FooterPricingImage from "./FooterPricingImage";
 
 const Footer: React.FC = () => {
   return (
     <footer className="bg-gradient-to-br from-primary via-primary-dark to-primary-dark text-white">
       <div className="mx-auto max-w-7xl   px-[2%] py-10">
         {/* Payment / SSL banner */}
-        <div className="mx-auto max-w-7xl rounded-md shadow w-full">
-          <Image
-            src="/assets/ssl-commerce-all.webp"
-            alt="Supported payment methods"
-            width={1920}
-            height={400}
-            className="w-full h-auto object-contain"
-            priority
-          />
-        </div>
-
+        <FooterPricingImage />
 
         <hr className="my-6 border-white/15" />
 
@@ -37,10 +28,11 @@ const Footer: React.FC = () => {
                   <li key={lnk.label}>
                     <a
                       href={lnk.href}
-                      className={`text-sm text-white/80 hover:text-white transition-colors ${lnk.highlight
-                        ? "text-amber-300 hover:text-amber-200"
-                        : ""
-                        }`}
+                      className={`text-sm text-white/80 hover:text-white transition-colors ${
+                        lnk.highlight
+                          ? "text-amber-300 hover:text-amber-200"
+                          : ""
+                      }`}
                     >
                       {lnk.label}
                     </a>
