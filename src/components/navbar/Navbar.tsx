@@ -49,7 +49,7 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
   }, []);
 
   const textClass = `${isTransparent ? "text-white" : "text-text"}`;
-  const activeClassName = `${isTransparent ? "" : "text-teal-600"}`
+  const activeClassName = `${isTransparent ? "" : "text-teal-600"}`;
   const textHoverClass = `${isTransparent ? "" : "hover:text-teal-600"}`;
   const logoSrc = isTransparent
     ? "/assets/hostfame-white.webp"
@@ -166,16 +166,21 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
             </div>
 
             {/* Mobile menu button */}
-            <div className="min-[840px]:hidden">
+            <div className="min-[840px]:hidden flex justify-end items-center gap-x-2">
+              <ToggleTheme
+                classNameForMoonIcon={`${isTransparent ? "!text-white" : ""}`}
+                classNameForSunIcon={`${isTransparent ? "!text-white" : ""}`}
+                className={`${isTransparent ? "!border-white" : ""}`}
+              />
               <button
                 onClick={toggleMenu}
                 className="text-text hover:text-teal-600 p-2 transition-colors duration-200"
               >
                 {isOpen ? (
-                  <X className="h-6 w-6" />
+                  <X className="h-6 w-6 text-text" />
                 ) : (
                   <Menu
-                    className={`h-6 w-6 ${isTransparent ? "text-white" : ""}`}
+                    className={`h-6 w-6 ${isTransparent ? "text-text" : ""}`}
                   />
                 )}
               </button>
@@ -192,7 +197,7 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
           <section className="flex justify-end p-4">
             <RxCross2
               onClick={() => setIsOpen(false)}
-              className=" text-black"
+              className=" text-text"
               size={20}
             />
           </section>
