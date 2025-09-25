@@ -80,18 +80,17 @@ export const Banner: React.FC<BannerProps> = ({
 }) => {
   return (
     <section
-      className={`relative  justify-center -mt-[1px] pt-2 items-center w-full  text-white bg-no-repeat overflow-hidden ${
-        promoTemplate ? " pt-2" : ""
-      } ${heightClassName} ${className}`}
+      className={`banner-bg relative  justify-center -mt-[1px] items-center w-full  text-white bg-no-repeat overflow-hidden ${promoTemplate ? " pt-2" : ""
+        } ${heightClassName} ${className}`}
       style={{
         backgroundPosition: "left center, center center",
         backgroundSize: "contain",
-        backgroundImage: "linear-gradient(180deg, #08B1B1 0%, #005F5F 100%)",
+        // backgroundImage: "linear-gradient(180deg, #08B1B1 0%, #005F5F 100%)",
         // backgroundImage: `${bgGradient}`,
       }}
     >
-       
-       <Navbar isTransparent />
+
+      <Navbar isTransparent />
       {promoTemplate && promoTemplate}
 
       {/* Left decorative wave */}
@@ -165,9 +164,8 @@ export const Banner: React.FC<BannerProps> = ({
               alt={imageAlt}
               width={imageProps?.width || 600}
               height={imageProps?.height || 600}
-              className={`object-contain  h-auto ${
-                classNameForImage || "w-full"
-              }`}
+              className={`object-contain  h-auto ${classNameForImage || "w-full"
+                }`}
               priority
             />
           </div>
