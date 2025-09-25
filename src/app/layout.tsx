@@ -4,6 +4,7 @@ import "./globals.css";
 import Footer from "@/components/shared/footer/Footer";
 import Navbar from "@/components/navbar/Navbar";
 import { ThemeProvider } from "next-themes";
+import { IpProvider } from "@/providers/IpProvider";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -29,9 +30,11 @@ export default function RootLayout({
           // defaultTheme="light"
           storageKey="app-theme"
         >
-          <Navbar />
-          {children}
-          <Footer />
+          <IpProvider>
+            <Navbar />
+            {children}
+            <Footer />
+          </IpProvider>
         </ThemeProvider>
       </body>
     </html>

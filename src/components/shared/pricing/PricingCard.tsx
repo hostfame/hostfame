@@ -7,6 +7,7 @@ import Image from "next/image";
 import { PlainButton } from "../html/PlainButton";
 import { RxCross2 } from "react-icons/rx";
 import PricingValue from "./PricingValue";
+import { Tooltip } from "react-tooltip";
 
 export function PricingCard({
   plan,
@@ -56,10 +57,14 @@ export function PricingCard({
                 <Image src={plan.icon} alt={plan.name} width={30} height={30} />
               </div>
 
-              <h3 className="text-2xl font-bold text-dark-description-text">{plan.name}</h3>
+              <h3 className="text-2xl font-bold text-dark-description-text">
+                {plan.name}
+              </h3>
             </div>
             {plan.description && (
-              <p className="text-dark-description-text text-balance">{plan.description}</p>
+              <p className="text-dark-description-text text-balance">
+                {plan.description}
+              </p>
             )}
           </div>
 
@@ -103,37 +108,46 @@ export function PricingCard({
                   {section.title !== "Features" && section.title}
                 </h4>
                 <div className="space-y-3">
-                  {section.features.map((feature, index) => (
-                    <div
-                      data-tooltip-id="my-tooltip"
-                      data-tooltip-content="Hello world!"
-                      key={index}
-                      className="flex items-center gap-3 group/feature"
-                    >
+                  {section.features.map((feature, index) => {
+                    // generate unique id using random
+                    const id = Math.random().toString(36).substring(7);
+                    return (
                       <div
-                        className={`p-1 rounded-full transition-all duration-200 ${
-                          feature.included
-                            ? " group-hover/feature:scale-110"
-                            : ""
-                        }`}
+                        data-tooltip-id={id}
+                        data-tooltip-content="Hello world asdf asdf as dfasdf asdf asf dasdf asdf  asd asdf asdf asfd asdf asdf asdf asdf asdf aswgd saf asdf asf sf saf asf !"
+                        key={index}
+                        className="flex items-center gap-3 group/feature"
                       >
-                        {feature.included ? (
-                          <FaCheck className=" text-emerald-500" />
-                        ) : (
-                          <RxCross2 className=" text-red-500" />
-                        )}
+                        {/* <Tooltip
+                          id={id}
+                          place="right"
+                          className=" max-w-[200px] text-wrap  break-words  !opacity-100 !bg-opacity-100   !bg-gradient-to-b from-primary to-primary-dark  !rounded-xl"
+                        /> */}
+                        <div
+                          className={`p-1 rounded-full transition-all duration-200 ${
+                            feature.included
+                              ? " group-hover/feature:scale-110"
+                              : ""
+                          }`}
+                        >
+                          {feature.included ? (
+                            <FaCheck className=" text-emerald-500" />
+                          ) : (
+                            <RxCross2 className=" text-red-500" />
+                          )}
+                        </div>
+                        <span
+                          className={`leading-relaxed transition-colors duration-200 ${
+                            feature.included
+                              ? "text-dark-description-text group-hover/feature:text-primary"
+                              : "text-dark-description-text line-through"
+                          }`}
+                        >
+                          {feature.name}
+                        </span>
                       </div>
-                      <span
-                        className={`leading-relaxed transition-colors duration-200 ${
-                          feature.included
-                            ? "text-dark-description-text group-hover/feature:text-primary"
-                            : "text-dark-description-text line-through"
-                        }`}
-                      >
-                        {feature.name}
-                      </span>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             ))}
