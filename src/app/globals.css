@@ -74,7 +74,10 @@
   --color-white-background: white;
 
   --color-card-background: white;
-  --color-offer-bg: var(--primary-light);
+  --color-offer-bg: #ffcb2d;
+
+  --color-yellow-main: #ffc107;
+  --color-offer-text: #364153;
 }
 
 @layer base {
@@ -91,9 +94,10 @@
     --color-border-dark-gray: #3f3f46;
     --color-toggle: #1e2a3b;
     --color-toggle-text: white;
-    --color-offer-bg: var(--primary-light);
+    --color-offer-bg: #ffcb2d;
     --color-slider-background: white;
     --color-card-background: white;
+    --color-offer-text: #364153;
   }
 
   [data-theme="dark"] {
@@ -111,6 +115,7 @@
     --color-offer-bg: #282825;
     --color-slider-background: #282825;
     --color-card-background: #282825;
+    --color-offer-text: white;
   }
 }
 

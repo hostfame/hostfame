@@ -38,7 +38,7 @@ const VpsHosting = () => {
         // }}
         description="Power your apps, websites, and projects with full root access, SSD storage, and 24/7 real human support."
         imageProps={{ width: 400, height: 400 }}
-        heightClassName="h-fit xl:h-[640px] xl:max-h-[640px]"
+        // heightClassName="h-fit xl:h-[640px] xl:max-h-[640px]"
         ctaSection={<VpsHostingCtaSection />}
         imageComponent={<AnimationBanner />}
       />

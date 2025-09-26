@@ -1,6 +1,7 @@
 import { featureRows, hostingPlans } from "@/data/hostingPlan.data";
 import Image from "next/image";
 import { Button } from "../html/Button";
+import HostingPriceValue from "./HostingPriceValue";
 
 const Check = () => (
   <svg
@@ -35,17 +36,21 @@ const Dot = () => (
   />
 );
 
-const HeaderImage = ({ width, height }: { width: string, height: string }) => {
-  return <div className={`relative ${width} ${height} shrink-0 overflow-hidden rounded-xl ring-1 ring-border-light-gray`}>
-    <Image
-      src="/assets/pricing-image.svg"
-      alt="Hosting illustration"
-      fill
-      className="object-contain"
-      priority
-    />
-  </div>
-}
+const HeaderImage = ({ width, height }: { width: string; height: string }) => {
+  return (
+    <div
+      className={`relative ${width} ${height} shrink-0 overflow-hidden rounded-xl ring-1 ring-border-light-gray`}
+    >
+      <Image
+        src="/assets/pricing-image.svg"
+        alt="Hosting illustration"
+        fill
+        className="object-contain"
+        priority
+      />
+    </div>
+  );
+};
 
 export default function HostingPlans() {
   return (
@@ -64,8 +69,8 @@ export default function HostingPlans() {
                   Simple, scalable hosting
                 </h2>
                 <p className="text-sm text-description-text">
-                  Compare hostingPlans and pick the perfect fit. Minimalist UI, same layout you
-                  wanted—refined.
+                  Compare hostingPlans and pick the perfect fit. Minimalist UI,
+                  same layout you wanted—refined.
                 </p>
               </div>
             </div>
@@ -92,27 +97,19 @@ export default function HostingPlans() {
                 className="group space-y-6 flex flex-col rounded-xl border border-border-light-gray bg-card-background p-5 shadow-sm transition-all hover:shadow-md"
               >
                 <header className=" space-y-2">
-                  <h3
-                    className="text-base font-semibold tracking-tight text-text-accent"
-                  >
+                  <h3 className="text-base font-semibold tracking-tight text-text-accent">
                     {plan.name}
                   </h3>
                   <p className="text-xs text-description-text">
                     {plan.startingAtLabel}
                   </p>
                   <div className="flex items-baseline gap-1">
-                    <span className="text-2xl font-bold text-text-accent sm:text-3xl">
-                      {plan.price}
-                    </span>
+                    <HostingPriceValue plan={plan} />
                     <span className="text-xs text-description-text">
                       {plan.priceSuffix}
                     </span>
                   </div>
-                  <Button
-                    size="sm"
-                    variant="bordered"
-                    className=" w-full"
-                  >
+                  <Button size="sm" variant="bordered" className=" w-full">
                     {plan.cta}
                   </Button>
                 </header>
@@ -129,10 +126,10 @@ export default function HostingPlans() {
                     </span>
                   </li>
                   <li className="flex items-center justify-between">
-                    <span className="text-description-text">Email Accounts</span>
-                    <span className="font-medium text-text">
-                      {plan.email}
+                    <span className="text-description-text">
+                      Email Accounts
                     </span>
+                    <span className="font-medium text-text">{plan.email}</span>
                   </li>
                 </ul>
 
@@ -141,23 +138,26 @@ export default function HostingPlans() {
                   {featureRows
                     .filter((f) => f.key !== "storage" && f.key !== "email")
                     .map((f) => {
-                      const val = plan.features[f.key as keyof typeof plan.features];
+                      const val =
+                        plan.features[f.key as keyof typeof plan.features];
                       return (
                         <li
                           key={`${plan.id}-${f.key}`}
                           className="flex items-center justify-between rounded-md border border-muted px-3 py-2"
                         >
-                          <span className="text-description-text">{f.label}</span>
-                          <span className="ml-3">{val ? <Check /> : <Cross />}</span>
+                          <span className="text-description-text">
+                            {f.label}
+                          </span>
+                          <span className="ml-3">
+                            {val ? <Check /> : <Cross />}
+                          </span>
                         </li>
                       );
                     })}
                 </ul>
 
                 {/* Accent bar */}
-                <div
-                  className="h-1 w-16 rounded-full opacity-70 text-text-accent"
-                />
+                <div className="h-1 w-16 rounded-full opacity-70 text-text-accent" />
               </article>
             ))}
           </div>
@@ -184,9 +184,7 @@ export default function HostingPlans() {
                             {p.startingAtLabel}
                           </p>
                           <div className="flex items-baseline justify-center gap-1">
-                            <span className="text-2xl font-bold text-text-accent sm:text-3xl">
-                              {p.price}
-                            </span>
+                            <HostingPriceValue plan={p} />
                             <span className="text-xs text-description-text">
                               {p.priceSuffix}
                             </span>
@@ -217,21 +215,31 @@ export default function HostingPlans() {
                       {hostingPlans.map((plan) => {
                         if (row.key === "storage") {
                           return (
-                            <td key={`${plan.id}-storage`} className="text-center">
+                            <td
+                              key={`${plan.id}-storage`}
+                              className="text-center"
+                            >
                               {plan.storage}
                             </td>
                           );
                         }
                         if (row.key === "email") {
                           return (
-                            <td key={`${plan.id}-email`} className="text-center">
+                            <td
+                              key={`${plan.id}-email`}
+                              className="text-center"
+                            >
                               {plan.email}
                             </td>
                           );
                         }
-                        const has = plan.features[row.key as keyof typeof plan.features];
+                        const has =
+                          plan.features[row.key as keyof typeof plan.features];
                         return (
-                          <td key={`${plan.id}-${row.key}`} className="text-center">
+                          <td
+                            key={`${plan.id}-${row.key}`}
+                            className="text-center"
+                          >
                             <span className="inline-flex w-full items-center justify-center">
                               {has ? <Check /> : <Cross />}
                             </span>

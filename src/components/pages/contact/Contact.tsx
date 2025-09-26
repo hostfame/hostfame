@@ -25,7 +25,7 @@ const Contact = () => {
         }}
         
         description="Have a question, need support, or just want to chat? Our team is available 24/7 to make sure you get the help you need — quickly and easily."
-        heightClassName="h-fit lg:h-[550px] lg:max-h-[550px]"
+        // heightClassName="h-fit lg:h-[550px] lg:max-h-[550px]"
         ctaSection={<ContactCtaSection />}
         imageProps={{ width: 400, height: 400 }}
         imageComponent={<AnimationBanner />}

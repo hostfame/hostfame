@@ -57,7 +57,7 @@ const Home = () => {
         // }}
         description="Launch your site in minutes with unmatched speed, free backups, and real human help anytime you need it."
         imageProps={{ width: 400, height: 400 }}
-        heightClassName="h-fit xl:min-h-[580px] xl:max-h-[630px]"
+        // heightClassName="h-fit xl:min-h-[580px] xl:max-h-[630px]"
         ctaSection={<HomeCtaSection />}
         imageComponent={<AnimationBanner />}
         promoTemplate={<PromoTopBar />}

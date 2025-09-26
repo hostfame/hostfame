@@ -30,7 +30,7 @@ const Support = () => {
         cta={{
           text: "Claim Offer Now"
         }}
-        heightClassName="h-fit xl:h-[680px] xl:max-h-[680px]"
+        // heightClassName="h-fit xl:h-[680px] xl:max-h-[680px]"
         description="At Hostfame, we don't just offer support; we deliver solutions.Our expert team is available 24/7 to help you with any questions, big or small."
         ctaSection={<SupportCtaSection />}
         imageComponent={<AnimationBanner />}
