@@ -18,6 +18,7 @@ import WhiteButton from "@/components/shared/html/WhiteButton";
 import Link from "next/link";
 import Image from "next/image";
 import { webHostingPricingData } from "@/data/pricing.data";
+import WebhostingPricing from "./WebhostingPricing";
 
 const WebHosting = () => {
   return (
@@ -28,7 +29,7 @@ const WebHosting = () => {
           content: "Limited Offer: 90% OFF Hosting",
           className: " bg-white/10 backdrop-blur-md",
         }}
-        heightClassName="h-fit xl:h-[830px] xl:max-h-[830px]"
+        // heightClassName="h-fit xl:h-[830px] xl:max-h-[830px]"
         title={
           <>
             Get Ultra-Fast
@@ -44,7 +45,8 @@ const WebHosting = () => {
         description={
           <section className=" space-y-6">
             <p>
-              Perfect for local businesses, stores, and pros who need speed, uptime, and real human help.
+              Perfect for local businesses, stores, and pros who need speed,
+              uptime, and real human help.
             </p>
 
             <section className="flex gap-20">
@@ -55,7 +57,10 @@ const WebHosting = () => {
                   width={40}
                   height={40}
                 />
-                <p>24/7 Chat & Call <br />30 Day Refund</p>
+                <p>
+                  24/7 Chat & Call <br />
+                  30 Day Refund
+                </p>
               </section>
               <section className=" flex items-center gap-2">
                 <Image
@@ -64,7 +69,9 @@ const WebHosting = () => {
                   width={40}
                   height={40}
                 />
-                <p>One Click WordPress <br /> No Hassle. No Stress.</p>
+                <p>
+                  One Click WordPress <br /> No Hassle. No Stress.
+                </p>
               </section>
             </section>
           </section>
@@ -73,9 +80,7 @@ const WebHosting = () => {
       />
       {/* <HostingBenefits /> */}
 
-      <SectionWrapper className="my-12 lg:my-16">
-        <Pricing data={webHostingPricingData} toggleButton={false} />
-      </SectionWrapper>
+      <WebhostingPricing />
 
       <ReviewsSection />
 
@@ -112,11 +117,7 @@ const WebHosting = () => {
 function WebHostingCtaSection() {
   return (
     <section className="flex items-center gap-6">
-      <Link
-        href={"#"}
-        className=""
-      >
-
+      <Link href={"#"} className="">
         <WhiteButton className="">Get Started - Risk Free</WhiteButton>
       </Link>
     </section>

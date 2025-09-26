@@ -40,7 +40,7 @@ const ManagedHosting = () => {
         // }}
         description="Power your apps, websites, and projects with full root access, SSD storage, and 24/7 real human support."
         imageProps={{ width: 400, height: 400 }}
-        heightClassName="h-fit xl:h-[660px] xl:max-h-[660px]"
+        // heightClassName="h-fit xl:h-[660px] xl:max-h-[660px]"
         ctaSection={<VpsHostingCtaSection />}
       />
       <SectionWrapper className="my-12 lg:my-16">

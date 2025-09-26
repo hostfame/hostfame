@@ -29,6 +29,7 @@ export default function RootLayout({
           attribute={"data-theme"}
           // defaultTheme="light"
           storageKey="app-theme"
+          disableTransitionOnChange
         >
           <IpProvider>
             <Navbar />

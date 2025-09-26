@@ -66,7 +66,8 @@ export const Banner: React.FC<BannerProps> = ({
   className = "",
   containerClassName = "",
   lists = [],
-  heightClassName = "h-fit xl:h-[780px] xl:max-h-[780px]",
+  // heightClassName = "h-fit xl:h-[780px] xl:max-h-[780px]",
+  heightClassName = "h-fit",
   ctaSection,
   imageProps = {
     width: 600,

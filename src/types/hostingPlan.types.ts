@@ -19,6 +19,7 @@ export type HostingPlanProps = {
   name: string;
   startingAtLabel: string;
   price: string;
+  priceBdt: string;
   priceSuffix: string;
   cta: string;
   storage: string;
