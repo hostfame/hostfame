@@ -81,6 +81,7 @@ export function PricingCard({
               <PlainButton
                 variant={plan.isPopular ? "dark" : "bordered"}
                 size="md"
+                className="transition-transform duration-200 hover:scale-105"
               >
                 {plan.ctaText}
               </PlainButton>

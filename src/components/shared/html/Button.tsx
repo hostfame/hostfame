@@ -38,7 +38,7 @@ export const Button: React.FC<ButtonProps> = ({
       : variant === "light"
       ? "text-white bg-gradient-to-r from-teal-400 via-teal-500 to-teal-500 hover:from-teal-500 hover:via-teal-500 hover:to-teal-500 border-teal-300 hover:border-teal-400"
       : variant === "bordered"
-      ? "bg-transparent text-teal-600 border-primary-dark hover:text-white hover:bg-primary-dark "
+      ? "bg-transparent text-teal-600 border-primary hover:text-white hover:bg-primary "
       : "bg-transparent text-white border-white hover:bg-white hover:text-primary";
 
   const content = (
