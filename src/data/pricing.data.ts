@@ -2,7 +2,7 @@ import { PricingData } from "@/types/pricing.types";
 
 export const DOLLAR_TO_TK_CONVERTION_RATE = 121.69;
 
-export const webHostingPricingUsData: PricingData = {
+export const webHostingPricingData: PricingData = {
   title: "Choose Your Perfect Plan",
   yearlyDiscount: 0, // per-plan discounts shown as `offer` (% OFF)
   plans: [
@@ -993,7 +993,7 @@ export const webHostingPricingUsData: PricingData = {
   ],
 };
 
-export const wordpressHostingPricingUsData: PricingData = {
+export const wordpressHostingPricingData: PricingData = {
   title: "Plans Built for WordPress",
   yearlyDiscount: 0,
   plans: [
@@ -1932,7 +1932,7 @@ export const wordpressHostingPricingUsData: PricingData = {
   ],
 };
 
-export const manageHostingPricingUsData: PricingData = {
+export const manageHostingPricingData: PricingData = {
   title: "Choose Your Perfect Plan",
   yearlyDiscount: 76,
   plans: [
