@@ -2,7 +2,7 @@ import { PricingData } from "@/types/pricing.types";
 
 export const DOLLAR_TO_TK_CONVERTION_RATE = 121.69;
 
-export const webHostingPricingData: PricingData = {
+export const webHostingPricingUsData: PricingData = {
   title: "Choose Your Perfect Plan",
   yearlyDiscount: 0, // per-plan discounts shown as `offer` (% OFF)
   plans: [
@@ -19,10 +19,10 @@ export const webHostingPricingData: PricingData = {
       monthlyPrevPrice: 4.49,
       yearlyPrevPrice: 0.0,
 
-      monthlyPriceBdt: 179.0,
-      yearlyPriceBdt: 0.0,
-      monthlyPrevPriceBdt: 538.8,
-      yearlyPrevPriceBdt: 0.0,
+      // monthlyPriceBdt: 179.0,
+      // yearlyPriceBdt: 0.0,
+      // monthlyPrevPriceBdt: 538.8,
+      // yearlyPrevPriceBdt: 0.0,
       offer: 67, // % OFF
       ctaText: "Choose plan",
       renewalText: "36 month term + Free .COM",
@@ -331,10 +331,10 @@ export const webHostingPricingData: PricingData = {
       monthlyPrevPrice: 6.99,
       yearlyPrevPrice: 0.0,
 
-      monthlyPriceBdt: 298.8,
-      yearlyPriceBdt: 0.0,
-      monthlyPrevPriceBdt: 838.8,
-      yearlyPrevPriceBdt: 0.0,
+      // monthlyPriceBdt: 298.8,
+      // yearlyPriceBdt: 0.0,
+      // monthlyPrevPriceBdt: 838.8,
+      // yearlyPrevPriceBdt: 0.0,
       offer: 64,
       isPopular: true,
       ctaText: "Choose plan",
@@ -722,10 +722,10 @@ export const webHostingPricingData: PricingData = {
       monthlyPrevPrice: 9.99,
       yearlyPrevPrice: 0.0,
 
-      monthlyPriceBdt: 598.8,
-      yearlyPriceBdt: 0.0,
-      monthlyPrevPriceBdt: 1198.8,
-      yearlyPrevPriceBdt: 0.0,
+      // monthlyPriceBdt: 598.8,
+      // yearlyPriceBdt: 0.0,
+      // monthlyPrevPriceBdt: 1198.8,
+      // yearlyPrevPriceBdt: 0.0,
       offer: 50,
       ctaText: "Choose plan",
       renewalText: "36 month term + Free .COM",
@@ -1008,7 +1008,7 @@ export const webHostingPricingData: PricingData = {
   ],
 };
 
-export const wordpressHostingPricingData: PricingData = {
+export const wordpressHostingPricingUsData: PricingData = {
   title: "Plans Built for WordPress",
   yearlyDiscount: 0,
   plans: [
@@ -1947,7 +1947,7 @@ export const wordpressHostingPricingData: PricingData = {
   ],
 };
 
-export const manageHostingPricingData: PricingData = {
+export const manageHostingPricingUsData: PricingData = {
   title: "Choose Your Perfect Plan",
   yearlyDiscount: 76,
   plans: [
