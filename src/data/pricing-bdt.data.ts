@@ -13,11 +13,6 @@ export const webHostingPricingBdtData: PricingData = {
       icon: "/assets/pricing/starter-42.svg",
       currency: "$",
       // Prices aligned to table (199 tk/mo or 999 tk/yr). USD uses 1 USD = 120 tk.
-      // monthlyPrice: 1.66,
-      // yearlyPrice: 8.33, // 999 / 120
-      // monthlyPrevPrice: 2388,
-      // yearlyPrevPrice: 17.92, // renewal 2150 / 120
-
       monthlyPriceBdt: 199,
       yearlyPriceBdt: 999,
       monthlyPrevPriceBdt: 344,
@@ -184,11 +179,6 @@ export const webHostingPricingBdtData: PricingData = {
       icon: "/assets/pricing/pro.svg",
       currency: "$",
       // 349 tk/mo or 2985 tk/yr
-      // monthlyPrice: 2.91,
-      // yearlyPrice: 24.88, // 2985 / 120
-      // monthlyPrevPrice: 0.0,
-      // yearlyPrevPrice: 41.25, // renewal 4950 / 120
-
       monthlyPriceBdt: 349,
       yearlyPriceBdt: 2985,
       monthlyPrevPriceBdt: 582,
@@ -355,11 +345,6 @@ export const webHostingPricingBdtData: PricingData = {
       icon: "/assets/pricing/ultimate.svg",
       currency: "$",
       // 699 tk/mo or 4985 tk/yr
-      // monthlyPrice: 5.83,
-      // yearlyPrice: 41.54, // 4985 / 120
-      // monthlyPrevPrice: 0.0,
-      // yearlyPrevPrice: 66.25, // renewal 7950 / 120
-
       monthlyPriceBdt: 699,
       yearlyPriceBdt: 4985,
       monthlyPrevPriceBdt: 1398, // 699 / 0.5
