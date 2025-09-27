@@ -15,14 +15,14 @@ export const webHostingBanglaPricingData: PricingData = {
       // Prices aligned to table (199 tk/mo or 999 tk/yr). USD uses 1 USD = 120 tk.
       monthlyPrice: 1.66,
       yearlyPrice: 8.33, // 999 / 120
-      monthlyPrevPrice: 0.0,
+      monthlyPrevPrice: 2388,
       yearlyPrevPrice: 17.92, // renewal 2150 / 120
 
       monthlyPriceBdt: 199,
       yearlyPriceBdt: 999,
-      monthlyPrevPriceBdt: 0.0,
+      monthlyPrevPriceBdt: 2388,
       yearlyPrevPriceBdt: 2150,
-      offer: 54, // ≈ (2150-999)/2150
+      offer: 58,
       ctaText: "Choose plan",
       renewalText: "Renews at 2150 tk/year",
       features: [
@@ -191,9 +191,9 @@ export const webHostingBanglaPricingData: PricingData = {
 
       monthlyPriceBdt: 349,
       yearlyPriceBdt: 2985,
-      monthlyPrevPriceBdt: 0.0,
+      monthlyPrevPriceBdt: 582,
       yearlyPrevPriceBdt: 4950,
-      offer: 40, // ≈ (4950-2985)/4950
+      offer: 64,
       isPopular: true,
       ctaText: "Choose plan",
       renewalText: "Renews at 4950 tk/year",
@@ -362,9 +362,10 @@ export const webHostingBanglaPricingData: PricingData = {
 
       monthlyPriceBdt: 699,
       yearlyPriceBdt: 4985,
-      monthlyPrevPriceBdt: 0.0,
-      yearlyPrevPriceBdt: 7950,
-      offer: 37, // ≈ (7950-4985)/7950
+      monthlyPrevPriceBdt: 1398, // 699 / 0.5
+      yearlyPrevPriceBdt: 9970, // 4985 / 0.5
+      offer: 50,
+      // ≈ (7950-4985)/7950
       ctaText: "Choose plan",
       renewalText: "Renews at 7950 tk/year",
       features: [
