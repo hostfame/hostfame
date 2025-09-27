@@ -15,7 +15,7 @@ import SupportBanner from "@/components/shared/sections/SupportBanner";
 import WhiteButton from "@/components/shared/html/WhiteButton";
 import Link from "next/link";
 import { Pricing } from "@/components/shared/pricing/Pricing";
-import { wordpressHostingPricingData } from "@/data/pricing.data";
+import { wordpressHostingPricingUsData } from "@/data/pricing.data";
 
 const WordPressHosting = () => {
   return (
@@ -42,7 +42,7 @@ const WordPressHosting = () => {
         <WordPressHostingFeatures />
       </SectionWrapper>
       <SectionWrapper className="my-12 lg:my-16">
-        <Pricing data={wordpressHostingPricingData} toggleButton={true} />
+        <Pricing data={wordpressHostingPricingUsData} toggleButton={true} />
       </SectionWrapper>
       <HostingBenefits />
       <SectionWrapper>
