@@ -17,7 +17,7 @@ import WhyChooseWebHosting from "./why-choose-web-hosting/WhyChooseWebHosting";
 import WhiteButton from "@/components/shared/html/WhiteButton";
 import Link from "next/link";
 import Image from "next/image";
-import { webHostingPricingUsData } from "@/data/pricing.data";
+import { webHostingPricingData } from "@/data/pricing.data";
 import WebhostingPricing from "./WebhostingPricing";
 
 const WebHosting = () => {

@@ -11,7 +11,7 @@ import WhatAreSpecials from "@/components/shared/sections/WhatAreSpecials";
 import { Pricing } from "../../shared/pricing/Pricing";
 import FaqSection from "../hosting/faqs/FaqSection";
 import SupportBanner from "@/components/shared/sections/SupportBanner";
-import { manageHostingPricingUsData } from "@/data/pricing.data";
+import { manageHostingPricingData } from "@/data/pricing.data";
 
 const ManagedHosting = () => {
   return (
@@ -44,7 +44,7 @@ const ManagedHosting = () => {
         ctaSection={<VpsHostingCtaSection />}
       />
       <SectionWrapper className="my-12 lg:my-16">
-        <Pricing data={manageHostingPricingUsData} toggleButton={true}/>
+        <Pricing data={manageHostingPricingData} toggleButton={true}/>
       </SectionWrapper>
       <SectionWrapper className="my-12 md:my-16">
         <ManagedHostingThatGrows />
