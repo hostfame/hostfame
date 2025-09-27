@@ -30,7 +30,7 @@ const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
       <div className="flex gap-2 justify-center items-center text-text">
         <p className="line-through">
           {mainCurrency}
-          {formatPrice(prevPrice, { southAsianGrouping: isBD })}
+          {formatPrice(Number(prevPrice), { southAsianGrouping: isBD })}
         </p>
 
         <p className="border rounded-full px-4 py-1">{plan.offer}% OFF</p>
@@ -43,7 +43,7 @@ const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
             className={`text-5xl font-semibold tracking-tight ${plan?.isPopular ? "text-primary" : "text-text"
               }`}
           >
-            {formatPrice(price, { southAsianGrouping: isBD })}{" "}
+            {formatPrice(Number(price), { southAsianGrouping: isBD })}{" "}
             <span className="text-2xl font-light">/mo</span>
           </span>
         </div>
