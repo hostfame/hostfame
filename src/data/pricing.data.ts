@@ -18,11 +18,6 @@ export const webHostingPricingUsData: PricingData = {
       yearlyPrice: 0.0,
       monthlyPrevPrice: 4.49,
       yearlyPrevPrice: 0.0,
-
-      // monthlyPriceBdt: 179.0,
-      // yearlyPriceBdt: 0.0,
-      // monthlyPrevPriceBdt: 538.8,
-      // yearlyPrevPriceBdt: 0.0,
       offer: 67, // % OFF
       ctaText: "Choose plan",
       renewalText: "36 month term + Free .COM",
@@ -330,11 +325,6 @@ export const webHostingPricingUsData: PricingData = {
       yearlyPrice: 0.0,
       monthlyPrevPrice: 6.99,
       yearlyPrevPrice: 0.0,
-
-      // monthlyPriceBdt: 298.8,
-      // yearlyPriceBdt: 0.0,
-      // monthlyPrevPriceBdt: 838.8,
-      // yearlyPrevPriceBdt: 0.0,
       offer: 64,
       isPopular: true,
       ctaText: "Choose plan",
@@ -721,11 +711,6 @@ export const webHostingPricingUsData: PricingData = {
       yearlyPrice: 0.0,
       monthlyPrevPrice: 9.99,
       yearlyPrevPrice: 0.0,
-
-      // monthlyPriceBdt: 598.8,
-      // yearlyPriceBdt: 0.0,
-      // monthlyPrevPriceBdt: 1198.8,
-      // yearlyPrevPriceBdt: 0.0,
       offer: 50,
       ctaText: "Choose plan",
       renewalText: "36 month term + Free .COM",
