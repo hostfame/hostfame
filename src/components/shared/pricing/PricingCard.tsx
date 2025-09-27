@@ -115,15 +115,15 @@ export function PricingCard({
                     return (
                       <div
                         data-tooltip-id={id}
-                        data-tooltip-content="Hello world asdf asdf as dfasdf asdf asf dasdf asdf  asd asdf asdf asfd asdf asdf asdf asdf asdf aswgd saf asdf asf sf saf asf !"
+                        data-tooltip-content={feature.description}
                         key={index}
                         className="flex items-center gap-3 group/feature"
                       >
-                        {/* <Tooltip
+                        <Tooltip
                           id={id}
                           place="right"
-                          className=" max-w-[200px] text-wrap  break-words  !opacity-100 !bg-opacity-100   !bg-gradient-to-b from-primary to-primary-dark  !rounded-xl"
-                        /> */}
+                          className=" max-w-[200px] text-wrap break-words !opacity-100 !bg-opacity-100 !bg-gradient-to-b from-primary-light to-primary !rounded-xl"
+                        />
                         <div
                           className={`p-1 rounded-full transition-all duration-200 ${
                             feature.included
