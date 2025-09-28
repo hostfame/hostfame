@@ -21,7 +21,7 @@ const WhiteButton: React.FC<WhiteButtonProps> = ({
 }) => {
   // Merge base styles + user provided ones
   const baseStyles =
-    "flex justify-center text-black text-gray-800  items-center px-7 bg-white py-3.5 rounded-full transition  disabled:opacity-50 disabled:cursor-not-allowed  gap-x-1 hover:bg-transparent border duration-500 border-white hover:text-white w-fit font-semibold";
+    "flex justify-center text-black text-gray-800  items-center px-7 bg-white py-3.5 rounded-full transition  disabled:opacity-50 disabled:cursor-not-allowed  gap-x-1 hover:bg-transparent duration-500 hover:text-white w-fit font-semibold";
 
   const combinedClassName = `${baseStyles} ${className}`.trim();
 
