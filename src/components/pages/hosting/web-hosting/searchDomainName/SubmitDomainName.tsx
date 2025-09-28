@@ -28,7 +28,7 @@ const SubmitDomainName = () => {
       />
       <button
         type="submit"
-        className="cursor-pointer flex items-center justify-center cursor-pointer gap-1 bg-gradient-to-r from-primary-light via-primary-light to-primary text-white font-semibold text-lg lg:text-xl px-4 sm:px-7 md:px-9 py-3 sm:py-4 rounded-l-none rounded-r-xl hover:opacity-90 transition"
+        className="flex items-center justify-center gap-1 bg-gradient-to-r from-primary-light via-primary-light to-primary text-white font-semibold text-lg lg:text-xl px-4 sm:px-7 md:px-9 py-3 sm:py-4 rounded-l-none rounded-r-xl hover:opacity-90 transition"
       >
         <IoSearch size={20}/> Search
       </button>

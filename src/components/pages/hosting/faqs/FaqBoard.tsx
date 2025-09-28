@@ -46,7 +46,7 @@ const FaqBoard: React.FC<Props> = ({
             <li key={c.id} className="transition-all">
               <button
                 onClick={() => setActive(c.id)}
-                className={`cursor-pointer w-full rounded-2xl px-5 py-4 text-left shadow-sm ring-1 ring-black/5 transition-all duration-300 ease-out
+                className={`w-full rounded-2xl px-5 py-4 text-left shadow-sm ring-1 ring-black/5 transition-all duration-300 ease-out
                 flex items-center gap-4
                 ${
                   selected

@@ -75,7 +75,7 @@ export default function DomainSearchBox({
         {/* Submit */}
         <button
           type="submit"
-          className="cursor-pointer h-12 rounded-xl bg-primary font-semibold text-white shadow-sm transition hover:brightness-110 active:brightness-95 focus:outline-none focus:ring-2 focus:ring-primary/60"
+          className="h-12 rounded-xl bg-primary font-semibold text-white shadow-sm transition hover:brightness-110 active:brightness-95 focus:outline-none focus:ring-2 focus:ring-primary/60"
           aria-label={buttonLabel}
         >
           {buttonLabel}

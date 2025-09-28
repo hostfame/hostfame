@@ -66,7 +66,7 @@ function FallbackToggle({
     <div className="flex rounded-full border border-primary p-1">
       <button
         onClick={() => onToggle("monthly")}
-        className={` cursor-pointer px-6 py-2 rounded-full font-semibold transition-all duration-300 ${billingPeriod === "monthly"
+        className={` px-6 py-2 rounded-full font-semibold transition-all duration-300 ${billingPeriod === "monthly"
           ? "bg-primary text-white"
           : "text-text"
           }`}
@@ -75,7 +75,7 @@ function FallbackToggle({
       </button>
       <button
         onClick={() => onToggle("yearly")}
-        className={` cursor-pointer px-6 py-2 rounded-full font-semibold transition-all duration-300 ${billingPeriod === "yearly"
+        className={` px-6 py-2 rounded-full font-semibold transition-all duration-300 ${billingPeriod === "yearly"
           ? "bg-primary text-white"
           : "text-text"
           }`}

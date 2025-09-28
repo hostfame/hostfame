@@ -29,7 +29,7 @@ export default function ToggleTheme({
       <button
         aria-label="Toggle theme"
         type="button"
-        className="cursor-pointer p-2 rounded-full border border-gray-400/50 dark:border-gray-600/60 text-gray-800 dark:text-gray-200"
+        className="p-2 rounded-full border border-gray-400/50 dark:border-gray-600/60 text-gray-800 dark:text-gray-200"
         disabled
       >
         <FiMoon className="w-5 h-5" />
@@ -45,7 +45,7 @@ export default function ToggleTheme({
       type="button"
       onClick={() => setTheme(isDark ? "light" : "dark")}
       title={`Switch to ${isDark ? "light" : "dark"} mode`}
-      className={`p-2 rounded-full border transition cursor-pointer 
+      className={`p-2 rounded-full border transition 
         border-border-dark-gray/70 
         text-text ${className}`}
     >

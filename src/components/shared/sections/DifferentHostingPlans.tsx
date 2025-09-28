@@ -58,14 +58,14 @@ export default function DifferentHostingPlans({
           <button
             onClick={() => scroll("left")}
             className=" bg-toggle/90
-            0 border border-border-light-gray h-12 w-12 flex items-center justify-center rounded-full shadow hover:bg-toggle text-toggle-text transition cursor-pointer"
+            0 border border-border-light-gray h-12 w-12 flex items-center justify-center rounded-full shadow hover:bg-toggle text-toggle-text transition "
           >
             <FaAngleLeft size={20} />
           </button>
           <button
             onClick={() => scroll("right")}
             className="bg-toggle/90
-            0 border border-border-light-gray h-12 w-12 flex items-center justify-center rounded-full shadow hover:bg-toggle text-toggle-text transition cursor-pointer"
+            0 border border-border-light-gray h-12 w-12 flex items-center justify-center rounded-full shadow hover:bg-toggle text-toggle-text transition "
           >
             <FaAngleRight size={20} />
           </button>
