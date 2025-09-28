@@ -56,7 +56,7 @@ export default function DomainHero() {
             />
             <button
               type="button"
-              className="cursor-pointer absolute right-2 top-1/2 inline-flex -translate-y-1/2 items-center gap-2 rounded-full bg-dark px-5 py-2.5 text-sm font-semibold text-white shadow-md transition hover:opacity-90 focus-visible:outline-none"
+              className="absolute right-2 top-1/2 inline-flex -translate-y-1/2 items-center gap-2 rounded-full bg-dark px-5 py-2.5 text-sm font-semibold text-white shadow-md transition hover:opacity-90 focus-visible:outline-none"
             >
               <FiSearch aria-hidden className="text-base" />
               <span>{data.cta}</span>

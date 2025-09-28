@@ -24,7 +24,7 @@ export const PlainButton: React.FC<PlainButtonProps> = ({
   className = "",
 }) => {
   const base =
-    "inline-flex items-center justify-center gap-2 relative font-semibold rounded-xl cursor-pointer duration-500 transition shadow-lg border-2 ";
+    "inline-flex items-center justify-center gap-2 relative font-semibold rounded-xl duration-500 transition shadow-lg border-2 ";
 
   const sizeClasses = {
     sm: "px-6 py-2 text-lg",

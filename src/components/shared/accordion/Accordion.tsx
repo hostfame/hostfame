@@ -81,7 +81,7 @@ export const AccordionItem: React.FC<{
     <div className="px-4">
       <button
         onClick={() => onToggle(id)}
-        className="cursor-pointer flex w-full items-center justify-between gap-4 py-5 transition-colors duration-300 hover:text-teal-700"
+        className="flex w-full items-center justify-between gap-4 py-5 transition-colors duration-300 hover:text-teal-700"
         aria-expanded={isOpen}
         aria-controls={panelId}
         id={triggerId}

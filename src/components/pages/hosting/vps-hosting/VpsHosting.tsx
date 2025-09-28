@@ -95,7 +95,7 @@ export function VpsHostingCtaSection() {
       <WhiteButton className="!rounded">View Plan</WhiteButton>
       <Link
         href={"#"}
-        className="flex text-lg items-center text-center max-lg:underline  lg:gap-x-2 cursor-pointer text-white font-bold underline"
+        className="flex text-lg items-center text-center max-lg:underline  lg:gap-x-2 text-white font-bold underline"
       >
         Starting @ $19.99/mo
       </Link>

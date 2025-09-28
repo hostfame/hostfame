@@ -25,8 +25,8 @@ const MigrateYourSite = () => {
           {WebHostingData.migrateYourSiteSection.description}
         </p>
 
-        <Link href={WebHostingData.migrateYourSiteSection.buttonLink} className="bg-gradient-to-r from-teal-500 to-teal-700 hover:from-teal-600 hover:to-teal-800 text-white py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg shadow-lg transition-colors duration-200 text-sm sm:text-base md:text-base w-full sm:w-auto inline-block text-center cursor-pointer font-bold">
-          <button className="cursor-pointer ">{WebHostingData.migrateYourSiteSection.buttonText}</button>
+        <Link href={WebHostingData.migrateYourSiteSection.buttonLink} className="bg-gradient-to-r from-teal-500 to-teal-700 hover:from-teal-600 hover:to-teal-800 text-white py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg shadow-lg transition-colors duration-200 text-sm sm:text-base md:text-base w-full sm:w-auto inline-block text-center font-bold">
+          <button className="">{WebHostingData.migrateYourSiteSection.buttonText}</button>
         </Link>
       </section>
     </section>

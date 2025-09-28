@@ -157,7 +157,7 @@ export function PricingCard({
           <div className="mt-auto">
             <button
               onClick={onToggleExpand}
-              className="cursor-pointer w-full h-12 flex justify-center items-center 
+              className="w-full h-12 flex justify-center items-center 
                    rounded-2xl font-medium transition-all duration-300 
                    hover:scale-105 text-dark-description-text"
             >

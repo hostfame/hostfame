@@ -80,7 +80,7 @@ function Tile({ children }: { children: React.ReactNode }) {
         group relative overflow-hidden
         rounded-xl
         bg-gradient-to-r from-primary via-primary-light to-primary-light
-        hover:-translate-y-2 duration-300 cursor-pointer
+        hover:-translate-y-2 duration-300 
         p-5
         transition-transform
       "

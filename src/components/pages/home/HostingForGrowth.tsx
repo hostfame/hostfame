@@ -45,7 +45,7 @@ const HostingForGrowth = ({ data }: { data: HostingPlansProps }) => {
                   {plan.title}
                 </h3>
                 <p>{plan.description}</p>
-                <button className="cursor-pointer mt-auto inline-block text-sm font-medium group-hover:text-primary">
+                <button className="mt-auto inline-block text-sm font-medium group-hover:text-primary">
                   {plan.linkBtn} →
                 </button>
               </Link>

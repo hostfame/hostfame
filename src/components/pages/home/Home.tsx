@@ -154,7 +154,7 @@ function HomeCtaSection() {
         <WhiteButton>Start My Hosting Now</WhiteButton>
         <Link
           href={"#"}
-          className="flex  text-lg items-center text-center max-lg:underline lg:gap-x-2 cursor-pointer text-white font-bold"
+          className="flex  text-lg items-center text-center max-lg:underline lg:gap-x-2 text-white font-bold"
         >
           Trusted By Agencies & Startups
           <BsArrowRightShort size={24} className="hidden lg:block" />
