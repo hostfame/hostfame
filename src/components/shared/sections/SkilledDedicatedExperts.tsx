@@ -156,7 +156,7 @@ const SkilledDedicatedExperts = () => {
                 with our specialists right now.
               </p>
               <button
-                className="inline-flex items-center justify-center rounded-md border border-primary bg-primary px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-90 text-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
+                className="cursor-pointer inline-flex items-center justify-center rounded-md border border-primary bg-primary px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-90 text-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60"
                 aria-label={skilledExpertsData.cta}
                 type="button"
               >
