@@ -27,7 +27,7 @@ const CloseX: React.FC<CloseXProps> = ({
       type="button"
       aria-label={label}
       onClick={handleClick}
-      className={`inline-flex h-7 w-7 items-center justify-center rounded-md hover:bg-white/15 focus:outline-none  ${className}`}
+      className={`cursor-pointer inline-flex h-7 w-7 items-center justify-center rounded-md hover:bg-white/15 focus:outline-none  ${className}`}
     >
       <IoClose className="h-5 w-5 text-white" />
     </button>

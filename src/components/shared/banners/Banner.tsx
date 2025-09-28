@@ -81,7 +81,7 @@ export const Banner: React.FC<BannerProps> = ({
 }) => {
   return (
     <section
-      className={`banner-bg relative  justify-center -mt-[1px] items-center w-full  text-white bg-no-repeat overflow-hidden ${promoTemplate ? " " : ""
+      className={`banner-bg relative  justify-center -mt-[1px] items-center w-full text-white bg-no-repeat overflow-hidden ${promoTemplate ? " " : ""
         } ${heightClassName} ${className}`}
       style={{
         backgroundPosition: "left center, center center",

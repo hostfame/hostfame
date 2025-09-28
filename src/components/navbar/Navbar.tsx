@@ -90,7 +90,7 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
                   {item.subItems ? (
                     <>
                       <button
-                        className={`flex items-center px-3 py-2 text-sm font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 ${item.subItems.some(
+                        className={`cursor-pointer flex items-center px-3 py-2 text-sm font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 ${item.subItems.some(
                           (subItem) => subItem.href === pathname
                         )
                           ? activeClassName
@@ -172,7 +172,7 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
               />
               <button
                 onClick={toggleMenu}
-                className="text-text hover:text-teal-600 p-2 transition-colors duration-200"
+                className="cursor-pointer text-text hover:text-teal-600 p-2 transition-colors duration-200"
               >
                 {isOpen ? (
                   <X className="h-6 w-6 text-text" />
@@ -205,7 +205,7 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
                   <>
                     <button
                       onClick={() => toggleDropdown(item.label)}
-                      className={`w-full flex items-center justify-between px-3 py-3 text-base font-medium rounded-md transition-colors duration-300 ${item.subItems.some(
+                      className={`cursor-pointer w-full flex items-center justify-between px-3 py-3 text-base font-medium rounded-md transition-colors duration-300 ${item.subItems.some(
                         (subItem) => subItem.href === pathname
                       )
                         ? "text-teal-600"

@@ -29,7 +29,7 @@ export default function ToggleTheme({
       <button
         aria-label="Toggle theme"
         type="button"
-        className="p-2 rounded-full border border-gray-400/50 dark:border-gray-600/60 text-gray-800 dark:text-gray-200"
+        className="cursor-pointer p-2 rounded-full border border-gray-400/50 dark:border-gray-600/60 text-gray-800 dark:text-gray-200"
         disabled
       >
         <FiMoon className="w-5 h-5" />
