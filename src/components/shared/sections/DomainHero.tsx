@@ -1,8 +1,8 @@
-// app/components/DomainHero.tsx
 import Link from "next/link";
 import { FiSearch } from "react-icons/fi";
+import DualPricing from "./domain-hero/DualPricing";
 
-type PopularTLD = { tld: string; price: string; href?: string };
+type PopularTLD = { tld: string; price: string; pricebdt: string; href?: string };
 
 const data: {
   title: string;
@@ -18,10 +18,10 @@ const data: {
   cta: "Search",
   popularLabel: "Popular domains",
   popular: [
-    { tld: ".COM", price: "$6.99", href: "#" },
-    { tld: ".NET", price: "$9.99", href: "#" },
-    { tld: ".INFO", price: "$5.19", href: "#" },
-    { tld: ".ORG", price: "$7.79", href: "#" },
+    { tld: ".COM", price: "$6.99", pricebdt: "৳699", href: "#" },
+    { tld: ".NET", price: "$9.99", pricebdt: "৳999", href: "#" },
+    { tld: ".INFO", price: "$5.19", pricebdt: "৳519", href: "#" },
+    { tld: ".ORG", price: "$7.79", pricebdt: "৳779", href: "#" },
   ],
 };
 
@@ -79,7 +79,7 @@ export default function DomainHero() {
                     className="group inline-flex w-[132px] hover:w-[153px]  items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-sm text-white backdrop-blur transition-all duration-300 ease-in-out hover:bg-white/20"
                   >
                     <span className="font-semibold">{item.tld}</span>
-                    <span className="text-white text-nowrap">only {item.price}</span>
+                    Only<DualPricing price={item.price} pricebdt={item.pricebdt}/>
                     <FiSearch className="text-xs absolute  group-hover:static opacity-0 scale-75 transition-all duration-300 ease-in-out group-hover:opacity-70 group-hover:scale-100" />
                   </Link>
                 </li>

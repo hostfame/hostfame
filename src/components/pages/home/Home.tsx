@@ -90,9 +90,11 @@ const Home = () => {
       <SectionWrapper className="my-12 lg:my-16">
         <WhyChooseHostFame />
       </SectionWrapper>
+
       <SectionWrapper className="my-12 lg:my-16">
         <HostingPlan />
       </SectionWrapper>
+      
       <SectionWrapper className="my-12 lg:my-16">
         <ExperienceHostfameAdvantage />
       </SectionWrapper>

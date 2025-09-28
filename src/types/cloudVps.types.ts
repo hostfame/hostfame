@@ -8,6 +8,7 @@ export type CloudVpsProps = {
   headline: string;
   planLabel: string;
   priceMonthly: string;
+  priceMonthlyBdt: string;
   ctaText: string;
   features: Feature[];
 };

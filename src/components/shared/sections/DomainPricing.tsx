@@ -2,6 +2,7 @@ import CenteredSectionHeader from "@/components/shared/headers/CenteredSectionHe
 import Image from "next/image";
 import { Button } from "../html/Button";
 import { domainPricingData } from "@/data/domainPricing.data";
+import DualPricing from "./domain-hero/DualPricing";
 
 export default function DomainPricing() {
   return (
@@ -34,13 +35,9 @@ export default function DomainPricing() {
                 <div className="text-center">
                   <div className="flex justify-center items-baseline gap-2">
                     {d.oldPrice && (
-                      <span className="text-base text-gray-400 line-through">
-                        {d.oldPrice}
-                      </span>
+                      <DualPricing price={d.oldPrice} pricebdt={String(d.oldPriceBdt)} className="text-base !text-gray-400 line-through" />
                     )}
-                    <span className="text-xl font-bold text-gray-900">
-                      {d.price}
-                    </span>
+                    <DualPricing price={d.price} pricebdt={d.priceBdt} className="text-xl font-bold !text-gray-900" />
                   </div>
                 </div>
 

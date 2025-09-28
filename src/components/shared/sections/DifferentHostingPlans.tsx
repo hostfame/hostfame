@@ -5,6 +5,7 @@ import { useRef } from "react";
 import CenteredSectionHeader from "../headers/CenteredSectionHeader";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { FaAngleLeft, FaAngleRight, FaArrowRight } from "react-icons/fa";
+import { useIpProviderContextValue } from "@/providers/IpProvider";
 
 interface DifferentHostingPlansProps {
   title: string;
@@ -17,6 +18,7 @@ interface HostingPlanFeatureProps {
   title: string;
   description: string;
   price: string;
+  priceBdt: string;
   buttonText: string;
   link: string;
   icon: string;
@@ -27,6 +29,8 @@ export default function DifferentHostingPlans({
 }: {
   data: DifferentHostingPlansProps;
 }) {
+  const countryCode = useIpProviderContextValue();
+
   const sliderRef = useRef<HTMLDivElement>(null);
 
   const scroll = (direction: "left" | "right") => {
@@ -114,15 +118,15 @@ export default function DifferentHostingPlans({
               </div>
               <div className=" space-y-3">
                 <p className="font-semibold  group-hover:text-white">
-                {plan.price}
-              </p>
-              <Link
-                href={plan.link}
-                className="flex items-center justify-center gap-2 mt-auto w-full text-center py-2 px-4 rounded-lg bg-primary text-white group-hover:bg-white group-hover:text-primary font-medium transition"
-              >
-                {plan.buttonText}
-                <FaArrowRight size={16} />
-              </Link>
+                  {countryCode === "BD" ? plan.priceBdt : plan.price}
+                </p>
+                <Link
+                  href={plan.link}
+                  className="flex items-center justify-center gap-2 mt-auto w-full text-center py-2 px-4 rounded-lg bg-primary text-white group-hover:bg-white group-hover:text-primary font-medium transition"
+                >
+                  {plan.buttonText}
+                  <FaArrowRight size={16} />
+                </Link>
               </div>
             </section>
           </div>

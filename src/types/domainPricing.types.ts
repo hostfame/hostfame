@@ -2,7 +2,9 @@ export type DomainItem = {
   tld: string;
   blurb: string;
   price: string;
+  priceBdt: string;
   oldPrice?: string;
+  oldPriceBdt?: string;
   registerUrl?: string;
   transferUrl?: string;
   src: string;

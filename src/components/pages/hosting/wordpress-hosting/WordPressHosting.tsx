@@ -16,6 +16,7 @@ import WhiteButton from "@/components/shared/html/WhiteButton";
 import Link from "next/link";
 import { Pricing } from "@/components/shared/pricing/Pricing";
 import { wordpressHostingPricingData } from "@/data/pricing.data";
+import DualPricing from "@/components/shared/sections/domain-hero/DualPricing";
 
 const WordPressHosting = () => {
   return (
@@ -70,7 +71,7 @@ function WordPressHostingCtaSection() {
         href={"#"}
         className="flex text-lg items-center text-center max-lg:underline lg:gap-x-2 text-white font-bold underline"
       >
-        Starting @ $19.99/mo
+        Starting @ <DualPricing price="$19.99" pricebdt="৳1,999"/>/mo
       </Link>
     </section>
   );

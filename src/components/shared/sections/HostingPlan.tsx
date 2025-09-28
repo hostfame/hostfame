@@ -39,7 +39,7 @@ const Dot = () => (
 const HeaderImage = ({ width, height }: { width: string; height: string }) => {
   return (
     <div
-      className={`relative ${width} ${height} shrink-0 overflow-hidden rounded-xl ring-1 ring-border-light-gray`}
+      className={`relative ${width} ${height} shrink-0 overflow-hidden rounded-xl `}
     >
       <Image
         src="/assets/pricing-image.svg"
@@ -162,96 +162,108 @@ export default function HostingPlans() {
             ))}
           </div>
 
-          {/* Comparison table (md+) */}
-          <div className="hidden lg:block border-t border-border-light-gray px-4 pb-6">
+          {/* Comparison (md+) — table-less, section-based grid */}
+          <section className="hidden lg:block border-t border-border-light-gray px-4 pb-6">
             <div className="overflow-x-auto">
-              <table className="min-w-full text-sm text-center">
-                <thead>
-                  <tr className="[&>th]:py-3 [&>th]:pr-6">
-                    <div className=" flex justify-center items-center py-4">
-                      <HeaderImage width={"w-56"} height={"h-56"} />
-                    </div>
-                    {hostingPlans.map((p) => (
-                      <th
-                        key={`th-${p.id}`}
-                        className="font-semibold text-text text-center"
-                      >
-                        <div className="space-y-2 flex flex-col items-center justify-center">
-                          <h3 className="text-base font-semibold text-text-accent">
-                            {p.name}
-                          </h3>
-                          <p className="text-xs text-description-text">
-                            {p.startingAtLabel}
-                          </p>
-                          <div className="flex items-baseline justify-center gap-1">
-                            <HostingPriceValue plan={p} />
-                            <span className="text-xs text-description-text">
-                              {p.priceSuffix}
-                            </span>
-                          </div>
-                          <Button
-                            size="sm"
-                            variant="bordered"
-                            className="w-full"
-                          >
-                            {p.cta}
-                          </Button>
-                        </div>
-                      </th>
-                    ))}
-                  </tr>
-                </thead>
+              {/* Header row */}
+              <section
+                aria-label="Plans header"
+                className="min-w-full"
+                style={{
+                  display: "grid",
+                  gridTemplateColumns: `200px repeat(${hostingPlans.length}, minmax(200px,1fr))`,
+                }}
+              >
+                {/* Top-left illustration cell */}
+                <div className="flex justify-center items-center py-4 pr-6">
+                  <HeaderImage width={"w-56"} height={"h-56"} />
+                </div>
 
-                <tbody className="align-top text-text/90">
-                  {featureRows.map((row) => (
-                    <tr
-                      key={`row-${row.key}`}
-                      className="[&>td]:py-3 [&>td]:pr-6 border-t border-border-light-gray"
-                    >
-                      {/* Feature label centered now */}
-                      <td className="whitespace-nowrap text-text text-center font-medium">
-                        {row.label}
-                      </td>
-                      {hostingPlans.map((plan) => {
-                        if (row.key === "storage") {
-                          return (
-                            <td
-                              key={`${plan.id}-storage`}
-                              className="text-center"
-                            >
-                              {plan.storage}
-                            </td>
-                          );
-                        }
-                        if (row.key === "email") {
-                          return (
-                            <td
-                              key={`${plan.id}-email`}
-                              className="text-center"
-                            >
-                              {plan.email}
-                            </td>
-                          );
-                        }
-                        const has =
-                          plan.features[row.key as keyof typeof plan.features];
-                        return (
-                          <td
-                            key={`${plan.id}-${row.key}`}
-                            className="text-center"
-                          >
-                            <span className="inline-flex w-full items-center justify-center">
-                              {has ? <Check /> : <Cross />}
-                            </span>
-                          </td>
-                        );
-                      })}
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+                {/* Plan header cells */}
+                {hostingPlans.map((p, i) => (
+                  <section
+                    key={`plan-head-${p.id}`}
+                    className="py-4 pr-6 flex flex-col items-center justify-center"
+                    style={{ gridColumn: `${i + 2} / span 1` }}
+                  >
+                    <div className="space-y-2 flex flex-col items-center justify-center">
+                      <h3 className="text-base font-semibold text-text-accent">
+                        {p.name}
+                      </h3>
+                      <p className="text-xs text-description-text">
+                        {p.startingAtLabel}
+                      </p>
+                      <div className="flex items-baseline justify-center gap-1">
+                        <HostingPriceValue plan={p} />
+                        <span className="text-xs text-description-text">
+                          {p.priceSuffix}
+                        </span>
+                      </div>
+                      <Button size="sm" variant="bordered" className="w-full">
+                        {p.cta}
+                      </Button>
+                    </div>
+                  </section>
+                ))}
+              </section>
+
+              {/* Feature rows */}
+              {featureRows.map((row) => (
+                <section
+                  key={`row-${row.key}`}
+                  className="min-w-full border-t border-border-light-gray"
+                  style={{
+                    display: "grid",
+                    gridTemplateColumns: `200px repeat(${hostingPlans.length}, minmax(200px,1fr))`,
+                  }}
+                >
+                  {/* Feature label cell */}
+                  <div className="py-3 pr-6 flex items-center justify-center text-center text-text font-medium">
+                    {row.label}
+                  </div>
+
+                  {/* Feature value cells per plan */}
+                  {hostingPlans.map((plan, i) => {
+                    if (row.key === "storage") {
+                      return (
+                        <div
+                          key={`${plan.id}-storage`}
+                          className="py-3 pr-6 text-center text-text/90"
+                          style={{ gridColumn: `${i + 2} / span 1` }}
+                        >
+                          {plan.storage}
+                        </div>
+                      );
+                    }
+                    if (row.key === "email") {
+                      return (
+                        <div
+                          key={`${plan.id}-email`}
+                          className="py-3 pr-6 text-center text-text/90"
+                          style={{ gridColumn: `${i + 2} / span 1` }}
+                        >
+                          {plan.email}
+                        </div>
+                      );
+                    }
+                    const has =
+                      plan.features[row.key as keyof typeof plan.features];
+                    return (
+                      <div
+                        key={`${plan.id}-${row.key}`}
+                        className="py-3 pr-6"
+                        style={{ gridColumn: `${i + 2} / span 1` }}
+                      >
+                        <span className="inline-flex w-full items-center justify-center">
+                          {has ? <Check /> : <Cross />}
+                        </span>
+                      </div>
+                    );
+                  })}
+                </section>
+              ))}
             </div>
-          </div>
+          </section>
         </div>
       </div>
     </section>

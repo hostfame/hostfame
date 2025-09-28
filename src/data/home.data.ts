@@ -9,6 +9,7 @@ export const differentHostingPlansData = {
       description:
         "Reliable and affordable for personal sites, blogs, and portfolios.",
       price: "Starting from $1.99/month",
+      priceBdt: "Starting from ৳199/month",
       buttonText: "View Web Plan",
       link: "/web-hosting",
       icon: "/assets/home/web-hosting.png"
@@ -19,6 +20,7 @@ export const differentHostingPlansData = {
       description:
         "1-click install, free backups, and fast speeds — built for WordPress.",
       price: "Starting from $1.49/month",
+      priceBdt: "Starting from ৳149/month",
       buttonText: "WordPress Plan",
       link: "/wordpress-hosting",
       icon: "/assets/home/wordpress-hosting.png"
@@ -29,6 +31,7 @@ export const differentHostingPlansData = {
       description:
         "Worry-free hosting with updates, security, and support handled for you.",
       price: "Starting from $2.95/month",
+      priceBdt: "Starting from ৳295/month",
       buttonText: "Managed Plan",
       link: "/managed-hosting",
       icon: "/assets/home/managed-hosting.png"
@@ -39,6 +42,7 @@ export const differentHostingPlansData = {
       description:
         "Dedicated resources and full control, ideal for developers and high-traffic sites.",
       price: "Starting from $2.95/month",
+      priceBdt: "Starting from ৳295/month",
       buttonText: "VPS Details",
       link: "/vps-hosting",
       icon: "/assets/home/vps-hosting.png"
