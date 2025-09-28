@@ -24,7 +24,7 @@ export default function DomainCheckerBanner() {
     <section className="relative isolate -mt-[1px]">
       <Navbar isTransparent/>
       {/* Layered teal header */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary-dark via-primary to-primary/80" />
+      <div className="absolute inset-0 -z-10 banner-bg " />
 
       {/* Decorative orbs / lines */}
       <div
