@@ -25,6 +25,9 @@ const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
   const price = billingPeriod === "yearly" ? yearlyPrice : monthlyPrice;
   const prevPrice = billingPeriod === "yearly" ? yearlyPrevPrice : monthlyPrevPrice;
 
+  const renewalText = isBD
+    ? (billingPeriod === "monthly") ? plan.renewalTextMonthlyBdt : plan.renewalTextYearlyBdt
+    : (billingPeriod === "monthly") ? plan.renewalTextMonthly : plan.renewalTextYearly
   return (
     <>
       {!isBD && <div className="flex gap-2 justify-center items-center text-text">
@@ -51,10 +54,8 @@ const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
 
       <div className="w-full flex flex-col space-y-2">
         {children}
-        {plan.renewalText && (
-          <p className="text-text">
-            {isBD ? plan.renewalTextBdt || plan.renewalText : plan.renewalText}
-          </p>
+        {(plan.renewalTextMonthly || plan.renewalTextYearly || plan.renewalTextMonthlyBdt || plan.renewalTextYearlyBdt) && (
+          <p>{renewalText}</p>
         )}
       </div>
     </>
