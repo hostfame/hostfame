@@ -2,7 +2,7 @@ import { PricingData } from "@/types/pricing.types";
 
 export const webHostingPricingBdtData: PricingData = {
   title: "Choose Your Perfect Plan",
-  yearlyDiscount: 0, // per-plan discounts shown as `offer` (% OFF)
+  yearlyDiscount: 58, // per-plan discounts shown as `offer` (% OFF)
   plans: [
     // ——— STARTER ———
     {
