@@ -133,7 +133,7 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
                     <Link
                       href={item.href!}
                       className={`px-3 py-2 text-sm font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 ${item.href === pathname
-                        ? "text-teal-300"
+                        ? `${!isTransparent ? "text-teal-600" : "text-white"}`
                         : `${textClass} ${textHoverClass}`
                         }`}
                     >
