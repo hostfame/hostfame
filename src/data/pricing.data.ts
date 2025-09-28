@@ -21,6 +21,7 @@ export const webHostingPricingData: PricingData = {
       offer: 67, // % OFF
       ctaText: "Choose plan",
       renewalText: "36 month term + Free .COM",
+      guarantee: "30 Days Money Back guarantee",
       features: [
         {
           "title": "Features",
@@ -306,6 +307,7 @@ export const webHostingPricingData: PricingData = {
       isPopular: true,
       ctaText: "Choose plan",
       renewalText: "36 month term + Free .COM",
+      guarantee: "30 Days Money Back guarantee",
       "features": [
         {
           "title": "Features",
@@ -590,6 +592,7 @@ export const webHostingPricingData: PricingData = {
     //   guarantee: "30-Day Money-Back Guarantee",
     //   ctaText: "Choose plan",
     //   renewalText: "36 month term + Free .COM",
+    //   guarantee: "30 Days Money Back guarantee",
     //   features: [
     //     {
     //       title: "Features",
@@ -690,6 +693,7 @@ export const webHostingPricingData: PricingData = {
       offer: 50,
       ctaText: "Choose plan",
       renewalText: "36 month term + Free .COM",
+      guarantee: "30 Days Money Back guarantee",
       features: [
         {
           "title": "Features",
@@ -978,7 +982,7 @@ export const wordpressHostingPricingData: PricingData = {
       monthlyPrevPrice: 9.99,
       yearlyPrevPrice: 2.49,
       renewalText: "$2.49/Monthly when you renew",
-
+      guarantee: "30 Days Money Back guarantee",
       monthlyPriceBdt: 1198.8,
       yearlyPriceBdt: 178.8,
       monthlyPrevPriceBdt: 1198.8,
@@ -1248,7 +1252,7 @@ export const wordpressHostingPricingData: PricingData = {
       monthlyPrevPrice: 14.99,
       yearlyPrevPrice: 3.49,
       renewalText: "$3.49/Monthly when you renew",
-
+      guarantee: "30 Days Money Back guarantee",
       monthlyPriceBdt: 1798.8,
       yearlyPriceBdt: 298.8,
       monthlyPrevPriceBdt: 1798.8,
@@ -1521,7 +1525,7 @@ export const wordpressHostingPricingData: PricingData = {
     //   offer: 90,
     //   ctaText: "Choose plan",
     //   renewalText: "$5.99/Monthly when you renew",
-    //   guarantee: "30-Day Money-Back Guarantee",
+    //   guarantee: "30 Days Money Back guarantee",
     //   features: [
     //     {
     //       title: "Features",
@@ -1616,6 +1620,7 @@ export const wordpressHostingPricingData: PricingData = {
       monthlyPrevPrice: 39.99,
       yearlyPrevPrice: 7.99,
       renewalText: "$7.99/Monthly when you renew",
+      guarantee: "30 Days Money Back guarantee",
       monthlyPriceBdt: 4798.8,
       yearlyPriceBdt: 598.8,
       monthlyPrevPriceBdt: 4798.8,
@@ -1902,6 +1907,7 @@ export const manageHostingPricingData: PricingData = {
       monthlyPrevPrice: 114.99,
       yearlyPrevPrice: 335.88,
       renewalText: "$49.99/Monthly when you renew",
+      guarantee: "30 Days Money Back guarantee",
       monthlyPriceBdt: 5998.8,
       yearlyPriceBdt: 3358.8,
       monthlyPrevPriceBdt: 13798.8,
@@ -2177,7 +2183,7 @@ export const manageHostingPricingData: PricingData = {
       monthlyPrevPrice: 166.99,
       yearlyPrevPrice: 479.88,
       renewalText: "$49.99/Monthly when you renew",
-
+      guarantee: "30 Days Money Back guarantee",
       monthlyPriceBdt: 8398.8,
       yearlyPriceBdt: 4798.8,
       monthlyPrevPriceBdt: 20038.8,
@@ -2457,6 +2463,7 @@ export const manageHostingPricingData: PricingData = {
     //   currency: "$",
     //   ctaText: "Choose Plan",
     //   renewalText: "$49.99/Monthly when you renew",
+    //   guarantee: "30 Days Money Back guarantee",
     //   features: [
     //     {
     //       title: "Features",
@@ -2724,6 +2731,7 @@ export const manageHostingPricingData: PricingData = {
       monthlyPrevPrice: 326.99,
       yearlyPrevPrice: 359.88,
       renewalText: "$49.99/Monthly when you renew",
+      guarantee: "30 Days Money Back guarantee",
       monthlyPriceBdt: 17998.8,
       yearlyPriceBdt: 9598.8,
       monthlyPrevPriceBdt: 39238.8,

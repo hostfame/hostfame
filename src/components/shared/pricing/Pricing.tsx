@@ -44,7 +44,7 @@ export function Pricing({ data, toggleButton }: { data: PricingData, toggleButto
           {data.plans.map((plan, index) => (
             <div
               key={plan.id}
-              className="h-full flex"
+              className="h-full"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <PricingCard
