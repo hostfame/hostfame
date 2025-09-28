@@ -21,7 +21,7 @@ const data = {
 
 export default function DomainCheckerBanner() {
   return (
-    <section className="relative isolate -mt-[1px] pt-3">
+    <section className="relative isolate -mt-[1px]">
       <Navbar isTransparent/>
       {/* Layered teal header */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-br from-primary-dark via-primary to-primary/80" />
