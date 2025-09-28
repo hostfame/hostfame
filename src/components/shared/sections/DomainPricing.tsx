@@ -16,36 +16,38 @@ export default function DomainPricing() {
           {domainPricingData.items.map((d, idx) => (
             <li
               key={idx}
-              className="flex flex-col rounded-xl border border-gray-200   bg-white p-6 space-y-4 hover:border-primary/40 transition"
+              className="flex flex-col justify-between rounded-xl border border-gray-200 bg-white p-6 hover:border-primary/40 transition"
             >
-              {/* Logo */}
-              <div className="flex justify-center">
-                <Image
-                  src={d.src}
-                  alt={d.alt}
-                  height={d.height}
-                  width={d.width}
-                  className="h-10 w-auto"
-                />
-              </div>
-
-              {/* Pricing */}
-              <div className="text-center">
-                <div className="flex justify-center items-baseline gap-2">
-                  {d.oldPrice && (
-                    <span className="text-base text-gray-400 line-through">
-                      {d.oldPrice}
-                    </span>
-                  )}
-                  <span className="text-xl font-bold text-gray-900">
-                    {d.price}
-                  </span>
+              <div className=" space-y-4 ">
+                {/* Logo */}
+                <div className="flex justify-center">
+                  <Image
+                    src={d.src}
+                    alt={d.alt}
+                    height={d.height}
+                    width={d.width}
+                    className="h-10 w-auto"
+                  />
                 </div>
+
+                {/* Pricing */}
+                <div className="text-center">
+                  <div className="flex justify-center items-baseline gap-2">
+                    {d.oldPrice && (
+                      <span className="text-base text-gray-400 line-through">
+                        {d.oldPrice}
+                      </span>
+                    )}
+                    <span className="text-xl font-bold text-gray-900">
+                      {d.price}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Blurb */}
+                <p className="text-sm text-center text-gray-600">{d.blurb}</p>
+
               </div>
-
-              {/* Blurb */}
-              <p className="text-sm text-center text-gray-600">{d.blurb}</p>
-
               {/* Actions */}
               <div className="flex justify-center gap-3 pt-2">
                 <Button size="sm">Register</Button>
