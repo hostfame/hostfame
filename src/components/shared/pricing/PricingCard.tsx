@@ -32,7 +32,7 @@ export function PricingCard({
         .filter((section) => section.features.length > 0);
 
   return (
-    <section className="relative">
+    <section className="relative h-full">
       {plan.isPopular && (
         <div className=" absolute -top-5 w-full mx-auto z-20">
           <section className="mx-auto w-fit text-white bg-primary rounded-full px-8 py-2">

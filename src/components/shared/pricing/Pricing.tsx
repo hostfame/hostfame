@@ -44,7 +44,7 @@ export function Pricing({ data, toggleButton }: { data: PricingData, toggleButto
           {data.plans.map((plan, index) => (
             <div
               key={plan.id}
-              className="h-full"
+              className="h-full flex"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
               <PricingCard
@@ -52,7 +52,7 @@ export function Pricing({ data, toggleButton }: { data: PricingData, toggleButto
                 billingPeriod={billingPeriod}
                 isExpanded={isExpanded}
                 onToggleExpand={handleToggleExpand}
-                className="w-full h-full flex flex-col animate-fade-in-up"
+                className="w-full h-full flex flex-col"
               />
             </div>
           ))}
