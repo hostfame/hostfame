@@ -19,7 +19,8 @@ export const webHostingPricingBdtData: PricingData = {
       yearlyPrevPriceBdt: 2388,
       offer: 58,
       ctaText: "Choose plan",
-      renewalText: "Renews at 2150 tk/year",
+      renewalTextMonthlyBdt: "Renews at 2150 tk/year",
+      renewalTextYearlyBdt: "Renews at 2150 tk/year",
       guarantee: "30 Days Money Back guarantee",
       features: [
         {
@@ -187,7 +188,8 @@ export const webHostingPricingBdtData: PricingData = {
       offer: 64,
       isPopular: true,
       ctaText: "Choose plan",
-      renewalText: "Renews at 4950 tk/year",
+      renewalTextMonthlyBdt: "Renews at 4950 tk/year",
+      renewalTextYearlyBdt: "Renews at 4950 tk/year",
       guarantee: "30 Days Money Back guarantee",
       features: [
         {
@@ -354,7 +356,8 @@ export const webHostingPricingBdtData: PricingData = {
       offer: 50,
       // ≈ (7950-4985)/7950
       ctaText: "Choose plan",
-      renewalText: "Renews at 7950 tk/year",
+      renewalTextMonthlyBdt: "Renews at 7950 tk/year",
+      renewalTextYearlyBdt: "Renews at 7950 tk/year",
       guarantee: "30 Days Money Back guarantee",
       features: [
         {

@@ -33,8 +33,10 @@ export interface PricingPlan {
   };
   features: PricingFeatureSection[];
   ctaText?: string;
-  renewalText?: string;
-  renewalTextBdt?: string;
+  renewalTextMonthly?: string;
+  renewalTextYearly?: string;
+  renewalTextMonthlyBdt?: string;
+  renewalTextYearlyBdt?: string;
 }
 
 export interface PricingData {
