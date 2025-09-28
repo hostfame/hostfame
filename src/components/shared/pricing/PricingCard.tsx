@@ -22,14 +22,14 @@ export function PricingCard({
   const visibleFeatures = isExpanded
     ? plan.features
     : plan.features
-        .map((section) => ({
-          ...section,
-          features: section.features.slice(
-            0,
-            section.title === "Features" ? 12 : 0
-          ),
-        }))
-        .filter((section) => section.features.length > 0);
+      .map((section) => ({
+        ...section,
+        features: section.features.slice(
+          0,
+          section.title === "Features" ? 12 : 0
+        ),
+      }))
+      .filter((section) => section.features.length > 0);
 
   return (
     <section className="relative h-full">
@@ -44,9 +44,8 @@ export function PricingCard({
       )}
 
       <Card
-        className={`relative transition-all duration-500 hover:shadow-2xl group overflow-hidden bg-gray-background backdrop-blur-sm border-border/50 flex flex-col h-full ${
-          plan.isPopular && "border-2 border-primary/50"
-        }  ${isExpanded && "shadow-xl"}  ${className} `}
+        className={`relative transition-all duration-500 hover:shadow-2xl group overflow-hidden bg-gray-background backdrop-blur-sm border-border/50 flex flex-col h-full ${plan.isPopular && "border-2 border-primary/50"
+          }  ${isExpanded && "shadow-xl"}  ${className} `}
       >
         <CardHeader className="space-y-5 text-center relative z-10">
           <div className="flex flex-col items-center gap-4">
@@ -71,7 +70,7 @@ export function PricingCard({
           <PricingValue plan={plan} billingPeriod={billingPeriod}>
             {plan.guarantee && (
               <div className="">
-                <section className="text-emerald-600 border border-emerald-300 bg-emerald-100 rounded-full py-1.5">
+                <section className="mb-4 text-emerald-800 border border-emerald-300 bg-emerald-100 rounded-full py-1.5">
                   {plan.guarantee}
                 </section>
               </div>
@@ -105,7 +104,7 @@ export function PricingCard({
           <div className="space-y-8">
             {visibleFeatures.map((section) => (
               <div key={section.title} className=" space-y-5">
-                <h4 className="font-bold text-dark-description-text text-xl rounded-xl flex items-center gap-2 pl-1">
+                <h4 className={`font-bold text-dark-description-text text-xl rounded-xl flex items-center gap-2 ${section.title !== "Features" && "w-full px-5 py-2 bg-primary-extralight/10"}`}>
                   {section.title !== "Features" && section.title}
                 </h4>
                 <div className="space-y-3">
@@ -125,11 +124,10 @@ export function PricingCard({
                           className=" max-w-[200px] text-wrap break-words !opacity-100 !bg-opacity-100 !bg-gradient-to-b from-primary-light to-primary !rounded-xl"
                         />
                         <div
-                          className={`p-1 rounded-full transition-all duration-200 ${
-                            feature.included
-                              ? " group-hover/feature:scale-110"
-                              : ""
-                          }`}
+                          className={`p-1 rounded-full transition-all duration-200 ${feature.included
+                            ? " group-hover/feature:scale-110"
+                            : ""
+                            }`}
                         >
                           {feature.included ? (
                             <FaCheck className=" text-emerald-500" />
@@ -138,11 +136,10 @@ export function PricingCard({
                           )}
                         </div>
                         <span
-                          className={`leading-relaxed transition-colors duration-200 ${
-                            feature.included
-                              ? "text-dark-description-text group-hover/feature:text-primary"
-                              : "text-dark-description-text line-through"
-                          }`}
+                          className={`leading-relaxed transition-colors duration-200 font-semibold ${feature.included
+                            ? "text-dark-description-text group-hover/feature:text-primary"
+                            : "text-dark-description-text line-through"
+                            }`}
                         >
                           {feature.name}
                         </span>

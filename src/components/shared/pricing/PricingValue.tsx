@@ -27,14 +27,14 @@ const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
 
   return (
     <>
-      <div className="flex gap-2 justify-center items-center text-text">
+      {!isBD && <div className="flex gap-2 justify-center items-center text-text">
         <p className="line-through">
           {mainCurrency}
           {formatPrice(Number(prevPrice), { southAsianGrouping: isBD })}
         </p>
 
         <p className="border rounded-full px-4 py-1">{plan.offer}% OFF</p>
-      </div>
+      </div>}
 
       <div>
         <div className="flex items-baseline justify-center gap-1">
