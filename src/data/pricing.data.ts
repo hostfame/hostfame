@@ -23,293 +23,270 @@ export const webHostingPricingData: PricingData = {
       renewalText: "36 month term + Free .COM",
       features: [
         {
-          title: "Features",
-          features: [
+          "title": "Features",
+          "features": [
             {
-              name: "50GB NVMe SSD Storage",
-              included: true,
-              description:
-                "Fast NVMe storage ensures responsive page loads and quick file access.",
+              "name": "50GB NVMe SSD Storage",
+              "included": true,
+              "description": "NVMe SSDs deliver ultra-low latency and high IOPS for snappy page loads. 50GB comfortably fits a typical WordPress site with media, backups, and staging. Scales well for portfolios, blogs, and small stores."
             },
             {
-              name: "Unmetered Bandwidth",
-              included: true,
-              description:
-                "No traffic caps—your site can grow without surprise overage fees.",
+              "name": "Unmetered Bandwidth",
+              "included": true,
+              "description": "No hard caps on monthly traffic or page views. Your site can handle viral spikes without surprise overage fees. Fair-use policies still apply to keep the network healthy."
             },
             {
-              name: "Free SSL Certificate",
-              included: true,
-              description:
-                "Automatic HTTPS keeps visitors safe and boosts trust.",
+              "name": "Free SSL Certificate",
+              "included": true,
+              "description": "Automatic HTTPS with a trusted certificate so browsers show the secure lock. Helps protect logins and forms in transit. Search engines also prefer HTTPS for ranking signals."
             },
             {
-              name: "1 Website",
-              included: true,
-              description:
-                "Host a single website—perfect for a portfolio, blog, or landing page.",
+              "name": "1 Website",
+              "included": true,
+              "description": "Host a single production site under this plan. Ideal for a portfolio, blog, landing page, or MVP. Add-on domains and multisite are not included on Starter."
             },
             {
-              name: "5 Email Accounts",
-              included: true,
-              description:
-                "Create up to five branded inboxes for professional communication.",
+              "name": "5 Email Accounts",
+              "included": true,
+              "description": "Create up to five branded mailboxes at your domain (e.g., hello@, info@). Access via webmail, IMAP/POP, and SMTP. Perfect for small teams or role-based addresses."
             },
             {
-              name: "Daily Backups (JetBackup)",
-              included: true,
-              description:
-                "Automatic daily restore points so you can roll back with confidence.",
+              "name": "Daily Backups (JetBackup)",
+              "included": true,
+              "description": "Automatic daily restore points stored off-server for safety. Restore files, databases, or entire accounts in a few clicks. Retention varies, but typically covers recent days."
             },
             {
-              name: "1-Click WordPress Installer",
-              included: true,
-              description:
-                "Launch WordPress in seconds—no manual setup required.",
+              "name": "1-Click WordPress Installer",
+              "included": true,
+              "description": "Provision WordPress with a guided wizard—no manual databases or config. Secure defaults applied during setup. You’ll be publishing in minutes."
             },
             {
-              name: "DDoS Protection",
-              included: true,
-              description:
-                "Network-level mitigation shields your site from volumetric attacks.",
+              "name": "DDoS Protection",
+              "included": true,
+              "description": "Network-level filtering absorbs and mitigates volumetric attacks. Keeps legitimate traffic flowing during hostile events. Monitored continuously for new attack patterns."
             },
             {
-              name: "LiteSpeed Web Server",
-              included: true,
-              description:
-                "Modern high-performance web server tuned for speed.",
+              "name": "LiteSpeed Web Server",
+              "included": true,
+              "description": "Modern event-driven server built for high concurrency and low memory use. Pairs with LSCache for powerful page caching and optimization. Often outperforms traditional Apache stacks."
             },
             {
-              name: "Softaculous App Installer",
-              included: true,
-              description: "Install 400+ apps and CMSs in a single click.",
+              "name": "Softaculous App Installer",
+              "included": true,
+              "description": "Install 400+ popular apps—CMSs, forums, e-commerce—in a click. Includes automatic updates and staging options for many scripts. Great for testing and quick prototypes."
             },
             {
-              name: "30-Minute Guaranteed Email Response",
-              included: true,
-              description:
-                "Support replies to your email tickets within 30 minutes.",
+              "name": "30-Minute Guaranteed Email Response",
+              "included": true,
+              "description": "Support tickets receive an initial human reply within 30 minutes. Expect triage, next steps, or ETA in that first message. Complex fixes may take longer but you won’t be left hanging."
             },
             {
-              name: "30-Day Money-Back Guarantee",
-              included: true,
-              description: "Try risk-free with a full refund window.",
-            },
-          ],
+              "name": "30-Day Money-Back Guarantee",
+              "included": true,
+              "description": "Try the service risk-free for 30 days. If it’s not a fit, request a full refund on hosting fees. Domain registrations and third-party add-ons may be excluded."
+            }
+          ]
         },
         {
-          title: "Technical Specifications",
-          features: [
+          "title": "Technical Specifications",
+          "features": [
             {
-              name: "1 CPU Core",
-              included: true,
-              description:
-                "Dedicated share of compute to keep your site responsive.",
+              "name": "1 CPU Core",
+              "included": true,
+              "description": "A dedicated share of compute to keep dynamic pages responsive. Suitable for small to medium WordPress sites and simple apps. Bursting is possible but heavy workloads may need more cores."
             },
             {
-              name: "1 GB RAM",
-              included: true,
-              description: "Enough memory for lightweight sites and blogs.",
+              "name": "1 GB RAM",
+              "included": true,
+              "description": "Enough memory for lightweight themes and a modest plugin set. Handles typical blog traffic comfortably. Resource-heavy builders or caches may require upgrades."
             },
             {
-              name: "10 MB/s I/O Speed",
-              included: true,
-              description:
-                "Balanced disk throughput for entry-level workloads.",
+              "name": "10 MB/s I/O Speed",
+              "included": true,
+              "description": "Balanced disk throughput for entry-level workloads. Prevents noisy neighbors from starving your site. Adequate for backups, uploads, and routine cron jobs."
             },
             {
-              name: "20 Entry Processes",
-              included: true,
-              description:
-                "Supports concurrent PHP/HTTP processes for small sites.",
+              "name": "20 Entry Processes",
+              "included": true,
+              "description": "Allows up to 20 simultaneous PHP/HTTP handlers. Supports concurrent visitors without queuing under normal loads. Spikes beyond this limit may temporarily queue requests."
             },
             {
-              name: "PHP Memory Limit: 512 MB",
-              included: true,
-              description: "Suitable for basic themes and plugins.",
+              "name": "PHP Memory Limit: 512 MB",
+              "included": true,
+              "description": "A sensible cap for most themes, page builders, and common plugins. Reduces out-of-memory errors during edits or imports. Advanced suites may benefit from higher limits."
             },
             {
-              name: "250,000 Inodes Limit",
-              included: true,
-              description:
-                "Capacity for up to ~250k files to store site assets.",
+              "name": "250,000 Inodes Limit",
+              "included": true,
+              "description": "Roughly 250k files/directories allowed across your account. Keeps performance stable and backups efficient. Clean up old caches and backups to stay within limits."
             },
             {
-              name: "Multiple PHP Versions",
-              included: true,
-              description: "Select the PHP version your app requires.",
-            },
-          ],
+              "name": "Multiple PHP Versions",
+              "included": true,
+              "description": "Select and switch PHP versions per account for compatibility. Test new versions safely before committing. Extensions can be toggled as your stack requires."
+            }
+          ]
         },
         {
-          title: "WordPress Features",
-          features: [
+          "title": "WordPress Features",
+          "features": [
             {
-              name: "LiteSpeed Cache for WordPress",
-              included: true,
-              description: "Page caching and optimization for faster WP sites.",
+              "name": "LiteSpeed Cache for WordPress",
+              "included": true,
+              "description": "Server-level page caching with smart purge rules for near-instant loads. Includes image optimization, CSS/JS minify, and QUIC.cloud integration. Works best with LiteSpeed Web Server."
             },
             {
-              name: "Automatic WordPress Updates",
-              included: true,
-              description: "Core updates applied automatically to stay secure.",
+              "name": "Automatic WordPress Updates",
+              "included": true,
+              "description": "Core updates apply automatically to patch security issues quickly. Minor releases are seamless; major updates can be deferred if needed. Backups help you roll back safely."
             },
             {
-              name: "Pre-configured WordPress Settings",
-              included: true,
-              description:
-                "Sensibly tuned defaults for performance and reliability.",
+              "name": "Pre-configured WordPress Settings",
+              "included": true,
+              "description": "Sensibly tuned defaults for permalinks, caching, and security. Avoids common misconfigurations that slow sites down. You can refine settings anytime."
             },
             {
-              name: "Free WordPress Migration",
-              included: true,
-              description: "We’ll move your WP site in at no extra cost.",
+              "name": "Free WordPress Migration",
+              "included": true,
+              "description": "We’ll move your existing WP site at no extra cost. Includes files, database, and basic DNS guidance. Zero-downtime cutovers are prioritized whenever possible."
             },
             {
-              name: "Basic Plugin and Theme Support",
-              included: true,
-              description:
-                "Help with common plugin/theme questions (non-custom code).",
-            },
-          ],
+              "name": "Basic Plugin and Theme Support",
+              "included": true,
+              "description": "Help diagnosing common plugin/theme issues and conflicts. We’ll point out known incompatibilities and best-practice fixes. Custom code and development are out of scope."
+            }
+          ]
         },
         {
-          title: "Security Features",
-          features: [
+          "title": "Security Features",
+          "features": [
             {
-              name: "Imunify360 Security Suite",
-              included: true,
-              description:
-                "Malware detection, web application firewall, and proactive defense.",
+              "name": "Imunify360 Security Suite",
+              "included": true,
+              "description": "Always-on malware scanning, WAF rules, and proactive defense. Quarantines suspicious files and blocks exploit attempts. Centralized dashboard shows threats and actions."
             },
             {
-              name: "Brute Force Protection",
-              included: true,
-              description:
-                "Blocks repeated login attempts to keep accounts safe.",
+              "name": "Brute Force Protection",
+              "included": true,
+              "description": "Rate-limits repeated login attempts across key services. Automatically blocks abusive IPs and known bad actors. Reduces account takeover risks significantly."
             },
             {
-              name: "Advanced Antivirus Scanner",
-              included: true,
-              description: "Scans files to detect and quarantine threats.",
+              "name": "Advanced Antivirus Scanner",
+              "included": true,
+              "description": "On-demand and scheduled scans detect infected files. Infections can be quarantined or cleaned based on findings. Detailed reports help you remediate quickly."
             },
             {
-              name: "Hotlink Protection",
-              included: true,
-              description:
-                "Prevents others from embedding your assets and stealing bandwidth.",
+              "name": "Hotlink Protection",
+              "included": true,
+              "description": "Stops other sites from embedding your images and media. Preserves bandwidth and prevents unexpected usage bills. You can whitelist trusted referrers."
             },
             {
-              name: "Web Application Firewall (WAF)",
-              included: true,
-              description:
-                "Filters malicious traffic before it reaches your app.",
+              "name": "Web Application Firewall (WAF)",
+              "included": true,
+              "description": "Filters malicious requests before they reach WordPress/PHP. Shields against common attacks like SQLi, XSS, and RCE patterns. Rules are updated to track emerging threats."
             },
             {
-              name: "Spam Protection for Emails",
-              included: false,
-              description: "Email spam filtering is not included on Starter.",
+              "name": "Spam Protection for Emails",
+              "included": false,
+              "description": "Email spam filtering is not included on the Starter plan. Mailboxes may receive unsolicited messages without extra filtering. Consider upgrading or adding a spam filter add-on."
             },
             {
-              name: "File Permission Protection",
-              included: true,
-              description:
-                "Hardened defaults to minimize risky file permissions.",
-            },
-          ],
+              "name": "File Permission Protection",
+              "included": true,
+              "description": "Hardened default permissions reduce the blast radius of exploits. Blocks write access where it isn’t needed. Periodic scans flag risky ownership and mode changes."
+            }
+          ]
         },
         {
-          title: "Support & Assistance",
-          features: [
+          "title": "Support & Assistance",
+          "features": [
             {
-              name: "24/7 Live Chat, Email & WhatsApp Call Support",
-              included: true,
-              description: "Real humans available anytime you need help.",
+              "name": "24/7 Live Chat, Email & WhatsApp Call Support",
+              "included": true,
+              "description": "Real humans are available around the clock, every day. Reach us via live chat, support tickets, or WhatsApp call. We aim for fast triage and clear next steps."
             },
             {
-              name: "30-Minute Guaranteed Email Response",
-              included: true,
-              description: "Ticket replies guaranteed within 30 minutes.",
+              "name": "30-Minute Guaranteed Email Response",
+              "included": true,
+              "description": "We guarantee an initial reply to your ticket within 30 minutes. You’ll receive acknowledgment plus a plan or request for details. Complex escalations are tracked transparently."
             },
             {
-              name: "Comprehensive Knowledge Base & Tutorials",
-              included: true,
-              description: "Step-by-step guides for common tasks and fixes.",
+              "name": "Comprehensive Knowledge Base & Tutorials",
+              "included": true,
+              "description": "Step-by-step articles cover setup, security, and optimization. Screenshots and copy-paste commands make tasks easy. New content is added as features evolve."
             },
             {
-              name: "Community Forum Access",
-              included: true,
-              description: "Learn tips and get answers from fellow users.",
+              "name": "Community Forum Access",
+              "included": true,
+              "description": "Ask questions, share solutions, and learn from other users. Community tips often surface best-practice configs. Moderators highlight verified answers."
             },
             {
-              name: "Site Optimization Advice",
-              included: true,
-              description:
-                "Best-practice recommendations tailored to your stack.",
+              "name": "Site Optimization Advice",
+              "included": true,
+              "description": "Get tailored recommendations for caching, images, and queries. We focus on quick wins that move Core Web Vitals. Deep code refactors remain a developer task."
             },
             {
-              name: "Onboarding Guide for New Users",
-              included: true,
-              description: "A simple checklist to launch smoothly.",
-            },
-          ],
+              "name": "Onboarding Guide for New Users",
+              "included": true,
+              "description": "A simple launch checklist from DNS to SSL to caching. Helps you avoid common pitfalls during go-live. You’ll be production-ready with confidence."
+            }
+          ]
         },
         {
-          title: "Performance Benchmarks",
-          features: [
+          "title": "Performance Benchmarks",
+          "features": [
             {
-              name: "99.99% Uptime Guarantee",
-              included: true,
-              description: "Enterprise-grade SLA to keep your site online.",
+              "name": "99.99% Uptime Guarantee",
+              "included": true,
+              "description": "Backed by an SLA targeting less than ~4.4 minutes of monthly downtime. Redundant power, network, and monitoring minimize incidents. Credits apply if we miss the mark."
             },
             {
-              name: "Global CDN Integration",
-              included: true,
-              description:
-                "Faster delivery worldwide via distributed edge nodes.",
+              "name": "Global CDN Integration",
+              "included": true,
+              "description": "Serve static assets from edge locations worldwide. Reduces latency for visitors far from your origin. Easy to enable with minimal DNS changes."
             },
             {
-              name: "Real-World Speed Test Results",
-              included: true,
-              description: "Continuously measured performance you can verify.",
+              "name": "Real-World Speed Test Results",
+              "included": true,
+              "description": "We continuously measure TTFB and page load across regions. Reports highlight before/after gains from caching and CDN. Results are reproducible with common testing tools."
             },
             {
-              name: "Optimized for High Traffic Spikes",
-              included: true,
-              description: "Caching and server tuning absorb sudden bursts.",
-            },
-          ],
+              "name": "Optimized for High Traffic Spikes",
+              "included": true,
+              "description": "Aggressive caching and HTTP/3 keep pages fast under load. Auto-scaling network and burst capacity absorb sudden surges. Best for launches, campaigns, and seasonal peaks."
+            }
+          ]
         },
         {
-          title: "Developer-Friendly Features",
-          features: [
+          "title": "Developer-Friendly Features",
+          "features": [
             {
-              name: "SSH Access",
-              included: true,
-              description: "Secure shell for CLI workflows and deployments.",
+              "name": "SSH Access",
+              "included": true,
+              "description": "Secure shell access for CLI workflows and deployments. Use rsync, composer, npm, and WP-CLI efficiently. Public-key auth keeps access tight."
             },
             {
-              name: "Git Integration",
-              included: true,
-              description: "Pull from repos to streamline release management.",
+              "name": "Git Integration",
+              "included": true,
+              "description": "Pull from your repositories and deploy with minimal friction. Keep releases versioned and auditable. Works well with popular CI/CD pipelines."
             },
             {
-              name: "WP-CLI Support",
-              included: true,
-              description: "Manage WordPress from the command line.",
+              "name": "WP-CLI Support",
+              "included": true,
+              "description": "Manage WordPress from the command line for speed and repeatability. Bulk-update plugins, search-replace, and manage users. Perfect for scripted maintenance."
             },
             {
-              name: "Custom Cron Jobs",
-              included: true,
-              description: "Schedule background tasks and maintenance.",
+              "name": "Custom Cron Jobs",
+              "included": true,
+              "description": "Schedule background tasks like backups, imports, or emails. Fine-tune run times to avoid peak traffic. Logs help you verify successful execution."
             },
             {
-              name: "Multiple PHP Versions",
-              included: true,
-              description: "Pin or upgrade PHP per site as needed.",
-            },
-          ],
-        },
+              "name": "Multiple PHP Versions",
+              "included": true,
+              "description": "Pin or upgrade PHP per site to match your app’s needs. Test compatibility in staging before switching production. Toggle extensions to fit your stack."
+            }
+          ]
+        }
       ],
     },
 
@@ -329,273 +306,272 @@ export const webHostingPricingData: PricingData = {
       isPopular: true,
       ctaText: "Choose plan",
       renewalText: "36 month term + Free .COM",
-      features: [
+      "features": [
         {
-          title: "Features",
-          features: [
+          "title": "Features",
+          "features": [
             {
-              name: "100GB NVMe SSD Storage",
-              included: true,
-              description: "Larger NVMe capacity for media-heavy sites.",
+              "name": "100GB NVMe SSD Storage",
+              "included": true,
+              "description": "Double the space for image-heavy blogs, portfolios, and storefronts. NVMe delivers ultra-low latency and high IOPS so pages feel instantly responsive. Plenty of room for staging copies and backups."
             },
             {
-              name: "Unmetered Bandwidth",
-              included: true,
-              description: "Serve more visitors without throttling.",
+              "name": "Unmetered Bandwidth",
+              "included": true,
+              "description": "No hard caps on monthly traffic or page views. Your site can handle viral spikes without surprise overage fees. Fair-use policies still apply to keep the network healthy."
             },
             {
-              name: "Free SSL Certificate",
-              included: true,
-              description: "Lock icon and HTTPS by default.",
+              "name": "Free SSL Certificate",
+              "included": true,
+              "description": "Automatic HTTPS with a trusted certificate so browsers show the secure lock. Helps protect logins and forms in transit. Search engines also prefer HTTPS for ranking signals."
             },
             {
-              name: "5 Websites",
-              included: true,
-              description: "Run up to five separate sites under one plan.",
+              "name": "5 Websites",
+              "included": true,
+              "description": "Host up to five separate sites under one plan, each with its own domain. Keep projects isolated with separate directories and databases. Great for agencies, side projects, or multi-brand setups."
             },
             {
-              name: "10 Email Accounts",
-              included: true,
-              description: "Enough inboxes for owners and teammates.",
+              "name": "10 Email Accounts",
+              "included": true,
+              "description": "Create up to ten branded mailboxes at your domain for owners and teammates. Access via webmail, IMAP/POP, and SMTP across devices. Ideal for role-based addresses like sales@ or support@."
             },
             {
-              name: "Daily Backups (JetBackup)",
-              included: true,
-              description: "Rollback points created every day.",
+              "name": "Daily Backups (JetBackup)",
+              "included": true,
+              "description": "Automatic daily restore points stored off-server for safety. Restore files, databases, or entire accounts in a few clicks. Retention varies, but typically covers recent days."
             },
             {
-              name: "1-Click WordPress Installer",
-              included: true,
-              description: "Instant WP provisioning with sane defaults.",
+              "name": "1-Click WordPress Installer",
+              "included": true,
+              "description": "Provision WordPress with a guided wizard—no manual databases or config. Secure defaults applied during setup. You’ll be publishing in minutes."
             },
             {
-              name: "DDoS Protection",
-              included: true,
-              description: "Keeps attacks from impacting availability.",
+              "name": "DDoS Protection",
+              "included": true,
+              "description": "Network-level filtering absorbs and mitigates volumetric attacks. Keeps legitimate traffic flowing during hostile events. Monitored continuously for new attack patterns."
             },
             {
-              name: "LiteSpeed Web Server",
-              included: true,
-              description: "High-performance HTTP/2 and HTTP/3 server.",
+              "name": "LiteSpeed Web Server",
+              "included": true,
+              "description": "Modern event-driven server built for high concurrency and low memory use. Pairs with LSCache for powerful page caching and optimization. Often outperforms traditional Apache stacks."
             },
             {
-              name: "Softaculous App Installer",
-              included: true,
-              description: "Deploy apps like WooCommerce, Laravel, and more.",
+              "name": "Softaculous App Installer",
+              "included": true,
+              "description": "Install 400+ popular apps—CMSs, forums, e-commerce—in a click. Includes automatic updates and staging options for many scripts. Great for testing and quick prototypes."
             },
             {
-              name: "30-Minute Guaranteed Email Response",
-              included: true,
-              description:
-                "Priority ticket turnaround for business continuity.",
+              "name": "30-Minute Guaranteed Email Response",
+              "included": true,
+              "description": "Support tickets receive an initial human reply within 30 minutes. Expect triage, next steps, or ETA in that first message. Complex fixes may take longer but you won’t be left hanging."
             },
             {
-              name: "30-Day Money-Back Guarantee",
-              included: true,
-              description: "Refund window if it’s not a fit.",
-            },
-          ],
+              "name": "30-Day Money-Back Guarantee",
+              "included": true,
+              "description": "Try the service risk-free for 30 days. If it’s not a fit, request a full refund on hosting fees. Domain registrations and third-party add-ons may be excluded."
+            }
+          ]
         },
         {
-          title: "Technical Specifications",
-          features: [
+          "title": "Technical Specifications",
+          "features": [
             {
-              name: "2 CPU Cores",
-              included: true,
-              description: "Extra compute headroom for dynamic workloads.",
+              "name": "2 CPU Cores",
+              "included": true,
+              "description": "More parallel compute for PHP workers and background tasks. Helps dynamic pages, carts, and checkouts stay responsive under load. A good fit for WooCommerce and heavier plugins."
             },
             {
-              name: "2 GB RAM",
-              included: true,
-              description: "Handles heavier themes and caching layers.",
+              "name": "2 GB RAM",
+              "included": true,
+              "description": "Extra memory for visual builders, object caching, and imports. Reduces the chance of out-of-memory errors during heavy admin work. Comfortable for medium sites and small stores."
             },
             {
-              name: "20 MB/s I/O Speed",
-              included: true,
-              description: "Faster disk throughput for busy sites.",
+              "name": "20 MB/s I/O Speed",
+              "included": true,
+              "description": "Increased disk throughput for busy sites and larger uploads. Speeds up backups, restores, and media processing. Helps keep queues short during peak times."
             },
             {
-              name: "200 Entry Processes",
-              included: true,
-              description: "Support more concurrent PHP requests.",
+              "name": "200 Entry Processes",
+              "included": true,
+              "description": "Supports far more concurrent PHP/HTTP handlers before queuing. Improves resilience during traffic spikes and bot surges. Ideal for sites with many simultaneous visitors."
             },
             {
-              name: "PHP Memory Limit: 768 MB",
-              included: true,
-              description: "Room for complex plugins and builders.",
+              "name": "PHP Memory Limit: 768 MB",
+              "included": true,
+              "description": "More headroom for complex page builders and analytics suites. Reduces failures on big imports and image optimizations. Great for plugin-heavy WordPress stacks."
             },
             {
-              name: "500,000 Inodes Limit",
-              included: true,
-              description: "Accommodates larger media libraries.",
+              "name": "500,000 Inodes Limit",
+              "included": true,
+              "description": "Allows roughly half a million files/directories across your account. Suits large media libraries and cached assets. Periodic cleanup keeps backups fast and usage efficient."
             },
             {
-              name: "Multiple PHP Versions",
-              included: true,
-              description: "Run the PHP your application requires.",
-            },
-          ],
+              "name": "Multiple PHP Versions",
+              "included": true,
+              "description": "Select and switch PHP versions per account for compatibility. Test new versions safely before committing. Extensions can be toggled as your stack requires."
+            }
+          ]
         },
         {
-          title: "WordPress Features",
-          features: [
+          "title": "WordPress Features",
+          "features": [
             {
-              name: "LiteSpeed Cache for WordPress",
-              included: true,
-              description: "Edge caching and optimization out of the box.",
+              "name": "LiteSpeed Cache for WordPress",
+              "included": true,
+              "description": "Server-level page caching with smart purge rules for near-instant loads. Includes image optimization, CSS/JS minify, and QUIC.cloud integration. Works best with LiteSpeed Web Server."
             },
             {
-              name: "Automatic WordPress Updates",
-              included: true,
-              description: "Keep core current with zero hassle.",
+              "name": "Automatic WordPress Updates",
+              "included": true,
+              "description": "Core updates apply automatically to patch security issues quickly. Minor releases are seamless; major updates can be deferred if needed. Backups help you roll back safely."
             },
             {
-              name: "Pre-configured WordPress Settings",
-              included: true,
-              description: "Performance-friendly defaults from day one.",
+              "name": "Pre-configured WordPress Settings",
+              "included": true,
+              "description": "Sensibly tuned defaults for permalinks, caching, and security. Avoids common misconfigurations that slow sites down. You can refine settings anytime."
             },
             {
-              name: "Free WordPress Migration",
-              included: true,
-              description: "We’ll move your site safely and quickly.",
+              "name": "Free WordPress Migration",
+              "included": true,
+              "description": "We’ll move your existing WP site at no extra cost. Includes files, database, and basic DNS guidance. Zero-downtime cutovers are prioritized whenever possible."
             },
             {
-              name: "Basic Plugin and Theme Support",
-              included: true,
-              description: "Assistance with typical configurations.",
-            },
-          ],
+              "name": "Basic Plugin and Theme Support",
+              "included": true,
+              "description": "Help diagnosing common plugin/theme issues and conflicts. We’ll point out known incompatibilities and best-practice fixes. Custom code and development are out of scope."
+            }
+          ]
         },
         {
-          title: "Security Features",
-          features: [
+          "title": "Security Features",
+          "features": [
             {
-              name: "Imunify360 Security Suite",
-              included: true,
-              description: "Automated malware cleanup and exploit prevention.",
+              "name": "Imunify360 Security Suite",
+              "included": true,
+              "description": "Always-on malware scanning, WAF rules, and proactive defense. Quarantines suspicious files and blocks exploit attempts. Centralized dashboard shows threats and actions."
             },
             {
-              name: "Brute Force Protection",
-              included: true,
-              description: "Stops credential stuffing and repeated logins.",
+              "name": "Brute Force Protection",
+              "included": true,
+              "description": "Rate-limits repeated login attempts across key services. Automatically blocks abusive IPs and known bad actors. Reduces account takeover risks significantly."
             },
             {
-              name: "Advanced Antivirus Scanner",
-              included: true,
-              description: "File scans with quarantine actions.",
+              "name": "Advanced Antivirus Scanner",
+              "included": true,
+              "description": "On-demand and scheduled scans detect infected files. Infections can be quarantined or cleaned based on findings. Detailed reports help you remediate quickly."
             },
             {
-              name: "Hotlink Protection",
-              included: true,
-              description: "Protects your media from external embedding.",
+              "name": "Hotlink Protection",
+              "included": true,
+              "description": "Stops other sites from embedding your images and media. Preserves bandwidth and prevents unexpected usage bills. You can whitelist trusted referrers."
             },
             {
-              name: "Web Application Firewall (WAF)",
-              included: true,
-              description: "Blocks common web attacks (SQLi, XSS, etc.).",
+              "name": "Web Application Firewall (WAF)",
+              "included": true,
+              "description": "Filters malicious requests before they reach WordPress/PHP. Shields against common attacks like SQLi, XSS, and RCE patterns. Rules are updated to track emerging threats."
             },
             {
-              name: "Spam Protection for Emails",
-              included: true,
-              description: "Server-side filtering to reduce junk mail.",
+              "name": "Spam Protection for Emails",
+              "included": true,
+              "description": "Email spam filtering is not included on the Starter plan. Mailboxes may receive unsolicited messages without extra filtering. Consider upgrading or adding a spam filter add-on."
             },
             {
-              name: "File Permission Protection",
-              included: true,
-              description: "Hardened file ownership and perms by default.",
-            },
-          ],
+              "name": "File Permission Protection",
+              "included": true,
+              "description": "Hardened default permissions reduce the blast radius of exploits. Blocks write access where it isn’t needed. Periodic scans flag risky ownership and mode changes."
+            }
+          ]
         },
         {
-          title: "Support & Assistance",
-          features: [
+          "title": "Support & Assistance",
+          "features": [
             {
-              name: "24/7 Live Chat, Email & WhatsApp Call Support",
-              included: true,
-              description: "Round-the-clock expert help.",
+              "name": "24/7 Live Chat, Email & WhatsApp Call Support",
+              "included": true,
+              "description": "Real humans are available around the clock, every day. Reach us via live chat, support tickets, or WhatsApp call. We aim for fast triage and clear next steps."
             },
             {
-              name: "30-Minute Guaranteed Email Response",
-              included: true,
-              description: "Fast ticket SLAs for peace of mind.",
+              "name": "30-Minute Guaranteed Email Response",
+              "included": true,
+              "description": "We guarantee an initial reply to your ticket within 30 minutes. You’ll receive acknowledgment plus a plan or request for details. Complex escalations are tracked transparently."
             },
             {
-              name: "Comprehensive Knowledge Base & Tutorials",
-              included: true,
-              description: "How-tos from basics to advanced tasks.",
+              "name": "Comprehensive Knowledge Base & Tutorials",
+              "included": true,
+              "description": "Step-by-step articles cover setup, security, and optimization. Screenshots and copy-paste commands make tasks easy. New content is added as features evolve."
             },
             {
-              name: "Community Forum Access",
-              included: true,
-              description: "Share solutions and learn from peers.",
+              "name": "Community Forum Access",
+              "included": true,
+              "description": "Ask questions, share solutions, and learn from other users. Community tips often surface best-practice configs. Moderators highlight verified answers."
             },
             {
-              name: "Site Optimization Advice",
-              included: true,
-              description: "Actionable tips to speed up your site.",
+              "name": "Site Optimization Advice",
+              "included": true,
+              "description": "Get tailored recommendations for caching, images, and queries. We focus on quick wins that move Core Web Vitals. Deep code refactors remain a developer task."
             },
             {
-              name: "Onboarding Guide for New Users",
-              included: true,
-              description: "Get productive on day one.",
-            },
-          ],
+              "name": "Onboarding Guide for New Users",
+              "included": true,
+              "description": "A simple launch checklist from DNS to SSL to caching. Helps you avoid common pitfalls during go-live. You’ll be production-ready with confidence."
+            }
+          ]
         },
         {
-          title: "Performance Benchmarks",
-          features: [
+          "title": "Performance Benchmarks",
+          "features": [
             {
-              name: "99.99% Uptime Guarantee",
-              included: true,
-              description: "High availability backed by SLA.",
+              "name": "99.99% Uptime Guarantee",
+              "included": true,
+              "description": "Backed by an SLA targeting less than ~4.4 minutes of monthly downtime. Redundant power, network, and monitoring minimize incidents. Credits apply if we miss the mark."
             },
             {
-              name: "Global CDN Integration",
-              included: true,
-              description: "Edge caching shortens distance to visitors.",
+              "name": "Global CDN Integration",
+              "included": true,
+              "description": "Serve static assets from edge locations worldwide. Reduces latency for visitors far from your origin. Easy to enable with minimal DNS changes."
             },
             {
-              name: "Real-World Speed Test Results",
-              included: true,
-              description: "Benchmarks published for transparency.",
+              "name": "Real-World Speed Test Results",
+              "included": true,
+              "description": "We continuously measure TTFB and page load across regions. Reports highlight before/after gains from caching and CDN. Results are reproducible with common testing tools."
             },
             {
-              name: "Optimized for High Traffic Spikes",
-              included: true,
-              description: "Caching and autoscaling buffers bursts.",
-            },
-          ],
+              "name": "Optimized for High Traffic Spikes",
+              "included": true,
+              "description": "Aggressive caching and HTTP/3 keep pages fast under load. Auto-scaling network and burst capacity absorb sudden surges. Best for launches, campaigns, and seasonal peaks."
+            }
+          ]
         },
         {
-          title: "Developer-Friendly Features",
-          features: [
+          "title": "Developer-Friendly Features",
+          "features": [
             {
-              name: "SSH Access",
-              included: true,
-              description: "CLI deploys, composer, and tooling.",
+              "name": "SSH Access",
+              "included": true,
+              "description": "Secure shell access for CLI workflows and deployments. Use rsync, composer, npm, and WP-CLI efficiently. Public-key auth keeps access tight."
             },
             {
-              name: "Git Integration",
-              included: true,
-              description: "Pull and deploy directly from your repo.",
+              "name": "Git Integration",
+              "included": true,
+              "description": "Pull from your repositories and deploy with minimal friction. Keep releases versioned and auditable. Works well with popular CI/CD pipelines."
             },
             {
-              name: "WP-CLI Support",
-              included: true,
-              description: "Scriptable WordPress management.",
+              "name": "WP-CLI Support",
+              "included": true,
+              "description": "Manage WordPress from the command line for speed and repeatability. Bulk-update plugins, search-replace, and manage users. Perfect for scripted maintenance."
             },
             {
-              name: "Custom Cron Jobs",
-              included: true,
-              description: "Automate recurring tasks and hooks.",
+              "name": "Custom Cron Jobs",
+              "included": true,
+              "description": "Schedule background tasks like backups, imports, or emails. Fine-tune run times to avoid peak traffic. Logs help you verify successful execution."
             },
             {
-              name: "Multiple PHP Versions",
-              included: true,
-              description: "Per-site PHP selection.",
-            },
-          ],
-        },
+              "name": "Multiple PHP Versions",
+              "included": true,
+              "description": "Pin or upgrade PHP per site to match your app’s needs. Test compatibility in staging before switching production. Toggle extensions to fit your stack."
+            }
+          ]
+        }
       ],
     },
 
@@ -716,278 +692,270 @@ export const webHostingPricingData: PricingData = {
       renewalText: "36 month term + Free .COM",
       features: [
         {
-          title: "Features",
-          features: [
+          "title": "Features",
+          "features": [
             {
-              name: "Unlimited NVMe SSD Storage",
-              included: true,
-              description:
-                "Scale content and backups without capacity planning.",
+              "name": "Unlimited NVMe SSD Storage",
+              "included": true,
+              "description": "Store as much content, media, and archives as your projects demand without manual capacity planning. NVMe delivers ultra-low latency and high IOPS so sites remain snappy as they grow. Usage remains subject to fair-use and inode limits for platform health."
             },
             {
-              name: "Unmetered Bandwidth",
-              included: true,
-              description: "Predictable costs even as traffic surges.",
+              "name": "Unmetered Bandwidth",
+              "included": true,
+              "description": "No hard caps on monthly traffic or page views. Your site can handle viral spikes without surprise overage fees. Fair-use policies still apply to keep the network healthy."
             },
             {
-              name: "Free SSL Certificate",
-              included: true,
-              description: "Secure every site and subdomain with HTTPS.",
+              "name": "Free SSL Certificate",
+              "included": true,
+              "description": "Automatic HTTPS with a trusted certificate so browsers show the secure lock. Helps protect logins and forms in transit. Search engines also prefer HTTPS for ranking signals."
             },
             {
-              name: "Unlimited Websites",
-              included: true,
-              description: "Host as many projects as your business requires.",
+              "name": "Unlimited Websites",
+              "included": true,
+              "description": "Host an unlimited number of separate projects under one plan. Keep each site isolated with its own directories, databases, and settings. Ideal for agencies, multi-brand companies, and resellers."
             },
             {
-              name: "Unlimited Email Accounts",
-              included: true,
-              description: "Create inboxes for all teams and functions.",
+              "name": "Unlimited Email Accounts",
+              "included": true,
+              "description": "Create as many branded mailboxes as your teams need—sales@, hr@, support@, and more. Access via webmail, IMAP/POP, and SMTP across all major clients. Scales cleanly as departments and headcount grow."
             },
             {
-              name: "Daily Backups (JetBackup)",
-              included: true,
-              description: "Point-in-time recovery for compliance and safety.",
+              "name": "Daily Backups (JetBackup)",
+              "included": true,
+              "description": "Automatic daily restore points stored off-server for safety. Restore files, databases, or entire accounts in a few clicks. Retention varies, but typically covers recent days."
             },
             {
-              name: "1-Click WordPress Installer",
-              included: true,
-              description: "Standardize deployments across many sites.",
+              "name": "1-Click WordPress Installer",
+              "included": true,
+              "description": "Provision WordPress with a guided wizard—no manual databases or config. Secure defaults applied during setup. You’ll be publishing in minutes."
             },
             {
-              name: "DDoS Protection",
-              included: true,
-              description: "Enterprise-grade mitigation for uptime assurance.",
+              "name": "DDoS Protection",
+              "included": true,
+              "description": "Network-level filtering absorbs and mitigates volumetric attacks. Keeps legitimate traffic flowing during hostile events. Monitored continuously for new attack patterns."
             },
             {
-              name: "LiteSpeed Web Server",
-              included: true,
-              description: "High-throughput server for heavy concurrency.",
+              "name": "LiteSpeed Web Server",
+              "included": true,
+              "description": "Modern event-driven server built for high concurrency and low memory use. Pairs with LSCache for powerful page caching and optimization. Often outperforms traditional Apache stacks."
             },
             {
-              name: "Softaculous App Installer",
-              included: true,
-              description: "Automate app provisioning for teams.",
+              "name": "Softaculous App Installer",
+              "included": true,
+              "description": "Install 400+ popular apps—CMSs, forums, e-commerce—in a click. Includes automatic updates and staging options for many scripts. Great for testing and quick prototypes."
             },
             {
-              name: "30-Minute Guaranteed Email Response",
-              included: true,
-              description: "Fast SLAs to keep teams productive.",
+              "name": "30-Minute Guaranteed Email Response",
+              "included": true,
+              "description": "Support tickets receive an initial human reply within 30 minutes. Expect triage, next steps, or ETA in that first message. Complex fixes may take longer but you won’t be left hanging."
             },
             {
-              name: "30-Day Money-Back Guarantee",
-              included: true,
-              description: "Risk-free evaluation at scale.",
-            },
-          ],
+              "name": "30-Day Money-Back Guarantee",
+              "included": true,
+              "description": "Try the service risk-free for 30 days. If it’s not a fit, request a full refund on hosting fees. Domain registrations and third-party add-ons may be excluded."
+            }
+          ]
         },
         {
-          title: "Technical Specifications",
-          features: [
+          "title": "Technical Specifications",
+          "features": [
             {
-              name: "6 CPU Cores",
-              included: true,
-              description: "Strong parallelism for complex, dynamic workloads.",
+              "name": "6 CPU Cores",
+              "included": true,
+              "description": "High parallelism for PHP workers, queues, and background jobs. Keeps complex, dynamic workloads responsive during peak times. Suited for multi-site setups and heavy e-commerce."
             },
             {
-              name: "8 GB RAM",
-              included: true,
-              description: "Accommodates large caches and heavyweight plugins.",
+              "name": "8 GB RAM",
+              "included": true,
+              "description": "Plenty of memory for large object caches, image processing, and big imports. Reduces OOM errors during admin tasks and batch operations. Comfortable for high-traffic stores and content hubs."
             },
             {
-              name: "50 MB/s I/O Speed",
-              included: true,
-              description:
-                "Premium disk throughput for busy databases and media.",
+              "name": "50 MB/s I/O Speed",
+              "included": true,
+              "description": "Premium disk throughput accelerates backups, restores, and media handling. Helps database-driven pages and search stay responsive. Useful for sites with frequent uploads and cron activity."
             },
             {
-              name: "Unlimited Entry Processes",
-              included: true,
-              description:
-                "Serve very high concurrency without hitting ceilings.",
+              "name": "Unlimited Entry Processes",
+              "included": true,
+              "description": "Serve very high concurrency without hitting per-account process ceilings. Great for traffic bursts from campaigns and launches. Overall performance still depends on code efficiency and caching."
             },
             {
-              name: "PHP Memory Limit: 2048 MB",
-              included: true,
-              description: "Headroom for builders, search, and integrations.",
+              "name": "PHP Memory Limit: 2048 MB",
+              "included": true,
+              "description": "Ample headroom for heavy builders, search, analytics, and integrations. Minimizes failures on large imports and complex page renders. Ideal for plugin-dense enterprise stacks."
             },
             {
-              name: "1,000,000 Inodes Limit",
-              included: true,
-              description: "Space for very large file trees and assets.",
+              "name": "1,000,000 Inodes Limit",
+              "included": true,
+              "description": "Room for roughly one million files/directories across the account. Supports very large media libraries, caches, and logs. Periodic housekeeping keeps usage efficient and backups fast."
             },
             {
-              name: "Multiple PHP Versions",
-              included: true,
-              description: "Run legacy and modern apps side by side.",
-            },
-          ],
+              "name": "Multiple PHP Versions",
+              "included": true,
+              "description": "Select and switch PHP versions per account for compatibility. Test new versions safely before committing. Extensions can be toggled as your stack requires."
+            }
+          ]
         },
         {
-          title: "WordPress Features",
-          features: [
+          "title": "WordPress Features",
+          "features": [
             {
-              name: "LiteSpeed Cache for WordPress",
-              included: true,
-              description:
-                "Advanced cache policies and image/WebP optimization.",
+              "name": "LiteSpeed Cache for WordPress",
+              "included": true,
+              "description": "Server-level page caching with smart purge rules for near-instant loads. Includes image optimization, CSS/JS minify, and QUIC.cloud integration. Works best with LiteSpeed Web Server."
             },
             {
-              name: "Automatic WordPress Updates",
-              included: true,
-              description: "Security and minor updates applied automatically.",
+              "name": "Automatic WordPress Updates",
+              "included": true,
+              "description": "Core updates apply automatically to patch security issues quickly. Minor releases are seamless; major updates can be deferred if needed. Backups help you roll back safely."
             },
             {
-              name: "Pre-configured WordPress Settings",
-              included: true,
-              description: "Performance and security best practices pre-tuned.",
+              "name": "Pre-configured WordPress Settings",
+              "included": true,
+              "description": "Sensibly tuned defaults for permalinks, caching, and security. Avoids common misconfigurations that slow sites down. You can refine settings anytime."
             },
             {
-              name: "Free WordPress Migration",
-              included: true,
-              description: "White-glove moves of large sites and networks.",
+              "name": "Free WordPress Migration",
+              "included": true,
+              "description": "We’ll move your existing WP site at no extra cost. Includes files, database, and basic DNS guidance. Zero-downtime cutovers are prioritized whenever possible."
             },
             {
-              name: "Basic Plugin and Theme Support",
-              included: true,
-              description:
-                "Assistance for common commercial themes and plugins.",
-            },
-          ],
+              "name": "Basic Plugin and Theme Support",
+              "included": true,
+              "description": "Help diagnosing common plugin/theme issues and conflicts. We’ll point out known incompatibilities and best-practice fixes. Custom code and development are out of scope."
+            }
+          ]
         },
         {
-          title: "Security Features",
-          features: [
+          "title": "Security Features",
+          "features": [
             {
-              name: "Imunify360 Security Suite",
-              included: true,
-              description:
-                "Layered protection with WAF, malware cleanup, and more.",
+              "name": "Imunify360 Security Suite",
+              "included": true,
+              "description": "Always-on malware scanning, WAF rules, and proactive defense. Quarantines suspicious files and blocks exploit attempts. Centralized dashboard shows threats and actions."
             },
             {
-              name: "Brute Force & DDoS Protection",
-              included: true,
-              description: "Blocks abusive logins and network attacks.",
+              "name": "Brute Force & DDoS Protection",
+              "included": true,
+              "description": "Combines aggressive login rate-limiting with network-layer mitigation. Blocks abusive credential stuffing and volumetric attacks. Helps maintain availability while keeping accounts safe."
             },
             {
-              name: "Advanced Antivirus Scanner",
-              included: true,
-              description: "Scheduled and on-demand malware scans.",
+              "name": "Advanced Antivirus Scanner",
+              "included": true,
+              "description": "On-demand and scheduled scans detect infected files. Infections can be quarantined or cleaned based on findings. Detailed reports help you remediate quickly."
             },
             {
-              name: "Hotlink Protection",
-              included: true,
-              description: "Prevents asset theft and bandwidth drain.",
+              "name": "Hotlink Protection",
+              "included": true,
+              "description": "Stops other sites from embedding your images and media. Preserves bandwidth and prevents unexpected usage bills. You can whitelist trusted referrers."
             },
             {
-              name: "Premium Web Application Firewall (WAF)",
-              included: true,
-              description: "Enhanced signature sets and virtual patching.",
+              "name": "Premium Web Application Firewall (WAF)",
+              "included": true,
+              "description": "Enhanced signatures and virtual patching block emerging threats. Filters malicious requests before they hit WordPress/PHP. Tunable rulesets reduce false positives for production safety."
             },
             {
-              name: "Spam Protection for Emails",
-              included: true,
-              description: "Robust spam and phishing filtering for mailboxes.",
+              "name": "Spam Protection for Emails",
+              "included": true,
+              "description": "Email spam filtering is not included on the Starter plan. Mailboxes may receive unsolicited messages without extra filtering. Consider upgrading or adding a spam filter add-on."
             },
             {
-              name: "Two-Factor Authentication (2FA)",
-              included: true,
-              description: "Add a second factor to secure logins.",
-            },
-          ],
+              "name": "Two-Factor Authentication (2FA)",
+              "included": true,
+              "description": "Require a second factor—like a one-time code—in addition to a password. Greatly reduces the risk of account takeover even if credentials leak. Works with popular authenticator apps."
+            }
+          ]
         },
         {
-          title: "Support & Assistance",
-          features: [
+          "title": "Support & Assistance",
+          "features": [
             {
-              name: "24/7 Live Chat, Email & WhatsApp Call Support",
-              included: true,
-              description: "Multi-channel access to senior support.",
+              "name": "24/7 Live Chat, Email & WhatsApp Call Support",
+              "included": true,
+              "description": "Real humans are available around the clock, every day. Reach us via live chat, support tickets, or WhatsApp call. We aim for fast triage and clear next steps."
             },
             {
-              name: "30-Minute Guaranteed Email Response",
-              included: true,
-              description: "Priority SLAs for fast remediation.",
+              "name": "30-Minute Guaranteed Email Response",
+              "included": true,
+              "description": "We guarantee an initial reply to your ticket within 30 minutes. You’ll receive acknowledgment plus a plan or request for details. Complex escalations are tracked transparently."
             },
             {
-              name: "Comprehensive Knowledge Base & Tutorials",
-              included: true,
-              description: "Self-serve docs for teams at scale.",
+              "name": "Comprehensive Knowledge Base & Tutorials",
+              "included": true,
+              "description": "Step-by-step articles cover setup, security, and optimization. Screenshots and copy-paste commands make tasks easy. New content is added as features evolve."
             },
             {
-              name: "Dedicated Account Manager",
-              included: true,
-              description:
-                "Single point of contact for planning and escalations.",
+              "name": "Dedicated Account Manager",
+              "included": true,
+              "description": "A single point of contact who learns your stack and goals. Coordinates planning, roadmaps, and escalations across teams. Helps you get the most from the platform."
             },
             {
-              name: "Advanced Site Optimization Advice",
-              included: true,
-              description: "Deep-dive performance and architecture guidance.",
+              "name": "Advanced Site Optimization Advice",
+              "included": true,
+              "description": "Deep-dive performance reviews covering caching layers, DB queries, and front-end assets. Actionable recommendations mapped to Core Web Vitals and business goals. Collaborative sessions with your devs for smooth rollout."
             },
             {
-              name: "VIP Onboarding & Migration Assistance",
-              included: true,
-              description: "Hands-on help to migrate complex estates.",
-            },
-          ],
+              "name": "VIP Onboarding & Migration Assistance",
+              "included": true,
+              "description": "Hands-on planning and execution for complex moves or multi-site estates. Staged cutovers with rollbacks and verification checklists. Minimizes downtime and post-migration surprises."
+            }
+          ]
         },
         {
-          title: "Performance Benchmarks",
-          features: [
+          "title": "Performance Benchmarks",
+          "features": [
             {
-              name: "99.99% Uptime Guarantee",
-              included: true,
-              description:
-                "Contractual reliability for mission-critical workloads.",
+              "name": "99.99% Uptime Guarantee",
+              "included": true,
+              "description": "Backed by an SLA targeting less than ~4.4 minutes of monthly downtime. Redundant power, network, and monitoring minimize incidents. Credits apply if we miss the mark."
             },
             {
-              name: "Global CDN Integration",
-              included: true,
-              description: "Edge presence for global performance.",
+              "name": "Global CDN Integration",
+              "included": true,
+              "description": "Serve static assets from edge locations worldwide. Reduces latency for visitors far from your origin. Easy to enable with minimal DNS changes."
             },
             {
-              name: "Real-World Speed Test Results",
-              included: true,
-              description: "Public benchmarks to validate performance.",
+              "name": "Real-World Speed Test Results",
+              "included": true,
+              "description": "We continuously measure TTFB and page load across regions. Reports highlight before/after gains from caching and CDN. Results are reproducible with common testing tools."
             },
             {
-              name: "Optimized for Extreme Traffic Loads",
-              included: true,
-              description: "Built for campaigns, launches, and peak seasons.",
-            },
-          ],
+              "name": "Optimized for Extreme Traffic Loads",
+              "included": true,
+              "description": "Built for campaigns, product launches, and peak seasons. Aggressive caching and HTTP/3 maintain fast responses under massive concurrency. Capacity planning helps align resources with demand curves."
+            }
+          ]
         },
         {
-          title: "Developer-Friendly Features",
-          features: [
+          "title": "Developer-Friendly Features",
+          "features": [
             {
-              name: "SSH Access",
-              included: true,
-              description: "Secure remote shell across environments.",
+              "name": "SSH Access",
+              "included": true,
+              "description": "Secure shell access for CLI workflows and deployments. Use rsync, composer, npm, and WP-CLI efficiently. Public-key auth keeps access tight."
             },
             {
-              name: "Git & CI/CD Integration",
-              included: true,
-              description: "Hook into pipelines for seamless deploys.",
+              "name": "Git & CI/CD Integration",
+              "included": true,
+              "description": "Connect repositories and pipelines for automated, repeatable releases. Support for branch-based deployments and rollbacks. Keeps deployments auditable and fast."
             },
             {
-              name: "WP-CLI & Custom Scripts",
-              included: true,
-              description: "Automate admin tasks and maintenance.",
+              "name": "WP-CLI & Custom Scripts",
+              "included": true,
+              "description": "Automate WordPress administration and maintenance at scale. Run scripted updates, search-replace, and user management safely. Ideal for fleet operations across many sites."
             },
             {
-              name: "Custom Cron & Task Scheduling",
-              included: true,
-              description: "Flexible job scheduling for imports and jobs.",
+              "name": "Custom Cron & Task Scheduling",
+              "included": true,
+              "description": "Schedule imports, syncs, and maintenance with fine-grained timing. Coordinate jobs to avoid peak traffic windows. Logs and alerts help verify successful execution."
             },
             {
-              name: "Multiple PHP Versions",
-              included: true,
-              description: "Per-site PHP targeting for compatibility.",
-            },
-          ],
-        },
+              "name": "Multiple PHP Versions",
+              "included": true,
+              "description": "Pin or upgrade PHP per site to match your app’s needs. Test compatibility in staging before switching production. Toggle extensions to fit your stack."
+            }
+          ]
+        }
       ],
     },
   ],
@@ -1020,254 +988,250 @@ export const wordpressHostingPricingData: PricingData = {
       ctaText: "Choose plan",
       features: [
         {
-          title: "Features",
-          features: [
+          "title": "Features",
+          "features": [
             {
-              name: "75GB NVMe SSD Storage",
-              included: true,
-              description: "Fast NVMe storage for snappy page loads and media.",
+              "name": "75GB NVMe SSD Storage",
+              "included": true,
+              "description": "Fast NVMe storage delivers ultra-low latency and high IOPS so pages and dashboards feel snappy. 75GB comfortably fits multiple WordPress installs with media and backups. Plenty of room for staging copies and asset libraries."
             },
             {
-              name: "3 WordPress Websites",
-              included: true,
-              description: "Host up to three WordPress installs on one plan.",
+              "name": "3 WordPress Websites",
+              "included": true,
+              "description": "Run up to three separate WordPress installs under one plan. Keep projects isolated with their own databases, users, and directories. Ideal for portfolios, client sites, or brand microsites."
             },
             {
-              name: "Unmetered Bandwidth",
-              included: true,
-              description: "No traffic caps—grow without surprise fees.",
+              "name": "Unmetered Bandwidth",
+              "included": true,
+              "description": "No hard caps on monthly traffic or page views. Your site can handle viral spikes without surprise overage fees. Fair-use policies still apply to keep the network healthy."
             },
             {
-              name: "Free Domain (1 Year)",
-              included: true,
-              description:
-                "Claim a free .COM or similar domain for your first year.",
+              "name": "Free Domain (1 Year)",
+              "included": true,
+              "description": "Register a new domain (e.g., .COM) for your first year at no extra cost. Perfect for launching a new brand or consolidating your presence. Standard renewal fees apply from year two."
             },
             {
-              name: "Unlimited Email Accounts",
-              included: true,
-              description: "Create as many branded inboxes as you need.",
+              "name": "Unlimited Email Accounts",
+              "included": true,
+              "description": "Create as many branded mailboxes as your teams need—sales@, hr@, support@, and more. Access via webmail, IMAP/POP, and SMTP across all major clients. Scales cleanly as departments and headcount grow."
             },
             {
-              name: "Daily Automated Backups (JetBackup)",
-              included: true,
-              description:
-                "Nightly restore points to recover fast from mistakes.",
+              "name": "Daily Automated Backups (JetBackup)",
+              "included": true,
+              "description": "Nightly restore points captured automatically and stored off-server. Restore files, databases, or entire accounts in a few clicks. Retention covers recent days to protect against mistakes or corruption."
             },
             {
-              name: "1-Click WordPress Installer",
-              included: true,
-              description: "Spin up WordPress in seconds with sane defaults.",
+              "name": "1-Click WordPress Installer",
+              "included": true,
+              "description": "Provision WordPress with a guided wizard—no manual databases or config. Secure defaults applied during setup. You’ll be publishing in minutes."
             },
             {
-              name: "DDoS Protection & WordPress Firewall",
-              included: true,
-              description: "Mitigates attacks and blocks malicious requests.",
+              "name": "DDoS Protection & WordPress Firewall",
+              "included": true,
+              "description": "Network-layer mitigation absorbs volumetric attacks while an app firewall filters malicious WP requests. Helps maintain availability and blocks common exploit patterns. Rules are updated to adapt to new threats."
             },
             {
-              name: "LiteSpeed Web Server + LSCache",
-              included: true,
-              description: "High-performance server with built-in caching.",
+              "name": "LiteSpeed Web Server + LSCache",
+              "included": true,
+              "description": "Event-driven LiteSpeed handles heavy concurrency efficiently, while LSCache delivers server-level page caching. Together they cut TTFB and improve Core Web Vitals. Automatic cache purges keep content fresh after edits."
             },
             {
-              name: "AI-Driven WordPress Optimizer",
-              included: true,
-              description: "Automatic tuning for speed, caching, and images.",
+              "name": "AI-Driven WordPress Optimizer",
+              "included": true,
+              "description": "Analyzes your site to suggest caching, database, and image tweaks. Applies safe optimizations to improve load times with minimal effort. Generates reports so you can track gains over time."
             },
             {
-              name: "30-Minute Guaranteed Email Response",
-              included: true,
-              description: "Ticket replies within 30 minutes—day or night.",
+              "name": "30-Minute Guaranteed Email Response",
+              "included": true,
+              "description": "Support tickets receive an initial human reply within 30 minutes. Expect triage, next steps, or ETA in that first message. Complex fixes may take longer but you won’t be left hanging."
             },
             {
-              name: "30-Day Money-Back Guarantee",
-              included: true,
-              description: "Try it risk-free with a full refund window.",
-            },
-          ],
+              "name": "30-Day Money-Back Guarantee",
+              "included": true,
+              "description": "Try the service risk-free for 30 days. If it’s not a fit, request a full refund on hosting fees. Domain registrations and third-party add-ons may be excluded."
+            }
+          ]
         },
         {
-          title: "Technical Specifications",
-          features: [
+          "title": "Technical Specifications",
+          "features": [
             {
-              name: "2 CPU Cores",
-              included: true,
-              description: "Dedicated share of compute for responsiveness.",
+              "name": "2 CPU Cores",
+              "included": true,
+              "description": "More parallel compute for PHP workers and background tasks. Helps dynamic pages, carts, and checkouts stay responsive under load. A good fit for WooCommerce and heavier plugins."
             },
             {
-              name: "2 GB RAM",
-              included: true,
-              description: "Enough memory for lightweight sites and blogs.",
+              "name": "2 GB RAM",
+              "included": true,
+              "description": "Extra memory for visual builders, object caching, and imports. Reduces the chance of out-of-memory errors during heavy admin work. Comfortable for medium sites and small stores."
             },
             {
-              name: "20 MB/s I/O Speed",
-              included: true,
-              description: "Balanced disk throughput for everyday workloads.",
+              "name": "20 MB/s I/O Speed",
+              "included": true,
+              "description": "Increased disk throughput for busy sites and larger uploads. Speeds up backups, restores, and media processing. Helps keep queues short during peak times."
             },
             {
-              name: "40 Entry Processes",
-              included: true,
-              description: "Supports concurrent PHP/HTTP processes.",
+              "name": "40 Entry Processes",
+              "included": true,
+              "description": "Allows up to 40 simultaneous PHP/HTTP handlers before queuing. Improves capacity during moderate traffic bursts and bots. Pair with caching to maximize concurrency."
             },
             {
-              name: "PHP Memory Limit: 768 MB",
-              included: true,
-              description: "Good headroom for common themes and plugins.",
+              "name": "PHP Memory Limit: 768 MB",
+              "included": true,
+              "description": "More headroom for complex page builders and analytics suites. Reduces failures on big imports and image optimizations. Great for plugin-heavy WordPress stacks."
             },
             {
-              name: "400,000 Inodes Limit",
-              included: true,
-              description: "Space for roughly 400k files and assets.",
+              "name": "400,000 Inodes Limit",
+              "included": true,
+              "description": "Space for roughly 400k files and directories across your account. Suits growing media libraries, caches, and logs. Routine housekeeping keeps usage efficient and backups fast."
             },
             {
-              name: "Multiple PHP Versions",
-              included: true,
-              description: "Choose the PHP version your site requires.",
-            },
-          ],
+              "name": "Multiple PHP Versions",
+              "included": true,
+              "description": "Select and switch PHP versions per account for compatibility. Test new versions safely before committing. Extensions can be toggled as your stack requires."
+            }
+          ]
         },
         {
-          title: "Exclusive WordPress Features",
-          features: [
+          "title": "Exclusive WordPress Features",
+          "features": [
             {
-              name: "LiteSpeed Cache for WordPress",
-              included: true,
-              description: "Server-level page caching and optimizations.",
+              "name": "LiteSpeed Cache for WordPress",
+              "included": true,
+              "description": "Server-level page caching with smart purge rules for near-instant loads. Includes image optimization, CSS/JS minify, and QUIC.cloud integration. Works best with LiteSpeed Web Server."
             },
             {
-              name: "Automatic WordPress Core & Plugin Updates",
-              included: true,
-              description: "Stay secure and current without manual effort.",
+              "name": "Automatic WordPress Core & Plugin Updates",
+              "included": true,
+              "description": "Applies core and plugin updates automatically to close security gaps quickly. Minor releases are seamless; major updates can be deferred. Backups allow safe rollbacks if needed."
             },
             {
-              name: "1-Click Staging Environment",
-              included: true,
-              description: "Test updates safely before going live.",
+              "name": "1-Click Staging Environment",
+              "included": true,
+              "description": "Clone your site into a staging copy to test updates and changes safely. Push changes live when verified—no manual migrations. Great for experimenting with themes and builders."
             },
             {
-              name: "AI-Powered SEO & Speed Optimizer",
-              included: true,
-              description: "Smart recommendations to improve Core Web Vitals.",
+              "name": "AI-Powered SEO & Speed Optimizer",
+              "included": true,
+              "description": "Surfaces actionable recommendations for metadata, images, and critical CSS/JS. Prioritizes changes that move Core Web Vitals and search visibility. Reports show before/after impact."
             },
             {
-              name: "Free WordPress Migration (Completed Within Hours)",
-              included: true,
-              description:
-                "We’ll move your site quickly with minimal downtime.",
-            },
-          ],
+              "name": "Free WordPress Migration (Completed Within Hours)",
+              "included": true,
+              "description": "White-glove transfer of files and database with minimal downtime. Coordinated cutover windows and verification checklists. Ideal for time-sensitive launches."
+            }
+          ]
         },
         {
-          title: "Advanced Security Features",
-          features: [
+          "title": "Advanced Security Features",
+          "features": [
             {
-              name: "Imunify360 Security Suite",
-              included: true,
-              description:
-                "Malware protection, IDS/IPS, and proactive defense.",
+              "name": "Imunify360 Security Suite",
+              "included": true,
+              "description": "Always-on malware scanning, WAF rules, and proactive defense. Quarantines suspicious files and blocks exploit attempts. Centralized dashboard shows threats and actions."
             },
             {
-              name: "Web Application Firewall (WAF)",
-              included: true,
-              description: "Blocks common web attacks before they land.",
+              "name": "Web Application Firewall (WAF)",
+              "included": true,
+              "description": "Filters malicious requests before they reach WordPress/PHP. Shields against common attacks like SQLi, XSS, and RCE patterns. Rules are updated to track emerging threats."
             },
             {
-              name: "Real-Time Malware Scanning",
-              included: true,
-              description: "Continuous scanning with automatic quarantine.",
+              "name": "Real-Time Malware Scanning",
+              "included": true,
+              "description": "Continuously monitors new and modified files for signs of infection. Suspect items are quarantined automatically to prevent spread. Detailed alerts help you remediate quickly."
             },
             {
-              name: "Brute Force Protection",
-              included: true,
-              description: "Rate-limits abusive login attempts.",
+              "name": "Brute Force Protection",
+              "included": true,
+              "description": "Rate-limits repeated login attempts across key services. Automatically blocks abusive IPs and known bad actors. Reduces account takeover risks significantly."
             },
             {
-              name: "Two-Factor Authentication (2FA)",
-              included: true,
-              description: "Adds a second step to secure logins.",
-            },
-          ],
+              "name": "Two-Factor Authentication (2FA)",
+              "included": true,
+              "description": "Require a second factor—like a one-time code—in addition to a password. Greatly reduces the risk of account takeover even if credentials leak. Works with popular authenticator apps."
+            }
+          ]
         },
         {
-          title: "Premium Support & Assistance",
-          features: [
+          "title": "Premium Support & Assistance",
+          "features": [
             {
-              name: "24/7 WordPress Expert Support",
-              included: true,
-              description: "Talk to humans who understand WP, any time.",
+              "name": "24/7 WordPress Expert Support",
+              "included": true,
+              "description": "Talk to humans who work with WordPress daily. We’ll diagnose common plugin/theme issues and provide best-practice guidance. Complex custom-code development remains out of scope."
             },
             {
-              name: "30-Minute Guaranteed Email Response",
-              included: true,
-              description: "SLA-backed ticket response time.",
+              "name": "30-Minute Guaranteed Email Response",
+              "included": true,
+              "description": "Support tickets receive an initial human reply within 30 minutes. Expect triage, next steps, or ETA in that first message. Complex fixes may take longer but you won’t be left hanging."
             },
             {
-              name: "Step-by-Step WordPress Onboarding Guide",
-              included: true,
-              description: "A simple checklist to launch smoothly.",
+              "name": "Step-by-Step WordPress Onboarding Guide",
+              "included": true,
+              "description": "A simple launch checklist from DNS to SSL to caching. Helps you avoid common pitfalls during go-live. You’ll be production-ready with confidence."
             },
             {
-              name: "Community Forum Access",
-              included: false,
-              description: "Not included on Basic—available on higher tiers.",
+              "name": "Community Forum Access",
+              "included": false,
+              "description": "Ask questions, share solutions, and learn from other users. Community tips often surface best-practice configs. Moderators highlight verified answers."
             },
             {
-              name: "SEO Optimization Tips",
-              included: true,
-              description: "Actionable guidance to improve rankings.",
-            },
-          ],
+              "name": "SEO Optimization Tips",
+              "included": true,
+              "description": "Clear, prioritized recommendations for titles, meta, and site structure. Guidance on sitemaps, schema, and image alt text. Focused on practical wins you can apply quickly."
+            }
+          ]
         },
         {
-          title: "Performance Benchmarks",
-          features: [
+          "title": "Performance Benchmarks",
+          "features": [
             {
-              name: "99.99% Uptime Guarantee",
-              included: true,
-              description: "Enterprise-grade availability SLA.",
+              "name": "99.99% Uptime Guarantee",
+              "included": true,
+              "description": "Backed by an SLA targeting less than ~4.4 minutes of monthly downtime. Redundant power, network, and monitoring minimize incidents. Credits apply if we miss the mark."
             },
             {
-              name: "Global CDN Integration",
-              included: true,
-              description: "Edge delivery for international audiences.",
+              "name": "Global CDN Integration",
+              "included": true,
+              "description": "Serve static assets from edge locations worldwide. Reduces latency for visitors far from your origin. Easy to enable with minimal DNS changes."
             },
             {
-              name: "Average Load Time: Under 1s",
-              included: true,
-              description: "Measured on optimized demo stacks.",
+              "name": "Average Load Time: Under 1s",
+              "included": true,
+              "description": "Targets sub-second loads on optimized demo stacks with caching and CDN enabled. Real-world results vary by theme, plugins, and content. We provide guidance to help you hit the mark."
             },
             {
-              name: "Image Optimization Tools",
-              included: true,
-              description: "Auto-compress and convert images (e.g., WebP).",
-            },
-          ],
+              "name": "Image Optimization Tools",
+              "included": true,
+              "description": "Automatically compress and convert images (e.g., WebP) to shrink payloads. Can generate responsive sizes and lazy-loading where supported. Improves LCP and overall page weight."
+            }
+          ]
         },
         {
-          title: "Developer-Friendly Features",
-          features: [
+          "title": "Developer-Friendly Features",
+          "features": [
             {
-              name: "SSH Access with WP-CLI",
-              included: true,
-              description: "Manage WordPress from the command line.",
+              "name": "SSH Access with WP-CLI",
+              "included": true,
+              "description": "Secure shell with WP-CLI for fast, scriptable admin tasks. Run updates, search-replace, and user management from the terminal. Ideal for repeatable maintenance across sites."
             },
             {
-              name: "Git Integration",
-              included: true,
-              description: "Pull from repos and streamline deployments.",
+              "name": "Git Integration",
+              "included": true,
+              "description": "Pull from your repositories and deploy with minimal friction. Keep releases versioned and auditable. Works well with popular CI/CD pipelines."
             },
             {
-              name: "Custom Cron Jobs",
-              included: true,
-              description: "Schedule recurring tasks and maintenance.",
+              "name": "Custom Cron Jobs",
+              "included": true,
+              "description": "Schedule background tasks like backups, imports, or emails. Fine-tune run times to avoid peak traffic. Logs help you verify successful execution."
             },
             {
-              name: "Multiple PHP Versions",
-              included: true,
-              description: "Pin or upgrade PHP per site as needed.",
-            },
-          ],
-        },
+              "name": "Multiple PHP Versions",
+              "included": true,
+              "description": "Select and switch PHP versions per account for compatibility. Test new versions safely before committing. Extensions can be toggled as your stack requires."
+            }
+          ]
+        }
       ],
     },
 
@@ -1295,251 +1259,250 @@ export const wordpressHostingPricingData: PricingData = {
       ctaText: "Choose plan",
       features: [
         {
-          title: "Features",
-          features: [
+          "title": "Features",
+          "features": [
             {
-              name: "150 GB NVMe SSD Storage",
-              included: true,
-              description: "Bigger, faster storage for growing sites.",
+              "name": "150 GB NVMe SSD Storage",
+              "included": true,
+              "description": "High-speed NVMe storage delivers ultra-low latency and high IOPS for snappy admin and front-end loads. 150 GB comfortably fits multiple WP sites with sizable media libraries and backups. Plenty of room for staging copies and asset archives as you grow."
             },
             {
-              name: "10 WordPress Websites",
-              included: true,
-              description: "Run up to ten WordPress installs.",
+              "name": "10 WordPress Websites",
+              "included": true,
+              "description": "Run up to ten separate WordPress installs under one plan. Keep each project isolated with its own database, users, and directories. Perfect for agencies, multi-brand setups, or client hosting."
             },
             {
-              name: "Unmetered Bandwidth",
-              included: true,
-              description: "Serve more visitors without throttling.",
+              "name": "Unmetered Bandwidth",
+              "included": true,
+              "description": "No hard caps on monthly traffic or page views. Your site can handle viral spikes without surprise overage fees. Fair-use policies still apply to keep the network healthy."
             },
             {
-              name: "Free Domain (1 Year)",
-              included: true,
-              description:
-                "Register your primary domain at no cost for year one.",
+              "name": "Free Domain (1 Year)",
+              "included": true,
+              "description": "Register a new domain (e.g., .COM) for your first year at no extra cost. Perfect for launching a new brand or consolidating your presence. Standard renewal fees apply from year two."
             },
             {
-              name: "Unlimited Email Accounts",
-              included: true,
-              description: "Create inboxes for founders and teams.",
+              "name": "Unlimited Email Accounts",
+              "included": true,
+              "description": "Create as many branded mailboxes as your teams need—sales@, hr@, support@, and more. Access via webmail, IMAP/POP, and SMTP across all major clients. Scales cleanly as departments and headcount grow."
             },
             {
-              name: "Daily Automated Backups (JetBackup)",
-              included: true,
-              description: "Automatic daily backups with quick restore.",
+              "name": "Daily Automated Backups (JetBackup)",
+              "included": true,
+              "description": "Nightly restore points captured automatically and stored off-server. Restore files, databases, or entire accounts in a few clicks. Retention covers recent days to protect against mistakes or corruption."
             },
             {
-              name: "1-Click WordPress Installer",
-              included: true,
-              description: "Launch new sites in seconds.",
+              "name": "1-Click WordPress Installer",
+              "included": true,
+              "description": "Provision WordPress with a guided wizard—no manual databases or config. Secure defaults applied during setup. You’ll be publishing in minutes."
             },
             {
-              name: "DDoS Protection & WordPress Firewall",
-              included: true,
-              description: "Layered defenses to keep sites online.",
+              "name": "DDoS Protection & WordPress Firewall",
+              "included": true,
+              "description": "Network-layer mitigation absorbs volumetric attacks while an app firewall filters malicious WP requests. Helps maintain availability and blocks common exploit patterns. Rules are updated to adapt to new threats."
             },
             {
-              name: "LiteSpeed Web Server + LSCache",
-              included: true,
-              description: "Event-driven web server and cache for speed.",
+              "name": "LiteSpeed Web Server + LSCache",
+              "included": true,
+              "description": "Event-driven LiteSpeed handles heavy concurrency efficiently, while LSCache delivers server-level page caching. Together they cut TTFB and improve Core Web Vitals. Automatic cache purges keep content fresh after edits."
             },
             {
-              name: "AI-Driven WordPress Optimizer",
-              included: true,
-              description: "Auto-tunes caching, DB, and images.",
+              "name": "AI-Driven WordPress Optimizer",
+              "included": true,
+              "description": "Analyzes your site to suggest caching, database, and image tweaks. Applies safe optimizations to improve load times with minimal effort. Generates reports so you can track gains over time."
             },
             {
-              name: "15-Minute Guaranteed Email Response",
-              included: true,
-              description: "Even faster ticket SLAs for busy owners.",
+              "name": "15-Minute Guaranteed Email Response",
+              "included": true,
+              "description": "We guarantee an initial human reply to your ticket within 15 minutes. You’ll receive acknowledgment plus triage and next steps or an ETA. Complex fixes may take longer, but you won’t be left waiting."
             },
             {
-              name: "30-Day Money-Back Guarantee",
-              included: true,
-              description: "Full refund period if it’s not a fit.",
-            },
-          ],
+              "name": "30-Day Money-Back Guarantee",
+              "included": true,
+              "description": "Try the service risk-free for 30 days. If it’s not a fit, request a full refund on hosting fees. Domain registrations and third-party add-ons may be excluded."
+            }
+          ]
         },
         {
-          title: "Technical Specifications",
-          features: [
+          "title": "Technical Specifications",
+          "features": [
             {
-              name: "4 CPU Cores",
-              included: true,
-              description: "More compute for dynamic workloads.",
+              "name": "4 CPU Cores",
+              "included": true,
+              "description": "More parallel compute for PHP workers, queues, and background tasks. Keeps dynamic pages, carts, and checkouts responsive during peak times. A solid fit for medium-to-large stores and multi-site fleets."
             },
             {
-              name: "4 GB RAM",
-              included: true,
-              description: "Memory headroom for object caches and builders.",
+              "name": "4 GB RAM",
+              "included": true,
+              "description": "Ample memory for object caches, media processing, and heavy builders. Reduces out-of-memory errors during imports and admin work. Comfortable for higher traffic and plugin-rich sites."
             },
             {
-              name: "30 MB/s I/O Speed",
-              included: true,
-              description: "Higher storage throughput for busy sites.",
+              "name": "30 MB/s I/O Speed",
+              "included": true,
+              "description": "Higher disk throughput speeds backups, restores, and media operations. Helps keep database-driven pages and search snappy. Useful for sites with frequent uploads and cron activity."
             },
             {
-              name: "80 Entry Processes",
-              included: true,
-              description: "Support more concurrent PHP requests.",
+              "name": "80 Entry Processes",
+              "included": true,
+              "description": "Allows up to 80 simultaneous PHP/HTTP handlers before queuing. Improves resilience during traffic bursts and bot activity. Pair with caching to maximize effective concurrency."
             },
             {
-              name: "PHP Memory Limit: 1024 MB",
-              included: true,
-              description: "Room for complex plugins and themes.",
+              "name": "PHP Memory Limit: 1024 MB",
+              "included": true,
+              "description": "Extra headroom for complex builders, analytics, and integrations. Reduces failures on large imports and image optimizations. Well-suited for plugin-dense WordPress stacks."
             },
             {
-              name: "600,000 Inodes Limit",
-              included: true,
-              description: "Accommodates larger media libraries.",
+              "name": "600,000 Inodes Limit",
+              "included": true,
+              "description": "Room for roughly 600k files and directories across your account. Supports growing media libraries, caches, and logs. Routine housekeeping keeps backups fast and usage efficient."
             },
             {
-              name: "Multiple PHP Versions",
-              included: true,
-              description: "Match PHP versions per project.",
-            },
-          ],
+              "name": "Multiple PHP Versions",
+              "included": true,
+              "description": "Select and switch PHP versions per account for compatibility. Test new versions safely before committing. Extensions can be toggled as your stack requires."
+            }
+          ]
         },
         {
-          title: "Exclusive WordPress Features",
-          features: [
+          "title": "Exclusive WordPress Features",
+          "features": [
             {
-              name: "LiteSpeed Cache for WordPress",
-              included: true,
-              description: "Page cache, image/WebP, and CSS/JS tuning.",
+              "name": "LiteSpeed Cache for WordPress",
+              "included": true,
+              "description": "Server-level page caching with smart purge rules for near-instant loads. Includes image optimization, CSS/JS minify, and QUIC.cloud integration. Works best with LiteSpeed Web Server."
             },
             {
-              name: "Automatic WordPress Core & Plugin Updates",
-              included: true,
-              description: "Security updates applied automatically.",
+              "name": "Automatic WordPress Core & Plugin Updates",
+              "included": true,
+              "description": "Applies core and plugin updates automatically to close security gaps quickly. Minor releases are seamless; major updates can be deferred. Backups allow safe rollbacks if needed."
             },
             {
-              name: "1-Click Staging Environment",
-              included: true,
-              description: "Test changes safely before live deploys.",
+              "name": "1-Click Staging Environment",
+              "included": true,
+              "description": "Clone your site into a staging copy to test updates and changes safely. Push changes live when verified—no manual migrations. Great for experimenting with themes and builders."
             },
             {
-              name: "AI-Powered SEO & Speed Optimizer",
-              included: true,
-              description: "Guided improvements for Core Web Vitals.",
+              "name": "AI-Powered SEO & Speed Optimizer",
+              "included": true,
+              "description": "Surfaces actionable recommendations for metadata, images, and critical CSS/JS. Prioritizes changes that move Core Web Vitals and search visibility. Reports show before/after impact."
             },
             {
-              name: "Free WordPress Migration (Completed Within Hours)",
-              included: true,
-              description: "White-glove moves with minimal downtime.",
-            },
-          ],
+              "name": "Free WordPress Migration (Completed Within Hours)",
+              "included": true,
+              "description": "White-glove transfer of files and database with minimal downtime. Coordinated cutover windows and verification checklists. Ideal for time-sensitive launches."
+            }
+          ]
         },
         {
-          title: "Advanced Security Features",
-          features: [
+          "title": "Advanced Security Features",
+          "features": [
             {
-              name: "Imunify360 Security Suite",
-              included: true,
-              description: "Malware cleanup and exploit prevention.",
+              "name": "Imunify360 Security Suite",
+              "included": true,
+              "description": "Always-on malware scanning, WAF rules, and proactive defense. Quarantines suspicious files and blocks exploit attempts. Centralized dashboard shows threats and actions."
             },
             {
-              name: "Web Application Firewall (WAF)",
-              included: true,
-              description: "Blocks SQLi, XSS, and other web attacks.",
+              "name": "Web Application Firewall (WAF)",
+              "included": true,
+              "description": "Filters malicious requests before they reach WordPress/PHP. Shields against common attacks like SQLi, XSS, and RCE patterns. Rules are updated to track emerging threats."
             },
             {
-              name: "Real-Time Malware Scanning",
-              included: true,
-              description: "Continuous monitoring for new threats.",
+              "name": "Real-Time Malware Scanning",
+              "included": true,
+              "description": "Continuously monitors new and modified files for signs of infection. Suspect items are quarantined automatically to prevent spread. Detailed alerts help you remediate quickly."
             },
             {
-              name: "Brute Force Protection",
-              included: true,
-              description: "Throttles abusive logins across services.",
+              "name": "Brute Force Protection",
+              "included": true,
+              "description": "Rate-limits repeated login attempts across key services. Automatically blocks abusive IPs and known bad actors. Reduces account takeover risks significantly."
             },
             {
-              name: "Two-Factor Authentication (2FA)",
-              included: true,
-              description: "Adds a second factor to secure accounts.",
-            },
-          ],
+              "name": "Two-Factor Authentication (2FA)",
+              "included": true,
+              "description": "Require a second factor—like a one-time code—in addition to a password. Greatly reduces the risk of account takeover even if credentials leak. Works with popular authenticator apps."
+            }
+          ]
         },
         {
-          title: "Premium Support & Assistance",
-          features: [
+          "title": "Premium Support & Assistance",
+          "features": [
             {
-              name: "24/7 WordPress Expert Support",
-              included: true,
-              description: "Get help from WP specialists anytime.",
+              "name": "24/7 WordPress Expert Support",
+              "included": true,
+              "description": "Talk to humans who work with WordPress daily. We’ll diagnose common plugin/theme issues and provide best-practice guidance. Complex custom-code development remains out of scope."
             },
             {
-              name: "15-Minute Guaranteed Email Response",
-              included: true,
-              description: "Rapid ticket response for time-sensitive issues.",
+              "name": "15-Minute Guaranteed Email Response",
+              "included": true,
+              "description": "We guarantee an initial human reply to your ticket within 15 minutes. You’ll receive acknowledgment plus triage and next steps or an ETA. Complex fixes may take longer, but you won’t be left waiting."
             },
             {
-              name: "Step-by-Step WordPress Onboarding Guide",
-              included: true,
-              description: "Launch checklist tailored to WordPress.",
+              "name": "Step-by-Step WordPress Onboarding Guide",
+              "included": true,
+              "description": "A simple launch checklist from DNS to SSL to caching. Helps you avoid common pitfalls during go-live. You’ll be production-ready with confidence."
             },
             {
-              name: "Community Forum Access",
-              included: true,
-              description: "Learn from peers and share solutions.",
+              "name": "Community Forum Access",
+              "included": true,
+              "description": "Ask questions, share solutions, and learn from other users. Community tips often surface best-practice configs. Moderators highlight verified answers."
             },
             {
-              name: "Advanced SEO Optimization Tips",
-              included: true,
-              description: "Deeper guidance to rank and convert better.",
-            },
-          ],
+              "name": "Advanced SEO Optimization Tips",
+              "included": true,
+              "description": "Deeper, prioritized guidance on titles, metadata, schema, and internal linking. Covers sitemaps, canonicalization, and image alt/text strategies. Focused on practical wins that improve rankings and conversions."
+            }
+          ]
         },
         {
-          title: "Performance Enhancements",
-          features: [
+          "title": "Performance Enhancements",
+          "features": [
             {
-              name: "99.99% Uptime Guarantee",
-              included: true,
-              description: "High availability backed by SLA.",
+              "name": "99.99% Uptime Guarantee",
+              "included": true,
+              "description": "Backed by an SLA targeting less than ~4.4 minutes of monthly downtime. Redundant power, network, and monitoring minimize incidents. Credits apply if we miss the mark."
             },
             {
-              name: "Global CDN Integration",
-              included: true,
-              description: "Edge caching shortens distance to visitors.",
+              "name": "Global CDN Integration",
+              "included": true,
+              "description": "Serve static assets from edge locations worldwide. Reduces latency for visitors far from your origin. Easy to enable with minimal DNS changes."
             },
             {
-              name: "Average Load Time: Under 900ms",
-              included: true,
-              description: "Measured on tuned demo sites.",
+              "name": "Average Load Time: Under 900ms",
+              "included": true,
+              "description": "Targets sub-900ms loads on tuned demo stacks with caching and CDN enabled. Real-world results vary by theme, plugins, and content. We’ll share guidance to help you hit similar numbers."
             },
             {
-              name: "Image Optimization Tools",
-              included: true,
-              description: "Auto-compress/resize for faster pages.",
-            },
-          ],
+              "name": "Image Optimization Tools",
+              "included": true,
+              "description": "Automatically compress and convert images (e.g., WebP) to shrink payloads. Can generate responsive sizes and enable lazy-loading where supported. Improves LCP and overall page weight."
+            }
+          ]
         },
         {
-          title: "Developer-Friendly Features",
-          features: [
+          "title": "Developer-Friendly Features",
+          "features": [
             {
-              name: "SSH Access with WP-CLI",
-              included: true,
-              description: "CLI workflows and scripted operations.",
+              "name": "SSH Access with WP-CLI",
+              "included": true,
+              "description": "Secure shell with WP-CLI for fast, scriptable admin tasks. Run updates, search-replace, and user management from the terminal. Ideal for repeatable maintenance across sites."
             },
             {
-              name: "Git Integration",
-              included: true,
-              description: "Pull from repos and deploy safely.",
+              "name": "Git Integration",
+              "included": true,
+              "description": "Pull from your repositories and deploy with minimal friction. Keep releases versioned and auditable. Works well with popular CI/CD pipelines."
             },
             {
-              name: "Custom Cron Jobs",
-              included: true,
-              description: "Automate imports, cleanups, and tasks.",
+              "name": "Custom Cron Jobs",
+              "included": true,
+              "description": "Schedule background tasks like backups, imports, or emails. Fine-tune run times to avoid peak traffic. Logs help you verify successful execution."
             },
             {
-              name: "Multiple PHP Versions",
-              included: true,
-              description: "Per-site PHP targeting for compatibility.",
-            },
-          ],
-        },
+              "name": "Multiple PHP Versions",
+              "included": true,
+              "description": "Select and switch PHP versions per account for compatibility. Test new versions safely before committing. Extensions can be toggled as your stack requires."
+            }
+          ]
+        }
       ],
     },
 
@@ -1662,271 +1625,265 @@ export const wordpressHostingPricingData: PricingData = {
       ctaText: "Choose plan",
       features: [
         {
-          title: "Features",
-          features: [
+          "title": "Features",
+          "features": [
             {
-              name: "Unlimited NVMe SSD Storage",
-              included: true,
-              description:
-                "Scale content and backups without capacity planning.",
+              "name": "Unlimited NVMe SSD Storage",
+              "included": true,
+              "description": "Store as much content, media, and archives as your projects demand without manual capacity planning. NVMe delivers ultra-low latency and high IOPS so sites remain snappy as they grow. Usage remains subject to fair-use and inode limits for platform health."
             },
             {
-              name: "Unlimited WordPress Websites",
-              included: true,
-              description: "Host as many sites, brands, or networks as needed.",
+              "name": "Unlimited WordPress Websites",
+              "included": true,
+              "description": "Host an unlimited number of WordPress installs under one plan. Each site can have its own database, users, and settings to keep projects isolated. Ideal for agencies, multi-brand portfolios, and large networks."
             },
             {
-              name: "Unmetered Bandwidth",
-              included: true,
-              description: "Predictable costs even at extreme traffic levels.",
+              "name": "Unmetered Bandwidth",
+              "included": true,
+              "description": "No hard caps on monthly traffic or page views. Your site can handle viral spikes without surprise overage fees. Fair-use policies still apply to keep the network healthy."
             },
             {
-              name: "Free Domain (1 Year)",
-              included: true,
-              description: "Register your primary domain at no cost.",
+              "name": "Free Domain (1 Year)",
+              "included": true,
+              "description": "Register a new domain (e.g., .COM) for your first year at no extra cost. Perfect for launching a new brand or consolidating your presence. Standard renewal fees apply from year two."
             },
             {
-              name: "Unlimited Email Accounts",
-              included: true,
-              description: "Create inboxes for every team and function.",
+              "name": "Unlimited Email Accounts",
+              "included": true,
+              "description": "Create as many branded mailboxes as your teams need—sales@, hr@, support@, and more. Access via webmail, IMAP/POP, and SMTP across all major clients. Scales cleanly as departments and headcount grow."
             },
             {
-              name: "Hourly Automated Backups (JetBackup)",
-              included: true,
-              description:
-                "Frequent recovery points for mission-critical sites.",
+              "name": "Hourly Automated Backups (JetBackup)",
+              "included": true,
+              "description": "Create restore points every hour for mission-critical workloads. Dramatically lowers RPO/RTO so you can roll back recent changes with minimal data loss. Retention follows a rolling schedule to balance coverage and storage."
             },
             {
-              name: "1-Click WordPress Installer",
-              included: true,
-              description: "Standardized, fast site provisioning.",
+              "name": "1-Click WordPress Installer",
+              "included": true,
+              "description": "Provision WordPress with a guided wizard—no manual databases or config. Secure defaults applied during setup. You’ll be publishing in minutes."
             },
             {
-              name: "DDoS Protection & WordPress Firewall",
-              included: true,
-              description: "Enterprise-grade security to stay online.",
+              "name": "DDoS Protection & WordPress Firewall",
+              "included": true,
+              "description": "Network-layer mitigation absorbs volumetric attacks while an app firewall filters malicious WP requests. Helps maintain availability and blocks common exploit patterns. Rules are updated to adapt to new threats."
             },
             {
-              name: "LiteSpeed Web Server + LSCache",
-              included: true,
-              description: "High-throughput server for heavy concurrency.",
+              "name": "LiteSpeed Web Server + LSCache",
+              "included": true,
+              "description": "Event-driven LiteSpeed handles heavy concurrency efficiently, while LSCache delivers server-level page caching. Together they cut TTFB and improve Core Web Vitals. Automatic cache purges keep content fresh after edits."
             },
             {
-              name: "AI-Driven WordPress Optimizer",
-              included: true,
-              description: "Automated tuning for speed at scale.",
+              "name": "AI-Driven WordPress Optimizer",
+              "included": true,
+              "description": "Analyzes your site to suggest caching, database, and image tweaks. Applies safe optimizations to improve load times with minimal effort. Generates reports so you can track gains over time."
             },
             {
-              name: "15-Minute Guaranteed Email Response",
-              included: true,
-              description: "Fastest ticket SLAs in our lineup.",
+              "name": "15-Minute Guaranteed Email Response",
+              "included": true,
+              "description": "We guarantee an initial human reply to your ticket within 15 minutes. You’ll receive acknowledgment plus triage and next steps or an ETA. Complex fixes may take longer, but you won’t be left waiting."
             },
             {
-              name: "30-Day Money-Back Guarantee",
-              included: true,
-              description: "Evaluate at scale without risk.",
-            },
-          ],
+              "name": "30-Day Money-Back Guarantee",
+              "included": true,
+              "description": "Try the service risk-free for 30 days. If it’s not a fit, request a full refund on hosting fees. Domain registrations and third-party add-ons may be excluded."
+            }
+          ]
         },
         {
-          title: "Technical Specifications",
-          features: [
+          "title": "Technical Specifications",
+          "features": [
             {
-              name: "8 CPU Cores",
-              included: true,
-              description: "Strong parallelism for complex workloads.",
+              "name": "8 CPU Cores",
+              "included": true,
+              "description": "High parallelism for PHP workers, queues, and background jobs at scale. Keeps complex, dynamic workloads responsive during heavy traffic. Well-suited for multi-site fleets, WooCommerce, and search indexing."
             },
             {
-              name: "16 GB RAM",
-              included: true,
-              description: "Large memory pool for caches and heavy plugins.",
+              "name": "16 GB RAM",
+              "included": true,
+              "description": "Large memory pool for hefty object caches, media processing, and analytics. Cuts down on out-of-memory errors during imports and batch tasks. Comfortable for high-traffic stores and plugin-dense sites."
             },
             {
-              name: "50 MB/s I/O Speed",
-              included: true,
-              description: "Premium disk throughput for databases and media.",
+              "name": "50 MB/s I/O Speed",
+              "included": true,
+              "description": "Premium disk throughput accelerates backups, restores, and media handling. Helps database-driven pages and search stay responsive. Useful for sites with frequent uploads and cron activity."
             },
             {
-              name: "200 Entry Processes",
-              included: true,
-              description: "Serve very high concurrency comfortably.",
+              "name": "200 Entry Processes",
+              "included": true,
+              "description": "Supports far more concurrent PHP/HTTP handlers before queuing. Improves resilience during traffic spikes and bot surges. Ideal for sites with many simultaneous visitors."
             },
             {
-              name: "PHP Memory Limit: 4096 MB",
-              included: true,
-              description: "Headroom for builders, search, and integrations.",
+              "name": "PHP Memory Limit: 4096 MB",
+              "included": true,
+              "description": "Massive headroom for builders, search, analytics, and integrations. Reduces failures on large imports and complex page renders. Excellent for enterprise WordPress stacks."
             },
             {
-              name: "Unlimited Inodes",
-              included: true,
-              description: "Handle extremely large file trees and assets.",
+              "name": "Unlimited Inodes",
+              "included": true,
+              "description": "Accommodate extremely large numbers of files and directories. Ideal for giant media libraries, logs, and cache footprints. General fair-use policies still apply for platform stability."
             },
             {
-              name: "Multiple PHP Versions",
-              included: true,
-              description: "Run legacy and modern apps side by side.",
-            },
-          ],
+              "name": "Multiple PHP Versions",
+              "included": true,
+              "description": "Select and switch PHP versions per account for compatibility. Test new versions safely before committing. Extensions can be toggled as your stack requires."
+            }
+          ]
         },
         {
-          title: "Exclusive WordPress Features",
-          features: [
+          "title": "Exclusive WordPress Features",
+          "features": [
             {
-              name: "LiteSpeed Cache for WordPress",
-              included: true,
-              description:
-                "Advanced cache policies and image/WebP optimization.",
+              "name": "LiteSpeed Cache for WordPress",
+              "included": true,
+              "description": "Server-level page caching with smart purge rules for near-instant loads. Includes image optimization, CSS/JS minify, and QUIC.cloud integration. Works best with LiteSpeed Web Server."
             },
             {
-              name: "Automatic WordPress Core & Plugin Updates",
-              included: true,
-              description: "Security and minor updates applied automatically.",
+              "name": "Automatic WordPress Core & Plugin Updates",
+              "included": true,
+              "description": "Applies core and plugin updates automatically to close security gaps quickly. Minor releases are seamless; major updates can be deferred. Backups allow safe rollbacks if needed."
             },
             {
-              name: "1-Click Staging Environment",
-              included: true,
-              description: "Safely test major changes and releases.",
+              "name": "1-Click Staging Environment",
+              "included": true,
+              "description": "Clone your site into a staging copy to test updates and changes safely. Push changes live when verified—no manual migrations. Great for experimenting with themes and builders."
             },
             {
-              name: "AI-Powered SEO & Speed Optimizer",
-              included: true,
-              description: "Data-driven improvements for fastest page loads.",
+              "name": "AI-Powered SEO & Speed Optimizer",
+              "included": true,
+              "description": "Surfaces actionable recommendations for metadata, images, and critical CSS/JS. Prioritizes changes that move Core Web Vitals and search visibility. Reports show before/after impact."
             },
             {
-              name: "Free WordPress Migration (Completed Within Hours)",
-              included: true,
-              description: "White-glove migrations for complex estates.",
-            },
-          ],
+              "name": "Free WordPress Migration (Completed Within Hours)",
+              "included": true,
+              "description": "White-glove transfer of files and database with minimal downtime. Coordinated cutover windows and verification checklists. Ideal for time-sensitive launches."
+            }
+          ]
         },
         {
-          title: "Advanced Security Features",
-          features: [
+          "title": "Advanced Security Features",
+          "features": [
             {
-              name: "Imunify360 Security Suite",
-              included: true,
-              description: "Layered protection with WAF and malware cleanup.",
+              "name": "Imunify360 Security Suite",
+              "included": true,
+              "description": "Always-on malware scanning, WAF rules, and proactive defense. Quarantines suspicious files and blocks exploit attempts. Centralized dashboard shows threats and actions."
             },
             {
-              name: "Web Application Firewall (WAF)",
-              included: true,
-              description: "Virtual patching blocks emerging threats.",
+              "name": "Web Application Firewall (WAF)",
+              "included": true,
+              "description": "Filters malicious requests before they reach WordPress/PHP. Shields against common attacks like SQLi, XSS, and RCE patterns. Rules are updated to track emerging threats."
             },
             {
-              name: "Real-Time Malware Scanning",
-              included: true,
-              description: "Continuous monitoring and auto-quarantine.",
+              "name": "Real-Time Malware Scanning",
+              "included": true,
+              "description": "Continuously monitors new and modified files for signs of infection. Suspect items are quarantined automatically to prevent spread. Detailed alerts help you remediate quickly."
             },
             {
-              name: "Two-Factor Authentication (2FA)",
-              included: true,
-              description: "Add a second factor across accounts.",
+              "name": "Two-Factor Authentication (2FA)",
+              "included": true,
+              "description": "Require a second factor—like a one-time code—in addition to a password. Greatly reduces the risk of account takeover even if credentials leak. Works with popular authenticator apps."
             },
             {
-              name: "Daily Security Reports",
-              included: true,
-              description: "Visibility into threats, patches, and status.",
-            },
-          ],
+              "name": "Daily Security Reports",
+              "included": true,
+              "description": "Receive concise daily summaries of threats blocked, malware findings, and patch status. Helps teams track posture at a glance and spot trends early. Export or share reports with stakeholders as needed."
+            }
+          ]
         },
         {
-          title: "Premium Support & Assistance",
-          features: [
+          "title": "Premium Support & Assistance",
+          "features": [
             {
-              name: "24/7 WP WordPress Expert Support",
-              included: true,
-              description: "Senior engineers available around the clock.",
+              "name": "24/7 WP WordPress Expert Support",
+              "included": true,
+              "description": "Round-the-clock access to senior WordPress engineers. We troubleshoot plugins, themes, and performance bottlenecks with best-practice guidance. Custom development requests are out of scope but we’ll point you the right way."
             },
             {
-              name: "15-Minute Guaranteed Email Response",
-              included: true,
-              description: "SLA for rapid triage and resolution.",
+              "name": "15-Minute Guaranteed Email Response",
+              "included": true,
+              "description": "We guarantee an initial human reply to your ticket within 15 minutes. You’ll receive acknowledgment plus triage and next steps or an ETA. Complex fixes may take longer, but you won’t be left waiting."
             },
             {
-              name: "Dedicated Account Manager",
-              included: true,
-              description:
-                "Single point of contact for planning and escalations.",
+              "name": "Dedicated Account Manager",
+              "included": true,
+              "description": "A single point of contact who learns your stack and goals. Coordinates planning, roadmaps, and escalations across teams. Helps you get the most from the platform."
             },
             {
-              name: "Advanced WordPress Onboarding Guide",
-              included: true,
-              description: "Deep configuration for speed and security.",
+              "name": "Advanced WordPress Onboarding Guide",
+              "included": true,
+              "description": "A deep-dive setup playbook covering caching layers, security hardening, and CDN/DNS. Step-by-step checklists help you launch fast and safely. Tailored tips align configuration with your traffic patterns."
             },
             {
-              name: "Community Forum Access",
-              included: true,
-              description: "Share learnings and best practices.",
+              "name": "Community Forum Access",
+              "included": true,
+              "description": "Ask questions, share solutions, and learn from other users. Community tips often surface best-practice configs. Moderators highlight verified answers."
             },
             {
-              name: "Advanced SEO Optimization Tips",
-              included: true,
-              description: "Expert playbooks for technical and content SEO.",
-            },
-          ],
+              "name": "Advanced SEO Optimization Tips",
+              "included": true,
+              "description": "Deeper, prioritized guidance on titles, metadata, schema, and internal linking. Covers sitemaps, canonicalization, and image alt/text strategies. Focused on practical wins that improve rankings and conversions."
+            }
+          ]
         },
         {
-          title: "Performance Benchmarks",
-          features: [
+          "title": "Performance Benchmarks",
+          "features": [
             {
-              name: "99.99% Uptime Guarantee",
-              included: true,
-              description:
-                "Contractual reliability for mission-critical sites.",
+              "name": "99.99% Uptime Guarantee",
+              "included": true,
+              "description": "Backed by an SLA targeting less than ~4.4 minutes of monthly downtime. Redundant power, network, and monitoring minimize incidents. Credits apply if we miss the mark."
             },
             {
-              name: "Global CDN Integration",
-              included: true,
-              description: "Edge presence for fast, global delivery.",
+              "name": "Global CDN Integration",
+              "included": true,
+              "description": "Serve static assets from edge locations worldwide. Reduces latency for visitors far from your origin. Easy to enable with minimal DNS changes."
             },
             {
-              name: "Average Load Time: Under 600ms",
-              included: true,
-              description: "Our fastest target under realistic conditions.",
+              "name": "Average Load Time: Under 600ms",
+              "included": true,
+              "description": "Targets sub-600ms loads on tuned demo stacks with caching and CDN enabled. Real-world results vary by theme, plugins, and content. We provide guidance to help you approach similar performance."
             },
             {
-              name: "Image Optimization Tools",
-              included: true,
-              description: "Compress, resize, and convert for best LCP.",
+              "name": "Image Optimization Tools",
+              "included": true,
+              "description": "Automatically compress and convert images (e.g., WebP) to shrink payloads. Can generate responsive sizes and enable lazy-loading where supported. Improves LCP and overall page weight."
             },
             {
-              name: "WooCommerce Optimization",
-              included: true,
-              description:
-                "Server and cache tuning for large catalogs and carts.",
-            },
-          ],
+              "name": "WooCommerce Optimization",
+              "included": true,
+              "description": "Server and cache tuning tailored to product catalogs, carts, and checkout flows. Reduces query load and session contention during sales and promotions. Helps sustain fast response times at high concurrency."
+            }
+          ]
         },
         {
-          title: "Developer-Friendly Features",
-          features: [
+          "title": "Developer-Friendly Features",
+          "features": [
             {
-              name: "SSH Access with WP-CLI",
-              included: true,
-              description: "Manage WordPress via CLI and scripts.",
+              "name": "SSH Access with WP-CLI",
+              "included": true,
+              "description": "Secure shell with WP-CLI for fast, scriptable admin tasks. Run updates, search-replace, and user management from the terminal. Ideal for repeatable maintenance across sites."
             },
             {
-              name: "Git Integration",
-              included: true,
-              description: "Version-controlled deployments from repos.",
+              "name": "Git Integration",
+              "included": true,
+              "description": "Pull from your repositories and deploy with minimal friction. Keep releases versioned and auditable. Works well with popular CI/CD pipelines."
             },
             {
-              name: "Custom Cron Jobs",
-              included: true,
-              description: "Automate feeds, imports, and scheduled tasks.",
+              "name": "Custom Cron Jobs",
+              "included": true,
+              "description": "Schedule background tasks like backups, imports, or emails. Fine-tune run times to avoid peak traffic. Logs help you verify successful execution."
             },
             {
-              name: "Multiple PHP Versions",
-              included: true,
-              description: "Per-site PHP selection for compatibility.",
+              "name": "Multiple PHP Versions",
+              "included": true,
+              "description": "Select and switch PHP versions per account for compatibility. Test new versions safely before committing. Extensions can be toggled as your stack requires."
             },
             {
-              name: "Database Optimization Tools",
-              included: true,
-              description: "Tune MySQL for lower latency at scale.",
-            },
-          ],
-        },
+              "name": "Database Optimization Tools",
+              "included": true,
+              "description": "Analyze slow queries and tune MySQL parameters to lower latency. Schedule index maintenance and table cleanups safely. Dashboards surface hotspots so you can keep performance consistent at scale."
+            }
+          ]
+        }
       ],
     },
   ],
@@ -1955,296 +1912,260 @@ export const manageHostingPricingData: PricingData = {
       ctaText: "Choose Plan",
       features: [
         {
-          title: "Features",
-          features: [
+          "title": "Features",
+          "features": [
             {
-              name: "150GB NVMe SSD Storage",
-              included: true,
-              description:
-                "High-speed NVMe SSD storage for faster website performance.",
+              "name": "150GB NVMe SSD Storage",
+              "included": true,
+              "description": "High-speed NVMe storage delivers ultra-low latency and high IOPS for snappy admin and front-end loads. 150GB comfortably fits many sites with sizable media libraries and backups. Plenty of room for staging copies and asset archives as you grow."
             },
             {
-              name: "15 Websites",
-              included: true,
-              description:
-                "Host up to 15 websites under one plan without extra cost.",
+              "name": "15 Websites",
+              "included": true,
+              "description": "Host up to fifteen separate sites under one plan. Each project can have its own database, users, and directories for clean isolation. Great for agencies, multi-brand setups, or client work."
             },
             {
-              name: "Unmetered Bandwidth",
-              included: true,
-              description: "Unlimited traffic with no bandwidth restrictions.",
+              "name": "Unmetered Bandwidth",
+              "included": true,
+              "description": "No hard caps on monthly traffic or page views. Your site can handle viral spikes without surprise overage fees. Fair-use policies still apply to keep the network healthy."
             },
             {
-              name: "Free SSL Certificate (Lifetime)",
-              included: true,
-              description:
-                "Keep all websites secure with lifetime SSL encryption.",
+              "name": "Free SSL Certificate (Lifetime)",
+              "included": true,
+              "description": "Permanent HTTPS for all your domains without renewal costs. Protects logins, checkouts, and forms in transit. Improves visitor trust and can aid search visibility."
             },
             {
-              name: "5 vCPU Cores",
-              included: true,
-              description: "Powerful virtual CPU cores for smooth performance.",
+              "name": "5 vCPU Cores",
+              "included": true,
+              "description": "Five virtual CPU cores provide strong parallelism for PHP workers and background jobs. Keeps dynamic pages and carts responsive during peak periods. Well-suited for multi-site fleets and busy stores."
             },
             {
-              name: "10 GB RAM",
-              included: true,
-              description:
-                "High memory allocation for resource-intensive applications.",
+              "name": "10 GB RAM",
+              "included": true,
+              "description": "Generous memory for object caches, media processing, and heavyweight plugins. Reduces out-of-memory errors during imports and admin tasks. Comfortable for higher traffic and plugin-rich sites."
             },
             {
-              name: "Daily Automated Backups (14 Days Retention)",
-              included: true,
-              description: "Automatic daily backups stored for up to 14 days.",
+              "name": "Daily Automated Backups (14 Days Retention)",
+              "included": true,
+              "description": "Automatic daily restore points retained for up to 14 days. Recover files, databases, or entire accounts in a few clicks. Coverage helps undo mistakes and malware quickly."
             },
             {
-              name: "1-Click App Installer",
-              included: true,
-              description:
-                "Easily install WordPress and 400+ apps in a single click.",
+              "name": "1-Click App Installer",
+              "included": true,
+              "description": "Install WordPress and 400+ popular apps in a single step. Handles databases and configs automatically with sensible defaults. Ideal for fast prototypes and standardized rollouts."
             },
             {
-              name: "Global CDN Integration (Cloudflare Enterprise)",
-              included: true,
-              description:
-                "Delivers content faster worldwide with enterprise-level CDN integration.",
+              "name": "Global CDN Integration (Cloudflare Enterprise)",
+              "included": true,
+              "description": "Delivers content faster worldwide with enterprise-level CDN integration."
             },
             {
-              name: "100% Uptime SLA",
-              included: true,
-              description:
-                "Guaranteed network uptime backed by a Service Level Agreement.",
+              "name": "100% Uptime SLA",
+              "included": true,
+              "description": "A contractual target of zero network downtime for the covered scope. Credits apply per SLA terms if the target is missed. Redundant networking and continuous monitoring back the commitment."
             },
             {
-              name: "30-Minute Guaranteed Email Response",
-              included: true,
-              description:
-                "Quick support with responses guaranteed within 30 minutes.",
+              "name": "30-Minute Guaranteed Email Response",
+              "included": true,
+              "description": "Support tickets receive an initial human reply within 30 minutes. Expect triage, next steps, or ETA in that first message. Complex fixes may take longer but you won’t be left hanging."
             },
             {
-              name: "30-Day Money-Back Guarantee",
-              included: true,
-              description:
-                "Risk-free hosting with a full refund if cancelled within 30 days.",
-            },
-          ],
+              "name": "30-Day Money-Back Guarantee",
+              "included": true,
+              "description": "Try the service risk-free for 30 days. If it’s not a fit, request a full refund on hosting fees. Domain registrations and third-party add-ons may be excluded."
+            }
+          ]
         },
         {
-          title: "Upgraded Technical Specifications",
-          features: [
+          "title": "Upgraded Technical Specifications",
+          "features": [
             {
-              name: "5 vCPU Cores",
-              included: true,
-              description:
-                "Advanced CPU power for handling high traffic and workloads.",
+              "name": "5 vCPU Cores",
+              "included": true,
+              "description": "Five virtual CPU cores provide strong parallelism for PHP workers and background jobs. Keeps dynamic pages and carts responsive during peak periods. Well-suited for multi-site fleets and busy stores."
             },
             {
-              name: "10 GB RAM",
-              included: true,
-              description:
-                "Enhanced memory capacity for faster and stable operations.",
+              "name": "10 GB RAM",
+              "included": true,
+              "description": "Generous memory for object caches, media processing, and heavyweight plugins. Reduces out-of-memory errors during imports and admin tasks. Comfortable for higher traffic and plugin-rich sites."
             },
             {
-              name: "50 MB/s I/O Speed",
-              included: true,
-              description:
-                "Fast input/output speeds for quicker file and database access.",
+              "name": "50 MB/s I/O Speed",
+              "included": true,
+              "description": "Premium disk throughput accelerates backups, restores, and media handling. Helps database-driven pages and search stay responsive. Useful for sites with frequent uploads and cron activity."
             },
             {
-              name: "60 Entry Processes",
-              included: true,
-              description:
-                "Supports up to 60 concurrent PHP processes at once.",
+              "name": "60 Entry Processes",
+              "included": true,
+              "description": "Allows up to 60 simultaneous PHP/HTTP handlers before queuing. Improves capacity during moderate traffic bursts and bots. Pair with caching to maximize concurrency."
             },
             {
-              name: "PHP Memory Limit: 2048 MB",
-              included: true,
-              description:
-                "Increased PHP memory allocation for demanding applications.",
+              "name": "PHP Memory Limit: 2048 MB",
+              "included": true,
+              "description": "Ample headroom for heavy builders, search, analytics, and integrations. Minimizes failures on large imports and complex page renders. Ideal for plugin-dense enterprise stacks."
             },
             {
-              name: "750,000 Inodes Limit",
-              included: true,
-              description:
-                "Manage up to 750,000 files and directories efficiently.",
+              "name": "750,000 Inodes Limit",
+              "included": true,
+              "description": "Room for roughly 750k files and directories across your account. Supports large media libraries, caches, and logs. Routine housekeeping keeps backups fast and usage efficient."
             },
             {
-              name: "Multiple PHP Versions",
-              included: true,
-              description:
-                "Switch between PHP versions for better compatibility.",
-            },
-          ],
+              "name": "Multiple PHP Versions",
+              "included": true,
+              "description": "Select and switch PHP versions per account for compatibility. Test new versions safely before committing. Extensions can be toggled as your stack requires."
+            }
+          ]
         },
         {
-          title: "Advanced Security Features (Enhanced)",
-          features: [
+          "title": "Advanced Security Features (Enhanced)",
+          "features": [
             {
-              name: "Imunify360 Security Suite",
-              included: true,
-              description:
-                "AI-powered malware protection and proactive defense system.",
+              "name": "Imunify360 Security Suite",
+              "included": true,
+              "description": "Always-on malware scanning, WAF rules, and proactive defense. Quarantines suspicious files and blocks exploit attempts. Centralized dashboard shows threats and actions."
             },
             {
-              name: "DDoS Protection",
-              included: true,
-              description:
-                "Safeguards your website from large-scale cyber attacks.",
+              "name": "DDoS Protection",
+              "included": true,
+              "description": "Network-level filtering absorbs and mitigates volumetric attacks. Keeps legitimate traffic flowing during hostile events. Monitored continuously for new attack patterns."
             },
             {
-              name: "Web Application Firewall (WAF)",
-              included: true,
-              description:
-                "Blocks malicious requests and protects web applications.",
+              "name": "Web Application Firewall (WAF)",
+              "included": true,
+              "description": "Filters malicious requests before they reach WordPress/PHP. Shields against common attacks like SQLi, XSS, and RCE patterns. Rules are updated to track emerging threats."
             },
             {
-              name: "Brute Force Protection",
-              included: true,
-              description:
-                "Prevents unauthorized login attempts and password attacks.",
+              "name": "Brute Force Protection",
+              "included": true,
+              "description": "Rate-limits repeated login attempts across key services. Automatically blocks abusive IPs and known bad actors. Reduces account takeover risks significantly."
             },
             {
-              name: "Two-Factor Authentication (2FA)",
-              included: true,
-              description: "Adds an extra layer of security to your accounts.",
+              "name": "Two-Factor Authentication (2FA)",
+              "included": true,
+              "description": "Require a second factor—like a one-time code—in addition to a password. Greatly reduces the risk of account takeover even if credentials leak. Works with popular authenticator apps."
             },
             {
-              name: "Real-Time Malware Scanning",
-              included: true,
-              description:
-                "Scans and removes malware instantly before it spreads.",
+              "name": "Real-Time Malware Scanning",
+              "included": true,
+              "description": "Continuously monitors new and modified files for signs of infection. Suspect items are quarantined automatically to prevent spread. Detailed alerts help you remediate quickly."
             },
             {
-              name: "Hotlink Protection",
-              included: true,
-              description:
-                "Stops other sites from stealing your images and resources.",
+              "name": "Hotlink Protection",
+              "included": true,
+              "description": "Stops other sites from embedding your images and media. Preserves bandwidth and prevents unexpected usage bills. You can whitelist trusted referrers."
             },
             {
-              name: "Free SSL Certificate (Lifetime)",
-              included: true,
-              description: "Protect data with free SSL encryption for life.",
-            },
-          ],
+              "name": "Free SSL Certificate (Lifetime)",
+              "included": true,
+              "description": "Permanent HTTPS for all your domains without renewal costs. Protects logins, checkouts, and forms in transit. Improves visitor trust and can aid search visibility."
+            }
+          ]
         },
         {
-          title: "Performance Enhancements",
-          features: [
+          "title": "Performance Enhancements",
+          "features": [
             {
-              name: "100% Network Uptime SLA",
-              included: true,
-              description:
-                "Guaranteed network uptime backed by a Service Level Agreement.",
+              "name": "100% Network Uptime SLA",
+              "included": true,
+              "description": "Zero-downtime network target for the covered components. SLA credits apply if availability falls short, per terms. Redundancy and active monitoring support this commitment."
             },
             {
-              name: "Cloud Load Balancing",
-              included: true,
-              description:
-                "Distributes traffic across multiple servers for maximum availability.",
+              "name": "Cloud Load Balancing",
+              "included": true,
+              "description": "Distributes traffic across multiple servers or nodes to avoid hotspots. Improves fault tolerance and enables rolling updates. Helps sustain fast responses during spikes."
             },
             {
-              name: "AI-Powered Auto-Scaling",
-              included: true,
-              description:
-                "Automatically adjusts server resources based on traffic and usage patterns.",
+              "name": "AI-Powered Auto-Scaling",
+              "included": true,
+              "description": "Adjusts CPU, RAM, or container replicas in response to real-time demand. Keeps performance steady without manual intervention. Useful for campaigns, sales, and unpredictable traffic."
             },
             {
-              name: "Global CDN Integration (Cloudflare Enterprise)",
-              included: true,
-              description:
-                "Delivers content faster worldwide with enterprise-level CDN integration.",
+              "name": "Global CDN Integration (Cloudflare Enterprise)",
+              "included": true,
+              "description": "Delivers content faster worldwide with enterprise-level CDN integration."
             },
             {
-              name: "Optimized for Google Core Web Vitals",
-              included: true,
-              description:
-                "Ensures top performance scores for SEO and user experience.",
+              "name": "Optimized for Google Core Web Vitals",
+              "included": true,
+              "description": "Ensures top performance scores for SEO and user experience. Guidance and tooling help improve LCP, FID/INP, and CLS. Works best alongside caching and a tuned theme."
             },
             {
-              name: "Real-Time Resource Monitoring",
-              included: true,
-              description:
-                "Monitor CPU, memory, and bandwidth usage with live analytics.",
-            },
-          ],
+              "name": "Real-Time Resource Monitoring",
+              "included": true,
+              "description": "Live dashboards track CPU, memory, disk, and bandwidth usage. Alerts flag anomalies so you can act before users feel it. Historical views help with capacity planning."
+            }
+          ]
         },
         {
-          title: "Premium Support & Assistance",
-          features: [
+          "title": "Premium Support & Assistance",
+          "features": [
             {
-              name: "24/7 Cloud Hosting Expert Support",
-              included: true,
-              description:
-                "Round-the-clock technical support from certified experts.",
+              "name": "24/7 Cloud Hosting Expert Support",
+              "included": true,
+              "description": "Round-the-clock access to certified engineers who understand scaling and performance. We troubleshoot stack issues and provide best-practice guidance. Custom development remains out of scope, but we’ll advise on options."
             },
             {
-              name: "30-Minute Guaranteed Email Response",
-              included: true,
-              description:
-                "Get email replies from our team within 30 minutes or less.",
+              "name": "30-Minute Guaranteed Email Response",
+              "included": true,
+              "description": "Support tickets receive an initial human reply within 30 minutes. Expect triage, next steps, or ETA in that first message. Complex fixes may take longer but you won’t be left hanging."
             },
             {
-              name: "Step-by-Step Onboarding Guide",
-              included: true,
-              description:
-                "Guided assistance to help you migrate and launch quickly.",
+              "name": "Step-by-Step Onboarding Guide",
+              "included": true,
+              "description": "A clear launch checklist covering DNS, SSL, CDN, and caching. Helps you avoid common pitfalls and go live smoothly. Includes post-launch hardening tips."
             },
             {
-              name: "Live Chat & WhatsApp Support",
-              included: true,
-              description:
-                "Instant responses through chat and WhatsApp messaging.",
+              "name": "Live Chat & WhatsApp Support",
+              "included": true,
+              "description": "Get instant help through web chat or WhatsApp when tickets aren’t fast enough. Great for quick troubleshooting and guidance. Escalations move to specialists as needed."
             },
             {
-              name: "Comprehensive Knowledge Base & Tutorials",
-              included: true,
-              description:
-                "Access detailed guides, FAQs, and video tutorials anytime.",
-            },
-          ],
+              "name": "Comprehensive Knowledge Base & Tutorials",
+              "included": true,
+              "description": "Step-by-step articles cover setup, security, and optimization. Screenshots and copy-paste commands make tasks easy. New content is added as features evolve."
+            }
+          ]
         },
         {
-          title: "Developer-Friendly Features",
-          features: [
+          "title": "Developer-Friendly Features",
+          "features": [
             {
-              name: "SSH Access",
-              included: true,
-              description:
-                "Secure shell access for advanced server management.",
+              "name": "SSH Access",
+              "included": true,
+              "description": "Secure shell access for CLI workflows and deployments. Use rsync, composer, npm, and WP-CLI efficiently. Public-key auth keeps access tight."
             },
             {
-              name: "Git Integration",
-              included: true,
-              description: "Deploy and manage code with built-in Git support.",
+              "name": "Git Integration",
+              "included": true,
+              "description": "Pull from your repositories and deploy with minimal friction. Keep releases versioned and auditable. Works well with popular CI/CD pipelines."
             },
             {
-              name: "WP-CLI Support",
-              included: true,
-              description: "Manage WordPress sites with command-line tools.",
+              "name": "WP-CLI Support",
+              "included": true,
+              "description": "Manage WordPress from the command line for speed and repeatability. Bulk-update plugins, search-replace, and manage users. Perfect for scripted maintenance."
             },
             {
-              name: "Custom Cron Jobs",
-              included: true,
-              description: "Automate repetitive tasks with custom scheduling.",
+              "name": "Custom Cron Jobs",
+              "included": true,
+              "description": "Schedule background tasks like backups, imports, or emails. Fine-tune run times to avoid peak traffic. Logs help you verify successful execution."
             },
             {
-              name: "Multiple PHP Versions",
-              included: true,
-              description:
-                "Switch between PHP versions for compatibility and performance.",
+              "name": "Multiple PHP Versions",
+              "included": true,
+              "description": "Select and switch PHP versions per account for compatibility. Test new versions safely before committing. Extensions can be toggled as your stack requires."
             },
             {
-              name: "Staging Environments",
-              included: true,
-              description:
-                "Test changes safely before deploying to production.",
+              "name": "Staging Environments",
+              "included": true,
+              "description": "Create safe sandboxes to test updates, plugins, and theme changes. Push to production when verified without manual migrations. Reduces risk during releases and redesigns."
             },
             {
-              name: "Database Optimization Tools",
-              included: true,
-              description: "Optimize and maintain MySQL databases with ease.",
-            },
-          ],
-        },
+              "name": "Database Optimization Tools",
+              "included": true,
+              "description": "Analyze slow queries and tune MySQL parameters to lower latency. Schedule index maintenance and table cleanups safely. Dashboards surface hotspots so you can keep performance consistent at scale."
+            }
+          ]
+        }
       ],
     },
     {
@@ -2268,296 +2189,260 @@ export const manageHostingPricingData: PricingData = {
       ctaText: "Choose Plan",
       features: [
         {
-          title: "Features",
-          features: [
+          "title": "Features",
+          "features": [
             {
-              name: "200GB NVMe SSD Storage",
-              included: true,
-              description:
-                "High-speed NVMe SSD storage for faster website performance.",
+              "name": "200GB NVMe SSD Storage",
+              "included": true,
+              "description": "High-speed NVMe storage delivers ultra-low latency and high IOPS for snappy admin and front-end loads. 200GB lets you store large media libraries, staging copies, and multiple backups comfortably. Ideal for growing sites and small multi-site portfolios."
             },
             {
-              name: "25 Websites",
-              included: true,
-              description:
-                "Host up to 25 websites under one plan without extra cost.",
+              "name": "25 Websites",
+              "included": true,
+              "description": "Host up to twenty-five separate sites under one plan. Each project can have its own database, users, and directories for isolation. Great for agencies, multi-brand setups, or client hosting."
             },
             {
-              name: "Unmetered Bandwidth",
-              included: true,
-              description: "Unlimited traffic with no bandwidth restrictions.",
+              "name": "Unmetered Bandwidth",
+              "included": true,
+              "description": "No hard caps on monthly traffic or page views. Your site can handle viral spikes without surprise overage fees. Fair-use policies still apply to keep the network healthy."
             },
             {
-              name: "Free SSL Certificate (Lifetime)",
-              included: true,
-              description:
-                "Keep all websites secure with lifetime SSL encryption.",
+              "name": "Free SSL Certificate (Lifetime)",
+              "included": true,
+              "description": "Permanent HTTPS for all your domains without renewal costs. Protects logins, checkouts, and forms in transit. Improves visitor trust and can aid search visibility."
             },
             {
-              name: "6 vCPU Cores",
-              included: true,
-              description: "Powerful virtual CPU cores for smooth performance.",
+              "name": "6 vCPU Cores",
+              "included": true,
+              "description": "Six virtual CPU cores provide robust parallelism for PHP workers, queues, and background jobs. Keeps dynamic pages, carts, and dashboards responsive during heavier traffic. Well-suited for multi-site fleets and busy stores."
             },
             {
-              name: "14 GB RAM",
-              included: true,
-              description:
-                "High memory allocation for resource-intensive applications.",
+              "name": "14 GB RAM",
+              "included": true,
+              "description": "Ample memory for object caches, media processing, and heavyweight plugins. Reduces out-of-memory errors during imports and batch tasks. Comfortable for higher traffic and plugin-rich sites."
             },
             {
-              name: "Daily Automated Backups (21 Days Retention)",
-              included: true,
-              description: "Automatic daily backups stored for up to 21 days.",
+              "name": "Daily Automated Backups (21 Days Retention)",
+              "included": true,
+              "description": "Automatic daily restore points retained for up to 21 days. Recover files, databases, or entire accounts in a few clicks. The rolling window helps undo mistakes and malware quickly."
             },
             {
-              name: "1-Click App Installer",
-              included: true,
-              description:
-                "Easily install WordPress and 400+ apps in a single click.",
+              "name": "1-Click App Installer",
+              "included": true,
+              "description": "Install WordPress and 400+ popular apps in a single step. Handles databases and configs automatically with sensible defaults. Ideal for fast prototypes and standardized rollouts."
             },
             {
-              name: "Global CDN Integration (Cloudflare Enterprise)",
-              included: true,
-              description:
-                "Delivers content faster worldwide with enterprise-level CDN integration.",
+              "name": "Global CDN Integration (Cloudflare Enterprise)",
+              "included": true,
+              "description": "Delivers content faster worldwide with enterprise-level CDN integration."
             },
             {
-              name: "100% Uptime SLA",
-              included: true,
-              description:
-                "Guaranteed network uptime backed by a Service Level Agreement.",
+              "name": "100% Uptime SLA",
+              "included": true,
+              "description": "A contractual target of zero network downtime for the covered scope. Credits apply per SLA terms if the target is missed. Redundant networking and continuous monitoring back the commitment."
             },
             {
-              name: "30-Minute Guaranteed Email Response",
-              included: true,
-              description:
-                "Quick support with responses guaranteed within 30 minutes.",
+              "name": "30-Minute Guaranteed Email Response",
+              "included": true,
+              "description": "Support tickets receive an initial human reply within 30 minutes. Expect triage, next steps, or ETA in that first message. Complex fixes may take longer but you won’t be left hanging."
             },
             {
-              name: "30-Day Money-Back Guarantee",
-              included: true,
-              description:
-                "Risk-free hosting with a full refund if cancelled within 30 days.",
-            },
-          ],
+              "name": "30-Day Money-Back Guarantee",
+              "included": true,
+              "description": "Try the service risk-free for 30 days. If it’s not a fit, request a full refund on hosting fees. Domain registrations and third-party add-ons may be excluded."
+            }
+          ]
         },
         {
-          title: "Upgraded Technical Specifications",
-          features: [
+          "title": "Upgraded Technical Specifications",
+          "features": [
             {
-              name: "6 vCPU Cores",
-              included: true,
-              description:
-                "Advanced CPU power for handling high traffic and workloads.",
+              "name": "6 vCPU Cores",
+              "included": true,
+              "description": "Six virtual CPU cores provide robust parallelism for PHP workers, queues, and background jobs. Keeps dynamic pages, carts, and dashboards responsive during heavier traffic. Well-suited for multi-site fleets and busy stores."
             },
             {
-              name: "14 GB RAM",
-              included: true,
-              description:
-                "Enhanced memory capacity for faster and stable operations.",
+              "name": "14 GB RAM",
+              "included": true,
+              "description": "Ample memory for object caches, media processing, and heavyweight plugins. Reduces out-of-memory errors during imports and batch tasks. Comfortable for higher traffic and plugin-rich sites."
             },
             {
-              name: "70 MB/s I/O Speed",
-              included: true,
-              description:
-                "Fast input/output speeds for quicker file and database access.",
+              "name": "70 MB/s I/O Speed",
+              "included": true,
+              "description": "Higher disk throughput accelerates backups, restores, and media operations. Helps database-driven pages and search stay responsive. Useful for sites with frequent uploads and cron activity."
             },
             {
-              name: "80 Entry Processes",
-              included: true,
-              description:
-                "Supports up to 80 concurrent PHP processes at once.",
+              "name": "80 Entry Processes",
+              "included": true,
+              "description": "Allows up to 80 simultaneous PHP/HTTP handlers before queuing. Improves resilience during traffic bursts and bot activity. Pair with caching to maximize effective concurrency."
             },
             {
-              name: "PHP Memory Limit: 3072 MB",
-              included: true,
-              description:
-                "Increased PHP memory allocation for demanding applications.",
+              "name": "PHP Memory Limit: 3072 MB",
+              "included": true,
+              "description": "Generous headroom for complex builders, analytics, and integrations. Reduces failures on large imports and image optimizations. Well-suited for plugin-dense WordPress stacks."
             },
             {
-              name: "1,000,000 Inodes Limit",
-              included: true,
-              description:
-                "Manage up to 1,000,000 files and directories efficiently.",
+              "name": "1,000,000 Inodes Limit",
+              "included": true,
+              "description": "Room for roughly one million files/directories across the account. Supports very large media libraries, caches, and logs. Periodic housekeeping keeps usage efficient and backups fast."
             },
             {
-              name: "Multiple PHP Versions",
-              included: true,
-              description:
-                "Switch between PHP versions for better compatibility.",
-            },
-          ],
+              "name": "Multiple PHP Versions",
+              "included": true,
+              "description": "Select and switch PHP versions per account for compatibility. Test new versions safely before committing. Extensions can be toggled as your stack requires."
+            }
+          ]
         },
         {
-          title: "Advanced Security Features (Enhanced)",
-          features: [
+          "title": "Advanced Security Features (Enhanced)",
+          "features": [
             {
-              name: "Imunify360 Security Suite",
-              included: true,
-              description:
-                "AI-powered malware protection and proactive defense system.",
+              "name": "Imunify360 Security Suite",
+              "included": true,
+              "description": "Always-on malware scanning, WAF rules, and proactive defense. Quarantines suspicious files and blocks exploit attempts. Centralized dashboard shows threats and actions."
             },
             {
-              name: "DDoS Protection (Advanced)",
-              included: true,
-              description:
-                "Safeguards your website from large-scale cyber attacks.",
+              "name": "DDoS Protection (Advanced)",
+              "included": true,
+              "description": "Enhanced network-layer filtering and scrubbing mitigate large volumetric attacks. Adaptive detection helps distinguish legitimate spikes from hostile traffic. Keeps availability high during campaigns and peak seasons."
             },
             {
-              name: "Web Application Firewall (WAF)",
-              included: true,
-              description:
-                "Blocks malicious requests and protects web applications.",
+              "name": "Web Application Firewall (WAF)",
+              "included": true,
+              "description": "Filters malicious requests before they reach WordPress/PHP. Shields against common attacks like SQLi, XSS, and RCE patterns. Rules are updated to track emerging threats."
             },
             {
-              name: "Brute Force Protection",
-              included: true,
-              description:
-                "Prevents unauthorized login attempts and password attacks.",
+              "name": "Brute Force Protection",
+              "included": true,
+              "description": "Rate-limits repeated login attempts across key services. Automatically blocks abusive IPs and known bad actors. Reduces account takeover risks significantly."
             },
             {
-              name: "Two-Factor Authentication (2FA)",
-              included: true,
-              description: "Adds an extra layer of security to your accounts.",
+              "name": "Two-Factor Authentication (2FA)",
+              "included": true,
+              "description": "Require a second factor—like a one-time code—in addition to a password. Greatly reduces the risk of account takeover even if credentials leak. Works with popular authenticator apps."
             },
             {
-              name: "Real-Time Malware Scanning",
-              included: true,
-              description:
-                "Scans and removes malware instantly before it spreads.",
+              "name": "Real-Time Malware Scanning",
+              "included": true,
+              "description": "Continuously monitors new and modified files for signs of infection. Suspect items are quarantined automatically to prevent spread. Detailed alerts help you remediate quickly."
             },
             {
-              name: "Hotlink Protection",
-              included: true,
-              description:
-                "Stops other sites from stealing your images and resources.",
+              "name": "Hotlink Protection",
+              "included": true,
+              "description": "Stops other sites from embedding your images and media. Preserves bandwidth and prevents unexpected usage bills. You can whitelist trusted referrers."
             },
             {
-              name: "Free SSL Certificate (Lifetime)",
-              included: true,
-              description: "Protect data with free SSL encryption for life.",
-            },
-          ],
+              "name": "Free SSL Certificate (Lifetime)",
+              "included": true,
+              "description": "Permanent HTTPS for all your domains without renewal costs. Protects logins, checkouts, and forms in transit. Improves visitor trust and can aid search visibility."
+            }
+          ]
         },
         {
-          title: "Performance Enhancements",
-          features: [
+          "title": "Performance Enhancements",
+          "features": [
             {
-              name: "100% Network Uptime SLA",
-              included: true,
-              description:
-                "Guaranteed network uptime backed by a Service Level Agreement.",
+              "name": "100% Network Uptime SLA",
+              "included": true,
+              "description": "Zero-downtime network target for the covered components. SLA credits apply if availability falls short, per terms. Redundancy and active monitoring support this commitment."
             },
             {
-              name: "Cloud Load Balancing",
-              included: true,
-              description:
-                "Distributes traffic across multiple servers for maximum availability.",
+              "name": "Cloud Load Balancing",
+              "included": true,
+              "description": "Distributes traffic across multiple servers or nodes to avoid hotspots. Improves fault tolerance and enables rolling updates. Helps sustain fast responses during spikes."
             },
             {
-              name: "AI-Powered Auto-Scaling",
-              included: true,
-              description:
-                "Automatically adjusts server resources based on traffic and usage patterns.",
+              "name": "AI-Powered Auto-Scaling",
+              "included": true,
+              "description": "Adjusts CPU, RAM, or container replicas in response to real-time demand. Keeps performance steady without manual intervention. Useful for campaigns, sales, and unpredictable traffic."
             },
             {
-              name: "Global CDN Integration (Cloudflare Enterprise)",
-              included: true,
-              description:
-                "Delivers content faster worldwide with enterprise-level CDN integration.",
+              "name": "Global CDN Integration (Cloudflare Enterprise)",
+              "included": true,
+              "description": "Delivers content faster worldwide with enterprise-level CDN integration."
             },
             {
-              name: "Optimized for Google Core Web Vitals",
-              included: true,
-              description:
-                "Ensures top performance scores for SEO and user experience.",
+              "name": "Optimized for Google Core Web Vitals",
+              "included": true,
+              "description": "Ensures top performance scores for SEO and user experience. Guidance and tooling help improve LCP, FID/INP, and CLS. Works best alongside caching and a tuned theme."
             },
             {
-              name: "Real-Time Resource Monitoring",
-              included: true,
-              description:
-                "Monitor CPU, memory, and bandwidth usage with live analytics.",
-            },
-          ],
+              "name": "Real-Time Resource Monitoring",
+              "included": true,
+              "description": "Live dashboards track CPU, memory, disk, and bandwidth usage. Alerts flag anomalies so you can act before users feel it. Historical views help with capacity planning."
+            }
+          ]
         },
         {
-          title: "Premium Support & Assistance",
-          features: [
+          "title": "Premium Support & Assistance",
+          "features": [
             {
-              name: "24/7 Cloud Hosting Expert Support",
-              included: true,
-              description:
-                "Round-the-clock technical support from certified experts.",
+              "name": "24/7 Cloud Hosting Expert Support",
+              "included": true,
+              "description": "Round-the-clock access to certified engineers who understand scaling and performance. We troubleshoot stack issues and provide best-practice guidance. Custom development remains out of scope, but we’ll advise on options."
             },
             {
-              name: "30-Minute Guaranteed Email Response",
-              included: true,
-              description:
-                "Get email replies from our team within 30 minutes or less.",
+              "name": "30-Minute Guaranteed Email Response",
+              "included": true,
+              "description": "Support tickets receive an initial human reply within 30 minutes. Expect triage, next steps, or ETA in that first message. Complex fixes may take longer but you won’t be left hanging."
             },
             {
-              name: "Step-by-Step Onboarding Guide",
-              included: true,
-              description:
-                "Guided assistance to help you migrate and launch quickly.",
+              "name": "Step-by-Step Onboarding Guide",
+              "included": true,
+              "description": "A clear launch checklist covering DNS, SSL, CDN, and caching. Helps you avoid common pitfalls and go live smoothly. Includes post-launch hardening tips."
             },
             {
-              name: "Live Chat & WhatsApp Support",
-              included: true,
-              description:
-                "Instant responses through chat and WhatsApp messaging.",
+              "name": "Live Chat & WhatsApp Support",
+              "included": true,
+              "description": "Get instant help through web chat or WhatsApp when tickets aren’t fast enough. Great for quick troubleshooting and guidance. Escalations move to specialists as needed."
             },
             {
-              name: "Comprehensive Knowledge Base & Tutorials",
-              included: true,
-              description:
-                "Access detailed guides, FAQs, and video tutorials anytime.",
-            },
-          ],
+              "name": "Comprehensive Knowledge Base & Tutorials",
+              "included": true,
+              "description": "Step-by-step articles cover setup, security, and optimization. Screenshots and copy-paste commands make tasks easy. New content is added as features evolve."
+            }
+          ]
         },
         {
-          title: "Developer-Friendly Features",
-          features: [
+          "title": "Developer-Friendly Features",
+          "features": [
             {
-              name: "SSH Access",
-              included: true,
-              description:
-                "Secure shell access for advanced server management.",
+              "name": "SSH Access",
+              "included": true,
+              "description": "Secure shell access for CLI workflows and deployments. Use rsync, composer, npm, and WP-CLI efficiently. Public-key auth keeps access tight."
             },
             {
-              name: "Git Integration",
-              included: true,
-              description: "Deploy and manage code with built-in Git support.",
+              "name": "Git Integration",
+              "included": true,
+              "description": "Pull from your repositories and deploy with minimal friction. Keep releases versioned and auditable. Works well with popular CI/CD pipelines."
             },
             {
-              name: "WP-CLI Support",
-              included: true,
-              description: "Manage WordPress sites with command-line tools.",
+              "name": "WP-CLI Support",
+              "included": true,
+              "description": "Manage WordPress from the command line for speed and repeatability. Bulk-update plugins, search-replace, and manage users. Perfect for scripted maintenance."
             },
             {
-              name: "Custom Cron Jobs",
-              included: true,
-              description: "Automate repetitive tasks with custom scheduling.",
+              "name": "Custom Cron Jobs",
+              "included": true,
+              "description": "Schedule background tasks like backups, imports, or emails. Fine-tune run times to avoid peak traffic. Logs help you verify successful execution."
             },
             {
-              name: "Multiple PHP Versions",
-              included: true,
-              description:
-                "Switch between PHP versions for compatibility and performance.",
+              "name": "Multiple PHP Versions",
+              "included": true,
+              "description": "Select and switch PHP versions per account for compatibility. Test new versions safely before committing. Extensions can be toggled as your stack requires."
             },
             {
-              name: "Staging Environments",
-              included: true,
-              description:
-                "Test changes safely before deploying to production.",
+              "name": "Staging Environments",
+              "included": true,
+              "description": "Create safe sandboxes to test updates, plugins, and theme changes. Push to production when verified without manual migrations. Reduces risk during releases and redesigns."
             },
             {
-              name: "Database Optimization Tools",
-              included: true,
-              description: "Optimize and maintain MySQL databases with ease.",
-            },
-          ],
-        },
+              "name": "Database Optimization Tools",
+              "included": true,
+              "description": "Analyze slow queries and tune MySQL parameters to lower latency. Schedule index maintenance and table cleanups safely. Dashboards surface hotspots so you can keep performance consistent at scale."
+            }
+          ]
+        }
       ],
     },
     // {
@@ -2849,297 +2734,260 @@ export const manageHostingPricingData: PricingData = {
       ctaText: "Choose Plan",
       features: [
         {
-          title: "Features",
-          features: [
+          "title": "Features",
+          "features": [
             {
-              name: "Unlimited NVMe SSD Storage",
-              included: true,
-              description:
-                "High-speed NVMe SSD storage with no limits for ultra-fast performance.",
+              "name": "Unlimited NVMe SSD Storage",
+              "included": true,
+              "description": "Store as much content, media, and archives as your projects demand without manual capacity planning. NVMe delivers ultra-low latency and high IOPS so sites remain snappy as they grow. Usage remains subject to fair-use and inode limits for platform health."
             },
             {
-              name: "Unlimited Websites",
-              included: true,
-              description:
-                "Host an unlimited number of websites under one plan.",
+              "name": "Unlimited Websites",
+              "included": true,
+              "description": "Host an unlimited number of separate projects under one plan. Keep each site isolated with its own directories, databases, and settings. Ideal for agencies, multi-brand companies, and resellers."
             },
             {
-              name: "Unmetered Bandwidth",
-              included: true,
-              description: "Unlimited traffic with no bandwidth restrictions.",
+              "name": "Unmetered Bandwidth",
+              "included": true,
+              "description": "No hard caps on monthly traffic or page views. Your site can handle viral spikes without surprise overage fees. Fair-use policies still apply to keep the network healthy."
             },
             {
-              name: "Free SSL Certificate (Lifetime)",
-              included: true,
-              description:
-                "Keep all websites secure with lifetime SSL encryption.",
+              "name": "Free SSL Certificate (Lifetime)",
+              "included": true,
+              "description": "Permanent HTTPS for all your domains without renewal costs. Protects logins, checkouts, and forms in transit. Improves visitor trust and can aid search visibility."
             },
             {
-              name: "12 vCPU Cores",
-              included: true,
-              description:
-                "Powerful virtual CPU cores for high-traffic websites and applications.",
+              "name": "12 vCPU Cores",
+              "included": true,
+              "description": "Twelve virtual CPU cores provide massive parallelism for PHP workers, queues, and background jobs. Keeps complex, dynamic workloads responsive during heavy traffic. Suited to large multi-site fleets, WooCommerce, and search/indexing tasks."
             },
             {
-              name: "32 GB RAM",
-              included: true,
-              description:
-                "High memory allocation for resource-intensive applications.",
+              "name": "32 GB RAM",
+              "included": true,
+              "description": "Large memory pool for hefty object caches, image processing, and analytics. Cuts down on out-of-memory errors during imports and batch tasks. Comfortable for high-traffic stores and plugin-dense sites."
             },
             {
-              name: "Daily Automated Backups (45 Days Retention)",
-              included: true,
-              description:
-                "Automatic daily backups stored for up to 45 days for maximum data safety.",
+              "name": "Daily Automated Backups (45 Days Retention)",
+              "included": true,
+              "description": "Automatic daily restore points retained for up to 45 days. Roll back files, databases, or whole accounts to a known-good state. The extended window helps with long-running projects and compliance needs."
             },
             {
-              name: "1-Click App Installer",
-              included: true,
-              description:
-                "Easily install WordPress and 400+ apps in a single click.",
+              "name": "1-Click App Installer",
+              "included": true,
+              "description": "Install WordPress and 400+ popular apps in a single step. Handles databases and configs automatically with sensible defaults. Ideal for fast prototypes and standardized rollouts."
             },
             {
-              name: "Global CDN Integration (Cloudflare Enterprise)",
-              included: true,
-              description:
-                "Delivers content faster worldwide with enterprise-level CDN integration.",
+              "name": "Global CDN Integration (Cloudflare Enterprise)",
+              "included": true,
+              "description": "Delivers content faster worldwide with enterprise-level CDN integration."
             },
             {
-              name: "100% Uptime SLA",
-              included: true,
-              description:
-                "Guaranteed network uptime backed by a Service Level Agreement.",
+              "name": "100% Uptime SLA",
+              "included": true,
+              "description": "A contractual target of zero network downtime for the covered scope. Credits apply per SLA terms if the target is missed. Redundant networking and continuous monitoring back the commitment."
             },
             {
-              name: "15-Minute Guaranteed Email Response",
-              included: true,
-              description:
-                "Priority support with responses guaranteed within 15 minutes.",
+              "name": "15-Minute Guaranteed Email Response",
+              "included": true,
+              "description": "We guarantee an initial human reply to your ticket within 15 minutes. You’ll receive acknowledgment plus triage and next steps or an ETA. Complex fixes may take longer, but you won’t be left waiting."
             },
             {
-              name: "30-Day Money-Back Guarantee",
-              included: true,
-              description:
-                "Risk-free hosting with a full refund if cancelled within 30 days.",
-            },
-          ],
+              "name": "30-Day Money-Back Guarantee",
+              "included": true,
+              "description": "Try the service risk-free for 30 days. If it’s not a fit, request a full refund on hosting fees. Domain registrations and third-party add-ons may be excluded."
+            }
+          ]
         },
         {
-          title: "Upgraded Technical Specifications",
-          features: [
+          "title": "Upgraded Technical Specifications",
+          "features": [
             {
-              name: "12 vCPU Cores",
-              included: true,
-              description:
-                "Advanced CPU power for handling enterprise-level traffic and workloads.",
+              "name": "12 vCPU Cores",
+              "included": true,
+              "description": "Twelve virtual CPU cores provide massive parallelism for PHP workers, queues, and background jobs. Keeps complex, dynamic workloads responsive during heavy traffic. Suited to large multi-site fleets, WooCommerce, and search/indexing tasks."
             },
             {
-              name: "32 GB RAM",
-              included: true,
-              description:
-                "Enhanced memory capacity for faster and stable operations.",
+              "name": "32 GB RAM",
+              "included": true,
+              "description": "Large memory pool for hefty object caches, image processing, and analytics. Cuts down on out-of-memory errors during imports and batch tasks. Comfortable for high-traffic stores and plugin-dense sites."
             },
             {
-              name: "150 MB/s I/O Speed",
-              included: true,
-              description:
-                "Ultra-fast input/output speeds for quicker file and database access.",
+              "name": "150 MB/s I/O Speed",
+              "included": true,
+              "description": "Ultra-high disk throughput accelerates backups, restores, and media processing. Keeps database-heavy pages and search queries responsive under load. Ideal for busy upload workflows and frequent cron activity."
             },
             {
-              name: "150 Entry Processes",
-              included: true,
-              description:
-                "Supports up to 150 concurrent PHP processes at once.",
+              "name": "150 Entry Processes",
+              "included": true,
+              "description": "Allows up to 150 simultaneous PHP/HTTP handlers before queuing. Great for high concurrency during campaigns and peak seasons. Pair with caching to turn capacity into real-world throughput."
             },
             {
-              name: "PHP Memory Limit: 6144 MB",
-              included: true,
-              description:
-                "Increased PHP memory allocation for demanding enterprise applications.",
+              "name": "PHP Memory Limit: 6144 MB",
+              "included": true,
+              "description": "Expansive headroom for enterprise builders, search, analytics, and integrations. Minimizes failures on huge imports and complex page renders. Excellent for plugin-dense WordPress stacks."
             },
             {
-              name: "2,000,000 Inodes Limit",
-              included: true,
-              description:
-                "Manage up to 2,000,000 files and directories efficiently.",
+              "name": "2,000,000 Inodes Limit",
+              "included": true,
+              "description": "Space for roughly two million files and directories across the account. Supports giant media libraries, extensive logs, and cache footprints. Routine housekeeping keeps usage efficient and backups fast."
             },
             {
-              name: "Multiple PHP Versions",
-              included: true,
-              description:
-                "Switch between PHP versions for better compatibility.",
-            },
-          ],
+              "name": "Multiple PHP Versions",
+              "included": true,
+              "description": "Select and switch PHP versions per account for compatibility. Test new versions safely before committing. Extensions can be toggled as your stack requires."
+            }
+          ]
         },
         {
-          title: "Advanced Security Features (Enterprise)",
-          features: [
+          "title": "Advanced Security Features (Enterprise)",
+          "features": [
             {
-              name: "Imunify360 Security Suite (Enterprise)",
-              included: true,
-              description:
-                "Enterprise-grade AI-powered malware protection with proactive threat detection.",
+              "name": "Imunify360 Security Suite (Enterprise)",
+              "included": true,
+              "description": "Enterprise-grade AI-powered malware protection with proactive threat detection."
             },
             {
-              name: "DDoS Protection (Enterprise-Level)",
-              included: true,
-              description:
-                "Enterprise-level protection against large-scale DDoS attacks.",
+              "name": "DDoS Protection (Enterprise-Level)",
+              "included": true,
+              "description": "Enterprise-level protection against large-scale DDoS attacks."
             },
             {
-              name: "Web Application Firewall (WAF)",
-              included: true,
-              description:
-                "Blocks malicious requests and protects web applications.",
+              "name": "Web Application Firewall (WAF)",
+              "included": true,
+              "description": "Filters malicious requests before they reach WordPress/PHP. Shields against common attacks like SQLi, XSS, and RCE patterns. Rules are updated to track emerging threats."
             },
             {
-              name: "Brute Force Protection",
-              included: true,
-              description:
-                "Prevents unauthorized login attempts and password attacks.",
+              "name": "Brute Force Protection",
+              "included": true,
+              "description": "Rate-limits repeated login attempts across key services. Automatically blocks abusive IPs and known bad actors. Reduces account takeover risks significantly."
             },
             {
-              name: "Two-Factor Authentication (2FA)",
-              included: true,
-              description: "Adds an extra layer of security to your accounts.",
+              "name": "Two-Factor Authentication (2FA)",
+              "included": true,
+              "description": "Require a second factor—like a one-time code—in addition to a password. Greatly reduces the risk of account takeover even if credentials leak. Works with popular authenticator apps."
             },
             {
-              name: "Real-Time Malware Scanning & Auto-Healing",
-              included: true,
-              description:
-                "Scans for malware and automatically fixes issues in real-time.",
+              "name": "Real-Time Malware Scanning & Auto-Healing",
+              "included": true,
+              "description": "Continuously scans new and modified files for indicators of compromise. Automatically quarantines and repairs common infections to prevent spread. Alerts and reports document actions taken for your records."
             },
             {
-              name: "Hotlink Protection",
-              included: true,
-              description:
-                "Prevents other sites from using your images and resources.",
+              "name": "Hotlink Protection",
+              "included": true,
+              "description": "Stops other sites from embedding your images and media. Preserves bandwidth and prevents unexpected usage bills. You can whitelist trusted referrers."
             },
             {
-              name: "Free SSL Certificate (Lifetime)",
-              included: true,
-              description: "Protect data with free SSL encryption for life.",
-            },
-          ],
+              "name": "Free SSL Certificate (Lifetime)",
+              "included": true,
+              "description": "Permanent HTTPS for all your domains without renewal costs. Protects logins, checkouts, and forms in transit. Improves visitor trust and can aid search visibility."
+            }
+          ]
         },
         {
-          title: "Performance Enhancements",
-          features: [
+          "title": "Performance Enhancements",
+          "features": [
             {
-              name: "100% Network Uptime SLA",
-              included: true,
-              description:
-                "Guaranteed network uptime backed by a Service Level Agreement.",
+              "name": "100% Network Uptime SLA",
+              "included": true,
+              "description": "Zero-downtime network target for the covered components. SLA credits apply if availability falls short, per terms. Redundancy and active monitoring support this commitment."
             },
             {
-              name: "Cloud Load Balancing",
-              included: true,
-              description:
-                "Distributes traffic across multiple servers for maximum availability.",
+              "name": "Cloud Load Balancing",
+              "included": true,
+              "description": "Distributes traffic across multiple servers or nodes to avoid hotspots. Improves fault tolerance and enables rolling updates. Helps sustain fast responses during spikes."
             },
             {
-              name: "AI-Powered Auto-Scaling",
-              included: true,
-              description:
-                "Automatically adjusts server resources based on traffic and usage patterns.",
+              "name": "AI-Powered Auto-Scaling",
+              "included": true,
+              "description": "Adjusts CPU, RAM, or container replicas in response to real-time demand. Keeps performance steady without manual intervention. Useful for campaigns, sales, and unpredictable traffic."
             },
             {
-              name: "Global CDN Integration (Cloudflare Enterprise)",
-              included: true,
-              description:
-                "Delivers content faster worldwide with enterprise-level CDN integration.",
+              "name": "Global CDN Integration (Cloudflare Enterprise)",
+              "included": true,
+              "description": "Delivers content faster worldwide with enterprise-level CDN integration."
             },
             {
-              name: "Optimized for Google Core Web Vitals",
-              included: true,
-              description:
-                "Ensures top performance scores for SEO and user experience.",
+              "name": "Optimized for Google Core Web Vitals",
+              "included": true,
+              "description": "Ensures top performance scores for SEO and user experience. Guidance and tooling help improve LCP, FID/INP, and CLS. Works best alongside caching and a tuned theme."
             },
             {
-              name: "Real-Time Resource Monitoring",
-              included: true,
-              description:
-                "Monitor CPU, memory, and bandwidth usage with live analytics.",
-            },
-          ],
+              "name": "Real-Time Resource Monitoring",
+              "included": true,
+              "description": "Live dashboards track CPU, memory, disk, and bandwidth usage. Alerts flag anomalies so you can act before users feel it. Historical views help with capacity planning."
+            }
+          ]
         },
         {
-          title: "Premium Support & Assistance",
-          features: [
+          "title": "Premium Support & Assistance",
+          "features": [
             {
-              name: "24/7 Enterprise Cloud Hosting Expert Support",
-              included: true,
-              description:
-                "Priority enterprise-level support from certified cloud hosting experts around the clock.",
+              "name": "24/7 Enterprise Cloud Hosting Expert Support",
+              "included": true,
+              "description": "Priority enterprise-level support from certified cloud hosting experts around the clock."
             },
             {
-              name: "15-Minute Guaranteed Email Response",
-              included: true,
-              description:
-                "Priority support with email responses within 15 minutes.",
+              "name": "15-Minute Guaranteed Email Response",
+              "included": true,
+              "description": "We guarantee an initial human reply to your ticket within 15 minutes. You’ll receive acknowledgment plus triage and next steps or an ETA. Complex fixes may take longer, but you won’t be left waiting."
             },
             {
-              name: "Dedicated Account Manager",
-              included: true,
-              description:
-                "A dedicated account manager to help with all hosting needs.",
+              "name": "Dedicated Account Manager",
+              "included": true,
+              "description": "A single point of contact who learns your stack and goals. Coordinates planning, roadmaps, and escalations across teams. Helps you get the most from the platform."
             },
             {
-              name: "Live Chat & WhatsApp Support",
-              included: true,
-              description: "Instant support via chat and WhatsApp messaging.",
+              "name": "Live Chat & WhatsApp Support",
+              "included": true,
+              "description": "Get instant help through web chat or WhatsApp when tickets aren’t fast enough. Great for quick troubleshooting and guidance. Escalations move to specialists as needed."
             },
             {
-              name: "Comprehensive Knowledge Base & Tutorials",
-              included: true,
-              description:
-                "Access detailed guides, FAQs, and tutorials anytime.",
-            },
-          ],
+              "name": "Comprehensive Knowledge Base & Tutorials",
+              "included": true,
+              "description": "Step-by-step articles cover setup, security, and optimization. Screenshots and copy-paste commands make tasks easy. New content is added as features evolve."
+            }
+          ]
         },
         {
-          title: "Developer-Friendly Features",
-          features: [
+          "title": "Developer-Friendly Features",
+          "features": [
             {
-              name: "SSH Access",
-              included: true,
-              description:
-                "Secure shell access for advanced server management.",
+              "name": "SSH Access",
+              "included": true,
+              "description": "Secure shell access for CLI workflows and deployments. Use rsync, composer, npm, and WP-CLI efficiently. Public-key auth keeps access tight."
             },
             {
-              name: "Git Integration",
-              included: true,
-              description: "Deploy and manage code with built-in Git support.",
+              "name": "Git Integration",
+              "included": true,
+              "description": "Pull from your repositories and deploy with minimal friction. Keep releases versioned and auditable. Works well with popular CI/CD pipelines."
             },
             {
-              name: "WP-CLI Support",
-              included: true,
-              description: "Manage WordPress sites with command-line tools.",
+              "name": "WP-CLI Support",
+              "included": true,
+              "description": "Manage WordPress from the command line for speed and repeatability. Bulk-update plugins, search-replace, and manage users. Perfect for scripted maintenance."
             },
             {
-              name: "Custom Cron Jobs",
-              included: true,
-              description: "Automate repetitive tasks with custom scheduling.",
+              "name": "Custom Cron Jobs",
+              "included": true,
+              "description": "Schedule background tasks like backups, imports, or emails. Fine-tune run times to avoid peak traffic. Logs help you verify successful execution."
             },
             {
-              name: "Multiple PHP Versions",
-              included: true,
-              description:
-                "Switch between PHP versions for compatibility and performance.",
+              "name": "Multiple PHP Versions",
+              "included": true,
+              "description": "Select and switch PHP versions per account for compatibility. Test new versions safely before committing. Extensions can be toggled as your stack requires."
             },
             {
-              name: "Staging Environments",
-              included: true,
-              description:
-                "Test changes safely before deploying to production.",
+              "name": "Staging Environments",
+              "included": true,
+              "description": "Create safe sandboxes to test updates, plugins, and theme changes. Push to production when verified without manual migrations. Reduces risk during releases and redesigns."
             },
             {
-              name: "Database Optimization Tools",
-              included: true,
-              description: "Optimize and maintain MySQL databases with ease.",
-            },
-          ],
-        },
+              "name": "Database Optimization Tools",
+              "included": true,
+              "description": "Analyze slow queries and tune MySQL parameters to lower latency. Schedule index maintenance and table cleanups safely. Dashboards surface hotspots so you can keep performance consistent at scale."
+            }
+          ]
+        }
       ],
     },
   ],
