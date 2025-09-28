@@ -37,8 +37,6 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
-  console.log("scrollY", scrollY);
-
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768) {
@@ -135,7 +133,7 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
                     <Link
                       href={item.href!}
                       className={`px-3 py-2 text-sm font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 ${item.href === pathname
-                        ? "text-teal-600"
+                        ? "text-teal-300"
                         : `${textClass} ${textHoverClass}`
                         }`}
                     >
