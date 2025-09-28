@@ -4,7 +4,7 @@ export const DOLLAR_TO_TK_CONVERTION_RATE = 121.69;
 
 export const webHostingPricingData: PricingData = {
   title: "Choose Your Perfect Plan",
-  yearlyDiscount: 0, // per-plan discounts shown as `offer` (% OFF)
+  yearlyDiscount: 67, // per-plan discounts shown as `offer` (% OFF)
   plans: [
     // ——— STARTER ———
     {
@@ -995,7 +995,7 @@ export const webHostingPricingData: PricingData = {
 
 export const wordpressHostingPricingData: PricingData = {
   title: "Plans Built for WordPress",
-  yearlyDiscount: 0,
+  yearlyDiscount: 90,
   plans: [
     // ——— BASIC ———
     {

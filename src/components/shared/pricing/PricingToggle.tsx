@@ -101,12 +101,12 @@ export function PricingToggle({
       )}
 
       {/* discount with arrow */}
-      {/* <div className="relative flex items-start">
+      <div className="relative flex items-start">
         <CurvedDottedArrow className="text-primary -mt-2 mr-2" />
-        <span className="text-primary text-sm font-medium whitespace-nowrap self-center -ml-12 mt-7">
-          Upto {yearlyDiscount}% save
+        <span className={`${billingPeriod === "monthly" ? "line-through" : ""} text-primary text-sm font-medium whitespace-nowrap self-center -ml-12 mt-7`}>
+          Save upto {yearlyDiscount}%
         </span>
-      </div> */}
+      </div>
     </div>
   );
 }
