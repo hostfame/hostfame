@@ -12,6 +12,7 @@ import { Banner } from "@/components/shared/banners/Banner";
 import Image from "next/image";
 import WhiteButton from "@/components/shared/html/WhiteButton";
 import Link from "next/link";
+import DualPricing from "@/components/shared/sections/domain-hero/DualPricing";
 
 const VpsHosting = () => {
   return (
@@ -46,6 +47,7 @@ const VpsHosting = () => {
       <SectionWrapper className="my-12 md:my-16">
         <NextLevelVPS />
       </SectionWrapper>
+      
       <SectionWrapper className="my-12 md:my-16">
         <CloudVps />
       </SectionWrapper>
@@ -53,11 +55,15 @@ const VpsHosting = () => {
       <SectionWrapper className="my-12 md:my-16">
         <PremiumVpsHosting />
       </SectionWrapper>
+
       <SectionWrapper className="my-12 md:my-16">
         <ExpectPerformanceVps />
       </SectionWrapper>
+
       <ReviewsSection />
+
       <FaqSection />
+
       <SectionWrapper className="my-12 md:my-16">
         <SupportBanner />
       </SectionWrapper>
@@ -95,9 +101,9 @@ export function VpsHostingCtaSection() {
       <WhiteButton className="!rounded">View Plan</WhiteButton>
       <Link
         href={"#"}
-        className="flex text-lg items-center text-center max-lg:underline  lg:gap-x-2 text-white font-bold underline"
+        className="flex text-lg items-center text-center border-b  lg:gap-x-2 text-white font-bold"
       >
-        Starting @ $19.99/mo
+        Starting @ <DualPricing price="$19.99" pricebdt="৳1,999" />/mo
       </Link>
     </section>
   );

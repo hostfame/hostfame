@@ -1,8 +1,9 @@
 import Navbar from "@/components/navbar/Navbar";
 import SectionWrapper from "../wrappers/SectionWrapper";
 import DomainSearchBox from "./DomainSearchBox";
+import DualPricing from "./domain-hero/DualPricing";
 
-type Popular = { tld: string; price: string };
+type Popular = { tld: string; price: string; priceBdt: string };
 
 const data = {
   title: "Find Best Unique Domains Checker!",
@@ -11,18 +12,18 @@ const data = {
   button: "Search",
   tlds: [".com", ".net", ".info", ".org", ".biz"],
   popular: [
-    { tld: ".com", price: "$6.99" },
-    { tld: ".net", price: "$15.99" },
-    { tld: ".info", price: "$3.99" },
-    { tld: ".org", price: "$6.99" },
-    { tld: ".biz", price: "$6.99" },
+    { tld: ".com", price: "$6.99", priceBdt: "৳699" },
+    { tld: ".net", price: "$15.99", priceBdt: "৳1,599" },
+    { tld: ".info", price: "$3.99", priceBdt: "৳399" },
+    { tld: ".org", price: "$6.99", priceBdt: "৳699" },
+    { tld: ".biz", price: "$6.99", priceBdt: "৳699" },
   ] as Popular[],
 } as const;
 
 export default function DomainCheckerBanner() {
   return (
     <section className="relative isolate -mt-[1px]">
-      <Navbar isTransparent/>
+      <Navbar isTransparent />
       {/* Layered teal header */}
       <div className="absolute inset-0 -z-10 banner-bg " />
 
@@ -73,7 +74,7 @@ export default function DomainCheckerBanner() {
                   >
                     <span className="font-medium text-white">{item.tld}</span>
                     <span className="text-white/80 group-hover:text-white">
-                      {item.price}
+                      <DualPricing price={item.price} pricebdt={item.priceBdt} />
                     </span>
                   </li>
                 ))}
@@ -97,7 +98,7 @@ export default function DomainCheckerBanner() {
                 tlds={data.tlds as unknown as string[]}
                 placeholder={data.placeholder}
                 buttonLabel={data.button}
-                
+
               />
 
               {/* Quick TLD chooser (non-interactive showcase of all TLDs) */}

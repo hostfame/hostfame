@@ -2,11 +2,13 @@ import { LuCpu, LuMemoryStick, LuHardDrive, LuGauge, } from "react-icons/lu";
 import { Button } from "../html/Button";
 import CenteredSectionHeader from "../headers/CenteredSectionHeader";
 import { CloudVpsProps } from "@/types/cloudVps.types";
+import DualPricing from "./domain-hero/DualPricing";
 
 const cloudVpsData: CloudVpsProps = {
   headline: "High-Speed Cloud VPS",
   planLabel: "Starter Plus",
   priceMonthly: "$19.99/mo",
+  priceMonthlyBdt: "৳1,999/mo",
   ctaText: "Purchase Plan",
   features: [
     {
@@ -88,7 +90,7 @@ export default function CloudVps() {
 
       {/* Price + CTA */}
       <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
-        <p className="text-2xl font-semibold text-text">{cloudVpsData.priceMonthly}</p>
+        <DualPricing price={cloudVpsData.priceMonthly} pricebdt={cloudVpsData.priceMonthlyBdt} className=" text-2xl font-semibold !text-text" />
         <Button
           variant="bordered"
           size="sm"
