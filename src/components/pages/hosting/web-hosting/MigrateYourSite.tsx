@@ -1,3 +1,4 @@
+import { Button } from "@/components/shared/html/Button";
 import { WebHostingData } from "@/data/hosting.data";
 import Image from "next/image";
 import Link from "next/link";
@@ -5,7 +6,7 @@ import React from "react";
 
 const MigrateYourSite = () => {
   return (
-    <section className="flex flex-col lg:flex-row bg-white rounded-2xl shadow-xl w-full  py-8 sm:py-10 gap-6 sm:gap-8 md:gap-10 lg:gap-20 items-center">
+    <section className="flex flex-col lg:flex-row bg-white rounded-2xl border-2 border-gray-100 shadow-xl w-full py-8 sm:py-10 gap-6 sm:gap-8 md:gap-10 lg:gap-20 items-center hover:scale-105 duration-500 transition ">
       <section className="flex-[0.6] flex justify-center lg:justify-start w-full lg:w-[340px] order-2 lg:order-1">
         <Image
           src={WebHostingData.migrateYourSiteSection.image}
@@ -25,9 +26,7 @@ const MigrateYourSite = () => {
           {WebHostingData.migrateYourSiteSection.description}
         </p>
 
-        <Link href={WebHostingData.migrateYourSiteSection.buttonLink} className="bg-gradient-to-r from-teal-500 to-teal-700 hover:from-teal-600 hover:to-teal-800 text-white py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg shadow-lg transition-colors duration-200 text-sm sm:text-base md:text-base w-full sm:w-auto inline-block text-center font-bold">
-          <button className="">{WebHostingData.migrateYourSiteSection.buttonText}</button>
-        </Link>
+        <Button href={WebHostingData.migrateYourSiteSection.buttonLink} className="">{WebHostingData.migrateYourSiteSection.buttonText}</Button>
       </section>
     </section>
   );

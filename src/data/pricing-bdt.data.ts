@@ -42,11 +42,6 @@ export const webHostingPricingBdtData: PricingData = {
               description: "Automatic HTTPS for security and trust.",
             },
             {
-              name: "Free .COM Domain (Annual)",
-              included: true,
-              description: "Host a single project.",
-            },
-            {
               name: "100 GB Bandwidth",
               included: true,
               description: "One branded inbox.",
@@ -211,11 +206,6 @@ export const webHostingPricingBdtData: PricingData = {
               description: "HTTPS by default.",
             },
             {
-              name: "Free .COM Domain (Annual)",
-              included: true,
-              description: "Host up to five sites.",
-            },
-            {
               name: "Unmetered Bandwidth",
               included: true,
               description: "Create as many inboxes as needed.",
@@ -377,11 +367,6 @@ export const webHostingPricingBdtData: PricingData = {
               name: "Unlimited Email Accounts",
               included: true,
               description: "Site-wide HTTPS.",
-            },
-            {
-              name: "Free .COM Domain (Annual)",
-              included: true,
-              description: "Host many sites under one plan.",
             },
             {
               name: "Unmetered Bandwidth",

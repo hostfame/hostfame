@@ -12,7 +12,7 @@ export default function AdvancedFeatures({
   initialActiveFeature?: string;
 }) {
   return (
-    <section className={`py-12 md:py-16 ${className}`}>
+    <section className={`${className}`}>
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-10 px-6 lg:grid-cols-2 lg:items-center">
         {/* Left illustration */}
         <div className="flex justify-center lg:justify-start">

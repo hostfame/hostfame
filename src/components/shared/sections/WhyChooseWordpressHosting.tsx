@@ -14,7 +14,7 @@ const iconMap: Record<string, IconType> = {
 
 export default function WhyChooseWordpressHosting() {
   return (
-    <section className="relative overflow-hidden py-20">
+    <section className="relative overflow-hidden">
       {/* Decorative background element */}
       <div
         aria-hidden
@@ -40,7 +40,7 @@ export default function WhyChooseWordpressHosting() {
             </p>
 
             {/* Stats */}
-            <div className="flex flex-wrap gap-x-12 gap-y-8">
+            {/* <div className="flex flex-wrap gap-x-12 gap-y-8">
               {hostingStats.map((s, i) => (
                 <div
                   key={i}
@@ -54,7 +54,7 @@ export default function WhyChooseWordpressHosting() {
                   </div>
                 </div>
               ))}
-            </div>
+            </div> */}
 
             {/* Feature list */}
             <ul className="grid gap-6 sm:grid-cols-2">

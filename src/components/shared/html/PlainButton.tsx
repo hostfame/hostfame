@@ -24,7 +24,7 @@ export const PlainButton: React.FC<PlainButtonProps> = ({
   className = "",
 }) => {
   const base =
-    "inline-flex items-center justify-center gap-2 relative font-semibold rounded-xl duration-500 transition hover:scale-105 shadow-lg";
+    "inline-flex items-center justify-center gap-2 relative font-semibold rounded-lg duration-500 transition hover:scale-105 shadow-lg";
 
   const sizeClasses = {
     sm: `${variant === "bordered" ? "px-6 py-2" : "px-6.5 py-2.5"} text-lg`,
@@ -68,7 +68,7 @@ export const PlainButton: React.FC<PlainButtonProps> = ({
       {content}
       {/* Glow effect only for dark variant */}
       {variant === "dark" && (
-        <div className="absolute pointer-events-none inset-0 bg-gradient-to-r from-teal-300/20 to-teal-300/20 rounded-xl opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
+        <div className="absolute pointer-events-none inset-0 bg-gradient-to-r from-teal-300/20 to-teal-300/20 rounded-lg opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
       )}
     </button>
   );

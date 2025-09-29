@@ -13,9 +13,7 @@ const WebhostingPricing = () => {
     countryCode === "BD" ? webHostingPricingBdtData : webHostingPricingData;
 
   return (
-    <SectionWrapper className="my-12 lg:my-16">
       <Pricing data={data} toggleButton={countryCode === "BD" ? true : false} />
-    </SectionWrapper>
   );
 };
 
