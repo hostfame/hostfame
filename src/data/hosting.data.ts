@@ -60,7 +60,7 @@ export const WebHostingData = {
     description: "Migrating a website can be daunting, which is why we have team of experts who are always ready to migrate your website smoothly.",
     image: "/assets/web-hosting/lock.png",
     buttonText: "Request Free Migration",
-    buttonLink: "/contact",
+    buttonLink: "/support",
   }
 };
 

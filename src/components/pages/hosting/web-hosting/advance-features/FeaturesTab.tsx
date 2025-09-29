@@ -104,7 +104,7 @@ export default function FeatureTabsClient({
                 href={`?feature=${encodeURIComponent(tab.slug)}`}
                 data-slug={tab.slug}
                 onClick={(e) => handleTab(e, tab.slug, idx)}
-                className={`relative pb-2 text-sm font-semibold border-b-2 ${
+                className={`relative pb-2 text-base font-semibold  border-b-[3px] ${
                   isActive ? "text-slate-900 border-teal-600" : "text-slate-500 border-transparent hover:text-slate-800"
                 }`}
               >

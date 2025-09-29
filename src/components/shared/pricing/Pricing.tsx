@@ -1,19 +1,25 @@
-"use client"
+"use client";
 
-import CenteredSectionHeader from "@/components/shared/headers/CenteredSectionHeader"
-import { PricingCard } from "@/components/shared/pricing/PricingCard"
-import { PricingToggle } from "@/components/shared/pricing/PricingToggle"
-import { BillingPeriod, PricingData } from "@/types/pricing.types"
-import { useState } from "react"
+import CenteredSectionHeader from "@/components/shared/headers/CenteredSectionHeader";
+import { PricingCard } from "@/components/shared/pricing/PricingCard";
+import { PricingToggle } from "@/components/shared/pricing/PricingToggle";
+import { BillingPeriod, PricingData } from "@/types/pricing.types";
+import { useState } from "react";
 
-export function Pricing({ data, toggleButton }: { data: PricingData, toggleButton: boolean }) {
-  const [billingPeriod, setBillingPeriod] = useState<BillingPeriod>("monthly")
+export function Pricing({
+  data,
+  toggleButton,
+}: {
+  data: PricingData;
+  toggleButton: boolean;
+}) {
+  const [billingPeriod, setBillingPeriod] = useState<BillingPeriod>("monthly");
   // Always expanded → single state instead of per-card
-  const [isExpanded, setIsExpanded] = useState(false)
+  const [isExpanded, setIsExpanded] = useState(false);
 
   const handleToggleExpand = () => {
-    setIsExpanded((prev) => !prev)
-  }
+    setIsExpanded((prev) => !prev);
+  };
 
   return (
     <section className="relative overflow-hidden">
@@ -31,12 +37,13 @@ export function Pricing({ data, toggleButton }: { data: PricingData, toggleButto
           )}
         </div>
 
-        {toggleButton &&
+        {toggleButton && (
           <PricingToggle
             billingPeriod={billingPeriod}
             onToggle={setBillingPeriod}
             yearlyDiscount={data.yearlyDiscount}
-          />}
+          />
+        )}
 
         <div
           className={`grid grid-cols-1 lg:grid-cols-${data.plans.length} gap-10 lg:gap-8 mx-auto pt-5 items-stretch`}
@@ -58,18 +65,35 @@ export function Pricing({ data, toggleButton }: { data: PricingData, toggleButto
           ))}
         </div>
 
+        <section aria-label="Trust badges" className="py-4 text-center">
+          <p className="text-xs uppercase tracking-[0.08em] text-description-text">
+            Trusted by thousands of businesses worldwide
+          </p>
 
-        <div className="pt-8 text-center">
-          <p className="text-sm    text-description-text ">Trusted by thousands of businesses worldwide</p>
-          <div className="flex items-center justify-center gap-8 text-text">
-            <div className="text-xs font-medium">30-Day Money Back</div>
-            <div className=" w-1.5 h-1.5 max-w-1.5 max-h-1.5 min-w-1.5 min-h-1.5 rounded-full bg-toggle" />
-            <div className="text-xs font-medium">No Setup Fees</div>
-            <div className=" w-1.5 h-1.5 max-w-1.5 max-h-1.5 min-w-1.5 min-h-1.5 rounded-full bg-toggle" />
-            <div className="text-xs font-medium">Cancel Anytime</div>
+          <div className="">
+            <div className="mx-auto px-2 py-2">
+              <ul className="flex flex-wrap items-center justify-center gap-2 text-text text-[0.8rem] font-medium leading-6 md:gap-0">
+                <li className="px-3 py-1">30-Day Money Back</li>
+
+                {/* Divider (only show when not wrapping) */}
+                <li
+                  aria-hidden="true"
+                  className="hidden h-4 w-px bg-neutral-300/60 md:block dark:bg-neutral-700/60"
+                />
+
+                <li className="px-3 py-1">No Setup Fees</li>
+
+                <li
+                  aria-hidden="true"
+                  className="hidden h-4 w-px bg-neutral-300/60 md:block dark:bg-neutral-700/60"
+                />
+
+                <li className="px-3 py-1">Cancel Anytime</li>
+              </ul>
+            </div>
           </div>
-        </div>
+        </section>
       </div>
     </section>
-  )
+  );
 }

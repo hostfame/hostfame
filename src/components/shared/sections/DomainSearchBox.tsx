@@ -1,5 +1,6 @@
 "use client";
 
+import { getDomainCheckerUrl } from "@/utils/domain-checker.utils";
 import { FormEvent, useState } from "react";
 
 type Props = {
@@ -22,15 +23,14 @@ export default function DomainSearchBox({
     e.preventDefault();
     const full = `${name.trim()}${tld}`;
     if (!name.trim()) return;
-    onSearch?.(full);
+
+    const url = getDomainCheckerUrl(full);
+
+    window.open(url, "_blank");
   }
 
   return (
-    <form
-      onSubmit={submit}
-      className="w-full"
-      aria-label="Domain checker form"
-    >
+    <form onSubmit={submit} className="w-full" aria-label="Domain checker form">
       <div className="grid grid-cols-1 sm:grid-cols-[1fr,8rem,9rem] gap-3">
         {/* Name */}
         <label htmlFor="domain-name" className="sr-only">

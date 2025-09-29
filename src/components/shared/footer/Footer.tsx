@@ -26,7 +26,7 @@ const Footer: React.FC = () => {
               <ul className="space-y-3">
                 {col.links.map((lnk) => (
                   <li key={lnk.label}>
-                    <a
+                    <Link
                       href={lnk.href}
                       className={`text-sm text-white/80 hover:text-white transition-colors ${
                         lnk.highlight
@@ -35,7 +35,7 @@ const Footer: React.FC = () => {
                       }`}
                     >
                       {lnk.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -64,28 +64,32 @@ const Footer: React.FC = () => {
             <div className="flex items-center gap-3">
               <Link
                 aria-label="Facebook"
-                href="#"
+                href="/privacy-policy"
+                target="_blank"
                 className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-[#071B57] sm:h-8 sm:w-8"
               >
                 <FaFacebookF />
               </Link>
               <Link
                 aria-label="LinkedIn"
-                href="#"
+                href="https://www.linkedin.com/company/hostnin/?originalSubdomain=bd"
+                target="_blank"
                 className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-[#071B57] sm:h-8 sm:w-8"
               >
                 <FaLinkedinIn />
               </Link>
               <Link
                 aria-label="YouTube"
-                href="#"
+                href="https://www.youtube.com/@hostnin/null"
+                target="_blank"
                 className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-[#071B57] sm:h-8 sm:w-8"
               >
                 <FaYoutube />
               </Link>
               <Link
                 aria-label="Instagram"
-                href="#"
+                href="https://www.instagram.com/hostninbd/"
+                target="_blank"
                 className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-[#071B57] sm:h-8 sm:w-8"
               >
                 <FaInstagram />
@@ -98,15 +102,15 @@ const Footer: React.FC = () => {
             <p>© 2025 Hostfame. All Rights Reserved</p>
 
             <div className="flex items-center gap-2 sm:gap-3">
-              <Link href="#" className=" hover:text-white text-nowrap">
+              <Link href="/privacy-policy" className=" hover:text-white text-nowrap">
                 Privacy Policy
               </Link>
               <span className="text-white/40">|</span>
-              <Link href="#" className=" hover:text-white text-nowrap">
+              <Link href="/privacy-policy" className=" hover:text-white text-nowrap">
                 Refund Policy
               </Link>
               <span className="text-white/40">|</span>
-              <Link href="#" className=" hover:text-white text-nowrap">
+              <Link href="/contact" className=" hover:text-white text-nowrap">
                 Contact Us
               </Link>
             </div>

@@ -78,6 +78,8 @@
 
   --color-yellow-main: #ffc107;
   --color-offer-text: #364153;
+
+  --color-dark-text: #4c5671;
 }
 
 @layer base {
@@ -98,6 +100,7 @@
     --color-slider-background: white;
     --color-card-background: white;
     --color-offer-text: #364153;
+    --color-dark-text: #4c5671;
   }
 
   [data-theme="dark"] {
@@ -116,7 +119,12 @@
     --color-slider-background: #282825;
     --color-card-background: #282825;
     --color-offer-text: white;
+    --color-dark-text: white;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {

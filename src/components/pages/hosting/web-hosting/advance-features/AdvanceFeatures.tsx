@@ -29,7 +29,7 @@ export default function AdvancedFeatures({
 
         {/* Right: tabs + content (client) */}
         <div>
-          <h2 className="text-3xl md:text-3xl lg:text-[40px] font-bold text-[#06113C]  sm:mb-4 leading-tight px-2 text-center lg:text-left">
+          <h2 className="text-3xl md:text-3xl lg:text-[40px] font-bold text-[#06113C]  sm:mb-4 leading-tight pr-2 text-center lg:text-left">
             Advance features for the
             <br className="hidden sm:block" /> advanced user
           </h2>
