@@ -17,6 +17,7 @@ import Link from "next/link";
 import { Pricing } from "@/components/shared/pricing/Pricing";
 import { wordpressHostingPricingData } from "@/data/pricing.data";
 import DualPricing from "@/components/shared/sections/domain-hero/DualPricing";
+import ReviewsSection from "../web-hosting/reviews/ReviewSection";
 
 const WordPressHosting = () => {
   return (
@@ -39,23 +40,36 @@ const WordPressHosting = () => {
         ctaSection={<WordPressHostingCtaSection />}
         description={`Blazing speed, free backups, and real human support optimized for creators, consultants, and small businesses who rely on WordPress to grow.`}
       />
-      <SectionWrapper>
+      <SectionWrapper className=" my-12 md:my-16">
         <WordPressHostingFeatures />
       </SectionWrapper>
-      <SectionWrapper className="my-12 lg:my-16">
+
+      <SectionWrapper id="wordpress-hosting-pricing" className="my-12 md:my-16">
         <Pricing data={wordpressHostingPricingData} toggleButton={true} />
       </SectionWrapper>
-      <HostingBenefits />
+
+      {/* <SectionWrapper className="my-12 md:my-16">
+        <HostingBenefits />
+      </SectionWrapper> */}
+
+      <ReviewsSection />
+
       <SectionWrapper>
         <ManagedHostingHighlights
           data={wordpressHostingManagedHostingHighlightsData}
         />
       </SectionWrapper>
+
       <SectionWrapper>
         <AllHostingPlans data={wordpressHostingAllHostingPlans} />
       </SectionWrapper>
+
       <FaqSection />
-      <WhyChooseWordpressHosting />
+
+      <SectionWrapper className="my-12 md:my-16">
+        <WhyChooseWordpressHosting />
+      </SectionWrapper>
+
       <SectionWrapper className="my-12 md:my-16">
         <SupportBanner />
       </SectionWrapper>
@@ -66,12 +80,12 @@ const WordPressHosting = () => {
 function WordPressHostingCtaSection() {
   return (
     <section className="flex items-center gap-6">
-      <WhiteButton className="!rounded">View Plan</WhiteButton>
+      <WhiteButton href="#wordpress-hosting-pricing" className="!rounded">View Pricing</WhiteButton>
       <Link
         href={"#"}
         className="flex text-lg items-center text-center max-lg:underline lg:gap-x-2 text-white font-bold underline"
       >
-        Starting @ <DualPricing price="$19.99" pricebdt="৳1,999"/>/mo
+        Starting @ <DualPricing price="$19.99" pricebdt="৳1,999" />/mo
       </Link>
     </section>
   );

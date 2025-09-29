@@ -52,7 +52,7 @@ export const WebHostingData = {
     title2: "Feel free to ask anything!",
     description: "Feel free to contact our friendly technical advisors at any time. Our team of professionals is available 24/7 via live chat, ticket, and WhatsApp to assist you.",
     buttonText: "Live Chat With Sales",
-    buttonLink: "#",
+    buttonLink: "https://tawk.to/chat/67f13177a1155b1916a6f189/1io32ifig",
     image: "/assets/web-hosting/question-section/man-attending-online-meeting.png"
   },
   migrateYourSiteSection: {

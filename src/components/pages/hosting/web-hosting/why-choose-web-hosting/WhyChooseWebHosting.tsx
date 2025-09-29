@@ -34,7 +34,7 @@ const FeatureCard: React.FC<
 
 export default function WhyChooseWebHosting() {
   return (
-    <section className="relative isolate overflow-hidden py-14 md:py-20">
+    <section className="relative isolate overflow-hidden">
       {/* Curved background */}
       {/* <div className="absolute inset-0 -z-10">
         <Image

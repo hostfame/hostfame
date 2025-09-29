@@ -18,7 +18,7 @@ const MoneyBack = () => {
           <p className="text-white text-sm md:text-base max-w-xl mx-auto lg:mx-0">
             {WebHostingData.moneyBackSection.description}
           </p>
-          <WhiteButton showIcon={false}>Get Started Risk-Free</WhiteButton>
+          <WhiteButton href="#web-hosting-pricing" showIcon={false}>Get Started Risk-Free</WhiteButton>
         </div>
 
         {/* Right: Features */}

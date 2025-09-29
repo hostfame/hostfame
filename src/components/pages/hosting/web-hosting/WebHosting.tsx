@@ -80,7 +80,9 @@ const WebHosting = () => {
       />
       {/* <HostingBenefits /> */}
 
-      <WebhostingPricing />
+      <SectionWrapper id="web-hosting-pricing" className="my-12 lg:my-16">
+        <WebhostingPricing />
+      </SectionWrapper>
 
       <ReviewsSection />
 
@@ -90,12 +92,14 @@ const WebHosting = () => {
 
       <WebHostingPartners />
 
-      <WhyChooseWebHosting />
+      <SectionWrapper className="my-12 md:my-16">
+        <WhyChooseWebHosting />
+      </SectionWrapper>
 
       <SectionWrapper className="my-12 md:my-16">
         <MoneyBack />
       </SectionWrapper>
-      
+
       <WhatMakesUsDifferent />
 
       {/* <SectionWrapper>
@@ -106,7 +110,9 @@ const WebHosting = () => {
         <QuestionSection />
       </SectionWrapper>
 
-      <AdvancedFeatures />
+      <SectionWrapper className="my-12 md:my-16">
+        <AdvancedFeatures />
+      </SectionWrapper>
 
       <SectionWrapper className="my-12 md:my-16">
         <MigrateYourSite />
@@ -120,9 +126,7 @@ const WebHosting = () => {
 function WebHostingCtaSection() {
   return (
     <section className="flex items-center gap-6">
-      <Link href={"#"} className="">
-        <WhiteButton className="">Get Started - Risk Free</WhiteButton>
-      </Link>
+      <WhiteButton href="#web-hosting-pricing" className="">Get Started - Risk Free</WhiteButton>
     </section>
   );
 }

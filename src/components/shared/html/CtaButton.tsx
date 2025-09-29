@@ -22,7 +22,7 @@ export const CtaButton: React.FC<CtaButtonProps> = ({
   className = "",
 }) => {
   const base =
-    "inline-flex items-center justify-center gap-2 max-sm:text-sm relative px-10 lg:px-12 py-2.5 sm:py-4 rounded-xl font-semibold text-white shadow-lg bg-gradient-to-r from-teal-500 via-teal-600 to-teal-600 hover:from-teal-600 hover:via-teal-600 hover:to-teal-600 duration-300 hover:scale-105 w-fit ";
+    "inline-flex items-center justify-center gap-2 max-sm:text-sm relative px-10 lg:px-12 py-2.5 sm:py-4 rounded-lg font-semibold text-white shadow-lg bg-gradient-to-r from-teal-500 via-teal-600 to-teal-600 hover:from-teal-600 hover:via-teal-600 hover:to-teal-600 duration-300 hover:scale-105 w-fit ";
 
   const content = (
     <>
@@ -49,7 +49,7 @@ export const CtaButton: React.FC<CtaButtonProps> = ({
       className={`${base}  ${fullWidth ? "w-full" : ""} ${className}`}
     >
       {content}
-      <div className="absolute pointer-events-none inset-0 bg-gradient-to-r from-teal-300/20 to-teal-300/20 rounded-xl opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
+      <div className="absolute pointer-events-none inset-0 bg-gradient-to-r from-teal-300/20 to-teal-300/20 rounded-lg opacity-0 hover:opacity-100 transition-opacity duration-500"></div>
     </button>
   );
 };

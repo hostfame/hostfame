@@ -11,7 +11,7 @@ const QuestionSection = () => {
         <h2 className='text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-3 leading-tight mx-auto lg:mx-0'>{WebHostingData.questionSection.title2}</h2>
         <p className='text-gray-200 mb-4 sm:mb-6 text-[15px] sm:text-base md:text-base max-w-xl mx-auto lg:mx-0'>{WebHostingData.questionSection.description}</p>
 
-        <Link href={WebHostingData.questionSection.buttonLink} className='bg-gradient-to-r from-teal-500 to-teal-700 hover:from-teal-600 hover:to-teal-800 text-white py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg shadow-lg transition-colors duration-200 text-sm sm:text-base md:text-base w-full sm:w-auto inline-block text-center font-bold'>
+        <Link href={WebHostingData.questionSection.buttonLink} target='_blank' className='bg-gradient-to-r from-teal-500 to-teal-700 hover:from-teal-600 hover:to-teal-800 text-white py-2.5 sm:py-3 px-4 sm:px-6 rounded-lg shadow-lg transition-colors duration-200 text-sm sm:text-base md:text-base w-full sm:w-auto inline-block text-center font-bold'>
           <button className=''>
             {WebHostingData.questionSection.buttonText}
           </button>

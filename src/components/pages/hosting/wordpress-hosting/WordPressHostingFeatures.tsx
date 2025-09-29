@@ -21,7 +21,7 @@ const WordPressHostingFeatures: React.FC<WordPressHostingFeaturesProps> = ({
   className = "",
 }) => {
   return (
-    <section className={`  w-full py-16 sm:py-20 ${className}`}>
+    <section className={`  w-full ${className}`}>
       <CenteredSectionHeader
         title="WordPress Hosting Features"
         description="Everything you need for a fast, secure, and effortless WordPress experience."
