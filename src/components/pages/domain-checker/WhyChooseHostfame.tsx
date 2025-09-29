@@ -9,7 +9,7 @@ export default function WhyChooseHostfame() {
         description={DomainCheckerWhyChooseHostfameData.description}
       />
 
-      <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 xl:gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 xl:gap-6">
         {DomainCheckerWhyChooseHostfameData.cards.map((f, i) => {
           const Icon = f.icon;
           return (

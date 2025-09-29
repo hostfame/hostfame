@@ -10,18 +10,18 @@ const DomainChecker = () => {
   return (
     <div>
       <DomainCheckerBanner />
-      
+
       <SectionWrapper className="my-12 md:my-16">
         <DomainPricing />
       </SectionWrapper>
 
-      <SectionWrapper className="my-12 md:my-16">
+      <SectionWrapper>
         <WhyChooseHostfame />
       </SectionWrapper>
 
-    <FaqSection />
+      <FaqSection />
 
-    <SectionWrapper className="my-12 md:my-16">
+      <SectionWrapper className="mb-12 md:mb-16">
         <SupportBanner />
       </SectionWrapper>
     </div>
