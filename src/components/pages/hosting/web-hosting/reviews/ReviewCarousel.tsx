@@ -7,11 +7,13 @@ import { Autoplay, Pagination } from "swiper/modules";
 import "swiper/css/bundle";
 
 import { FaStar, FaQuoteLeft } from "react-icons/fa";
-import { reviewsData } from "@/data/reviews.daa";
+import { reviewsData } from "@/data/reviews.data";
+import Image from "next/image";
 
 /* ---------------- Types ---------------- */
 export type Review = {
   name: string;
+  image?: string;
   rating: number; // 1-5
   text: string;
 };
@@ -72,15 +74,22 @@ const ReviewCarousel: React.FC<ReviewCarouselProps> = ({
             {/* Card fills slide height */}
             <article className="bg-background relative h-full min-h-0 w-full p-6 shadow-[0_8px_24px_rgba(10,30,70,0.08)] md:p-8 flex flex-col">
               {/* watermark quote icon */}
-              
+
 
               {/* Header (avatar + name + stars) */}
               <div className="flex items-start gap-4">
                 {/* avatar placeholder */}
-                <div
-                  className="h-12 w-12 shrink-0 rounded-full bg-slate-300"
-                  aria-hidden
-                />
+                {r.image ?
+                  <Image
+                    src={r.image}
+                    alt={r.name}
+                    height={100}
+                    width={100}
+                    className="h-12 w-12 shrink-0 rounded-full "
+                  /> : <div
+                    className="h-12 w-12 shrink-0 rounded-full bg-slate-300"
+                    aria-hidden
+                  />}
                 <div>
                   <h4 className="text-lg font-semibold text-text">
                     {r.name}
