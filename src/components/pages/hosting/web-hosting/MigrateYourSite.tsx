@@ -6,7 +6,7 @@ import React from "react";
 
 const MigrateYourSite = () => {
   return (
-    <section className="flex flex-col lg:flex-row bg-white rounded-2xl border-2 border-gray-100 shadow-xl w-full py-8 sm:py-10 gap-6 sm:gap-8 md:gap-10 lg:gap-20 items-center hover:scale-105 duration-500 transition ">
+    <section className="flex flex-col lg:flex-row bg-white rounded-2xl border-2 border-gray-100 shadow-xl w-full p-8 sm:p-10 gap-6 sm:gap-8 md:gap-10 lg:gap-20 items-center hover:scale-[1.02] duration-500 transition ">
       <section className="flex-[0.6] flex justify-center lg:justify-start w-full lg:w-[340px] order-2 lg:order-1">
         <Image
           src={WebHostingData.migrateYourSiteSection.image}
@@ -26,7 +26,7 @@ const MigrateYourSite = () => {
           {WebHostingData.migrateYourSiteSection.description}
         </p>
 
-        <Button href={WebHostingData.migrateYourSiteSection.buttonLink} className="">{WebHostingData.migrateYourSiteSection.buttonText}</Button>
+        <Button  variant="bordered" href={WebHostingData.migrateYourSiteSection.buttonLink} className="">{WebHostingData.migrateYourSiteSection.buttonText}</Button>
       </section>
     </section>
   );

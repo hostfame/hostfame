@@ -1,8 +1,14 @@
 import Link from "next/link";
 import { FiSearch } from "react-icons/fi";
 import DualPricing from "./domain-hero/DualPricing";
+import DomainCheckerSearch from "./DomainCheckerSearch";
 
-type PopularTLD = { tld: string; price: string; pricebdt: string; href?: string };
+type PopularTLD = {
+  tld: string;
+  price: string;
+  pricebdt: string;
+  href?: string;
+};
 
 const data: {
   title: string;
@@ -44,24 +50,7 @@ export default function DomainHero() {
 
         {/* Search */}
         <div className="mx-auto mt-8 w-full max-w-2xl">
-          <div className="relative rounded-full bg-white/90 p-2 shadow-xl ring-1 ring-white/25 backdrop-blur-sm">
-            <label htmlFor="domain-search" className="sr-only">
-              {data.placeholder}
-            </label>
-            <input
-              id="domain-search"
-              type="text"
-              placeholder={data.placeholder}
-              className="w-full rounded-full border-0 bg-transparent px-4 py-2 pr-28 text-base text-gray-900 placeholder-gray-500 outline-none focus:ring-0"
-            />
-            <button
-              type="button"
-              className="absolute right-2 top-1/2 inline-flex -translate-y-1/2 items-center gap-2 rounded-full bg-dark px-5 py-2.5 text-sm font-semibold text-white shadow-md transition hover:opacity-90 focus-visible:outline-none"
-            >
-              <FiSearch aria-hidden className="text-base" />
-              <span>{data.cta}</span>
-            </button>
-          </div>
+          <DomainCheckerSearch placeholder={data.placeholder} cta={data.cta} />
 
           {/* Popular */}
           <div className="mt-5 flex flex-col items-center gap-2 sm:mt-6">
@@ -79,7 +68,8 @@ export default function DomainHero() {
                     className="group inline-flex w-[132px] hover:w-[153px]  items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-sm text-white backdrop-blur transition-all duration-300 ease-in-out hover:bg-white/20"
                   >
                     <span className="font-semibold">{item.tld}</span>
-                    Only<DualPricing price={item.price} pricebdt={item.pricebdt}/>
+                    Only
+                    <DualPricing price={item.price} pricebdt={item.pricebdt} />
                     <FiSearch className="text-xs absolute  group-hover:static opacity-0 scale-75 transition-all duration-300 ease-in-out group-hover:opacity-70 group-hover:scale-100" />
                   </Link>
                 </li>

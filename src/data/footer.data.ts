@@ -4,16 +4,16 @@ export const footerColumns: FooterColumn[] = [
   {
     title: "Hosting",
     links: [
-      { label: "Web Hosting", href: "#" },
-      { label: "Cloud Hosting", href: "#" },
-      { label: "BDIX Hosting", href: "#" },
-      { label: "Turbo Hosting", href: "#" },
+      { label: "Web Hosting", href: "/web-hosting" },
+      { label: "Cloud Hosting", href: "/cloud-hosting" },
+      { label: "BDIX Hosting", href: "/bdix-hosting" },
+      { label: "Turbo Hosting", href: "/turbo-hosting" },
     ],
   },
   {
     title: "Domain",
     links: [
-      { label: "Register Your Domain", href: "#" },
+      { label: "Register Your Domain", href: "/domain-checker" },
       { label: "Transfer to Us", href: "#" },
       { label: "Renew Domains", href: "#" },
       { label: "Manage Domains", href: "#" },
@@ -40,19 +40,19 @@ export const footerColumns: FooterColumn[] = [
   {
     title: "Support",
     links: [
-      { label: "24/7 LiveChat", href: "#" },
-      { label: "24/7 WhatsApp", href: "#" },
-      { label: "24/7 Email", href: "#" },
-      { label: "Open Ticket", href: "#" },
+      { label: "24/7 LiveChat", href: "/support" },
+      { label: "24/7 WhatsApp", href: "/support" },
+      { label: "24/7 Email", href: "/support" },
+      { label: "Open Ticket", href: "/support" },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "Terms & Conditions", href: "#" },
-      { label: "Affiliate", href: "#" },
+      { label: "Terms & Conditions", href: "/terms-of-services" },
+      { label: "Privacy & Policy", href: "/privacy-policy" },
       { label: "Careers (Hiring)", href: "#", highlight: true },
-      { label: "Contact", href: "#" },
+      { label: "Contact", href: "/contact" },
     ],
   },
 ];

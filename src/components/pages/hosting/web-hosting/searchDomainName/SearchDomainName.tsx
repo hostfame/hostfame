@@ -42,12 +42,12 @@ const SearchDomainName = () => {
           </div> */}
 
           {/* Pricing */}
-          <div className="grid grid-cols-2 sm:grid-cols-2 gap-3 sm:gap-4">
+          <div className="grid grid-cols-2 sm:grid-cols-2 gap-3 sm:gap-4 !h-full !w-[80%]">
             {Object.values(WebHostingData.domainNameSection.pricing).map(
               (pricing, idx) => (
                 <div
                   key={`${pricing.title}-${idx}`}
-                  className="relative rounded-2xl border border-gray-200 bg-white p-4 shadow-sm hover:shadow-md transition"
+                  className="relative rounded-2xl border  border-gray-200 bg-white p-4 shadow-sm hover:shadow-md transition"
                 >
                   {idx === 0 && (
                     <span className="absolute -top-2 right-3 rounded-full bg-teal-600 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white shadow">
