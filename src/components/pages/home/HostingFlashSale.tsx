@@ -17,7 +17,7 @@ const data = {
   heading: "Hosting Flash Sale",
   blurb: "For a limited time, launch your website with incredible savings.",
   detailsCtaLabel: "See Details",
-  detailsHref: "#",
+  detailsHref: "/web-hosting",
   offers: [
     {
       id: "hosting",
@@ -25,7 +25,7 @@ const data = {
       discount: "90% Off",
       label: "Hosting",
       ctaLabel: "Get Web Hosting",
-      href: "#",
+      href: "/web-hosting",
       Icon: FaServer,
     },
     {
@@ -34,7 +34,7 @@ const data = {
       discount: "57% Off",
       label: "Domains",
       ctaLabel: "Get A Domains",
-      href: "#",
+      href: "/domain-checker",
       Icon: HiGlobeAlt,
     },
   ] as Offer[],
@@ -92,7 +92,7 @@ export default async function HostingFlashSale() {
 
             <Link
               href={data.detailsHref}
-              className="mt-6 inline-flex w-fit items-center justify-center rounded-full bg-white px-5 py-2 text-sm font-medium text-gray-800 !font-semibold hover:bg-white/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+              className="mt-6 inline-flex w-fit items-center justify-center rounded-full bg-white px-5 py-2 text-sm  text-gray-800 !font-semibold hover:bg-white/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
             >
               {data.detailsCtaLabel}
             </Link>

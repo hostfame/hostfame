@@ -9,7 +9,7 @@ const data = {
     "Everything you need to enable your online success: dependable hosting, safe domains, and professional support.",
   cta: {
     label: "Get Started",
-    href: "/get-started",
+    href: "/web-hosting",
   },
   pills: ["Domain", "Hosting"],
   images: {

@@ -50,7 +50,7 @@ export default function WhyChooseWebHosting() {
 
       <CenteredSectionHeader
         title="Why Choose Web Hosting?"
-        description="With our Web Hosting plans, you'll receive more resources for less money, ensuring the reliability you can count on. Starting your own business with Hostnin is easier than you think!"
+        description="With our Web Hosting plans, you'll receive more resources for less money, ensuring the reliability you can count on. Starting your own business with Hostfame is easier than you think!"
         className="mb-10 md:mb-14"
         classNameForTitle="text-slate-900"
         classNameForDescription="text-slate-600"

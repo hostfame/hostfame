@@ -13,7 +13,7 @@ const urbanist = Urbanist({
 });
 
 export const metadata: Metadata = {
-  title: "Hostnin",
+  title: "Hostfame",
   description: "A hosting platform.",
 };
 

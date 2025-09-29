@@ -1,5 +1,5 @@
 export const differenceData = {
-  title: "What makes Hostnin different from others?",
+  title: "What makes Hostfame different from others?",
   description: "Using our incredible technology, we will help you improve your website's accessibility. With LiteSpeed Server and CloudLinux OS, you can speed up loading times, enhance security, and make your site faster and more reliable.",
   features: [
     {

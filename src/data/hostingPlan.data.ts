@@ -23,6 +23,7 @@ export const hostingPlans: HostingPlanProps[] = [
     cta: "See Plans",
     storage: "50 GB",
     email: "Unlimited",
+    href: "/web-hosting",
     features: {
       liveChat: true,
       callSupport: true,
@@ -43,6 +44,7 @@ export const hostingPlans: HostingPlanProps[] = [
     cta: "See Plans",
     storage: "75 GB",
     email: "Unlimited",
+    href: "/wordpress-hosting",
     features: {
       liveChat: true,
       callSupport: true,
@@ -63,6 +65,7 @@ export const hostingPlans: HostingPlanProps[] = [
     cta: "See Plans",
     storage: "150 GB",
     email: "Unlimited",
+    href: "/managed-hosting",
     features: {
       liveChat: true,
       callSupport: true,
@@ -83,6 +86,7 @@ export const hostingPlans: HostingPlanProps[] = [
     cta: "See Plans",
     storage: "100 GB",
     email: "Unlimited",
+    href: "/vps-hosting",
     features: {
       liveChat: true,
       callSupport: true,

@@ -33,7 +33,7 @@ const data: {
     {
       title: "Money-Back Guarantee",
       description:
-        "Try us with confidence — if you’re not happy, you can get your money back.",
+        "Try us with confidence, if you’re not happy, you can get your money back.",
       icon: FiRotateCcw,
     },
   ],

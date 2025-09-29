@@ -109,7 +109,7 @@ export default function HostingPlans() {
                       {plan.priceSuffix}
                     </span>
                   </div>
-                  <Button size="sm" variant="bordered" className=" w-full">
+                  <Button href={plan.href} size="sm" variant="bordered" className=" w-full">
                     {plan.cta}
                   </Button>
                 </header>
@@ -199,7 +199,7 @@ export default function HostingPlans() {
                           {p.priceSuffix}
                         </span>
                       </div>
-                      <Button size="sm" variant="bordered" className="w-full">
+                      <Button href={p.href} size="sm" variant="bordered" className="w-full">
                         {p.cta}
                       </Button>
                     </div>

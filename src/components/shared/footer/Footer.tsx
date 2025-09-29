@@ -50,10 +50,10 @@ const Footer: React.FC = () => {
           {/* Row 1 */}
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:justify-between">
             {/* Bigger logo */}
-            <div className="relative w-[190px] h-12 sm:w-[220px] sm:h-14 sm:w-[240px] sm:h-16">
+            <div className="relative w-[190px] h-12 sm:w-[220px] sm:h-14">
               <Image
-                src="/assets/footer-logo.webp"
-                alt="Hostnin"
+                src="/assets/hostfame-white.webp"
+                alt="Hostfame"
                 fill
                 className="object-contain"
                 priority
@@ -95,7 +95,7 @@ const Footer: React.FC = () => {
 
           {/* Row 2 */}
           <div className="mt-4 flex flex-col items-center gap-2 text-center text-xs text-white sm:text-white/80 sm:text-sm sm:flex-row sm:justify-between sm:text-left">
-            <p>© 2025 Hostnin. All Rights Reserved</p>
+            <p>© 2025 Hostfame. All Rights Reserved</p>
 
             <div className="flex items-center gap-2 sm:gap-3">
               <Link href="#" className=" hover:text-white text-nowrap">
