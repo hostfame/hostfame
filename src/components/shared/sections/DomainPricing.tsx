@@ -7,7 +7,7 @@ import DualPricing from "./domain-hero/DualPricing";
 export default function DomainPricing() {
   return (
     <section className="w-full text-text ">
-      <div className="py-16 space-y-10">
+      <div className="space-y-10">
         <CenteredSectionHeader
           title={domainPricingData.title}
           description={domainPricingData.description}
