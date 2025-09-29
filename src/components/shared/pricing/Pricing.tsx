@@ -13,7 +13,7 @@ export function Pricing({
   data: PricingData;
   toggleButton: boolean;
 }) {
-  const [billingPeriod, setBillingPeriod] = useState<BillingPeriod>("monthly");
+  const [billingPeriod, setBillingPeriod] = useState<BillingPeriod>("yearly");
   // Always expanded → single state instead of per-card
   const [isExpanded, setIsExpanded] = useState(false);
 
