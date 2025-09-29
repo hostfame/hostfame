@@ -154,7 +154,7 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
                 <Button
                   href="/dashboard"
                   size="sm"
-                  className={`block w-full  `}
+                  className={`block w-full !rounded-lg`}
                   onClick={() => setIsOpen(false)}
                   variant={isTransparent ? "whiteBordered" : "bordered"}
                 >

@@ -63,7 +63,7 @@ const Home = () => {
         promoTemplate={<PromoTopBar />}
       />
 
-      <SectionWrapper className="my-12 lg:my-16">
+      <SectionWrapper id="different-hosting-plans" className="my-12 lg:my-16">
         <DifferentHostingPlans data={differentHostingPlansData} />
       </SectionWrapper>
 
@@ -94,7 +94,7 @@ const Home = () => {
       <SectionWrapper className="my-12 lg:my-16">
         <HostingPlan />
       </SectionWrapper>
-      
+
       <SectionWrapper className="my-12 lg:my-16">
         <ExperienceHostfameAdvantage />
       </SectionWrapper>
@@ -153,7 +153,8 @@ function HomeCtaSection() {
   return (
     <section className=" space-y-6">
       <section className=" flex gap-10 items-center justify-center lg:justify-start flex-wrap">
-        <WhiteButton>Start My Hosting Now</WhiteButton>
+        <WhiteButton href="#different-hosting-plans">Start My Hosting Now</WhiteButton>
+        
         <Link
           href={"#"}
           className="flex  text-lg items-center text-center max-lg:underline lg:gap-x-2 text-white font-bold"

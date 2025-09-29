@@ -25,4 +25,5 @@ export type HostingPlanProps = {
   storage: string;
   email: string;
   features: Record<Exclude<FeatureKey, "storage" | "email">, boolean>;
+  href?: string
 };

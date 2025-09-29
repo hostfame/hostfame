@@ -1,7 +1,7 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Hostnin | WordPress Hosting",
+  title: "Hostfame | WordPress Hosting",
   description: "A hosting platform."
 };
 

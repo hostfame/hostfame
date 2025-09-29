@@ -58,7 +58,7 @@ export default function DifferentHostingPlans({
           classNameForDescription="!text-left !mx-0"
         />
 
-        <div className="flex gap-2">
+        {/* <div className="flex gap-2">
           <button
             onClick={() => scroll("left")}
             className=" bg-toggle/90
@@ -73,7 +73,7 @@ export default function DifferentHostingPlans({
           >
             <FaAngleRight size={20} />
           </button>
-        </div>
+        </div> */}
       </div>
 
       {/* Slider */}

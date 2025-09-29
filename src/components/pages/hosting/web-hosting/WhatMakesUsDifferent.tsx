@@ -23,7 +23,7 @@ export default function WhatMakesUsDifferent({
           <div className="relative aspect-[3/4] w-full">
             <Image
               src="/assets/cd-man.webp"
-              alt="Hostnin team member"
+              alt="Hostfame team member"
               fill
               priority
               className="object-contain"
@@ -35,7 +35,7 @@ export default function WhatMakesUsDifferent({
         {/* Right: Copy + cards */}
         <div className="w-full">
           <h2 className="text-3xl md:text-5xl font-extrabold leading-tight text-slate-900">
-            What makes Hostnin
+            What makes Hostfame
             <br className="hidden sm:block" /> different from others?
           </h2>
           <p className="mt-3 max-w-2xl text-[15px] leading-6 text-slate-600">
