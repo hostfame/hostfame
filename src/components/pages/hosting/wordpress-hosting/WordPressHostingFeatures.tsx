@@ -29,21 +29,12 @@ const WordPressHostingFeatures: React.FC<WordPressHostingFeaturesProps> = ({
       />
 
       <ul
-        className="
-  mx-auto grid 
-  grid-cols-12 
-  gap-4 auto-rows-[1fr]
-"
+        className="mx-auto grid grid-cols-12 gap-4 auto-rows-[1fr]"
       >
         {features.map(({ title, description, Icon, className }, idx) => (
           <li
             key={idx}
-            className={`
-        group relative overflow-hidden rounded-2xl
-         bg-gradient-to-b from-primary-light via-primary-light to-primary text-white shadow-sm ring-1 ring-black/5
-        transition hover:-translate-y-[2px] hover:shadow-md
-        ${className ?? "md:col-span-4"} 
-      `}
+            className={` group relative overflow-hidden rounded-2xl bg-gradient-to-b from-primary-light via-primary-light to-primary text-white shadow-sm ring-1 ring-black/5 transition hover:-translate-y-[2px] hover:shadow-md ${className ?? "md:col-span-4"}  `}
           >
             <div className="relative p-6 sm:p-7 md:p-8 flex h-full flex-col">
               <div className="flex items-center gap-3 mb-3">
