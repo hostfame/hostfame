@@ -41,12 +41,12 @@ const data: ContactTeaserData = {
   eyebrow: "Got a question?",
   title: "Talk to a real human, fast.",
   tagline:
-    "Skip the long forms. Message us and we’ll match you to the right solution for your business—usually within minutes.",
+    "Skip the long forms. Message us and we’ll match you to the right solution for your business, usually within minutes.",
   bullets: [
     { icon: <FiPhoneCall className="h-5 w-5" />, text: "Free discovery call" },
     {
       icon: <FiMessageCircle className="h-5 w-5" />,
-      text: "No bots—experts only"
+      text: "No bots, experts only"
     },
     { icon: <FiCalendar className="h-5 w-5" />, text: "Same-day scheduling" }
   ],

@@ -18,7 +18,7 @@ export const differentHostingPlansData = {
       id: 2,
       title: "WordPress Hosting",
       description:
-        "1-click install, free backups, and fast speeds — built for WordPress.",
+        "1-click install, free backups, and fast speeds, built for WordPress.",
       price: "Starting from $1.49/month",
       priceBdt: "Starting from ৳149/month",
       buttonText: "WordPress Plan",

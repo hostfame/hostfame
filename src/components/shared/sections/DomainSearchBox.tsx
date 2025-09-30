@@ -84,7 +84,7 @@ export default function DomainSearchBox({
 
       {/* Helper line */}
       <p className="mt-2 text-sm text-gray-600">
-        Tip: try short names—then mix & match with TLDs.
+        Tip: try short names, then mix & match with TLDs.
       </p>
     </form>
   );

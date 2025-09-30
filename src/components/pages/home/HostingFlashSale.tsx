@@ -46,7 +46,7 @@ export default async function HostingFlashSale() {
       <div className="mx-auto max-w-7xl  p-4 lg:p-6">
         {/* 3-col on desktop */}
         <div className="grid gap-6  sm:grid-cols-2 lg:grid-cols-3">
-          {/* Columns 2 & 3 — Offer cards styled same as hero */}
+          {/* Columns 2 & 3,  Offer cards styled same as hero */}
           {data.offers.map(
             ({ id, badge, discount, label, ctaLabel, href, Icon }) => (
               <article
@@ -81,7 +81,7 @@ export default async function HostingFlashSale() {
             )
           )}
 
-          {/* Column 1 — Hero */}
+          {/* Column 1,  Hero */}
           <div className="flex flex-col justify-between sm:col-span-3 lg:!col-span-1 rounded-xl p-6 sm:p-8 text-white">
             <div>
               <h2 className="text-3xl font-semibold tracking-tight">

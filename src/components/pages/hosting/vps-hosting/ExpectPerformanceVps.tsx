@@ -34,7 +34,7 @@ const defaultData: VpsData = {
   kicker: "VPS that actually feels fast",
   heading: "Scale calmly with Hostie VPS",
   subheading:
-    "Dedicated resources, stable throughput, and full root control — made simple for teams and solo builders.",
+    "Dedicated resources, stable throughput, and full root control,  made simple for teams and solo builders.",
   ctas: [
     { label: "Choose a plan", href: "#", variant: "solid" },
     { label: "See specs", href: "#", variant: "ghost" },
@@ -163,7 +163,7 @@ export default function ExpectPerformanceVps({
             ))}
           </ul>
 
-          {/* Image mosaic (right) — big right image + floating small one */}
+          {/* Image mosaic (right),  big right image + floating small one */}
           <div className="relative     mb-6  flex-col flex   justify-end">
             <div className="relative aspect-[5/4] w-full overflow-hidden rounded-2xl">
               <Image

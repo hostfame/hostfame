@@ -4,7 +4,7 @@
 //   eyebrow: "VPS Toolkit",
 //   heading: "Performance, Control & Peace of Mind",
 //   description:
-//     "Launch production-grade workloads with consistent speed and zero guesswork. Everything below is ready out of the box—no tuning required.",
+//     "Launch production-grade workloads with consistent speed and zero guesswork. Everything below is ready out of the box, no tuning required.",
 //   progressLabel: "Provisioning capacity",
 //   progressValue: 78,
 //   features: [
@@ -13,7 +13,7 @@
 //       icon: <LuHardDrive size={ 35} className = "" aria - hidden="true" />,
 //     title: "NVMe Throughput",
 //     description:
-//     "Fast reads/writes for snappy apps and shorter build times—NVMe storage by default.",
+//     "Fast reads/writes for snappy apps and shorter build times, NVMe storage by default.",
 //     },
 //   {
 //     id: "root",
@@ -41,7 +41,7 @@
 //     icon: <LuCog size={ 35 } className = "" aria - hidden="true" />,
 //       title: "OS Freedom",
 //         description:
-//   "Deploy your preferred Linux distribution and tooling—no lock-in, no surprises.",
+//   "Deploy your preferred Linux distribution and tooling, no lock-in, no surprises.",
 //     },
 // {
 //   id: "control",
