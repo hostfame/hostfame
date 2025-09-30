@@ -22,19 +22,19 @@ export const wordpressHostingManagedHostingHighlightsData = {
       icon: FaServer,
       title: "Autoscaling WordPress Hosting",
       description:
-        "Never worry about traffic spikes again. Our cloud-based autoscaling technology adds resources when your site needs more power — no downtime, no limits."
+        "Never worry about traffic spikes again. Our cloud-based autoscaling technology adds resources when your site needs more power,  no downtime, no limits."
     },
     {
       icon: FaTools,
       title: "WordPress Dev Tools",
       description:
-        "Take full control with WP-CLI, SSH access, phpMyAdmin, SFTP/FTP, PHP versioning, and one-click installs — all included."
+        "Take full control with WP-CLI, SSH access, phpMyAdmin, SFTP/FTP, PHP versioning, and one-click installs,  all included."
     },
     {
       icon: FaBolt,
       title: "Built For Maximum Speed",
       description:
-        "Experience lightning-fast hosting with SSD storage, HTTP/2, optimized NGINX caching, and PHP tuning — designed to keep you ahead."
+        "Experience lightning-fast hosting with SSD storage, HTTP/2, optimized NGINX caching, and PHP tuning,  designed to keep you ahead."
     },
     {
       icon: FaCloud,

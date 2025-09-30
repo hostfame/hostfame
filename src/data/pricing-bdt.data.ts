@@ -4,7 +4,7 @@ export const webHostingPricingBdtData: PricingData = {
   title: "Choose Your Perfect Plan",
   yearlyDiscount: 58, // per-plan discounts shown as `offer` (% OFF)
   plans: [
-    // ——— STARTER ———
+    //,,,  STARTER,,, 
     {
       id: "starter",
       name: "Starter",
@@ -167,7 +167,7 @@ export const webHostingPricingBdtData: PricingData = {
       ],
     },
 
-    // ——— PRO ———
+    //,,,  PRO,,, 
     {
       id: "pro",
       name: "Pro",
@@ -330,7 +330,7 @@ export const webHostingPricingBdtData: PricingData = {
       ],
     },
 
-    // ——— BUSINESS ———
+    //,,,  BUSINESS,,, 
     {
       id: "business",
       name: "Business",

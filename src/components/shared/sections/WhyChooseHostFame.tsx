@@ -16,7 +16,7 @@ const data: {
 } = {
   heading: "Why Choose HostFame for Your Hosting Needs?",
   blurb:
-    "Reliable, fast, and friendly — here’s what makes our hosting a smart choice.",
+    "Reliable, fast, and friendly,  here’s what makes our hosting a smart choice.",
   features: [
     {
       title: "Blazing-Fast Performance",

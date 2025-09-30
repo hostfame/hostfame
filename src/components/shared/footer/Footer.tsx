@@ -12,7 +12,7 @@ import FooterPricingImage from "./FooterPricingImage";
 const Footer: React.FC = () => {
   return (
     <footer className="bg-gradient-to-br from-primary via-primary-dark to-primary-dark text-white">
-      <div className="mx-auto max-w-7xl   px-[2%] py-10">
+      <div className="mx-auto max-w-7xl   px-[2%] py-7">
         {/* Payment / SSL banner */}
         <FooterPricingImage />
 
@@ -42,10 +42,10 @@ const Footer: React.FC = () => {
           ))}
         </div> */}
 
-        <hr className="my-8 border-white/15" />
+        <hr className="mt-6 border-white/15" />
 
         {/* Brand + socials */}
-        <div className="mx-auto max-w-7xl py-6">
+        <div className="mx-auto max-w-7xl py-3">
           {/* Row 1 */}
           <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:justify-between">
             {/* Bigger logo */}

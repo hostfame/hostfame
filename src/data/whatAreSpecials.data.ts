@@ -1,12 +1,12 @@
 export const whatAreSpecialsData = {
   title: "What are Specials?",
   description:
-    "Packed with tools that make launching, managing, and growing your website simpler than ever—without extra cost.",
+    "Packed with tools that make launching, managing, and growing your website simpler than ever, without extra cost.",
   data: [
     {
       title: "One-Click Install",
       description:
-        "Create a full copy for testing or updates, then go live with a single click—no hassle.",
+        "Create a full copy for testing or updates, then go live with a single click, no hassle.",
       image: "/placeholders/install.svg",
       alt: "Install icon",
       width: 64,

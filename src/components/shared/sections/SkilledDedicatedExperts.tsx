@@ -178,7 +178,7 @@ const SkilledDedicatedExperts = () => {
 
             {/* small note */}
             <p className="text-xs text-text/80">
-              Always-on coverage, optimized infrastructure, and human help—no
+              Always-on coverage, optimized infrastructure, and human help, no
               tickets lost in the void.
             </p>
           </div>

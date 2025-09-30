@@ -13,13 +13,13 @@ export const managedHostingData: ManagedHostingThatGrowsProps = {
   eyebrow: "Managed Hosting",
   heading: "Grows With Your Team",
   intro:
-    "Scale performance, security, and reliability—already included with every managed plan.",
+    "Scale performance, security, and reliability, already included with every managed plan.",
   benefits: [
     {
       icon: <FiSettings aria-hidden className="text-xl" />,
       title: "Effortless Control",
       description:
-        "Fast, flexible controls for sites and apps—no busywork, just ship.",
+        "Fast, flexible controls for sites and apps, no busywork, just ship.",
     },
     {
       icon: <FiShield aria-hidden className="text-xl" />,

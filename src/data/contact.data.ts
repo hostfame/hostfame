@@ -4,10 +4,10 @@ export const ContactAskAQuestionData = {
   eyebrow: 'Got a question?',
   title: 'Talk to a real human, fast.',
   tagline:
-    'Skip the long forms. Message us and we’ll match you to the right solution for your business—usually within minutes.',
+    'Skip the long forms. Message us and we’ll match you to the right solution for your business, usually within minutes.',
    bullets: [
     { icon: FiPhoneCall, text: 'Free discovery call' },
-    { icon: FiMessageCircle, text: 'No bots—experts only' },
+    { icon: FiMessageCircle, text: 'No bots, experts only' },
     { icon: FiCalendar, text: 'Same-day scheduling' },
   ],
   stats: [

@@ -11,6 +11,7 @@ export type ButtonProps = {
   fullWidth?: boolean;
   variant?: "dark" | "light" | "bordered" | "whiteBordered";
   className?: string;
+  target?: React.HTMLAttributeAnchorTarget | undefined
 };
 
 export const Button: React.FC<ButtonProps> = ({
@@ -22,6 +23,7 @@ export const Button: React.FC<ButtonProps> = ({
   fullWidth = false,
   variant = "dark",
   className = "",
+  target="_self"
 }) => {
   const base =
     "inline-flex items-center justify-center gap-2 relative font-semibold rounded-lg duration-500 transition hover:scale-105 shadow-lg";
@@ -52,6 +54,7 @@ export const Button: React.FC<ButtonProps> = ({
     return (
       <Link
         href={href}
+        target={target}
         className={`${base}  ${sizeClasses} ${variantClasses} ${
           fullWidth ? "w-full" : ""
         } ${className}`}

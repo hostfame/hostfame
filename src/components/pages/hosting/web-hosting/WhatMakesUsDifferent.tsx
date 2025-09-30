@@ -1,6 +1,7 @@
 import SectionWrapper from "@/components/shared/wrappers/SectionWrapper";
 import { whatMakesUpDifferentCards } from "@/data/what-makes-up-dif.data";
 import Image from "next/image";
+import { IoMdInformationCircleOutline } from "react-icons/io";
 
 export default function WhatMakesUsDifferent({
   className = "",
@@ -29,6 +30,20 @@ export default function WhatMakesUsDifferent({
               className="object-contain"
               sizes="(max-width: 640px) 90vw, (max-width: 1024px) 48vw, 560px"
             />
+          </div>
+
+          <div className="  p-4 w-[80%] space-y-2 hover:scale-[1.02] duration-300 bottom-0 left-[10%] absolute  bg-card-background rounded-xl shadow-sm">
+            <div className="flex items-center gap-2">
+              <div className="p-1.5 rounded-full bg-primary/20">
+                <IoMdInformationCircleOutline size={24}  className=" text-primary" />
+              </div>
+              <p className=" text-text font-semibold">Meet Our Expert</p>
+            </div>
+
+            <p className=" text-sm text-description-text">
+              Dedicated to delivering high-performance hosting and support you
+              can trust.
+            </p>
           </div>
         </div>
 

@@ -6,7 +6,7 @@ export const webHostingPricingData: PricingData = {
   title: "Choose Your Perfect Plan",
   yearlyDiscount: 67, // per-plan discounts shown as `offer` (% OFF)
   plans: [
-    // ——— STARTER ———
+    //,,,  STARTER,,, 
     {
       id: "starter",
       name: "Starter",
@@ -60,7 +60,7 @@ export const webHostingPricingData: PricingData = {
             {
               "name": "1-Click WordPress Installer",
               "included": true,
-              "description": "Provision WordPress with a guided wizard—no manual databases or config. Secure defaults applied during setup. You’ll be publishing in minutes."
+              "description": "Provision WordPress with a guided wizard, no manual databases or config. Secure defaults applied during setup. You’ll be publishing in minutes."
             },
             {
               "name": "DDoS Protection",
@@ -75,7 +75,7 @@ export const webHostingPricingData: PricingData = {
             {
               "name": "Softaculous App Installer",
               "included": true,
-              "description": "Install 400+ popular apps—CMSs, forums, e-commerce—in a click. Includes automatic updates and staging options for many scripts. Great for testing and quick prototypes."
+              "description": "Install 400+ popular apps, CMSs, forums, e-commerce, in a click. Includes automatic updates and staging options for many scripts. Great for testing and quick prototypes."
             },
             {
               "name": "30-Minute Guaranteed Email Response",
@@ -292,7 +292,7 @@ export const webHostingPricingData: PricingData = {
       ],
     },
 
-    // ——— PRO ———
+    //,,,  PRO,,, 
     {
       id: "pro",
       name: "Pro",
@@ -347,7 +347,7 @@ export const webHostingPricingData: PricingData = {
             {
               "name": "1-Click WordPress Installer",
               "included": true,
-              "description": "Provision WordPress with a guided wizard—no manual databases or config. Secure defaults applied during setup. You’ll be publishing in minutes."
+              "description": "Provision WordPress with a guided wizard, no manual databases or config. Secure defaults applied during setup. You’ll be publishing in minutes."
             },
             {
               "name": "DDoS Protection",
@@ -362,7 +362,7 @@ export const webHostingPricingData: PricingData = {
             {
               "name": "Softaculous App Installer",
               "included": true,
-              "description": "Install 400+ popular apps—CMSs, forums, e-commerce—in a click. Includes automatic updates and staging options for many scripts. Great for testing and quick prototypes."
+              "description": "Install 400+ popular apps, CMSs, forums, e-commerce, in a click. Includes automatic updates and staging options for many scripts. Great for testing and quick prototypes."
             },
             {
               "name": "30-Minute Guaranteed Email Response",
@@ -579,7 +579,7 @@ export const webHostingPricingData: PricingData = {
       ],
     },
 
-    // ——— PLUS ———
+    //,,,  PLUS,,, 
     // {
     //   id: "plus",
     //   name: "Plus",
@@ -681,7 +681,7 @@ export const webHostingPricingData: PricingData = {
     //   ]
     // },
 
-    // ——— BUSINESS ———
+    //,,,  BUSINESS,,, 
     {
       id: "business",
       name: "Business",
@@ -725,7 +725,7 @@ export const webHostingPricingData: PricingData = {
             {
               "name": "Unlimited Email Accounts",
               "included": true,
-              "description": "Create as many branded mailboxes as your teams need—sales@, hr@, support@, and more. Access via webmail, IMAP/POP, and SMTP across all major clients. Scales cleanly as departments and headcount grow."
+              "description": "Create as many branded mailboxes as your teams need, sales@, hr@, support@, and more. Access via webmail, IMAP/POP, and SMTP across all major clients. Scales cleanly as departments and headcount grow."
             },
             {
               "name": "Daily Backups (JetBackup)",
@@ -735,7 +735,7 @@ export const webHostingPricingData: PricingData = {
             {
               "name": "1-Click WordPress Installer",
               "included": true,
-              "description": "Provision WordPress with a guided wizard—no manual databases or config. Secure defaults applied during setup. You’ll be publishing in minutes."
+              "description": "Provision WordPress with a guided wizard, no manual databases or config. Secure defaults applied during setup. You’ll be publishing in minutes."
             },
             {
               "name": "DDoS Protection",
@@ -750,7 +750,7 @@ export const webHostingPricingData: PricingData = {
             {
               "name": "Softaculous App Installer",
               "included": true,
-              "description": "Install 400+ popular apps—CMSs, forums, e-commerce—in a click. Includes automatic updates and staging options for many scripts. Great for testing and quick prototypes."
+              "description": "Install 400+ popular apps, CMSs, forums, e-commerce, in a click. Includes automatic updates and staging options for many scripts. Great for testing and quick prototypes."
             },
             {
               "name": "30-Minute Guaranteed Email Response",
@@ -870,7 +870,7 @@ export const webHostingPricingData: PricingData = {
             {
               "name": "Two-Factor Authentication (2FA)",
               "included": true,
-              "description": "Require a second factor—like a one-time code—in addition to a password. Greatly reduces the risk of account takeover even if credentials leak. Works with popular authenticator apps."
+              "description": "Require a second factor, like a one-time code, in addition to a password. Greatly reduces the risk of account takeover even if credentials leak. Works with popular authenticator apps."
             }
           ]
         },
@@ -973,7 +973,7 @@ export const wordpressHostingPricingData: PricingData = {
   title: "Plans Built for WordPress",
   yearlyDiscount: 90,
   plans: [
-    // ——— BASIC ———
+    //,,,  BASIC,,, 
     {
       id: "basic",
       name: "Basic",
@@ -1023,7 +1023,7 @@ export const wordpressHostingPricingData: PricingData = {
             {
               "name": "Unlimited Email Accounts",
               "included": true,
-              "description": "Create as many branded mailboxes as your teams need—sales@, hr@, support@, and more. Access via webmail, IMAP/POP, and SMTP across all major clients. Scales cleanly as departments and headcount grow."
+              "description": "Create as many branded mailboxes as your teams need, sales@, hr@, support@, and more. Access via webmail, IMAP/POP, and SMTP across all major clients. Scales cleanly as departments and headcount grow."
             },
             {
               "name": "Daily Automated Backups (JetBackup)",
@@ -1033,7 +1033,7 @@ export const wordpressHostingPricingData: PricingData = {
             {
               "name": "1-Click WordPress Installer",
               "included": true,
-              "description": "Provision WordPress with a guided wizard—no manual databases or config. Secure defaults applied during setup. You’ll be publishing in minutes."
+              "description": "Provision WordPress with a guided wizard, no manual databases or config. Secure defaults applied during setup. You’ll be publishing in minutes."
             },
             {
               "name": "DDoS Protection & WordPress Firewall",
@@ -1118,7 +1118,7 @@ export const wordpressHostingPricingData: PricingData = {
             {
               "name": "1-Click Staging Environment",
               "included": true,
-              "description": "Clone your site into a staging copy to test updates and changes safely. Push changes live when verified—no manual migrations. Great for experimenting with themes and builders."
+              "description": "Clone your site into a staging copy to test updates and changes safely. Push changes live when verified, no manual migrations. Great for experimenting with themes and builders."
             },
             {
               "name": "AI-Powered SEO & Speed Optimizer",
@@ -1158,7 +1158,7 @@ export const wordpressHostingPricingData: PricingData = {
             {
               "name": "Two-Factor Authentication (2FA)",
               "included": true,
-              "description": "Require a second factor—like a one-time code—in addition to a password. Greatly reduces the risk of account takeover even if credentials leak. Works with popular authenticator apps."
+              "description": "Require a second factor, like a one-time code, in addition to a password. Greatly reduces the risk of account takeover even if credentials leak. Works with popular authenticator apps."
             }
           ]
         },
@@ -1245,7 +1245,7 @@ export const wordpressHostingPricingData: PricingData = {
       ],
     },
 
-    // ——— STARTER (MOST POPULAR) ———
+    //,,,  STARTER (MOST POPULAR),,, 
     {
       id: "starter",
       name: "Starter",
@@ -1296,7 +1296,7 @@ export const wordpressHostingPricingData: PricingData = {
             {
               "name": "Unlimited Email Accounts",
               "included": true,
-              "description": "Create as many branded mailboxes as your teams need—sales@, hr@, support@, and more. Access via webmail, IMAP/POP, and SMTP across all major clients. Scales cleanly as departments and headcount grow."
+              "description": "Create as many branded mailboxes as your teams need, sales@, hr@, support@, and more. Access via webmail, IMAP/POP, and SMTP across all major clients. Scales cleanly as departments and headcount grow."
             },
             {
               "name": "Daily Automated Backups (JetBackup)",
@@ -1306,7 +1306,7 @@ export const wordpressHostingPricingData: PricingData = {
             {
               "name": "1-Click WordPress Installer",
               "included": true,
-              "description": "Provision WordPress with a guided wizard—no manual databases or config. Secure defaults applied during setup. You’ll be publishing in minutes."
+              "description": "Provision WordPress with a guided wizard, no manual databases or config. Secure defaults applied during setup. You’ll be publishing in minutes."
             },
             {
               "name": "DDoS Protection & WordPress Firewall",
@@ -1391,7 +1391,7 @@ export const wordpressHostingPricingData: PricingData = {
             {
               "name": "1-Click Staging Environment",
               "included": true,
-              "description": "Clone your site into a staging copy to test updates and changes safely. Push changes live when verified—no manual migrations. Great for experimenting with themes and builders."
+              "description": "Clone your site into a staging copy to test updates and changes safely. Push changes live when verified, no manual migrations. Great for experimenting with themes and builders."
             },
             {
               "name": "AI-Powered SEO & Speed Optimizer",
@@ -1431,7 +1431,7 @@ export const wordpressHostingPricingData: PricingData = {
             {
               "name": "Two-Factor Authentication (2FA)",
               "included": true,
-              "description": "Require a second factor—like a one-time code—in addition to a password. Greatly reduces the risk of account takeover even if credentials leak. Works with popular authenticator apps."
+              "description": "Require a second factor, like a one-time code, in addition to a password. Greatly reduces the risk of account takeover even if credentials leak. Works with popular authenticator apps."
             }
           ]
         },
@@ -1518,7 +1518,7 @@ export const wordpressHostingPricingData: PricingData = {
       ],
     },
 
-    // ——— PRO ———
+    //,,,  PRO,,, 
     // {
     //   id: "pro",
     //   name: "Pro",
@@ -1616,7 +1616,7 @@ export const wordpressHostingPricingData: PricingData = {
     //   ]
     // },
 
-    // ——— ULTIMATE ———
+    //,,,  ULTIMATE,,, 
     {
       id: "ultimate",
       name: "Ultimate",
@@ -1666,7 +1666,7 @@ export const wordpressHostingPricingData: PricingData = {
             {
               "name": "Unlimited Email Accounts",
               "included": true,
-              "description": "Create as many branded mailboxes as your teams need—sales@, hr@, support@, and more. Access via webmail, IMAP/POP, and SMTP across all major clients. Scales cleanly as departments and headcount grow."
+              "description": "Create as many branded mailboxes as your teams need, sales@, hr@, support@, and more. Access via webmail, IMAP/POP, and SMTP across all major clients. Scales cleanly as departments and headcount grow."
             },
             {
               "name": "Hourly Automated Backups (JetBackup)",
@@ -1676,7 +1676,7 @@ export const wordpressHostingPricingData: PricingData = {
             {
               "name": "1-Click WordPress Installer",
               "included": true,
-              "description": "Provision WordPress with a guided wizard—no manual databases or config. Secure defaults applied during setup. You’ll be publishing in minutes."
+              "description": "Provision WordPress with a guided wizard, no manual databases or config. Secure defaults applied during setup. You’ll be publishing in minutes."
             },
             {
               "name": "DDoS Protection & WordPress Firewall",
@@ -1761,7 +1761,7 @@ export const wordpressHostingPricingData: PricingData = {
             {
               "name": "1-Click Staging Environment",
               "included": true,
-              "description": "Clone your site into a staging copy to test updates and changes safely. Push changes live when verified—no manual migrations. Great for experimenting with themes and builders."
+              "description": "Clone your site into a staging copy to test updates and changes safely. Push changes live when verified, no manual migrations. Great for experimenting with themes and builders."
             },
             {
               "name": "AI-Powered SEO & Speed Optimizer",
@@ -1796,7 +1796,7 @@ export const wordpressHostingPricingData: PricingData = {
             {
               "name": "Two-Factor Authentication (2FA)",
               "included": true,
-              "description": "Require a second factor—like a one-time code—in addition to a password. Greatly reduces the risk of account takeover even if credentials leak. Works with popular authenticator apps."
+              "description": "Require a second factor, like a one-time code, in addition to a password. Greatly reduces the risk of account takeover even if credentials leak. Works with popular authenticator apps."
             },
             {
               "name": "Daily Security Reports",
@@ -2062,7 +2062,7 @@ export const manageHostingPricingData: PricingData = {
             {
               "name": "Two-Factor Authentication (2FA)",
               "included": true,
-              "description": "Require a second factor—like a one-time code—in addition to a password. Greatly reduces the risk of account takeover even if credentials leak. Works with popular authenticator apps."
+              "description": "Require a second factor, like a one-time code, in addition to a password. Greatly reduces the risk of account takeover even if credentials leak. Works with popular authenticator apps."
             },
             {
               "name": "Real-Time Malware Scanning",
@@ -2342,7 +2342,7 @@ export const manageHostingPricingData: PricingData = {
             {
               "name": "Two-Factor Authentication (2FA)",
               "included": true,
-              "description": "Require a second factor—like a one-time code—in addition to a password. Greatly reduces the risk of account takeover even if credentials leak. Works with popular authenticator apps."
+              "description": "Require a second factor, like a one-time code, in addition to a password. Greatly reduces the risk of account takeover even if credentials leak. Works with popular authenticator apps."
             },
             {
               "name": "Real-Time Malware Scanning",
@@ -2474,9 +2474,9 @@ export const manageHostingPricingData: PricingData = {
     //   icon: "/assets/pricing/pro.svg",
     //   monthlyPrice: 99.99,
     //   yearlyPrice: 54.99,
-    //   monthlyPrevPrice: ,
-    //   yearlyPrevPrice: ,
-    //   offer: ,
+    //   monthlyPrevPrice:,
+    //   yearlyPrevPrice:,
+    //   offer:,
     //   currency: "$",
     //   ctaText: "Buy Now",
     //   renewalTextMonthly: "$49.99/Monthly when you renew",
@@ -2893,7 +2893,7 @@ export const manageHostingPricingData: PricingData = {
             {
               "name": "Two-Factor Authentication (2FA)",
               "included": true,
-              "description": "Require a second factor—like a one-time code—in addition to a password. Greatly reduces the risk of account takeover even if credentials leak. Works with popular authenticator apps."
+              "description": "Require a second factor, like a one-time code, in addition to a password. Greatly reduces the risk of account takeover even if credentials leak. Works with popular authenticator apps."
             },
             {
               "name": "Real-Time Malware Scanning & Auto-Healing",

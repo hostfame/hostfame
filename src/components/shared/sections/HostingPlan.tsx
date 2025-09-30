@@ -70,7 +70,7 @@ export default function HostingPlans() {
                 </h2>
                 <p className="text-sm text-description-text">
                   Compare hostingPlans and pick the perfect fit. Minimalist UI,
-                  same layout you wanted—refined.
+                  same layout you wanted, refined.
                 </p>
               </div>
             </div>
@@ -162,7 +162,7 @@ export default function HostingPlans() {
             ))}
           </div>
 
-          {/* Comparison (md+) — table-less, section-based grid */}
+          {/* Comparison (md+),  table-less, section-based grid */}
           <section className="hidden lg:block border-t border-border-light-gray px-4 pb-6">
             <div className="overflow-x-auto">
               {/* Header row */}

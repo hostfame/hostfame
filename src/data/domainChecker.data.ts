@@ -4,11 +4,11 @@ import { MdOutlineSupportAgent } from "react-icons/md";
 
 export const DomainCheckerWhyChooseHostfameData = {
   title: "Why Choose Hostfame?",
-  description: "We make hosting simple, transparent, and truly human—so you focus on what matters most.",
+  description: "We make hosting simple, transparent, and truly human, so you focus on what matters most.",
   cards : [
     {
       title: "Instant Registration",
-      desc: "Get your perfect domain instantly—fast, secure, and hassle-free.",
+      desc: "Get your perfect domain instantly, fast, secure, and hassle-free.",
       icon: FaFilePen,
     },
     {
@@ -23,7 +23,7 @@ export const DomainCheckerWhyChooseHostfameData = {
     },
     {
       title: "Real Human Support",
-      desc: "Talk to a real person anytime via chat, ticket, or WhatsApp—no bots, ever.",
+      desc: "Talk to a real person anytime via chat, ticket, or WhatsApp, no bots, ever.",
       icon: MdOutlineSupportAgent,
     },
   ]

@@ -113,7 +113,7 @@ export default function FeatureTabsClient({
             );
           })}
 
-          {/* Underline — no transition initially, slides after first interaction */}
+          {/* Underline,  no transition initially, slides after first interaction */}
           {/* <span
             className={`absolute bottom-0 h-[2px] rounded bg-teal-600 ${
               animate ? "transition-all duration-300" : ""
@@ -123,7 +123,7 @@ export default function FeatureTabsClient({
         </div>
       </div>
 
-      {/* Content wrapper — height animates only after interaction */}
+      {/* Content wrapper,  height animates only after interaction */}
       <div
         ref={outerRef}
         style={{ height: animate ? (typeof wrapH === "number" ? `${wrapH}px` : "auto") : "auto" }}

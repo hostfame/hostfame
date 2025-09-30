@@ -5,13 +5,13 @@ export const reviewsData: Review[] = [
     name: "Mofassir Ud Dowla Nishan",
     image: "/assets/testimonials/mofassir-ud-dowla-nishan.png",
     rating: 5,
-    text: "Fantastic Bangladeshi host—super responsive and quick to act. Their packages are well-priced, easy to manage, and come with all the features I need. The support team has always been helpful and reliable, which gives me confidence to stay with them long-term.",
+    text: "Fantastic Bangladeshi host, super responsive and quick to act. Their packages are well-priced, easy to manage, and come with all the features I need. The support team has always been helpful and reliable, which gives me confidence to stay with them long-term.",
   },
   {
     name: "Mejbah Ahmed Fahim",
     image: "/assets/testimonials/mejbah-ahmed-fahim.png",
     rating: 5,
-    text: "Best host I’ve used—fast, stable, and trustworthy. The support team deserves special credit for always going the extra mile to resolve issues. It’s easy for me to recommend Hostnin for both personal and business websites.",
+    text: "Best host I’ve used, fast, stable, and trustworthy. The support team deserves special credit for always going the extra mile to resolve issues. It’s easy for me to recommend Hostnin for both personal and business websites.",
   },
   {
     name: "Khandaker R Zaman",
@@ -23,7 +23,7 @@ export const reviewsData: Review[] = [
     name: "Md Helal Uddin",
     image: "/assets/testimonials/md-helal-uddin.png",
     rating: 5,
-    text: "Local yet world-class—Hostnin makes domain and hosting setup simple and professional. Their servers are stable with almost no downtime, and the guidance from support is clear. I’m happy with the overall experience so far.",
+    text: "Local yet world-class, Hostnin makes domain and hosting setup simple and professional. Their servers are stable with almost no downtime, and the guidance from support is clear. I’m happy with the overall experience so far.",
   },
   {
     name: "Sadananda Mondal",
