@@ -12,7 +12,7 @@ const SubmitDomainName = () => {
   const { register, handleSubmit } = useForm<FormValues>();
 
   const handleSearch = (data: FormValues) => {
-    console.log("Domain searched:", data.domain);
+    // console.log("Domain searched:", data.domain);
   };
 
   return (

@@ -6,8 +6,6 @@ import React from "react";
 const FooterPricingImage = () => {
   const countryCode = useIpProviderContextValue();
 
-  console.log("countryCode", countryCode);
-
   if (countryCode !== "BD") {
     return <></>;
   }

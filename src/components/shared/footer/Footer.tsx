@@ -16,10 +16,9 @@ const Footer: React.FC = () => {
         {/* Payment / SSL banner */}
         <FooterPricingImage />
 
-        <hr className="my-6 border-white/15" />
+        {/* <hr className="my-6 border-white/15" /> */}
 
-        {/* Link columns: 2 per row on mobile */}
-        <div className="grid grid-cols-2 gap-x-8 gap-y-8 md:grid-cols-3 lg:grid-cols-6">
+        {/* <div className="grid grid-cols-2 gap-x-8 gap-y-8 md:grid-cols-3 lg:grid-cols-6">
           {footerColumns.map((col) => (
             <div key={col.title}>
               <h4 className="mb-3 text-lg font-semibold">{col.title}</h4>
@@ -41,7 +40,7 @@ const Footer: React.FC = () => {
               </ul>
             </div>
           ))}
-        </div>
+        </div> */}
 
         <hr className="my-8 border-white/15" />
 
