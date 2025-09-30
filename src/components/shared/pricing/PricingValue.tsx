@@ -78,7 +78,7 @@ const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
       </div>
 
       {(plan.renewalTextMonthly || plan.renewalTextYearly || plan.renewalTextMonthlyBdt || plan.renewalTextYearlyBdt) && (
-        <p>{renewalText}</p>
+        <p className=" text-text">{renewalText}</p>
       )}
 
       <div className="w-full flex flex-col space-y-2">
