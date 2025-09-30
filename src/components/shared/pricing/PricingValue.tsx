@@ -30,20 +30,45 @@ const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
     : (billingPeriod === "monthly") ? plan.renewalTextMonthly : plan.renewalTextYearly
   return (
     <>
-      {!isBD && <div className="flex gap-2 justify-center items-center text-text">
+      {/* {!isBD && <div className="flex gap-2 justify-start items-center text-text">
         <p className="line-through">
           {mainCurrency}
           {formatPrice(Number(prevPrice), { southAsianGrouping: isBD })}
         </p>
 
         <p className="border rounded-full px-4 py-1">{plan.offer}% OFF</p>
-      </div>}
+      </div>} */}
+
+      <div className="flex items-center gap-4 text-text">
+        {/* Old price */}
+        <p className="line-through text-gray-400">
+          Was {mainCurrency}
+          {formatPrice(Number(prevPrice), { southAsianGrouping: isBD })}
+        </p>
+
+        {/* Discount tag */}
+        <span
+          className=" relative inline-flex items-center select-none px-3 py-1 rounded-md bg-lime-400 text-black text-xs font-semibold tracking-wide shadow rotate-[-10deg] -mt-4"
+        >
+          <span className="relative z-[1] pl-2">{plan.offer}% OFF</span>
+
+          {/* Left-pointed wedge */}
+          <span
+            className=" pointer-events-none absolute -left-2 top-1/2 -translate-y-1/2 w-0 h-0 border-y-[10px] border-y-transparent border-r-[10px] border-r-lime-400 "
+          />
+
+          {/* Tag hole */}
+          <span
+            className=" pointer-events-none absolute left-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-white ring-2 ring-lime-400 shadow-sm "
+          />
+        </span>
+      </div>
 
       <div>
-        <div className="flex items-baseline justify-center gap-1">
-          <span className="text-lg text-text">{mainCurrency}</span>
+        <div className="flex items-baseline justify-start gap-1">
+          <span className="text-5xl font-semibold text-text">{mainCurrency}</span>
           <span
-            className={`text-5xl font-semibold tracking-tight ${plan?.isPopular ? "text-primary" : "text-text"
+            className={`text-5xl font-semibold tracking-tight ${plan?.isPopular ? "text-text" : "text-text"
               }`}
           >
             {formatPrice(Number(price), { southAsianGrouping: isBD })}{" "}
@@ -52,11 +77,12 @@ const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
         </div>
       </div>
 
+      {(plan.renewalTextMonthly || plan.renewalTextYearly || plan.renewalTextMonthlyBdt || plan.renewalTextYearlyBdt) && (
+        <p>{renewalText}</p>
+      )}
+
       <div className="w-full flex flex-col space-y-2">
         {children}
-        {(plan.renewalTextMonthly || plan.renewalTextYearly || plan.renewalTextMonthlyBdt || plan.renewalTextYearlyBdt) && (
-          <p>{renewalText}</p>
-        )}
       </div>
     </>
   );

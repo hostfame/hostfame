@@ -34,8 +34,16 @@ export function PricingCard({
   return (
     <section className="relative h-full">
       {plan.isPopular && (
-        <div className=" absolute -top-5 w-full mx-auto z-20">
-          <section className="mx-auto w-fit text-white bg-primary rounded-full px-8 py-2">
+        // <div className=" absolute -top-5 w-full mx-auto z-20">
+        //   <section className="mx-auto w-fit text-white bg-primary rounded-full px-8 py-2">
+        //     <span className=" flex justify-center items-center gap-3 uppercase">
+        //       Most Popular
+        //     </span>
+        //   </section>
+        // </div>
+
+        <div className=" absolute -top-10 w-full mx-auto z-20">
+          <section className="mx-auto w-full text-white bg-primary rounded-t-2xl px-8 py-2">
             <span className=" flex justify-center items-center gap-3 uppercase">
               Most Popular
             </span>
@@ -44,17 +52,17 @@ export function PricingCard({
       )}
 
       <Card
-        className={`relative transition-all duration-500 hover:shadow-2xl group overflow-hidden bg-gray-background backdrop-blur-sm border-border/50 flex flex-col h-full ${plan.isPopular && "border-2 border-primary/50"
+        className={`relative transition-all duration-500 hover:shadow-2xl group overflow-hidden bg-gray-background backdrop-blur-sm border-border/50 flex flex-col h-full ${plan.isPopular && "border-2 border-t-0 border-primary rounded-t-none"
           }  ${isExpanded && "shadow-xl"}  ${className} `}
       >
-        <CardHeader className="space-y-5 text-center relative z-10">
-          <div className="flex flex-col items-center gap-4">
+        <CardHeader className="space-y-5 text-start relative z-10">
+          <div className="flex flex-col items-start gap-4">
             <div className=" flex justify-center items-center gap-3 h-14">
-              <div
+              {/* <div
                 className={`transition-all duration-300 group-hover:scale-110 text-4xl`}
               >
                 <Image src={plan.icon} alt={plan.name} width={30} height={30} />
-              </div>
+              </div> */}
 
               <h3 className="text-2xl font-bold text-dark-description-text">
                 {plan.name}
@@ -68,19 +76,19 @@ export function PricingCard({
           </div>
 
           <PricingValue plan={plan} billingPeriod={billingPeriod}>
-            {plan.guarantee && (
+            {/* {plan.guarantee && (
               <div className="">
-                <section className="mb-4 text-emerald-800 border border-emerald-300 bg-emerald-100 rounded-full py-1.5">
+                <section className="mb-4 text-center text-emerald-800 border border-emerald-300 bg-emerald-100 rounded-full py-1.5">
                   {plan.guarantee}
                 </section>
               </div>
-            )}
+            )} */}
 
             {plan.ctaText && (
               <PlainButton
-                variant={plan.isPopular ? "dark" : "bordered"}
+                variant={plan.isPopular ? "dark" : "dark"}
                 size="md"
-                className="transition-transform duration-200 hover:scale-105"
+                className={`transition-transform duration-200 hover:scale-105 !rounded-full ${plan.isPopular ? "!bg-primary" : "!bg-black/90"}`}
               >
                 {plan.ctaText}
               </PlainButton>

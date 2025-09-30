@@ -19,7 +19,7 @@ export const webHostingPricingData: PricingData = {
       monthlyPrevPrice: 4.49,
       yearlyPrevPrice: 4.49,
       offer: 67, // % OFF
-      ctaText: "Choose plan",
+      ctaText: "Buy Now",
       renewalTextMonthly: "36 month term + Free .COM",
       renewalTextYearly: "36 month term + Free .COM",
       guarantee: "30 Days Money Back guarantee",
@@ -306,7 +306,7 @@ export const webHostingPricingData: PricingData = {
       yearlyPrevPrice: 6.99,
       offer: 64,
       isPopular: true,
-      ctaText: "Choose plan",
+      ctaText: "Buy Now",
       renewalTextMonthly: "36 month term + Free .COM",
       renewalTextYearly: "36 month term + Free .COM",
       guarantee: "30 Days Money Back guarantee",
@@ -592,7 +592,7 @@ export const webHostingPricingData: PricingData = {
     //   yearlyPrevPrice: 0.00,
     //   offer: 63,
     //   guarantee: "30-Day Money-Back Guarantee",
-    //   ctaText: "Choose plan",
+    //   ctaText: "Buy Now",
     //   renewalTextMonthly: "36 month term + Free .COM",
     //   renewalTextYearly: "36 month term + Free .COM",
     //   guarantee: "30 Days Money Back guarantee",
@@ -694,7 +694,7 @@ export const webHostingPricingData: PricingData = {
       monthlyPrevPrice: 9.99,
       yearlyPrevPrice: 9.99,
       offer: 50,
-      ctaText: "Choose plan",
+      ctaText: "Buy Now",
       renewalTextMonthly: "36 month term + Free .COM",
       renewalTextYearly: "36 month term + Free .COM",
       guarantee: "30 Days Money Back guarantee",
@@ -995,7 +995,7 @@ export const wordpressHostingPricingData: PricingData = {
       renewalTextMonthlyBdt: "৳999/Monthly when you renew",
       renewalTextYearlyBdt: "৳249/Monthly when you renew",
       offer: 90,
-      ctaText: "Choose plan",
+      ctaText: "Buy Now",
       features: [
         {
           "title": "Features",
@@ -1268,7 +1268,7 @@ export const wordpressHostingPricingData: PricingData = {
       renewalTextYearlyBdt: "৳349/Monthly when you renew",
       offer: 90,
       isPopular: true,
-      ctaText: "Choose plan",
+      ctaText: "Buy Now",
       features: [
         {
           "title": "Features",
@@ -1531,7 +1531,7 @@ export const wordpressHostingPricingData: PricingData = {
     //   monthlyPrevPrice: 5.99,
     //   yearlyPrevPrice: 5.99,
     //   offer: 90,
-    //   ctaText: "Choose plan",
+    //   ctaText: "Buy Now",
     //   renewalTextMonthly: "$5.99/Monthly when you renew",
     //   renewalTextYearly: "$5.99/Monthly when you renew",
     //   guarantee: "30 Days Money Back guarantee",
@@ -1638,7 +1638,7 @@ export const wordpressHostingPricingData: PricingData = {
       renewalTextMonthlyBdt: "৳3,999/Monthly when you renew",
       renewalTextYearlyBdt: "৳799/Monthly when you renew",
       offer: 90,
-      ctaText: "Choose plan",
+      ctaText: "Buy Now",
       features: [
         {
           "title": "Features",
@@ -1912,6 +1912,7 @@ export const manageHostingPricingData: PricingData = {
     {
       id: "basic",
       name: "Basic",
+      description: "Reliable hosting with essential features, ideal for individuals and small businesses.",
       icon: "/assets/pricing/basic.svg",
       monthlyPrice: 49.99,
       yearlyPrice: 27.99,
@@ -1928,7 +1929,7 @@ export const manageHostingPricingData: PricingData = {
       renewalTextYearlyBdt: "৳2,799/Monthly when you renew",
       offer: 44,
       currency: "$",
-      ctaText: "Choose Plan",
+      ctaText: "Buy Now",
       features: [
         {
           "title": "Features",
@@ -2190,6 +2191,7 @@ export const manageHostingPricingData: PricingData = {
     {
       id: "starter",
       name: "Starter",
+      description: "Balanced resources and advanced tools, perfect for growing websites and agencies.",
       icon: "/assets/pricing/starter-42.svg",
       monthlyPrice: 69.99,
       yearlyPrice: 39.99,
@@ -2207,7 +2209,7 @@ export const manageHostingPricingData: PricingData = {
       offer: 42,
       currency: "$",
       isPopular: true,
-      ctaText: "Choose Plan",
+      ctaText: "Buy Now",
       features: [
         {
           "title": "Features",
@@ -2476,7 +2478,7 @@ export const manageHostingPricingData: PricingData = {
     //   yearlyPrevPrice: ,
     //   offer: ,
     //   currency: "$",
-    //   ctaText: "Choose Plan",
+    //   ctaText: "Buy Now",
     //   renewalTextMonthly: "$49.99/Monthly when you renew",
     //   renewalTextYearly: "$49.99/Monthly when you renew",
     //   guarantee: "30 Days Money Back guarantee",
@@ -2741,6 +2743,7 @@ export const manageHostingPricingData: PricingData = {
     {
       id: "ultimate",
       name: "Ultimate",
+      description: "Enterprise-grade hosting with unlimited resources and priority support for mission-critical projects.",
       icon: "/assets/pricing/ultimate.svg",
       monthlyPrice: 149.99,
       yearlyPrice: 79.99,
@@ -2757,7 +2760,7 @@ export const manageHostingPricingData: PricingData = {
       renewalTextYearlyBdt: "৳7,999/Monthly when you renew",
       offer: 46,
       currency: "$",
-      ctaText: "Choose Plan",
+      ctaText: "Buy Now",
       features: [
         {
           "title": "Features",
