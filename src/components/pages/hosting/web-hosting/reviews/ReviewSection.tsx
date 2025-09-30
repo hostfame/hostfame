@@ -29,7 +29,7 @@ export default function ReviewsSection() {
             </div>
 
             <p className="mt-2  font-semibold text-base text-text sm:text-lg">
-              4.8 out of 5 based on 147+ reviews.
+              4.8 out of 5 based on 250+ reviews.
             </p>
 
             <h2 className="mt-6 text-3xl font-extrabold leading-tight  text-primary md:text-4xl">
@@ -44,14 +44,27 @@ export default function ReviewsSection() {
             </p>
 
             <div className="mt-6 flex items-center gap-6">
+
               {/* avatar placeholders */}
               <div className="flex -space-x-3">
-                {[0, 1, 2].map((k) => (
-                  <div
-                    key={k}
-                    className="h-10 w-10 rounded-full border-2 border-[#f6f6f8] bg-slate-300"
-                    aria-hidden
-                  />
+                {reviewsData.slice(0, 3).map((r) => (
+                  <>
+                    {/* Header (avatar + name + stars) */}
+                    <div className="flex items-start gap-4">
+                      {/* avatar placeholder */}
+                      {r.image ?
+                        <Image
+                          src={r.image}
+                          alt={r.name}
+                          height={100}
+                          width={100}
+                          className="h-12 w-12 shrink-0 rounded-full "
+                        /> : <div
+                          className="h-12 w-12 shrink-0 rounded-full bg-slate-300"
+                          aria-hidden
+                        />}
+                    </div>
+                  </>
                 ))}
               </div>
 
