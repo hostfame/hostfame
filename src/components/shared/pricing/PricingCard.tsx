@@ -69,7 +69,7 @@ export function PricingCard({
               </h3>
             </div>
             {plan.description && (
-              <p className="text-dark-description-text text-balance">
+              <p className="text-dark-description-text ">
                 {plan.description}
               </p>
             )}
