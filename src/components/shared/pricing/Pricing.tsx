@@ -5,6 +5,9 @@ import { PricingCard } from "@/components/shared/pricing/PricingCard";
 import { PricingToggle } from "@/components/shared/pricing/PricingToggle";
 import { BillingPeriod, PricingData } from "@/types/pricing.types";
 import { useState } from "react";
+import { AiOutlineCloseCircle } from "react-icons/ai";
+import { FaShieldAlt } from "react-icons/fa";
+import { MdNoAccounts } from "react-icons/md";
 
 export function Pricing({
   data,
@@ -65,34 +68,49 @@ export function Pricing({
           ))}
         </div>
 
-        <section aria-label="Trust badges" className="py-4 text-center">
-          <p className="text-xs uppercase tracking-[0.08em] text-description-text">
-            Trusted by thousands of businesses worldwide
-          </p>
+        <section aria-label="Trust badges" className="mx-auto max-w-5xl px-4 py-8 md:py-10">
+          <div className="relative overflow-hidden rounded-2xl border border-border-light-gray p-4 md:p-6">
 
-          <div className="">
-            <div className="mx-auto px-2 py-2">
-              <ul className="flex flex-wrap items-center justify-center gap-2 text-text text-[0.8rem] font-medium leading-6 md:gap-0">
-                <li className="px-3 py-1">30-Day Money Back</li>
+            <p className="text-center text-[0.7rem] uppercase tracking-[0.12em] text-description-text">
+              Trusted by thousands of businesses worldwide
+            </p>
 
-                {/* Divider (only show when not wrapping) */}
-                <li
-                  aria-hidden="true"
-                  className="hidden h-4 w-px bg-neutral-300/60 md:block dark:bg-neutral-700/60"
-                />
+            {/* badges */}
+            <ul className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-3">
+              <li>
+                <div className="group flex items-center justify-center gap-2 rounded-xl border border-border-light-gray bg-white-background px-4 py-3 text-text-accent shadow-sm transition-all duration-200 hover:-translate-y-px hover:shadow-md">
+                  <FaShieldAlt className="h-5 w-5 opacity-80 transition-opacity group-hover:opacity-100" />
+                  <span className="text-sm font-medium">30-Day Money Back</span>
+                </div>
+              </li>
 
-                <li className="px-3 py-1">No Setup Fees</li>
+              <li className="sm:hidden" aria-hidden="true">
+                <div className="mx-auto h-px w-24 bg-border-light-gray" />
+              </li>
 
-                <li
-                  aria-hidden="true"
-                  className="hidden h-4 w-px bg-neutral-300/60 md:block dark:bg-neutral-700/60"
-                />
+              <li>
+                <div className="group flex items-center justify-center gap-2 rounded-xl border border-border-light-gray bg-white-background px-4 py-3 text-text-accent shadow-sm transition-all duration-200 hover:-translate-y-px hover:shadow-md">
+                  <MdNoAccounts className="h-5 w-5 opacity-80 transition-opacity group-hover:opacity-100" />
+                  <span className="text-sm font-medium">No Setup Fees</span>
+                </div>
+              </li>
 
-                <li className="px-3 py-1">Cancel Anytime</li>
-              </ul>
+              <li>
+                <div className="group flex items-center justify-center gap-2 rounded-xl border border-border-light-gray bg-white-background px-4 py-3 text-text-accent shadow-sm transition-all duration-200 hover:-translate-y-px hover:shadow-md">
+                  <AiOutlineCloseCircle className="h-5 w-5 opacity-80 transition-opacity group-hover:opacity-100" />
+                  <span className="text-sm font-medium">Cancel Anytime</span>
+                </div>
+              </li>
+            </ul>
+
+            {/* separators for wide screens */}
+            <div className="mt-3 hidden items-center justify-center gap-6 sm:flex">
+              <span className="h-px w-8 bg-border-light-gray" aria-hidden="true" />
+              <span className="h-px w-8 bg-border-light-gray" aria-hidden="true" />
             </div>
           </div>
         </section>
+
       </div>
     </section>
   );
