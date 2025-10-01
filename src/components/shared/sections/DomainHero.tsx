@@ -1,37 +1,22 @@
 import Link from "next/link";
 import { FiSearch } from "react-icons/fi";
 import DualPricing from "./domain-hero/DualPricing";
-import DomainCheckerSearch from "./DomainCheckerSearch";
-
-type PopularTLD = {
-  tld: string;
-  price: string;
-  pricebdt: string;
-  href?: string;
-};
-
-const data: {
-  title: string;
-  subtitle?: string;
-  placeholder: string;
-  cta: string;
-  popularLabel: string;
-  popular: PopularTLD[];
-} = {
-  title: "Get your domain. Launch your brand.",
-  subtitle: "Find the perfect name to kickstart your idea.",
-  placeholder: "Search your brand or business name",
-  cta: "Search",
-  popularLabel: "Popular domains",
-  popular: [
-    { tld: ".COM", price: "$6.99", pricebdt: "৳699", href: "#" },
-    { tld: ".NET", price: "$9.99", pricebdt: "৳999", href: "#" },
-    { tld: ".INFO", price: "$5.19", pricebdt: "৳519", href: "#" },
-    { tld: ".ORG", price: "$7.79", pricebdt: "৳779", href: "#" },
-  ],
-};
+import { domainPricingData } from "@/data/domainPricing.data";
+import DomainSearch from "./DomainSearch";
 
 export default function DomainHero() {
+  const data = {
+    title: "Get your domain. Launch your brand.",
+    subtitle: "Find the perfect name to kickstart your idea.",
+    placeholder: "Search your brand or business name",
+    cta: "Search",
+    popularLabel: "Popular domains",
+    popularDomainRoute: "https://my.hostfame.com/cart.php?a=add&domain=register",
+  } as const;
+
+  // Pick popular extensions dynamically (e.g. .COM, .NET, .INFO, .ORG)
+  const popular = domainPricingData.items.slice(0, 4);
+
   return (
     <section className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-primary to-primary-dark px-6 py-16 sm:px-8 md:px-12">
       {/* decorative blobs */}
@@ -50,7 +35,7 @@ export default function DomainHero() {
 
         {/* Search */}
         <div className="mx-auto mt-8 w-full max-w-2xl">
-          <DomainCheckerSearch placeholder={data.placeholder} cta={data.cta} />
+          <DomainSearch placeholder={data.placeholder} cta={data.cta} />
 
           {/* Popular */}
           <div className="mt-5 flex flex-col items-center gap-2 sm:mt-6">
@@ -58,19 +43,20 @@ export default function DomainHero() {
               {data.popularLabel}
             </span>
             <ul className="flex flex-wrap justify-center gap-2 sm:gap-3 transition-all duration-300 ease-in-out">
-              {data.popular.map((item) => (
+              {popular.map((item) => (
                 <li
                   key={item.tld}
                   className="transition-all duration-300 ease-in-out"
                 >
                   <Link
-                    href={item.href || "#"}
-                    className="group inline-flex w-[132px] hover:w-[153px]  items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-sm text-white backdrop-blur transition-all duration-300 ease-in-out hover:bg-white/20"
+                    href={data.popularDomainRoute}
+                    target="_blank"
+                    className="group relative inline-flex w-[132px] hover:w-[153px] items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-sm text-white backdrop-blur transition-all duration-300 ease-in-out hover:bg-white/20"
                   >
                     <span className="font-semibold">{item.tld}</span>
                     Only
-                    <DualPricing price={item.price} pricebdt={item.pricebdt} />
-                    <FiSearch className="text-xs absolute  group-hover:static opacity-0 scale-75 transition-all duration-300 ease-in-out group-hover:opacity-70 group-hover:scale-100" />
+                    <DualPricing price={item.price} pricebdt={item.priceBdt} />
+                    <FiSearch className="text-xs absolute group-hover:static opacity-0 scale-75 transition-all duration-300 ease-in-out group-hover:opacity-70 group-hover:scale-100" />
                   </Link>
                 </li>
               ))}

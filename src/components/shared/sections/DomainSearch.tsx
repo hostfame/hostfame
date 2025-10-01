@@ -1,9 +1,9 @@
 "use client";
-import { getDomainCheckerUrl } from "@/utils/domain-checker.utils";
+import { getDomainUrl } from "@/utils/domain.utils";
 import React, { useState } from "react";
 import { FiSearch } from "react-icons/fi";
 
-const DomainCheckerSearch = ({
+const DomainSearch = ({
   placeholder,
   cta,
 }: {
@@ -13,7 +13,7 @@ const DomainCheckerSearch = ({
   const [value, setValue] = useState("");
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const url = getDomainCheckerUrl(value);
+    const url = getDomainUrl(value);
     setValue("");
     // open the url in a new tab
     window.open(url, "_blank");
@@ -45,4 +45,4 @@ const DomainCheckerSearch = ({
   );
 };
 
-export default DomainCheckerSearch;
+export default DomainSearch;

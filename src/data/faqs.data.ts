@@ -29,14 +29,14 @@ export const FAQS: FaqItem[] = [
   {
     id: "g5",
     categoryId: "general",
-    question: "What's hostnin history?",
+    question: "What's hostfame history?",
     answer: "In November of 2022, we started our journey, and in a very short period of time, we got a tremendous response from the clients. As a sister company to Spotlight Creative Web Agency, we have over 4 years of experience providing the best to our clients.",
   },
   {
     id: "b1",
     categoryId: "billing",
     question: "How can I order a plan?",
-    answer: "To order a plan from hostnin, you have to select the plan you want to book and click on the 'Order Now' button on that plan. After that, you'll be redirected to the further process, such as your billing details and payment information.",
+    answer: "To order a plan from hostfame, you have to select the plan you want to book and click on the 'Order Now' button on that plan. After that, you'll be redirected to the further process, such as your billing details and payment information.",
   },
   {
     id: "b2",

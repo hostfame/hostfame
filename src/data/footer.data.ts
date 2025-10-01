@@ -13,7 +13,7 @@ export const footerColumns: FooterColumn[] = [
   {
     title: "Domain",
     links: [
-      { label: "Register Your Domain", href: "/domain-checker" },
+      { label: "Register Your Domain", href: "/domain" },
       { label: "Transfer to Us", href: "#" },
       { label: "Renew Domains", href: "#" },
       { label: "Manage Domains", href: "#" },

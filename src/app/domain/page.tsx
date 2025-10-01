@@ -1,8 +1,8 @@
-import DomainChecker from "@/components/pages/domain-checker/DomainChecker";
+import Domain from "@/components/pages/domain/Domain";
 
 export const dynamic = "force-static";
 // export const revalidate = 3600;
 
 export default function WebHostingPage() {
-  return <DomainChecker />;
+  return <Domain />;
 }

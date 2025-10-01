@@ -2,25 +2,22 @@ import Navbar from "@/components/navbar/Navbar";
 import SectionWrapper from "../wrappers/SectionWrapper";
 import DomainSearchBox from "./DomainSearchBox";
 import DualPricing from "./domain-hero/DualPricing";
+import { domainPricingData } from "@/data/domainPricing.data";
 
-type Popular = { tld: string; price: string; priceBdt: string };
+export default function DomainBanner() {
+  const data = {
+    title: "Find Best Unique Domains Checker!",
+    subtitle: "Not sure what name to choose? Start here and check instantly.",
+    placeholder: "find your domain name",
+    button: "Search",
+  } as const;
 
-const data = {
-  title: "Find Best Unique Domains Checker!",
-  subtitle: "Not sure what name to choose? Start here and check instantly.",
-  placeholder: "find your domain name",
-  button: "Search",
-  tlds: [".com", ".net", ".info", ".org", ".biz"],
-  popular: [
-    { tld: ".com", price: "$6.99", priceBdt: "৳699" },
-    { tld: ".net", price: "$15.99", priceBdt: "৳1,599" },
-    { tld: ".info", price: "$3.99", priceBdt: "৳399" },
-    { tld: ".org", price: "$6.99", priceBdt: "৳699" },
-    { tld: ".biz", price: "$6.99", priceBdt: "৳699" },
-  ] as Popular[],
-} as const;
+  // All TLDs come from domainPricingData
+  const tlds = domainPricingData.items.map((item) => item.tld);
 
-export default function DomainCheckerBanner() {
+  // Pick first 5 popular TLDs (or any rule you want)
+  const popular = domainPricingData.items.slice(0, 5);
+
   return (
     <section className="relative isolate -mt-[1px]">
       <Navbar isTransparent />
@@ -44,7 +41,12 @@ export default function DomainCheckerBanner() {
         fill="none"
         aria-hidden
       >
-        <path d="M0 80 C200 120 300 20 500 60 C700 100 800 10 1200 40" stroke="white" strokeOpacity="0.25" strokeWidth="2" />
+        <path
+          d="M0 80 C200 120 300 20 500 60 C700 100 800 10 1200 40"
+          stroke="white"
+          strokeOpacity="0.25"
+          strokeWidth="2"
+        />
       </svg>
 
       <SectionWrapper className="py-12 lg:py-16">
@@ -67,7 +69,7 @@ export default function DomainCheckerBanner() {
                 Popular Domain
               </div>
               <ul className="flex flex-wrap gap-2">
-                {data.popular.map((item) => (
+                {popular.map((item) => (
                   <li
                     key={item.tld}
                     className="group inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-sm backdrop-blur transition hover:bg-white/15"
@@ -95,19 +97,18 @@ export default function DomainCheckerBanner() {
               </div>
 
               <DomainSearchBox
-                tlds={data.tlds as unknown as string[]}
+                tlds={tlds}
                 placeholder={data.placeholder}
                 buttonLabel={data.button}
-
               />
 
-              {/* Quick TLD chooser (non-interactive showcase of all TLDs) */}
+              {/* Quick TLD chooser */}
               <div className="mt-5">
                 <div className="text-xs font-medium text-gray-600 mb-2">
                   Extensions
                 </div>
                 <div className="flex flex-wrap gap-2">
-                  {data.tlds.map((t) => (
+                  {tlds.map((t) => (
                     <span
                       key={t}
                       className="rounded-lg bg-gray-100 px-2.5 py-1 text-xs text-gray-700 ring-1 ring-gray-200"

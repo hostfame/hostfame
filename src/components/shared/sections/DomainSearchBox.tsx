@@ -1,6 +1,6 @@
 "use client";
 
-import { getDomainCheckerUrl } from "@/utils/domain-checker.utils";
+import { getDomainUrl } from "@/utils/domain.utils";
 import { FormEvent, useState } from "react";
 
 type Props = {
@@ -24,7 +24,7 @@ export default function DomainSearchBox({
     const full = `${name.trim()}${tld}`;
     if (!name.trim()) return;
 
-    const url = getDomainCheckerUrl(full);
+    const url = getDomainUrl(full);
 
     window.open(url, "_blank");
   }
