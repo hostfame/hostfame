@@ -24,7 +24,8 @@ export interface PricingPlan {
   yearlyPriceBdt?: number;
   monthlyPrevPriceBdt?: number;
   yearlyPrevPriceBdt?: number;
-  offer: number;
+  offer?: number;
+  offerBdt?: number;
   currency: string;
   isPopular?: boolean;
   guarantee?: string;
