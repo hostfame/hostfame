@@ -92,7 +92,7 @@ function PingDot() {
 
 export default function DataCenters() {
   return (
-    <section className="mx-auto max-w-7xl py-16">
+    <section className="mx-auto max-w-7xl">
       <CenteredSectionHeader
         title={data.title}
         description={data.description}
