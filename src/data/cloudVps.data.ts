@@ -1,30 +1,86 @@
-// import { CloudVpsProps } from "@/types/cloudVps.types";
-
-// const cloudVpsData: CloudVpsProps = {
-//   headline: "High-Speed Cloud VPS",
-//   planLabel: "Starter Plus",
-//   priceMonthly: "$19.99/mo",
-//   ctaText: "Purchase Plan",
-//   features: [
-//     {
-//       icon: <LuCpu className="text-xl" aria - hidden />,
-//       title: "Shared vCPU",
-//       subtitle: "3 vCPU Cores",
-//     },
-//     {
-//       icon: <LuMemoryStick className="text-xl" aria - hidden />,
-//       title: "Dedicated RAM",
-//       subtitle: "4 GB RAM",
-//     },
-//     {
-//       icon: <LuHardDrive className="text-xl" aria - hidden />,
-//       title: "NVMe Storage",
-//       subtitle: "80 GB NVMe",
-//     },
-//     {
-//       icon: <LuGauge className="text-xl" aria - hidden />,
-//       title: "Port Speed",
-//       subtitle: "1 Gbit",
-//     },
-//   ],
-// };
+export const TiersData = [
+  {
+    key: "starter",
+    label: "Starter",
+    href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/starter",
+    className: "-ml-5",
+    priceMonthly: "৳999/mo",
+    priceMonthlyBdt: "৳999/mo",
+    features: {
+      cpu: "2 vCPU Cores",
+      ram: "4 GB RAM",
+      ssd: "40 GB SSD",
+      net: "1 Gbit",
+    },
+  },
+  {
+    key: "starter-plus",
+    label: "Starter Plus",
+    href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/starter-plus",
+    className: "ml-1",
+    priceMonthly: "৳1499/mo",
+    priceMonthlyBdt: "৳1499/mo",
+    features: {
+      cpu: "4 vCPU Cores",
+      ram: "8 GB RAM",
+      ssd: "80 GB SSD",
+      net: "1 Gbit",
+    },
+  },
+  {
+    key: "pro",
+    label: "Pro",
+    href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/pro",
+    className: "ml-4",
+    priceMonthly: "৳2499/mo",
+    priceMonthlyBdt: "৳2499/mo",
+    features: {
+      cpu: "4 vCPU Cores",
+      ram: "8 GB RAM",
+      ssd: "160 GB SSD",
+      net: "1 Gbit",
+    },
+  },
+  {
+    key: "pro-plus",
+    label: "Pro Plus",
+    href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/pro-plus",
+    className: "",
+    priceMonthly: "৳2999/mo",
+    priceMonthlyBdt: "৳2999/mo",
+    features: {
+      cpu: "8 vCPU Cores",
+      ram: "16 GB RAM",
+      ssd: "160 GB SSD",
+      net: "1 Gbit",
+    },
+  },
+  {
+    key: "pro-extra",
+    label: "Pro Extra",
+    href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/pro-extra",
+    className: "",
+    priceMonthly: "৳3999/mo",
+    priceMonthlyBdt: "৳3999/mo",
+    features: {
+      cpu: "8 vCPU Cores",
+      ram: "16 GB RAM",
+      ssd: "240 GB SSD",
+      net: "1 Gbit",
+    },
+  },
+  {
+    key: "ultimate",
+    label: "Ultimate",
+    href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/ultimate",
+    className: "",
+    priceMonthly: "৳9999/mo",
+    priceMonthlyBdt: "৳9999/mo",
+    features: {
+      cpu: "16 vCPU Cores",
+      ram: "32 GB RAM",
+      ssd: "360 GB SSD",
+      net: "1 Gbit",
+    },
+  },
+];
