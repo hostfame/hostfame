@@ -4,8 +4,9 @@ import { MdOutlineSupportAgent } from "react-icons/md";
 
 export const DomainWhyChooseHostfameData = {
   title: "Why Choose Hostfame?",
-  description: "We make hosting simple, transparent, and truly human, so you focus on what matters most.",
-  cards : [
+  description:
+    "We make hosting simple, transparent, and truly human, so you focus on what matters most.",
+  cards: [
     {
       title: "Instant Registration",
       desc: "Get your perfect domain instantly, fast, secure, and hassle-free.",
@@ -26,5 +27,5 @@ export const DomainWhyChooseHostfameData = {
       desc: "Talk to a real person anytime via chat, ticket, or WhatsApp, no bots, ever.",
       icon: MdOutlineSupportAgent,
     },
-  ]
-}
+  ],
+};
