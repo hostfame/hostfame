@@ -13,6 +13,8 @@ export interface PricingPlan {
   id: string;
   name: string;
   description?: string;
+  href?: string;
+  hrefBdt?: string;
   icon: string;
   monthlyPrice?: number;
   yearlyPrice?: number;
@@ -22,7 +24,8 @@ export interface PricingPlan {
   yearlyPriceBdt?: number;
   monthlyPrevPriceBdt?: number;
   yearlyPrevPriceBdt?: number;
-  offer: number;
+  offer?: number;
+  offerBdt?: number;
   currency: string;
   isPopular?: boolean;
   guarantee?: string;

@@ -25,7 +25,7 @@ export function Pricing({
   };
 
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative">
       {/* <div className="absolute inset-0 bg-grid-pattern opacity-5" />
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" /> */}
@@ -49,7 +49,7 @@ export function Pricing({
         )}
 
         <div
-          className={`grid grid-cols-1 lg:grid-cols-${data.plans.length} gap-10 lg:gap-8 mx-auto pt-5 items-stretch`}
+          className={`grid grid-cols-1 lg:grid-cols-${data.plans.length} gap-10 lg:gap-8 mx-auto pt-10 items-stretch`}
         >
           {data.plans.map((plan, index) => (
             <div
@@ -68,47 +68,20 @@ export function Pricing({
           ))}
         </div>
 
-        <section aria-label="Trust badges" className="mx-auto max-w-5xl px-4 py-8 md:py-10">
-          <div className="relative overflow-hidden rounded-2xl border border-border-light-gray p-4 md:p-6">
+        <section className="relative w-full bg-gradient-to-r  from-teal-950 to-teal-800 py-8 md:py-12 px-4 sm:px-8 lg:px-14 text-white rounded-2xl overflow-hidden">
+          {/* Background Circles */}
+          <div className="absolute -top-20 -left-20 w-56 h-56 bg-gradient-to-bl from-white to-gray-300 rounded-full opacity-15" />
+          <div className="absolute -bottom-20 -right-20 w-56 h-56 bg-gradient-to-tr from-white to-gray-400 rounded-full opacity-15" />
 
-            <p className="text-center text-[0.7rem] uppercase tracking-[0.12em] text-description-text">
-              Trusted by thousands of businesses worldwide
+          <div className="text-center space-y-4">
+            <h2 className="text-3xl md:text-4xl font-bold">
+              30 Day Money-back Guarantee
+            </h2>
+            <p className="text-white text-sm md:text-base ">
+              There is no risk with our 30-day money back guarantee. Stay safe with assurance of refund.
             </p>
-
-            {/* badges */}
-            <ul className="mt-4 grid grid-cols-1 gap-2 sm:grid-cols-3">
-              <li>
-                <div className="group flex items-center justify-center gap-2 rounded-xl border border-border-light-gray bg-white-background px-4 py-3 text-text-accent shadow-sm transition-all duration-200 hover:-translate-y-px hover:shadow-md">
-                  <FaShieldAlt className="h-5 w-5 opacity-80 transition-opacity group-hover:opacity-100" />
-                  <span className="text-sm font-medium">30-Day Money Back</span>
-                </div>
-              </li>
-
-              <li className="sm:hidden" aria-hidden="true">
-                <div className="mx-auto h-px w-24 bg-border-light-gray" />
-              </li>
-
-              <li>
-                <div className="group flex items-center justify-center gap-2 rounded-xl border border-border-light-gray bg-white-background px-4 py-3 text-text-accent shadow-sm transition-all duration-200 hover:-translate-y-px hover:shadow-md">
-                  <MdNoAccounts className="h-5 w-5 opacity-80 transition-opacity group-hover:opacity-100" />
-                  <span className="text-sm font-medium">No Setup Fees</span>
-                </div>
-              </li>
-
-              <li>
-                <div className="group flex items-center justify-center gap-2 rounded-xl border border-border-light-gray bg-white-background px-4 py-3 text-text-accent shadow-sm transition-all duration-200 hover:-translate-y-px hover:shadow-md">
-                  <AiOutlineCloseCircle className="h-5 w-5 opacity-80 transition-opacity group-hover:opacity-100" />
-                  <span className="text-sm font-medium">Cancel Anytime</span>
-                </div>
-              </li>
-            </ul>
-
-            {/* separators for wide screens */}
-            <div className="mt-3 hidden items-center justify-center gap-6 sm:flex">
-              <span className="h-px w-8 bg-border-light-gray" aria-hidden="true" />
-              <span className="h-px w-8 bg-border-light-gray" aria-hidden="true" />
-            </div>
           </div>
+
         </section>
 
       </div>

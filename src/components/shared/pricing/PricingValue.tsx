@@ -4,11 +4,12 @@ import useBrowserCountryCode from "@/hooks/useBrowserCountryCode";
 import { BillingPeriod, PricingPlan } from "@/types/pricing.types";
 import { formatPrice } from "@/utils/formatPrice";
 import React from "react";
+import { PlainButton } from "../html/PlainButton";
 
 interface PricingValueProps {
   plan: PricingPlan;
   billingPeriod: BillingPeriod;
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
@@ -50,7 +51,7 @@ const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
         <span
           className=" relative inline-flex items-center select-none px-3 py-1 rounded-md bg-lime-400 text-black text-xs font-semibold tracking-wide shadow rotate-[-10deg] -mt-4"
         >
-          <span className="relative z-[1] pl-2">{(billingPeriod === "monthly") ? 0 : plan.offer}% OFF</span>
+          <span className="relative z-[1] pl-2">{(billingPeriod === "monthly") ? 0 : isBD ? plan.offerBdt : plan.offer}% OFF</span>
 
           {/* Left-pointed wedge */}
           <span
@@ -82,7 +83,16 @@ const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
       )}
 
       <div className="w-full flex flex-col space-y-2">
-        {children}
+        {plan.ctaText && (
+          <PlainButton
+            href={`${isBD ? plan.hrefBdt : plan.href}${billingPeriod === "yearly" && "?billingcycle=annually"}`}
+            variant={plan.isPopular ? "dark" : "dark"}
+            size="md"
+            className={`transition-transform duration-200 hover:scale-105 !rounded-full ${plan.isPopular ? "!bg-primary" : "!bg-black/90"}`}
+          >
+            {plan.ctaText}
+          </PlainButton>
+        )}
       </div>
     </>
   );
