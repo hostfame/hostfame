@@ -3,6 +3,7 @@ import Image from "next/image";
 import { Button } from "../html/Button";
 import { domainPricingData } from "@/data/domainPricing.data";
 import DualPricing from "./domain-hero/DualPricing";
+import DomainPricingButtonGroup from "./DomainPricingButtonGroup";
 
 export default function DomainPricing() {
   return (
@@ -46,12 +47,7 @@ export default function DomainPricing() {
 
               </div>
               {/* Actions */}
-              <div className="flex justify-center gap-3 pt-2">
-                <Button size="sm">Register</Button>
-                <Button variant="bordered" size="sm">
-                  Transfer
-                </Button>
-              </div>
+              <DomainPricingButtonGroup />
             </li>
           ))}
         </ul>

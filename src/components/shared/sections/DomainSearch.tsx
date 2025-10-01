@@ -1,4 +1,5 @@
 "use client";
+import { useIpProviderContextValue } from "@/providers/IpProvider";
 import { getDomainUrl } from "@/utils/domain.utils";
 import React, { useState } from "react";
 import { FiSearch } from "react-icons/fi";
@@ -11,9 +12,10 @@ const DomainSearch = ({
   cta: string;
 }) => {
   const [value, setValue] = useState("");
+  const countryCode = useIpProviderContextValue();
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const url = getDomainUrl(value);
+    const url = getDomainUrl(value, countryCode);
     setValue("");
     // open the url in a new tab
     window.open(url, "_blank");

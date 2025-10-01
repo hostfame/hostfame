@@ -26,7 +26,7 @@ export const webHostingPricingBdtData: PricingData = {
           title: "Features",
           features: [
             {
-              name: "5GB NVMe Storage",
+              name: "10 GB NVMe Storage",
               included: true,
               description: "Fast NVMe storage designed for personal sites or small projects. Ensures quick load times and smooth performance.",
             },
@@ -177,7 +177,7 @@ export const webHostingPricingBdtData: PricingData = {
           title: "Features",
           features: [
             {
-              name: "15GB NVMe Storage",
+              name: "20 GB NVMe Storage",
               included: true,
               description: "Plenty of high-speed storage for blogs, small stores, or portfolio sites. Handles media and backups easily.",
             },
@@ -327,7 +327,7 @@ export const webHostingPricingBdtData: PricingData = {
           title: "Features",
           features: [
             {
-              name: "30GB NVMe Storage",
+              name: "30 GB NVMe Storage",
               included: true,
               description: "Enterprise-grade storage for heavy sites, apps, or media content. Fast, reliable, and secure.",
             },
