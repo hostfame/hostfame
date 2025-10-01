@@ -3,6 +3,7 @@ import SectionWrapper from "../wrappers/SectionWrapper";
 import DomainSearchBox from "./DomainSearchBox";
 import DualPricing from "./domain-hero/DualPricing";
 import { domainPricingData } from "@/data/domainPricing.data";
+import DomainLink from "../DomainLink";
 
 export default function DomainBanner() {
   const data = {
@@ -70,15 +71,18 @@ export default function DomainBanner() {
               </div>
               <ul className="flex flex-wrap gap-2">
                 {popular.map((item) => (
-                  <li
+                  <DomainLink
                     key={item.tld}
                     className="group inline-flex items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-sm backdrop-blur transition hover:bg-white/15"
                   >
                     <span className="font-medium text-white">{item.tld}</span>
                     <span className="text-white/80 group-hover:text-white">
-                      <DualPricing price={item.price} pricebdt={item.priceBdt} />
+                      <DualPricing
+                        price={item.price}
+                        pricebdt={item.priceBdt}
+                      />
                     </span>
-                  </li>
+                  </DomainLink>
                 ))}
               </ul>
             </div>

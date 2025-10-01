@@ -3,6 +3,7 @@ import { FiSearch } from "react-icons/fi";
 import DualPricing from "./domain-hero/DualPricing";
 import { domainPricingData } from "@/data/domainPricing.data";
 import DomainSearch from "./DomainSearch";
+import DomainLink from "../DomainLink";
 
 export default function DomainHero() {
   const data = {
@@ -11,7 +12,8 @@ export default function DomainHero() {
     placeholder: "Search your brand or business name",
     cta: "Search",
     popularLabel: "Popular domains",
-    popularDomainRoute: "https://my.hostfame.com/cart.php?a=add&domain=register",
+    popularDomainRoute:
+      "https://my.hostfame.com/cart.php?a=add&domain=register",
   } as const;
 
   // Pick popular extensions dynamically (e.g. .COM, .NET, .INFO, .ORG)
@@ -48,16 +50,12 @@ export default function DomainHero() {
                   key={item.tld}
                   className="transition-all duration-300 ease-in-out"
                 >
-                  <Link
-                    href={data.popularDomainRoute}
-                    target="_blank"
-                    className="group relative inline-flex w-[132px] hover:w-[153px] items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-sm text-white backdrop-blur transition-all duration-300 ease-in-out hover:bg-white/20"
-                  >
+                  <DomainLink className="group relative inline-flex w-[132px] hover:w-[153px] items-center gap-2 rounded-full border border-white/25 bg-white/10 px-3 py-1.5 text-sm text-white backdrop-blur transition-all duration-300 ease-in-out hover:bg-white/20">
                     <span className="font-semibold">{item.tld}</span>
                     Only
                     <DualPricing price={item.price} pricebdt={item.priceBdt} />
-                    <FiSearch className="text-xs absolute group-hover:static opacity-0 scale-75 transition-all duration-300 ease-in-out group-hover:opacity-70 group-hover:scale-100" />
-                  </Link>
+                    <FiSearch className="text-xs absolute group-hover:static opacity-0 scale-75 transition-all duration-300 ease-in-out group-hover:opacity-70 group-hover:scale-100 shrink-0" />
+                  </DomainLink>
                 </li>
               ))}
             </ul>
