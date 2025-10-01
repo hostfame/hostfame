@@ -8,7 +8,7 @@ export const webHostingPricingBdtData: PricingData = {
       id: "starter",
       name: "Starter",
       description:
-        "Perfect for individuals and personal blogs who want to get online quickly. Includes all the essentials to launch a small website with ease and reliability.",
+        "Perfect for individuals and personal blogs who want to get online quickly.",
       icon: "/assets/pricing/starter-42.svg",
       hrefBdt: "https://my.hostfame.com/index.php?rp=/store/web-hosting-bd/starter",
       currency: "$",
@@ -158,7 +158,7 @@ export const webHostingPricingBdtData: PricingData = {
       id: "pro",
       name: "Pro",
       description:
-        "Designed for growing websites and small businesses that need more power. Offers flexibility, added resources, and performance to support scaling.",
+        "Designed for growing websites and small businesses that need more power.",
       icon: "/assets/pricing/pro.svg",
       hrefBdt: "https://my.hostfame.com/index.php?rp=/store/web-hosting-bd/pro",
       currency: "$",
@@ -309,7 +309,7 @@ export const webHostingPricingBdtData: PricingData = {
       id: "business",
       name: "Business",
       description:
-        "Enterprise-grade hosting designed for large-scale websites and mission-critical applications. Provides maximum resources, security, and priority support.",
+        "Enterprise-grade hosting designed for large-scale websites and mission-critical applications.",
       icon: "/assets/pricing/ultimate.svg",
       hrefBdt: "https://my.hostfame.com/index.php?rp=/store/web-hosting-bd/business",
       currency: "$",
