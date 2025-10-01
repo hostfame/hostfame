@@ -1,10 +1,10 @@
 "use client";
 
-import useBrowserCountryCode from "@/hooks/useBrowserCountryCode";
 import { BillingPeriod, PricingPlan } from "@/types/pricing.types";
 import { formatPrice } from "@/utils/formatPrice";
 import React from "react";
 import { PlainButton } from "../html/PlainButton";
+import { useIpProviderContextValue } from "@/providers/IpProvider";
 
 interface PricingValueProps {
   plan: PricingPlan;
@@ -13,7 +13,7 @@ interface PricingValueProps {
 }
 
 const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
-  const { countryCode } = useBrowserCountryCode();
+  const countryCode  = useIpProviderContextValue()
   const isBD = countryCode === "BD";
 
   const mainCurrency = isBD ? "৳" : plan.currency;
@@ -28,6 +28,8 @@ const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
   const price = billingPeriod === "yearly" ? yearlyPrice : monthlyPrice;
   const prevPrice =
     billingPeriod === "yearly" ? yearlyPrevPrice : monthlyPrevPrice;
+
+  const perMonthText = billingPeriod === "yearly" ? "/year" : "/mo"
 
   const renewalText = isBD
     ? billingPeriod === "monthly"
@@ -94,7 +96,7 @@ const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
             }`}
           >
             {formatPrice(Number(price), { southAsianGrouping: isBD })}{" "}
-            <span className="text-2xl font-light">/mo</span>
+            <span className="text-2xl font-light">{perMonthText}</span>
           </span>
         </div>
       </div>
