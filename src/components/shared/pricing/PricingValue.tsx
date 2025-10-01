@@ -51,7 +51,7 @@ const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
         <span
           className=" relative inline-flex items-center select-none px-3 py-1 rounded-md bg-lime-400 text-black text-xs font-semibold tracking-wide shadow rotate-[-10deg] -mt-4"
         >
-          <span className="relative z-[1] pl-2">{(billingPeriod === "monthly") ? 0 : plan.offer}% OFF</span>
+          <span className="relative z-[1] pl-2">{(billingPeriod === "monthly") ? 0 : isBD ? plan.offerBdt : plan.offer}% OFF</span>
 
           {/* Left-pointed wedge */}
           <span
