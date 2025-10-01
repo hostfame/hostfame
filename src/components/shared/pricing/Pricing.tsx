@@ -25,7 +25,7 @@ export function Pricing({
   };
 
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative">
       {/* <div className="absolute inset-0 bg-grid-pattern opacity-5" />
       <div className="absolute top-0 left-1/4 w-96 h-96 bg-secondary/10 rounded-full blur-3xl" />
       <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-primary/5 rounded-full blur-3xl" /> */}
@@ -49,7 +49,7 @@ export function Pricing({
         )}
 
         <div
-          className={`grid grid-cols-1 lg:grid-cols-${data.plans.length} gap-10 lg:gap-8 mx-auto pt-5 items-stretch`}
+          className={`grid grid-cols-1 lg:grid-cols-${data.plans.length} gap-10 lg:gap-8 mx-auto pt-10 items-stretch`}
         >
           {data.plans.map((plan, index) => (
             <div
