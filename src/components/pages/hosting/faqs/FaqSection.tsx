@@ -4,7 +4,7 @@ import SectionWrapper from "@/components/shared/wrappers/SectionWrapper";
 
 export default function FaqSection() {
   return (
-    <section className="bg-white-background space-y-8 py-12 md:py-16">
+    <section className="bg-white-background space-y-8 my-12 lg:my-16">
       <CenteredSectionHeader
         title={
           <>
