@@ -20,15 +20,25 @@ const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
 
   const monthlyPrice = isBD ? plan.monthlyPriceBdt : plan.monthlyPrice;
   const yearlyPrice = isBD ? plan.yearlyPriceBdt : plan.yearlyPrice;
-  const monthlyPrevPrice = isBD ? plan.monthlyPrevPriceBdt : plan.monthlyPrevPrice;
+  const monthlyPrevPrice = isBD
+    ? plan.monthlyPrevPriceBdt
+    : plan.monthlyPrevPrice;
   const yearlyPrevPrice = isBD ? plan.yearlyPrevPriceBdt : plan.yearlyPrevPrice;
 
   const price = billingPeriod === "yearly" ? yearlyPrice : monthlyPrice;
-  const prevPrice = billingPeriod === "yearly" ? yearlyPrevPrice : monthlyPrevPrice;
+  const prevPrice =
+    billingPeriod === "yearly" ? yearlyPrevPrice : monthlyPrevPrice;
 
   const renewalText = isBD
-    ? (billingPeriod === "monthly") ? plan.renewalTextMonthlyBdt : plan.renewalTextYearlyBdt
-    : (billingPeriod === "monthly") ? plan.renewalTextMonthly : plan.renewalTextYearly
+    ? billingPeriod === "monthly"
+      ? plan.renewalTextMonthlyBdt
+      : plan.renewalTextYearlyBdt
+    : billingPeriod === "monthly"
+    ? plan.renewalTextMonthly
+    : plan.renewalTextYearly;
+
+  const setCountryQuery = isBD ? "setCurrency=2" : "setCurrency=1";
+
   return (
     <>
       {/* {!isBD && <div className="flex gap-2 justify-start items-center text-text">
@@ -42,35 +52,46 @@ const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
 
       <div className="flex items-center gap-4 text-text">
         {/* Old price */}
-        <p className={`text-gray-400 ${(billingPeriod === "monthly") ? "" : "line-through"}`}>
+        <p
+          className={`text-gray-400 ${
+            billingPeriod === "monthly" ? "" : "line-through"
+          }`}
+        >
           Was {mainCurrency}
-          {formatPrice(Number((billingPeriod === "monthly") ? price : prevPrice), { southAsianGrouping: isBD })}
+          {formatPrice(
+            Number(billingPeriod === "monthly" ? price : prevPrice),
+            { southAsianGrouping: isBD }
+          )}
         </p>
 
         {/* Discount tag */}
-        <span
-          className=" relative inline-flex items-center select-none px-3 py-1 rounded-md bg-lime-400 text-black text-xs font-semibold tracking-wide shadow rotate-[-10deg] -mt-4"
-        >
-          <span className="relative z-[1] pl-2">{(billingPeriod === "monthly") ? 0 : isBD ? plan.offerBdt : plan.offer}% OFF</span>
+        <span className=" relative inline-flex items-center select-none px-3 py-1 rounded-md bg-lime-400 text-black text-xs font-semibold tracking-wide shadow rotate-[-10deg] -mt-4">
+          <span className="relative z-[1] pl-2">
+            {billingPeriod === "monthly"
+              ? 0
+              : isBD
+              ? plan.offerBdt
+              : plan.offer}
+            % OFF
+          </span>
 
           {/* Left-pointed wedge */}
-          <span
-            className=" pointer-events-none absolute -left-2 top-1/2 -translate-y-1/2 w-0 h-0 border-y-[10px] border-y-transparent border-r-[10px] border-r-lime-400 "
-          />
+          <span className=" pointer-events-none absolute -left-2 top-1/2 -translate-y-1/2 w-0 h-0 border-y-[10px] border-y-transparent border-r-[10px] border-r-lime-400 " />
 
           {/* Tag hole */}
-          <span
-            className=" pointer-events-none absolute left-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-white ring-2 ring-lime-400 shadow-sm "
-          />
+          <span className=" pointer-events-none absolute left-0 top-1/2 -translate-y-1/2 w-2.5 h-2.5 rounded-full bg-white ring-2 ring-lime-400 shadow-sm " />
         </span>
       </div>
 
       <div>
         <div className="flex items-baseline justify-start gap-1">
-          <span className="text-5xl font-semibold text-text">{mainCurrency}</span>
+          <span className="text-5xl font-semibold text-text">
+            {mainCurrency}
+          </span>
           <span
-            className={`text-5xl font-semibold tracking-tight ${plan?.isPopular ? "text-text" : "text-text"
-              }`}
+            className={`text-5xl font-semibold tracking-tight ${
+              plan?.isPopular ? "text-text" : "text-text"
+            }`}
           >
             {formatPrice(Number(price), { southAsianGrouping: isBD })}{" "}
             <span className="text-2xl font-light">/mo</span>
@@ -78,17 +99,26 @@ const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
         </div>
       </div>
 
-      {(plan.renewalTextMonthly || plan.renewalTextYearly || plan.renewalTextMonthlyBdt || plan.renewalTextYearlyBdt) && (
+      {(plan.renewalTextMonthly ||
+        plan.renewalTextYearly ||
+        plan.renewalTextMonthlyBdt ||
+        plan.renewalTextYearlyBdt) && (
         <p className=" text-text">{renewalText}</p>
       )}
 
       <div className="w-full flex flex-col space-y-2">
         {plan.ctaText && (
           <PlainButton
-            href={`${isBD ? plan.hrefBdt : plan.href}${billingPeriod === "yearly" && "?billingcycle=annually"}`}
+            href={`${isBD ? plan.hrefBdt : plan.href}?${setCountryQuery}&${
+              billingPeriod === "yearly"
+                ? "billingcycle=annually"
+                : "billingcycle=monthly"
+            }`}
             variant={plan.isPopular ? "dark" : "dark"}
             size="md"
-            className={`transition-transform duration-200 hover:scale-105 !rounded-full ${plan.isPopular ? "!bg-primary" : "!bg-black/90"}`}
+            className={`transition-transform duration-200 hover:scale-105 !rounded-full ${
+              plan.isPopular ? "!bg-primary" : "!bg-black/90"
+            }`}
           >
             {plan.ctaText}
           </PlainButton>
