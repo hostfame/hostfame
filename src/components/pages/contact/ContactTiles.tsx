@@ -46,10 +46,10 @@ export default function ContactTiles() {
         {contactData.map((item) => (
           <Tile key={item.id}>
             <IconWrap>{item.icon}</IconWrap>
-            <h3 className="font-semibold text-slate-900 dark:text-slate-100">
+            <h3 className="font-semibold text-slate-100">
               {item.title}
             </h3>
-            <div className="text-sm text-slate-600 dark:text-slate-300 space-y-0.5">
+            <div className="text-sm text-slate-200 space-y-0.5">
               {item.lines.map((line, i) =>
                 item.links && item.links[i] ? (
                   <a

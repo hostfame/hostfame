@@ -4,9 +4,8 @@ export const DOLLAR_TO_TK_CONVERTION_RATE = 121.69;
 
 export const webHostingPricingData: PricingData = {
   title: "Choose Your Perfect Plan",
-  yearlyDiscount: 67, // per-plan discounts shown as `offer` (% OFF)
+  yearlyDiscount: 67,
   plans: [
-    //,,,  STARTER,,, 
     {
       id: "starter",
       name: "Starter",
@@ -19,7 +18,7 @@ export const webHostingPricingData: PricingData = {
       monthlyPrevPrice: 4.49,
       yearlyPrevPrice: 4.49,
       offer: 67, // % OFF
-      ctaText: "Buy Now",
+      ctaText: "Choose Plan",
       renewalTextMonthly: "36 month term + Free .COM",
       renewalTextYearly: "36 month term + Free .COM",
       guarantee: "30 Days Money Back guarantee",
@@ -291,8 +290,6 @@ export const webHostingPricingData: PricingData = {
         }
       ],
     },
-
-    //,,,  PRO,,, 
     {
       id: "pro",
       name: "Pro",
@@ -306,7 +303,7 @@ export const webHostingPricingData: PricingData = {
       yearlyPrevPrice: 6.99,
       offer: 64,
       isPopular: true,
-      ctaText: "Buy Now",
+      ctaText: "Choose Plan",
       renewalTextMonthly: "36 month term + Free .COM",
       renewalTextYearly: "36 month term + Free .COM",
       guarantee: "30 Days Money Back guarantee",
@@ -578,110 +575,6 @@ export const webHostingPricingData: PricingData = {
         }
       ],
     },
-
-    //,,,  PLUS,,, 
-    // {
-    //   id: "plus",
-    //   name: "Plus",
-    //   description: "For high-traffic websites, agencies, and e-commerce stores.",
-    //   icon: "/assets/pricing/plus.svg",
-    //   currency: "$",
-    //   monthlyPrice: 2.99,
-    //   yearlyPrice: 0.00,
-    //   monthlyPrevPrice: 7.99,
-    //   yearlyPrevPrice: 0.00,
-    //   offer: 63,
-    //   guarantee: "30-Day Money-Back Guarantee",
-    //   ctaText: "Buy Now",
-    //   renewalTextMonthly: "36 month term + Free .COM",
-    //   renewalTextYearly: "36 month term + Free .COM",
-    //   guarantee: "30 Days Money Back guarantee",
-    //   features: [
-    //     {
-    //       title: "Features",
-    //       features: [
-    //         { name: "200GB NVMe SSD Storage", included: true, description: "Roomy NVMe storage for large catalogs and media." },
-    //         { name: "Unmetered Bandwidth", included: true, description: "Consistent performance as your traffic grows." },
-    //         { name: "Free SSL Certificate", included: true, description: "Secure checkout and user data with HTTPS." },
-    //         { name: "10 Websites", included: true, description: "Consolidate multiple brands or microsites." },
-    //         { name: "20 Email Accounts", included: true, description: "Ample inboxes for teams and departments." },
-    //         { name: "Daily Backups (JetBackup)", included: true, description: "Granular restores to a prior healthy state." },
-    //         { name: "1-Click WordPress Installer", included: true, description: "Launch new projects fast and consistently." },
-    //         { name: "DDoS Protection", included: true, description: "Mitigates volumetric and protocol-level attacks." },
-    //         { name: "LiteSpeed Web Server", included: true, description: "Event-driven web server built for throughput." },
-    //         { name: "Softaculous App Installer", included: true, description: "Hundreds of auto-installers for popular stacks." },
-    //         { name: "30-Minute Guaranteed Email Response", included: true, description: "Keep operations moving with quick help." },
-    //         { name: "30-Day Money-Back Guarantee", included: true, description: "Switch risk-free if needs change." }
-    //       ]
-    //     },
-    //     {
-    //       title: "Technical Specifications",
-    //       features: [
-    //         { name: "3 CPU Cores", included: true, description: "More parallelism for dynamic/e-commerce workloads." },
-    //         { name: "4 GB RAM", included: true, description: "Memory headroom for object caches and builders." },
-    //         { name: "30 MB/s I/O Speed", included: true, description: "Higher disk throughput for busy sites." },
-    //         { name: "200 Entry Processes", included: true, description: "Serve more concurrent requests smoothly." },
-    //         { name: "PHP Memory Limit: 1024 MB", included: true, description: "Supports heavy plugins and page builders." },
-    //         { name: "500,000 Inodes Limit", included: true, description: "Large file count for product images and media." },
-    //         { name: "Multiple PHP Versions", included: true, description: "Match PHP version to your app’s needs." }
-    //       ]
-    //     },
-    //     {
-    //       title: "WordPress Features",
-    //       features: [
-    //         { name: "LiteSpeed Cache for WordPress", included: true, description: "Server-level caching and image optimization." },
-    //         { name: "Automatic WordPress Updates", included: true, description: "Stay patched without manual effort." },
-    //         { name: "Pre-configured WordPress Settings", included: true, description: "Battle-tested defaults for performance." },
-    //         { name: "Free WordPress Migration", included: true, description: "Zero-downtime moves handled by our team." },
-    //         { name: "Basic Plugin and Theme Support", included: true, description: "Guidance on compatibility and setup." }
-    //       ]
-    //     },
-    //     {
-    //       title: "Security Features",
-    //       features: [
-    //         { name: "Imunify360 Security Suite", included: true, description: "Malware firewall, IDS/IPS, reputation checks." },
-    //         { name: "Brute Force Protection", included: true, description: "Rate-limits abusive logins across services." },
-    //         { name: "Advanced Antivirus Scanner", included: true, description: "Automated scans catch threats early." },
-    //         { name: "Hotlink Protection", included: true, description: "Stop third-parties from siphoning assets." },
-    //         { name: "Web Application Firewall (WAF)", included: true, description: "Blocks OWASP Top 10 style attacks." },
-    //         { name: "Spam Protection for Emails", included: true, description: "Server-side spam and phishing filters." },
-    //         { name: "File Permission Protection", included: true, description: "Secure defaults to reduce exploit risk." }
-    //       ]
-    //     },
-    //     {
-    //       title: "Support & Assistance",
-    //       features: [
-    //         { name: "24/7 Live Chat, Email & WhatsApp Call Support", included: true, description: "Engineers on-call around the clock." },
-    //         { name: "30-Minute Guaranteed Email Response", included: true, description: "SLA-driven responses for quick resolutions." },
-    //         { name: "Comprehensive Knowledge Base & Tutorials", included: true, description: "Documentation to self-serve fast." },
-    //         { name: "Community Forum Access", included: true, description: "Best practices crowdsourced by users." },
-    //         { name: "Site Optimization Advice", included: true, description: "Tailored performance recommendations." },
-    //         { name: "Onboarding Guide for New Users", included: true, description: "Step-by-step launch checklist." }
-    //       ]
-    //     },
-    //     {
-    //       title: "Performance Benchmarks",
-    //       features: [
-    //         { name: "99.99% Uptime Guarantee", included: true, description: "Reliability you can plan business around." },
-    //         { name: "Global CDN Integration", included: true, description: "Edge caching for international audiences." },
-    //         { name: "Real-World Speed Test Results", included: true, description: "Transparent metrics from production tests." },
-    //         { name: "Optimized for High Traffic Spikes", included: true, description: "Absorbs launch days and promo peaks." }
-    //       ]
-    //     },
-    //     {
-    //       title: "Developer-Friendly Features",
-    //       features: [
-    //         { name: "SSH Access", included: true, description: "Shell into environments securely." },
-    //         { name: "Git Integration", included: true, description: "Deploy from Git for clean CI workflows." },
-    //         { name: "WP-CLI Support", included: true, description: "Automate WordPress tasks via CLI." },
-    //         { name: "Custom Cron Jobs", included: true, description: "Schedule jobs for feeds, imports, and tasks." },
-    //         { name: "Multiple PHP Versions", included: true, description: "Flexibility for multi-app stacks." }
-    //       ]
-    //     }
-    //   ]
-    // },
-
-    //,,,  BUSINESS,,, 
     {
       id: "business",
       name: "Business",
@@ -694,7 +587,7 @@ export const webHostingPricingData: PricingData = {
       monthlyPrevPrice: 9.99,
       yearlyPrevPrice: 9.99,
       offer: 50,
-      ctaText: "Buy Now",
+      ctaText: "Choose Plan",
       renewalTextMonthly: "36 month term + Free .COM",
       renewalTextYearly: "36 month term + Free .COM",
       guarantee: "30 Days Money Back guarantee",
@@ -973,7 +866,6 @@ export const wordpressHostingPricingData: PricingData = {
   title: "Plans Built for WordPress",
   yearlyDiscount: 90,
   plans: [
-    //,,,  BASIC,,, 
     {
       id: "basic",
       name: "Basic",
@@ -995,7 +887,7 @@ export const wordpressHostingPricingData: PricingData = {
       renewalTextMonthlyBdt: "৳999/Monthly when you renew",
       renewalTextYearlyBdt: "৳249/Monthly when you renew",
       offer: 90,
-      ctaText: "Buy Now",
+      ctaText: "Choose Plan",
       features: [
         {
           "title": "Features",
@@ -1244,8 +1136,6 @@ export const wordpressHostingPricingData: PricingData = {
         }
       ],
     },
-
-    //,,,  STARTER (MOST POPULAR),,, 
     {
       id: "starter",
       name: "Starter",
@@ -1268,7 +1158,7 @@ export const wordpressHostingPricingData: PricingData = {
       renewalTextYearlyBdt: "৳349/Monthly when you renew",
       offer: 90,
       isPopular: true,
-      ctaText: "Buy Now",
+      ctaText: "Choose Plan",
       features: [
         {
           "title": "Features",
@@ -1517,109 +1407,9 @@ export const wordpressHostingPricingData: PricingData = {
         }
       ],
     },
-
-    //,,,  PRO,,, 
-    // {
-    //   id: "pro",
-    //   name: "Pro",
-    //   description:
-    //     "Built for high-traffic blogs, WooCommerce stores, and expanding businesses.",
-    //   icon: "/assets/pricing/pro.svg",
-    //   currency: "$",
-    //   monthlyPrice: 3.99,
-    //   yearlyPrice: 3.99,
-    //   monthlyPrevPrice: 5.99,
-    //   yearlyPrevPrice: 5.99,
-    //   offer: 90,
-    //   ctaText: "Buy Now",
-    //   renewalTextMonthly: "$5.99/Monthly when you renew",
-    //   renewalTextYearly: "$5.99/Monthly when you renew",
-    //   guarantee: "30 Days Money Back guarantee",
-    //   features: [
-    //     {
-    //       title: "Features",
-    //       features: [
-    //         { name: "250GB NVMe SSD Storage", included: true, description: "Generous NVMe capacity for large media and backups." },
-    //         { name: "25 WordPress Websites", included: true, description: "Scale across projects and brands with one plan." },
-    //         { name: "Unmetered Bandwidth", included: true, description: "Predictable costs as traffic grows." },
-    //         { name: "Free Domain (1 Year)", included: true, description: "Register your main domain at no extra cost." },
-    //         { name: "Unlimited Email Accounts", included: true, description: "Create inboxes for teams and departments." },
-    //         { name: "Hourly Automated Backups (JetBackup)", included: true, description: "Frequent restore points for e-commerce changes." },
-    //         { name: "1-Click WordPress Installer", included: true, description: "Standardized, fast deployments." },
-    //         { name: "DDoS Protection & WordPress Firewall", included: true, description: "Enterprise-grade mitigation and filtering." },
-    //         { name: "LiteSpeed Web Server + LSCache", included: true, description: "HTTP/2/3 server tuned for throughput." },
-    //         { name: "AI-Driven WordPress Optimizer", included: true, description: "Auto-tunes DB, cache, and images for speed." },
-    //         { name: "15-Minute Guaranteed Email Response", included: true, description: "Tight SLAs to keep the store running." },
-    //         { name: "30-Day Money-Back Guarantee", included: true, description: "Risk-free evaluation period." }
-    //       ]
-    //     },
-    //     {
-    //       title: "Technical Specifications",
-    //       features: [
-    //         { name: "6 CPU Cores", included: true, description: "Parallel processing for heavy, dynamic sites." },
-    //         { name: "8 GB RAM", included: true, description: "Room for object caches and heavy plugins." },
-    //         { name: "40 MB/s I/O Speed", included: true, description: "Premium storage throughput for busy DBs." },
-    //         { name: "120 Entry Processes", included: true, description: "Serve many concurrent requests smoothly." },
-    //         { name: "PHP Memory Limit: 2048 MB", included: true, description: "Headroom for builders and integrations." },
-    //         { name: "1,000,000 Inodes Limit", included: true, description: "Space for extensive media libraries." },
-    //         { name: "Multiple PHP Versions", included: true, description: "Choose PHP per site for compatibility." }
-    //       ]
-    //     },
-    //     {
-    //       title: "Exclusive WordPress Features",
-    //       features: [
-    //         { name: "LiteSpeed Cache for WordPress", included: true, description: "Advanced cache rules and image/WebP tweaks." },
-    //         { name: "Automatic WordPress Core & Plugin Updates", included: true, description: "Security updates applied on schedule." },
-    //         { name: "1-Click Staging Environment", included: true, description: "Safely test code, themes, and plugins." },
-    //         { name: "AI-Powered SEO & Speed Optimizer", included: true, description: "Guided improvements for pagespeed and SEO." },
-    //         { name: "Free WordPress Migration (Completed Within Hours)", included: true, description: "Specialists move your site with care." }
-    //       ]
-    //     },
-    //     {
-    //       title: "Advanced Security Features",
-    //       features: [
-    //         { name: "Imunify360 Security Suite", included: true, description: "Layered defense with proactive protection." },
-    //         { name: "Web Application Firewall (WAF)", included: true, description: "Filters malicious traffic before WordPress." },
-    //         { name: "Real-Time Malware Scanning", included: true, description: "Continuous scanning and quarantine." },
-    //         { name: "Brute Force Protection", included: true, description: "Throttles repeated login attempts." },
-    //         { name: "Two-Factor Authentication (2FA)", included: true, description: "Second factor to secure admin access." }
-    //       ]
-    //     },
-    //     {
-    //       title: "Premium Support & Assistance",
-    //       features: [
-    //         { name: "24/7 WordPress Expert Support", included: true, description: "Senior agents ready around the clock." },
-    //         { name: "15-Minute Guaranteed Email Response", included: true, description: "Fast escalations for incidents." },
-    //         { name: "Advanced WordPress Onboarding Guide", included: true, description: "Deep-dive setup for performance and security." },
-    //         { name: "Community Forum Access", included: true, description: "Collaborate and learn from power users." },
-    //         { name: "Advanced SEO Optimization Tips", included: true, description: "Playbooks for content and technical SEO." }
-    //       ]
-    //     },
-    //     {
-    //       title: "Performance Benchmarks",
-    //       features: [
-    //         { name: "99.99% Uptime Guarantee", included: true, description: "SLA you can plan business around." },
-    //         { name: "Global CDN Integration", included: true, description: "Edge caching for international reach." },
-    //         { name: "Average Load Time: Under 800ms", included: true, description: "Measured on tuned demo stores." },
-    //         { name: "Image Optimization Tools", included: true, description: "Auto-optimize images for speed and quality." }
-    //       ]
-    //     },
-    //     {
-    //       title: "Developer-Friendly Features",
-    //       features: [
-    //         { name: "SSH Access with WP-CLI", included: true, description: "CLI workflows for deploys and maintenance." },
-    //         { name: "Git Integration", included: true, description: "Connect repos to streamline releases." },
-    //         { name: "Custom Cron Jobs", included: true, description: "Schedule jobs for feeds, imports, and tasks." },
-    //         { name: "Multiple PHP Versions", included: true, description: "Per-site PHP selection for compatibility." }
-    //       ]
-    //     }
-    //   ]
-    // },
-
-    //,,,  ULTIMATE,,, 
     {
-      id: "ultimate",
-      name: "Ultimate",
+      id: "business",
+      name: "Business",
       description:
         "Best for enterprises, large stores, agencies, and heavy-traffic WordPress sites.",
       icon: "/assets/pricing/ultimate.svg",
@@ -1638,7 +1428,7 @@ export const wordpressHostingPricingData: PricingData = {
       renewalTextMonthlyBdt: "৳3,999/Monthly when you renew",
       renewalTextYearlyBdt: "৳799/Monthly when you renew",
       offer: 90,
-      ctaText: "Buy Now",
+      ctaText: "Choose Plan",
       features: [
         {
           "title": "Features",
@@ -1929,7 +1719,7 @@ export const manageHostingPricingData: PricingData = {
       renewalTextYearlyBdt: "৳2,799/Monthly when you renew",
       offer: 44,
       currency: "$",
-      ctaText: "Buy Now",
+      ctaText: "Choose Plan",
       features: [
         {
           "title": "Features",
@@ -2209,7 +1999,7 @@ export const manageHostingPricingData: PricingData = {
       offer: 42,
       currency: "$",
       isPopular: true,
-      ctaText: "Buy Now",
+      ctaText: "Choose Plan",
       features: [
         {
           "title": "Features",
@@ -2468,282 +2258,10 @@ export const manageHostingPricingData: PricingData = {
         }
       ],
     },
-    // {
-    //   id: "pro",
-    //   name: "Pro",
-    //   icon: "/assets/pricing/pro.svg",
-    //   monthlyPrice: 99.99,
-    //   yearlyPrice: 54.99,
-    //   monthlyPrevPrice:,
-    //   yearlyPrevPrice:,
-    //   offer:,
-    //   currency: "$",
-    //   ctaText: "Buy Now",
-    //   renewalTextMonthly: "$49.99/Monthly when you renew",
-    //   renewalTextYearly: "$49.99/Monthly when you renew",
-    //   guarantee: "30 Days Money Back guarantee",
-    //   features: [
-    //     {
-    //       title: "Features",
-    //       features: [
-    //         {
-    //           name: "300GB NVMe SSD Storage",
-    //           included: true,
-    //           description: "High-speed NVMe SSD storage for ultra-fast website performance.",
-    //         },
-    //         {
-    //           name: "50 Websites",
-    //           included: true,
-    //           description: "Host up to 50 websites under one plan without extra cost.",
-    //         },
-    //         {
-    //           name: "Unmetered Bandwidth",
-    //           included: true,
-    //           description: "Unlimited traffic with no bandwidth restrictions.",
-    //         },
-    //         {
-    //           name: "Free SSL Certificate (Lifetime)",
-    //           included: true,
-    //           description: "Keep all websites secure with lifetime SSL encryption.",
-    //         },
-    //         {
-    //           name: "8 vCPU Cores",
-    //           included: true,
-    //           description: "Powerful virtual CPU cores for high-traffic websites and applications.",
-    //         },
-    //         {
-    //           name: "20 GB RAM",
-    //           included: true,
-    //           description: "High memory allocation for resource-intensive applications.",
-    //         },
-    //         {
-    //           name: "Daily Automated Backups (30 Days Retention)",
-    //           included: true,
-    //           description: "Automatic daily backups stored for up to 30 days for data safety.",
-    //         },
-    //         {
-    //           name: "1-Click App Installer",
-    //           included: true,
-    //           description: "Easily install WordPress and 400+ apps in a single click.",
-    //         },
-    //         {
-    //           name: "Global CDN Integration (Cloudflare Enterprise)",
-    //           included: true,
-    //           description: "Delivers content faster worldwide with enterprise-level CDN integration.",
-    //         },
-    //         {
-    //           name: "100% Uptime SLA",
-    //           included: true,
-    //           description: "Guaranteed network uptime backed by a Service Level Agreement.",
-    //         },
-    //         {
-    //           name: "15-Minute Guaranteed Email Response",
-    //           included: true,
-    //           description: "Priority support with responses guaranteed within 15 minutes.",
-    //         },
-    //         {
-    //           name: "30-Day Money-Back Guarantee",
-    //           included: true,
-    //           description: "Risk-free hosting with a full refund if cancelled within 30 days.",
-    //         },
-    //       ],
-    //     },
-    //     {
-    //       title: "Upgraded Technical Specifications",
-    //       features: [
-    //         {
-    //           name: "8 vCPU Cores",
-    //           included: true,
-    //           description: "Advanced CPU power for handling high traffic and workloads.",
-    //         },
-    //         {
-    //           name: "20 GB RAM",
-    //           included: true,
-    //           description: "Enhanced memory capacity for faster and stable operations.",
-    //         },
-    //         {
-    //           name: "100 MB/s I/O Speed",
-    //           included: true,
-    //           description: "Fast input/output speeds for quicker file and database access.",
-    //         },
-    //         {
-    //           name: "100 Entry Processes",
-    //           included: true,
-    //           description: "Supports up to 100 concurrent PHP processes at once.",
-    //         },
-    //         {
-    //           name: "PHP Memory Limit: 4096 MB",
-    //           included: true,
-    //           description: "Increased PHP memory allocation for demanding applications.",
-    //         },
-    //         {
-    //           name: "1,500,000 Inodes Limit",
-    //           included: true,
-    //           description: "Manage up to 1,500,000 files and directories efficiently.",
-    //         },
-    //         {
-    //           name: "Multiple PHP Versions",
-    //           included: true,
-    //           description: "Switch between PHP versions for better compatibility.",
-    //         },
-    //       ],
-    //     },
-    //     {
-    //       title: "Advanced Security Features (Premium)",
-    //       features: [
-    //         {
-    //           name: "Imunify360 Security Suite (Advanced)",
-    //           included: true,
-    //           description: "AI-powered malware protection with proactive threat detection.",
-    //         },
-    //         {
-    //           name: "DDoS Protection (Enterprise-Level)",
-    //           included: true,
-    //           description: "Enterprise-level protection against large-scale DDoS attacks.",
-    //         },
-    //         {
-    //           name: "Web Application Firewall (WAF)",
-    //           included: true,
-    //           description: "Blocks malicious requests and protects web applications.",
-    //         },
-    //         {
-    //           name: "Brute Force Protection",
-    //           included: true,
-    //           description: "Prevents unauthorized login attempts and password attacks.",
-    //         },
-    //         {
-    //           name: "Two-Factor Authentication (2FA)",
-    //           included: true,
-    //           description: "Adds an extra layer of security to your accounts.",
-    //         },
-    //         {
-    //           name: "Real-Time Malware Scanning & Auto-Healing",
-    //           included: true,
-    //           description: "Scans for malware and automatically fixes issues in real-time.",
-    //         },
-    //         {
-    //           name: "Hotlink Protection",
-    //           included: true,
-    //           description: "Prevents other sites from using your images and resources.",
-    //         },
-    //         {
-    //           name: "Free SSL Certificate (Lifetime)",
-    //           included: true,
-    //           description: "Protect data with free SSL encryption for life.",
-    //         },
-    //       ],
-    //     },
-    //     {
-    //       title: "Performance Enhancements",
-    //       features: [
-    //         {
-    //           name: "100% Network Uptime SLA",
-    //           included: true,
-    //           description: "Guaranteed network uptime backed by a Service Level Agreement.",
-    //         },
-    //         {
-    //           name: "Cloud Load Balancing",
-    //           included: true,
-    //           description: "Distributes traffic across multiple servers for maximum availability.",
-    //         },
-    //         {
-    //           name: "AI-Powered Auto-Scaling",
-    //           included: true,
-    //           description: "Automatically adjusts server resources based on traffic and usage patterns.",
-    //         },
-    //         {
-    //           name: "Global CDN Integration (Cloudflare Enterprise)",
-    //           included: true,
-    //           description: "Delivers content faster worldwide with enterprise-level CDN integration.",
-    //         },
-    //         {
-    //           name: "Optimized for Google Core Web Vitals",
-    //           included: true,
-    //           description: "Ensures top performance scores for SEO and user experience.",
-    //         },
-    //         {
-    //           name: "Real-Time Resource Monitoring",
-    //           included: true,
-    //           description: "Monitor CPU, memory, and bandwidth usage with live analytics.",
-    //         },
-    //       ],
-    //     },
-    //     {
-    //       title: "Premium Support & Assistance",
-    //       features: [
-    //         {
-    //           name: "24/7 Priority Cloud Hosting Expert Support",
-    //           included: true,
-    //           description: "Priority support from certified cloud hosting experts around the clock.",
-    //         },
-    //         {
-    //           name: "15-Minute Guaranteed Email Response",
-    //           included: true,
-    //           description: "Priority support with email responses within 15 minutes.",
-    //         },
-    //         {
-    //           name: "Step-by-Step Advanced Onboarding",
-    //           included: true,
-    //           description: "Guided onboarding for faster migration and setup.",
-    //         },
-    //         {
-    //           name: "Live Chat & WhatsApp Support",
-    //           included: true,
-    //           description: "Instant support via chat and WhatsApp messaging.",
-    //         },
-    //         {
-    //           name: "Comprehensive Knowledge Base & Tutorials",
-    //           included: true,
-    //           description: "Access detailed guides, FAQs, and tutorials anytime.",
-    //         },
-    //       ],
-    //     },
-    //     {
-    //       title: "Developer-Friendly Features",
-    //       features: [
-    //         {
-    //           name: "SSH Access",
-    //           included: true,
-    //           description: "Secure shell access for advanced server management.",
-    //         },
-    //         {
-    //           name: "Git Integration",
-    //           included: true,
-    //           description: "Deploy and manage code with built-in Git support.",
-    //         },
-    //         {
-    //           name: "WP-CLI Support",
-    //           included: true,
-    //           description: "Manage WordPress sites with command-line tools.",
-    //         },
-    //         {
-    //           name: "Custom Cron Jobs",
-    //           included: true,
-    //           description: "Automate repetitive tasks with custom scheduling.",
-    //         },
-    //         {
-    //           name: "Multiple PHP Versions",
-    //           included: true,
-    //           description: "Switch between PHP versions for compatibility and performance.",
-    //         },
-    //         {
-    //           name: "Staging Environments",
-    //           included: true,
-    //           description: "Test changes safely before deploying to production.",
-    //         },
-    //         {
-    //           name: "Database Optimization Tools",
-    //           included: true,
-    //           description: "Optimize and maintain MySQL databases with ease.",
-    //         },
-    //       ],
-    //     },
-    //   ],
-    // },
     {
-      id: "ultimate",
-      name: "Ultimate",
-      description: "Enterprise-grade hosting with unlimited resources and priority support for mission-critical projects.",
+      id: "business",
+      name: "Business",
+      description: "Enterprise hosting with unlimited resources and priority support for critical projects.",
       icon: "/assets/pricing/ultimate.svg",
       monthlyPrice: 149.99,
       yearlyPrice: 79.99,
@@ -2760,7 +2278,7 @@ export const manageHostingPricingData: PricingData = {
       renewalTextYearlyBdt: "৳7,999/Monthly when you renew",
       offer: 46,
       currency: "$",
-      ctaText: "Buy Now",
+      ctaText: "Choose Plan",
       features: [
         {
           "title": "Features",

@@ -41,16 +41,16 @@ const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
 
       <div className="flex items-center gap-4 text-text">
         {/* Old price */}
-        <p className="line-through text-gray-400">
+        <p className={`text-gray-400 ${(billingPeriod === "monthly") ? "" : "line-through"}`}>
           Was {mainCurrency}
-          {formatPrice(Number(prevPrice), { southAsianGrouping: isBD })}
+          {formatPrice(Number((billingPeriod === "monthly") ? price : prevPrice), { southAsianGrouping: isBD })}
         </p>
 
         {/* Discount tag */}
         <span
           className=" relative inline-flex items-center select-none px-3 py-1 rounded-md bg-lime-400 text-black text-xs font-semibold tracking-wide shadow rotate-[-10deg] -mt-4"
         >
-          <span className="relative z-[1] pl-2">{plan.offer}% OFF</span>
+          <span className="relative z-[1] pl-2">{(billingPeriod === "monthly") ? 0 : plan.offer}% OFF</span>
 
           {/* Left-pointed wedge */}
           <span

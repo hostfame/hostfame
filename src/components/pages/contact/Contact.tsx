@@ -28,7 +28,8 @@ const Contact = () => {
         // heightClassName="h-fit lg:h-[550px] lg:max-h-[550px]"
         ctaSection={<ContactCtaSection />}
         imageProps={{ width: 400, height: 400 }}
-        imageComponent={<AnimationBanner />}
+        image="/assets/contactbanner.svg"
+        // imageComponent={<AnimationBanner />}
         classNameForTitle="text-nowrap"
       />
       {/* <SectionWrapper className="mb-8 mt-4">
@@ -49,53 +50,53 @@ const Contact = () => {
   );
 };
 
-export function AnimationBanner() {
-  return (
-    <div
-      className={` w-full relative  max-lg:mt-[14%] flex justify-center items-center  max-sm:scale-90`}
-    >
+// export function AnimationBanner() {
+//   return (
+//     <div
+//       className={` w-full relative  max-lg:mt-[14%] flex justify-center items-center  max-sm:scale-90`}
+//     >
       
-      <Image
-        src={"/assets/banner__contact__image-sm3.svg"}
-        width={70}
-        height={70}
-        alt="Hosting illustration"
-        className=" z-10 absolute left-[10%]   -top-[10%] swing-bottom"
-      />
-      <Image
-        src={"/assets/banner__contact__image-sm1.svg"}
-        alt={"Home Banner"}
-        width={180}
-        height={180}
-        className={` left-[25%] max-sm:scale-90`}
-        priority
-      />
-      <section className=" flex justify-end items-end w-fit h-fit -ml-[15%]">
-        <Image
-          src="/assets/banner__contact__image.svg"
-          width={350}
-          height={350}
-          alt="Hosting illustration"
-          className="z-10   "
-        />
-      </section>
-      <Image
-        src={"/assets/banner__contact__image-sm2.svg"}
-        width={150}
-        height={150}
-        alt="Hosting illustration"
-        className=" absolute max-sm:scale-90 -top-[20%] left-[40%] top-bottom2"
-      />
-      <Image
-        src={"/assets/banner__contact__image-sm4.svg"}
-        width={100}
-        height={100}
-        alt="Hosting illustration"
-        className=" absolute   right-0 top-0   left-right"
-      />
-    </div>
-  );
-}
+//       <Image
+//         src={"/assets/banner__contact__image-sm3.svg"}
+//         width={70}
+//         height={70}
+//         alt="Hosting illustration"
+//         className=" z-10 absolute left-[10%]   -top-[10%] swing-bottom"
+//       />
+//       <Image
+//         src={"/assets/banner__contact__image-sm1.svg"}
+//         alt={"Home Banner"}
+//         width={180}
+//         height={180}
+//         className={` left-[25%] max-sm:scale-90`}
+//         priority
+//       />
+//       <section className=" flex justify-end items-end w-fit h-fit -ml-[15%]">
+//         <Image
+//           src="/assets/banner__contact__image.svg"
+//           width={350}
+//           height={350}
+//           alt="Hosting illustration"
+//           className="z-10   "
+//         />
+//       </section>
+//       <Image
+//         src={"/assets/banner__contact__image-sm2.svg"}
+//         width={150}
+//         height={150}
+//         alt="Hosting illustration"
+//         className=" absolute max-sm:scale-90 -top-[20%] left-[40%] top-bottom2"
+//       />
+//       <Image
+//         src={"/assets/banner__contact__image-sm4.svg"}
+//         width={100}
+//         height={100}
+//         alt="Hosting illustration"
+//         className=" absolute   right-0 top-0   left-right"
+//       />
+//     </div>
+//   );
+// }
 
 function ContactCtaSection() {
   return (
@@ -103,7 +104,7 @@ function ContactCtaSection() {
       <Link
         href={"#"}
       >
-        <WhiteButton className="!rounded !bg-amber-400 !border-0 py-2 px-7 text-lg ">View Details</WhiteButton>
+        <WhiteButton className="!rounded !border-0 py-2 px-7 text-lg ">View Details</WhiteButton>
       </Link>
     </section>
   );

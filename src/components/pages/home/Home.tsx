@@ -156,10 +156,10 @@ function HomeCtaSection() {
         <WhiteButton href="#different-hosting-plans">Start My Hosting Now</WhiteButton>
         
         <Link
-          href={"#"}
+          href={"/wordpress-hosting"}
           className="flex  text-lg items-center text-center max-lg:underline lg:gap-x-2 text-white font-bold"
         >
-          Trusted By Agencies & Startups
+          Faster WordPress Starts Here
           <BsArrowRightShort size={24} className="hidden lg:block" />
         </Link>
       </section>
