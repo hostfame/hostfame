@@ -49,12 +49,15 @@ const ManagedHosting = () => {
       <SectionWrapper className="my-12 lg:my-16">
         <Pricing data={manageHostingPricingData} toggleButton={true} />
       </SectionWrapper>
+
       <SectionWrapper className="my-12 md:my-16">
         <ManagedHostingThatGrows />
       </SectionWrapper>
+
       <SectionWrapper className="my-12 lg:my-16">
         <WhatAreSpecials />
       </SectionWrapper>
+
 
       <ReviewsSection />
       {/* <WhatAreSpecials /> */}
@@ -62,7 +65,9 @@ const ManagedHosting = () => {
       <SectionWrapper className="my-12 md:my-16">
         <PrioritySupport />
       </SectionWrapper>
+
       <FaqSection />
+
       <SectionWrapper className="my-12 md:my-16">
         <SupportBanner />
       </SectionWrapper>

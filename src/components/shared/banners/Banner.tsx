@@ -106,7 +106,7 @@ export const Banner: React.FC<BannerProps> = ({
       )} */}
 
       <SectionWrapper
-        className={`relative z-10  py-16 md:py-20 grid lg:grid-cols-2 gap-10 items-center place-items-center lg:place-items-center ${containerClassName}`}
+        className={`relative z-10  py-16 md:py-20 grid lg:grid-cols-2 gap-10 items-center ${containerClassName}`}
       >
         {/* Content */}
         <div className="space-y-6 text-center lg:text-left flex flex-col justify-center items-center lg:items-start">
