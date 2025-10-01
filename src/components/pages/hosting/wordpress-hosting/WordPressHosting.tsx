@@ -40,7 +40,7 @@ const WordPressHosting = () => {
         ctaSection={<WordPressHostingCtaSection />}
         description={`Blazing speed, free backups, and real human support optimized for creators, consultants, and small businesses who rely on WordPress to grow.`}
       />
-      
+
       {/* <SectionWrapper className=" my-12 md:my-16">
         <WordPressHostingFeatures />
       </SectionWrapper> */}
