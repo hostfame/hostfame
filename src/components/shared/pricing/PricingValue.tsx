@@ -39,7 +39,7 @@ const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
     ? plan.renewalTextMonthly
     : plan.renewalTextYearly;
 
-  const setCountryQuery = isBD ? "setCurrency=2" : "setCurrency=1";
+  const setCountryQuery = isBD ? "currency=2" : "currency=1";
 
   return (
     <>
@@ -111,7 +111,7 @@ const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
       <div className="w-full flex flex-col space-y-2">
         {plan.ctaText && (
           <PlainButton
-            href={`${isBD ? plan.hrefBdt : plan.href}?${setCountryQuery}&${
+            href={`${isBD ? plan.hrefBdt : plan.href}&${setCountryQuery}&${
               billingPeriod === "yearly"
                 ? "billingcycle=annually"
                 : "billingcycle=monthly"

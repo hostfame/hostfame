@@ -4,6 +4,7 @@ import { IoSearch } from "react-icons/io5";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { getDomainUrl } from "@/utils/domain.utils";
+import { useIpProviderContextValue } from "@/providers/IpProvider";
 
 type FormValues = {
   domain: string;
@@ -12,8 +13,10 @@ type FormValues = {
 const SubmitDomainName = () => {
   const { register, handleSubmit } = useForm<FormValues>();
 
+  const countryCode = useIpProviderContextValue()
+
   const handleSearch = (data: FormValues) => {
-    const url = getDomainUrl(data.domain);
+    const url = getDomainUrl(data.domain, countryCode);
 
     // open the url in a new tab
     window.open(url, "_blank");

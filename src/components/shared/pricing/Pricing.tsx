@@ -78,7 +78,7 @@ export function Pricing({
               30 Day Money-back Guarantee
             </h2>
             <p className="text-white text-sm md:text-base ">
-              There is no risk with our 30-day money back guarantee. Stay safe with assurance of refund.
+              There is no risk with our 30-day money back guarantee. No question asked.
             </p>
           </div>
 

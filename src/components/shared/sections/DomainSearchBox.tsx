@@ -1,5 +1,6 @@
 "use client";
 
+import { useIpProviderContextValue } from "@/providers/IpProvider";
 import { getDomainUrl } from "@/utils/domain.utils";
 import { FormEvent, useState } from "react";
 
@@ -19,12 +20,14 @@ export default function DomainSearchBox({
   const [name, setName] = useState("");
   const [tld, setTld] = useState(tlds[0] ?? "");
 
+  const countryCode = useIpProviderContextValue()
+
   function submit(e: FormEvent) {
     e.preventDefault();
     const full = `${name.trim()}${tld}`;
     if (!name.trim()) return;
 
-    const url = getDomainUrl(full);
+    const url = getDomainUrl(full, countryCode);
 
     window.open(url, "_blank");
   }

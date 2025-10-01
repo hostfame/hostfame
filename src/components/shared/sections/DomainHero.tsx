@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { FiSearch } from "react-icons/fi";
 import DualPricing from "./domain-hero/DualPricing";
 import { domainPricingData } from "@/data/domainPricing.data";
