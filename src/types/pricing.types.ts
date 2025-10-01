@@ -13,6 +13,8 @@ export interface PricingPlan {
   id: string;
   name: string;
   description?: string;
+  href?: string;
+  hrefBdt?: string;
   icon: string;
   monthlyPrice?: number;
   yearlyPrice?: number;
