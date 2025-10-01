@@ -5,62 +5,7 @@ import { LuCpu, LuMemoryStick, LuHardDrive, LuGauge } from "react-icons/lu";
 import { Button } from "../html/Button";
 import CenteredSectionHeader from "../headers/CenteredSectionHeader";
 import DualPricing from "./domain-hero/DualPricing";
-
-// ---------- Tiered data ----------
-const TIERS = [
-  {
-    key: "starter",
-    label: "Starter",
-    className: "-ml-5",
-    priceMonthly: "$9.99/mo",
-    priceMonthlyBdt: "৳1999/mo",
-    features: {
-      cpu: "2 vCPU Cores",
-      ram: "4 GB RAM",
-      ssd: "40 GB NVMe",
-      net: "1GBit",
-    },
-  },
-  {
-    key: "starter-plus",
-    label: "Starter Plus",
-    className: "ml-1",
-    priceMonthly: "$19.99/mo",
-    priceMonthlyBdt: "৳2999/mo",
-    features: {
-      cpu: "3 vCPU Cores",
-      ram: "4 GB RAM",
-      ssd: "80 GB NVMe",
-      net: "1 Gbit",
-    },
-  },
-  {
-    key: "pro",
-    label: "Pro",
-    className: " ml-4",
-    priceMonthly: "$29.99/mo",
-    priceMonthlyBdt: "৳4999/mo",
-    features: {
-      cpu: "4 vCPU Cores",
-      ram: "8 GB RAM",
-      ssd: "160 GB NVMe",
-      net: "1 GBit",
-    },
-  },
-  {
-    key: "ultimate",
-    label: "Ultimate",
-    className: "",
-    priceMonthly: "$49.99/mo",
-    priceMonthlyBdt: "৳7999/mo",
-    features: {
-      cpu: "8 vCPU Cores",
-      ram: "16 GB RAM",
-      ssd: "240 GB NVMe",
-      net: "32 TB",
-    },
-  },
-];
+import { TiersData } from "@/data/cloudVps.data";
 
 const FEATURE_META = [
   {
@@ -90,9 +35,9 @@ const purchaseUrl = `https://my.hostfame.com/cart.php?a=confproduct&i={{index}}`
 export default function CloudVps() {
   // default to Starter Plus to mirror your original state
   const [step, setStep] = useState(1); // 0..3
-  const current = useMemo(() => TIERS[step], [step]);
+  const current = useMemo(() => TiersData[step], [step]);
 
-  const percent = useMemo(() => (step / (TIERS.length - 1)) * 100, [step]);
+  const percent = useMemo(() => (step / (TiersData.length - 1)) * 100, [step]);
 
   return (
     <section
@@ -124,7 +69,7 @@ export default function CloudVps() {
             <input
               type="range"
               min={0}
-              max={3}
+              max={TiersData.length - 1}
               step={1}
               value={step}
               onChange={(e) => setStep(parseInt(e.target.value, 10))}
@@ -158,7 +103,7 @@ export default function CloudVps() {
           {/* Tick marks + labels */}
           <div className="relative mt-3">
             <div className="flex justify-between items-center">
-              {TIERS.map((t, i) => {
+              {TiersData.map((t, i) => {
                 const active = i === step;
                 return (
                   <button
@@ -207,7 +152,7 @@ export default function CloudVps() {
                 <p className="text-white text-sm font-medium">{f.title}</p>
                 {/* key forces re-mount -> CSS animation plays on change */}
                 <p
-                  key={current.features[f.k  as keyof typeof current.features]}
+                  key={current.features[f.k as keyof typeof current.features]}
                   className="text-white/80 text-xs fade-in-up"
                 >
                   {current.features[f.k as keyof typeof current.features]}
