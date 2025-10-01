@@ -345,7 +345,7 @@ export const webHostingPricingBdtData: PricingData = {
       yearlyPrevPriceBdt: 8388, // 4985 / 0.5
       offer: 50,
       // ≈ (7950-4985)/7950
-      ctaText: "Buy Now",
+      ctaText: "Choose Plan",
       renewalTextMonthlyBdt: "Renews at 7950 tk/year",
       renewalTextYearlyBdt: "Renews at 7950 tk/year",
       guarantee: "30 Days Money Back guarantee",
