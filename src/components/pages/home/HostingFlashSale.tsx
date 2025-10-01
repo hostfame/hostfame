@@ -34,7 +34,7 @@ const data = {
       discount: "57% Off",
       label: "Domains",
       ctaLabel: "Get A Domains",
-      href: "/domain-checker",
+      href: "/domain",
       Icon: HiGlobeAlt,
     },
   ] as Offer[],

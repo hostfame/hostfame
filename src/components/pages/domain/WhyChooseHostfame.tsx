@@ -1,16 +1,16 @@
 import CenteredSectionHeader from "@/components/shared/headers/CenteredSectionHeader";
-import { DomainCheckerWhyChooseHostfameData } from "@/data/domainChecker.data";
+import { DomainWhyChooseHostfameData } from "@/data/domain.data";
 
 export default function WhyChooseHostfame() {
   return (
     <section>
       <CenteredSectionHeader
-        title={DomainCheckerWhyChooseHostfameData.title}
-        description={DomainCheckerWhyChooseHostfameData.description}
+        title={DomainWhyChooseHostfameData.title}
+        description={DomainWhyChooseHostfameData.description}
       />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 xl:gap-6">
-        {DomainCheckerWhyChooseHostfameData.cards.map((f, i) => {
+        {DomainWhyChooseHostfameData.cards.map((f, i) => {
           const Icon = f.icon;
           return (
             <div

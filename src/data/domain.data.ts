@@ -2,7 +2,7 @@ import { FaLock } from "react-icons/fa";
 import { FaFilePen, FaMoneyCheckDollar } from "react-icons/fa6";
 import { MdOutlineSupportAgent } from "react-icons/md";
 
-export const DomainCheckerWhyChooseHostfameData = {
+export const DomainWhyChooseHostfameData = {
   title: "Why Choose Hostfame?",
   description: "We make hosting simple, transparent, and truly human, so you focus on what matters most.",
   cards : [

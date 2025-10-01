@@ -46,7 +46,7 @@ export const navItems = [
   },
   {
     label: "Domain",
-    href: "/domain-checker",
+    href: "/domain",
   },
   {
     label: "Business",
