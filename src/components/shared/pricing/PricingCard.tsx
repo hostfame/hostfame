@@ -84,15 +84,6 @@ export function PricingCard({
               </div>
             )} */}
 
-            {plan.ctaText && (
-              <PlainButton
-                variant={plan.isPopular ? "dark" : "dark"}
-                size="md"
-                className={`transition-transform duration-200 hover:scale-105 !rounded-full ${plan.isPopular ? "!bg-primary" : "!bg-black/90"}`}
-              >
-                {plan.ctaText}
-              </PlainButton>
-            )}
           </PricingValue>
         </CardHeader>
 

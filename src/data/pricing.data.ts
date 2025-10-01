@@ -9,8 +9,8 @@ export const webHostingPricingData: PricingData = {
     {
       id: "starter",
       name: "Starter",
-      description:
-        "Ideal for individuals and personal blogs getting online quickly.",
+      description: "Ideal for individuals and personal blogs getting online quickly.",
+      href: "https://my.hostfame.com/index.php?rp=/store/web-hosting/wstarter&billingcycle=triennially&_gl=1*25qgji*_ga*MTAwMTc3MTk4Ni4xNzU3NjE2MDg1*_ga_V3X46VG4G8*czE3NTkzMTgxNzckbzUkZzEkdDE3NTkzMTgyMTEkajI2JGwwJGgw*_fplc*Z1lzcWxYc0U3NmNrRmVNbEFJUGlVRFFVU1JYcmI3d3kyMGx1SG05eE43OFV5bmttc1VKcXFVRFhkanRWOWZpRE5XY0IyRjFSazhoZUF0Z0hXRzlPR0ElMkZmb2Q3R0pIdkV6WHJGc2xNcEVZQ3YzQ0xJT1RGaWJ0NGYzdW9UTGclM0QlM0Q.*_ga_T6J46ZTKYW*czE3NTkzMTgxNzgkbzUkZzEkdDE3NTkzMTgyMTQkajI0JGwwJGgyMjExOTI2MzM.*_gcl_au*MTc0OTUyOTM2MC4xNzU3NjE2MDg2",
       icon: "/assets/pricing/starter-42.svg",
       currency: "$",
       monthlyPrice: 1.49,
@@ -293,8 +293,8 @@ export const webHostingPricingData: PricingData = {
     {
       id: "pro",
       name: "Pro",
-      description:
-        "For growing websites and small businesses needing extra power.",
+      description: "For growing websites and small businesses needing extra power.",
+      href: "https://my.hostfame.com/index.php?rp=/store/web-hosting/webpro",
       icon: "/assets/pricing/pro.svg",
       currency: "$",
       monthlyPrice: 2.49,
@@ -578,8 +578,8 @@ export const webHostingPricingData: PricingData = {
     {
       id: "business",
       name: "Business",
-      description:
-        "For enterprises, large-scale websites, and mission-critical apps.",
+      description: "For enterprises, large-scale websites, and mission-critical apps.",
+      href: "https://my.hostfame.com/index.php?rp=/store/web-hosting/business",
       icon: "/assets/pricing/ultimate.svg",
       currency: "$",
       monthlyPrice: 4.99,
@@ -867,10 +867,11 @@ export const wordpressHostingPricingData: PricingData = {
   yearlyDiscount: 90,
   plans: [
     {
-      id: "basic",
-      name: "Basic",
-      description:
-        "For bloggers, freelancers, and small businesses starting their first WordPress site.",
+      id: "starter",
+      name: "Starter",
+      description: "For bloggers, freelancers, and small businesses starting their first WordPress site.",
+      href: "https://my.hostfame.com/index.php?rp=/store/wordpress-hosting/starter",
+      hrefBdt: "https://my.hostfame.com/index.php?rp=/store/wordpress-hosting-bd/basic",
       icon: "/assets/pricing/basic.svg",
       currency: "$",
       monthlyPrice: 9.99,
@@ -1137,10 +1138,11 @@ export const wordpressHostingPricingData: PricingData = {
       ],
     },
     {
-      id: "starter",
-      name: "Starter",
-      description:
-        "Ideal for growing blogs, startups, and freelancers managing multiple sites.",
+      id: "pro",
+      name: "Pro",
+      description: "Ideal for growing blogs, startups, and freelancers managing multiple sites.",
+      href: "https://my.hostfame.com/index.php?rp=/store/wordpress-hosting/pro",
+      hrefBdt: "https://my.hostfame.com/index.php?rp=/store/wordpress-hosting-bd/starter",
       icon: "/assets/pricing/starter-42.svg",
       currency: "$",
       monthlyPrice: 14.99,
@@ -1410,8 +1412,9 @@ export const wordpressHostingPricingData: PricingData = {
     {
       id: "business",
       name: "Business",
-      description:
-        "Best for enterprises, large stores, agencies, and heavy-traffic WordPress sites.",
+      description: "Best for enterprises, large stores, agencies, and heavy-traffic WordPress sites.",
+      href: "https://my.hostfame.com/index.php?rp=/store/wordpress-hosting/ultimate",
+      hrefBdt: "https://my.hostfame.com/index.php?rp=/store/wordpress-hosting-bd/ultimate",
       icon: "/assets/pricing/ultimate.svg",
       currency: "$",
       monthlyPrice: 39.99,
@@ -1700,9 +1703,11 @@ export const manageHostingPricingData: PricingData = {
   yearlyDiscount: 76,
   plans: [
     {
-      id: "basic",
-      name: "Basic",
+      id: "starter",
+      name: "Starter",
       description: "Reliable hosting with essential features, ideal for individuals and small businesses.",
+      href: "https://my.hostfame.com/index.php?rp=/store/managed-hosting/starter",
+      hrefBdt: "https://my.hostfame.com/index.php?rp=/store/managed-hosting-bd/starter",
       icon: "/assets/pricing/basic.svg",
       monthlyPrice: 49.99,
       yearlyPrice: 27.99,
@@ -1979,9 +1984,11 @@ export const manageHostingPricingData: PricingData = {
       ],
     },
     {
-      id: "starter",
-      name: "Starter",
+      id: "pro",
+      name: "Pro",
       description: "Balanced resources and advanced tools, perfect for growing websites and agencies.",
+      href: "https://my.hostfame.com/index.php?rp=/store/managed-hosting/pro",
+      hrefBdt: "https://my.hostfame.com/index.php?rp=/store/managed-hosting-bd/pro",
       icon: "/assets/pricing/starter-42.svg",
       monthlyPrice: 69.99,
       yearlyPrice: 39.99,
@@ -2262,6 +2269,8 @@ export const manageHostingPricingData: PricingData = {
       id: "business",
       name: "Business",
       description: "Enterprise hosting with unlimited resources and priority support for critical projects.",
+      href: "https://my.hostfame.com/index.php?rp=/store/managed-hosting/ultimate",
+      hrefBdt: "https://my.hostfame.com/index.php?rp=/store/managed-hosting-bd/ultimate",
       icon: "/assets/pricing/ultimate.svg",
       monthlyPrice: 149.99,
       yearlyPrice: 79.99,
