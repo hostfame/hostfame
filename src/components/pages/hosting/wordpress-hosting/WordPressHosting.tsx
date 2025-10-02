@@ -18,6 +18,7 @@ import { Pricing } from "@/components/shared/pricing/Pricing";
 import { wordpressHostingPricingData } from "@/data/pricing.data";
 import DualPricing from "@/components/shared/sections/domain-hero/DualPricing";
 import ReviewsSection from "../web-hosting/reviews/ReviewSection";
+import WordPressHostingPricing from "./WordPressHostingPricing";
 
 const WordPressHosting = () => {
   return (
@@ -46,7 +47,7 @@ const WordPressHosting = () => {
       </SectionWrapper> */}
 
       <SectionWrapper id="wordpress-hosting-pricing" className="my-12 md:my-16">
-        <Pricing data={wordpressHostingPricingData} toggleButton={true} />
+        <WordPressHostingPricing />
       </SectionWrapper>
 
       {/* <SectionWrapper className="my-12 md:my-16">
