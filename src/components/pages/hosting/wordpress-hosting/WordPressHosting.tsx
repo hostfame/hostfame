@@ -56,25 +56,21 @@ const WordPressHosting = () => {
 
       <ReviewsSection />
 
-      <SectionWrapper>
+      <SectionWrapper className="my-12 md:my-16">
         <ManagedHostingHighlights
           data={wordpressHostingManagedHostingHighlightsData}
         />
       </SectionWrapper>
 
-      <SectionWrapper>
+      <SectionWrapper className="my-12 md:my-16">
         <AllHostingPlans data={wordpressHostingAllHostingPlans} />
       </SectionWrapper>
-
-      <FaqSection />
 
       <SectionWrapper className="my-12 md:my-16">
         <WhyChooseWordpressHosting />
       </SectionWrapper>
 
-      <SectionWrapper className="my-12 md:my-16">
-        <SupportBanner />
-      </SectionWrapper>
+      <FaqSection />
     </section>
   );
 };
@@ -84,7 +80,7 @@ function WordPressHostingCtaSection() {
     <section className="flex items-center gap-6">
       <WhiteButton href="#wordpress-hosting-pricing" className="!rounded">View Pricing</WhiteButton>
       <Link
-        href={"#"}
+        href={"#wordpress-hosting-pricing"}
         className="flex text-lg items-center text-center max-lg:underline lg:gap-x-2 text-white font-bold underline"
       >
         Starting @ <DualPricing price="$19.99" pricebdt="৳1,999" />/mo

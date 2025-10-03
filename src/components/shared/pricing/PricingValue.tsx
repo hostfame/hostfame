@@ -13,7 +13,7 @@ interface PricingValueProps {
 }
 
 const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
-  const countryCode  = useIpProviderContextValue()
+  const countryCode = useIpProviderContextValue()
   const isBD = countryCode === "BD";
 
   const mainCurrency = isBD ? "৳" : plan.currency;
@@ -36,8 +36,8 @@ const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
       ? plan.renewalTextMonthlyBdt
       : plan.renewalTextYearlyBdt
     : billingPeriod === "monthly"
-    ? plan.renewalTextMonthly
-    : plan.renewalTextYearly;
+      ? plan.renewalTextMonthly
+      : plan.renewalTextYearly;
 
   const setCountryQuery = isBD ? "currency=2" : "currency=1";
 
@@ -55,9 +55,8 @@ const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
       <div className="flex items-center gap-4 text-text">
         {/* Old price */}
         <p
-          className={`text-gray-400 ${
-            billingPeriod === "monthly" ? "" : "line-through"
-          }`}
+          className={`text-gray-400 ${billingPeriod === "monthly" ? "" : "line-through"
+            }`}
         >
           Was {mainCurrency}
           {formatPrice(
@@ -72,8 +71,8 @@ const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
             {billingPeriod === "monthly"
               ? 0
               : isBD
-              ? plan.offerBdt
-              : plan.offer}
+                ? plan.offerBdt
+                : plan.offer}
             % OFF
           </span>
 
@@ -91,9 +90,8 @@ const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
             {mainCurrency}
           </span>
           <span
-            className={`text-5xl font-semibold tracking-tight ${
-              plan?.isPopular ? "text-text" : "text-text"
-            }`}
+            className={`text-5xl font-semibold tracking-tight ${plan?.isPopular ? "text-text" : "text-text"
+              }`}
           >
             {formatPrice(Number(price), { southAsianGrouping: isBD })}{" "}
             <span className="text-2xl font-light">{perMonthText}</span>
@@ -105,22 +103,20 @@ const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
         plan.renewalTextYearly ||
         plan.renewalTextMonthlyBdt ||
         plan.renewalTextYearlyBdt) && (
-        <p className=" text-text">{renewalText}</p>
-      )}
+          <p className=" text-text">{renewalText}</p>
+        )}
 
       <div className="w-full flex flex-col space-y-2">
         {plan.ctaText && (
           <PlainButton
-            href={`${isBD ? plan.hrefBdt : plan.href}&${setCountryQuery}&${
-              billingPeriod === "yearly"
+            href={`${isBD ? plan.hrefBdt : plan.href}&${setCountryQuery}&${billingPeriod === "yearly"
                 ? "billingcycle=annually"
                 : "billingcycle=monthly"
-            }`}
-            variant={plan.isPopular ? "dark" : "dark"}
+              }`}
+            variant={plan.isPopular ? "dark" : "bordered"}
             size="md"
-            className={`transition-transform duration-200 hover:scale-105 !rounded-full ${
-              plan.isPopular ? "!bg-primary" : "!bg-black/90"
-            }`}
+            className={` duration-300 hover:scale-105 !rounded-full ${plan.isPopular ? "!bg-primary" : ""
+              }`}
           >
             {plan.ctaText}
           </PlainButton>
