@@ -422,7 +422,7 @@ export const webHostingPricingBdtData: PricingData = {
             // {
             //   name: "Unlimited Email Accounts",
             //   included: true,
-            //   description: "No limits on inboxes—create accounts for teams, staff, or departments easily.",
+            //   description: "No limits on inboxes, create accounts for teams, staff, or departments easily.",
             // },
             {
               name: "Webmail, Outlook Integration",

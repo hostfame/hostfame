@@ -66,6 +66,7 @@ const WordPressHosting = () => {
         <AllHostingPlans data={wordpressHostingAllHostingPlans} />
       </SectionWrapper>
 
+
       <SectionWrapper className="my-12 md:my-16">
         <WhyChooseWordpressHosting />
       </SectionWrapper>

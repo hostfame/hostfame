@@ -22,7 +22,7 @@ import DataCenters from "@/components/shared/sections/DataCenters";
 
 
 export const classNameForWhiteHover =
-  "hover:scale-[1.05] hover:bg-primary-dark hover:text-white duration-300";
+  "hover:scale-[1.05] duration-300";
 
 const Home = () => {
   return (

@@ -12,31 +12,38 @@ export const DomainRegistrationSummaryData = {
   eyebrow: "Free Add-ons",
   title: "What’s Included With Every Domain Registration",
   description:
-    "Everything you need to launch quickly and manage with confidence—no upsells, no surprises.",
+    "Everything you need to launch quickly and manage with confidence, no upsells, no surprises.",
   items: [
     {
       title: "Free Domain Privacy",
       desc: "Keep your personal information private. Our WHOIS privacy protection is included at no extra cost.",
       icon: HiShieldCheck,
       note: "Included forever",
+      footerText: "No extra fees • Available on all domains",
     },
     {
       title: "Free Website Builder",
-      desc: "Launch fast with our drag-and-drop site builder—perfect for a simple site or landing page.",
+      desc: "Launch fast with our drag-and-drop site builder, perfect for a simple site or landing page.",
       icon: TbLayoutBoardSplit,
       note: "No coding needed",
+      footerText: "No extra fees • Available on all hosting",
+
     },
     {
       title: "Free DNS Management",
       desc: "Full control of your DNS with simple tools for forwarding, email records, and subdomains.",
       icon: TbSettingsCheck,
       note: "Power user friendly",
+      footerText: "No extra fees • Available on all domains",
+
     },
     {
       title: "Free Domain Portfolio Tools",
       desc: "Manage and organize all your domains in one dashboard, with bulk edit and smart filters.",
       icon: TbWorldWww,
       note: "Scale with ease",
+      footerText: "No extra fees • Available on all domains",
+
     },
   ],
 };

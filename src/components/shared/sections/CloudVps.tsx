@@ -58,7 +58,7 @@ export default function CloudVps() {
         </span>
       </div>
 
-      {/* RANGE INPUT — custom slider with smooth fill + smooth thumb */}
+      {/* RANGE INPUT ,  custom slider with smooth fill + smooth thumb */}
       <div className="mt-8">
         <div className="mx-auto max-w-3xl">
           <div

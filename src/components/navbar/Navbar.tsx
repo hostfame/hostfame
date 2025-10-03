@@ -71,16 +71,19 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
 
   return (
     <nav
-      className={`duration-300 top-0 z-50 ${isTransparent
-        ? `bg-transparent ${scrollY > 70
-          ? "opacity-0 pointer-events-none"
-          : "opacity-100 h-auto pointer-events-auto"
-        }`
-        : `bg-background sticky shadow-lg border-b border-border-light-gray ${scrollY < 70
-          ? "h-0 opacity-0 pointer-events-none"
-          : "opacity-100 h-auto pointer-events-auto"
-        }`
-        }`}
+      className={`duration-300 top-0 z-50 ${
+        isTransparent
+          ? `bg-transparent ${
+              scrollY > 70
+                ? "opacity-0 pointer-events-none"
+                : "opacity-100 h-auto pointer-events-auto"
+            }`
+          : `bg-background sticky shadow-lg border-b border-border-light-gray ${
+              scrollY < 70
+                ? "h-0 opacity-0 pointer-events-none"
+                : "opacity-100 h-auto pointer-events-auto"
+            }`
+      }`}
     >
       {isTransparent && <Offer />}
 
@@ -101,12 +104,13 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
                   {item.subItems ? (
                     <>
                       <button
-                        className={`flex items-center px-3 py-2 text-sm font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 ${item.subItems.some(
-                          (subItem) => subItem.href === pathname
-                        )
-                          ? activeClassName
-                          : `${textClass} ${textHoverClass}`
-                          }`}
+                        className={`flex items-center px-3 py-2 text-sm font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 ${
+                          item.subItems.some(
+                            (subItem) => subItem.href === pathname
+                          )
+                            ? activeClassName
+                            : `${textClass} ${textHoverClass}`
+                        }`}
                       >
                         {item.label}
                         <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
@@ -119,10 +123,11 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
                             <Link
                               key={subItem.label}
                               href={subItem.href}
-                              className={`flex items-start p-3 rounded-lg hover:bg-primary-light transition-all duration-200 ease-in-out transform hover:scale-102 ${subItem.href === pathname
-                                ? "text-teal-600 hover:text-white"
-                                : `text-text hover:text-white`
-                                }`}
+                              className={`flex items-start p-3 rounded-lg hover:bg-primary-light transition-all duration-200 ease-in-out transform hover:scale-102 ${
+                                subItem.href === pathname
+                                  ? "text-teal-600 hover:text-white"
+                                  : `text-text hover:text-white`
+                              }`}
                             >
                               <div className="flex-shrink-0 mr-3 mt-0.5">
                                 {getIcon(subItem.icon)}
@@ -143,11 +148,11 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
                   ) : (
                     <Link
                       href={item.href!}
-                      className={`px-3 py-2 text-sm font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 ${item.href === pathname
-                        ? `${!isTransparent ? "text-teal-600" : "text-white"
-                        }`
-                        : `${textClass} ${textHoverClass}`
-                        }`}
+                      className={`px-3 py-2 text-sm font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 ${
+                        item.href === pathname
+                          ? `${!isTransparent ? "text-teal-600" : "text-white"}`
+                          : `${textClass} ${textHoverClass}`
+                      }`}
                     >
                       {item.label}
                     </Link>
@@ -190,7 +195,9 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
                   <X className="h-6 w-6 text-text" />
                 ) : (
                   <Menu
-                    className={`h-6 w-6 ${isTransparent ? "text-white" : "text-text"}`}
+                    className={`h-6 w-6 ${
+                      isTransparent ? "text-white" : "text-text"
+                    }`}
                   />
                 )}
               </button>
@@ -200,14 +207,18 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
 
         {/* MOBILE: Right Drawer (same-to-same as screenshot) */}
         <div
-          className={`min-[840px]:hidden fixed inset-0 z-40 transition-opacity duration-300 ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
-            }`}
+          className={`min-[840px]:hidden fixed inset-0 z-40 transition-opacity duration-300 ${
+            isOpen
+              ? "opacity-100 pointer-events-auto"
+              : "opacity-0 pointer-events-none"
+          }`}
         >
           {/* Backdrop */}
           <div
             onClick={() => setIsOpen(false)}
-            className={`absolute inset-0 bg-black/40 transition-opacity duration-300 ${isOpen ? "opacity-100" : "opacity-0"
-              }`}
+            className={`absolute inset-0 bg-black/40 transition-opacity duration-300 ${
+              isOpen ? "opacity-100" : "opacity-0"
+            }`}
           />
 
           {/* Drawer (opens from the RIGHT) */}
@@ -244,24 +255,27 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
                         onClick={() => toggleDropdown(item.label)}
                         className={`w-full flex items-center justify-between px-2 py-3
                           text-[15px] font-semibold rounded-md
-                          ${item.subItems.some((s) => s.href === pathname)
-                            ? "text-teal-600"
-                            : "text-text hover:text-teal-600"
+                          ${
+                            item.subItems.some((s) => s.href === pathname)
+                              ? "text-teal-600"
+                              : "text-text hover:text-teal-600"
                           }`}
                       >
                         <span>{item.label}</span>
                         <ChevronDown
-                          className={`h-4 w-4 transition-transform duration-300 ${activeDropdown === item.label ? "rotate-180" : ""
-                            }`}
+                          className={`h-4 w-4 transition-transform duration-300 ${
+                            activeDropdown === item.label ? "rotate-180" : ""
+                          }`}
                         />
                       </button>
 
                       {/* Sub-items */}
                       <div
                         className={`pl-2 mt-1 overflow-hidden transition-[max-height,opacity] duration-300
-                          ${activeDropdown === item.label
-                            ? "max-h-[600px] opacity-100"
-                            : "max-h-0 opacity-0"
+                          ${
+                            activeDropdown === item.label
+                              ? "max-h-[600px] opacity-100"
+                              : "max-h-0 opacity-0"
                           }`}
                       >
                         <div className="">
@@ -271,24 +285,34 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
                               const isLast = idx === item.subItems.length - 1;
 
                               return (
-                                <div className=" ">
+                                <div className=" " key={sub.href}>
                                   <hr className="border-gray-200" />
                                   <Link
                                     href={sub.href}
                                     onClick={() => setIsOpen(false)}
                                     className={`flex items-start gap-3 px-5 py-2 
-                                      ${isActive ? "text-teal-600 rounded-md"
-                                        : "text-text hover:text-teal-600"
+                                      ${
+                                        isActive
+                                          ? "text-teal-600 rounded-md"
+                                          : "text-text hover:text-teal-600"
                                       }`}
                                   >
-                                    <span className={` ${isActive ? "text-teal-600" : "text-text"}`}>
+                                    <span
+                                      className={` ${
+                                        isActive ? "text-teal-600" : "text-text"
+                                      }`}
+                                    >
                                       {getIcon(sub.icon)}
                                     </span>
 
                                     <div className="flex flex-col">
-                                      <span className="text-sm font-medium">{sub.label}</span>
+                                      <span className="text-sm font-medium">
+                                        {sub.label}
+                                      </span>
                                       {sub.description && (
-                                        <span className="text-xs opacity-80">{sub.description}</span>
+                                        <span className="text-xs opacity-80">
+                                          {sub.description}
+                                        </span>
                                       )}
                                     </div>
                                   </Link>
@@ -304,9 +328,10 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
                       href={item.href!}
                       onClick={() => setIsOpen(false)}
                       className={`block px-2 py-3 text-[15px] font-semibold rounded-md
-                        ${item.href === pathname
-                          ? "text-teal-600"
-                          : "text-text hover:text-teal-600"
+                        ${
+                          item.href === pathname
+                            ? "text-teal-600"
+                            : "text-text hover:text-teal-600"
                         }`}
                     >
                       {item.label}
