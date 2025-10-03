@@ -1,5 +1,6 @@
 // app/components/SupportBanner.tsx
 
+import { classNameForWhiteHover } from "@/components/pages/home/Home";
 import Link from "next/link";
 import { ComponentPropsWithoutRef } from "react";
 
@@ -22,11 +23,18 @@ const content: BannerContent = {
   ctaHref: "https://tawk.to/chat/67f13177a1155b1916a6f189/1io32ifig",
 };
 
-export type SupportBannerProps = Omit<ComponentPropsWithoutRef<"section">, "children"> & {
+export type SupportBannerProps = Omit<
+  ComponentPropsWithoutRef<"section">,
+  "children"
+> & {
   data?: Partial<BannerContent>;
 };
 
-export default function SupportBanner({ data, className = "", ...rest }: SupportBannerProps) {
+export default function SupportBanner({
+  data,
+  className = "",
+  ...rest
+}: SupportBannerProps) {
   const merged = { ...content, ...data };
 
   return (
@@ -65,7 +73,10 @@ export default function SupportBanner({ data, className = "", ...rest }: Support
             <ul className="mt-4 flex flex-wrap gap-x-6 gap-y-2 text-sm text-white/90">
               {merged.bullets.map((item, i) => (
                 <li key={i} className="flex items-center gap-2">
-                  <span aria-hidden className="inline-block h-1.5 w-1.5 rounded-full bg-white/80" />
+                  <span
+                    aria-hidden
+                    className="inline-block h-1.5 w-1.5 rounded-full bg-white/80"
+                  />
                   {item}
                 </li>
               ))}
@@ -79,11 +90,13 @@ export default function SupportBanner({ data, className = "", ...rest }: Support
             <div className="flex sm:block lg:flex  max-lg:space-y-3 items-center justify-between gap-3">
               <div className="text-sm/5 !text-white">
                 <div className="font-medium">Chat with us</div>
-                <div className="text-white/80">Real-time answers from our team</div>
+                <div className="text-white/80">
+                  Real-time answers from our team
+                </div>
               </div>
               <Link
                 href={merged.ctaHref}
-                className="whitespace-nowrap rounded-lg bg-white/90 px-4 py-2 text-sm font-semibold text-teal-900 transition hover:bg-white"
+                className={`whitespace-nowrap rounded-lg bg-white/90 px-4 py-2 text-sm font-semibold text-teal-900 transition ${classNameForWhiteHover}`}
               >
                 {merged.ctaLabel}
               </Link>

@@ -40,6 +40,8 @@ const data = {
   ] as Offer[],
 };
 
+
+
 export default async function HostingFlashSale() {
   return (
     <section className=" bg-gradient-to-r from-primary-dark to-primary rounded-2xl">
@@ -72,7 +74,7 @@ export default async function HostingFlashSale() {
 
                   <Link
                     href={href}
-                    className="mt-6 inline-flex w-fit items-center justify-center rounded-full bg-white px-5 py-2 text-sm  text-gray-800 !font-semibold hover:bg-white/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                    className="mt-6 inline-flex w-fit items-center justify-center rounded-full bg-white px-5 py-2 text-sm  text-gray-800 !font-semibold hover:bg-primary-dark hover:text-white focus:outline-none focus-visible:ring-2 hover:scale-[1.05] duration-300 focus-visible:ring-white"
                   >
                     {ctaLabel}
                   </Link>
@@ -92,7 +94,7 @@ export default async function HostingFlashSale() {
 
             <Link
               href={data.detailsHref}
-              className="mt-6 inline-flex w-fit items-center justify-center rounded-full bg-white px-5 py-2 text-sm  text-gray-800 !font-semibold hover:bg-white/90 focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+              className="mt-6 inline-flex w-fit hover:scale-[1.05] duration-300 items-center justify-center rounded-full bg-white px-6 py-2.5   text-gray-800 !font-semibold hover:bg-primary-dark hover:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white "
             >
               {data.detailsCtaLabel}
             </Link>

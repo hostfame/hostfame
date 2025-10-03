@@ -3,10 +3,7 @@ import SearchDomainName from "./searchDomainName/SearchDomainName";
 import SectionWrapper from "@/components/shared/wrappers/SectionWrapper";
 import WebHostingPartners from "./WebHostingPartners";
 import MoneyBack from "./MoneyBack";
-import { Pricing } from "../../../shared/pricing/Pricing";
-import WebHostingFeatures from "./WebHostingFeatures";
 import { Banner } from "@/components/shared/banners/Banner";
-import PromoTopBar from "@/components/shared/promo/PromoTopbar";
 import ReviewsSection from "./reviews/ReviewSection";
 import AdvancedFeatures from "./advance-features/AdvanceFeatures";
 import FaqSection from "../faqs/FaqSection";
@@ -15,9 +12,7 @@ import MigrateYourSite from "./MigrateYourSite";
 import WhatMakesUsDifferent from "./WhatMakesUsDifferent";
 import WhyChooseWebHosting from "./why-choose-web-hosting/WhyChooseWebHosting";
 import WhiteButton from "@/components/shared/html/WhiteButton";
-import Link from "next/link";
 import Image from "next/image";
-import { webHostingPricingData } from "@/data/pricing.data";
 import WebhostingPricing from "./WebhostingPricing";
 
 const WebHosting = () => {

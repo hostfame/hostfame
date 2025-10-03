@@ -14,6 +14,7 @@ import {
   FiCloud,
   FiGlobe,
 } from "react-icons/fi";
+import { classNameForWhiteHover } from "../../home/Home";
 
 type CTA = { label: string; href: string; variant?: "solid" | "ghost" };
 type Feature = { icon: JSX.Element; title: string; desc: string };
@@ -122,7 +123,7 @@ export default function ExpectPerformanceVps({
                 <Link
                   key={cta.label}
                   href={cta.href}
-                  className="inline-flex items-center gap-2 rounded-lg border border-primary px-4 py-2 text-sm font-medium text-primary hover:bg-primary/5 transition"
+                  className="inline-flex items-center gap-2 rounded-lg border border-primary px-4 py-2 text-sm font-medium text-primary hover:bg-primary/5 transition hover:scale-[1.05] duration-300"
                 >
                   {cta.label}
                   <FiArrowRight aria-hidden />
@@ -131,7 +132,7 @@ export default function ExpectPerformanceVps({
                 <Link
                   key={cta.label}
                   href={cta.href}
-                  className="inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white hover:bg-primary/90 transition"
+                  className={`inline-flex items-center gap-2 rounded-lg bg-primary px-4 py-2 text-sm font-medium text-white transition ${classNameForWhiteHover}`}
                 >
                   {cta.label}
                   <FiArrowRight aria-hidden />
