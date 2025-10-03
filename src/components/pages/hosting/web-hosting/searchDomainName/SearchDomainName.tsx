@@ -47,10 +47,10 @@ const SearchDomainName = () => {
               (pricing, idx) => (
                 <div
                   key={`${pricing.title}-${idx}`}
-                  className="relative rounded-2xl border  border-gray-200 bg-white p-4 shadow-sm hover:shadow-md transition"
+                  className="relative rounded-2xl border  border-gray-200 bg-white p-7 shadow-sm hover:shadow-md transition"
                 >
                   {idx === 0 && (
-                    <span className="absolute -top-2 right-3 rounded-full bg-teal-600 px-2 py-0.5 text-[10px] font-bold uppercase tracking-wide text-white shadow">
+                    <span className="absolute -top-3 right-3 rounded-full bg-teal-600 px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-white shadow text-lg">
                       Popular
                     </span>
                   )}
@@ -67,7 +67,7 @@ const SearchDomainName = () => {
                       {pricing.title}
                     </p>
 
-                    <p className=" text-gray-700 font-semibold">
+                    <p className=" text-gray-700 font-semibold text-lg">
                       {pricing.price}
                     </p>
                   </div>

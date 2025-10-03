@@ -19,7 +19,7 @@ const ManagedHostingHighlights = ({
   data: ManagedHostingHighlightsProps;
 }) => {
   return (
-    <section className="space-y-4 lg:space-y-6 py-6 md:py-8 lg:py-12 xl:py-16">
+    <section className="space-y-4 lg:space-y-6">
       {/* Section Header */}
       <section className="flex flex-col gap-2 items-center justify-center mx-auto text-center">
         <CenteredSectionHeader
@@ -37,7 +37,7 @@ const ManagedHostingHighlights = ({
               key={index}
               className="group p-6 rounded-2xl shadow-md border border-border-light-gray 
                          bg-gray-background hover:bg-primary 
-                         transition-all duration-500 transition hover:shadow-lg"
+                         transition-all duration-500 hover:shadow-lg"
             >
               <div className="flex flex-col items-center text-center space-y-3">
                 <div

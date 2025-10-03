@@ -17,7 +17,7 @@ export default function SpeedAndSupport() {
           {speedAndSupportData.features.map((feature) => (
             <div
               key={feature.id}
-              className="flex items-center   bg-card-background space-x-4 border border-border-light-gray hover:scale-[1.02]  duration-300 transition  p-4 rounded-xl relative"
+              className="flex items-center bg-card-background space-x-4 border border-border-light-gray hover:scale-[1.02]  duration-300 transition  p-4 rounded-xl relative"
             >
               <p className=" min-w-[10px] min-h-[10px]  absolute right-0 top-4 w-fit rounded-full bg-gradient-to-r from-primary-light to-primary animate-pulse"></p>
               <Image

@@ -2,7 +2,7 @@ import { PricingData } from "@/types/pricing.types";
 
 export const webHostingPricingBdtData: PricingData = {
   title: "Choose Your Perfect Plan",
-  yearlyDiscount: 58,
+  yearlyDiscount: 72,
   plans: [
     {
       id: "starter",
@@ -17,7 +17,7 @@ export const webHostingPricingBdtData: PricingData = {
       yearlyPriceBdt: 999,
       monthlyPrevPriceBdt: 299,
       yearlyPrevPriceBdt: 3588,
-      offerBdt: 73,
+      offerBdt: 72,
       ctaText: "Choose plan",
       renewalTextMonthlyBdt: "Renews at 2950tk/year",
       renewalTextYearlyBdt: "Renews at 2950tk/year",
