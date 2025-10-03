@@ -21,7 +21,6 @@ const Domain = () => {
         <WhyChooseHostfame />
       </SectionWrapper>
 
-      <FaqSection />
 
       <WhyChooseOurDomain />
       <SectionWrapper className="my-12 md:my-16">
@@ -31,6 +30,7 @@ const Domain = () => {
       <SectionWrapper className="mb-12 md:mb-16">
         <SupportBanner />
       </SectionWrapper>
+      <FaqSection />
     </div>
   );
 };

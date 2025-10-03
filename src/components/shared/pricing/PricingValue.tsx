@@ -13,7 +13,7 @@ interface PricingValueProps {
 }
 
 const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
-  const countryCode  = useIpProviderContextValue()
+  const countryCode = useIpProviderContextValue();
   const isBD = countryCode === "BD";
 
   const mainCurrency = isBD ? "৳" : plan.currency;
@@ -29,7 +29,7 @@ const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
   const prevPrice =
     billingPeriod === "yearly" ? yearlyPrevPrice : monthlyPrevPrice;
 
-  const perMonthText = billingPeriod === "yearly" ? "/year" : "/mo"
+  const perMonthText = billingPeriod === "yearly" ? "/year" : "/mo";
 
   const renewalText = isBD
     ? billingPeriod === "monthly"
@@ -111,6 +111,7 @@ const PricingValue = ({ plan, billingPeriod, children }: PricingValueProps) => {
       <div className="w-full flex flex-col space-y-2">
         {plan.ctaText && (
           <PlainButton
+            target="_blank"
             href={`${isBD ? plan.hrefBdt : plan.href}&${setCountryQuery}&${
               billingPeriod === "yearly"
                 ? "billingcycle=annually"
