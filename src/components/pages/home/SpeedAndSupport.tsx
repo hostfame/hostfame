@@ -39,14 +39,14 @@ export default function SpeedAndSupport() {
       </div>
 
       {/* Right Content */}
-      <div className="flex justify-center bg-gradient-to-br from-primary-light via-primary to-primary-dark rounded-2xl lg:rounded-4xl">
+      <div className="flex justify-center bg-gradient-to-br from-primary-light via-primary h-full to-primary-dark rounded-2xl lg:rounded-4xl">
         <Image
           src="/assets/gifs/hostfame-gif-circle-appear.gif" // put your image in public/images
           alt="WordPress Hosting"
-          width={550}
+          width={450}
           height={350}
           unoptimized
-          className="object-contain"
+          className="object-contain min-[1180px]:scale-[1.20]"
         />
       </div>
     </section>
