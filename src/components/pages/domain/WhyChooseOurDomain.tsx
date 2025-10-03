@@ -26,13 +26,13 @@ const content = {
       icon: LuSettings2,
       title: "Unified management",
       description:
-        "A streamlined dashboard to configure DNS, forwarding, privacy, and contacts—organized the way teams actually work.",
+        "A streamlined dashboard to configure DNS, forwarding, privacy, and contacts, organized the way teams actually work.",
     },
     {
       icon: LuSparkles,
       title: "Included essentials",
       description:
-        "Privacy protection, DNS management, and a starter site are bundled at no extra cost—ready from day one.",
+        "Privacy protection, DNS management, and a starter site are bundled at no extra cost, ready from day one.",
     },
     {
       icon: LuSearchCheck,
@@ -50,7 +50,7 @@ const content = {
       icon: LuLifeBuoy,
       title: "Expert support",
       description:
-        "Specialists who actually know domains—available by chat or email to help at every step of the way.",
+        "Specialists who actually know domains, available by chat or email to help at every step of the way.",
     },
   ] as Array<{ icon: IconType; title: string; description: string }>,
 } as const;

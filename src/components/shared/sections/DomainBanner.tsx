@@ -96,7 +96,7 @@ export default function DomainBanner() {
                   Instant Availability
                 </span>
                 <span className="rounded-full bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary ring-1 ring-primary/20">
-                  Teal Powered
+                  100% Secured
                 </span>
               </div>
 

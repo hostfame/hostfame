@@ -40,7 +40,6 @@ const Support = () => {
         <HostingSupport data={hostingSupportData} />
       </SectionWrapper>
 
-      <FaqSection />
 
       <ReviewsSection />
 
@@ -51,6 +50,7 @@ const Support = () => {
       <SectionWrapper className="my-12 md:my-16">
         <SupportBanner />
       </SectionWrapper>
+      <FaqSection />
     </section>
   );
 };
