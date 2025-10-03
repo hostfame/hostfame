@@ -13,6 +13,7 @@ import Image from "next/image";
 import WhiteButton from "@/components/shared/html/WhiteButton";
 import Link from "next/link";
 import DualPricing from "@/components/shared/sections/domain-hero/DualPricing";
+import VPSPricing from "@/components/shared/sections/VPSPricing";
 
 const VpsHosting = () => {
   return (
@@ -21,7 +22,7 @@ const VpsHosting = () => {
       <Banner
         topTitle={{
           content: "Managed VPS Hosting",
-          className: " bg-white/10 backdrop-blur-md",
+          className: " bg-white/10 backdrop-blur-md"
         }}
         heightClassName="h-fit min-[1024px]:!h-[880px] min-[1090px]:!h-[800px]  min-[1216px]:!h-[750px]"
         title={
@@ -45,14 +46,20 @@ const VpsHosting = () => {
         imageComponent={<AnimationBanner />}
       />
 
-      <SectionWrapper className="mb-12 lg:mb-12 mt-12 lg:-mt-16 !z-50" id="vps-hosting-pricing">
+      <SectionWrapper
+        className="mb-12 lg:mb-12 mt-12 lg:-mt-16 !z-50"
+        id="vps-hosting-pricing"
+      >
         <CloudVps />
       </SectionWrapper>
 
       <SectionWrapper className="my-12 md:my-16">
         <NextLevelVPS />
       </SectionWrapper>
-      
+
+      <SectionWrapper className="my-12 md:my-16" id="vps-pricing">
+        <VPSPricing />
+      </SectionWrapper>
 
       <SectionWrapper className="my-12 md:my-16">
         <PremiumVpsHosting />
@@ -63,7 +70,6 @@ const VpsHosting = () => {
       </SectionWrapper>
 
       <ReviewsSection />
-
 
       <SectionWrapper className="my-12 md:my-16">
         <SupportBanner />
@@ -100,12 +106,15 @@ export function AnimationBanner() {
 export function VpsHostingCtaSection() {
   return (
     <section className="flex max-[460px]:flex-col flex-row items-center gap-6">
-      <WhiteButton href="#vps-hosting-pricing" className="!rounded">View Plan</WhiteButton>
+      <WhiteButton href="#vps-hosting-pricing" className="!rounded">
+        View Plan
+      </WhiteButton>
       <Link
         href={"#"}
         className="flex text-lg items-center text-center border-b  lg:gap-x-2 text-white font-bold"
       >
-        Starting @ <DualPricing price="$19.99" pricebdt="৳1,999" />/mo
+        Starting @ <DualPricing price="$19.99" pricebdt="৳1,999" />
+        /mo
       </Link>
     </section>
   );

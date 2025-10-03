@@ -88,12 +88,12 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
       {isTransparent && <Offer />}
 
       <section className="max-w-7xl mx-auto px-[2%]">
-        <div className="mx-auto pr-4">
+        <div className="mx-auto lg:pr-4">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <div className="flex items-center">
-              <Link href="/" className="flex-shrink-0">
-                <Image src={logoSrc} alt="logo" width={170} height={170} />
+              <Link href="/">
+                <Image src={logoSrc} alt="logo" width={170} height={170} priority />
               </Link>
             </div>
 
