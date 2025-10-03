@@ -38,7 +38,7 @@ const defaultData: VpsData = {
     "Dedicated resources, stable throughput, and full root control,  made simple for teams and solo builders.",
   ctas: [
     { label: "Choose a plan", href: "#vps-hosting-pricing", variant: "solid" },
-    { label: "See specs", href: "#", variant: "ghost" },
+    { label: "See specs", href: "#vps-pricing", variant: "ghost" },
   ],
   highlights: [
     {

@@ -158,7 +158,7 @@ export const Banner: React.FC<BannerProps> = ({
         {/* Right visual */}
         {image && !imageComponent && (
           <div
-            className={`flex justify-center lg:justify-end relative w-full max-w-md md:max-w-lg lg:max-w-xl  ${classNameForImageWrapper}`}
+            className={`hidden lg:flex justify-center lg:justify-end relative w-full max-w-md md:max-w-lg lg:max-w-xl  ${classNameForImageWrapper}`}
           >
             <Image
               src={image}
@@ -171,7 +171,9 @@ export const Banner: React.FC<BannerProps> = ({
             />
           </div>
         )}
-        {imageComponent}
+        <div className="hidden lg:block">
+          {imageComponent}
+        </div>
       </SectionWrapper>
     </section>
   );
