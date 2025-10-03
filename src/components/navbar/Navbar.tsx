@@ -9,9 +9,7 @@ import { getIcon } from "./Icon";
 import Image from "next/image";
 import { Button } from "../shared/html/Button";
 import ToggleTheme from "../shared/ToggleTheme";
-import { text } from "stream/consumers";
 import Offer from "../shared/Offer";
-import { RxCross2 } from "react-icons/rx";
 import { useTheme } from "next-themes";
 
 const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
@@ -21,22 +19,24 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
   const pathname = usePathname();
   const { resolvedTheme } = useTheme();
 
-  const toggleMenu = () => setIsOpen(!isOpen);
+  const toggleMenu = () => setIsOpen((p) => !p);
 
   const toggleDropdown = (label: string) => {
-    if (window.innerWidth <= 768) {
-      setActiveDropdown(activeDropdown === label ? null : label);
+    if (typeof window !== "undefined" && window.innerWidth <= 768) {
+      setActiveDropdown((prev) => (prev === label ? null : label));
     }
   };
 
+  // track scroll for transparent / sticky behavior
   useEffect(() => {
     const onScroll = () =>
       setScrollY(window.scrollY || window.pageYOffset || 0);
-    onScroll(); // initialize
+    onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // close menus on desktop resize
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth > 768) {
@@ -48,12 +48,22 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // lock body scroll when drawer open
+  useEffect(() => {
+    if (!isOpen) return;
+    const prev = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = prev;
+    };
+  }, [isOpen]);
+
   const textClass = `${isTransparent ? "text-white" : "text-text"}`;
   const activeClassName = `${isTransparent ? "" : "text-teal-600"}`;
   const textHoverClass = `${isTransparent ? "" : "hover:text-teal-600"}`;
   const isDark = resolvedTheme === "dark";
 
-  // ✅ White logo in dark mode, or when navbar is transparent
+  // white logo in dark or transparent
   const logoSrc =
     isTransparent || isDark
       ? "/assets/hostfame-white.webp"
@@ -61,25 +71,26 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
 
   return (
     <nav
-      className={`  duration-300    top-0 z-50 ${isTransparent
-        ? ` bg-transparent ${scrollY > 70
+      className={`duration-300 top-0 z-50 ${isTransparent
+        ? `bg-transparent ${scrollY > 70
           ? "opacity-0 pointer-events-none"
-          : " opacity-100 h-auto pointer-events-auto"
+          : "opacity-100 h-auto pointer-events-auto"
         }`
         : `bg-background sticky shadow-lg border-b border-border-light-gray ${scrollY < 70
           ? "h-0 opacity-0 pointer-events-none"
-          : " opacity-100 h-auto pointer-events-auto"
+          : "opacity-100 h-auto pointer-events-auto"
         }`
         }`}
     >
       {isTransparent && <Offer />}
-      <section className=" max-w-7xl mx-auto  px-[2%] ">
-        <div className=" mx-auto pr-4 ">
+
+      <section className="max-w-7xl mx-auto px-[2%]">
+        <div className="mx-auto pr-4">
           <div className="flex justify-between items-center h-16">
             {/* Logo */}
             <div className="flex items-center">
               <Link href="/" className="flex-shrink-0">
-                <Image src={logoSrc} alt={"logo"} width={170} height={170} />
+                <Image src={logoSrc} alt="logo" width={170} height={170} />
               </Link>
             </div>
 
@@ -101,9 +112,9 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
                         <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
                       </button>
                       <div
-                        className={` w-[400px] absolute -left-1/2 mt-2 bg-gray-background rounded-xl shadow-2xl border border-background py-4 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform group-hover:-translate-y-1`}
+                        className={`w-[400px] absolute -left-1/2 mt-2 bg-gray-background rounded-xl shadow-2xl border border-background py-4 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform group-hover:-translate-y-1`}
                       >
-                        <div className={`grid grid-cols-2 gap-1 px-4`}>
+                        <div className="grid grid-cols-2 gap-1 px-4">
                           {item.subItems.map((subItem) => (
                             <Link
                               key={subItem.label}
@@ -113,11 +124,11 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
                                 : `text-text hover:text-white`
                                 }`}
                             >
-                              <div className={`flex-shrink-0 mr-3 mt-0.5 `}>
+                              <div className="flex-shrink-0 mr-3 mt-0.5">
                                 {getIcon(subItem.icon)}
                               </div>
                               <div>
-                                <div className={`text-sm font-semibold `}>
+                                <div className="text-sm font-semibold">
                                   {subItem.label}
                                 </div>
                                 <div className="text-xs mt-0.5 text-nowrap">
@@ -133,7 +144,8 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
                     <Link
                       href={item.href!}
                       className={`px-3 py-2 text-sm font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 ${item.href === pathname
-                        ? `${!isTransparent ? "text-teal-600" : "text-white"}`
+                        ? `${!isTransparent ? "text-teal-600" : "text-white"
+                        }`
                         : `${textClass} ${textHoverClass}`
                         }`}
                     >
@@ -143,18 +155,17 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
                 </div>
               ))}
 
-              {/* Dashboard Button */}
+              {/* Desktop Right */}
               <div className="hidden items-center justify-end gap-x-4 min-[840px]:flex">
                 <ToggleTheme
                   classNameForMoonIcon={`${isTransparent ? "!text-white" : ""}`}
                   classNameForSunIcon={`${isTransparent ? "!text-white" : ""}`}
                   className={`${isTransparent ? "!border-white" : ""}`}
                 />
-
                 <Button
                   href="/dashboard"
                   size="sm"
-                  className={`block w-full !rounded-lg`}
+                  className="block w-full !rounded-lg"
                   onClick={() => setIsOpen(false)}
                   variant={isTransparent ? "whiteBordered" : "bordered"}
                 >
@@ -173,6 +184,7 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
               <button
                 onClick={toggleMenu}
                 className="text-text hover:text-teal-600 p-2 transition-colors duration-200"
+                aria-label="Open menu"
               >
                 {isOpen ? (
                   <X className="h-6 w-6 text-text" />
@@ -186,98 +198,136 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
           </div>
         </div>
 
-        {/* Mobile Menu */}
+        {/* MOBILE: Right Drawer (same-to-same as screenshot) */}
         <div
-          className={`min-[840px]:hidden fixed inset-0 top-0 bg-background border-t border-border-light-gray overflow-y-auto transition-all duration-300 z-40 ${isOpen ? "opacity-100" : "opacity-0 pointer-events-none"
-            } `}
+          className={`min-[840px]:hidden fixed inset-0 z-40 transition-opacity duration-300 ${isOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+            }`}
         >
-          <section className="flex justify-end p-4">
-            <RxCross2
-              onClick={() => setIsOpen(false)}
-              className=" text-text"
-              size={20}
-            />
-          </section>
-          <div className="px-4 pt-4 pb-20 space-y-1 h-full">
-            {navItems.map((item) => (
-              <div key={item.label}>
-                {item.subItems ? (
-                  <>
-                    <button
-                      onClick={() => toggleDropdown(item.label)}
-                      className={`w-full flex items-center justify-between px-3 py-3 text-base font-medium rounded-md transition-colors duration-300 ${item.subItems.some(
-                        (subItem) => subItem.href === pathname
-                      )
-                        ? "text-teal-600"
-                        : "text-text hover:text-teal-600 hover:bg-primary-light"
+          {/* Backdrop */}
+          <div
+            onClick={() => setIsOpen(false)}
+            className={`absolute inset-0 bg-black/40 transition-opacity duration-300 ${isOpen ? "opacity-100" : "opacity-0"
+              }`}
+          />
+
+          {/* Drawer (opens from the RIGHT) */}
+          <aside
+            role="dialog"
+            aria-modal="true"
+            className={`
+              absolute right-0 top-0 h-full w-[75%] max-w-[420px]
+              bg-background shadow-2xl border-l border-border-light-gray
+              transition-transform duration-300 will-change-transform
+              ${isOpen ? "translate-x-0" : "translate-x-full"}
+            `}
+            onClick={(e) => e.stopPropagation()}
+          >
+            {/* Small green square X (top-left inside drawer) */}
+            <div className="relative">
+              <button
+                onClick={() => setIsOpen(false)}
+                aria-label="Close menu"
+                className="h-10 w-10 bg-primary flex items-center justify-center"
+              >
+                <X className="h-5 w-5 text-white" />
+              </button>
+            </div>
+
+            {/* Content */}
+            <div className=" px-8 py-12 overflow-y-auto h-[calc(100%-56px)] space-y-4">
+              {navItems.map((item) => (
+                <div key={item.label} className="">
+                  {item.subItems ? (
+                    <>
+                      {/* Section header (Hosting, Business, Help Center…) */}
+                      <button
+                        onClick={() => toggleDropdown(item.label)}
+                        className={`w-full flex items-center justify-between px-2 py-3
+                          text-[15px] font-semibold rounded-md
+                          ${item.subItems.some((s) => s.href === pathname)
+                            ? "text-teal-600"
+                            : "text-text hover:text-teal-600"
+                          }`}
+                      >
+                        <span>{item.label}</span>
+                        <ChevronDown
+                          className={`h-4 w-4 transition-transform duration-300 ${activeDropdown === item.label ? "rotate-180" : ""
+                            }`}
+                        />
+                      </button>
+
+                      {/* Sub-items */}
+                      <div
+                        className={`pl-2 mt-1 overflow-hidden transition-[max-height,opacity] duration-300
+                          ${activeDropdown === item.label
+                            ? "max-h-[600px] opacity-100"
+                            : "max-h-0 opacity-0"
+                          }`}
+                      >
+                        <div className="">
+                          <div className="space-y-2">
+                            {item.subItems.map((sub, idx) => {
+                              const isActive = sub.href === pathname;
+                              const isLast = idx === item.subItems.length - 1;
+
+                              return (
+                                <div className=" ">
+                                  <hr className="border-gray-200" />
+                                  <Link
+                                    href={sub.href}
+                                    onClick={() => setIsOpen(false)}
+                                    className={`flex items-start gap-3 px-5 py-2 
+                                      ${isActive ? "text-teal-600 rounded-md"
+                                        : "text-text hover:text-teal-600"
+                                      }`}
+                                  >
+                                    <span className={` ${isActive ? "text-teal-600" : "text-text"}`}>
+                                      {getIcon(sub.icon)}
+                                    </span>
+
+                                    <div className="flex flex-col">
+                                      <span className="text-sm font-medium">{sub.label}</span>
+                                      {sub.description && (
+                                        <span className="text-xs opacity-80">{sub.description}</span>
+                                      )}
+                                    </div>
+                                  </Link>
+                                </div>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      </div>
+                    </>
+                  ) : (
+                    <Link
+                      href={item.href!}
+                      onClick={() => setIsOpen(false)}
+                      className={`block px-2 py-3 text-[15px] font-semibold rounded-md
+                        ${item.href === pathname
+                          ? "text-teal-600"
+                          : "text-text hover:text-teal-600"
                         }`}
                     >
                       {item.label}
-                      <ChevronDown
-                        className={`h-4 w-4 transition-transform duration-300 ${activeDropdown === item.label ? "rotate-180" : ""
-                          }`}
-                      />
-                    </button>
-                    <div
-                      className={`pl-4 space-y-1 mt-1 overflow-hidden transition-all duration-300 ${activeDropdown === item.label
-                        ? "max-h-[500px] opacity-100"
-                        : "max-h-0 opacity-0"
-                        }`}
-                    >
-                      {item.subItems.map((subItem) => (
-                        <Link
-                          key={subItem.label}
-                          href={subItem.href}
-                          className={`block px-3 py-2 text-sm rounded-md transition-colors duration-300 ${subItem.href === pathname
-                            ? "text-teal-600"
-                            : "text-text hover:text-teal-600 hover:bg-primary-light"
-                            }`}
-                          onClick={() => setIsOpen(false)}
-                        >
-                          <span className="flex items-center gap-2">
-                            <span
-                              className={
-                                subItem.href === pathname
-                                  ? "text-teal-600"
-                                  : "text-text"
-                              }
-                            >
-                              {getIcon(subItem.icon)}
-                            </span>
-                            {subItem.label}
-                          </span>
-                        </Link>
-                      ))}
-                    </div>
-                  </>
-                ) : (
-                  <Link
-                    href={item.href!}
-                    className={`block px-3 py-3 text-base font-medium rounded-md transition-colors duration-300 ${item.href === pathname
-                      ? "text-teal-600"
-                      : "text-text hover:text-teal-600 hover:bg-primary-light"
-                      }`}
-                    onClick={() => setIsOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                )}
+                    </Link>
+                  )}
+                </div>
+              ))}
+
+              {/* Bottom action */}
+              <div className="border-t border-border-light-gray pt-4">
+                <Button
+                  href="/dashboard"
+                  className="w-full !rounded-lg text-text"
+                  variant={"dark"}
+                  onClick={() => setIsOpen(false)}
+                >
+                  Dashboard
+                </Button>
               </div>
-            ))}
-            <div
-              className={`pt-4 mt-4  ${isTransparent ? "" : "border-t border-border-light-gray"
-                }`}
-            >
-              <Button
-                href="/dashboard"
-                className={`block w-full  `}
-                onClick={() => setIsOpen(false)}
-                variant={isTransparent ? "whiteBordered" : "dark"}
-              >
-                Dashboardadsf
-              </Button>
             </div>
-          </div>
+          </aside>
         </div>
       </section>
     </nav>
