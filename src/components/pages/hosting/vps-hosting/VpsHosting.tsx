@@ -23,6 +23,7 @@ const VpsHosting = () => {
           content: "Managed VPS Hosting",
           className: " bg-white/10 backdrop-blur-md",
         }}
+        heightClassName="h-fit min-[1024px]:!h-[880px] min-[1090px]:!h-[800px]  min-[1216px]:!h-[750px]"
         title={
           <>
             High-Performance
@@ -44,13 +45,14 @@ const VpsHosting = () => {
         imageComponent={<AnimationBanner />}
       />
 
+      <SectionWrapper className="mb-12 lg:mb-12 mt-12 lg:-mt-16 !z-50" id="vps-hosting-pricing">
+        <CloudVps />
+      </SectionWrapper>
+
       <SectionWrapper className="my-12 md:my-16">
         <NextLevelVPS />
       </SectionWrapper>
       
-      <SectionWrapper className="my-12 md:my-16">
-        <CloudVps />
-      </SectionWrapper>
 
       <SectionWrapper className="my-12 md:my-16">
         <PremiumVpsHosting />
@@ -98,7 +100,7 @@ export function AnimationBanner() {
 export function VpsHostingCtaSection() {
   return (
     <section className="flex max-[460px]:flex-col flex-row items-center gap-6">
-      <WhiteButton className="!rounded">View Plan</WhiteButton>
+      <WhiteButton href="#vps-hosting-pricing" className="!rounded">View Plan</WhiteButton>
       <Link
         href={"#"}
         className="flex text-lg items-center text-center border-b  lg:gap-x-2 text-white font-bold"

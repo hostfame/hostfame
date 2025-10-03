@@ -73,13 +73,13 @@ export default function ManagedHostingThatGrows() {
           {managedHostingData.benefits.map((b, i) => (
             <li
               key={i}
-              className="group relative overflow-hidden rounded-2xl border border-border-light-gray p-6 shadow-sm hover:-translate-y-0.5 hover:shadow transition-all duration-300"
+              className="group relative overflow-hidden rounded-2xl border border-border-light-gray p-6 shadow-sm hover:-translate-y-0.5 hover:shadow  snap-start duration-500 transition hover:bg-gradient-to-r hover:from-primary hover:to-primary-light"
             >
               {/* base gradient */}
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-card-background to-card-background transition-opacity duration-500 opacity-100 group-hover:opacity-0" />
+              {/* <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-card-background to-card-background transition-opacity duration-500 opacity-100 group-hover:opacity-0" /> */}
 
               {/* hover gradient */}
-              <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-primary-light to-primary-extralight transition-opacity duration-500 opacity-0 group-hover:opacity-100" />
+              {/* <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-primary-light to-primary-extralight transition-opacity duration-500 opacity-0 group-hover:opacity-100" /> */}
 
               <div className="relative flex items-start gap-4">
                 {/* Icon chip with 'primary' accent */}
@@ -97,7 +97,7 @@ export default function ManagedHostingThatGrows() {
               </div>
 
               {/* subtle bottom accent bar using 'primary' */}
-              <div className="relative h-0.5 w-10 rounded-full bg-primary/70 mt-4" />
+              <div className="relative h-0.5 w-10 rounded-full bg-primary/70 group-hover:bg-white mt-4" />
             </li>
           ))}
         </ul>

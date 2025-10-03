@@ -21,7 +21,7 @@ export const ContactAskAQuestionData = {
   },
   cta: {
     label: 'Book a quick chat',
-    href: '/contact',
+    href: 'https://tawk.to/chat/67f13177a1155b1916a6f189/1io32ifig',
   },
   preferText: "Prefer email? We’ll follow up wherever you like."
 };

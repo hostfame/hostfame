@@ -4,7 +4,7 @@ import {
   FiPhoneCall,
   FiMessageCircle,
   FiCalendar,
-  FiArrowRight
+  FiArrowRight,
 } from "react-icons/fi";
 import Link from "next/link";
 import { ReactNode } from "react";
@@ -46,23 +46,23 @@ const data: ContactTeaserData = {
     { icon: <FiPhoneCall className="h-5 w-5" />, text: "Free discovery call" },
     {
       icon: <FiMessageCircle className="h-5 w-5" />,
-      text: "No bots, experts only"
+      text: "No bots, experts only",
     },
-    { icon: <FiCalendar className="h-5 w-5" />, text: "Same-day scheduling" }
+    { icon: <FiCalendar className="h-5 w-5" />, text: "Same-day scheduling" },
   ],
   stats: [
     { label: "Avg. first response", value: "< 15 min" },
     { label: "Customer satisfaction", value: "98%" },
-    { label: "Time zones covered", value: "24/7" }
+    { label: "Time zones covered", value: "24/7" },
   ],
   image: {
     src: "/assets/contact-form.png",
-    alt: "Envelope and paper plane illustration"
+    alt: "Envelope and paper plane illustration",
   },
   cta: {
     label: "Book a quick chat",
-    href: "/contact" // change if needed
-  }
+    href: "https://tawk.to/chat/67f13177a1155b1916a6f189/1io32ifig", // change if needed
+  },
 };
 
 export default function AskAQuestion() {
@@ -121,6 +121,7 @@ export default function AskAQuestion() {
             {/* CTA */}
             <div className="mt-7 flex items-center gap-4">
               <Link
+                target="_blank"
                 href={ContactAskAQuestionData.cta.href}
                 className="group inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold bg-toggle text-background  hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-text/30  duration-300 hover:scale-[1.05]"
               >

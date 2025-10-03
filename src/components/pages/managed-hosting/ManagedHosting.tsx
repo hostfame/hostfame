@@ -24,7 +24,6 @@ const ManagedHosting = () => {
           content: "Managed VPS Hosting",
           className: " bg-white/10 backdrop-blur-md",
         }}
-
         title={
           <>
             Powerful
@@ -46,7 +45,7 @@ const ManagedHosting = () => {
         // heightClassName="h-fit xl:h-[660px] xl:max-h-[660px]"
         ctaSection={<VpsHostingCtaSection />}
       />
-      <SectionWrapper className="my-12 lg:my-16">
+      <SectionWrapper className="my-12 lg:my-16" id="manage-hosting-pricing">
         <Pricing data={manageHostingPricingData} toggleButton={true} />
       </SectionWrapper>
 
@@ -58,14 +57,12 @@ const ManagedHosting = () => {
         <WhatAreSpecials />
       </SectionWrapper>
 
-
       <ReviewsSection />
       {/* <WhatAreSpecials /> */}
 
       <SectionWrapper className="my-12 md:my-16">
         <PrioritySupport />
       </SectionWrapper>
-
 
       <SectionWrapper className="my-12 md:my-16">
         <SupportBanner />
@@ -78,12 +75,15 @@ const ManagedHosting = () => {
 export function VpsHostingCtaSection() {
   return (
     <section className="flex max-[460px]:flex-col flex-row items-center gap-6">
-      <WhiteButton className="!rounded">View Plan</WhiteButton>
+      <WhiteButton href="#manage-hosting-pricing" className="!rounded">
+        View Plan
+      </WhiteButton>
       <Link
         href={"#"}
         className="flex text-lg items-center text-center border-b  lg:gap-x-2 text-white font-bold"
       >
-        Starting @ <DualPricing price="$27.99" pricebdt="৳2,799" />/mo
+        Starting @ <DualPricing price="$27.99" pricebdt="৳2,799" />
+        /mo
       </Link>
     </section>
   );

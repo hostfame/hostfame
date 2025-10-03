@@ -6,6 +6,7 @@ import { Button } from "../html/Button";
 import CenteredSectionHeader from "../headers/CenteredSectionHeader";
 import DualPricing from "./domain-hero/DualPricing";
 import { TiersData } from "@/data/cloudVps.data";
+import CloudeVpsPurchasePlanBtn from "./CloudeVpsPurchasePlanBtn";
 
 const FEATURE_META = [
   {
@@ -30,7 +31,7 @@ const FEATURE_META = [
   },
 ];
 
-const purchaseUrl = `https://my.hostfame.com/cart.php?a=confproduct&i={{index}}`
+const purchaseUrl = `https://my.hostfame.com/cart.php?a=confproduct&i={{index}}`;
 
 export default function CloudVps() {
   // default to Starter Plus to mirror your original state
@@ -41,7 +42,7 @@ export default function CloudVps() {
 
   return (
     <section
-      className="w-full rounded-2xl border p-6 md:p-10 shadow-sm bg-white-background border-border-light-gray text-text"
+      className="w-full rounded-2xl !z-50 border p-6 md:p-10 shadow-sm bg-white-background border-border-light-gray text-text"
       aria-label="VPS pricing"
     >
       {/* Headline */}
@@ -62,19 +63,20 @@ export default function CloudVps() {
       <div className="mt-8">
         <div className="mx-auto max-w-3xl">
           <div
-            className="relative text-primary-light"
+            className="relative text-primary-light py-4" // <— adds vertical space for a comfy hitbox
             style={{ ["--p" as any]: `${percent}%` }}
           >
-            {/* Real input (a11y/keyboard). Hidden visually, but on top for all pointer events */}
+            {/* Real input (a11y/keyboard/touch). Full overlay, highest z-index */}
             <input
               type="range"
               min={0}
               max={TiersData.length - 1}
               step={1}
               value={step}
-              onChange={(e) => setStep(parseInt(e.target.value, 10))}
+              onChange={(e) => setStep(e.target.valueAsNumber)}
               aria-label="Select plan tier"
-              className="peer absolute inset-0 h-8 w-full opacity-0 cursor-pointer"
+              // full overlay + big hit area + prevents page scroll on touch-drag
+              className="peer absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10 touch-none"
             />
 
             {/* Visual track */}
@@ -89,7 +91,7 @@ export default function CloudVps() {
               <div
                 className={[
                   "absolute top-1/2 left-[var(--p)] -translate-x-1/2 -translate-y-1/2",
-                  "h-[22px] w-[22px] rounded-full bg-white border-2 border-current",
+                  "h-[30px] w-[30px] rounded-full bg-white border-2 border-current",
                   "shadow-[0_0_0_6px_rgba(16,185,129,0.12)]",
                   "transition-[left] duration-300 ease-in-out motion-reduce:transition-none",
                   "peer-focus-visible:ring-4 peer-focus-visible:ring-[rgba(16,185,129,0.25)]",
@@ -100,39 +102,41 @@ export default function CloudVps() {
             </div>
           </div>
 
-          {/* Tick marks + labels */}
-          <div className="relative mt-3">
-            <div className="flex justify-between items-center">
-              {TiersData.map((t, i) => {
-                const active = i === step;
-                return (
-                  <button
-                    key={t.key}
-                    type="button"
-                    onClick={() => setStep(i)}
-                    className={`group w-fit flex flex-col items-center ${t.className}`}
-                    aria-label={`Select ${t.label}`}
+          {/* Tick marks + labels (from my previous message, stays aligned) */}
+          <div className="relative mt-3 h-10">
+            {TiersData.map((t, i) => {
+              const active = i === step;
+              const left = `${(i / (TiersData.length - 1)) * 100}%`;
+              return (
+                <button
+                  key={t.key}
+                  type="button"
+                  onClick={() => setStep(i)}
+                  aria-label={`Select ${t.label}`}
+                  className={[
+                    "absolute -translate-x-1/2 flex flex-col items-center",
+                  ].join(" ")}
+                  style={{ left }}
+                >
+                  <span
+                    className={[
+                      "h-2 w-2 rounded-full transition-colors duration-300",
+                      active ? "bg-primary-light" : "bg-border-light-gray",
+                    ].join(" ")}
+                  />
+                  <span
+                    className={[
+                      "mt-2 text-xs font-medium tracking-wide transition-colors duration-300 whitespace-nowrap text-center",
+                      active
+                        ? "text-primary-light"
+                        : "text-gray-500 hover:text-text",
+                    ].join(" ")}
                   >
-                    <span
-                      className={[
-                        "h-2 w-2 rounded-full transition-colors duration-300",
-                        active ? "bg-primary-light" : "bg-border-light-gray",
-                      ].join(" ")}
-                    />
-                    <span
-                      className={[
-                        "mt-2 text-xs font-medium tracking-wide transition-colors duration-300",
-                        active
-                          ? "text-primary-light"
-                          : "text-gray-500 group-hover:text-text",
-                      ].join(" ")}
-                    >
-                      {t.label}
-                    </span>
-                  </button>
-                );
-              })}
-            </div>
+                    {t.label}
+                  </span>
+                </button>
+              );
+            })}
           </div>
         </div>
       </div>
@@ -142,7 +146,7 @@ export default function CloudVps() {
         {FEATURE_META.map((f) => (
           <li
             key={f.k}
-            className="group rounded-xl border bg-gradient-to-t from-primary-light to-primary-extralight border-border-light-gray px-4 py-5 transition-transform duration-200 hover:-translate-y-0.5 will-change-transform"
+            className="group rounded-xl border  border-border-light-gray px-4 py-5  hover:-translate-y-1.5 bg-gradient-to-r from-primary to-primary-light group snap-start duration-700 transition"
           >
             <div className="flex items-center gap-3">
               <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-border-light-gray bg-gray-background">
@@ -172,9 +176,7 @@ export default function CloudVps() {
             className="text-2xl font-semibold !text-text"
           />
         </div>
-        <Button target="_blank" href={purchaseUrl.replace("{{index}}", `${step + 1}`)} variant="bordered" size="sm">
-          Purchase Plan
-        </Button>
+        <CloudeVpsPurchasePlanBtn href={current.href} />
       </div>
 
       {/* Local CSS for tiny animations & reduced-motion support */}

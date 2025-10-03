@@ -101,7 +101,8 @@ export default function VpsPerformance() {
           {nextLevelVpsData.features.map((f) => (
             <article
               key={f.id}
-              className=" space-y-4 group rounded-2xl border border-border-light-gray bg-card-background p-5 transition-transform hover:-translate-y-0.5 hover:bg-gradient-to-t from-primary-light to-primary-extralight shadow-lg"
+              className=" space-y-4 group rounded-2xl border border-border-light-gray bg-card-background p-5  hover:-translate-y-1 hover:bg-gradient-to-r hover:from-primary hover:to-primary-light
+                group snap-start duration-700 transition shadow-lg"
             >
               <div className=" inline-flex items-center justify-center rounded-lg bg-white-background p-3 text-toggle shadow-sm ring-1 ring-inset ring-border-light-gray transition-all group-hover:shadow-lg">
                 {f.icon}
