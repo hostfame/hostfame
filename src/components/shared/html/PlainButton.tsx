@@ -11,6 +11,7 @@ export type PlainButtonProps = {
   fullWidth?: boolean;
   variant?: "dark" | "light" | "bordered";
   className?: string;
+  target?: React.HTMLAttributeAnchorTarget | undefined;
 };
 
 export const PlainButton: React.FC<PlainButtonProps> = ({
@@ -22,6 +23,7 @@ export const PlainButton: React.FC<PlainButtonProps> = ({
   fullWidth = false,
   variant = "dark",
   className = "",
+  target = "_self",
 }) => {
   const base =
     "inline-flex items-center justify-center gap-2 relative font-semibold rounded-lg duration-500 transition hover:scale-105 shadow-lg";
@@ -36,8 +38,8 @@ export const PlainButton: React.FC<PlainButtonProps> = ({
     variant === "dark"
       ? " text-white bg-primary hover:bg-primary/90"
       : variant === "light"
-        ? "text-white bg-primary hover:bg-primary"
-        : "border-2 border-primary hover:bg-primary/90 hover:text-white text-primary hover:text-white";
+      ? "text-white bg-primary hover:bg-primary"
+      : "border-2 border-primary hover:bg-primary/90  text-primary hover:text-white";
 
   const content = (
     <>
@@ -49,9 +51,11 @@ export const PlainButton: React.FC<PlainButtonProps> = ({
   if (href) {
     return (
       <Link
+        target={target}
         href={href}
-        className={`${base} ${sizeClasses} ${variantClasses} ${fullWidth ? "w-full" : ""
-          } ${className}`}
+        className={`${base} ${sizeClasses} ${variantClasses} ${
+          fullWidth ? "w-full" : ""
+        } ${className}`}
       >
         {content}
       </Link>
@@ -62,8 +66,9 @@ export const PlainButton: React.FC<PlainButtonProps> = ({
     <button
       type="button"
       onClick={onClick}
-      className={`${base} ${sizeClasses} ${variantClasses} ${fullWidth ? "w-full" : ""
-        } ${className}`}
+      className={`${base} ${sizeClasses} ${variantClasses} ${
+        fullWidth ? "w-full" : ""
+      } ${className}`}
     >
       {content}
       {/* Glow effect only for dark variant */}
