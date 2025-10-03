@@ -190,7 +190,7 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
                   <X className="h-6 w-6 text-text" />
                 ) : (
                   <Menu
-                    className={`h-6 w-6 ${isTransparent ? "text-text" : ""}`}
+                    className={`h-6 w-6 ${isTransparent ? "text-white" : "text-text"}`}
                   />
                 )}
               </button>
