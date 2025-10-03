@@ -91,9 +91,10 @@ export default function WhyChooseHostFame() {
             {/* image */}
             <div className="relative aspect-[4/3] w-full">
               <Image
-                src="https://hostfame.com/wp-content/uploads/2024/03/contact-form.png.webp"
+                src="/assets/gifs/hostfame-gif-path-follow.gif"
                 alt="Contact form illustration"
                 fill
+                unoptimized
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
                 className="rounded-2xl object-contain"
               />
