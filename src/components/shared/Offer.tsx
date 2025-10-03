@@ -8,8 +8,8 @@ const Offer = () => {
 
   const text =
     countryCode === "BD"
-      ? "Only ৳999/year Hosting with 24/7 Support"
-      : "Only $9.99/year Hosting with 24/7 Support";
+      ? ".COM Domains Only ৳888/Year"
+      : ".COM Domains Only $8.88/Year";
 
   return (
     <section className="flex font-bold  z-40 bg-offer-bg p-2 text-offer-text  w-full justify-center items-center gap-x-1 text-xs">
