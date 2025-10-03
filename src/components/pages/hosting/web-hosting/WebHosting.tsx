@@ -14,6 +14,7 @@ import WhyChooseWebHosting from "./why-choose-web-hosting/WhyChooseWebHosting";
 import WhiteButton from "@/components/shared/html/WhiteButton";
 import Image from "next/image";
 import WebhostingPricing from "./WebhostingPricing";
+import SupportBanner from "@/components/shared/sections/SupportBanner";
 
 const WebHosting = () => {
   return (
@@ -21,7 +22,7 @@ const WebHosting = () => {
       {/* <PromoTopBar /> */}
       <Banner
         topTitle={{
-          content: "Limited Offer: 90% OFF Hosting",
+          content: "Limited Offer: 72% OFF Hosting",
           className: " bg-white/10 backdrop-blur-md",
         }}
         // heightClassName="h-fit xl:h-[830px] xl:max-h-[830px]"
@@ -40,7 +41,7 @@ const WebHosting = () => {
         description={
           <section className=" space-y-6">
             <p>
-              Perfect for local businesses, stores, and pros who need speed,
+              Perfect for local businesses, stores, and pros <br />who need speed,
               uptime, and real human help.
             </p>
 
@@ -91,7 +92,7 @@ const WebHosting = () => {
         <WhyChooseWebHosting />
       </SectionWrapper>
 
-      <SectionWrapper className="my-12 md:my-16">
+      <SectionWrapper className="mt-12 md:mt-16">
         <MoneyBack />
       </SectionWrapper>
 
@@ -111,6 +112,10 @@ const WebHosting = () => {
 
       <SectionWrapper className="my-12 md:my-16">
         <MigrateYourSite />
+      </SectionWrapper>
+
+      <SectionWrapper className="my-12 md:my-16">
+        <SupportBanner />
       </SectionWrapper>
 
       <FaqSection />

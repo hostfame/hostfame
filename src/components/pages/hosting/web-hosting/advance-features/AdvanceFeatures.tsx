@@ -17,12 +17,20 @@ export default function AdvancedFeatures({
         {/* Left illustration */}
         <div className="flex justify-center lg:justify-start">
           <div className="relative h-[260px] w-[360px] sm:h-[320px] sm:w-[440px] lg:h-[360px] lg:w-[520px]">
-            <Image
+            {/* <Image
               src="/assets/advance-feature.svg"
               alt="Advanced features"
               fill
               className="object-contain"
               priority
+            /> */}
+            <Image
+              src="/assets/gifs/hostfame-gif-circle-appear.gif" // put your image in public/images
+              alt="WordPress Hosting"
+              width={450}
+              height={350}
+              unoptimized
+              className="object-contain min-[1180px]:scale-[1.20]"
             />
           </div>
         </div>

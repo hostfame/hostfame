@@ -1,5 +1,10 @@
 import { Review } from "@/components/pages/hosting/web-hosting/reviews/ReviewCarousel";
 
+export const review = {
+  description: "Getting positive reviews from hundreds of clients means a lot to us. We care about every feedback and adjust our services accordingly.",
+  moreReviewHref: "https://www.google.com/search?q=hostfame&oq=hostfame&gs_lcrp=EgZjaHJvbWUyCQgAEEUYORiABDIGCAEQRRg8MggIAhBFGCcYOzIHCAMQABjvBTIKCAQQABiABBiiBDIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPNIBCDI1NDNqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8#lrd=0x5335fb8d52d9de1b:0x434717d7d570f32c"
+}
+
 export const reviewsData: Review[] = [
   {
     name: "Mofassir Ud Dowla Nishan",
@@ -11,7 +16,7 @@ export const reviewsData: Review[] = [
     name: "Mejbah Ahmed Fahim",
     image: "/assets/testimonials/mejbah-ahmed-fahim.png",
     rating: 5,
-    text: "Best host I’ve used, fast, stable, and trustworthy. The support team deserves special credit for always going the extra mile to resolve issues. It’s easy for me to recommend Hostnin for both personal and business websites.",
+    text: "Best host I’ve used, fast, stable, and trustworthy. The support team deserves special credit for always going the extra mile to resolve issues. It’s easy for me to recommend Hostfame for both personal and business websites.",
   },
   {
     name: "Khandaker R Zaman",
@@ -23,7 +28,7 @@ export const reviewsData: Review[] = [
     name: "Md Helal Uddin",
     image: "/assets/testimonials/md-helal-uddin.png",
     rating: 5,
-    text: "Local yet world-class, Hostnin makes domain and hosting setup simple and professional. Their servers are stable with almost no downtime, and the guidance from support is clear. I’m happy with the overall experience so far.",
+    text: "Local yet world-class, Hostfame makes domain and hosting setup simple and professional. Their servers are stable with almost no downtime, and the guidance from support is clear. I’m happy with the overall experience so far.",
   },
   {
     name: "Sadananda Mondal",

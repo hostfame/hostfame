@@ -45,6 +45,7 @@ export function Pricing({
             billingPeriod={billingPeriod}
             onToggle={setBillingPeriod}
             yearlyDiscount={data.yearlyDiscount}
+            yearlyDiscountBdt={data.yearlyDiscountBdt}
           />
         )}
 

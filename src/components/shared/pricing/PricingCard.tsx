@@ -126,7 +126,7 @@ export function PricingCard({
                         <Tooltip
                           id={id}
                           place="right"
-                          className=" max-w-[200px] text-wrap break-words !opacity-100 !bg-opacity-100 !bg-gradient-to-b from-primary-light to-primary !rounded-xl"
+                          className=" max-w-[200px] text-wrap break-words !opacity-100 !bg-opacity-100 !bg-gradient-to-b from-primary-light to-primary !rounded-xl z-10"
                         />
                         <div
                           className={`p-1 rounded-full transition-all duration-200 ${

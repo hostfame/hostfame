@@ -15,7 +15,7 @@ type AllHostingPlansProps = {
 
 const AllHostingPlans = ({ data }: { data: AllHostingPlansProps }) => {
   return (
-    <section className="w-full py-12 space-y-4 lg:space-y-6">
+    <section className="w-full space-y-4 lg:space-y-6">
       <CenteredSectionHeader
         title={data.title}
         description={data.description}
