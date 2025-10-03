@@ -66,11 +66,11 @@ const ManagedHosting = () => {
         <PrioritySupport />
       </SectionWrapper>
 
-      <FaqSection />
 
       <SectionWrapper className="my-12 md:my-16">
         <SupportBanner />
       </SectionWrapper>
+      <FaqSection />
     </section>
   );
 };

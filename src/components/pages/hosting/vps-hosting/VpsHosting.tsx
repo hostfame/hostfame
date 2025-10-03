@@ -62,11 +62,11 @@ const VpsHosting = () => {
 
       <ReviewsSection />
 
-      <FaqSection />
 
       <SectionWrapper className="my-12 md:my-16">
         <SupportBanner />
       </SectionWrapper>
+      <FaqSection />
     </div>
   );
 };
