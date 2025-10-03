@@ -95,6 +95,7 @@ export default function SupportBanner({
                 </div>
               </div>
               <Link
+                target="_blank"
                 href={merged.ctaHref}
                 className={`whitespace-nowrap rounded-lg bg-white/90 px-4 py-2 text-sm font-semibold text-teal-900 transition ${classNameForWhiteHover}`}
               >
