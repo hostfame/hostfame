@@ -14,6 +14,7 @@ import WhyChooseWebHosting from "./why-choose-web-hosting/WhyChooseWebHosting";
 import WhiteButton from "@/components/shared/html/WhiteButton";
 import Image from "next/image";
 import WebhostingPricing from "./WebhostingPricing";
+import SupportBanner from "@/components/shared/sections/SupportBanner";
 
 const WebHosting = () => {
   return (
@@ -111,6 +112,10 @@ const WebHosting = () => {
 
       <SectionWrapper className="my-12 md:my-16">
         <MigrateYourSite />
+      </SectionWrapper>
+
+      <SectionWrapper className="my-12 md:my-16">
+        <SupportBanner />
       </SectionWrapper>
 
       <FaqSection />
