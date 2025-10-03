@@ -89,13 +89,13 @@ export default function WhyChooseHostFame() {
             <div className="pointer-events-none absolute -bottom-10 -right-10 h-28 w-28 rounded-full bg-white/10 blur-xl" />
 
             {/* image */}
-            <div className="relative aspect-[4/3] w-full">
+            <div className="relative aspect-[6/5.5] w-full">
               <Image
                 src="/assets/gifs/hostfame-gif-path-follow.gif"
                 alt="Contact form illustration"
                 fill
                 unoptimized
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 70vw, 750px"
                 className="rounded-2xl object-contain"
               />
             </div>

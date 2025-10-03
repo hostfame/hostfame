@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { BsArrowRightShort } from "react-icons/bs";
+import { classNameForWhiteHover } from "@/components/pages/home/Home";
 
 type WhiteButtonProps = {
   children: React.ReactNode;
@@ -15,6 +16,7 @@ type WhiteButtonProps = {
   target?: string;
   rel?: string;
 };
+
 
 const WhiteButton: React.FC<WhiteButtonProps> = ({
   children,
@@ -30,7 +32,7 @@ const WhiteButton: React.FC<WhiteButtonProps> = ({
   const base =
     "flex items-center justify-center gap-x-1 w-fit px-7 py-3.5 rounded-full font-semibold " +
     "bg-white text-gray-800 transition duration-500 hover:scale-105 " +
-    "disabled:opacity-50 disabled:cursor-not-allowed";
+    "disabled:opacity-50 disabled:cursor-not-allowed " + classNameForWhiteHover;
   const cls = `${base} ${className}`.trim();
 
   const content = (
@@ -40,7 +42,12 @@ const WhiteButton: React.FC<WhiteButtonProps> = ({
     </>
   );
 
-  if (disabled) return <button type={type} disabled className={cls}>{content}</button>;
+  if (disabled)
+    return (
+      <button type={type} disabled className={cls}>
+        {content}
+      </button>
+    );
 
   // ✅ SAME-PAGE HASH: render a plain <a> and smooth-scroll
   if (href && href.startsWith("#")) {

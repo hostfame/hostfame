@@ -12,7 +12,6 @@ import {
 import SpeedAndSupport from "./SpeedAndSupport";
 import HostingForGrowth from "./HostingForGrowth";
 import WhiteButton from "@/components/shared/html/WhiteButton";
-import { BsArrowRightShort } from "react-icons/bs";
 import Link from "next/link";
 import Image from "next/image";
 import PromoTopBar from "@/components/shared/promo/PromoTopbar";
@@ -20,6 +19,10 @@ import DomainHero from "@/components/shared/sections/DomainHero";
 import WhyChooseHostFame from "@/components/shared/sections/WhyChooseHostFame";
 import FaqSection from "../hosting/faqs/FaqSection";
 import DataCenters from "@/components/shared/sections/DataCenters";
+
+
+export const classNameForWhiteHover =
+  "hover:scale-[1.05] hover:bg-primary-dark hover:text-white duration-300";
 
 const Home = () => {
   return (
@@ -152,15 +155,15 @@ export function AnimationBanner() {
 function HomeCtaSection() {
   return (
     <section className=" space-y-6">
-      <section className=" flex gap-10 items-center justify-center lg:justify-start flex-wrap">
+      <section className=" flex gap-4 items-center justify-center lg:justify-start flex-wrap">
         <WhiteButton href="#different-hosting-plans">Start My Hosting Now</WhiteButton>
         
         <Link
-          href={"/wordpress-hosting"}
+          href={"/web-hosting"}
           className="flex  text-lg items-center text-center max-lg:underline lg:gap-x-2 text-white font-bold"
         >
-          Faster WordPress Starts Here
-          <BsArrowRightShort size={24} className="hidden lg:block" />
+          Faster Website Starts Here
+          {/* <BsArrowRightShort size={24} className="hidden lg:block" /> */}
         </Link>
       </section>
 

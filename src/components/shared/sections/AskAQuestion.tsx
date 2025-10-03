@@ -122,7 +122,7 @@ export default function AskAQuestion() {
             <div className="mt-7 flex items-center gap-4">
               <Link
                 href={ContactAskAQuestionData.cta.href}
-                className="group inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold bg-toggle text-background transition hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-text/30"
+                className="group inline-flex items-center justify-center gap-2 rounded-xl px-5 py-3 text-sm font-semibold bg-toggle text-background  hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-text/30  duration-300 hover:scale-[1.05]"
               >
                 {ContactAskAQuestionData.cta.label}
                 <FiArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5" />
