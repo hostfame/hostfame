@@ -9,7 +9,7 @@ export type PricingToggleProps = {
   billingPeriod: BillingPeriod;
   onToggle: (p: BillingPeriod) => void;
   yearlyDiscount: number | string;
-  yearlyDiscountBdt: number | string;
+  yearlyDiscountBdt?: number | string;
   /** pass your shared toggle here; it will replace the fallback */
   ToggleComponent?: React.ReactNode;
   className?: string;
