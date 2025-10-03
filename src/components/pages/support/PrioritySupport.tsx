@@ -49,7 +49,7 @@ export default function PrioritySupport() {
           {FEATURES.map(({ title, blurb, Icon }) => (
             <div
               key={title}
-              className="flex flex-col gap-3 rounded-2xl border border-border-light-gray bg-card-background p-6 shadow-sm transition hover:shadow-md"
+              className="flex flex-col hover:scale-[1.03] duration-300 gap-3 rounded-2xl border border-border-light-gray bg-card-background p-6 shadow-sm transition hover:shadow-md"
             >
               <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary/10 text-primary">
                 <Icon className="h-6 w-6" aria-hidden />

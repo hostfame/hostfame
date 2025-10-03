@@ -3,7 +3,7 @@ export const TiersData = [
     key: "starter",
     label: "Starter",
     href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/starter",
-    className: "-ml-5",
+    // className: "-ml-5",
     priceMonthly: "৳999/mo",
     priceMonthlyBdt: "৳999/mo",
     features: {
@@ -17,7 +17,7 @@ export const TiersData = [
     key: "starter-plus",
     label: "Starter Plus",
     href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/starter-plus",
-    className: "ml-1",
+    // className: "ml-1",
     priceMonthly: "৳1499/mo",
     priceMonthlyBdt: "৳1499/mo",
     features: {
@@ -31,7 +31,7 @@ export const TiersData = [
     key: "pro",
     label: "Pro",
     href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/pro",
-    className: "ml-4",
+    // className: "ml-4",
     priceMonthly: "৳2499/mo",
     priceMonthlyBdt: "৳2499/mo",
     features: {
@@ -45,7 +45,7 @@ export const TiersData = [
     key: "pro-plus",
     label: "Pro Plus",
     href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/pro-plus",
-    className: "",
+    // className: "",
     priceMonthly: "৳2999/mo",
     priceMonthlyBdt: "৳2999/mo",
     features: {
@@ -59,7 +59,7 @@ export const TiersData = [
     key: "pro-extra",
     label: "Pro Extra",
     href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/pro-extra",
-    className: "",
+    // className: "",
     priceMonthly: "৳3999/mo",
     priceMonthlyBdt: "৳3999/mo",
     features: {
@@ -73,7 +73,7 @@ export const TiersData = [
     key: "ultimate",
     label: "Ultimate",
     href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/ultimate",
-    className: "",
+    // className: "",
     priceMonthly: "৳9999/mo",
     priceMonthlyBdt: "৳9999/mo",
     features: {

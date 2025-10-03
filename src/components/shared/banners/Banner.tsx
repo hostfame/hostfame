@@ -81,7 +81,7 @@ export const Banner: React.FC<BannerProps> = ({
 }) => {
   return (
     <section
-      className={`banner-bg relative  justify-center -mt-[1px] items-center w-full text-white bg-no-repeat overflow-hidden ${promoTemplate ? " " : ""
+      className={`banner-bg  justify-center -mt-[1px] items-center w-full text-white bg-no-repeat overflow-hidden ${promoTemplate ? " " : ""
         } ${heightClassName} ${className}`}
       style={{
         backgroundPosition: "left center, center center",
@@ -106,7 +106,7 @@ export const Banner: React.FC<BannerProps> = ({
       )} */}
 
       <SectionWrapper
-        className={`relative z-10  py-16 md:py-20 grid lg:grid-cols-2 gap-10 items-center ${containerClassName}`}
+        className={`relative  py-16 md:py-20 grid lg:grid-cols-2 gap-10 items-center ${containerClassName}`}
       >
         {/* Content */}
         <div className="space-y-6 text-center lg:text-left flex flex-col justify-center items-center lg:items-start">

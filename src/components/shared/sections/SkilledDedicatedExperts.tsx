@@ -5,6 +5,7 @@ import { ReactNode } from "react";
 import { FaHeadset, FaBolt } from "react-icons/fa";
 import CenteredSectionHeader from "../headers/CenteredSectionHeader";
 import SectionWrapper from "../wrappers/SectionWrapper";
+import Link from "next/link";
 
 interface Feature {
   icon: ReactNode;
@@ -18,6 +19,7 @@ interface SkilledExpertsData {
   features: Feature[];
   images: string[];
   cta: string;
+  ctaHref: string;
 }
 
 export const skilledExpertsData: SkilledExpertsData = {
@@ -43,6 +45,7 @@ export const skilledExpertsData: SkilledExpertsData = {
     "https://themewant.com/products/wordpress/hostie/wp-content/uploads/2024/02/image-2.png",
   ],
   cta: "Chat with Us",
+  ctaHref: "https://tawk.to/chat/67f13177a1155b1916a6f189/1io32ifig",
 };
 
 const SkilledDedicatedExperts = () => {
@@ -155,7 +158,9 @@ const SkilledDedicatedExperts = () => {
                 Need a quick answer or tailored advice? Hop into a conversation
                 with our specialists right now.
               </p>
-              <button
+              <Link
+                href={skilledExpertsData.ctaHref}
+                target="_blank"
                 className="inline-flex items-center justify-center rounded-md border border-primary bg-primary px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:opacity-90 text-nowrap focus:outline-none focus-visible:ring-2 focus-visible:ring-primary/60 hover:scale-[1.05] duration-300"
                 aria-label={skilledExpertsData.cta}
                 type="button"
@@ -173,7 +178,7 @@ const SkilledDedicatedExperts = () => {
                     clipRule="evenodd"
                   />
                 </svg>
-              </button>
+              </Link>
             </div>
 
             {/* small note */}

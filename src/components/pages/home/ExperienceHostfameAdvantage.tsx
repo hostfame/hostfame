@@ -46,7 +46,7 @@ export default function ExperienceHostfameAdvantage() {
             <div className="mt-6">
               <Link
                 href={data.cta.href}
-                className="group inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-primary transition focus:outline-none focus-visible:ring-4  hover:bg-white/90 hover:text-white duration-300 hover:scale-[1.05] focus-visible:ring-white/40"
+                className="group inline-flex items-center gap-2 rounded-full bg-white px-5 py-2.5 text-sm font-semibold text-primary transition focus:outline-none focus-visible:ring-4  hover:bg-white/90  duration-300 hover:scale-[1.05] focus-visible:ring-white/40"
               >
                 {data.cta.label}
                 <BsArrowRightShort size={20} className="" />
