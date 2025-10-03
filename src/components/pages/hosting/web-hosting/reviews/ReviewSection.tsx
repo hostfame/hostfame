@@ -3,7 +3,7 @@ import { FaGoogle, FaStar } from "react-icons/fa";
 import { HiOutlineArrowRight } from "react-icons/hi";
 import ReviewCarousel, { Review } from "./ReviewCarousel";
 import Image from "next/image";
-import { reviewsData } from "@/data/reviews.data";
+import { review, reviewsData } from "@/data/reviews.data";
 
 export default function ReviewsSection() {
   return (
@@ -29,7 +29,7 @@ export default function ReviewsSection() {
             </div>
 
             <p className="mt-2  font-semibold text-base text-text sm:text-lg">
-              4.8 out of 5 based on 250+ reviews.
+              5 out of 5 based on our customer reviews.
             </p>
 
             <h2 className="mt-6 text-3xl font-extrabold leading-tight  text-primary md:text-4xl">
@@ -38,9 +38,7 @@ export default function ReviewsSection() {
             </h2>
 
             <p className="mt-4 max-w-md text-[15px] leading-6  text-description-text">
-              Getting positive reviews from hundreds of clients means a lot to
-              us. We care about every feedback and adjust our services
-              accordingly.
+              {review.description}
             </p>
 
             <div className="mt-6 flex items-center gap-6">
@@ -69,7 +67,8 @@ export default function ReviewsSection() {
               </div>
 
               <a
-                href="#more-reviews"
+                href={review.moreReviewHref}
+                target="_blank"
                 className="group inline-flex items-center gap-2 text-sm font-medium text-primary-light"
               >
                 More Review

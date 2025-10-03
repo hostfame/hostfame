@@ -150,7 +150,7 @@ export default function FeatureTabsClient({
           </ul>
 
           {/* Optional CTA */}
-          {active.cta && (
+          {/* {active.cta && (
             <div className="mt-6">
               <Link
                 href={active.cta.href}
@@ -162,7 +162,7 @@ export default function FeatureTabsClient({
                 {active.cta.label}
               </Link>
             </div>
-          )}
+          )} */}
         </div>
       </div>
     </div>
