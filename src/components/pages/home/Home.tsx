@@ -174,7 +174,7 @@ function HomeCtaSection() {
           width={30}
           height={30}
         />
-        <p className=" text-nowrap">
+        <p className="text-sm md:text-base text-nowrap">
           30-Day Money-Back Guarantee. Cancel Anytime.
         </p>
       </section>
