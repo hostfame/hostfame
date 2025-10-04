@@ -1699,8 +1699,8 @@ export const wordpressHostingPricingData: PricingData = {
 
 export const manageHostingPricingData: PricingData = {
   title: "Choose Your Perfect Plan",
-  yearlyDiscount: 76,
-  yearlyDiscountBdt: 76,
+  yearlyDiscount: 42,
+  yearlyDiscountBdt: 50,
   plans: [
     {
       id: "starter",
