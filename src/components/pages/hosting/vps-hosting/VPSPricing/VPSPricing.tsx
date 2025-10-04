@@ -1,8 +1,11 @@
-// PricingTable.tsx
+"use client";
+
+import React, { useEffect, useRef, useState } from "react";
 import { VPSHostingData, VPSPlans } from "@/data/vpsHosting.data";
 import { VPSPlan } from "@/types/vps-hosting/vps-hosting.types";
 import { Check } from "lucide-react";
-import React from "react";
+import VPSPricingHeader from "./VPSPricingHeader";
+import { useIpProviderContextValue } from "@/providers/IpProvider";
 
 // only feature keys (exclude name & price)
 type FeatureKey = keyof Omit<VPSPlan, "name" | "price">;
@@ -22,11 +25,86 @@ const features: { key: FeatureKey; label: string; boolean?: boolean }[] = [
 ];
 
 export default function VPSPricing() {
+  const sectionRef = useRef<HTMLElement | null>(null);
+  const wrapperRef = useRef<HTMLDivElement | null>(null); // overflow-auto wrapper
+  const tableRef = useRef<HTMLTableElement | null>(null);
+  const headerRef = useRef<HTMLTableSectionElement | null>(null); // ref to real THEAD
+
+  const [isSticky, setIsSticky] = useState(false);
+  const [leftPx, setLeftPx] = useState(0);
+  const [widthPx, setWidthPx] = useState<number | undefined>(undefined);
+  const [scrollLeft, setScrollLeft] = useState(0);
+
+  // update measurements and sticky state
+  useEffect(() => {
+    const update = () => {
+      const hdr = headerRef.current;
+      const tbl = tableRef.current;
+      const wrap = wrapperRef.current;
+      const sec = sectionRef.current;
+
+      if (!hdr || !tbl || !wrap || !sec) {
+        setIsSticky(false);
+        return;
+      }
+
+      const headerRect = hdr.getBoundingClientRect();
+      const tableRect = tbl.getBoundingClientRect();
+      const wrapperRect = wrap.getBoundingClientRect();
+
+      // width/left for the fixed clone
+      setLeftPx(Math.round(wrapperRect.left));
+      setWidthPx(Math.round(wrapperRect.width));
+
+      // track horizontal scroll inside wrapper so the fixed clone aligns
+      setScrollLeft(wrap.scrollLeft);
+
+      const headerHeight = headerRect.height;
+
+      // Sticky condition:
+      // - header top passed the viewport top (headerRect.top <= 0)
+      // - table still has space below header (tableRect.bottom > headerHeight)
+      if (headerRect.top <= 0 && tableRect.bottom > headerHeight + 50) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    // initial check
+    update();
+
+    // listeners
+    const onScroll = () => update();
+    const onResize = () => update();
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    window.addEventListener("resize", onResize);
+
+    // wrapper horizontal scroll
+    const wrapEl = wrapperRef.current;
+    const onWrapScroll = () => {
+      if (!wrapEl) return;
+      setScrollLeft(wrapEl.scrollLeft);
+      // keep left/width up to date if wrapper moves horizontally
+      const r = wrapEl.getBoundingClientRect();
+      setLeftPx(Math.round(r.left));
+      setWidthPx(Math.round(r.width));
+    };
+    wrapEl?.addEventListener("scroll", onWrapScroll);
+
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      window.removeEventListener("resize", onResize);
+      wrapEl?.removeEventListener("scroll", onWrapScroll);
+    };
+  }, []);
+
   return (
-    <section>
+    <section ref={sectionRef}>
       {/* Heading */}
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-text-primary">
+        <h2 className="text-3xl font-bold text-text">
           {VPSHostingData.title}
         </h2>
         <p className="text-color-description-text mt-2">
@@ -38,56 +116,27 @@ export default function VPSPricing() {
             DESKTOP TABLE (lg and up)
            ------------------------- */}
       <div className="hidden lg:block">
-        <div className="overflow-auto rounded-xl border border-border">
-          <table className="min-w-full border-collapse">
-            <thead>
-              <tr>
-                {/* Features header (sticky left) */}
-                <th
-                  className="w-56 p-4 text-left bg-primary text-primary-foreground font-semibold sticky top-0 left-0 z-40 border-r border-border"
-                  scope="col"
-                >
-                  Features
-                </th>
-
-                {/* Plan headers */}
-                {VPSPlans.map((plan, i) => (
-                  <th
-                    key={plan.name}
-                    className="p-4 text-center bg-primary text-primary-foreground sticky top-0 z-30 border-l border-border"
-                    scope="col"
-                  >
-                    <div className="text-sm font-semibold">{plan.name}</div>
-
-                    <div className="w-full mt-3 inline-block px-6 py-2 rounded-xl bg-primary-light text-primary-foreground font-bold text-2xl">
-                      {plan.price}
-                      <span className="block text-sm font-normal text-color-description-text">
-                        /mo
-                      </span>
-                    </div>
-
-                    <button className="mt-4 w-full bg-white text-primary rounded-md py-2 font-medium hover:scale-105 transition duration-500">
-                      {VPSHostingData.orderNow}
-                    </button>
-                  </th>
-                ))}
-              </tr>
-            </thead>
+        {/* wrapperRef is the scrolling container we align to */}
+        <div
+          ref={wrapperRef}
+          className="overflow-auto rounded-xl border border-border relative"
+        >
+          <table ref={tableRef} className="min-w-full border-collapse relative">
+            {/* Real header inside table (we forwardRef so headerRef points to this THEAD) */}
+            <VPSPricingHeader ref={headerRef} />
 
             <tbody>
               {features.map((feat, rowIdx) => (
                 <tr
                   key={feat.key}
-                  className={rowIdx % 2 === 0 ? "bg-card" : ""}
                 >
                   {/* feature label column (sticky left) */}
-                  <td className="p-4 sticky left-0 z-20 bg-card border-t border-border whitespace-nowrap">
+                  <td className="p-4 sticky left-0 z-20 border-t border-border whitespace-nowrap">
                     {feat.label}
                   </td>
 
                   {/* feature values */}
-                  {VPSPlans.map((plan, colIdx) => {
-                    // Narrow types for rendering
+                  {VPSPlans.map((plan) => {
                     if (feat.boolean) {
                       const boolVal = Boolean(plan[feat.key] as boolean);
                       return (
@@ -124,6 +173,37 @@ export default function VPSPricing() {
               ))}
             </tbody>
           </table>
+
+          {/* Fixed clone header that appears at the top of the viewport */}
+          {isSticky && (
+            <div
+              // container for the fixed header (will be placed at top and aligned with wrapper)
+              style={{
+                position: "fixed",
+                top: "64px",
+                left: leftPx,
+                width: widthPx,
+                zIndex: 1200,
+                boxSizing: "border-box",
+                // add pointer events so buttons are clickable on the clone
+                pointerEvents: "auto"
+              }}
+              className="shadow-md"
+            >
+              {/* translateX to handle horizontal scroll inside wrapper */}
+              <div
+                style={{
+                  transform: `translateX(-${scrollLeft}px)`,
+                  willChange: "transform"
+                }}
+              >
+                <table className="min-w-full border-collapse">
+                  {/* clone header with isClone so we don't include sticky classes inside clone */}
+                  <VPSPricingHeader isClone />
+                </table>
+              </div>
+            </div>
+          )}
         </div>
       </div>
 
@@ -131,7 +211,7 @@ export default function VPSPricing() {
             MOBILE STACKED CARDS (< lg)
            ------------------------- */}
       <div className="block lg:hidden space-y-6">
-        {VPSPlans.map((plan, idx) => (
+        {VPSPlans.map((plan) => (
           <article
             key={plan.name}
             className="rounded-xl overflow-hidden border border-border bg-white shadow-sm"

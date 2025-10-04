@@ -13,7 +13,7 @@ import Image from "next/image";
 import WhiteButton from "@/components/shared/html/WhiteButton";
 import Link from "next/link";
 import DualPricing from "@/components/shared/sections/domain-hero/DualPricing";
-import VPSPricing from "@/components/shared/sections/VPSPricing/VPSPricing";
+import VPSPricing from "@/components/pages/hosting/vps-hosting/VPSPricing/VPSPricing";
 
 const VpsHosting = () => {
   return (
