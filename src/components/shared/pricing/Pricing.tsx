@@ -23,7 +23,7 @@ export function Pricing({
   const handleToggleExpand = () => {
     setIsExpanded((prev) => !prev);
   };
-
+console.log(data)
   return (
     <section className="relative">
       {/* <div className="absolute inset-0 bg-grid-pattern opacity-5" />

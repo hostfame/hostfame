@@ -45,7 +45,7 @@ export interface PricingPlan {
 export interface PricingData {
   title: string;
   subtitle?: string;
-  yearlyDiscount: number;
+  yearlyDiscount?: number;
   yearlyDiscountBdt?: number;
   plans: PricingPlan[];
 }
