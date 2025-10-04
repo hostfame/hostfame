@@ -15,6 +15,15 @@ const urbanist = Urbanist({
 export const metadata: Metadata = {
   title: "Hostfame",
   description: "A hosting platform.",
+  openGraph: {
+    images: [
+      {
+        url: `https://www.hostfame.com/assets/og/og-main.png`,
+        width: 1200,
+        height: 630,
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
@@ -37,6 +46,15 @@ export default function RootLayout({
             <Footer />
           </IpProvider>
         </ThemeProvider>
+
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-KR6LVVNW"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
       </body>
     </html>
   );
