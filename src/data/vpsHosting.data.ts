@@ -20,7 +20,9 @@ export const VPSPlans: VPSPlan[] = [
     root: true,
     antiDDoS: true,
     windowsSupport: true,
-    support24: true
+    support24: true,
+        href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/starter",
+
   },
   {
     name: "Starter Plus",
@@ -35,7 +37,9 @@ export const VPSPlans: VPSPlan[] = [
     root: true,
     antiDDoS: true,
     windowsSupport: true,
-    support24: true
+    support24: true,
+    href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/starter-plus",
+
   },
   {
     name: "Pro",
@@ -50,7 +54,9 @@ export const VPSPlans: VPSPlan[] = [
     root: true,
     antiDDoS: true,
     windowsSupport: true,
-    support24: true
+    support24: true,
+    href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/pro",
+
   },
   {
     name: "Pro Plus",
@@ -65,7 +71,9 @@ export const VPSPlans: VPSPlan[] = [
     root: true,
     antiDDoS: true,
     windowsSupport: true,
-    support24: true
+    support24: true,
+    href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/pro-plus",
+
   },
   {
     name: "Pro Extra",
@@ -80,11 +88,13 @@ export const VPSPlans: VPSPlan[] = [
     root: true,
     antiDDoS: true,
     windowsSupport: true,
-    support24: true
+    support24: true,
+    href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/pro-extra",
+
   },
   {
     name: "Ultimate",
-    price: "৳7999",
+    price: "৳9999",
     vcpu: "16 vCPU Cores",
     ram: "32 GB RAM",
     storage: "360 GB SSD",
@@ -95,6 +105,8 @@ export const VPSPlans: VPSPlan[] = [
     root: true,
     antiDDoS: true,
     windowsSupport: true,
-    support24: true
+    support24: true,
+    href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/ultimate",
+
   }
 ];

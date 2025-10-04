@@ -31,7 +31,6 @@ const FEATURE_META = [
   },
 ];
 
-const purchaseUrl = `https://my.hostfame.com/cart.php?a=confproduct&i={{index}}`;
 
 export default function CloudVps() {
   // default to Starter Plus to mirror your original state
