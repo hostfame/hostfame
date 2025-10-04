@@ -2,7 +2,7 @@ import { PricingData } from "@/types/pricing.types";
 
 export const webHostingPricingBdtData: PricingData = {
   title: "Choose Your Perfect Plan",
-  yearlyDiscount: 72,
+  yearlyDiscountBdt: 72,
   plans: [
     {
       id: "starter",
@@ -12,7 +12,7 @@ export const webHostingPricingBdtData: PricingData = {
       icon: "/assets/pricing/starter-42.svg",
       hrefBdt:
         "https://my.hostfame.com/index.php?rp=/store/web-hosting-bd/starter",
-      currency: "$",
+      currency: "৳",
       monthlyPriceBdt: 299,
       yearlyPriceBdt: 999,
       monthlyPrevPriceBdt: 299,
@@ -841,7 +841,7 @@ export const webHostingPricingBdtData: PricingData = {
 
 export const wordpressHostingBdtPricingData: PricingData = {
   title: "Plans Built for WordPress",
-  yearlyDiscount: 90,
+  yearlyDiscountBdt: 90,
   plans: [
     {
       id: "starter",
@@ -853,12 +853,6 @@ export const wordpressHostingBdtPricingData: PricingData = {
         "https://my.hostfame.com/index.php?rp=/store/wordpress-hosting-bd/basic",
       icon: "/assets/pricing/basic.svg",
       currency: "৳",
-      monthlyPrice: 14.99,
-      yearlyPrice: 2.49,
-      monthlyPrevPrice: 14.99,
-      yearlyPrevPrice: 3.49,
-      renewalTextMonthly: "$14.99/Monthly when you renew",
-      renewalTextYearly: "$3.49/Monthly when you renew",
       guarantee: "30 Days Money Back guarantee",
       monthlyPriceBdt: 299,
       yearlyPriceBdt: 2691,

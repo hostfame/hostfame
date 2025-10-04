@@ -8,7 +8,7 @@ type BillingPeriod = "monthly" | "yearly";
 export type PricingToggleProps = {
   billingPeriod: BillingPeriod;
   onToggle: (p: BillingPeriod) => void;
-  yearlyDiscount: number | string;
+  yearlyDiscount?: number | string;
   yearlyDiscountBdt?: number | string;
   /** pass your shared toggle here; it will replace the fallback */
   ToggleComponent?: React.ReactNode;
@@ -97,7 +97,11 @@ export function PricingToggle({
   className = "",
 }: PricingToggleProps) {
   const countryCode = useIpProviderContextValue();
-
+const yearlyDis = countryCode === "BD" ? yearlyDiscountBdt : yearlyDiscount
+console.log("yearlyDiscountBdt", yearlyDiscountBdt)
+console.log("yearlyDiscount", yearlyDiscount)
+console.log(countryCode)
+console.log(yearlyDis)
   return (
     <div className={`flex justify-center items-center gap-4 ${className}`}>
       {/* your shared toggle goes here */}
@@ -109,7 +113,7 @@ export function PricingToggle({
       <div className="relative flex items-start">
         <CurvedDottedArrow className="text-primary -mt-2 mr-2" />
         <span className={`${billingPeriod === "monthly" ? "line-through" : ""} text-primary text-sm font-medium whitespace-nowrap self-center -ml-12 mt-7`}>
-          Save upto {countryCode === "BD" ? yearlyDiscountBdt : yearlyDiscount}%
+          Save upto {yearlyDis}%
         </span>
       </div>
     </div>
