@@ -6,6 +6,7 @@ import { VPSPlan } from "@/types/vps-hosting/vps-hosting.types";
 import { Check } from "lucide-react";
 import VPSPricingHeader from "./VPSPricingHeader";
 import { useIpProviderContextValue } from "@/providers/IpProvider";
+import { Button } from "@/components/shared/html/Button";
 
 // only feature keys (exclude name & price)
 type FeatureKey = keyof Omit<VPSPlan, "name" | "price">;
@@ -25,6 +26,10 @@ const features: { key: FeatureKey; label: string; boolean?: boolean }[] = [
 ];
 
 export default function VPSPricing() {
+  const countryCode = useIpProviderContextValue();
+
+  const currencyQuery = `currency=${countryCode === "BD" ? "2" : "1"}`;
+
   const sectionRef = useRef<HTMLElement | null>(null);
   const wrapperRef = useRef<HTMLDivElement | null>(null); // overflow-auto wrapper
   const tableRef = useRef<HTMLTableElement | null>(null);
@@ -104,9 +109,7 @@ export default function VPSPricing() {
     <section ref={sectionRef}>
       {/* Heading */}
       <div className="text-center mb-8">
-        <h2 className="text-3xl font-bold text-text">
-          {VPSHostingData.title}
-        </h2>
+        <h2 className="text-3xl font-bold text-text">{VPSHostingData.title}</h2>
         <p className="text-color-description-text mt-2">
           {VPSHostingData.description}
         </p>
@@ -123,13 +126,11 @@ export default function VPSPricing() {
         >
           <table ref={tableRef} className="min-w-full border-collapse relative">
             {/* Real header inside table (we forwardRef so headerRef points to this THEAD) */}
-            <VPSPricingHeader ref={headerRef} />
+            <VPSPricingHeader currencyQuery={currencyQuery} ref={headerRef} />
 
             <tbody>
               {features.map((feat, rowIdx) => (
-                <tr
-                  key={feat.key}
-                >
+                <tr key={feat.key}>
                   {/* feature label column (sticky left) */}
                   <td className="p-4 sticky left-0 z-20 border-t border-border whitespace-nowrap">
                     {feat.label}
@@ -199,7 +200,7 @@ export default function VPSPricing() {
               >
                 <table className="min-w-full border-collapse">
                   {/* clone header with isClone so we don't include sticky classes inside clone */}
-                  <VPSPricingHeader isClone />
+                  <VPSPricingHeader currencyQuery={currencyQuery} isClone />
                 </table>
               </div>
             </div>
@@ -229,9 +230,15 @@ export default function VPSPricing() {
                 </span>
               </div>
 
-              <button className="mt-4 w-full bg-white text-primary rounded-md py-2 font-medium">
+              <Button
+                target="_blank"
+                href={plan.href + `&${currencyQuery}`}
+                variant="bordered"
+                size="sm"
+                className="mt-4 w-full bg-white  text-primary !rounded-md !py-2 font-medium hover:!bg-white hover:!text-primary !hover:scale-105 transition duration-500 text-nowrap"
+              >
                 {VPSHostingData.orderNow}
-              </button>
+              </Button>
             </div>
 
             {/* Card content: feature rows */}
