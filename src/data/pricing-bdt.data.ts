@@ -841,7 +841,7 @@ export const webHostingPricingBdtData: PricingData = {
 
 export const wordpressHostingBdtPricingData: PricingData = {
   title: "Plans Built for WordPress",
-  yearlyDiscountBdt: 90,
+  yearlyDiscountBdt: 25,
   plans: [
     {
       id: "starter",
