@@ -1,5 +1,6 @@
 import React, { forwardRef } from "react";
 import { VPSHostingData, VPSPlans } from "@/data/vpsHosting.data";
+import { Button } from "@/components/shared/html/Button";
 
 /**
  * Props:
@@ -8,11 +9,12 @@ import { VPSHostingData, VPSPlans } from "@/data/vpsHosting.data";
  */
 type Props = {
   className?: string;
+  currencyQuery: string;
   isClone?: boolean;
 };
 
 const VPSPricingHeader = forwardRef<HTMLTableSectionElement, Props>(
-  ({ className = "", isClone = false }, ref) => {
+  ({ className = "", currencyQuery, isClone = false }, ref) => {
     // When rendering the clone (isClone = true), do not add "sticky top-0" classes.
     const thFeatureClass =
       "w-56 p-4 text-left bg-primary text-primary-foreground font-semibold border-r border-border " +
@@ -39,9 +41,13 @@ const VPSPricingHeader = forwardRef<HTMLTableSectionElement, Props>(
                 </span>
               </div>
 
-              <button className="mt-4 w-full bg-white text-primary rounded-md py-2 font-medium hover:scale-105 transition duration-500">
+              <Button
+                target="_blank"
+                href={plan.href + `&${currencyQuery}`} variant="bordered" size="sm"
+                className="mt-4 w-full bg-white  text-primary !rounded-md !py-2 font-medium hover:!bg-white hover:!text-primary !hover:scale-105 transition duration-500 text-nowrap"
+              >
                 {VPSHostingData.orderNow}
-              </button>
+              </Button>
             </th>
           ))}
         </tr>

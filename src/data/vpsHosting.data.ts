@@ -21,8 +21,7 @@ export const VPSPlans: VPSPlan[] = [
     antiDDoS: true,
     windowsSupport: true,
     support24: true,
-        href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/starter",
-
+    href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/starter"
   },
   {
     name: "Starter Plus",
@@ -38,8 +37,7 @@ export const VPSPlans: VPSPlan[] = [
     antiDDoS: true,
     windowsSupport: true,
     support24: true,
-    href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/starter-plus",
-
+    href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/starter-plus"
   },
   {
     name: "Pro",
@@ -55,8 +53,7 @@ export const VPSPlans: VPSPlan[] = [
     antiDDoS: true,
     windowsSupport: true,
     support24: true,
-    href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/pro",
-
+    href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/pro"
   },
   {
     name: "Pro Plus",
@@ -72,8 +69,7 @@ export const VPSPlans: VPSPlan[] = [
     antiDDoS: true,
     windowsSupport: true,
     support24: true,
-    href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/pro-plus",
-
+    href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/pro-plus"
   },
   {
     name: "Pro Extra",
@@ -89,8 +85,7 @@ export const VPSPlans: VPSPlan[] = [
     antiDDoS: true,
     windowsSupport: true,
     support24: true,
-    href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/pro-extra",
-
+    href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/pro-extra"
   },
   {
     name: "Ultimate",
@@ -106,7 +101,6 @@ export const VPSPlans: VPSPlan[] = [
     antiDDoS: true,
     windowsSupport: true,
     support24: true,
-    href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/ultimate",
-
+    href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/ultimate"
   }
 ];
