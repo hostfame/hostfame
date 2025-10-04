@@ -12,4 +12,5 @@ export type VPSPlan = {
   antiDDoS: boolean;
   windowsSupport: boolean;
   support24: boolean;
+  href: string
 };
