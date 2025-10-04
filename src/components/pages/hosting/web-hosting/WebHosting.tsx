@@ -30,7 +30,7 @@ const WebHosting = () => {
           <>
             Get Ultra-Fast
             <br className="hidden md:block" />
-            <span className="">Hosting With 24/7</span>
+            <span className="">Hosting With 24/7 </span>
             <br className="hidden md:block" />
             <span className="">Expert Support</span>
           </>
