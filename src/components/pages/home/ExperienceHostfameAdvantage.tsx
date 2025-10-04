@@ -14,11 +14,11 @@ const data = {
   pills: ["Domain", "Hosting"],
   images: {
     person: {
-      src: "https://hostfame.com/wp-content/uploads/2024/01/cta__person.svg",
+      src: "/uploads/2024/01/cta__person.svg",
       alt: "Person with laptop illustration",
     },
     server: {
-      src: "https://hostfame.com/wp-content/uploads/2024/01/cta__hosting.svg",
+      src: "/uploads/2024/01/cta__hosting.svg",
       alt: "Cloud and server stack illustration",
     },
   },
