@@ -11,7 +11,7 @@ export const domainPricingData: DomainPricingProps = {
       oldPrice: "$9.99",
       oldPriceBdt: "৳999",
       price: "$8.88",
-      priceBdt: "৳888",
+      priceBdt: "৳777",
       registerUrl: "#",
       transferUrl: "#",
       src: "/assets/domain-04.svg",
