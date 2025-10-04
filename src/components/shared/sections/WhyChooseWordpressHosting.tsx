@@ -1,7 +1,16 @@
-import { hostingCopy, hostingFeatures, hostingStats } from "@/data/whyChooseWordPress.data";
+import {
+  hostingCopy,
+  hostingFeatures,
+  hostingStats
+} from "@/data/whyChooseWordPress.data";
 import Image from "next/image";
 import { IconType } from "react-icons";
-import { FiShield, FiCheckCircle, FiZap, FiMessageSquare } from "react-icons/fi";
+import {
+  FiShield,
+  FiCheckCircle,
+  FiZap,
+  FiMessageSquare
+} from "react-icons/fi";
 import CenteredSectionHeader from "../headers/CenteredSectionHeader";
 import SectionWrapper from "../wrappers/SectionWrapper";
 
@@ -9,17 +18,14 @@ const iconMap: Record<string, IconType> = {
   shield: FiShield,
   guarantee: FiCheckCircle,
   speed: FiZap,
-  support: FiMessageSquare,
+  support: FiMessageSquare
 };
 
 export default function WhyChooseWordpressHosting() {
   return (
-    <section className="relative overflow-hidden">
+    <section className="relative">
       {/* Decorative background element */}
-      <div
-        aria-hidden
-        className="absolute inset-0 "
-      />
+      <div aria-hidden className="absolute inset-0 " />
 
       <SectionWrapper className="">
         <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 items-center">
@@ -63,13 +69,17 @@ export default function WhyChooseWordpressHosting() {
                 return (
                   <li
                     key={f.id}
-                    className="group relative flex gap-4 rounded-2xl bg-background p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
+                    className="group relative flex flex-col gap-2 rounded-2xl bg-background p-6 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1"
                   >
-                    <span className="flex h-12 w-12 flex-none items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:bg-primary/20">
-                      <Icon className="h-6 w-6 text-primary-light" />
-                    </span>
+                    <div className="flex items-center gap-4">
+                      <span className="flex h-12 w-12 flex-none items-center justify-center rounded-xl bg-primary/10 transition-colors group-hover:bg-primary/20">
+                        <Icon className="h-6 w-6 text-primary-light" />
+                      </span>
+                      <h3 className="text-lg font-semibold text-text">
+                        {f.title}
+                      </h3>
+                    </div>
                     <div>
-                      <h3 className="text-lg font-semibold text-text">{f.title}</h3>
                       <p className="mt-2 text-sm text-text/70 leading-relaxed">
                         {f.description}
                       </p>
@@ -81,7 +91,7 @@ export default function WhyChooseWordpressHosting() {
           </div>
 
           {/* Right: Image */}
-          <div className="relative z-10 flex justify-center items-center">
+          <div className="hidden relative z-10 lg:flex justify-center items-center">
             <Image
               src={"/assets/wordpress__feature__big_img.png.webp"}
               alt="feature-wordpress"

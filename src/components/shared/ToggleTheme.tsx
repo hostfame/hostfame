@@ -29,7 +29,7 @@ export default function ToggleTheme({
       <button
         aria-label="Toggle theme"
         type="button"
-        className="p-2 rounded-full border border-gray-400/50 dark:border-gray-600/60 text-gray-800 dark:text-gray-200"
+        className="p-1 lg:p-2 rounded-full border border-gray-400/50 dark:border-gray-600/60 text-gray-800 dark:text-gray-200"
         disabled
       >
         <FiMoon className="w-5 h-5" />
@@ -50,9 +50,9 @@ export default function ToggleTheme({
         text-text ${className}`}
     >
       {isDark ? (
-        <FiSun className={`w-5 h-5 text-text ${classNameForSunIcon}`} />
+        <FiSun className={`w-4 lg:w-5 h-4 lg:h-5 text-text ${classNameForSunIcon}`} />
       ) : (
-        <FiMoon className={`w-5 h-5 text-text ${classNameForMoonIcon}`} />
+        <FiMoon className={`w-4 lg:w-5 h-4 lg:h-5 text-text ${classNameForMoonIcon}`} />
       )}
     </button>
   );

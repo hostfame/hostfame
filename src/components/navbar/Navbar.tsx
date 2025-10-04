@@ -261,7 +261,7 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
                               : "text-text hover:text-teal-600"
                           }`}
                       >
-                        <span>{item.label}</span>
+                        <span className="text-lg">{item.label}</span>
                         <ChevronDown
                           className={`h-4 w-4 transition-transform duration-300 ${
                             activeDropdown === item.label ? "rotate-180" : ""
@@ -327,7 +327,7 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
                     <Link
                       href={item.href!}
                       onClick={() => setIsOpen(false)}
-                      className={`block px-2 py-3 text-[15px] font-semibold rounded-md
+                      className={`block px-2 py-3 text-lg font-semibold rounded-md
                         ${
                           item.href === pathname
                             ? "text-teal-600"

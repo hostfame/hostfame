@@ -9,6 +9,7 @@ export default function DomainHero() {
     title: "Get your domain. Launch your brand.",
     subtitle: "Find the perfect name to kickstart your idea.",
     placeholder: "Search your brand or business name",
+    placeholderMobile: "Search your domain",
     cta: "Search",
     popularLabel: "Popular domains",
     popularDomainRoute:
@@ -36,7 +37,7 @@ export default function DomainHero() {
 
         {/* Search */}
         <div className="mx-auto mt-8 w-full max-w-2xl">
-          <DomainSearch placeholder={data.placeholder} cta={data.cta} />
+          <DomainSearch placeholder={data.placeholder} placeholderMobile={data.placeholderMobile} cta={data.cta} />
 
           {/* Popular */}
           <div className="mt-5 flex flex-col items-center gap-2 sm:mt-6">

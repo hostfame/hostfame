@@ -11,7 +11,7 @@ const FooterPricingImage = () => {
   }
 
   return (
-    <div className="mx-auto max-w-7xl rounded-md shadow w-full">
+    <div className="hidden md:block mx-auto max-w-7xl rounded-md shadow w-full">
       <Image
         src="/assets/SSLCommerz-Pay-With-logo-All-Size-01.png"
         alt="Supported payment methods"

@@ -43,7 +43,7 @@ export default function PrioritySupport() {
       </div>
 
       {/* grid layout */}
-      <div className="mt-12 grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
+      <div className="mt-4 lg:mt-12 grid gap-10 lg:grid-cols-2 lg:gap-16 items-center">
         {/* left: features in 2x2 cards */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           {FEATURES.map(({ title, blurb, Icon }) => (

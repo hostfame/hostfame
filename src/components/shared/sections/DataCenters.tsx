@@ -125,7 +125,7 @@ export default function DataCenters() {
                   alt={`${p.country} flag`}
                   width={32}
                   height={22}
-                  className="rounded border border-white shadow ring-1 ring-black/10 bg-white"
+                  className="-mt-1 lg:mt-0 scale-90 md:scale-100 rounded border border-white shadow ring-1 ring-black/10 bg-white"
                 />
               </div>
             </Fragment>

@@ -43,7 +43,7 @@ const Home = () => {
               ></path>
             </svg>
           ),
-          content: "Upto 90% Off on Web Hosting",
+          content: "Upto 72% Off on Web Hosting",
           className: " border rounded-full",
         }}
         title={

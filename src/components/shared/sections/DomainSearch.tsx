@@ -6,9 +6,11 @@ import { FiSearch } from "react-icons/fi";
 
 const DomainSearch = ({
   placeholder,
-  cta,
+  placeholderMobile,
+  cta
 }: {
   placeholder: string;
+  placeholderMobile: string;
   cta: string;
 }) => {
   const [value, setValue] = useState("");
@@ -26,15 +28,24 @@ const DomainSearch = ({
       className="relative rounded-full bg-white/90 p-2 shadow-xl ring-1 ring-white/25 backdrop-blur-sm"
     >
       <label htmlFor="domain-search" className="sr-only">
-        {placeholder}
+        {placeholderMobile}
       </label>
+
       <input
         onChange={(e) => setValue(e.target.value)}
         value={value}
         id="domain-search"
         type="text"
         placeholder={placeholder}
-        className="w-full rounded-full border-0 bg-transparent px-4 py-2 pr-28 text-base text-gray-900 placeholder-gray-500 outline-none focus:ring-0"
+        className="hidden lg:block w-full rounded-full border-0 bg-transparent px-4 py-2 pr-28 text-base text-gray-900 placeholder-gray-500 outline-none focus:ring-0"
+      />
+      <input
+        onChange={(e) => setValue(e.target.value)}
+        value={value}
+        id="domain-search"
+        type="text"
+        placeholder={placeholderMobile}
+        className="lg:hidden hw-full rounded-full border-0 bg-transparent px-4 py-2 pr-28 text-base text-gray-900 placeholder-gray-500 outline-none focus:ring-0"
       />
       <button
         type="submit"

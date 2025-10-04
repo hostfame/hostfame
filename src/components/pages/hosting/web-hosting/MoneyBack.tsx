@@ -11,7 +11,7 @@ const MoneyBack = () => {
 
       <div className="relative z-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
         {/* Left: Heading + Description */}
-        <div className="text-center lg:text-left space-y-4">
+        <div className="flex flex-col items-center lg:items-start text-center lg:text-left space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold">
             {WebHostingData.moneyBackSection.title}
           </h2>
