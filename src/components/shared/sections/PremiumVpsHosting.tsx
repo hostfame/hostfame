@@ -32,7 +32,7 @@ export default function PremiumVpsHosting() {
         </div>
 
         {/* Right: custom collage */}
-        <div className="grid grid-cols-3 gap-4">
+        <div className="min-h-[300px] grid grid-cols-3 gap-4">
           {/* Tall left image */}
           <div className="col-span-1 row-span-2 relative overflow-hidden rounded-xl border border-border-light-gray bg-white-background">
             <Image

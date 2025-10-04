@@ -126,9 +126,9 @@ export const Banner: React.FC<BannerProps> = ({
           </h1>
 
           {description && (
-            <p className="text-base md:text-lg max-w-xl mx-auto lg:mx-0">
+            <div className="text-base md:text-lg max-w-xl mx-auto lg:mx-0">
               {description}
-            </p>
+            </div>
           )}
 
           {lists.length > 0 && (

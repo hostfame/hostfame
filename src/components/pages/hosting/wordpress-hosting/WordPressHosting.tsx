@@ -79,10 +79,10 @@ const WordPressHosting = () => {
 function WordPressHostingCtaSection() {
   return (
     <section className="flex items-center gap-6">
-      <WhiteButton href="#wordpress-hosting-pricing" className="!rounded">View Pricing</WhiteButton>
+      <WhiteButton href="#wordpress-hosting-pricing" className="!rounded !text-nowrap">View Pricing</WhiteButton>
       <Link
         href={"#wordpress-hosting-pricing"}
-        className="flex text-lg items-center text-center max-lg:underline lg:gap-x-2 text-white font-bold underline"
+        className="flex text-base md:text-lg items-center text-center max-lg:underline lg:gap-x-2 text-white font-bold underline"
       >
         Starting @ <DualPricing price="$19.99" pricebdt="৳1,999" />/mo
       </Link>

@@ -22,7 +22,7 @@ const data = {
     {
       id: "hosting",
       badge: "For a Limited Time",
-      discount: "90% Off",
+      discount: "72% Off",
       label: "Hosting",
       ctaLabel: "Get Web Hosting",
       href: "/web-hosting",
@@ -64,7 +64,7 @@ export default async function HostingFlashSale() {
                     <Icon className=" size-14  text-white" />
                   </span>
 
-                <div className=" flex flex-col">
+                <div className=" flex flex-col mt-2 lg:mt-0">
                   <p className="text-4xl font-extrabold leading-none text-white">
                     {discount}
                   </p>
@@ -94,7 +94,7 @@ export default async function HostingFlashSale() {
 
             <Link
               href={data.detailsHref}
-              className="mt-6 inline-flex w-fit hover:scale-[1.05] duration-300 items-center justify-center rounded-full bg-white px-6 py-2.5   text-gray-800 !font-semibold hover:bg-white/90  focus:outline-none focus-visible:ring-2 focus-visible:ring-white "
+              className="mt-6 inline-flex w-fit hover:scale-[1.05] duration-300 items-center justify-center rounded-full bg-white px-8 py-2.5   text-gray-800 !font-semibold hover:bg-white/90  focus:outline-none focus-visible:ring-2 focus-visible:ring-white "
             >
               {data.detailsCtaLabel}
             </Link>

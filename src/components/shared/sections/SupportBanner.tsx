@@ -87,7 +87,7 @@ export default function SupportBanner({
         {/* Right: CTA card */}
         <div className="md:col-span-5">
           <div className="rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur">
-            <div className="flex sm:block lg:flex  max-lg:space-y-3 items-center justify-between gap-3">
+            <div className="flex flex-col lg:flex-row max-lg:space-y-3 items-start md:items-center justify-between gap-3">
               <div className="text-sm/5 !text-white">
                 <div className="font-medium">Chat with us</div>
                 <div className="text-white/80">
@@ -97,7 +97,7 @@ export default function SupportBanner({
               <Link
                 target="_blank"
                 href={merged.ctaHref}
-                className={`whitespace-nowrap rounded-lg bg-white/90 px-4 py-2 text-sm font-semibold text-teal-900 transition ${classNameForWhiteHover}`}
+                className={`w-full lg:w-auto  text-center whitespace-nowrap rounded-lg bg-white/90 px-4 py-2 text-sm font-semibold text-teal-900 transition ${classNameForWhiteHover}`}
               >
                 {merged.ctaLabel}
               </Link>

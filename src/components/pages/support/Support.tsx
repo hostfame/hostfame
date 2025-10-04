@@ -125,7 +125,7 @@ function SupportCtaSection() {
     <section className="flex items-center gap-6">
       <Link
         href={"#"}
-        className="flex text-lg items-center text-center max-lg:underline lg:gap-x-2 text-white font-bold underline"
+        className="flex text-lg items-center text-center max-lg:underline gap-x-2 text-white font-bold underline"
       >
         <Image
           src={"/assets/support.svg"}

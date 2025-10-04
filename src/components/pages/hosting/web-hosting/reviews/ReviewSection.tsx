@@ -45,8 +45,8 @@ export default function ReviewsSection() {
 
               {/* avatar placeholders */}
               <div className="flex -space-x-3">
-                {reviewsData.slice(0, 3).map((r) => (
-                  <>
+                {reviewsData.slice(0, 3).map((r,id) => (
+                  <div key={id}>
                     {/* Header (avatar + name + stars) */}
                     <div className="flex items-start gap-4">
                       {/* avatar placeholder */}
@@ -62,7 +62,7 @@ export default function ReviewsSection() {
                           aria-hidden
                         />}
                     </div>
-                  </>
+                  </div>
                 ))}
               </div>
 

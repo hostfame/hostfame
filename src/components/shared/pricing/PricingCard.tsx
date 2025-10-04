@@ -58,7 +58,7 @@ export function PricingCard({
 
       <Card
         className={`relative transition-all duration-500 hover:shadow-2xl group overflow-hidden bg-gray-background backdrop-blur-sm border-border/50 flex flex-col h-full ${
-          plan.isPopular && "border-2 border-t-0 border-primary rounded-t-none"
+          plan.isPopular && "mt-5 lg:mt-0 border-2 border-t-0 border-primary rounded-t-none"
         }  ${isExpanded && "shadow-xl"}  ${className} `}
       >
         <CardHeader className="space-y-5 text-start relative z-10">

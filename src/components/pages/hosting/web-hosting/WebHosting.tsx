@@ -23,7 +23,7 @@ const WebHosting = () => {
       <Banner
         topTitle={{
           content: "Limited Offer: 72% OFF Hosting",
-          className: " bg-white/10 backdrop-blur-md",
+          className: " bg-white/10 backdrop-blur-md"
         }}
         // heightClassName="h-fit xl:h-[830px] xl:max-h-[830px]"
         title={
@@ -41,35 +41,35 @@ const WebHosting = () => {
         description={
           <section className=" space-y-6">
             <p>
-              Perfect for local businesses, stores, and pros <br />who need speed,
-              uptime, and real human help.
+              Perfect for local businesses, stores, and pros <br />
+              who need speed, uptime, and real human help.
             </p>
 
-            <section className="flex gap-20">
-              <section className=" flex items-center gap-2">
+            <div className="flex gap-8 md:gap-20">
+              <div className=" flex items-center gap-1 md:gap-2">
                 <Image
                   src={"/assets/diamond.svg"}
                   alt={"diamond"}
                   width={40}
                   height={40}
                 />
-                <p>
+                <p className="text-sm md:text-base">
                   24/7 Chat & Call <br />
                   30 Day Refund
                 </p>
-              </section>
-              <section className=" flex items-center gap-2">
+              </div>
+              <div className=" flex items-center gap-1 md:gap-2">
                 <Image
                   src={"/assets/wordpress.svg"}
                   alt={"wordpress"}
                   width={40}
                   height={40}
                 />
-                <p>
+                <p className="text-sm md:text-base">
                   One Click WordPress <br /> No Hassle. No Stress.
                 </p>
-              </section>
-            </section>
+              </div>
+            </div>
           </section>
         }
         ctaSection={<WebHostingCtaSection />}
@@ -126,7 +126,9 @@ const WebHosting = () => {
 function WebHostingCtaSection() {
   return (
     <section className="flex items-center gap-6">
-      <WhiteButton href="#web-hosting-pricing" className="">Get Started - Risk Free</WhiteButton>
+      <WhiteButton href="#web-hosting-pricing" className="">
+        Get Started - Risk Free
+      </WhiteButton>
     </section>
   );
 }
