@@ -1,0 +1,393 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f4f9ff;
+  --foreground: #1f2937;
+  --card: #f8fafc;
+  --card-foreground: #1f2937;
+  --popover: #ffffff;
+  --popover-foreground: #6b7280;
+  --primary: #008081;
+  --primary-dark: #005859;
+  --primary-light: #2f9995;
+  --primary-extralight: #02c9c9;
+  --primary-foreground: #ffffff;
+  --secondary: #002491;
+  --secondary-foreground: #ffffff;
+  --muted: #f1f5f9;
+  --muted-foreground: #6b7280;
+  --accent: #8b5cf6;
+  --accent-foreground: #ffffff;
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.577 0.245 27.325);
+  --border: #e2e8f0;
+  --text-primary: #0a1440;
+  --primary-blue: #0a8aff;
+  --secondary-blue: #3b82f6;
+  --blue-dark: #03206b;
+
+  /* dark mode */
+  --background-dark: #1a1a18;
+}
+
+@theme {
+  /* Colors */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-light: var(--primary-light);
+  --color-primary-extralight: var(--primary-extralight);
+  --color-primary-dark: var(--primary-dark);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+
+  --color-text-primary: var(--text-primary);
+  --color-primary-blue: var(--primary-blue);
+  --color-secondary-blue: var(--secondary-blue);
+  --color-blue-dark: var(--blue-dark);
+  --color-text: white;
+  --color-text-accent: #111827;
+  --color-description-text: #6b7280;
+  --color-dark-description-text: #3b3f46;
+  --color-gray-background: #f8fafc;
+
+  --color-border-light-gray: #e5e7eb;
+  --color-border-dark-gray: #3f3f46;
+
+  --color-dark: #1e2a3b;
+  --color-toggle: #1e2a3b;
+  --color-toggle-text: white;
+
+  --color-slider-background: white;
+  --color-white-background: white;
+
+  --color-card-background: white;
+  --color-offer-bg: #ffcb2d;
+
+  --color-yellow-main: #ffc107;
+  --color-offer-text: #364153;
+
+  --color-dark-text: #4c5671;
+}
+
+@layer base {
+  :root,
+  [data-theme="light"] {
+    --color-background: var(--background);
+    --color-white-background: white;
+    --color-text: black;
+    --color-text-accent: #111827;
+    --color-description-text: #6b7280;
+    --color-dark-description-text: #3b3f46;
+    --color-gray-background: #f8fafc;
+    --color-border-light-gray: #e5e7eb;
+    --color-border-dark-gray: #3f3f46;
+    --color-toggle: #1e2a3b;
+    --color-toggle-text: white;
+    --color-offer-bg: #ffcb2d;
+    --color-slider-background: white;
+    --color-card-background: white;
+    --color-offer-text: #364153;
+    --color-dark-text: #4c5671;
+  }
+
+  [data-theme="dark"] {
+    --color-background: var(--background-dark);
+    --color-white-background: var(--background-dark);
+    --color-text: white;
+    --color-text-accent: white;
+    --color-description-text: white;
+    --color-dark-description-text: white;
+    --color-gray-background: #282825;
+    --color-border-light-gray: #52525b;
+    --color-border-dark-gray: #71717a;
+    --color-toggle: white;
+    --color-toggle-text: #1e2a3b;
+    --color-offer-bg: #282825;
+    --color-slider-background: #282825;
+    --color-card-background: #282825;
+    --color-offer-text: white;
+    --color-dark-text: white;
+  }
+
+
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /* background: var(--background);
+  color: var(--text-foreground); */
+  font-family: var(--font-geist), var(--font-geist-fallback), sans-serif;
+}
+
+/* Light mode (default) */
+.banner-bg {
+  background-image: linear-gradient(180deg, #08b1b1 0%, #005f5f 100%);
+  background-position: left center, center center;
+  background-size: contain;
+  /* z-index: 10; */
+}
+
+/* Dark mode override */
+[data-theme="dark"] .banner-bg {
+  background-image: none; /* transparent */
+  background-color: transparent;
+  /* z-index: 10; */
+}
+
+button {
+  cursor: pointer;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.top-bottom2 {
+  animation: moveTopToBottom2 8s linear infinite;
+}
+
+.top-bottom {
+  animation: moveTopToBottom 15s linear infinite;
+}
+
+.bottom-top {
+  animation: moveBottomToTop 15s linear infinite;
+}
+
+.left-right {
+  animation: moveLeftToRight 15s linear infinite;
+}
+
+.left-right2 {
+  animation: moveLeftToRight2 8s linear infinite;
+}
+
+.right-left {
+  animation: moveRightToLeft 15s linear infinite;
+}
+
+.rotate-clockwise {
+  animation: rotateClockwise 15s linear infinite;
+}
+
+.rotate-counterclockwise {
+  animation: rotateCounterClockwise 15s linear infinite;
+}
+
+.swing-left {
+  transform-origin: right center; /* anchor the right side */
+  animation: swingLeft 3s ease-in-out infinite;
+}
+
+.swing-right {
+  transform-origin: left center; /* anchor the left side */
+  animation: swingRight 3s ease-in-out infinite;
+}
+
+.swing-top {
+  transform-origin: top center; /* anchor the top */
+  animation: swingTop 4s ease-in-out infinite;
+}
+
+.swing-bottom {
+  transform-origin: bottom center; /* anchor the bottom */
+  animation: swingBottom 4s ease-in-out infinite;
+}
+
+/** 
+  Key Frames
+*/
+
+@keyframes moveTopToBottom {
+  from {
+    transform: translateY(-20%);
+  }
+
+  50% {
+    transform: translateY(20%);
+  }
+
+  to {
+    transform: translateY(-20%);
+  }
+}
+
+@keyframes moveTopToBottom2 {
+  from {
+    transform: translateY(-2%);
+  }
+
+  50% {
+    transform: translateY(2%);
+  }
+
+  to {
+    transform: translateY(-2%);
+  }
+}
+
+@keyframes moveBottomToTop {
+  from {
+    transform: translateY(20%);
+  }
+
+  50% {
+    transform: translateY(-20%);
+  }
+
+  to {
+    transform: translateY(20%);
+  }
+}
+
+@keyframes moveLeftToRight {
+  from {
+    transform: translateX(-20%);
+  }
+
+  50% {
+    transform: translateX(20%);
+  }
+
+  to {
+    transform: translateX(-20%);
+  }
+}
+
+@keyframes moveLeftToRight2 {
+  from {
+    transform: translateX(-2%);
+  }
+
+  50% {
+    transform: translateX(2%);
+  }
+
+  to {
+    transform: translateX(-2%);
+  }
+}
+
+@keyframes moveRightToLeft {
+  from {
+    transform: translateX(20%);
+  }
+
+  50% {
+    transform: translateX(-20%);
+  }
+
+  to {
+    transform: translateX(20%);
+  }
+}
+
+/* 
+  Rotation Animations
+*/
+
+@keyframes rotateClockwise {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateCounterClockwise {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+/*
+  Swing Animations
+  (One side fixed, other side up & down)
+*/
+
+/* Left side moves up/down, right side fixed */
+@keyframes swingLeft {
+  from {
+    transform: rotate(2deg);
+  }
+
+  50% {
+    transform: rotate(-2deg);
+  }
+
+  to {
+    transform: rotate(2deg);
+  }
+}
+
+/* Right side moves up/down, left side fixed */
+@keyframes swingRight {
+  from {
+    transform: rotate(-2deg);
+  }
+
+  50% {
+    transform: rotate(2deg);
+  }
+
+  to {
+    transform: rotate(-2deg);
+  }
+}
+
+/* Bottom moves up/down, top fixed */
+@keyframes swingTop {
+  from {
+    transform: rotate(2deg);
+  }
+
+  50% {
+    transform: rotate(-2deg);
+  }
+
+  to {
+    transform: rotate(2deg);
+  }
+}
+
+/* Top moves up/down, bottom fixed */
+@keyframes swingBottom {
+  from {
+    transform: rotate(-2deg);
+  }
+
+  50% {
+    transform: rotate(2deg);
+  }
+
+  to {
+    transform: rotate(-2deg);
+  }
+}

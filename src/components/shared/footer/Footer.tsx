@@ -1,0 +1,123 @@
+import { footerColumns } from "@/data/footer.data";
+import Image from "next/image";
+import Link from "next/link";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaLinkedinIn,
+  FaYoutube,
+} from "react-icons/fa";
+import FooterPricingImage from "./FooterPricingImage";
+
+const Footer: React.FC = () => {
+  return (
+    <footer className="bg-gradient-to-br from-primary via-primary-dark to-primary-dark text-white">
+      <div className="mx-auto max-w-7xl  px-[2%] py-7">
+        {/* Payment / SSL banner */}
+        <FooterPricingImage />
+
+        {/* <hr className="my-6 border-white/15" /> */}
+
+        {/* <div className="grid grid-cols-2 gap-x-8 gap-y-8 md:grid-cols-3 lg:grid-cols-6">
+          {footerColumns.map((col) => (
+            <div key={col.title}>
+              <h4 className="mb-3 text-lg font-semibold">{col.title}</h4>
+              <ul className="space-y-3">
+                {col.links.map((lnk) => (
+                  <li key={lnk.label}>
+                    <Link
+                      href={lnk.href}
+                      className={`text-sm text-white/80 hover:text-white transition-colors ${
+                        lnk.highlight
+                          ? "text-amber-300 hover:text-amber-200"
+                          : ""
+                      }`}
+                    >
+                      {lnk.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div> */}
+
+        <hr className="hidden md:block mt-6 border-white/15" />
+
+        {/* Brand + socials */}
+        <div className="mx-auto max-w-7xl py-3">
+          {/* Row 1 */}
+          <div className="flex flex-col items-center gap-4 sm:flex-row sm:items-center sm:justify-between">
+            {/* Bigger logo */}
+            <div className="relative w-[190px] h-12 sm:w-[220px] sm:h-14">
+              <Image
+                src="/assets/hostfame-white.webp"
+                alt="Hostfame"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
+
+            {/* Socials */}
+            <div className="flex items-center gap-3">
+              <Link
+                aria-label="Facebook"
+                href="http://facebook.com/hostfameusa"
+                target="_blank"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-[#071B57] sm:h-8 sm:w-8"
+              >
+                <FaFacebookF />
+              </Link>
+              <Link
+                aria-label="LinkedIn"
+                href="https://www.instagram.com/hostfame/"
+                target="_blank"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-[#071B57] sm:h-8 sm:w-8"
+              >
+                <FaLinkedinIn />
+              </Link>
+              <Link
+                aria-label="YouTube"
+                href="https://www.linkedin.com/company/hostfame/"
+                target="_blank"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-[#071B57] sm:h-8 sm:w-8"
+              >
+                <FaYoutube />
+              </Link>
+              <Link
+                aria-label="Instagram"
+                href="https://www.youtube.com/@hostfameofficial"
+                target="_blank"
+                className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-[#071B57] sm:h-8 sm:w-8"
+              >
+                <FaInstagram />
+              </Link>
+            </div>
+          </div>
+
+          {/* Row 2 */}
+          <div className="mt-4 flex flex-col items-center gap-2 text-center text-xs text-white sm:text-white/80 sm:text-sm sm:flex-row sm:justify-between sm:text-left">
+            <p>© 2025 Hostfame. All Rights Reserved</p>
+
+            <div className="flex items-center gap-2 sm:gap-3">
+              <Link href="/privacy-policy" className=" hover:text-white text-nowrap">
+                Privacy Policy
+              </Link>
+              <span className="text-white/40">|</span>
+              <Link href="/privacy-policy" className=" hover:text-white text-nowrap">
+                Refund Policy
+              </Link>
+              <span className="text-white/40">|</span>
+              <Link href="/contact" className=" hover:text-white text-nowrap">
+                Contact Us
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  );
+};
+
+export default Footer;
