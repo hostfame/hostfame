@@ -5,6 +5,7 @@ import Footer from "@/components/shared/footer/Footer";
 import Navbar from "@/components/navbar/Navbar";
 import { ThemeProvider } from "next-themes";
 import { IpProvider } from "@/providers/IpProvider";
+import { GoogleTagManager } from "@next/third-parties/google";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -33,6 +34,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={`${urbanist.variable}`}>
+      <GoogleTagManager gtmId="GTM-KR6LVVNW" />
       <body className={`${urbanist.className} antialiased  text-text`}>
         <ThemeProvider
           attribute={"data-theme"}
@@ -46,15 +48,6 @@ export default function RootLayout({
             <Footer />
           </IpProvider>
         </ThemeProvider>
-
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-KR6LVVNW"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}
-          />
-        </noscript>
       </body>
     </html>
   );
