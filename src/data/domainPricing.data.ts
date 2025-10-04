@@ -37,7 +37,7 @@ export const domainPricingData: DomainPricingProps = {
       tld: ".net",
       blurb: "A solid choice for tooling, tech, and services.",
       oldPrice: "$15.99",
-      oldPriceBdt: "৳1,599",
+      oldPriceBdt: "৳1599",
       price: "$11.11",
       priceBdt: "৳1,111",
       registerUrl: "#",

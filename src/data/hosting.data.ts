@@ -10,19 +10,19 @@ export const WebHostingData = {
     pricing: {
       dotCom: {
         title: ".com",
-        price: "৳1650/Year"
+        price: "৳777/Year"
       },
       dotNet: {
         title: ".net",
-        price: "৳1650/Year"
+        price: "৳1599/Year"
       },
       dotOrg: {
         title: ".org",
-        price: "৳1650/Year"
+        price: "৳888/Year"
       },
       dotXyz: {
         title: ".xyz",
-        price: "৳599/Year"
+        price: "৳222/Year"
       }
     }
   },
