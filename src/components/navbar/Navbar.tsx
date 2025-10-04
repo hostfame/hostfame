@@ -168,8 +168,9 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
                   className={`${isTransparent ? "!border-white" : ""}`}
                 />
                 <Button
-                  href="/dashboard"
+                  href="https://my.hostfame.com/"
                   size="sm"
+                  target="_blank"
                   className="block w-full !rounded-lg"
                   onClick={() => setIsOpen(false)}
                   variant={isTransparent ? "whiteBordered" : "bordered"}
@@ -343,7 +344,8 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
               {/* Bottom action */}
               <div className="border-t border-border-light-gray pt-4">
                 <Button
-                  href="/dashboard"
+                  href="https://my.hostfame.com/"
+                  target="_blank"
                   className="w-full !rounded-lg text-text"
                   variant={"dark"}
                   onClick={() => setIsOpen(false)}
