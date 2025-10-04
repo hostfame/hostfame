@@ -88,7 +88,7 @@ const defaultData: VpsData = {
       alt: "Modern server room lighting"
     },
     small: {
-      src: "https://themewant.com/products/wordpress/hostie/wp-content/uploads/2024/02/vps-small.png",
+      src: "/uploads/vps-small.png",
       alt: "Rack close-up"
     }
   }

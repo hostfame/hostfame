@@ -38,7 +38,7 @@ const data: {
     },
   ],
   image: {
-    src: "https://hostfame.com/wp-content/uploads/2024/03/contact-form.png.webp",
+    src: "/uploads/2024/03/contact-form.png.webp",
     alt: "Illustration of email and cloud elements symbolizing fast, reliable hosting",
   },
 };

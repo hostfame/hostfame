@@ -5,11 +5,11 @@ export const premiumVpsHostingData: PremiumVpsHostingProps = {
   blurb:
     "Everything your developers, startups, or SaaS apps need, already included in every VPS plan.",
   leftImage: {
-    src: "https://hostfame.com/wp-content/uploads/2024/02/vps__feature__small.png.webp",
+    src: "/uploads/2024/02/vps__feature__small.png.webp",
     alt: "Datacenter small preview",
   },
   rightImage: {
-    src: "https://hostfame.com/wp-content/uploads/2024/02/vps__feature__big.png.webp",
+    src: "/uploads/2024/02/vps__feature__big.png.webp",
     alt: "Datacenter wide preview",
   },
   featuresCol: [
