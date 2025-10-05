@@ -9,12 +9,13 @@ import { Button } from "@/components/shared/html/Button";
  */
 type Props = {
   className?: string;
+  countryCode: string;
   currencyQuery: string;
   isClone?: boolean;
 };
 
 const VPSPricingHeader = forwardRef<HTMLTableSectionElement, Props>(
-  ({ className = "", currencyQuery, isClone = false }, ref) => {
+  ({ className = "", countryCode, currencyQuery, isClone = false }, ref) => {
     // When rendering the clone (isClone = true), do not add "sticky top-0" classes.
     const thFeatureClass =
       "w-56 p-4 text-left bg-primary text-primary-foreground font-semibold border-r border-border " +
@@ -35,7 +36,7 @@ const VPSPricingHeader = forwardRef<HTMLTableSectionElement, Props>(
               <div className="text-sm font-semibold">{plan.name}</div>
 
               <div className="w-full mt-3 inline-block px-6 py-2 rounded-xl bg-primary-light text-primary-foreground font-bold text-2xl">
-                {plan.price}
+                {countryCode === "BD" ? plan.priceBDT : plan.priceUSD}
                 <span className="block text-sm font-normal text-color-description-text">
                   /mo
                 </span>
@@ -43,7 +44,9 @@ const VPSPricingHeader = forwardRef<HTMLTableSectionElement, Props>(
 
               <Button
                 target="_blank"
-                href={plan.href + `&${currencyQuery}`} variant="bordered" size="sm"
+                href={plan.href + `&${currencyQuery}`}
+                variant="bordered"
+                size="sm"
                 className="mt-4 w-full bg-white  text-primary !rounded-md !py-2 font-medium hover:!bg-white hover:!text-primary !hover:scale-105 transition duration-500 text-nowrap"
               >
                 {VPSHostingData.orderNow}

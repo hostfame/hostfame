@@ -7,30 +7,30 @@ import CenteredSectionHeader from "../headers/CenteredSectionHeader";
 import DualPricing from "./domain-hero/DualPricing";
 import { TiersData } from "@/data/cloudVps.data";
 import CloudeVpsPurchasePlanBtn from "./CloudeVpsPurchasePlanBtn";
+import { useIpProviderContextValue } from "@/providers/IpProvider";
 
 const FEATURE_META = [
   {
-    icon: <LuCpu className="text-xl" aria-hidden />,
+    icon: <LuCpu className="text-xl text-white" aria-hidden />,
     title: "Shared vCPU",
-    k: "cpu",
+    k: "cpu"
   },
   {
-    icon: <LuMemoryStick className="text-xl" aria-hidden />,
+    icon: <LuMemoryStick className="text-xl text-white" aria-hidden />,
     title: "Dedicated RAM",
-    k: "ram",
+    k: "ram"
   },
   {
-    icon: <LuHardDrive className="text-xl" aria-hidden />,
+    icon: <LuHardDrive className="text-xl text-white" aria-hidden />,
     title: "NVMe Storage",
-    k: "ssd",
+    k: "ssd"
   },
   {
-    icon: <LuGauge className="text-xl" aria-hidden />,
+    icon: <LuGauge className="text-xl text-white" aria-hidden />,
     title: "Port Speed",
-    k: "net",
-  },
+    k: "net"
+  }
 ];
-
 
 export default function CloudVps() {
   // default to Starter Plus to mirror your original state
@@ -94,7 +94,7 @@ export default function CloudVps() {
                   "shadow-[0_0_0_6px_rgba(16,185,129,0.12)]",
                   "transition-[left] duration-300 ease-in-out motion-reduce:transition-none",
                   "peer-focus-visible:ring-4 peer-focus-visible:ring-[rgba(16,185,129,0.25)]",
-                  "peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-white",
+                  "peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-white"
                 ].join(" ")}
                 aria-hidden
               />
@@ -113,14 +113,14 @@ export default function CloudVps() {
                   onClick={() => setStep(i)}
                   aria-label={`Select ${t.label}`}
                   className={[
-                    "absolute -translate-x-1/2 flex flex-col items-center",
+                    "absolute -translate-x-1/2 flex flex-col items-center"
                   ].join(" ")}
                   style={{ left }}
                 >
                   <span
                     className={[
                       "h-2 w-2 rounded-full transition-colors duration-300",
-                      active ? "bg-primary-light" : "bg-border-light-gray",
+                      active ? "bg-primary-light" : "bg-border-light-gray"
                     ].join(" ")}
                   />
                   <span
@@ -128,7 +128,7 @@ export default function CloudVps() {
                       "mt-2 text-xs font-medium tracking-wide transition-colors duration-300 whitespace-nowrap text-center",
                       active
                         ? "text-primary-light"
-                        : "text-gray-500 hover:text-text",
+                        : "text-text/80 hover:text-text"
                     ].join(" ")}
                   >
                     {t.label}
@@ -145,18 +145,18 @@ export default function CloudVps() {
         {FEATURE_META.map((f) => (
           <li
             key={f.k}
-            className="group rounded-xl border  border-border-light-gray px-4 py-5  hover:-translate-y-1.5 bg-gradient-to-r from-primary to-primary-light group snap-start duration-700 transition"
+            className="group rounded-xl border  border-primary/60 px-4 py-5  hover:-translate-y-1.5 bg-card-background group snap-start duration-700 transition"
           >
             <div className="flex items-center gap-3">
-              <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg border border-border-light-gray bg-gray-background">
+              <span className="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-primary">
                 {f.icon}
               </span>
               <div className="min-h-[2.25rem]">
-                <p className="text-white text-sm font-medium">{f.title}</p>
+                <p className="text-text text-sm font-medium">{f.title}</p>
                 {/* key forces re-mount -> CSS animation plays on change */}
                 <p
                   key={current.features[f.k as keyof typeof current.features]}
-                  className="text-white/80 text-xs fade-in-up"
+                  className="text-text/80 text-xs fade-in-up"
                 >
                   {current.features[f.k as keyof typeof current.features]}
                 </p>
