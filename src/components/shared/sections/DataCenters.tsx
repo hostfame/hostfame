@@ -18,7 +18,7 @@ const data: {
 } = {
   title: "Data Centers All Around the World",
   description:
-    "We offer server locations in the USA, Germany, Egypt, India, China, Brazil, Canada, Russia, Australia, Singapore, and South Africa for our Web, WordPress, and Cloud hosting packages.",
+    "We offer server locations in the USA, Germany, Egypt, India, Bangladesh, China, Brazil, Canada, Russia, Australia, Singapore, and South Africa for our Web, WordPress, and Cloud hosting packages.",
   mapSrc:
     "https://themewant.com/products/wordpress/hostie/wp-content/uploads/2024/01/data__center.png",
   // Positions tuned for the provided background (approximate, responsive via %)
@@ -27,67 +27,75 @@ const data: {
       id: "ca",
       country: "Canada",
       flag: "/assets/flags/ca.png",
-      pos: { top: "14.4%", left: "17.9%" },
+      pos: { top: "14.4%", left: "17.9%" }
     }, // done
     {
       id: "us",
       country: "United States",
       flag: "/assets/flags/us.png",
-      pos: { top: "35%", left: "18.6%" },
+      pos: { top: "35%", left: "18.6%" }
     }, // done
     {
       id: "br",
       country: "Brazil",
       flag: "/assets/flags/br.png",
-      pos: { top: "60.9%", left: "29.8%" },
+      pos: { top: "60.9%", left: "29.8%" }
     }, // done
     {
       id: "de",
       country: "Germany",
       flag: "/assets/flags/de.png",
-      pos: { top: "24%", left: "48.3%" },
+      pos: { top: "24%", left: "48.3%" }
     }, // done
     {
       id: "eg",
       country: "Egypt",
       flag: "/assets/flags/eg.png",
-      pos: { top: "42.5%", left: "53.2%" },
+      pos: { top: "42.5%", left: "53.2%" }
     }, // done
     {
       id: "in",
       country: "India",
       flag: "/assets/flags/in.png",
-      pos: { top: "46.2%", left: "67.9%" },
+      pos: { top: "46.2%", left: "67.9%" }
+    }, // done
+    {
+      id: "bn",
+      country: "Bangladesh",
+      flag: "/assets/flags/bn.png",
+      pos: { top: "48.5%", left: "71.9%" }
     }, // done
     {
       id: "cn",
       country: "China",
       flag: "/assets/flags/cn.png",
-      pos: { top: "32.7%", left: "75%" },
+      pos: { top: "32.7%", left: "75%" }
     }, // done
     {
       id: "ru",
       country: "Russia",
       flag: "/assets/flags/ru.png",
-      pos: { top: "17.7%", left: "79%" },
+      pos: { top: "17.7%", left: "79%" }
     }, // done
     {
       id: "za",
       country: "South Africa",
       flag: "/assets/flags/za.png",
-      pos: { top: "76.3%", left: "52%" },
+      pos: { top: "76.3%", left: "52%" }
     }, // done
     {
       id: "au",
       country: "Australia",
       flag: "/assets/flags/au.png",
-      pos: { top: "73.8%", left: "82.6%" },
-    },
-  ],
+      pos: { top: "73.8%", left: "82.6%" }
+    }
+  ]
 };
 
 function PingDot() {
-  return <div className="animate-ping size-2 rounded-full bg-primary-dark"></div>;
+  return (
+    <div className="animate-ping size-2 rounded-full bg-primary-dark"></div>
+  );
 }
 
 export default function DataCenters() {
