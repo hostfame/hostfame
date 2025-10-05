@@ -175,7 +175,7 @@ export default function CloudVps() {
             className="text-2xl font-semibold !text-text"
           />
         </div>
-        <CloudeVpsPurchasePlanBtn href={current.href} />
+        <CloudeVpsPurchasePlanBtn href={current?.href || "#"} />
       </div>
 
       {/* Local CSS for tiny animations & reduced-motion support */}
