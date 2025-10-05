@@ -7,7 +7,7 @@ import { WhyChooseWebHostingProps } from "@/types/web-hosting/whyChooseWebHostin
 const FeatureCard: React.FC<WhyChooseWebHostingProps & { className?: string }> = ({ title, description, img, className = "" }) => {
   return (
     <article
-      className={`group relative rounded-2xl border border-slate-200/70  transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_16px_40px_rgba(16,24,40,.10)] ${className}`}
+      className={`group relative rounded-2xl border border-border-light-gray  transition-all duration-300 hover:-translate-y-1.5 hover:shadow-[0_16px_40px_rgba(16,24,40,.10)] ${className}`}
     >
       {/* subtle gradient ring on hover */}
       <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-transparent group-hover:ring-teal-500/30 transition-all" />
@@ -17,10 +17,10 @@ const FeatureCard: React.FC<WhyChooseWebHostingProps & { className?: string }> =
           <div className="relative h-12 w-12 shrink-0">
             <Image src={img} alt="" fill className="object-contain p-2" />
           </div>
-          <h3 className="text-lg font-semibold text-slate-900">{title}</h3>
+          <h3 className="text-lg font-semibold text-text">{title}</h3>
         </div>
 
-        <p className="text-[15px] leading-6 text-slate-600">{description}</p>
+        <p className="text-[15px] leading-6 text-description-text">{description}</p>
       </div>
     </article>
   );

@@ -16,11 +16,7 @@ export type PricingToggleProps = {
 };
 
 /* --- dashed curved arrow (like the screenshot) --- */
-function CurvedDottedArrow({
-  className = "",
-}: {
-  className?: string;
-}) {
+function CurvedDottedArrow({ className = "" }: { className?: string }) {
   return (
     <svg
       width="96"
@@ -68,19 +64,17 @@ function FallbackToggle({
     <div className="flex rounded-full border border-primary p-1">
       <button
         onClick={() => onToggle("monthly")}
-        className={` px-6 py-2 rounded-full font-semibold transition-all duration-300 ${billingPeriod === "monthly"
-          ? "bg-primary text-white"
-          : "text-text"
-          }`}
+        className={` px-6 py-2 rounded-full font-semibold transition-all duration-300 ${
+          billingPeriod === "monthly" ? "bg-primary text-white" : "text-text"
+        }`}
       >
         Monthly
       </button>
       <button
         onClick={() => onToggle("yearly")}
-        className={` px-6 py-2 rounded-full font-semibold transition-all duration-300 ${billingPeriod === "yearly"
-          ? "bg-primary text-white"
-          : "text-text"
-          }`}
+        className={` px-6 py-2 rounded-full font-semibold transition-all duration-300 ${
+          billingPeriod === "yearly" ? "bg-primary text-white" : "text-text"
+        }`}
       >
         Yearly
       </button>
@@ -97,11 +91,11 @@ export function PricingToggle({
   className = "",
 }: PricingToggleProps) {
   const countryCode = useIpProviderContextValue();
-const yearlyDis = countryCode === "BD" ? yearlyDiscountBdt : yearlyDiscount
-console.log("yearlyDiscountBdt", yearlyDiscountBdt)
-console.log("yearlyDiscount", yearlyDiscount)
-console.log(countryCode)
-console.log(yearlyDis)
+  const yearlyDis = countryCode === "BD" ? yearlyDiscountBdt : yearlyDiscount;
+  console.log("yearlyDiscountBdt", yearlyDiscountBdt);
+  console.log("yearlyDiscount", yearlyDiscount);
+  console.log(countryCode);
+  console.log(yearlyDis);
   return (
     <div className={`flex justify-center items-center gap-4 ${className}`}>
       {/* your shared toggle goes here */}
@@ -111,8 +105,12 @@ console.log(yearlyDis)
 
       {/* discount with arrow */}
       <div className="relative flex items-start">
-        <CurvedDottedArrow className="text-primary -mt-2 mr-2" />
-        <span className={`${billingPeriod === "monthly" ? "line-through" : ""} text-primary text-sm font-medium whitespace-nowrap self-center -ml-12 mt-7`}>
+        <CurvedDottedArrow className="text-primary-to-white -mt-2 mr-2" />
+        <span
+          className={`${
+            billingPeriod === "monthly" ? "line-through" : ""
+          } text-primary-to-white text-sm font-medium whitespace-nowrap self-center -ml-12 mt-7`}
+        >
           Save upto {yearlyDis}%
         </span>
       </div>
