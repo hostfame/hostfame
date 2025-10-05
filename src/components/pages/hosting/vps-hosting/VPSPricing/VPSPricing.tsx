@@ -184,7 +184,7 @@ export default function VPSPricing() {
                 top: "64px",
                 left: leftPx,
                 width: widthPx,
-                zIndex: 1200,
+                zIndex: 50,
                 boxSizing: "border-box",
                 // add pointer events so buttons are clickable on the clone
                 pointerEvents: "auto"

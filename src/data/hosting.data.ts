@@ -14,7 +14,7 @@ export const WebHostingData = {
       },
       dotNet: {
         title: ".net",
-        price: "৳1599/Year"
+        price: "৳1111/Year"
       },
       dotOrg: {
         title: ".org",
