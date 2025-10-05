@@ -37,6 +37,8 @@ export default function CloudVps() {
   const [step, setStep] = useState(1); // 0..3
   const current = useMemo(() => TiersData[step], [step]);
 
+  console.log('current', current)
+
   const percent = useMemo(() => (step / (TiersData.length - 1)) * 100, [step]);
 
   return (
@@ -175,7 +177,7 @@ export default function CloudVps() {
             className="text-2xl font-semibold !text-text"
           />
         </div>
-        <CloudeVpsPurchasePlanBtn href={current?.href || "#"} />
+        <CloudeVpsPurchasePlanBtn href={current?.href} />
       </div>
 
       {/* Local CSS for tiny animations & reduced-motion support */}

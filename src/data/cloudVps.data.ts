@@ -44,7 +44,7 @@ export const TiersData = [
   {
     key: "pro-plus",
     label: "Pro Plus",
-    ref: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/pro-plus",
+    href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/pro-plus",
     // className: "",
     priceMonthly: "$29.99/mo",
     priceMonthlyBdt: "৳2999/mo",
