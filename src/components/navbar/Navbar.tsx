@@ -71,7 +71,7 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
 
   return (
     <nav
-      className={`duration-300 top-0 z-50 ${
+      className={`duration-300 top-0 z-[100] ${
         isTransparent
           ? `bg-transparent ${
               scrollY > 70
@@ -116,7 +116,7 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
                         <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
                       </button>
                       <div
-                        className={`w-[400px] absolute -left-1/2 mt-2 bg-gray-background rounded-xl shadow-2xl border border-background py-4 z-50 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform group-hover:-translate-y-1`}
+                        className={`w-[400px] absolute -left-1/2 mt-2 bg-gray-background rounded-xl shadow-2xl border border-background py-4 z-[100] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform group-hover:-translate-y-1`}
                       >
                         <div className="grid grid-cols-2 gap-1 px-4">
                           {item.subItems.map((subItem) => (
