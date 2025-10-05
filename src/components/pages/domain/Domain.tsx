@@ -10,7 +10,7 @@ import WhyChooseOurDomain from "./WhyChooseOurDomain";
 
 const Domain = () => {
   return (
-    <div>
+    <div className=" max-[1229px]:overflow-x-hidden">
       <DomainBanner />
 
       <SectionWrapper className="my-12 md:my-16">
