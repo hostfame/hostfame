@@ -9,7 +9,7 @@ const SearchDomainName = () => {
   }
 
   return (
-    <section className="relative overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-[0_10px_20px_5px_rgb(0,0,0,0.15)]">
+    <section className="relative overflow-hidden rounded-2xl border border-border-light-gray  shadow-[0_10px_20px_5px_rgb(0,0,0,0.15)]">
       {/* Subtle radial background accents */}
       <div className="pointer-events-none absolute -top-24 -left-24 h-72 w-72 rounded-full bg-gradient-to-br from-primary-blue/20 to-secondary-blue/10 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-24 -right-24 h-72 w-72 rounded-full bg-gradient-to-br from-primary-blue/10 to-secondary-blue/20 blur-3xl" />
@@ -18,7 +18,7 @@ const SearchDomainName = () => {
         {/* Left */}
         <div className="!w-[90%] md:w-full mx-auto flex flex-col justify-center gap-6">
           <header className="space-y-3">
-            <h2 className="text-center lg:text-left text-3xl md:text-4xl font-extrabold tracking-tight text-gray-900">
+            <h2 className="text-center lg:text-left text-3xl md:text-4xl font-extrabold tracking-tight text-text">
               {WebHostingData.domainNameSection.title}
             </h2>
           </header>
@@ -47,7 +47,7 @@ const SearchDomainName = () => {
               (pricing, idx) => (
                 <div
                   key={`${pricing.title}-${idx}`}
-                  className="relative rounded-2xl border  border-gray-200 bg-white p-7 shadow-sm hover:shadow-md transition"
+                  className="relative rounded-2xl border  border-border-dark-gray bg-card-background p-7 shadow-sm hover:shadow-md transition"
                 >
                   {idx === 0 && (
                     <span className="absolute -top-3 right-3 rounded-full bg-teal-600 px-3 py-1 text-[10px] font-bold uppercase tracking-wide text-white shadow text-lg">
@@ -67,7 +67,7 @@ const SearchDomainName = () => {
                       {pricing.title}
                     </p>
 
-                    <p className=" text-gray-700 font-semibold text-lg">
+                    <p className=" text-text font-semibold text-lg">
                       {pricing.price}
                     </p>
                   </div>

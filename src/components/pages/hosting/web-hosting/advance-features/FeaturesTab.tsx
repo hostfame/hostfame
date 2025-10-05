@@ -94,7 +94,7 @@ export default function FeatureTabsClient({
   return (
     <div className="mt-5">
       {/* Tabs */}
-      <div className="border-b border-slate-200">
+      <div className="border-b border-border-light-gray">
         <div ref={navRef} className="relative flex flex-wrap justify-center lg:justify-start gap-x-6 gap-y-2">
           {tabs.map((tab, idx) => {
             const isActive = idx === activeIdx;
@@ -105,7 +105,7 @@ export default function FeatureTabsClient({
                 data-slug={tab.slug}
                 onClick={(e) => handleTab(e, tab.slug, idx)}
                 className={`relative pb-2 text-base font-semibold  border-b-[3px] ${
-                  isActive ? "text-slate-900 border-teal-600" : "text-slate-500 border-transparent hover:text-slate-800"
+                  isActive ? "text-text border-teal-600" : "text-description-text border-transparent hover:text-primary"
                 }`}
               >
                 {tab.label}
@@ -137,13 +137,13 @@ export default function FeatureTabsClient({
           }`}
         >
           {/* Description */}
-          <p className="text-[15px] leading-6 text-slate-600">{active.description}</p>
+          <p className="text-[15px] leading-6 text-text">{active.description}</p>
 
           {/* Bullets */}
           <ul className="mt-5 space-y-3">
             {active.bullets.map((b, i) => (
-              <li key={i} className="flex items-start gap-3 text-slate-800">
-                <IoCheckmarkCircle className="mt-0.5 h-5 w-5 text-emerald-500" />
+              <li key={i} className="flex items-start gap-3 text-text">
+                <IoCheckmarkCircle className="mt-0.5 h-5 w-5 text-primary" />
                 <span className="text-[15px] leading-6">{b}</span>
               </li>
             ))}

@@ -39,6 +39,7 @@
   --color-popover: var(--popover);
   --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
+  --color-primary-to-white: var(--primary);
   --color-primary-light: var(--primary-light);
   --color-primary-extralight: var(--primary-extralight);
   --color-primary-dark: var(--primary-dark);
@@ -101,6 +102,7 @@
     --color-card-background: white;
     --color-offer-text: #364153;
     --color-dark-text: #4c5671;
+    --color-primary-to-white: var(--primary);
   }
 
   [data-theme="dark"] {
@@ -120,9 +122,8 @@
     --color-card-background: #282825;
     --color-offer-text: white;
     --color-dark-text: white;
+    --color-primary-to-white: white;
   }
-
-
 }
 
 html {
