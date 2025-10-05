@@ -38,7 +38,7 @@ const VPSPricingHeader = forwardRef<HTMLTableSectionElement, Props>(
               <div className="w-full mt-3 inline-block px-6 py-2 rounded-xl bg-primary-light text-primary-foreground font-bold text-2xl">
                 {countryCode === "BD" ? plan.priceBDT : plan.priceUSD}
                 <span className="block text-sm font-normal text-color-description-text">
-                  /mo
+                  /mo 
                 </span>
               </div>
 
