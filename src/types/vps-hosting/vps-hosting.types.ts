@@ -1,6 +1,7 @@
 export type VPSPlan = {
   name: string;
-  price: string;
+  priceBDT: string;
+  priceUSD: string;
   vcpu: string;
   ram: string;
   storage: string;

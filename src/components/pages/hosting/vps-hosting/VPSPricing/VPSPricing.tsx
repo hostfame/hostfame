@@ -126,7 +126,7 @@ export default function VPSPricing() {
         >
           <table ref={tableRef} className="min-w-full border-collapse relative">
             {/* Real header inside table (we forwardRef so headerRef points to this THEAD) */}
-            <VPSPricingHeader currencyQuery={currencyQuery} ref={headerRef} />
+            <VPSPricingHeader countryCode={countryCode} currencyQuery={currencyQuery} ref={headerRef} />
 
             <tbody>
               {features.map((feat, rowIdx) => (
@@ -200,7 +200,7 @@ export default function VPSPricing() {
               >
                 <table className="min-w-full border-collapse">
                   {/* clone header with isClone so we don't include sticky classes inside clone */}
-                  <VPSPricingHeader currencyQuery={currencyQuery} isClone />
+                  <VPSPricingHeader countryCode={countryCode} currencyQuery={currencyQuery} isClone />
                 </table>
               </div>
             </div>
@@ -224,7 +224,7 @@ export default function VPSPricing() {
               </div>
 
               <div className="w-full mt-3 mx-auto flex flex-col items-center px-6 py-4 rounded-lg bg-primary-light text-primary-foreground font-bold text-2xl">
-                {plan.price}
+                {countryCode === "BD" ? plan.priceBDT : plan.priceUSD}
                 <span className="block text-sm font-normal text-color-description-text">
                   /mo
                 </span>

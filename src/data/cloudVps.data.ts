@@ -4,7 +4,7 @@ export const TiersData = [
     label: "Starter",
     href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/starter",
     // className: "-ml-5",
-    priceMonthly: "৳999/mo",
+    priceMonthly: "$9.99/mo",
     priceMonthlyBdt: "৳999/mo",
     features: {
       cpu: "2 vCPU Cores",
@@ -18,7 +18,7 @@ export const TiersData = [
     label: "Starter Plus",
     href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/starter-plus",
     // className: "ml-1",
-    priceMonthly: "৳1499/mo",
+    priceMonthly: "$14.99/mo",
     priceMonthlyBdt: "৳1499/mo",
     features: {
       cpu: "4 vCPU Cores",
@@ -32,7 +32,7 @@ export const TiersData = [
     label: "Pro",
     href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/pro",
     // className: "ml-4",
-    priceMonthly: "৳2499/mo",
+    priceMonthly: "$24.99/mo",
     priceMonthlyBdt: "৳2499/mo",
     features: {
       cpu: "4 vCPU Cores",
@@ -46,7 +46,7 @@ export const TiersData = [
     label: "Pro Plus",
     ref: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/pro-plus",
     // className: "",
-    priceMonthly: "৳2999/mo",
+    priceMonthly: "$29.99/mo",
     priceMonthlyBdt: "৳2999/mo",
     features: {
       cpu: "8 vCPU Cores",
@@ -60,7 +60,7 @@ export const TiersData = [
     label: "Pro Extra",
     href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/pro-extra",
     // className: "",
-    priceMonthly: "৳3999/mo",
+    priceMonthly: "$39.99/mo",
     priceMonthlyBdt: "৳3999/mo",
     features: {
       cpu: "8 vCPU Cores",
@@ -74,7 +74,7 @@ export const TiersData = [
     label: "Ultimate",
     href: "https://my.hostfame.com/index.php?rp=/store/vps-hosting-bd/ultimate",
     // className: "",
-    priceMonthly: "৳9999/mo",
+    priceMonthly: "$99.99/mo",
     priceMonthlyBdt: "৳9999/mo",
     features: {
       cpu: "16 vCPU Cores",

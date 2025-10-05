@@ -9,7 +9,8 @@ export const VPSHostingData = {
 export const VPSPlans: VPSPlan[] = [
   {
     name: "Starter",
-    price: "৳999",
+    priceBDT: "৳999",
+    priceUSD: "$9.99",
     vcpu: "2 vCPU Cores",
     ram: "4 GB RAM",
     storage: "40 GB SSD",
@@ -25,7 +26,8 @@ export const VPSPlans: VPSPlan[] = [
   },
   {
     name: "Starter Plus",
-    price: "৳1499",
+    priceBDT: "৳1499",
+    priceUSD: "$14.99",
     vcpu: "4 vCPU Cores",
     ram: "8 GB RAM",
     storage: "80 GB SSD",
@@ -41,7 +43,8 @@ export const VPSPlans: VPSPlan[] = [
   },
   {
     name: "Pro",
-    price: "৳2499",
+    priceBDT: "৳2499",
+    priceUSD: "$24.99",
     vcpu: "4 vCPU Cores",
     ram: "8 GB RAM",
     storage: "160 GB SSD",
@@ -57,7 +60,8 @@ export const VPSPlans: VPSPlan[] = [
   },
   {
     name: "Pro Plus",
-    price: "৳2999",
+    priceBDT: "৳2999",
+    priceUSD: "$29.99",
     vcpu: "8 vCPU Cores",
     ram: "16 GB RAM",
     storage: "160 GB SSD",
@@ -73,7 +77,8 @@ export const VPSPlans: VPSPlan[] = [
   },
   {
     name: "Pro Extra",
-    price: "৳3999",
+    priceBDT: "৳3999",
+    priceUSD: "$39.99",
     vcpu: "8 vCPU Cores",
     ram: "16 GB RAM",
     storage: "240 GB SSD",
@@ -89,7 +94,8 @@ export const VPSPlans: VPSPlan[] = [
   },
   {
     name: "Ultimate",
-    price: "৳9999",
+    priceBDT: "৳9999",
+    priceUSD: "$99.99",
     vcpu: "16 vCPU Cores",
     ram: "32 GB RAM",
     storage: "360 GB SSD",
