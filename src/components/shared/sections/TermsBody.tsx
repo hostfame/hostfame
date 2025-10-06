@@ -30,7 +30,7 @@ export default function TermsBody({
   showIntro?: boolean;
 }) {
   return (
-    <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+    <div className="mx-auto">
       {showIntro && (
         <p className="mb-8 max-w-3xl text-description-text">{data.intro}</p>
       )}

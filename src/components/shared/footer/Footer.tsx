@@ -119,6 +119,13 @@ const Footer: React.FC = () => {
                 Terms And Conditions
               </Link>
               <span className="text-white/40">|</span>
+              <Link
+                href="/refund-policy"
+                className=" hover:text-white text-nowrap"
+              >
+                Refund Policy
+              </Link>
+              <span className="text-white/40">|</span>
               <Link href="/contact" className=" hover:text-white text-nowrap">
                 Contact Us
               </Link>

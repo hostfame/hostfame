@@ -45,7 +45,7 @@ export function PolicyMetaSection({
   const updated = formatISODate(updatedDateISO);
 
   return (
-    <section id={id} className={` w-full mx-auto max-w-6xl px-4 py-10 sm:px-6 md:py-8 lg:px-8 ${className}`}>
+    <section id={id} className={` w-full mx-auto 4 py-10 md:py-8 ${className}`}>
       {/* Meta row - responsive grid */}
       <div className="flex gap-4 flex-wrap ">
         {effective && (
