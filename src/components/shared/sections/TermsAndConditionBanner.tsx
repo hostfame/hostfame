@@ -1,13 +1,29 @@
+"use client";
+
 import Navbar from "@/components/navbar/Navbar";
 import React from "react";
 import {
   FiShield,
   FiFileText,
   FiDownload,
+  FiClock,
+  FiCreditCard,
+  FiAlertTriangle,
+  FiHeadphones,
 } from "react-icons/fi";
+import SectionWrapper from "../wrappers/SectionWrapper";
+import { FaWeightScale } from "react-icons/fa6";
 
-// ---------------- Types ----------------
-export type BannerIcon = "shield" | "file" | "download";
+/* ---------------- Types ---------------- */
+export type BannerIcon =
+  | "shield"
+  | "file"
+  | "download"
+  | "clock"
+  | "credit-card"
+  | "alert-triangle"
+  | "support"
+  | "scale";
 
 export type TermsOfServiceBannerData = {
   title: string;
@@ -23,7 +39,7 @@ export type TermsOfServiceBannerData = {
   highlights: { icon: BannerIcon; text: string }[];
 };
 
-// --------------- Default Data ---------------
+/* ---------------- Default Data ---------------- */
 export const defaultTosBannerData: TermsOfServiceBannerData = {
   title: "Terms of Service",
   subtitle:
@@ -31,7 +47,12 @@ export const defaultTosBannerData: TermsOfServiceBannerData = {
   updatedISO: "2025-09-01",
   badgeLabel: "Updated",
   ctas: [
-    { label: "Read the Terms", href: "#tos-content", variant: "primary", icon: "file" },
+    {
+      label: "Read the Terms",
+      href: "#tos-content",
+      variant: "primary",
+      icon: "file",
+    },
   ],
   highlights: [
     {
@@ -56,7 +77,12 @@ export const defaultPrivacyBannerData: TermsOfServiceBannerData = {
   updatedISO: "2025-09-01",
   badgeLabel: "Updated",
   ctas: [
-    { label: "Read the Policy", href: "#privacy-content", variant: "primary", icon: "file" },
+    {
+      label: "Read the Policy",
+      href: "#privacy-content",
+      variant: "primary",
+      icon: "file",
+    },
   ],
   highlights: [
     {
@@ -74,24 +100,65 @@ export const defaultPrivacyBannerData: TermsOfServiceBannerData = {
   ],
 };
 
-// --------------- Icon Helper ---------------
-const IconFromKey: Record<
-  BannerIcon,
-  React.ComponentType<{ className?: string }>
-> = {
+export const defaultRefundPolicyBannerData: TermsOfServiceBannerData = {
+  title: "Refund Policy",
+  subtitle:
+    "Understand how Hostfame handles refund requests, eligibility, timelines, and exceptions under our 30-day money-back guarantee.",
+  updatedISO: "2025-09-01",
+  badgeLabel: "Updated",
+  ctas: [
+    {
+      label: "Read the Policy",
+      href: "#refund-content",
+      variant: "primary",
+      icon: "file",
+    },
+  ],
+  highlights: [
+    {
+      icon: "clock",
+      text: "30-day money-back guarantee on eligible hosting services.",
+    },
+    {
+      icon: "credit-card",
+      text: "Refunds processed securely via your original payment method.",
+    },
+    {
+      icon: "alert-triangle",
+      text: "Certain services like domains and add-ons are non-refundable.",
+    },
+    {
+      icon: "support",
+      text: "Easy refund requests through your Hostfame Client Area.",
+    },
+    {
+      icon: "scale",
+      text: "All refunds governed by Wyoming, USA jurisdiction.",
+    },
+  ],
+};
+
+/* ---------------- Icon Map ---------------- */
+const IconFromKey: Record<BannerIcon, React.ComponentType<{ className?: string }>> = {
   shield: (props) => <FiShield {...props} />,
   file: (props) => <FiFileText {...props} />,
   download: (props) => <FiDownload {...props} />,
+  clock: (props) => <FiClock {...props} />,
+  "credit-card": (props) => <FiCreditCard {...props} />,
+  "alert-triangle": (props) => <FiAlertTriangle {...props} />,
+  support: (props) => <FiHeadphones {...props} />,
+  scale: (props) => <FaWeightScale {...props} />,
 };
 
+/* ---------------- Component ---------------- */
 /**
  * TermsOfServiceBanner
  * ---------------------------------------------------------
- * Modern, filled hero/banner for a Terms of Service page.
+ * Versatile hero/banner for policy pages:
  * - Next.js 15 / React / TypeScript compatible
  * - Tailwind CSS + react-icons
- * - Background: linear-gradient(180deg, #08b1b1 0%, #005f5f 100%)
- * - All display copy and items come from a single `data` object.
+ * - Background: gradient teal tone
+ * - All copy & visuals sourced from data props
  */
 export interface TermsOfServiceBannerProps {
   data?: TermsOfServiceBannerData;
@@ -100,29 +167,37 @@ export interface TermsOfServiceBannerProps {
 export default function TermsOfServiceBanner({
   data = defaultTosBannerData,
 }: TermsOfServiceBannerProps) {
-
   return (
     <section
       className="relative overflow-hidden banner-bg"
-      aria-label="Terms of Service banner"
+      aria-label={`${data.title} banner`}
     >
-      <div className=" z-40">
+      <div className="z-40">
         <Navbar isTransparent />
       </div>
-      <div className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 md:py-14 lg:px-8">
-        {/* Main content */}
-        <div className="grid items-center gap-8 md:grid-cols-[1.3fr_.9fr]">
-          <div>
-            <h1 className="mb-4 flex items-center gap-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
-              <span className="inline-grid place-items-center rounded-2xl bg-white/15 p-2 backdrop-blur">
-                <FiFileText className="h-7 w-7 sm:h-8 sm:w-8" />
-              </span>
-              {data.title}
-            </h1>
 
-            <p className="max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg">
-              {data.subtitle}
-            </p>
+      <SectionWrapper className="relative mx-auto pt-6 pb-12 md:pt-10 md:pb-16">
+        <div className="grid items-center gap-8 md:grid-cols-[1.3fr_.9fr]">
+          {/* Left side - content */}
+          <div className="flex flex-col h-full justify-between">
+            <div className="space-y-4">
+              <h1 className="mb-4 flex items-center gap-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
+                <span className="inline-grid place-items-center rounded-2xl bg-white/15 p-2 backdrop-blur">
+                  <FiFileText className="h-7 w-7 sm:h-8 sm:w-8" />
+                </span>
+                {data.title}
+              </h1>
+
+              <p className="max-w-2xl text-base leading-relaxed text-white/90 sm:text-lg">
+                {data.subtitle}
+              </p>
+
+              {data.badgeLabel && (
+                <p className="text-sm text-white/70 mt-1">
+                  {data.badgeLabel}: {new Date(data.updatedISO).toLocaleDateString()}
+                </p>
+              )}
+            </div>
 
             <div className="mt-8 flex flex-wrap gap-3">
               {data.ctas.map((cta, i) => {
@@ -142,7 +217,7 @@ export default function TermsOfServiceBanner({
             </div>
           </div>
 
-          {/* Key highlights card */}
+          {/* Right side - highlights */}
           <div className="rounded-2xl border border-white/15 bg-white/10 p-5 text-white shadow-xl backdrop-blur-sm">
             <h2 className="mb-3 text-sm font-semibold uppercase tracking-wider text-white/90">
               At a glance
@@ -162,7 +237,7 @@ export default function TermsOfServiceBanner({
             </ul>
           </div>
         </div>
-      </div>
+      </SectionWrapper>
     </section>
   );
 }
