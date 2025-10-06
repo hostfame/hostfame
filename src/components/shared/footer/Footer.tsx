@@ -101,12 +101,22 @@ const Footer: React.FC = () => {
             <p>© 2025 Hostfame. All Rights Reserved</p>
 
             <div className="flex items-center gap-2 sm:gap-3">
-              <Link href="/privacy-policy" className=" hover:text-white text-nowrap">
+              {/* <Link href="/about-us" className=" hover:text-white text-nowrap">
+                About Us
+              </Link>
+              <span className="text-white/40">|</span> */}
+              <Link
+                href="/privacy-policy"
+                className=" hover:text-white text-nowrap"
+              >
                 Privacy Policy
               </Link>
               <span className="text-white/40">|</span>
-              <Link href="/privacy-policy" className=" hover:text-white text-nowrap">
-                Refund Policy
+              <Link
+                href="/terms-of-services"
+                className=" hover:text-white text-nowrap"
+              >
+                Terms And Conditions
               </Link>
               <span className="text-white/40">|</span>
               <Link href="/contact" className=" hover:text-white text-nowrap">

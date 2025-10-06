@@ -1,4 +1,3 @@
-
 /* =========================
  * Types
  * ========================= */
@@ -37,224 +36,325 @@ export type TermsData = {
 export const termsData: TermsData = {
   brand: "Hostfame",
   company: "S Creative LLC (Wyoming, USA)",
-  jurisdiction: "State of Wyoming, USA",
-  effectiveDateISO: "2025-05-02",
-  updatedDateISO: "2025-05-02",
+  jurisdiction: "State of Wyoming, USA; Bangladesh (see §1)",
+  effectiveDateISO: "2025-10-06",
+  updatedDateISO: "2025-10-06",
   intro:
-    'These Terms of Service (“Agreement”) govern your use of all services provided by Hostfame (a brand of S Creative LLC, registered in Wyoming, USA). By using our website or services, you agree to the terms outlined below.',
-  contactEmail: "support@hostfame.com",
+    "These Terms and Conditions (“Terms”) govern the use of all products and services provided by Hostfame, owned by S Creative LLC (“we,” “us,” “our,” or “Hostfame”) to customers (“you,” “your”). By signing up, purchasing, or using our services, you acknowledge that you have read, understood, and agree to be bound by these Terms. Hostfame is a U.S.-registered company operating globally, including in partnership with Hostnin (Bangladesh) for South Asian clients. These Terms are designed in compliance with U.S. laws, Bangladeshi ICT regulations, and international hosting best practices. If you do not agree with these Terms, you must immediately stop using our services.",
+  contactEmail: "legal@hostfame.com",
   sections: [
     {
-      id: "1-eligibility-and-account-responsibility",
-      title: "1. Eligibility and Account Responsibility",
+      id: "1-governing-law-and-jurisdiction",
+      title: "1. Governing Law & Jurisdiction",
       paragraphs: [
-        "You must be at least 18 years old and capable of entering a legally binding agreement to use our services. By registering an account, you represent that all provided information is accurate and that you will keep your credentials secure.",
-        "You are responsible for all activity under your account and agree not to share login credentials or use the service for any unauthorized purposes.",
+        "For customers registered under Hostfame, these Terms are governed by the laws of the State of Wyoming, United States.",
+        "For clients hosted or billed under Hostnin (Bangladesh), Bangladeshi law applies.",
+        "Any disputes shall be subject to the exclusive jurisdiction of the courts located in Sheridan, Wyoming (USA) or Chattogram, Bangladesh, depending on your billing entity.",
       ],
+      note: "Hostfame reserves the right to cooperate fully with law enforcement agencies in cases of fraud, abuse, or criminal activity.",
     },
     {
-      id: "2-services-provided",
-      title: "2. Services Provided",
-      paragraphs: ["Hostfame offers the following services:"],
+      id: "2-account-registration-and-responsibilities",
+      title: "2. Account Registration & Responsibilities",
       bullets: [
-        { text: "Shared web hosting and Managed WordPress hosting" },
-        { text: "Domain registration and transfer services" },
-        { text: "Email hosting" },
         {
-          text:
-            "Add-on tools such as LiteSpeed, JetBackup, Imunify360, and Softaculous",
+          text: "Provide accurate, complete, and verifiable information during registration",
+        },
+        { text: "Maintain the confidentiality of your login credentials" },
+        {
+          text: "Accounts with fake, misleading, or unverifiable details may be terminated without refund",
+        },
+        {
+          text: "Creating multiple accounts to abuse discounts, promotions, or referral programs is strictly prohibited",
         },
       ],
-      note:
-        "We reserve the right to modify, suspend, or discontinue services at any time with reasonable notice.",
     },
     {
       id: "3-acceptable-use-policy",
-      title: "3. Acceptable Use Policy",
-      paragraphs: ["You agree not to:"],
+      title: "3. Acceptable Use Policy (AUP)",
+      paragraphs: ["3.1 Prohibited Content"],
       bullets: [
         {
-          text:
-            "Host or distribute content that is unlawful, harmful, threatening, defamatory, or hateful",
+          text: "Pornography, adult content, escort or sexually explicit material",
         },
-        { text: "Engage in spam, phishing, or malware distribution" },
+        { text: "Child exploitation, grooming, or abuse content" },
+        { text: "Pirated software, cracked applications, or warez" },
+        { text: "Phishing pages, fake login portals, or fraudulent websites" },
+        { text: "Terrorism-related, political propaganda, or hate speech" },
+        { text: "Illegal gambling, betting, or unlicensed financial trading" },
+        { text: "Drugs, weapons, or restricted substances" },
         {
-          text:
-            "Infringe on copyrights, trademarks, or other intellectual property rights",
+          text: "Defamatory, misleading, or copyrighted materials without authorization",
         },
-        { text: "Use excessive server resources that affect other users" },
-        { text: "Run any unauthorized background processes or bots" },
       ],
-      note:
-        "Hostfame may suspend or terminate any account in violation of this policy, without prior notice.",
+      note: "3.2 Prohibited Activities: Spamming via email/SMS/WhatsApp; hosting malware/trojans or participating in DDoS; unauthorized cryptocurrency mining; hosting storage-only or backup archive sites; using resources for attacks or illegal scraping. 3.3 Misuse & Abusive Behavior: Harassment, threats, or verbal abuse toward staff will result in suspension or termination.",
     },
     {
-      id: "4-abuse-and-non-refund",
-      title: "4. Abuse of Services and Non-Refund Policy for Abuse",
+      id: "4-resource-usage-and-fair-usage-policy",
+      title: "4. Resource Usage & Fair Usage Policy",
+      bullets: [
+        { text: "Hosting resources (CPU, RAM, storage, bandwidth) are shared" },
+        {
+          text: "“Unlimited” hosting is subject to fair usage limits to ensure stability",
+        },
+        {
+          text: "Excessive use (e.g., video streaming, backup hosting, bulk storage) may require suspension or an upgrade",
+        },
+        {
+          text: "Bulk or unsolicited email sending is prohibited unless pre-approved",
+        },
+      ],
+    },
+    {
+      id: "5-payments-billing-and-refunds",
+      title: "5. Payments, Billing & Refunds",
       paragraphs: [
-        "We maintain a strict zero-tolerance policy regarding the abuse of our services. Abuse includes, but is not limited to:",
+        "All services are billed in USD for international customers and BDT for Bangladeshi users (via Hostnin). Payments are due in advance. Unpaid invoices beyond 7 days may cause service suspension.",
       ],
       bullets: [
-        { text: "Sending unsolicited bulk email (spam)" },
-        { text: "Hosting or distributing viruses, malware, or spyware" },
-        { text: "Running scripts or processes that harm server performance" },
         {
-          text:
-            "Using hosting space for file sharing, warez, or copyrighted content",
+          text: "Accepted methods: Credit/Debit Cards, PayPal, Stripe, SSLCommerz (BD), bKash, Nagad, Rocket, Local Bank Transfer",
         },
         {
-          text:
-            "Conducting or facilitating phishing, fraud, or other illegal activity",
+          text: "Refunds: Hosting plans include a 30-day money-back guarantee (see Refund Policy)",
         },
         {
-          text:
-            "Attempting to exploit server vulnerabilities or gain unauthorized access",
+          text: "Refunds exclude: Domains, SSLs, VPS, Dedicated Servers, and third-party licenses (non-refundable)",
+        },
+        {
+          text: "Abuse, violations, or fraudulent use voids refund eligibility",
+        },
+        {
+          text: "Chargebacks filed without contacting Hostfame first are treated as abuse and may result in permanent account suspension",
         },
       ],
-      note:
-        "Any account found engaging in abusive activities will be suspended or terminated immediately, without prior notice. No refund will be issued for services terminated due to abuse, regardless of the time remaining in the billing cycle. We reserve the right to report such violations to legal authorities or blacklisting services if applicable.",
-    },
-    {
-      id: "5-domain-services",
-      title: "5. Domain Services",
-      paragraphs: [
-        "All domain registration, renewal, or transfer is subject to ICANN policies and our registrars' terms. Domain purchases are final and non-refundable. You are responsible for renewing domains before expiration.",
-      ],
-    },
-    {
-      id: "6-billing-and-payments",
-      title: "6. Billing and Payments",
       keyValues: [
-        { key: "Currency", value: "All prices are listed in U.S. Dollars (USD)" },
-        { key: "Due", value: "Payments are due at the time of purchase or renewal" },
-        { key: "Auto-renew", value: "Services auto-renew unless canceled beforehand" },
         {
-          key: "Methods",
-          value: "We accept payments via Stripe, credit cards, or approved gateways",
+          key: "Billing Currencies",
+          value: "USD (international), BDT (Bangladesh via Hostnin)",
         },
-        { key: "Late payments", value: "May result in service suspension" },
+        { key: "Invoice Grace", value: "7 days before suspension" },
       ],
     },
     {
-      id: "7-refund-policy",
-      title: "7. Refund Policy",
-      bullets: [
-        { text: "Hosting plans include a 30-day money-back guarantee" },
-        {
-          text:
-            "Domain purchases, SSL certificates, and one-time services are non-refundable",
-        },
-        {
-          text:
-            "Refunds (if applicable) will be issued to the original payment method",
-        },
-      ],
-    },
-    {
-      id: "8-backups-and-data-loss",
-      title: "8. Backups and Data Loss",
+      id: "6-suspension-and-termination",
+      title: "6. Suspension & Termination",
       paragraphs: [
-        "Hostfame provides daily or weekly backups via JetBackup, but you are ultimately responsible for your data. We do not guarantee backups and are not liable for any data loss.",
-      ],
-    },
-    {
-      id: "9-support-policy",
-      title: "9. Support Policy",
-      paragraphs: [
-        "We offer 24/7 support via email, WhatsApp, and live chat embedded on our website. Support covers hosting and domain-related issues but excludes custom development, third-party software, or site management.",
-      ],
-    },
-    {
-      id: "10-intellectual-property",
-      title: "10. Intellectual Property",
-      paragraphs: [
-        "All content, software, and platform tools provided by Hostfame are protected by copyright. You may not copy, distribute, or modify our content or tools without permission.",
-      ],
-    },
-    {
-      id: "11-third-party-services",
-      title: "11. Third-Party Services",
-      paragraphs: [
-        "Some features rely on third-party providers (e.g., cPanel, LiteSpeed, Imunify360). Hostfame is not responsible for downtime or performance issues resulting from these services.",
-      ],
-    },
-    {
-      id: "12-dmca-and-copyright",
-      title: "12. DMCA and Copyright Infringement",
-      paragraphs: [
-        "We comply with the U.S. Digital Millennium Copyright Act (DMCA). To file a copyright complaint, email dmca@hostfame.com with the following:",
+        "Hostfame may suspend or terminate accounts if Terms/AUP are violated, payment is overdue, illegal or harmful content is hosted, or misuse impacts server performance or other users.",
       ],
       bullets: [
-        { text: "Your contact info" },
-        { text: "Description and URL of the infringing content" },
-        { text: "A statement under penalty of perjury" },
-      ],
-      note: "We will act promptly to remove infringing material.",
-    },
-    {
-      id: "13-privacy-and-data-collection",
-      title: "13. Privacy and Data Collection",
-      paragraphs: [
-        "We collect personal data including name, email, IP address, payment info, and site usage analytics (Google Analytics, Facebook Pixel). For more, see our Privacy Policy.",
+        { text: "Terminated accounts lose all stored data permanently" },
+        { text: "Hostfame is not liable for data recovery post-termination" },
       ],
     },
     {
-      id: "14-compliance-with-laws",
-      title: "14. Compliance with Laws",
+      id: "7-data-security-and-backups",
+      title: "7. Data Security & Backups",
       bullets: [
-        { text: "U.S. Export Control Laws" },
-        { text: "OFAC sanctions" },
-        { text: "GDPR (if applicable)" },
-        { text: "CAN-SPAM Act" },
+        { text: "Automated daily/weekly backups are performed based on plan" },
+        {
+          text: "Customers are responsible for maintaining independent backups",
+        },
+        {
+          text: "Hostfame is not liable for data loss due to hacking, deletion, or corruption",
+        },
       ],
     },
     {
-      id: "15-disclaimers-and-warranties",
-      title: "15. Disclaimers and Warranties",
-      paragraphs: [
-        'Hostfame provides services "as is" and makes no warranties, express or implied, regarding uptime, fitness for a particular purpose, or uninterrupted service. We are not liable for damages or losses resulting from service disruptions.',
+      id: "8-support-and-communication",
+      title: "8. Support & Communication",
+      bullets: [
+        { text: "Support via ticket, live chat, and email" },
+        {
+          text: "Support covers server/hosting issues only; excludes coding and third-party plugin customization",
+        },
+        {
+          text: "Misuse of support channels for spam or abuse may result in suspension",
+        },
       ],
     },
     {
-      id: "16-indemnification",
-      title: "16. Indemnification",
-      paragraphs: [
-        "You agree to indemnify and hold harmless Hostfame, its employees, and affiliates from any claims, losses, or damages resulting from your violation of these terms.",
+      id: "9-domain-registration-and-ownership",
+      title: "9. Domain Registration & Ownership",
+      bullets: [
+        {
+          text: "Domain registration follows ICANN and respective registry policies",
+        },
+        { text: "Domains remain the sole property of the registered client" },
+        {
+          text: "Renewals are the client’s responsibility; Hostfame is not liable for expiration if invoices remain unpaid",
+        },
       ],
     },
     {
-      id: "17-limitation-of-liability",
-      title: "17. Limitation of Liability",
-      paragraphs: [
-        "Our total liability under any claim will not exceed the amount paid by you for the services in the last 6 months. We are not liable for indirect or consequential damages.",
+      id: "10-service-availability-uptime-sla",
+      title: "10. Service Availability (Uptime SLA)",
+      bullets: [
+        {
+          text: "99.9% uptime for shared hosting; 99.99% uptime for premium plans",
+        },
+        {
+          text: "SLA credits may be issued as account credit (not cash refunds)",
+        },
+        {
+          text: "Scheduled or emergency maintenance is excluded from uptime calculations",
+        },
       ],
     },
     {
-      id: "18-governing-law-and-jurisdiction",
-      title: "18. Governing Law and Jurisdiction",
-      paragraphs: [
-        "This Agreement is governed by the laws of the State of Wyoming, USA. Any disputes will be resolved in the state or federal courts located in Wyoming.",
+      id: "11-legal-compliance-and-government-requests",
+      title: "11. Legal Compliance & Government Requests",
+      bullets: [
+        {
+          text: "Clients must comply with U.S. federal law, state regulations, and applicable data privacy laws (GDPR/CCPA)",
+        },
+        {
+          text: "Hostfame will comply with lawful data requests or subpoenas from U.S. or Bangladeshi authorities",
+        },
       ],
     },
     {
-      id: "19-arbitration",
-      title: "19. Arbitration",
-      paragraphs: [
-        "You agree to resolve any disputes with Hostfame through binding arbitration in Wyoming, unless a court of law requires otherwise.",
+      id: "12-privacy-and-data-handling",
+      title: "12. Privacy & Data Handling",
+      bullets: [
+        { text: "Hostfame follows its Privacy Policy for handling user data" },
+        {
+          text: "Data may be shared only with payment processors, registrars, or security vendors as required",
+        },
+        { text: "Personal data is never sold to third parties" },
       ],
     },
     {
-      id: "20-changes-to-terms",
-      title: "20. Changes to Terms",
+      id: "13-limitation-of-liability",
+      title: "13. Limitation of Liability",
+      bullets: [
+        { text: "Hostfame is not liable for customers’ illegal activity" },
+        { text: "Not liable for financial or reputation loss due to downtime" },
+        {
+          text: "Not liable for third-party service interruptions (e.g., cPanel, Cloudflare)",
+        },
+        { text: "Not liable for software vulnerabilities or misconfiguration" },
+      ],
+      note: "The maximum liability of Hostfame shall not exceed the total amount paid by the customer in the previous 6 months.",
+    },
+    {
+      id: "14-indemnification",
+      title: "14. Indemnification",
       paragraphs: [
-        "We reserve the right to update these Terms of Service at any time. The latest version will always be posted on our website. Continued use of our services means you accept any changes.",
+        "You agree to indemnify and hold Hostfame LLC, its employees, and affiliates harmless from any claim, loss, or legal action resulting from:",
+      ],
+      bullets: [
+        { text: "Your use of our services" },
+        { text: "Violation of these Terms" },
+        { text: "Infringement of third-party rights" },
       ],
     },
     {
-      id: "21-contact-information",
-      title: "21. Contact Information",
+      id: "15-account-closure",
+      title: "15. Account Closure",
+      bullets: [
+        { text: "You may close your account anytime via the client dashboard" },
+        {
+          text: "No partial refunds for unused service periods (except within the 30-day window)",
+        },
+        {
+          text: "After closure, all data, backups, and emails are permanently deleted",
+        },
+      ],
+    },
+    {
+      id: "16-affiliate-program-terms",
+      title: "16. Affiliate Program Terms",
+      bullets: [
+        {
+          text: "Self-referrals or fraudulent signups are strictly prohibited",
+        },
+        { text: "Active service required to withdraw commissions" },
+        { text: "Minimum withdrawal threshold: $50 USD (or equivalent)" },
+        {
+          text: "Fraud, chargebacks, or abuse will result in forfeiture of commissions",
+        },
+        {
+          text: "Hostfame may audit affiliate accounts and deny payments if abuse is detected",
+        },
+      ],
+    },
+    {
+      id: "17-content-liability-and-dmca-policy",
+      title: "17. Content Liability & DMCA Policy",
+      bullets: [
+        {
+          text: "Customers are solely responsible for the content hosted on their websites",
+        },
+        {
+          text: "Hostfame complies with the DMCA and may suspend repeat infringers",
+        },
+        {
+          text: "Hosting pirated or copyrighted material without authorization is prohibited",
+        },
+      ],
+    },
+    {
+      id: "18-price-changes-and-plan-modifications",
+      title: "18. Price Changes & Plan Modifications",
+      bullets: [
+        {
+          text: "Hostfame may adjust pricing, plans, or included features with prior notice",
+        },
+        { text: "Existing users retain their current pricing until renewal" },
+      ],
+    },
+    {
+      id: "19-third-party-services",
+      title: "19. Third-Party Services",
+      bullets: [
+        {
+          text: "Tools like LiteSpeed, Imunify360, JetBackup, and Softaculous are integrated under third-party licenses",
+        },
+        {
+          text: "Hostfame is not liable for changes, outages, or pricing adjustments from those providers",
+        },
+      ],
+    },
+    {
+      id: "20-dispute-resolution",
+      title: "20. Dispute Resolution",
+      bullets: [
+        {
+          text: "All disputes will first attempt to be resolved through mediation",
+        },
+        {
+          text: "If unresolved, disputes will be submitted to the courts of Wyoming, USA or Chattogram, Bangladesh, depending on jurisdiction",
+        },
+      ],
+    },
+    {
+      id: "21-entire-agreement-and-severability",
+      title: "21. Entire Agreement & Severability",
+      bullets: [
+        {
+          text: "If any clause of these Terms is found invalid, the remainder shall continue in effect",
+        },
+        {
+          text: "These Terms represent the entire agreement between Hostfame and the client, superseding prior discussions or agreements",
+        },
+      ],
+    },
+    {
+      id: "22-updates-to-terms",
+      title: "22. Updates to Terms",
       paragraphs: [
-        "If you have questions about these terms, email us at: support@hostfame.com",
+        "Hostfame may update these Terms periodically. All changes will be published on our website and communicated via email for major revisions. Continued use of our services constitutes acceptance of the updated Terms.",
+      ],
+    },
+    {
+      id: "23-contact-information",
+      title: "23. Contact Information",
+      paragraphs: [
+        "Hostfame (S Creative LLC), 75 E 3rd St, Sheridan, WY 82801, USA",
+        "Email (Legal): legal@hostfame.com | Website: www.hostfame.com",
+        "For Bangladesh operations (via Hostnin Partnership): Hostfame, Spotlight Creative, 2nd Floor, Colonelhat, Akbarshah, Chattogram.",
+        "Email (Bangladesh Legal): legal@hostnin.com | Location: Chattogram, Bangladesh",
       ],
     },
   ],
