@@ -1,6 +1,7 @@
 // ContactTiles.tsx
 import { JSX } from "react";
 import { FiMapPin, FiMail, FiPhone, FiClock } from "react-icons/fi";
+import { IoDocumentTextOutline } from "react-icons/io5";
 
 type ContactItem = {
   id: string;
@@ -14,29 +15,32 @@ const contactData: ContactItem[] = [
   {
     id: "address",
     title: "Our Office",
-    lines: ["75 E 3rd St, Sheridan,", "WY 82801"],
-    icon: <FiMapPin />,
+    lines: [
+      "Bangladesh Office : Kayobollodham R/A, Ferozshah, Akbarshah, Chattogram.",
+      "USA Office : 75 E 3rd St, Sheridan, WY 82801, USA."
+    ],
+    icon: <FiMapPin />
   },
   {
     id: "email",
     title: "Email Us",
     lines: ["info@hostfame.com", "support@hostfame.com"],
     icon: <FiMail />,
-    links: ["mailto:info@hostfame.com", "mailto:support@hostfame.com"],
+    links: ["mailto:info@hostfame.com", "mailto:support@hostfame.com"]
   },
   {
     id: "phone",
     title: "Call Anytime",
     lines: ["(192) 9460 8661", "(151) 2866 7153"],
     icon: <FiPhone />,
-    links: ["tel:+19294608661", "tel:+15128667153"],
+    links: ["tel:+19294608661", "tel:+15128667153"]
   },
   {
     id: "hours",
-    title: "Hours",
-    lines: ["Mon–Sun: Open 24/7", "Always here for you"],
-    icon: <FiClock />,
-  },
+    title: "Trade License",
+    lines: ["TRAD/CHTG/005863/2023", "Sister Concern of Spotlight Creative"],
+    icon: <IoDocumentTextOutline />
+  }
 ];
 
 export default function ContactTiles() {
@@ -46,9 +50,7 @@ export default function ContactTiles() {
         {contactData.map((item) => (
           <Tile key={item.id}>
             <IconWrap>{item.icon}</IconWrap>
-            <h3 className="font-semibold text-slate-100">
-              {item.title}
-            </h3>
+            <h3 className="font-semibold text-slate-100">{item.title}</h3>
             <div className="text-sm text-slate-200 space-y-0.5">
               {item.lines.map((line, i) =>
                 item.links && item.links[i] ? (

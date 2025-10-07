@@ -19,7 +19,7 @@ export const metadata: Metadata = {
   openGraph: {
     images: [
       {
-        url: `https://www.hostfame.com/assets/og/og-main.png`,
+        url: `https://www.hostfame.com/assets/og/hostfame-og.png`,
         width: 1200,
         height: 630,
       },

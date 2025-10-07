@@ -9,7 +9,7 @@ import {
   FiClock,
   FiCreditCard,
   FiAlertTriangle,
-  FiHeadphones,
+  FiHeadphones
 } from "react-icons/fi";
 import SectionWrapper from "../wrappers/SectionWrapper";
 import { FaWeightScale } from "react-icons/fa6";
@@ -28,7 +28,7 @@ export type BannerIcon =
 export type TermsOfServiceBannerData = {
   title: string;
   subtitle: string;
-  updatedISO: string; // e.g. "2025-01-01"
+  updatedISO?: string; // e.g. "2025-01-01"
   badgeLabel?: string; // e.g. "Updated"
   ctas: {
     label: string;
@@ -51,23 +51,23 @@ export const defaultTosBannerData: TermsOfServiceBannerData = {
       label: "Read the Terms",
       href: "#tos-content",
       variant: "primary",
-      icon: "file",
-    },
+      icon: "file"
+    }
   ],
   highlights: [
     {
       icon: "shield",
-      text: "Security-first: DDoS mitigation, network isolation, and encrypted transport by default.",
+      text: "Security-first: DDoS mitigation, network isolation, and encrypted transport by default."
     },
     {
       icon: "file",
-      text: "Fair-use & quotas: clear rules on CPU, bandwidth, and storage to keep clusters stable.",
+      text: "Fair-use & quotas: clear rules on CPU, bandwidth, and storage to keep clusters stable."
     },
     {
       icon: "download",
-      text: "Portability: export snapshots, backups, logs, and invoices at any time.",
-    },
-  ],
+      text: "Portability: export snapshots, backups, logs, and invoices at any time."
+    }
+  ]
 };
 
 export const defaultPrivacyBannerData: TermsOfServiceBannerData = {
@@ -81,23 +81,23 @@ export const defaultPrivacyBannerData: TermsOfServiceBannerData = {
       label: "Read the Policy",
       href: "#privacy-content",
       variant: "primary",
-      icon: "file",
-    },
+      icon: "file"
+    }
   ],
   highlights: [
     {
       icon: "shield",
-      text: "Security by design: encryption in transit, access controls, and audit logging.",
+      text: "Security by design: encryption in transit, access controls, and audit logging."
     },
     {
       icon: "file",
-      text: "Transparency: clear details on data collection, processing, and retention.",
+      text: "Transparency: clear details on data collection, processing, and retention."
     },
     {
       icon: "download",
-      text: "Control: request export or deletion of your personal data at any time.",
-    },
-  ],
+      text: "Control: request export or deletion of your personal data at any time."
+    }
+  ]
 };
 
 export const defaultRefundPolicyBannerData: TermsOfServiceBannerData = {
@@ -111,35 +111,74 @@ export const defaultRefundPolicyBannerData: TermsOfServiceBannerData = {
       label: "Read the Policy",
       href: "#refund-content",
       variant: "primary",
-      icon: "file",
-    },
+      icon: "file"
+    }
   ],
   highlights: [
     {
       icon: "clock",
-      text: "30-day money-back guarantee on eligible hosting services.",
+      text: "30-day money-back guarantee on eligible hosting services."
     },
     {
       icon: "credit-card",
-      text: "Refunds processed securely via your original payment method.",
+      text: "Refunds processed securely via your original payment method."
     },
     {
       icon: "alert-triangle",
-      text: "Certain services like domains and add-ons are non-refundable.",
+      text: "Certain services like domains and add-ons are non-refundable."
     },
     {
       icon: "support",
-      text: "Easy refund requests through your Hostfame Client Area.",
+      text: "Easy refund requests through your Hostfame Client Area."
     },
     {
       icon: "scale",
-      text: "All refunds governed by Wyoming, USA jurisdiction.",
-    },
+      text: "All refunds governed by Wyoming, USA jurisdiction."
+    }
+  ]
+};
+
+export const aboutUsBannerData: TermsOfServiceBannerData = {
+  title: "About Hostfame",
+  subtitle:
+    "Understand how Hostfame handles refund requests, eligibility, timelines, and exceptions under our 30-day money-back guarantee.",
+  ctas: [
+    {
+      label: "Read About Us",
+      href: "#about-content",
+      variant: "primary",
+      icon: "file"
+    }
   ],
+  highlights: [
+    {
+      icon: "clock",
+      text: "30-day money-back guarantee on eligible hosting services."
+    },
+    {
+      icon: "credit-card",
+      text: "Refunds processed securely via your original payment method."
+    },
+    {
+      icon: "alert-triangle",
+      text: "Certain services like domains and add-ons are non-refundable."
+    },
+    {
+      icon: "support",
+      text: "Easy refund requests through your Hostfame Client Area."
+    },
+    {
+      icon: "scale",
+      text: "All refunds governed by Wyoming, USA jurisdiction."
+    }
+  ]
 };
 
 /* ---------------- Icon Map ---------------- */
-const IconFromKey: Record<BannerIcon, React.ComponentType<{ className?: string }>> = {
+const IconFromKey: Record<
+  BannerIcon,
+  React.ComponentType<{ className?: string }>
+> = {
   shield: (props) => <FiShield {...props} />,
   file: (props) => <FiFileText {...props} />,
   download: (props) => <FiDownload {...props} />,
@@ -147,7 +186,7 @@ const IconFromKey: Record<BannerIcon, React.ComponentType<{ className?: string }
   "credit-card": (props) => <FiCreditCard {...props} />,
   "alert-triangle": (props) => <FiAlertTriangle {...props} />,
   support: (props) => <FiHeadphones {...props} />,
-  scale: (props) => <FaWeightScale {...props} />,
+  scale: (props) => <FaWeightScale {...props} />
 };
 
 /* ---------------- Component ---------------- */
@@ -165,7 +204,7 @@ export interface TermsOfServiceBannerProps {
 }
 
 export default function TermsOfServiceBanner({
-  data = defaultTosBannerData,
+  data = defaultTosBannerData
 }: TermsOfServiceBannerProps) {
   return (
     <section
@@ -194,7 +233,9 @@ export default function TermsOfServiceBanner({
 
               {data.badgeLabel && (
                 <p className="text-sm text-white/70 mt-1">
-                  {data.badgeLabel}: {new Date(data.updatedISO).toLocaleDateString()}
+                  {data.badgeLabel}:{" "}
+                  {data.updatedISO &&
+                    new Date(data.updatedISO).toLocaleDateString()}
                 </p>
               )}
             </div>
