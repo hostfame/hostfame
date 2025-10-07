@@ -5,7 +5,7 @@ import {
   FaFacebookF,
   FaInstagram,
   FaLinkedinIn,
-  FaYoutube,
+  FaYoutube
 } from "react-icons/fa";
 import FooterPricingImage from "./FooterPricingImage";
 
@@ -101,10 +101,10 @@ const Footer: React.FC = () => {
             <p>© 2025 Hostfame. All Rights Reserved</p>
 
             <div className="flex items-center gap-2 sm:gap-3">
-              {/* <Link href="/about-us" className=" hover:text-white text-nowrap">
-                About Us
+              <Link href="/about" className=" hover:text-white text-nowrap">
+                About
               </Link>
-              <span className="text-white/40">|</span> */}
+              <span className="text-white/40">|</span>
               <Link
                 href="/privacy-policy"
                 className=" hover:text-white text-nowrap"
@@ -116,7 +116,7 @@ const Footer: React.FC = () => {
                 href="/terms-of-services"
                 className=" hover:text-white text-nowrap"
               >
-                Terms And Conditions
+                Terms of Services
               </Link>
               <span className="text-white/40">|</span>
               <Link
