@@ -19,6 +19,7 @@ import { wordpressHostingPricingData } from "@/data/pricing.data";
 import DualPricing from "@/components/shared/sections/domain-hero/DualPricing";
 import ReviewsSection from "../web-hosting/reviews/ReviewSection";
 import WordPressHostingPricing from "./WordPressHostingPricing";
+import SearchDomainName from "../web-hosting/searchDomainName/SearchDomainName";
 
 const WordPressHosting = () => {
   return (
@@ -57,6 +58,10 @@ const WordPressHosting = () => {
       <ReviewsSection />
 
       <SectionWrapper className="my-12 md:my-16">
+        <SearchDomainName />
+      </SectionWrapper>
+
+      <SectionWrapper className="my-12 md:my-16">
         <ManagedHostingHighlights
           data={wordpressHostingManagedHostingHighlightsData}
         />
@@ -65,7 +70,6 @@ const WordPressHosting = () => {
       <SectionWrapper className="my-12 md:my-16">
         <AllHostingPlans data={wordpressHostingAllHostingPlans} />
       </SectionWrapper>
-
 
       <SectionWrapper className="my-12 md:my-16">
         <WhyChooseWordpressHosting />
@@ -79,12 +83,18 @@ const WordPressHosting = () => {
 function WordPressHostingCtaSection() {
   return (
     <section className="flex items-center gap-6">
-      <WhiteButton href="#wordpress-hosting-pricing" className="!rounded !text-nowrap">View Pricing</WhiteButton>
+      <WhiteButton
+        href="#wordpress-hosting-pricing"
+        className="!rounded !text-nowrap"
+      >
+        View Pricing
+      </WhiteButton>
       <Link
         href={"#wordpress-hosting-pricing"}
         className="flex text-base md:text-lg items-center text-center max-lg:underline lg:gap-x-2 text-white font-bold underline"
       >
-        Starting @ <DualPricing price="$19.99" pricebdt="৳1,999" />/mo
+        Starting @ <DualPricing price="$19.99" pricebdt="৳1,999" />
+        /mo
       </Link>
     </section>
   );

@@ -26,6 +26,7 @@ const Domain = () => {
       <SectionWrapper className="my-12 md:my-16">
         <DomainRegistrationSummary />
       </SectionWrapper>
+      
 
       <SectionWrapper className="mb-12 md:mb-16">
         <SupportBanner />

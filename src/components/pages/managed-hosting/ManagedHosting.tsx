@@ -15,6 +15,7 @@ import Image from "next/image";
 import WhiteButton from "@/components/shared/html/WhiteButton";
 import Link from "next/link";
 import DualPricing from "@/components/shared/sections/domain-hero/DualPricing";
+import SearchDomainName from "../hosting/web-hosting/searchDomainName/SearchDomainName";
 
 const ManagedHosting = () => {
   return (
@@ -50,6 +51,10 @@ const ManagedHosting = () => {
       </SectionWrapper>
 
       <SectionWrapper className="my-12 md:my-16">
+        <SearchDomainName />
+      </SectionWrapper>
+
+      <SectionWrapper className="my-12 md:my-16">
         <ManagedHostingThatGrows />
       </SectionWrapper>
 
@@ -58,6 +63,7 @@ const ManagedHosting = () => {
       </SectionWrapper>
 
       <ReviewsSection />
+
       {/* <WhatAreSpecials /> */}
 
       <SectionWrapper className="my-12 md:my-16">
