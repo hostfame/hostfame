@@ -15,6 +15,7 @@ import WhiteButton from "@/components/shared/html/WhiteButton";
 import Image from "next/image";
 import WebhostingPricing from "./WebhostingPricing";
 import SupportBanner from "@/components/shared/sections/SupportBanner";
+import { BannerTimer } from "@/components/shared/banners/BannerTimer";
 
 const WebHosting = () => {
   return (
@@ -37,7 +38,7 @@ const WebHosting = () => {
         }
         image="/assets/web-hosting/webhero.webp"
         waveImage="/assets/web-hosting/banner-left-wave.png"
-        countdownTarget={new Date(Date.now() + 15 * 60 * 60 * 1000)} // 15 hours
+        // countdownTarget={new Date(Date.now() + 15 * 60 * 60 * 1000)} // 15 hours
         description={
           <section className=" space-y-6">
             <p>
@@ -70,6 +71,9 @@ const WebHosting = () => {
                 </p>
               </div>
             </div>
+
+            {/* Add the timer here OR keep your existing placement */}
+            <BannerTimer rollingCycleHours={13} />
           </section>
         }
         ctaSection={<WebHostingCtaSection />}
