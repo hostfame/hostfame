@@ -1,7 +1,7 @@
 import { WebHostingData } from "@/data/hosting.data";
 import React from "react";
 import SubmitDomainName from "./SubmitDomainName";
-
+import SearchDomainDomainPriceValue from "./SearchDomainDomainPriceValue";
 
 const SearchDomainName = () => {
   function classNames(...cn: (string | false | null | undefined)[]) {
@@ -67,9 +67,10 @@ const SearchDomainName = () => {
                       {pricing.title}
                     </p>
 
-                    <p className=" text-text font-semibold text-lg">
-                      {pricing.price}
-                    </p>
+                    <SearchDomainDomainPriceValue
+                      priceUsd={pricing.price}
+                      priceBdt={pricing.priceBdt}
+                    />
                   </div>
                 </div>
               )

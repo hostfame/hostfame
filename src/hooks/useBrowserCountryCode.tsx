@@ -23,7 +23,7 @@ const safeLS = {
   getItem(key: string): string | null {
     try {
       if (typeof window === "undefined") return null;
-      return window.localStorage?.getItem(key) ?? null;
+      return window.sessionStorage?.getItem(key) ?? null;
     } catch {
       return null;
     }
@@ -31,7 +31,7 @@ const safeLS = {
   setItem(key: string, value: string) {
     try {
       if (typeof window === "undefined") return;
-      window.localStorage?.setItem(key, value);
+      window.sessionStorage?.setItem(key, value);
     } catch {
       /* ignore quota/blocked storage errors */
     }
@@ -39,7 +39,7 @@ const safeLS = {
   removeItem(key: string) {
     try {
       if (typeof window === "undefined") return;
-      window.localStorage?.removeItem(key);
+      window.sessionStorage?.removeItem(key);
     } catch { /* ignore */ }
   },
 };
