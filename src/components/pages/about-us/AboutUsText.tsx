@@ -2,7 +2,7 @@ import React from "react";
 
 const AboutUsText = () => {
   return (
-    <section className="py-4 lg:py-8">
+    <section className="pt-4 lg:pt-8">
       <p className="mb-4">
         <span className="font-semibold">Hostfame</span> is a global web hosting
         solutions provider, dedicated to delivering{" "}
