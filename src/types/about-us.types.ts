@@ -44,3 +44,11 @@ export interface Strength {
   title: string;
   description: string;
 }
+
+export interface WhatMakesUsDifferentItem {
+  id: number;
+  icon: IconType;  
+  iconColor?: string;    
+  title: string;
+  description: string;   
+}

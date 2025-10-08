@@ -82,7 +82,7 @@ export default function WhyChooseHostFame() {
         </div>
 
         {/* Right: image on gradient panel */}
-        <div className="mx-auto w-full max-w-2xl h-full rounded-3xl flex justify-center items-center bg-gradient-to-br from-primary-light via-primary-light to-primary/60">
+        <div className="mx-auto py-0 w-full max-w-2xl h-full rounded-3xl flex justify-center items-center bg-gradient-to-br from-primary-light via-primary-light to-primary/60">
           <div className="relative overflow-hidden rounded-3xl h-full w-full flex justify-center  items-center shadow-xl">
             {/* subtle glow accents */}
             <div className="pointer-events-none absolute -top-8 -left-8 h-24 w-24 rounded-full bg-white/15 blur-xl" />
@@ -93,9 +93,9 @@ export default function WhyChooseHostFame() {
               <Image
                 src="/assets/gifs/hostfame-gif-path-follow.gif"
                 width={400}
-                height={330}
+                height={4000}
                 alt={data.image.alt}
-                className="object-contain min-[1180px]:scale-[1.20]"
+                className="object-contain md:scale-[1.45] lg:scale-[1.20] xl:scale-[1.45]"
               />
             </div>
           </div>

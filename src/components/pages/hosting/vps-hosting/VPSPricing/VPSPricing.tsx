@@ -215,10 +215,10 @@ export default function VPSPricing() {
         {VPSPlans.map((plan) => (
           <article
             key={plan.name}
-            className="rounded-xl overflow-hidden border border-border bg-white shadow-sm"
+            className="rounded-xl overflow-hidden border border-border bg-background shadow-sm"
           >
             {/* Card header */}
-            <div className="bg-primary text-primary-foreground p-4">
+            <div className="bg-primary text-white p-4">
               <div className="text-center text-xl font-semibold">
                 {plan.name}
               </div>
@@ -249,7 +249,7 @@ export default function VPSPricing() {
                   return (
                     <div
                       key={f.key}
-                      className="flex items-center justify-between bg-gray-50 rounded-md p-3 border border-border"
+                      className="flex items-center justify-between bg-card-background rounded-md p-3 border border-border"
                     >
                       <div className="text-sm text-color-description-text">
                         {f.label}
@@ -268,7 +268,7 @@ export default function VPSPricing() {
                   return (
                     <div
                       key={f.key}
-                      className="flex items-center justify-between bg-gray-50 rounded-md p-3 border border-border"
+                      className="flex items-center justify-between bg-card-background rounded-md p-3 border border-border"
                     >
                       <div className="text-sm text-color-description-text">
                         {f.label}

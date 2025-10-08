@@ -49,11 +49,11 @@ export default function WhatMakesUsDifferent({
 
         {/* Right: Copy + cards */}
         <div className="w-full">
-          <h2 className="text-3xl md:text-5xl font-extrabold leading-tight text-slate-900">
+          <h2 className="text-3xl md:text-5xl font-extrabold leading-tight text-text">
             What makes Hostfame
             <br className="hidden sm:block" /> different from others?
           </h2>
-          <p className="mt-3 max-w-2xl text-[15px] leading-6 text-slate-600">
+          <p className="mt-3 max-w-2xl text-[15px] leading-6 text-text/80">
             Using our incredible technology, we will help you improve your
             website&apos;s accessibility. With LiteSpeed Server and CloudLinux
             OS, you can speed up loading times, enhance security, and make your

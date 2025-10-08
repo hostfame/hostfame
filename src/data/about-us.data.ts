@@ -3,7 +3,8 @@ import {
   AdvancedFeatureTab,
   FounderCardProps,
   InfoCard,
-  Strength
+  Strength,
+  WhatMakesUsDifferentItem
 } from "@/types/about-us.types";
 import { FiPhoneCall, FiMail, FiHome } from "react-icons/fi";
 import {
@@ -13,7 +14,10 @@ import {
   FaShieldAlt,
   FaLightbulb,
   FaHeadset,
-  FaStar
+  FaStar,
+  FaServer,
+  FaCogs,
+  FaRocket
 } from "react-icons/fa";
 
 export const FoundersData: FounderCardProps[] = [
@@ -198,5 +202,59 @@ export const strengths: Strength[] = [
     title: "Dedicated 24/7 support",
     description:
       "Our Customer Success team is available 24/7 in over 10 languages. We help you solve issues fast, so you can focus on growing your business without worrying about downtime.",
+  },
+];
+
+
+
+
+export const WhatMakesUsDifferentData: WhatMakesUsDifferentItem[] = [
+  {
+    id: 1,
+    icon: FaServer,
+    iconColor: "text-primary",
+    title: "Always fast, always reliable",
+    description:
+      "Cloud hosting powered by 20iCloud, AWS and Google Cloud. Built for maximum speed and reliability with Redis, ElasticSearch, Optimized PHP-FPM and PHP OPcache, NGINX Edge Cache and Unlimited CDN.",
+  },
+  {
+    id: 2,
+    icon: FaGlobe,
+    iconColor: "text-primary",
+    title: "Global reach",
+    description:
+      "Choose from over 60 data centers around the world and launch your websites and apps in a matter of minutes.",
+  },
+  {
+    id: 3,
+    icon: FaCogs,
+    iconColor: "text-primary",
+    title: "Easy management",
+    description:
+      "Manage all your servers, websites, email, security, backups and domains from My20i, the most advanced and intuitive control panel around.",
+  },
+  {
+    id: 4,
+    icon: FaRocket,
+    iconColor: "text-primary",
+    title: "Constant innovation",
+    description:
+      "All development is done in-house, so we can create and support unique products like Website Turbo, our free CDN and Website Acceleration Suite at a fraction of the cost of outsourcing to third-party providers.",
+  },
+  {
+    id: 5,
+    icon: FaHeadset,
+    iconColor: "text-primary",
+    title: "Hosting experts",
+    description:
+      "Our Support Team are hosting enthusiasts with rave reviews. Get 24×7×365 help from real people who love what they do, not canned responses.",
+  },
+  {
+    id: 6,
+    icon: FaStar,
+    iconColor: "text-primary",
+    title: "Five-star reviews",
+    description:
+      "Experts give us five-star ratings. Read our reviews from experienced web designers and developers.",
   },
 ];

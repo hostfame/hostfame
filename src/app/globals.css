@@ -55,6 +55,7 @@
   --color-border: var(--border);
 
   --color-text-primary: var(--text-primary);
+  --color-primary-adaptive: #02c9c9;
   --color-primary-blue: var(--primary-blue);
   --color-secondary-blue: var(--secondary-blue);
   --color-blue-dark: var(--blue-dark);
@@ -87,6 +88,7 @@
   :root,
   [data-theme="light"] {
     --color-background: var(--background);
+    --color-primary-adaptive: #2f9995;
     --color-white-background: white;
     --color-text: black;
     --color-text-accent: #111827;
@@ -107,6 +109,7 @@
 
   [data-theme="dark"] {
     --color-background: var(--background-dark);
+    --color-primary-adaptive: #02c9c9;
     --color-white-background: var(--background-dark);
     --color-text: white;
     --color-text-accent: white;
