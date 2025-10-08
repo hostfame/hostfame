@@ -1,9 +1,13 @@
+// BannerTimer.tsx
 "use client";
+import React, { useEffect, useMemo, useState } from "react";
 import { useCountdown } from "@/hooks/useCountdown";
-import React from "react";
 
 export type BannerTimerProps = {
-  target: Date | number | string;
+  /** Use EITHER rollingCycleHours OR target */
+  rollingCycleHours?: number; // <- NEW: e.g. 13
+  target?: Date | number | string;
+
   className?: string;
   boxClassName?: string;
   labels?: { days: string; hours: string; minutes: string; seconds: string };
@@ -15,17 +19,24 @@ export type BannerTimerProps = {
 
 const pad = (n: number) => n.toString().padStart(2, "0");
 
-// map long -> short label; switching is CSS, this only defines strings
 const shortLabel = (label: string) => {
   const L = label.toLowerCase();
   if (L.startsWith("day")) return "Day";
   if (L.startsWith("hour")) return "Hour";
   if (L.startsWith("min")) return "Min";
   if (L.startsWith("sec")) return "Sec";
-  return label.length > 3 ? label.slice(0, 3) : label; // fallback
+  return label.length > 3 ? label.slice(0, 3) : label;
 };
 
+// Next boundary from a fixed epoch in cycleMs steps.
+// This makes the target deterministic and immune to reloads.
+function nextCycleEnd(cycleMs: number, nowMs = Date.now()) {
+  const rem = nowMs % cycleMs;
+  return nowMs + (cycleMs - rem);
+}
+
 export const BannerTimer: React.FC<BannerTimerProps> = ({
+  rollingCycleHours, // <- if provided, we ignore the external `target`
   target,
   className = "",
   boxClassName = "",
@@ -35,8 +46,32 @@ export const BannerTimer: React.FC<BannerTimerProps> = ({
   hideIfOver = false,
   hideDays,
 }) => {
-  const { days, hours, minutes, seconds, isOver } = useCountdown(target);
-  if (isOver && hideIfOver) return null;
+  const cycleMs = useMemo(
+    () => (rollingCycleHours ? rollingCycleHours * 60 * 60 * 1000 : undefined),
+    [rollingCycleHours]
+  );
+
+  // Internal target that we pass to the countdown hook.
+  const [internalTarget, setInternalTarget] = useState<number>(() => {
+    if (cycleMs) return nextCycleEnd(cycleMs);
+    return typeof target === "string" || target instanceof Date ? new Date(target).getTime() : Number(target ?? Date.now());
+  });
+
+  // If rolling mode is on, keep the target pinned to the current cycle boundary.
+  useEffect(() => {
+    if (!cycleMs) return;
+    setInternalTarget(nextCycleEnd(cycleMs));
+  }, [cycleMs]);
+
+  const { days, hours, minutes, seconds, isOver } = useCountdown(internalTarget);
+
+  // Auto-advance to the next cycle when we hit zero.
+  useEffect(() => {
+    if (!cycleMs) return;
+    if (isOver) setInternalTarget(nextCycleEnd(cycleMs));
+  }, [isOver, cycleMs]);
+
+  if (isOver && hideIfOver && !cycleMs) return null;
 
   const boxes = [
     { label: labels.days, value: days, hide: hideDays },
@@ -67,18 +102,10 @@ export const BannerTimer: React.FC<BannerTimerProps> = ({
           >
             {pad(Math.max(0, value))}
           </span>
-
-          {/* Long label shown >= 501px; short label shown <= 500px */}
-          <span
-            className={`tracking-wide text-[10px] sm:text-[11px] md:text-xs font-semibold
-                        max-[500px]:hidden ${unitClassName}`}
-          >
+          <span className={`tracking-wide text-[10px] sm:text-[11px] md:text-xs font-semibold max-[500px]:hidden ${unitClassName}`}>
             {label}
           </span>
-          <span
-            className={`tracking-wide text-[10px] sm:text-[11px] md:text-xs font-semibold
-                        hidden max-[500px]:inline ${unitClassName}`}
-          >
+          <span className={`tracking-wide text-[10px] sm:text-[11px] md:text-xs font-semibold hidden max-[500px]:inline ${unitClassName}`}>
             {shortLabel(label)}
           </span>
         </div>
