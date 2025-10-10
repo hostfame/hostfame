@@ -598,9 +598,9 @@ export const webHostingPricingData: PricingData = {
           "title": "Features",
           "features": [
             {
-              "name": "Unlimited NVMe SSD Storage",
+              "name": "200 GB NVMe SSD Storage",
               "included": true,
-              "description": "Store as much content, media, and archives as your projects demand without manual capacity planning. NVMe delivers ultra-low latency and high IOPS so sites remain snappy as they grow. Usage remains subject to fair-use and inode limits for platform health."
+              "description": "Store upto 200 GB of content, media, and archives as your projects demand without manual capacity planning. NVMe delivers ultra-low latency and high IOPS so sites remain snappy as they grow. Usage remains subject to fair-use and inode limits for platform health."
             },
             {
               "name": "Unmetered Bandwidth",
@@ -663,12 +663,12 @@ export const webHostingPricingData: PricingData = {
           "title": "Technical Specifications",
           "features": [
             {
-              "name": "6 CPU Cores",
+              "name": "4 CPU Cores",
               "included": true,
               "description": "High parallelism for PHP workers, queues, and background jobs. Keeps complex, dynamic workloads responsive during peak times. Suited for multi-site setups and heavy e-commerce."
             },
             {
-              "name": "8 GB RAM",
+              "name": "4 GB RAM",
               "included": true,
               "description": "Plenty of memory for large object caches, image processing, and big imports. Reduces OOM errors during admin tasks and batch operations. Comfortable for high-traffic stores and content hubs."
             },
@@ -1436,9 +1436,9 @@ export const wordpressHostingPricingData: PricingData = {
           "title": "Features",
           "features": [
             {
-              "name": "Unlimited NVMe SSD Storage",
+              "name": "200 GB NVMe SSD Storage",
               "included": true,
-              "description": "Store as much content, media, and archives as your projects demand without manual capacity planning. NVMe delivers ultra-low latency and high IOPS so sites remain snappy as they grow. Usage remains subject to fair-use and inode limits for platform health."
+              "description": "Store upto 200 GB of content, media, and archives as your projects demand without manual capacity planning. NVMe delivers ultra-low latency and high IOPS so sites remain snappy as they grow. Usage remains subject to fair-use and inode limits for platform health."
             },
             {
               "name": "Unlimited WordPress Websites",
@@ -1461,7 +1461,7 @@ export const wordpressHostingPricingData: PricingData = {
               "description": "Create as many branded mailboxes as your teams need, sales@, hr@, support@, and more. Access via webmail, IMAP/POP, and SMTP across all major clients. Scales cleanly as departments and headcount grow."
             },
             {
-              "name": "Hourly Automated Backups (JetBackup)",
+              "name": "Daily Automated Backups (JetBackup)",
               "included": true,
               "description": "Create restore points every hour for mission-critical workloads. Dramatically lowers RPO/RTO so you can roll back recent changes with minimal data loss. Retention follows a rolling schedule to balance coverage and storage."
             },
@@ -1501,12 +1501,12 @@ export const wordpressHostingPricingData: PricingData = {
           "title": "Technical Specifications",
           "features": [
             {
-              "name": "8 CPU Cores",
+              "name": "6 CPU Cores",
               "included": true,
               "description": "High parallelism for PHP workers, queues, and background jobs at scale. Keeps complex, dynamic workloads responsive during heavy traffic. Well-suited for multi-site fleets, WooCommerce, and search indexing."
             },
             {
-              "name": "16 GB RAM",
+              "name": "6 GB RAM",
               "included": true,
               "description": "Large memory pool for hefty object caches, media processing, and analytics. Cuts down on out-of-memory errors during imports and batch tasks. Comfortable for high-traffic stores and plugin-dense sites."
             },
