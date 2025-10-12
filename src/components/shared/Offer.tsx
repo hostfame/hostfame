@@ -10,7 +10,7 @@ const Offer = () => {
   
   const text =
     countryCode === "BD"
-      ? ".COM Domains Only ৳777/Year (Limited Time Offer)"
+      ? ".COM Domains Only ৳899/Year (Limited Time Offer)"
       : ".COM Domains Only $6.99/Year (Limited Time Offer)";
 
   return (

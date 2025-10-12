@@ -10,7 +10,7 @@ export const WebHostingData = {
     pricing: {
       dotCom: {
         title: ".com",
-        priceBdt: "৳777/Year",
+        priceBdt: "৳899/Year",
         price: "$6.99/Year",
 
         
