@@ -71,7 +71,7 @@ const Footer: React.FC = () => {
               </Link>
               <Link
                 aria-label="LinkedIn"
-                href="https://www.instagram.com/hostfame/"
+                href="https://www.linkedin.com/company/hostfame/"
                 target="_blank"
                 className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-[#071B57] sm:h-8 sm:w-8"
               >
@@ -79,7 +79,7 @@ const Footer: React.FC = () => {
               </Link>
               <Link
                 aria-label="YouTube"
-                href="https://www.linkedin.com/company/hostfame/"
+                href="https://www.youtube.com/@hostfameofficial"
                 target="_blank"
                 className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-[#071B57] sm:h-8 sm:w-8"
               >
@@ -87,7 +87,7 @@ const Footer: React.FC = () => {
               </Link>
               <Link
                 aria-label="Instagram"
-                href="https://www.youtube.com/@hostfameofficial"
+                href="https://www.instagram.com/hostfame/"
                 target="_blank"
                 className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-white text-[#071B57] sm:h-8 sm:w-8"
               >
