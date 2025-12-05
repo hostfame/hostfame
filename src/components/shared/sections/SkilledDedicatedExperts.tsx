@@ -45,7 +45,7 @@ export const skilledExpertsData: SkilledExpertsData = {
     "https://themewant.com/products/wordpress/hostie/wp-content/uploads/2024/02/image-2.png",
   ],
   cta: "Chat with Us",
-  ctaHref: "https://tawk.to/chat/67f13177a1155b1916a6f189/1io32ifig",
+  ctaHref: "http://wa.me/+8801884586407",
 };
 
 const SkilledDedicatedExperts = () => {

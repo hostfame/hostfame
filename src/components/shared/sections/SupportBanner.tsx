@@ -19,8 +19,8 @@ const content: BannerContent = {
   subtitle:
     "Talk to a real human, no bots, no long forms. Get guidance on plans, migrations, and billing.",
   bullets: ["Live chat 24/7", "Average response under 2 minutes"],
-  ctaLabel: "Go to Live chat Page",
-  ctaHref: "https://tawk.to/chat/67f13177a1155b1916a6f189/1io32ifig",
+  ctaLabel: "Chat on WhatsApp",
+  ctaHref: "http://wa.me/+8801884586407",
 };
 
 export type SupportBannerProps = Omit<

@@ -1,7 +1,6 @@
 // app/components/DataCenters.tsx
 import Image from "next/image";
 import { Fragment } from "react";
-import CenteredSectionHeader from "../headers/CenteredSectionHeader";
 
 type Pin = {
   id: string;
@@ -100,44 +99,56 @@ function PingDot() {
 
 export default function DataCenters() {
   return (
-    <section className="mx-auto max-w-7xl">
-      <CenteredSectionHeader
-        title={data.title}
-        description={data.description}
-      />
+    <section className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-teal-950 to-teal-800 px-6 py-12 sm:px-8 md:px-12 md:py-16">
+      {/* Decorative Background Circles */}
+      <div className="pointer-events-none absolute -top-20 -left-20 h-56 w-56 rounded-full bg-gradient-to-bl from-white to-gray-300 opacity-15" />
+      <div className="pointer-events-none absolute -bottom-20 -right-20 h-56 w-56 rounded-full bg-gradient-to-tr from-white to-gray-400 opacity-15" />
 
-      <div className="relative mx-auto mt-10 w-full overflow-hidden rounded-3xl bg-gray-background p-2 shadow-sm sm:p-3">
-        {/* Map wrapper keeps the aspect ratio of the background image */}
-        <div className="relative mx-auto aspect-[1180/579] w-full">
-          {/* Background map */}
-          <Image
-            src={data.mapSrc}
-            alt="World map with connected data-center points"
-            fill
-            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1100px"
-            className="object-contain"
-            priority
-          />
+      <div className="relative z-10">
+        {/* Header */}
+        <div className="text-center text-white mb-10">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            {data.title}
+          </h2>
+          <p className="mt-4 mx-auto max-w-3xl text-white/80 sm:text-lg">
+            {data.description}
+          </p>
+        </div>
 
-          {/* Flags placed below the green points */}
-          {data.pins.map((p) => (
-            <Fragment key={p.id}>
-              <div
-                className="absolute z-10 -translate-x-1/2 flex flex-col justify-center gap-y-2 items-center translate-y-2"
-                style={{ top: p.pos.top, left: p.pos.left }}
-                title={p.country}
-              >
-                <PingDot />
-                <Image
-                  src={p.flag}
-                  alt={`${p.country} flag`}
-                  width={32}
-                  height={22}
-                  className="-mt-1 lg:mt-0 scale-90 md:scale-100 rounded border border-white shadow ring-1 ring-black/10 bg-white"
-                />
-              </div>
-            </Fragment>
-          ))}
+        {/* Map Card - White container */}
+        <div className="relative mx-auto w-full overflow-hidden rounded-2xl bg-white p-3 shadow-lg sm:p-4">
+          {/* Map wrapper keeps the aspect ratio of the background image */}
+          <div className="relative mx-auto aspect-[1180/579] w-full">
+            {/* Background map */}
+            <Image
+              src={data.mapSrc}
+              alt="World map with connected data-center points"
+              fill
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 90vw, 1100px"
+              className="object-contain"
+              priority
+            />
+
+            {/* Flags placed below the green points */}
+            {data.pins.map((p) => (
+              <Fragment key={p.id}>
+                <div
+                  className="absolute z-10 -translate-x-1/2 flex flex-col justify-center gap-y-2 items-center translate-y-2"
+                  style={{ top: p.pos.top, left: p.pos.left }}
+                  title={p.country}
+                >
+                  <PingDot />
+                  <Image
+                    src={p.flag}
+                    alt={`${p.country} flag`}
+                    width={32}
+                    height={22}
+                    className="-mt-1 lg:mt-0 scale-90 md:scale-100 rounded border border-white shadow ring-1 ring-black/10 bg-white"
+                  />
+                </div>
+              </Fragment>
+            ))}
+          </div>
         </div>
       </div>
     </section>

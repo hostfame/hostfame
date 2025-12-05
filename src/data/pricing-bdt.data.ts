@@ -19,8 +19,8 @@ export const webHostingPricingBdtData: PricingData = {
       yearlyPrevPriceBdt: 3588,
       offerBdt: 72,
       ctaText: "Choose plan",
-      renewalTextMonthlyBdt: "Renews at 2950tk/year",
-      renewalTextYearlyBdt: "Renews at 2950tk/year",
+      renewalTextMonthlyBdt: "Renews at 1999tk/year",
+      renewalTextYearlyBdt: "Renews at 1999tk/year",
       guarantee: "30 Days Money Back guarantee",
       features: [
         {
@@ -290,14 +290,14 @@ export const webHostingPricingBdtData: PricingData = {
       hrefBdt: "https://my.hostfame.com/index.php?rp=/store/web-hosting-bd/pro",
       currency: "$",
       monthlyPriceBdt: 449,
-      yearlyPriceBdt: 2985,
+      yearlyPriceBdt: 2149,
       monthlyPrevPriceBdt: 449,
-      yearlyPrevPriceBdt: 5388,
-      offerBdt: 45,
+      yearlyPrevPriceBdt: 5372,
+      offerBdt: 60,
       isPopular: true,
       ctaText: "Choose plan",
-      renewalTextMonthlyBdt: "Renews at 4950tk/year",
-      renewalTextYearlyBdt: "Renews at 4950tk/year",
+      renewalTextMonthlyBdt: "Renews at 2999tk/year",
+      renewalTextYearlyBdt: "Renews at 2999tk/year",
       guarantee: "30 Days Money Back guarantee",
       features: [
         {

@@ -4,49 +4,58 @@ import Image from "next/image";
 
 export default function SpeedAndSupport() {
   return (
-    <section className="space-y-4 md:space-y-0 md:grid md:grid-cols-2 lg:grid-cols-[1fr_1.1fr] gap-10 items-center">
-      {/* Left Image */}
+    <section className="grid gap-10 md:grid-cols-2 lg:grid-cols-[1fr_1.1fr] items-center">
+      {/* Left Content */}
       <div>
-        <h2 className="text-2xl md:text-3xl font-bold leading-snug">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold leading-snug tracking-tight">
           {speedAndSupportData.title}
         </h2>
-        <p className="mt-4">{speedAndSupportData.description}</p>
+        <p className="mt-4 text-description-text">
+          {speedAndSupportData.description}
+        </p>
 
-        {/* Features */}
-        <div className="mt-6 space-y-4">
+        {/* Feature Cards - Clean white cards */}
+        <div className="mt-8 space-y-4">
           {speedAndSupportData.features.map((feature) => (
             <div
               key={feature.id}
-              className="flex items-center bg-card-background space-x-4 border border-border-light-gray hover:scale-[1.02]  duration-300 transition  p-4 rounded-xl relative"
+              className="flex items-center gap-4 bg-white border border-gray-100 p-4 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300"
             >
-              <p className=" min-w-[10px] min-h-[10px]  absolute right-0 top-4 w-fit rounded-full bg-gradient-to-r from-primary-light to-primary animate-pulse"></p>
-              <Image
-                src={feature.icon}
-                alt={feature.title}
-                width={200}
-                height={200}
-                className="h-16 w-16 p-2 bg-card border border-border light-gray rounded-lg object-contain"
-              />
+              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-teal-50 to-teal-100 ring-1 ring-teal-100">
+                <Image
+                  src={feature.icon}
+                  alt={feature.title}
+                  width={32}
+                  height={32}
+                  className="object-contain"
+                />
+              </div>
               <div>
-                <h2 className="text-xl relative font-semibold">
+                <h3 className="text-lg font-semibold text-gray-900">
                   {feature.title}
-                </h2>
-                <p>{feature.desc}</p>
+                </h3>
+                <p className="mt-0.5 text-sm text-gray-600">
+                  {feature.desc}
+                </p>
               </div>
             </div>
           ))}
         </div>
       </div>
 
-      {/* Right Content */}
-      <div className="flex justify-center bg-gradient-to-br from-primary-light via-primary h-full to-primary-dark rounded-2xl lg:rounded-4xl">
+      {/* Right - Teal gradient panel with GIF */}
+      <div className="flex justify-center items-center bg-gradient-to-br from-teal-600 via-teal-700 to-teal-800 h-full min-h-[320px] rounded-3xl overflow-hidden relative">
+        {/* Decorative circles */}
+        <div className="pointer-events-none absolute -top-16 -left-16 h-40 w-40 rounded-full bg-white/10" />
+        <div className="pointer-events-none absolute -bottom-16 -right-16 h-40 w-40 rounded-full bg-white/10" />
+        
         <Image
-          src="/assets/gifs/hostfame-gif-circle-appear.gif" // put your image in public/images
-          alt="WordPress Hosting"
+          src="/assets/gifs/hostfame-gif-circle-appear.gif"
+          alt="Hostfame Speed & Support"
           width={450}
           height={350}
           unoptimized
-          className="object-contain min-[1180px]:scale-[1.20]"
+          className="object-contain scale-100 lg:scale-110 xl:scale-125 relative z-10"
         />
       </div>
     </section>

@@ -1,4 +1,4 @@
-import Image from "next/image";
+import Link from "next/link";
 import { IconType } from "react-icons";
 import { FiZap, FiHeadphones, FiRotateCcw } from "react-icons/fi";
 
@@ -10,95 +10,84 @@ type Feature = {
 
 const data: {
   heading: string;
-  blurb?: string;
+  blurb: string;
+  cta: { label: string; href: string };
   features: Feature[];
-  image: { src: string; alt: string };
 } = {
-  heading: "Why Choose HostFame for Your Hosting Needs?",
+  heading: "Why Choose HostFame?",
   blurb:
-    "Reliable, fast, and friendly,  here’s what makes our hosting a smart choice.",
+    "Reliable, fast, and friendly — here's what makes our hosting a smart choice for your business.",
+  cta: {
+    label: "Get Started Now",
+    href: "/web-hosting",
+  },
   features: [
     {
       title: "Blazing-Fast Performance",
       description:
-        "High-speed hosting tuned for better SEO, lower bounce rates, and faster loads.",
+        "High-speed hosting tuned for better SEO and faster loads.",
       icon: FiZap,
     },
     {
       title: "Expert 24/7 Support",
       description:
-        "A dedicated team available around the clock to help with any technical issues.",
+        "A dedicated team available around the clock to help you.",
       icon: FiHeadphones,
     },
     {
       title: "Money-Back Guarantee",
       description:
-        "Try us with confidence, if you’re not happy, you can get your money back.",
+        "Try us with confidence — get your money back if not satisfied.",
       icon: FiRotateCcw,
     },
   ],
-  image: {
-    src: "/uploads/2024/03/contact-form.png.webp",
-    alt: "Illustration of email and cloud elements symbolizing fast, reliable hosting",
-  },
 };
 
 export default function WhyChooseHostFame() {
   return (
-    <section className="relative mx-auto max-w-7xl">
-      <div className="grid items-center gap-12 md:gap-16 lg:grid-cols-2">
-        {/* Left: copy + features */}
-        <div>
-          <h2 className="text-3xl font-extrabold tracking-tight text-text-accent sm:text-4xl">
+    <section className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-teal-950 to-teal-800 px-6 py-12 sm:px-8 md:px-12 md:py-16">
+      {/* Decorative Background Circles */}
+      <div className="pointer-events-none absolute -top-20 -left-20 h-56 w-56 rounded-full bg-gradient-to-bl from-white to-gray-300 opacity-15" />
+      <div className="pointer-events-none absolute -bottom-20 -right-20 h-56 w-56 rounded-full bg-gradient-to-tr from-white to-gray-400 opacity-15" />
+
+      <div className="relative z-10 grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
+        {/* Left: Content */}
+        <div className="text-white">
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
             {data.heading}
           </h2>
-          {/* {data.blurb && (
-            <p className="mt-3 max-w-prose text-description-text sm:text-lg">
-              {data.blurb}
-            </p>
-          )} */}
+          <p className="mt-4 max-w-lg text-white/80 sm:text-lg">
+            {data.blurb}
+          </p>
 
-          <ul className="mt-8 flex flex-col gap-y-6">
-            {data.features.map(({ title, description, icon: Icon }) => (
-              <li
-                key={title}
-                className=" flex h-full border    items-center gap-4 rounded-xl  bg-card-background  pr-4 py-2 transition "
-              >
-                <div className="w-1  h-[55px]  bg-gradient-to-b from-primary-light via-primary to-primary-dark rounded-full"></div>
-                <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-white to-gray-200 ring-1 ring-black/5">
-                  <Icon className="text-2xl text-primary-dark" aria-hidden />
-                </span>
-                <div>
-                  <h3 className="text-base font-semibold text-text-accent sm:text-lg">
-                    {title}
-                  </h3>
-                  <p className="mt-1 text-sm leading-relaxed text-description-text">
-                    {description}
-                  </p>
-                </div>
-              </li>
-            ))}
-          </ul>
+          <Link
+            href={data.cta.href}
+            className="mt-8 inline-flex items-center justify-center rounded-full bg-white px-6 py-3 text-sm font-semibold text-teal-900 transition hover:bg-white/90 hover:scale-[1.03] duration-300"
+          >
+            {data.cta.label}
+          </Link>
         </div>
 
-        {/* Right: image on gradient panel */}
-        <div className="mx-auto py-0 w-full max-w-2xl h-full rounded-3xl flex justify-center items-center bg-gradient-to-br from-primary-light via-primary-light to-primary/60">
-          <div className="relative overflow-hidden rounded-3xl h-full w-full flex justify-center  items-center shadow-xl">
-            {/* subtle glow accents */}
-            <div className="pointer-events-none absolute -top-8 -left-8 h-24 w-24 rounded-full bg-white/15 blur-xl" />
-            <div className="pointer-events-none absolute -bottom-10 -right-10 h-28 w-28 rounded-full bg-white/10 blur-xl" />
-
-            {/* image */}
-            <div className="relative flex justify-center items-center w-full">
-              <Image
-                src="/assets/gifs/hostfame-gif-path-follow.gif"
-                width={400}
-                height={4000}
-                alt={data.image.alt}
-                className="object-contain md:scale-[1.45] lg:scale-[1.20] xl:scale-[1.45]"
-              />
+        {/* Right: Feature Cards - Stacked white cards */}
+        <div className="flex flex-col gap-4">
+          {data.features.map(({ title, description, icon: Icon }) => (
+            <div
+              key={title}
+              className="flex items-center gap-4 rounded-xl bg-white px-5 py-4 shadow-sm transition hover:shadow-md"
+            >
+              <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-teal-50 ring-1 ring-teal-100">
+                <Icon className="text-xl text-teal-700" aria-hidden />
+              </span>
+              <div>
+                <h3 className="text-base font-semibold text-gray-900">
+                  {title}
+                </h3>
+                <p className="mt-0.5 text-sm text-gray-600">
+                  {description}
+                </p>
+              </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>

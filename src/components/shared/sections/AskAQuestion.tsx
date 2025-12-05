@@ -60,8 +60,8 @@ const data: ContactTeaserData = {
     alt: "Envelope and paper plane illustration",
   },
   cta: {
-    label: "Book a quick chat",
-    href: "https://tawk.to/chat/67f13177a1155b1916a6f189/1io32ifig", // change if needed
+    label: "Chat on WhatsApp",
+    href: "http://wa.me/+8801884586407",
   },
 };
 

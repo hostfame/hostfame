@@ -124,7 +124,7 @@ function SupportCtaSection() {
   return (
     <section className="flex items-center gap-6">
       <Link
-        href={"http://tawk.to/"}
+        href={"http://wa.me/+8801884586407"}
         target="_blank"
         className="flex text-lg items-center text-center max-lg:underline gap-x-2 text-white font-bold underline"
       >
