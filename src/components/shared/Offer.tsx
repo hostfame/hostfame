@@ -77,7 +77,7 @@ const Offer = () => {
         {/* .SHOP Domain Price */}
         <div className="text-center">
           <p className="text-slate-400 text-[9px] sm:text-xs uppercase tracking-wider mb-0.5">.SHOP</p>
-          <p className="text-2xl sm:text-3xl lg:text-4xl font-black text-primary-light">{shopPrice}</p>
+          <p className="text-2xl sm:text-3xl lg:text-4xl font-black text-white">{shopPrice}</p>
           <p className="text-slate-500 text-[10px] sm:text-sm">/year</p>
         </div>
         
