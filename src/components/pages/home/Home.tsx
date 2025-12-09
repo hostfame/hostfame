@@ -66,39 +66,39 @@ const Home = () => {
         promoTemplate={<PromoTopBar />}
       />
 
-      <SectionWrapper id="different-hosting-plans" className="my-12 lg:my-16">
+      <SectionWrapper id="different-hosting-plans" className="my-16 lg:my-24">
         <DifferentHostingPlans data={differentHostingPlansData} />
       </SectionWrapper>
 
-      <SectionWrapper className="my-12 lg:my-16">
+      <SectionWrapper className="my-16 lg:my-24">
         <SpeedAndSupport />
       </SectionWrapper>
 
-      <SectionWrapper className="my-12 lg:my-16">
+      <SectionWrapper className="my-16 lg:my-24">
         <DomainHero />
       </SectionWrapper>
 
-      <SectionWrapper className="my-12 lg:my-16">
+      <SectionWrapper className="my-16 lg:my-24">
         <HostingForGrowth data={hostingForGrowthData} />
       </SectionWrapper>
 
-      <SectionWrapper className="my-12 lg:my-16">
+      <SectionWrapper className="my-16 lg:my-24">
         <WhyChooseHostFame />
       </SectionWrapper>
 
-      <SectionWrapper className="my-12 lg:my-16">
+      <SectionWrapper className="my-16 lg:my-24">
         <HostingPlan />
       </SectionWrapper>
 
-      <SectionWrapper className="my-12 lg:my-16">
+      <SectionWrapper className="my-16 lg:my-24">
         <HostingFlashSale />
       </SectionWrapper>
 
-      <SectionWrapper className="my-12 lg:my-16">
+      <SectionWrapper className="my-16 lg:my-24">
         <DataCenters />
       </SectionWrapper>
 
-      <SectionWrapper className="my-12 lg:my-16">
+      <SectionWrapper className="my-16 lg:my-24">
         <ExperienceHostfameAdvantage />
       </SectionWrapper>
 

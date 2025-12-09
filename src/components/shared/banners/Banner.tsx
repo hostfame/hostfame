@@ -93,22 +93,33 @@ export const Banner: React.FC<BannerProps> = ({
         backgroundSize: "contain",
       }}
     >
-      {/* Adventure decorative elements */}
+      {/* DRAMATIC Adventure decorative elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        {/* Animated gradient orbs */}
-        <div className="absolute top-20 left-10 w-72 h-72 bg-white/5 rounded-full blur-3xl animate-float" />
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-primary-extralight/10 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
-        <div className="absolute top-1/2 left-1/3 w-48 h-48 bg-white/5 rounded-full blur-2xl animate-float" style={{ animationDelay: '2s' }} />
+        {/* Large animated gradient orbs */}
+        <div className="absolute -top-40 -left-40 w-[500px] h-[500px] bg-gradient-to-br from-white/10 to-transparent rounded-full blur-3xl animate-float" />
+        <div className="absolute -bottom-40 -right-40 w-[600px] h-[600px] bg-gradient-to-tl from-primary-extralight/15 to-transparent rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }} />
+        <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[400px] h-[400px] bg-white/5 rounded-full blur-3xl animate-float" style={{ animationDelay: '1s' }} />
         
-        {/* Compass decoration */}
-        <div className="absolute top-32 right-20 opacity-10 hidden xl:block">
-          <LuCompass className="w-32 h-32 text-white rotate-clockwise" />
+        {/* Animated particles */}
+        <div className="absolute top-20 left-[10%] w-3 h-3 bg-white/40 rounded-full animate-particle" />
+        <div className="absolute top-40 left-[25%] w-2 h-2 bg-white/30 rounded-full animate-particle" style={{ animationDelay: '1s' }} />
+        <div className="absolute top-60 right-[20%] w-4 h-4 bg-white/20 rounded-full animate-particle" style={{ animationDelay: '2s' }} />
+        <div className="absolute bottom-40 left-[15%] w-2 h-2 bg-white/30 rounded-full animate-particle" style={{ animationDelay: '3s' }} />
+        <div className="absolute bottom-60 right-[30%] w-3 h-3 bg-white/25 rounded-full animate-particle" style={{ animationDelay: '4s' }} />
+        
+        {/* Compass decoration - larger and more visible */}
+        <div className="absolute top-20 right-10 opacity-[0.07] hidden xl:block">
+          <LuCompass className="w-64 h-64 text-white rotate-clockwise" />
         </div>
         
-        {/* Sparkle decorations */}
-        <LuSparkles className="absolute top-40 left-1/4 w-6 h-6 text-white/30 animate-pulse" />
-        <LuSparkles className="absolute bottom-40 right-1/3 w-4 h-4 text-white/20 animate-pulse" style={{ animationDelay: '0.5s' }} />
-        <LuSparkles className="absolute top-1/3 right-1/4 w-5 h-5 text-white/25 animate-pulse" style={{ animationDelay: '1s' }} />
+        {/* Grid overlay for cinematic feel */}
+        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:60px_60px]" />
+        
+        {/* Sparkle decorations - more and bigger */}
+        <LuSparkles className="absolute top-32 left-[20%] w-8 h-8 text-white/40 animate-pulse" />
+        <LuSparkles className="absolute top-1/2 left-[5%] w-6 h-6 text-white/30 animate-pulse" style={{ animationDelay: '0.5s' }} />
+        <LuSparkles className="absolute bottom-32 right-[25%] w-7 h-7 text-white/35 animate-pulse" style={{ animationDelay: '1s' }} />
+        <LuSparkles className="absolute top-[40%] right-[15%] w-5 h-5 text-white/25 animate-pulse" style={{ animationDelay: '1.5s' }} />
       </div>
 
       <Navbar isTransparent />
@@ -117,10 +128,10 @@ export const Banner: React.FC<BannerProps> = ({
       <SectionWrapper
         className={`relative max-md:pt-8 max-md:pb-16 md:py-20 grid lg:grid-cols-2 gap-10 items-center ${containerClassName}`}
       >
-        {/* Content */}
-        <div className="space-y-6 text-center lg:text-left flex flex-col justify-center items-center lg:items-start animate-slide-left">
+        {/* Content with dramatic entrance */}
+        <div className="space-y-7 text-center lg:text-left flex flex-col justify-center items-center lg:items-start">
           <p
-            className={`flex gap-2 items-center font-semibold w-fit px-4 py-2.5 backdrop-blur-sm rounded-full border border-white/20 ${topTitle.className}`}
+            className={`flex gap-2.5 items-center font-bold w-fit px-5 py-3 backdrop-blur-md rounded-full border border-white/30 bg-white/10 animate-hero-text icon-spin-hover ${topTitle.className}`}
           >
             {topTitle.icon}{" "}
             <span className={`text-lg tracking-wide ${topTitle.classNameForContent}`}>
@@ -129,13 +140,14 @@ export const Banner: React.FC<BannerProps> = ({
           </p>
 
           <h1
-            className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.1] tracking-tight ${classNameForTitle}`}
+            className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.05] tracking-tight animate-hero-text neon-text ${classNameForTitle}`}
+            style={{ animationDelay: '0.2s' }}
           >
             {title}
           </h1>
 
           {description && (
-            <div className="text-base md:text-xl max-w-xl mx-auto lg:mx-0 text-white/90 leading-relaxed">
+            <div className="text-lg md:text-xl max-w-xl mx-auto lg:mx-0 text-white/90 leading-relaxed animate-hero-text" style={{ animationDelay: '0.4s' }}>
               {description}
             </div>
           )}
@@ -145,10 +157,10 @@ export const Banner: React.FC<BannerProps> = ({
               {lists.map((list, idx) => (
                 <li
                   key={list}
-                  className="flex items-center justify-center lg:justify-start gap-x-2 text-base md:text-lg animate-slide-up"
-                  style={{ animationDelay: `${0.2 + idx * 0.1}s` }}
+                  className="flex items-center justify-center lg:justify-start gap-x-3 text-base md:text-lg animate-hero-text"
+                  style={{ animationDelay: `${0.5 + idx * 0.1}s` }}
                 >
-                  <span className="w-6 h-6 rounded-full bg-white/20 flex items-center justify-center">
+                  <span className="w-7 h-7 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/30">
                     <IoCheckmark className="text-sm" />
                   </span>
                   {list}
@@ -163,20 +175,20 @@ export const Banner: React.FC<BannerProps> = ({
           )}
 
           {cta && !ctaSection && (
-            <div className="pt-2">
-              <CtaButton {...cta} className={`btn-adventure text-lg px-8 py-4 ${cta.className ?? ""}`} />
+            <div className="pt-4 animate-hero-text" style={{ animationDelay: '0.7s' }}>
+              <CtaButton {...cta} className={`btn-adventure animate-glow-pulse text-lg px-10 py-5 shadow-2xl shadow-black/20 ${cta.className ?? ""}`} />
             </div>
           )}
 
           {ctaSection && ctaSection}
         </div>
 
-        {/* Right visual */}
+        {/* Right visual with dramatic effects */}
         {image && !imageComponent && (
           <div
-            className={`hidden lg:flex justify-center lg:justify-end relative w-full max-w-md md:max-w-lg lg:max-w-xl animate-slide-right ${classNameForImageWrapper}`}
+            className={`hidden lg:flex justify-center lg:justify-end relative w-full max-w-md md:max-w-lg lg:max-w-xl ${classNameForImageWrapper}`}
           >
-            <div className="relative hover-float">
+            <div className="relative animate-hero-float">
               <Image
                 src={image}
                 alt={imageAlt}
@@ -185,12 +197,13 @@ export const Banner: React.FC<BannerProps> = ({
                 className={`object-contain h-auto drop-shadow-2xl ${classNameForImage || "w-full"}`}
                 priority
               />
-              {/* Glow effect behind image */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-extralight/20 to-transparent rounded-full blur-3xl -z-10 scale-110" />
+              {/* Multiple glow layers behind image */}
+              <div className="absolute inset-0 bg-gradient-to-br from-white/20 to-transparent rounded-full blur-3xl -z-10 scale-125 animate-pulse" />
+              <div className="absolute inset-0 bg-gradient-to-tl from-primary-extralight/30 to-transparent rounded-full blur-2xl -z-10 scale-110" />
             </div>
           </div>
         )}
-        <div className="hidden lg:block animate-slide-right">
+        <div className="hidden lg:block animate-hero-float" style={{ animationDelay: '0.3s' }}>
           {imageComponent}
         </div>
       </SectionWrapper>
