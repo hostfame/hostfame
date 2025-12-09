@@ -41,45 +41,52 @@ const Footer: React.FC = () => {
   const isBangladesh = countryCode === "BD";
 
   return (
-    <footer className="relative bg-gradient-to-br from-primary via-primary-dark to-primary-dark dark:from-black dark:via-black dark:to-black text-white overflow-hidden">
+    <footer className="relative bg-gradient-to-br from-primary via-primary-dark to-primary-dark text-white overflow-hidden">
+      {/* Adventure background decorations */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-white/5 rounded-full blur-3xl" />
+        <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-primary-extralight/10 rounded-full blur-3xl" />
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-white/5 rounded-full blur-3xl" />
+      </div>
+
       {/* Top Section - Trust Badges */}
       <div className="relative z-10 border-b border-white/10">
-        <div className="mx-auto max-w-7xl px-[2%] py-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <Link href="/uptime-guarantee" className="group flex items-center gap-3 p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-all">
-              <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                <FiShield className="w-6 h-6 text-white" />
+        <div className="mx-auto max-w-7xl px-[2%] py-10">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-5">
+            <Link href="/uptime-guarantee" className="group flex items-center gap-4 p-5 rounded-2xl bg-white/5 hover:bg-white/15 transition-all duration-300 hover:-translate-y-1">
+              <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center group-hover:bg-white/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                <FiShield className="w-7 h-7 text-white" />
               </div>
               <div>
-                <div className="font-semibold text-white">99.9% Uptime</div>
-                <div className="text-xs text-white/60">SLA Guaranteed</div>
+                <div className="font-bold text-white text-lg">99.9% Uptime</div>
+                <div className="text-sm text-white/70">SLA Guaranteed</div>
               </div>
             </Link>
-            <Link href="/refund-policy" className="group flex items-center gap-3 p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-all">
-              <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                <FiRefreshCw className="w-6 h-6 text-white" />
+            <Link href="/refund-policy" className="group flex items-center gap-4 p-5 rounded-2xl bg-white/5 hover:bg-white/15 transition-all duration-300 hover:-translate-y-1">
+              <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center group-hover:bg-white/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                <FiRefreshCw className="w-7 h-7 text-white" />
               </div>
               <div>
-                <div className="font-semibold text-white">30-Day</div>
-                <div className="text-xs text-white/60">Money Back</div>
+                <div className="font-bold text-white text-lg">30-Day</div>
+                <div className="text-sm text-white/70">Money Back</div>
               </div>
             </Link>
-            <Link href="/support" className="group flex items-center gap-3 p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-all">
-              <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                <FiHeadphones className="w-6 h-6 text-white" />
+            <Link href="/support" className="group flex items-center gap-4 p-5 rounded-2xl bg-white/5 hover:bg-white/15 transition-all duration-300 hover:-translate-y-1">
+              <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center group-hover:bg-white/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                <FiHeadphones className="w-7 h-7 text-white" />
               </div>
               <div>
-                <div className="font-semibold text-white">24/7 Support</div>
-                <div className="text-xs text-white/60">Real Humans</div>
+                <div className="font-bold text-white text-lg">24/7 Support</div>
+                <div className="text-sm text-white/70">Real Humans</div>
               </div>
             </Link>
-            <Link href="/status" className="group flex items-center gap-3 p-4 rounded-xl bg-white/5 hover:bg-white/10 transition-all">
-              <div className="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center group-hover:bg-white/20 transition-colors">
-                <FiActivity className="w-6 h-6 text-white" />
+            <Link href="/status" className="group flex items-center gap-4 p-5 rounded-2xl bg-white/5 hover:bg-white/15 transition-all duration-300 hover:-translate-y-1">
+              <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center group-hover:bg-white/20 group-hover:scale-110 group-hover:rotate-6 transition-all duration-300">
+                <FiActivity className="w-7 h-7 text-white" />
               </div>
               <div>
-                <div className="font-semibold text-white">System Status</div>
-                <div className="text-xs text-white/60">All Systems Go</div>
+                <div className="font-bold text-white text-lg">System Status</div>
+                <div className="text-sm text-white/70">All Systems Go</div>
               </div>
             </Link>
           </div>

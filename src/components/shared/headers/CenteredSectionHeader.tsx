@@ -17,14 +17,14 @@ const CenteredSectionHeader = ({
 }: CenteredSectionHeaderProps) => {
   
   return (
-    <div className={`mx-auto space-y-3 max-w-7xl text-center ${className}`}>
+    <div className={`mx-auto space-y-4 max-w-7xl text-center ${className}`}>
       <h2
-        className={`text-4xl md:text-[38px] font-bold tracking-tight text-text lg:text-nowrap ${classNameForTitle}`}
+        className={`text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text ${classNameForTitle}`}
       >
         {title}
       </h2>
       <p
-        className={`text-sm sm:text-base text-text max-w-2xl mx-auto ${classNameForDescription}`}
+        className={`text-base md:text-lg text-description-text max-w-2xl mx-auto leading-relaxed ${classNameForDescription}`}
       >
         {description}
       </p>

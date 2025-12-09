@@ -41,16 +41,17 @@ export default function SupportBanner({
     <section
       aria-label="Support and live chat"
       className={[
-        "relative overflow-hidden w-full rounded-2xl bg-gradient-to-r from-teal-950 to-teal-800",
-        "text-text shadow-xl",
-        "px-6 py-8 md:px-10 md:py-10",
+        "relative overflow-hidden w-full rounded-3xl bg-gradient-to-br from-primary-dark via-primary to-primary-dark",
+        "text-text shadow-2xl",
+        "px-6 py-10 md:px-12 md:py-14",
         className,
       ].join(" ")}
       {...rest}
     >
-      {/* Background Circles */}
-      <div className="pointer-events-none absolute -top-20 -left-20 h-56 w-56 rounded-full bg-gradient-to-bl from-white to-gray-300 opacity-15" />
-      <div className="pointer-events-none absolute -bottom-20 -right-20 h-56 w-56 rounded-full bg-gradient-to-tr from-white to-gray-400 opacity-15" />
+      {/* Adventure background elements */}
+      <div className="pointer-events-none absolute -top-20 -left-20 h-64 w-64 rounded-full bg-white/10 blur-3xl animate-float" />
+      <div className="pointer-events-none absolute -bottom-20 -right-20 h-72 w-72 rounded-full bg-primary-extralight/20 blur-3xl animate-float" style={{ animationDelay: '1s' }} />
+      <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-96 w-96 rounded-full bg-white/5 blur-2xl" />
 
       {/* Content */}
       <div className="relative z-10 grid gap-6 md:grid-cols-12 md:items-center">
@@ -61,11 +62,11 @@ export default function SupportBanner({
             {merged.badge}
           </div>
 
-          <h2 className="mt-3 text-pretty text-2xl !text-white font-semibold leading-snug md:text-3xl">
+          <h2 className="mt-4 text-pretty text-2xl md:text-4xl !text-white font-black leading-tight tracking-tight">
             {merged.title}
           </h2>
 
-          <p className="mt-2 max-w-prose text-sm/6 text-white/85 md:text-base/7">
+          <p className="mt-3 max-w-prose text-base text-white/90 md:text-lg leading-relaxed">
             {merged.subtitle}
           </p>
 

@@ -1,6 +1,7 @@
 // app/components/DataCenters.tsx
 import Image from "next/image";
 import { Fragment } from "react";
+import { LuGlobe, LuMapPin } from "react-icons/lu";
 
 type Pin = {
   id: string;
@@ -99,37 +100,48 @@ function PingDot() {
 
 export default function DataCenters() {
   return (
-    <section className="space-y-10">
+    <section className="space-y-12 relative">
+      {/* Background decoration */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl" />
+      </div>
+
       {/* Header */}
-      <div className="text-center">
-        <div className="inline-flex items-center gap-2 bg-primary/5 border border-primary/10 rounded-full px-4 py-1.5 mb-5">
-          <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-          <span className="text-primary text-sm font-medium">All Servers Online</span>
+      <div className="text-center relative">
+        <div className="inline-flex items-center gap-2.5 bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-full px-5 py-2.5 mb-6 hover-compass cursor-default">
+          <LuGlobe className="w-5 h-5 text-primary animate-pulse" />
+          <span className="text-primary text-sm font-bold tracking-wide uppercase">Global Network</span>
         </div>
-        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl lg:text-[42px] text-text mb-4">
+        <h2 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text mb-5">
           {data.title}
         </h2>
-        <p className="mx-auto max-w-3xl text-description-text sm:text-lg">
+        <p className="mx-auto max-w-3xl text-description-text text-lg">
           {data.description}
         </p>
       </div>
 
       {/* Stats row */}
-      <div className="flex flex-wrap justify-center gap-8 sm:gap-16">
+      <div className="flex flex-wrap justify-center gap-8 sm:gap-16 relative">
         {[
-          { value: "12+", label: "Locations" },
-          { value: "99.9%", label: "Uptime" },
-          { value: "<30ms", label: "Latency" },
+          { value: "12+", label: "Locations", icon: LuMapPin },
+          { value: "99.9%", label: "Uptime", icon: LuGlobe },
+          { value: "<30ms", label: "Latency", icon: LuGlobe },
         ].map((stat, i) => (
-          <div key={i} className="text-center">
-            <p className="text-4xl sm:text-5xl font-bold text-primary">{stat.value}</p>
-            <p className="text-description-text text-sm mt-1">{stat.label}</p>
+          <div key={i} className="text-center group cursor-default">
+            <p className="text-4xl sm:text-5xl font-black text-primary group-hover:scale-110 transition-transform">{stat.value}</p>
+            <p className="text-description-text text-sm mt-2 font-semibold">{stat.label}</p>
           </div>
         ))}
       </div>
 
       {/* Map Card */}
-      <div className="relative mx-auto w-full overflow-hidden rounded-2xl bg-white border border-gray-200 p-4 shadow-lg sm:p-6">
+      <div className="relative mx-auto w-full overflow-hidden rounded-3xl bg-gradient-to-br from-white to-gray-50 border border-gray-200 p-5 shadow-xl sm:p-8">
+        {/* Decorative corner elements */}
+        <div className="absolute top-4 left-4 w-8 h-8 border-l-2 border-t-2 border-primary/30 rounded-tl-lg" />
+        <div className="absolute top-4 right-4 w-8 h-8 border-r-2 border-t-2 border-primary/30 rounded-tr-lg" />
+        <div className="absolute bottom-4 left-4 w-8 h-8 border-l-2 border-b-2 border-primary/30 rounded-bl-lg" />
+        <div className="absolute bottom-4 right-4 w-8 h-8 border-r-2 border-b-2 border-primary/30 rounded-br-lg" />
+        
         <div className="relative mx-auto aspect-[1180/579] w-full">
           <Image
             src={data.mapSrc}
@@ -149,7 +161,7 @@ export default function DataCenters() {
                 title={p.country}
               >
                 <PingDot />
-                <div className="relative">
+                <div className="relative group-hover:scale-125 transition-transform duration-300">
                   <Image
                     src={p.flag}
                     alt={`${p.country} flag`}
@@ -158,8 +170,8 @@ export default function DataCenters() {
                     className="scale-75 sm:scale-90 md:scale-100 rounded shadow-lg ring-2 ring-white transition-all duration-200"
                   />
                   {/* Tooltip on hover */}
-                  <div className="absolute -bottom-7 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none">
-                    <div className="bg-slate-900 text-white text-[10px] font-medium px-2 py-0.5 rounded whitespace-nowrap shadow-lg">
+                  <div className="absolute -bottom-8 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 transform group-hover:-translate-y-1 pointer-events-none">
+                    <div className="bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full whitespace-nowrap shadow-lg">
                       {p.country}
                     </div>
                   </div>
@@ -171,11 +183,11 @@ export default function DataCenters() {
       </div>
 
       {/* Bottom country list */}
-      <div className="flex flex-wrap justify-center gap-2">
+      <div className="flex flex-wrap justify-center gap-3">
         {data.pins.map((p) => (
-          <div key={p.id} className="flex items-center gap-1.5 bg-gray-100 border border-gray-200 rounded-full px-3 py-1.5 hover:bg-primary/5 hover:border-primary/20 transition-colors">
-            <Image src={p.flag} alt={p.country} width={16} height={12} className="rounded-sm" />
-            <span className="text-text text-xs font-medium">{p.country}</span>
+          <div key={p.id} className="adventure-card flex items-center gap-2 bg-white border border-gray-200 rounded-full px-4 py-2 cursor-default">
+            <Image src={p.flag} alt={p.country} width={18} height={14} className="rounded-sm" />
+            <span className="text-text text-sm font-semibold">{p.country}</span>
           </div>
         ))}
       </div>
