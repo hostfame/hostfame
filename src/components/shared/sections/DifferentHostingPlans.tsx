@@ -48,9 +48,9 @@ export default function DifferentHostingPlans({
 
   return (
     <section className="relative">
-      {/* Header with adventure badge */}
-      <div className="mb-10">
-        <div className="inline-flex items-center gap-2.5 bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-full px-5 py-2.5 mb-6 icon-spin-hover cursor-default">
+      {/* Header */}
+      <div className="mb-10 animate-fade-in-up">
+        <div className="inline-flex items-center gap-2.5 bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-full px-5 py-2.5 mb-6 cursor-default">
           <LuRocket className="w-5 h-5 text-primary" />
           <span className="text-primary text-sm font-bold tracking-wide uppercase">Choose Your Path</span>
         </div>
@@ -63,16 +63,16 @@ export default function DifferentHostingPlans({
         />
       </div>
 
-      {/* Slider with dramatic cards */}
+      {/* Slider with cards */}
       <div
         ref={sliderRef}
         className="
           flex py-4 gap-5 overflow-x-auto hide-scrollbar snap-x snap-mandatory
           lg:grid lg:grid-cols-[repeat(auto-fit,minmax(0,1fr))] xl:overflow-visible
-          stagger-children
+          animate-fade-in-up
         "
       >
-        {data.hostingPlansData.map((plan, idx) => (
+        {data.hostingPlansData.map((plan) => (
           <div
             key={plan.id}
             className="
@@ -83,7 +83,6 @@ export default function DifferentHostingPlans({
               hover:bg-gradient-to-br hover:from-primary hover:via-primary hover:to-primary-dark
               group snap-start relative overflow-hidden
             "
-            style={{ animationDelay: `${idx * 0.1}s` }}
           >
             {/* Icon with dramatic styling */}
             <div className="relative w-24 h-24 mb-5 p-3 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 group-hover:from-white/20 group-hover:to-white/10 transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">

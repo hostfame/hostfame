@@ -26,7 +26,7 @@ const WebHosting = () => {
           content: "Limited Offer: 72% OFF Hosting",
           className: " bg-white/10 backdrop-blur-md"
         }}
-        // heightClassName="h-fit xl:h-[830px] xl:max-h-[830px]"
+        heightClassName="min-h-screen"
         title={
           <>
             Get Ultra-Fast
@@ -37,6 +37,8 @@ const WebHosting = () => {
           </>
         }
         image="/assets/web-hosting/webhero.webp"
+        imageProps={{ width: 700, height: 700 }}
+        classNameForImage="w-full max-w-[550px] xl:max-w-[650px]"
         waveImage="/assets/web-hosting/banner-left-wave.png"
         // countdownTarget={new Date(Date.now() + 15 * 60 * 60 * 1000)} // 15 hours
         description={

@@ -5,11 +5,11 @@ import { LuZap } from "react-icons/lu";
 
 export default function SpeedAndSupport() {
   return (
-    <section className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1fr_1.1fr] items-center">
+    <section className="grid gap-12 md:grid-cols-2 lg:grid-cols-[1fr_1.1fr] items-center animate-fade-in-up">
       {/* Left Content */}
       <div>
-        {/* Adventure badge */}
-        <div className="inline-flex items-center gap-2.5 bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-full px-5 py-2.5 mb-6 icon-spin-hover cursor-default">
+        {/* Badge */}
+        <div className="inline-flex items-center gap-2.5 bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-full px-5 py-2.5 mb-6 cursor-default">
           <LuZap className="w-5 h-5 text-primary" />
           <span className="text-primary text-sm font-bold tracking-wide uppercase">Lightning Fast</span>
         </div>
@@ -21,13 +21,12 @@ export default function SpeedAndSupport() {
           {speedAndSupportData.description}
         </p>
 
-        {/* Feature Cards - Adventure styled */}
-        <div className="mt-10 space-y-5 stagger-children">
-          {speedAndSupportData.features.map((feature, idx) => (
+        {/* Feature Cards */}
+        <div className="mt-10 space-y-5">
+          {speedAndSupportData.features.map((feature) => (
             <div
               key={feature.id}
               className="adventure-card card-shine flex items-center gap-5 bg-white border border-gray-100 p-5 rounded-2xl shadow-md group"
-              style={{ animationDelay: `${idx * 0.15}s` }}
             >
               <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 group-hover:from-primary group-hover:to-primary-dark transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">
                 <Image

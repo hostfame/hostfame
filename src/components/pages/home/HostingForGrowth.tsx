@@ -21,16 +21,16 @@ interface DataProps {
 
 const HostingForGrowth = ({ data }: { data: HostingPlansProps }) => {
   return (
-    <section className="relative">
+    <section className="relative animate-fade-in-up">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/5 rounded-full blur-3xl" />
       </div>
 
       <div className="relative">
-        {/* Adventure badge */}
+        {/* Badge */}
         <div className="flex justify-center mb-6">
-          <div className="inline-flex items-center gap-2.5 bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-full px-5 py-2.5 icon-spin-hover cursor-default">
+          <div className="inline-flex items-center gap-2.5 bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-full px-5 py-2.5 cursor-default">
             <LuTrendingUp className="w-5 h-5 text-primary" />
             <span className="text-primary text-sm font-bold tracking-wide uppercase">Scale Your Success</span>
           </div>
@@ -47,7 +47,6 @@ const HostingForGrowth = ({ data }: { data: HostingPlansProps }) => {
               key={index}
               href={plan.link}
               className="adventure-card card-shine group relative bg-white rounded-2xl p-7 border border-gray-100 shadow-md"
-              style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Icon */}
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/10 to-primary/5 flex items-center justify-center mb-5 group-hover:from-primary group-hover:to-primary-dark transition-all duration-500 group-hover:scale-110 group-hover:rotate-6">

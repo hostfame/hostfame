@@ -21,28 +21,22 @@ export default function DomainHero() {
   const popular = domainPricingData.items.slice(0, 4);
 
   return (
-    <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary-dark via-primary to-primary-dark px-6 py-20 sm:px-10 md:px-14">
-      {/* DRAMATIC decorative elements */}
+    <section className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-primary-dark via-primary to-primary-dark px-6 py-20 sm:px-10 md:px-14 animate-fade-in-up">
+      {/* Background decoration */}
       <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -left-40 h-80 w-80 rounded-full bg-white/10 blur-3xl animate-float" />
-        <div className="absolute -bottom-40 -right-40 h-96 w-96 rounded-full bg-primary-extralight/20 blur-3xl animate-float" style={{ animationDelay: '2s' }} />
-        <div className="absolute top-1/2 left-1/4 h-64 w-64 rounded-full bg-white/5 blur-3xl animate-float" style={{ animationDelay: '1s' }} />
-        {/* Particles */}
-        <div className="absolute top-16 left-[15%] w-3 h-3 bg-white/30 rounded-full animate-particle" />
-        <div className="absolute top-32 right-[20%] w-2 h-2 bg-white/20 rounded-full animate-particle" style={{ animationDelay: '1.5s' }} />
-        <div className="absolute bottom-24 left-[30%] w-2 h-2 bg-white/25 rounded-full animate-particle" style={{ animationDelay: '3s' }} />
-        {/* Grid overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
+        <div className="absolute -top-40 -left-40 h-80 w-80 rounded-full bg-white/10 blur-3xl" />
+        <div className="absolute -bottom-40 -right-40 h-96 w-96 rounded-full bg-primary-extralight/20 blur-3xl" />
+        <div className="absolute top-1/2 left-1/4 h-64 w-64 rounded-full bg-white/5 blur-3xl" />
       </div>
 
       <div className="mx-auto max-w-5xl text-center text-white relative">
         {/* Badge */}
-        <div className="inline-flex items-center gap-2.5 bg-white/10 border border-white/20 rounded-full px-5 py-2.5 mb-8 icon-spin-hover cursor-default backdrop-blur-sm">
+        <div className="inline-flex items-center gap-2.5 bg-white/10 border border-white/20 rounded-full px-5 py-2.5 mb-8 cursor-default backdrop-blur-sm">
           <LuGlobe className="w-5 h-5" />
           <span className="text-sm font-bold tracking-wide uppercase">Claim Your Territory</span>
         </div>
         
-        <h1 className="mx-auto max-w-3xl text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight tracking-tight neon-text">
+        <h1 className="mx-auto max-w-3xl text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight tracking-tight">
           {data.title}
         </h1>
         {data.subtitle && (
@@ -60,12 +54,11 @@ export default function DomainHero() {
             <span className="text-xs uppercase tracking-widest text-white/70 font-semibold">
               {data.popularLabel}
             </span>
-            <ul className="flex flex-wrap justify-center gap-3 transition-all duration-300 ease-in-out stagger-children">
-              {popular.map((item, idx) => (
+            <ul className="flex flex-wrap justify-center gap-3 transition-all duration-300 ease-in-out">
+              {popular.map((item) => (
                 <li
                   key={item.tld}
                   className="transition-all duration-300 ease-in-out"
-                  style={{ animationDelay: `${idx * 0.1}s` }}
                 >
                   <DomainLink className="group relative inline-flex w-[132px] hover:w-[153px] items-center gap-2 rounded-full border border-white/30 bg-white/15 px-4 py-2 text-sm text-white backdrop-blur-sm transition-all duration-300 ease-in-out hover:bg-white/25 hover:-translate-y-1 hover:shadow-lg">
                     <span className="font-bold">{item.tld}</span>

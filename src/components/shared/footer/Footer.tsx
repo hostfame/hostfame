@@ -15,7 +15,7 @@ const footerLinks = {
   hosting: [
     { label: "Web Hosting", href: "/web-hosting" },
     { label: "WordPress Hosting", href: "/wordpress-hosting" },
-    { label: "Cloud Hosting", href: "/cloud-hosting" },
+    { label: "Managed Hosting", href: "/managed-hosting" },
     { label: "VPS Hosting", href: "/vps-hosting" },
   ],
   domains: [

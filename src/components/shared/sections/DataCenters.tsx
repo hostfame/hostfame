@@ -100,7 +100,7 @@ function PingDot() {
 
 export default function DataCenters() {
   return (
-    <section className="space-y-12 relative">
+    <section className="space-y-12 relative animate-fade-in-up">
       {/* Background decoration */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-3xl" />
@@ -108,8 +108,8 @@ export default function DataCenters() {
 
       {/* Header */}
       <div className="text-center relative">
-        <div className="inline-flex items-center gap-2.5 bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-full px-5 py-2.5 mb-6 hover-compass cursor-default">
-          <LuGlobe className="w-5 h-5 text-primary animate-pulse" />
+        <div className="inline-flex items-center gap-2.5 bg-gradient-to-r from-primary/10 to-primary/5 border border-primary/20 rounded-full px-5 py-2.5 mb-6 cursor-default">
+          <LuGlobe className="w-5 h-5 text-primary" />
           <span className="text-primary text-sm font-bold tracking-wide uppercase">Global Network</span>
         </div>
         <h2 className="text-3xl md:text-4xl lg:text-5xl font-black tracking-tight text-text mb-5">
