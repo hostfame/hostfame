@@ -38,7 +38,7 @@ const WordPressHosting = () => {
         }
         image="/assets/hero-img-1.webp"
         waveImage="/assets/web-hosting/banner-left-wave.png"
-        countdownTarget={new Date(Date.now() + 15 * 60 * 60 * 1000)} // 15 hours
+        useCentralTimer
         ctaSection={<WordPressHostingCtaSection />}
         description={`Blazing speed, free backups, and real human support optimized for creators, consultants, and small businesses who rely on WordPress to grow.`}
       />

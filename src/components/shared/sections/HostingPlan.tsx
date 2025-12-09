@@ -2,45 +2,19 @@ import { featureRows, hostingPlans } from "@/data/hostingPlan.data";
 import Image from "next/image";
 import { Button } from "../html/Button";
 import HostingPriceValue from "./HostingPriceValue";
+import { LuCheck, LuX, LuServer } from "react-icons/lu";
 
 const Check = () => (
-  <svg
-    aria-hidden
-    viewBox="0 0 24 24"
-    className="h-5 w-5 flex-none text-green-500"
-    fill="currentColor"
-  >
-    <path
-      fillRule="evenodd"
-      d="M9 16.2 4.8 12l-1.4 1.4L9 19 21 7l-1.4-1.4z"
-      clipRule="evenodd"
-    />
-  </svg>
+  <LuCheck className="h-5 w-5 flex-none text-green-500" />
 );
 
 const Cross = () => (
-  <svg
-    aria-hidden
-    viewBox="0 0 24 24"
-    className="h-5 w-5 flex-none text-rose-500"
-    fill="currentColor"
-  >
-    <path d="M18.3 5.7 12 12l6.3 6.3-1.4 1.4L10.6 13.4 4.3 19.7 2.9 18.3 9.2 12 2.9 5.7 4.3 4.3l6.3 6.3 6.3-6.3z" />
-  </svg>
-);
-
-const Dot = () => (
-  <span
-    aria-hidden
-    className="inline-block h-1.5 w-1.5 rounded-full bg-muted"
-  />
+  <LuX className="h-5 w-5 flex-none text-rose-400" />
 );
 
 const HeaderImage = ({ width, height }: { width: string; height: string }) => {
   return (
-    <div
-      className={`relative ${width} ${height} shrink-0 overflow-hidden rounded-xl `}
-    >
+    <div className={`relative ${width} ${height} shrink-0 overflow-hidden rounded-xl`}>
       <Image
         src="/assets/pricing-image.svg"
         alt="Hosting illustration"
@@ -54,47 +28,42 @@ const HeaderImage = ({ width, height }: { width: string; height: string }) => {
 
 export default function HostingPlans() {
   return (
-    <section className="">
-      <div>
-        {/* Card wrapper */}
-        <div className="relative overflow-hidden rounded-2xl border border-border-light-gray bg-card-background">
-          {/* Top bar with illustration */}
-          <div className="flex flex-col items-start gap-6 border-b border-border-light-gray p-6 sm:flex-row sm:items-center sm:justify-between">
-            <div className="flex items-start gap-4">
-              <section className=" lg:hidden">
-                <HeaderImage width={"w-20"} height={"h-20"} />
-              </section>
-              <div>
-                <h2 className="text-xl font-semibold tracking-tight text-text-accent sm:text-2xl">
-                  Simple, scalable hosting
-                </h2>
-                <p className="text-sm text-description-text">
-                  Compare hostingPlans and pick the perfect fit. Minimalist UI,
-                  same layout you wanted, refined.
-                </p>
-              </div>
-            </div>
-
-            {/* Mini legend */}
-            <div className="flex items-center gap-4 text-xs lg:text-sm text-description-text">
-              <div className="flex items-center gap-2">
-                <Check />
-                <span className=" text-nowrap">Included</span>
-              </div>
-              <Dot />
-              <div className="flex items-center gap-2">
-                <Cross />
-                <span className=" text-nowrap">Not included</span>
-              </div>
-            </div>
+    <section className="space-y-8">
+      {/* Section Header */}
+      <div className="text-center space-y-4">
+        <div className="inline-flex items-center gap-2 bg-primary/5 dark:bg-primary/10 border border-primary/10 rounded-full px-4 py-1.5">
+          <LuServer className="w-4 h-4 text-primary" />
+          <span className="text-primary text-sm font-medium">Compare Plans</span>
+        </div>
+        <h2 className="text-3xl md:text-4xl font-bold text-text">
+          Simple, Scalable Hosting
+        </h2>
+        <p className="text-description-text max-w-2xl mx-auto">
+          Compare our hosting plans and pick the perfect fit for your needs. All plans include 24/7 support and 99.9% uptime guarantee.
+        </p>
+        
+        {/* Legend */}
+        <div className="flex items-center justify-center gap-6 pt-2">
+          <div className="flex items-center gap-2 text-sm text-description-text">
+            <Check />
+            <span>Included</span>
           </div>
+          <div className="flex items-center gap-2 text-sm text-description-text">
+            <Cross />
+            <span>Not included</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Card wrapper */}
+      <div className="relative overflow-hidden rounded-2xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-900">
 
           {/* Cards (mobile / small screens) */}
           <div className="lg:hidden grid grid-cols-1 gap-4 p-4 sm:grid-cols-2 lg:grid-cols-4">
             {hostingPlans.map((plan) => (
               <article
                 key={plan.id}
-                className="group space-y-6 flex flex-col rounded-xl border border-border-light-gray bg-card-background p-5 shadow-sm transition-all hover:shadow-md"
+                className="group space-y-6 flex flex-col rounded-xl border border-gray-200 dark:border-gray-800 bg-white dark:bg-gray-800 p-5 shadow-sm transition-all hover:shadow-md"
               >
                 <header className=" space-y-2">
                   <h3 className="text-base font-semibold tracking-tight text-text-accent">
@@ -115,7 +84,7 @@ export default function HostingPlans() {
                 </header>
 
                 {/* Divider */}
-                <div className="h-px w-full bg-muted" />
+                <div className="h-px w-full bg-gray-200 dark:bg-gray-700" />
 
                 {/* Key specs */}
                 <ul className="space-y-2 text-sm">
@@ -143,7 +112,7 @@ export default function HostingPlans() {
                       return (
                         <li
                           key={`${plan.id}-${f.key}`}
-                          className="flex items-center justify-between rounded-md border border-muted px-3 py-2"
+                          className="flex items-center justify-between rounded-md border border-gray-200 dark:border-gray-700 px-3 py-2"
                         >
                           <span className="text-description-text">
                             {f.label}
@@ -163,7 +132,7 @@ export default function HostingPlans() {
           </div>
 
           {/* Comparison (md+),  table-less, section-based grid */}
-          <section className="hidden lg:block border-t border-border-light-gray px-4 pb-6">
+          <section className="hidden lg:block border-t border-gray-200 dark:border-gray-800 px-4 pb-6">
             <div className="overflow-x-auto">
               {/* Header row */}
               <section
@@ -211,7 +180,7 @@ export default function HostingPlans() {
               {featureRows.map((row) => (
                 <section
                   key={`row-${row.key}`}
-                  className="min-w-full border-t border-border-light-gray"
+                  className="min-w-full border-t border-gray-200 dark:border-gray-800"
                   style={{
                     display: "grid",
                     gridTemplateColumns: `200px repeat(${hostingPlans.length}, minmax(200px,1fr))`,
@@ -265,7 +234,6 @@ export default function HostingPlans() {
             </div>
           </section>
         </div>
-      </div>
     </section>
   );
 }

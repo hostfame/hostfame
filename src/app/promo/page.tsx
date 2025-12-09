@@ -4,6 +4,7 @@ import Link from "next/link";
 import { BsLightningChargeFill, BsFire, BsStars } from "react-icons/bs";
 import { HiSparkles } from "react-icons/hi2";
 import { FiArrowRight, FiGift, FiZap } from "react-icons/fi";
+import Navbar from "@/components/navbar/Navbar";
 
 // Countdown hook
 function useCountdown(targetMs: number) {
@@ -883,7 +884,9 @@ const Design30 = () => {
 // ============ MAIN PAGE ============
 export default function PromoPage() {
   return (
-    <div className="min-h-screen bg-gray-100 py-10">
+    <>
+      <Navbar />
+      <div className="min-h-screen bg-gray-100 py-10">
       <div className="max-w-7xl mx-auto px-4">
         <h1 className="text-3xl font-bold text-gray-900 mb-2">Promo Bar Designs</h1>
         <p className="text-gray-600 mb-8">Pick your favorite design for the top promo bar (30 options)</p>
@@ -934,5 +937,6 @@ export default function PromoPage() {
         </div>
       </div>
     </div>
+    </>
   );
 }

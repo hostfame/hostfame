@@ -46,20 +46,20 @@ const FaqBoard: React.FC<Props> = ({
             <li key={c.id} className="transition-all">
               <button
                 onClick={() => setActive(c.id)}
-                className={`w-full rounded-2xl px-5 py-4 text-left shadow-sm ring-1 ring-black/5 transition-all duration-300 ease-out
+                className={`w-full rounded-2xl px-5 py-4 text-left shadow-sm ring-1 ring-black/5 dark:ring-white/10 transition-all duration-300 ease-out
                 flex items-center gap-4
                 ${
                   selected
                     ? "bg-teal-600 text-white shadow-md"
-                    : "bg-gray-background text-text hover:shadow"
+                    : "bg-white dark:bg-gray-900 text-text hover:shadow"
                 }
               `}
               >
                 <span
-                  className={`inline-flex h-10 w-10 items-center justify-center rounded-full shadow ring-1 ring-black/10 transition-colors ${
+                  className={`inline-flex h-10 w-10 items-center justify-center rounded-full shadow ring-1 ring-black/10 dark:ring-white/10 transition-colors ${
                     selected
                       ? "bg-white/20 text-white"
-                      : "bg-gray-background text-teal-600"
+                      : "bg-gray-100 dark:bg-gray-800 text-teal-600"
                   }`}
                 >
                   <Icon className="h-5 w-5" />
@@ -72,7 +72,7 @@ const FaqBoard: React.FC<Props> = ({
       </ul>
 
       {/* Right: FAQs list (accordion) */}
-      <div className="rounded-2xl bg-background p-2 md:p-3 shadow-md  ring-1 ring-border-light-gray">
+      <div className="rounded-2xl bg-white dark:bg-gray-900 p-2 md:p-3 shadow-md ring-1 ring-gray-200 dark:ring-gray-800">
         {/* Key by active so it resets when category changes */}
         <Accordion
           key={active}

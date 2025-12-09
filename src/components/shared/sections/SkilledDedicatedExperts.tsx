@@ -60,7 +60,7 @@ const SkilledDedicatedExperts = () => {
       <div className="pointer-events-none absolute -bottom-24 left-[-10%] h-72 w-72 rounded-full bg-primary/20 blur-3xl" /> */}
 
       {/* Container */}
-      <SectionWrapper className=" space-y-4  py-16 lg:py-24">
+      <SectionWrapper className=" space-y-4 pt-16 lg:pt-24 pb-8 lg:pb-12">
         {/* Header */}
 
         <CenteredSectionHeader

@@ -20,19 +20,19 @@ export default function DomainBanner() {
   const popular = domainPricingData.items.slice(0, 5);
 
   return (
-    <section className="relative isolate -mt-[1px]">
+    <section className="relative -mt-[1px]">
       <Navbar isTransparent />
       {/* Layered teal header */}
       <div className="absolute inset-0 -z-10 banner-bg " />
 
-      {/* Decorative orbs / lines */}
+      {/* Decorative orbs - simplified */}
       <div
-        className="pointer-events-none absolute -top-28 left-1/2 h-72 w-72 -translate-x-1/2 rounded-full bg-white/10 blur-3xl"
+        className="pointer-events-none absolute -top-28 left-1/4 h-72 w-72 rounded-full bg-white/5"
         aria-hidden
       />
 
       <div
-        className="pointer-events-none absolute -bottom-28 right-10 h-64 w-64 rounded-full bg-white/10 blur-3xl"
+        className="pointer-events-none absolute -bottom-28 right-10 h-64 w-64 rounded-full bg-white/5"
         aria-hidden
       />
       <svg
@@ -126,7 +126,7 @@ export default function DomainBanner() {
 
             {/* Accent ring */}
             <div
-              className="pointer-events-none absolute -inset-1 -z-10 rounded-3xl bg-gradient-to-tr from-primary-dark to-primary opacity-40 blur-2xl"
+              className="pointer-events-none absolute -inset-1 -z-10 rounded-3xl bg-gradient-to-tr from-primary-dark to-primary opacity-20"
               aria-hidden
             />
           </aside>

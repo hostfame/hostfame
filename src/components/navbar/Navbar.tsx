@@ -8,16 +8,19 @@ import { navItems } from "@/data/navbar.data";
 import { getIcon } from "./Icon";
 import Image from "next/image";
 import { Button } from "../shared/html/Button";
-import ToggleTheme from "../shared/ToggleTheme";
 import Offer from "../shared/Offer";
-import { useTheme } from "next-themes";
 
 const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrollY, setScrollY] = useState(0);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
-  const { resolvedTheme } = useTheme();
+
+  // Prevent hydration mismatch by waiting for mount
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const toggleMenu = () => setIsOpen((p) => !p);
 
@@ -61,31 +64,95 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
   const textClass = `${isTransparent ? "text-white" : "text-text"}`;
   const activeClassName = `${isTransparent ? "" : "text-teal-600"}`;
   const textHoverClass = `${isTransparent ? "" : "hover:text-teal-600"}`;
-  const isDark = resolvedTheme === "dark";
 
-  // white logo in dark or transparent
-  const logoSrc =
-    isTransparent || isDark
-      ? "/assets/hostfame-white.webp"
-      : "/assets/hostfame-green.webp";
+  // white logo for transparent navbar, green for default
+  const logoSrc = isTransparent
+    ? "/assets/hostfame-white.webp"
+    : "/assets/hostfame-green.webp";
+
+  // For transparent navbar, show sticky version on scroll
+  const showStickyNav = isTransparent && scrollY > 70;
 
   return (
-    <nav
-      className={`duration-300 top-0 z-[100] ${
-        isTransparent
-          ? `bg-transparent ${
-              scrollY > 70
-                ? "opacity-0 pointer-events-none"
-                : "opacity-100 h-auto pointer-events-auto"
-            }`
-          : `bg-background sticky shadow-lg border-b border-border-light-gray ${
-              scrollY < 70
-                ? "h-0 opacity-0 pointer-events-none"
-                : "opacity-100 h-auto pointer-events-auto"
-            }`
-      }`}
-    >
-      {isTransparent && <Offer />}
+    <>
+      {/* Sticky navbar that appears on scroll (for transparent pages) */}
+      {isTransparent && (
+        <nav
+          className={`fixed top-0 left-0 right-0 z-[9999] bg-background shadow-lg border-b border-border-light-gray transition-all duration-300 ${
+            showStickyNav
+              ? "opacity-100 translate-y-0"
+              : "opacity-0 -translate-y-full pointer-events-none"
+          }`}
+        >
+          <section className="max-w-7xl mx-auto px-[2%]">
+            <div className="mx-auto lg:pr-4">
+              <div className="flex justify-between items-center h-18 py-2">
+                <div className="flex items-center">
+                  <Link href="/">
+                    <Image
+                      alt="logo"
+                      src="/assets/hostfame-green.webp"
+                      width={170}
+                      height={170}
+                      className="transition-opacity duration-200"
+                    />
+                  </Link>
+                </div>
+                <div className="hidden min-[840px]:flex items-center space-x-8">
+                  {navItems.map((item) => (
+                    <div key={item.label} className="relative group">
+                      {item.subItems ? (
+                        <>
+                          <button className="flex items-center px-3 py-2 text-sm font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 text-text hover:text-teal-600">
+                            {item.label}
+                            <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" aria-hidden="true" />
+                          </button>
+                          <div className="w-[400px] absolute -left-1/2 mt-2 bg-gray-background rounded-xl shadow-2xl border border-background py-4 z-[10000] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform group-hover:-translate-y-1">
+                            <div className="grid grid-cols-2 gap-1 px-4">
+                              {item.subItems.map((subItem) => (
+                                <Link key={subItem.label} className="flex items-start p-3 rounded-lg hover:bg-primary-light transition-all duration-200 ease-in-out transform hover:scale-102 text-text hover:text-white" href={subItem.href}>
+                                  <div className="flex-shrink-0 mr-3 mt-0.5">{getIcon(subItem.icon)}</div>
+                                  <div><p className="text-sm font-semibold">{subItem.label}</p><p className="text-xs mt-0.5 opacity-80">{subItem.description}</p></div>
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+                        </>
+                      ) : (
+                        <Link href={item.href || "#"} className={`flex items-center px-3 py-2 text-sm font-semibold transition-all duration-300 ease-in-out transform hover:scale-105 text-text hover:text-teal-600 ${pathname === item.href ? "text-teal-600" : ""}`}>
+                          {item.label}
+                        </Link>
+                      )}
+                    </div>
+                  ))}
+                </div>
+                <div className="hidden min-[840px]:flex items-center space-x-4">
+                  <Link href="https://my.hostfame.com" target="_blank">
+                    <Button className="h-10 px-6 font-semibold text-sm" variant="bordered">
+                      Dashboard
+                    </Button>
+                  </Link>
+                </div>
+                <button className="min-[840px]:hidden text-text" onClick={toggleMenu}>{isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}</button>
+              </div>
+            </div>
+          </section>
+        </nav>
+      )}
+
+      {/* Main navbar */}
+      <nav
+        className={`duration-300 top-0 z-[9999] ${
+          isTransparent
+            ? `bg-transparent ${
+                scrollY > 70
+                  ? "opacity-0 pointer-events-none"
+                  : "opacity-100 h-auto pointer-events-auto"
+              }`
+            : `bg-background sticky shadow-lg border-b border-border-light-gray opacity-100 h-auto pointer-events-auto`
+        }`}
+      >
+        {isTransparent && <Offer />}
 
       <section className="max-w-7xl mx-auto px-[2%]">
         <div className="mx-auto lg:pr-4">
@@ -93,7 +160,14 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
             {/* Logo */}
             <div className="flex items-center">
               <Link href="/">
-                <Image src={logoSrc} alt="logo" width={170} height={170} priority />
+                <Image 
+                  src={logoSrc} 
+                  alt="logo" 
+                  width={170} 
+                  height={170} 
+                  priority 
+                  className="transition-opacity duration-200"
+                />
               </Link>
             </div>
 
@@ -116,7 +190,7 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
                         <ChevronDown className="ml-1 h-4 w-4 transition-transform duration-300 group-hover:rotate-180" />
                       </button>
                       <div
-                        className={`w-[400px] absolute -left-1/2 mt-2 bg-gray-background rounded-xl shadow-2xl border border-background py-4 z-[100] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform group-hover:-translate-y-1`}
+                        className={`w-[400px] absolute -left-1/2 mt-2 bg-gray-background rounded-xl shadow-2xl border border-background py-4 z-[10000] opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 ease-in-out transform group-hover:-translate-y-1`}
                       >
                         <div className="grid grid-cols-2 gap-1 px-4">
                           {item.subItems.map((subItem) => (
@@ -162,11 +236,6 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
 
               {/* Desktop Right */}
               <div className="hidden items-center justify-end gap-x-4 min-[840px]:flex">
-                <ToggleTheme
-                  classNameForMoonIcon={`${isTransparent ? "!text-white" : ""}`}
-                  classNameForSunIcon={`${isTransparent ? "!text-white" : ""}`}
-                  className={`${isTransparent ? "!border-white" : ""}`}
-                />
                 <Button
                   href="https://my.hostfame.com/"
                   size="sm"
@@ -182,11 +251,6 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
 
             {/* Mobile menu button */}
             <div className="min-[840px]:hidden flex justify-end items-center gap-x-2">
-              <ToggleTheme
-                classNameForMoonIcon={`${isTransparent ? "!text-white" : ""}`}
-                classNameForSunIcon={`${isTransparent ? "!text-white" : ""}`}
-                className={`${isTransparent ? "!border-white" : ""}`}
-              />
               <button
                 onClick={toggleMenu}
                 className="text-text hover:text-teal-600 p-2 transition-colors duration-200"
@@ -358,6 +422,7 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
         </div>
       </section>
     </nav>
+    </>
   );
 };
 

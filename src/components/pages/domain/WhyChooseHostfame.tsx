@@ -2,14 +2,6 @@ import CenteredSectionHeader from "@/components/shared/headers/CenteredSectionHe
 import { DomainWhyChooseHostfameData } from "@/data/domain.data";
 
 export default function WhyChooseHostfame() {
-  // Optional, relevant extras without changing existing content:
-  const highlights: Record<string, string[]> = {
-    "Instant Registration": ["Fast setup", "Secure checkout", "DNS ready"],
-    "Free WHOIS Privacy": ["Email masking", "GDPR-friendly", "Zero cost"],
-    "Transparent Pricing": ["No upsells", "Flat rates", "Clear invoices"],
-    "Real Human Support": ["24/7 help", "Chat & WhatsApp", "No bots"],
-  };
-
   return (
     <section aria-labelledby="why-hostfame" className=" space-y-8">
       <CenteredSectionHeader
@@ -28,8 +20,8 @@ export default function WhyChooseHostfame() {
           return (
             <li
               key={i}
-              className="group relative rounded-3xl bg-card-background/80 backdrop-blur shadow-sm ring-1 ring-border/50 p-8 md:p-8 min-h-60 flex flex-col transition-all duration-300
-                         hover:-translate-y-1 hover:shadow-xl focus-within:-translate-y-1 focus-within:shadow-xl
+              className="group relative rounded-3xl bg-white dark:bg-gray-900 shadow-sm ring-1 ring-border/50 dark:ring-gray-800 p-8 md:p-8 min-h-60 flex flex-col transition-all duration-300
+                         hover:shadow-xl focus-within:shadow-xl
                          hover:ring-primary/30 focus-within:ring-primary/30"
             >
               {/* Hover gradient frame */}
@@ -45,8 +37,6 @@ export default function WhyChooseHostfame() {
                   <div className="h-14 w-14 md:h-16 md:w-16 rounded-2xl bg-primary/5 grid place-items-center ring-1 ring-primary/10">
                     <Icon className="text-primary/60" size={34} />
                   </div>
-                  {/* subtle halo */}
-                  <span className="absolute -inset-1 rounded-3xl blur-lg bg-primary/10 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </div>
               </div>
 

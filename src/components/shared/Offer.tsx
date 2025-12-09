@@ -1,36 +1,12 @@
 "use client";
 import { useIpProviderContextValue } from "@/providers/IpProvider";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Link from "next/link";
-
-// Countdown hook
-function useCountdown(targetMs: number) {
-  const [now, setNow] = useState(Date.now());
-  useEffect(() => {
-    const id = setInterval(() => setNow(Date.now()), 1000);
-    return () => clearInterval(id);
-  }, []);
-  const diff = Math.max(0, targetMs - now);
-  const hours = Math.floor(diff / 3600000);
-  const minutes = Math.floor((diff % 3600000) / 60000);
-  const seconds = Math.floor((diff % 60000) / 1000);
-  return { hours, minutes, seconds, isOver: diff <= 0 };
-}
-
-function getNextCycleEnd(cycleHours: number) {
-  const cycleMs = cycleHours * 60 * 60 * 1000;
-  const rem = Date.now() % cycleMs;
-  return Date.now() + (cycleMs - rem);
-}
+import { useCentralCountdown } from "@/context/CountdownContext";
 
 const Offer = () => {
   const countryCode = useIpProviderContextValue();
-  const [targetMs, setTargetMs] = useState(() => getNextCycleEnd(12));
-  const { hours, minutes, seconds, isOver } = useCountdown(targetMs);
-  
-  useEffect(() => {
-    if (isOver) setTargetMs(getNextCycleEnd(12));
-  }, [isOver]);
+  const { hours, minutes, seconds } = useCentralCountdown();
 
   const pad = (n: number) => n.toString().padStart(2, "0");
   const domainPrice = countryCode === "BD" ? "৳888" : "$8.88";
@@ -58,7 +34,9 @@ const Offer = () => {
         
         {/* Hosting Discount */}
         <div className="text-center">
-          <p className="text-slate-400 text-[9px] sm:text-xs uppercase tracking-wider mb-0.5">Hosting</p>
+          <div className="inline-flex items-center justify-center bg-gradient-to-r from-amber-500/30 to-orange-500/30 border border-amber-400/50 rounded-md px-2 py-0.5 mb-1 shadow-sm shadow-amber-500/20">
+            <p className="text-amber-300 text-[9px] sm:text-[11px] uppercase tracking-wider font-black">Hosting</p>
+          </div>
           <p className="text-2xl sm:text-3xl lg:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-slate-400">72%</p>
           <p className="text-slate-500 text-[10px] sm:text-sm">OFF</p>
         </div>
@@ -67,7 +45,9 @@ const Offer = () => {
         
         {/* .COM Domain Price */}
         <div className="text-center">
-          <p className="text-slate-400 text-[9px] sm:text-xs uppercase tracking-wider mb-0.5">.COM</p>
+          <div className="inline-flex items-center justify-center bg-gradient-to-r from-emerald-500/30 to-teal-500/30 border border-emerald-400/50 rounded-md px-2 py-0.5 mb-1 shadow-sm shadow-emerald-500/20">
+            <p className="text-emerald-300 text-[9px] sm:text-[11px] uppercase tracking-wider font-black">.COM</p>
+          </div>
           <p className="text-2xl sm:text-3xl lg:text-4xl font-black text-white">{domainPrice}</p>
           <p className="text-slate-500 text-[10px] sm:text-sm">/year</p>
         </div>
@@ -76,7 +56,9 @@ const Offer = () => {
         
         {/* .SHOP Domain Price */}
         <div className="text-center">
-          <p className="text-slate-400 text-[9px] sm:text-xs uppercase tracking-wider mb-0.5">.SHOP</p>
+          <div className="inline-flex items-center justify-center bg-gradient-to-r from-sky-500/30 to-blue-500/30 border border-sky-400/50 rounded-md px-2 py-0.5 mb-1 shadow-sm shadow-sky-500/20">
+            <p className="text-sky-300 text-[9px] sm:text-[11px] uppercase tracking-wider font-black">.SHOP</p>
+          </div>
           <p className="text-2xl sm:text-3xl lg:text-4xl font-black text-white">{shopPrice}</p>
           <p className="text-slate-500 text-[10px] sm:text-sm">/year</p>
         </div>
@@ -92,9 +74,8 @@ const Offer = () => {
           ].map((t, i) => (
             <div key={i} className="flex items-center">
               <div className="relative">
-                {i === 2 && <div className="absolute inset-0 bg-primary/30 blur-md rounded-lg" />}
-                <div className={`relative bg-gradient-to-b from-slate-800 to-slate-900 border ${i === 2 ? 'border-primary/50' : 'border-slate-700'} rounded-lg px-2.5 lg:px-3.5 py-2 lg:py-2.5 min-w-[44px] lg:min-w-[56px] text-center shadow-lg`}>
-                  <p className={`text-xl lg:text-2xl font-mono font-black ${i === 2 ? 'text-primary-light' : 'text-white'}`}>{pad(t.v)}</p>
+                <div className="relative bg-gradient-to-b from-slate-800 to-slate-900 border border-slate-700 rounded-lg px-2.5 lg:px-3.5 py-2 lg:py-2.5 min-w-[44px] lg:min-w-[56px] text-center shadow-lg">
+                  <p className="text-xl lg:text-2xl font-mono font-black text-white">{pad(t.v)}</p>
                   <p className="text-slate-500 text-[7px] lg:text-[9px] font-semibold uppercase tracking-wider mt-0.5">{t.l}</p>
                 </div>
               </div>

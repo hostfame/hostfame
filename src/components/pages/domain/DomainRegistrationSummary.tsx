@@ -73,7 +73,7 @@ export default function DomainRegistrationSummary() {
           return (
             <li
               key={idx}
-              className="group relative rounded-2xl border border-border-light-gray bg-card-background p-6 shadow-sm backdrop-blur-md transition-all duration-300 hover:-translate-y-1 hover:shadow-lg flex flex-col"
+              className="group relative rounded-2xl border border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900 p-6 shadow-sm transition-all duration-300 hover:shadow-lg flex flex-col"
             >
               {/* Accent ring on hover */}
               <span
@@ -87,7 +87,7 @@ export default function DomainRegistrationSummary() {
                   <Icon size={26} className="text-teal-600" />
                 </span>
                 {item.note ? (
-                  <span className="rounded-full border border-teal-900/10 bg-white/60 px-2 py-0.5 text-[11px] font-medium text-primary-dark backdrop-blur">
+                  <span className="rounded-full border border-teal-500/20 bg-teal-500/10 px-2 py-0.5 text-[11px] font-medium text-teal-600 dark:text-teal-400">
                     {item.note}
                   </span>
                 ) : null}

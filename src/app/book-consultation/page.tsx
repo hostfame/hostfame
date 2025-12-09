@@ -2,6 +2,7 @@
 
 import React, { useEffect } from "react";
 import { FiCalendar, FiClock, FiCheckCircle, FiUsers, FiHeadphones, FiAward } from "react-icons/fi";
+import Navbar from "@/components/navbar/Navbar";
 
 export default function BookConsultationPage() {
   useEffect(() => {
@@ -53,26 +54,27 @@ export default function BookConsultationPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-background">
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-br from-primary-dark via-primary to-primary-dark py-16 sm:py-24 overflow-hidden">
-        {/* Background decoration */}
+    <>
+      {/* Hero Section with Navbar inside */}
+      <section className="relative banner-bg overflow-hidden">
+        <Navbar isTransparent />
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary-light/20 via-transparent to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
-        
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center">
-            <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
-              <FiCalendar className="text-primary-light" />
-              <span className="text-white/90 text-sm font-medium">Free 15-Minute Consultation</span>
+        <div className="py-16 sm:py-24">
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center">
+              <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6">
+                <FiCalendar className="text-primary-light" />
+                <span className="text-white/90 text-sm font-medium">Free 15-Minute Consultation</span>
+              </div>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
+                Book Your Free Consultation
+              </h1>
+              <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto">
+                Let our experts help you find the perfect hosting solution for your business. 
+                Schedule a free consultation call today.
+              </p>
             </div>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4">
-              Book Your Free Consultation
-            </h1>
-            <p className="text-lg sm:text-xl text-white/80 max-w-2xl mx-auto">
-              Let our experts help you find the perfect hosting solution for your business. 
-              Schedule a free consultation call today.
-            </p>
           </div>
         </div>
       </section>
@@ -203,6 +205,6 @@ export default function BookConsultationPage() {
           </div>
         </div>
       </section>
-    </main>
+    </>
   );
 }

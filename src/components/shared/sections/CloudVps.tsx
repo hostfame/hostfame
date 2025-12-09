@@ -43,7 +43,7 @@ export default function CloudVps() {
 
   return (
     <section
-      className="w-full rounded-2xl !z-50 border p-6 md:p-10 shadow-sm bg-white-background border-border-light-gray text-text"
+      className="w-full rounded-2xl !z-50 border p-6 md:p-10 pt-8 md:pt-12 shadow-sm bg-white-background border-border-light-gray text-text"
       aria-label="VPS pricing"
     >
       {/* Headline */}

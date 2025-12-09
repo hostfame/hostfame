@@ -86,7 +86,7 @@ export const webHostingPricingBdtData: PricingData = {
               // description: "Entry-level memory allocation that supports basic websites, blogs, or landing pages.",
             },
             {
-              name: "20 IOPS",
+              name: "5 IO",
               included: true
               // description: "Handles basic input/output operations for small-scale sites with light traffic.",
             },
@@ -363,7 +363,7 @@ export const webHostingPricingBdtData: PricingData = {
               // description: "Enhanced memory allocation for heavier themes, plugins, and caching systems.",
             },
             {
-              name: "100 IOPS",
+              name: "20 IO",
               included: true
               // description: "Increased disk operations capacity for smoother performance and reliability.",
             },
@@ -640,7 +640,7 @@ export const webHostingPricingBdtData: PricingData = {
               // description: "Plenty of memory for demanding sites, caching, and intensive plugins or frameworks."
             },
             {
-              name: "200 IOPS",
+              name: "50 IO",
               included: true
               // description: "Handles large data loads with high disk operation speeds for smooth performance."
             },

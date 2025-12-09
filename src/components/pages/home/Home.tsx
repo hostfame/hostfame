@@ -83,7 +83,11 @@ const Home = () => {
       </SectionWrapper>
 
       <SectionWrapper className="my-12 lg:my-16">
-        <DataCenters />
+        <WhyChooseHostFame />
+      </SectionWrapper>
+
+      <SectionWrapper className="my-12 lg:my-16">
+        <HostingPlan />
       </SectionWrapper>
 
       <SectionWrapper className="my-12 lg:my-16">
@@ -91,11 +95,7 @@ const Home = () => {
       </SectionWrapper>
 
       <SectionWrapper className="my-12 lg:my-16">
-        <WhyChooseHostFame />
-      </SectionWrapper>
-
-      <SectionWrapper className="my-12 lg:my-16">
-        <HostingPlan />
+        <DataCenters />
       </SectionWrapper>
 
       <SectionWrapper className="my-12 lg:my-16">

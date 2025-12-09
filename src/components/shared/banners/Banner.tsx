@@ -2,6 +2,7 @@ import React, { ReactNode } from "react";
 import Image from "next/image";
 import { CtaButton, CtaButtonProps } from "../html/CtaButton";
 import { BannerTimer } from "./BannerTimer";
+import { CentralBannerTimer } from "./CentralBannerTimer";
 import { IoCheckmark } from "react-icons/io5";
 import SectionWrapper from "../wrappers/SectionWrapper";
 import Navbar from "@/components/navbar/Navbar";
@@ -35,6 +36,8 @@ export type BannerProps = {
 
   /** Countdown */
   countdownTarget?: Date | number | string;
+  /** Use central synchronized timer (auto-restarts) */
+  useCentralTimer?: boolean;
 
   /** Layout/Styling */
   className?: string;
@@ -63,6 +66,7 @@ export const Banner: React.FC<BannerProps> = ({
   // bgGradient = "linear-gradient(278deg, #008081 16%, #069999 98%)",
   cta,
   countdownTarget,
+  useCentralTimer = false,
   className = "",
   containerClassName = "",
   lists = [],
@@ -81,7 +85,7 @@ export const Banner: React.FC<BannerProps> = ({
 }) => {
   return (
     <section
-      className={`banner-bg  justify-center -mt-[1px] items-center w-full text-white bg-no-repeat overflow-hidden ${promoTemplate ? " " : ""
+      className={`banner-bg  justify-center -mt-[1px] items-center w-full text-white bg-no-repeat overflow-hidden min-h-screen ${promoTemplate ? " " : ""
         } ${heightClassName} ${className}`}
       style={{
         backgroundPosition: "left center, center center",
@@ -144,7 +148,8 @@ export const Banner: React.FC<BannerProps> = ({
             </ul>
           )}
 
-          {typeof countdownTarget !== "undefined" && (
+          {useCentralTimer && <CentralBannerTimer />}
+          {!useCentralTimer && typeof countdownTarget !== "undefined" && (
             <BannerTimer target={countdownTarget} />
           )}
 

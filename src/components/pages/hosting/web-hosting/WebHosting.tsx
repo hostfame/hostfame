@@ -15,7 +15,7 @@ import WhiteButton from "@/components/shared/html/WhiteButton";
 import Image from "next/image";
 import WebhostingPricing from "./WebhostingPricing";
 import SupportBanner from "@/components/shared/sections/SupportBanner";
-import { BannerTimer } from "@/components/shared/banners/BannerTimer";
+import { CentralBannerTimer } from "@/components/shared/banners/CentralBannerTimer";
 
 const WebHosting = () => {
   return (
@@ -73,7 +73,7 @@ const WebHosting = () => {
             </div>
 
             {/* Add the timer here OR keep your existing placement */}
-            <BannerTimer rollingCycleHours={13} />
+            <CentralBannerTimer />
           </section>
         }
         ctaSection={<WebHostingCtaSection />}

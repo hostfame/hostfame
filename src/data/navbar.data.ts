@@ -20,7 +20,7 @@ export const navItems = [
       // },
       {
         label: "WordPress Hosting",
-        description: "Fully Managed WordPress",
+        description: "Fully Managed",
         href: "/wordpress-hosting",
         icon: "wordpress",
       },
@@ -60,7 +60,7 @@ export const navItems = [
       },
       {
         label: "VPS Hosting",
-        description: "High Performance Server",
+        description: "Highly Optimized",
         // description: "",
         href: "/vps-hosting",
         icon: "dedicated",

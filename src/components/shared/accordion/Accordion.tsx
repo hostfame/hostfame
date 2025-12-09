@@ -54,7 +54,7 @@ export const Accordion: React.FC<AccordionProps> = ({
   return (
     <div
       className={
-        "divide-y divide-slate-200/70 overflow-hidden rounded-xl transition-all duration-300 ease-out " +
+        "divide-y divide-gray-200 dark:divide-gray-800 overflow-hidden rounded-xl transition-all duration-300 ease-out " +
         (className ?? "")
       }
     >
@@ -93,7 +93,7 @@ export const AccordionItem: React.FC<{
         {/* plus icon rotates when open */}
         <span
           className={`inline-flex h-7 w-7 items-center justify-center rounded-full transition-all duration-300 ${
-            isOpen ? "bg-gray-background text-teal-600" : "bg-transparent text-teal-600"
+            isOpen ? "bg-gray-100 dark:bg-gray-800 text-teal-600" : "bg-transparent text-teal-600"
           }`}
           aria-hidden
         >

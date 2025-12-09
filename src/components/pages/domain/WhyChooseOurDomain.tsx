@@ -11,7 +11,7 @@ import {
 
 // All content lives here so it’s easy to localize or tweak copy later
 const content = {
-  eyebrow: "Why choose our registrar",
+  eyebrow: "Why choose Hostfame",
   title: "Domain search & registration, reimagined",
   intro:
     "Transparent pricing, powerful management, and real humans when you need them. Everything you need to launch with confidence.",
@@ -57,7 +57,7 @@ const content = {
 
 export default function WhyChooseOurDomain() {
   return (
-    <section className="bg-gradient-to-br from-primary via-primary-dark to-primary-dark my-12 md:my-16">
+    <section className="bg-gradient-to-br from-primary via-primary-dark to-primary-dark">
       <SectionWrapper className="relative isolate overflow-hidden  text-white">
         {/* subtle light texture */}
         {/* <div
@@ -70,7 +70,7 @@ export default function WhyChooseOurDomain() {
         <div className="mx-auto max-w-7xl py-18">
           {/* Header */}
           <div className="mx-auto max-w-3xl text-center">
-            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-medium backdrop-blur">
+            <span className="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-xs font-medium">
               <span className="h-1.5 w-1.5 rounded-full bg-white/70" />
               {content.eyebrow}
             </span>
@@ -120,13 +120,11 @@ function FeatureCard({
           <h3 className="text-white text-base font-semibold tracking-tight">
             {title}
           </h3>
-          <p className="text-description-text mt-1 text-sm/6 text-white/80">
+          <p className="mt-1 text-sm/6 text-white/80">
             {description}
           </p>
         </div>
       </div>
-      {/* Decorative accent */}
-      <div className="pointer-events-none absolute -bottom-6 right-6 h-24 w-24 scale-0 rounded-full bg-white/10 blur-2xl transition duration-300 group-hover:scale-100" />
     </div>
   );
 }

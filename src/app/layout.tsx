@@ -2,10 +2,10 @@ import type { Metadata } from "next";
 import { Urbanist } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/shared/footer/Footer";
-import Navbar from "@/components/navbar/Navbar";
 import { ThemeProvider } from "next-themes";
 import { IpProvider } from "@/providers/IpProvider";
 import { GoogleTagManager } from "@next/third-parties/google";
+import { CountdownProvider } from "@/context/CountdownContext";
 
 const urbanist = Urbanist({
   subsets: ["latin"],
@@ -39,13 +39,15 @@ export default function RootLayout({
         <ThemeProvider
           attribute={"data-theme"}
           defaultTheme="light"
+          forcedTheme="light"
           storageKey="app-theme"
           disableTransitionOnChange
         >
           <IpProvider>
-            <Navbar />
-            {children}
-            <Footer />
+            <CountdownProvider>
+              {children}
+              <Footer />
+            </CountdownProvider>
           </IpProvider>
         </ThemeProvider>
       </body>
