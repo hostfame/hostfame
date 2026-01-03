@@ -4,15 +4,14 @@ import SectionWrapper from "@/components/shared/wrappers/SectionWrapper";
 
 export default function FaqSection() {
   return (
-    <section className=" space-y-8 my-12 lg:my-16">
+    <section className=" space-y-8 mt-6 mb-12 lg:mt-8 lg:mb-16">
       <CenteredSectionHeader
         title={
           <>
             FAQs: <span className="font-bold">Your questions, our answers</span>
           </>
         }
-        description="Here you will find answers to the most frequently asked questions. If
-          you still need assistance, feel free to contact our live support team."
+        description="Here you will find answers to the most frequently asked questions. If you still need assistance, feel free to contact our live support team."
       />
 
       {/* Below: interactive board */}

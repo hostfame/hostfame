@@ -7,60 +7,61 @@ import { IoDocumentTextOutline } from "react-icons/io5";
 import { LuBriefcaseBusiness } from "react-icons/lu";
 import { MdOutlinePolicy } from "react-icons/md";
 
-export const getIcon = (iconType: string) => {
-  const iconClass = "w-4 h-4 text-gray-500";
+export const getIcon = (iconType: string, className?: string) => {
+  const iconClass = className || "w-4 h-4";
+  const iconStyle = { color: '#111827' } as React.CSSProperties;
   switch (iconType) {
     case "server":
       return (
-        <BiServer />
+        <BiServer className={iconClass} style={iconStyle} />
       );
     case "cloud":
       return (
-        <AiOutlineCloudServer />
+        <AiOutlineCloudServer className={iconClass} style={iconStyle} />
       );
     case "wordpress":
       return (
-        <FaWordpressSimple />
+        <FaWordpressSimple className={iconClass} style={iconStyle} />
       );
     case "reseller":
       return (
-        <LuBriefcaseBusiness />
+        <LuBriefcaseBusiness className={iconClass} style={iconStyle} />
       );
     case "bdix":
       return (
-        <FaNetworkWired />
+        <FaNetworkWired className={iconClass} style={iconStyle} />
       );
     case "turbo":
       return (
-        <AiOutlineThunderbolt />
+        <AiOutlineThunderbolt className={iconClass} style={iconStyle} />
       );
     case "vps":
       return (
-        <AiOutlineCloudServer />
+        <AiOutlineCloudServer className={iconClass} style={iconStyle} />
       );
     case "dedicated":
       return (
-        <HiOutlineServer />
+        <HiOutlineServer className={iconClass} style={iconStyle} />
       );
     case "policy":
       return (
-        <MdOutlinePolicy />
+        <MdOutlinePolicy className={iconClass} style={iconStyle} />
       );
     case "terms":
       return (
-        <IoDocumentTextOutline />
+        <IoDocumentTextOutline className={iconClass} style={iconStyle} />
       );
     case "career":
       return (
-        <LuBriefcaseBusiness />
+        <LuBriefcaseBusiness className={iconClass} style={iconStyle} />
       );
     case "contact":
       return (
-        <FiPhone />
+        <FiPhone className={iconClass} style={iconStyle} />
       );
     default:
       return (
-        <svg className={iconClass} fill="none" stroke="black" viewBox="0 0 24 24">
+        <svg className={iconClass} fill="none" stroke="currentColor" viewBox="0 0 24 24" style={iconStyle}>
           <circle cx="12" cy="12" r="10" />
         </svg>
       );

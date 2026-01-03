@@ -1,6 +1,6 @@
 import React from "react";
 import SectionWrapper from "@/components/shared/wrappers/SectionWrapper";
-import { Banner } from "@/components/shared/banners/Banner";
+import Hero1 from "@/components/shared/hero/Hero1";
 import WordPressHostingFeatures from "./WordPressHostingFeatures";
 import WhyChooseWordpressHosting from "@/components/shared/sections/WhyChooseWordpressHosting";
 import {
@@ -24,23 +24,25 @@ import SearchDomainName from "../web-hosting/searchDomainName/SearchDomainName";
 const WordPressHosting = () => {
   return (
     <section className="">
-      <Banner
-        topTitle={{
-          content: "WordPress Hosting",
-          className: " bg-white/10 backdrop-blur-md",
-        }}
+      <Hero1
+        badge="WordPress Hosting"
         title={
           <>
             Turbocharge Your
             <br className="hidden md:block" />
-            <span className="block">WordPress Website</span>
+            <span className="bg-gradient-to-r from-white via-primary-extralight to-white bg-clip-text text-transparent">WordPress Website</span>
           </>
         }
-        image="/assets/hero-img-1.webp"
-        waveImage="/assets/web-hosting/banner-left-wave.png"
-        useCentralTimer
-        ctaSection={<WordPressHostingCtaSection />}
-        description={`Blazing speed, free backups, and real human support optimized for creators, consultants, and small businesses who rely on WordPress to grow.`}
+        description="Blazing speed, free backups, and real human support optimized for creators, consultants, and small businesses who rely on WordPress to grow."
+        primaryCta={{ text: "View Pricing", href: "#wordpress-hosting-pricing" }}
+        secondaryCta={{ 
+          text: (
+            <>
+              Starting @ <DualPricing price="$19.99" pricebdt="৳1,999" /> /mo
+            </>
+          ), 
+          href: "#wordpress-hosting-pricing" 
+        }}
       />
 
       {/* <SectionWrapper className=" my-12 md:my-16">
@@ -80,24 +82,5 @@ const WordPressHosting = () => {
   );
 };
 
-function WordPressHostingCtaSection() {
-  return (
-    <section className="flex items-center gap-6">
-      <WhiteButton
-        href="#wordpress-hosting-pricing"
-        className="!rounded !text-nowrap"
-      >
-        View Pricing
-      </WhiteButton>
-      <Link
-        href={"#wordpress-hosting-pricing"}
-        className="flex text-base md:text-lg items-center text-center max-lg:underline lg:gap-x-2 text-white font-bold underline"
-      >
-        Starting @ <DualPricing price="$19.99" pricebdt="৳1,999" />
-        /mo
-      </Link>
-    </section>
-  );
-}
 
 export default WordPressHosting;

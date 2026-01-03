@@ -34,7 +34,7 @@ export default function DomainTransferSection() {
   const countryCode = useIpProviderContextValue();
 
   return (
-    <section className="bg-gradient-to-br from-gray-50 to-gray-100/50 dark:from-gray-900 dark:to-gray-950">
+    <section className="bg-gradient-to-br from-gray-50 to-gray-100/50">
       <SectionWrapper className="py-16 md:py-20">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Content */}
@@ -83,14 +83,14 @@ export default function DomainTransferSection() {
 
           {/* Right - Transfer Steps */}
           <div className="relative">
-            <div className="bg-white dark:bg-gray-900 rounded-3xl p-8 shadow-xl border border-gray-100 dark:border-gray-800">
+            <div className="bg-white rounded-3xl p-8 shadow-xl border border-gray-100">
               <h3 className="text-xl font-bold text-text mb-6 text-center">
                 4 Simple Steps to Transfer
               </h3>
               
               <div className="space-y-4">
                 {transferSteps.map((step, idx) => (
-                  <div key={idx} className="flex items-center gap-4 p-4 rounded-xl bg-gray-50 dark:bg-gray-800 hover:bg-primary/5 dark:hover:bg-primary/10 transition-colors">
+                  <div key={idx} className="flex items-center gap-4 p-4 rounded-xl bg-gray-50 hover:bg-primary/5 transition-colors">
                     <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary to-primary-dark flex items-center justify-center text-white font-bold text-lg shrink-0">
                       {step.step}
                     </div>

@@ -1,5 +1,5 @@
 import React from "react";
-import { Banner } from "@/components/shared/banners/Banner";
+import Hero1 from "@/components/shared/hero/Hero1";
 import SectionWrapper from "@/components/shared/wrappers/SectionWrapper";
 import HostingFlashSale from "./HostingFlashSale";
 import ExperienceHostfameAdvantage from "./ExperienceHostfameAdvantage";
@@ -27,9 +27,10 @@ export const classNameForWhiteHover =
 const Home = () => {
   return (
     <section>
-      <Banner
-        topTitle={{
-          icon: (
+      <PromoTopBar />
+      <Hero1
+        badge={
+          <span className="inline-flex items-center gap-2 px-6 py-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 text-sm font-semibold">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="24"
@@ -42,31 +43,34 @@ const Home = () => {
                 fill="#FFC107"
               ></path>
             </svg>
-          ),
-          content: "Upto 72% Off on Web Hosting",
-          className: " border rounded-full",
-        }}
+            Upto 72% Off on Web Hosting
+          </span>
+        }
         title={
           <>
-            Reliable Hosting.
-            <br className="hidden md:block" />
-            <span className="block">Backed by Humans.</span>
+            <span className="whitespace-nowrap">Get Ultra-Fast Hosting</span>
+            <br />
+            <span className="bg-gradient-to-r from-white via-primary-extralight to-white bg-clip-text text-transparent whitespace-nowrap">with 24/7 Expert Support</span>
           </>
         }
-        waveImage="/assets/web-hosting/banner-left-wave.png"
-        // countdownTarget={new Date(Date.now() + 15 * 60 * 60 * 1000)} // 15 hours
-        // cta={{
-        //   text: "Claim Offer Now",
-        // }}
         description="Launch your site in minutes with unmatched speed, free backups, and real human help anytime you need it."
-        imageProps={{ width: 400, height: 400 }}
-        // heightClassName="h-fit xl:min-h-[580px] xl:max-h-[630px]"
-        ctaSection={<HomeCtaSection />}
-        imageComponent={<AnimationBanner />}
-        promoTemplate={<PromoTopBar />}
-      />
+        primaryCta={{ text: "Start My Hosting Now", href: "#different-hosting-plans" }}
+        secondaryCta={{ text: "Faster Website Starts Here", href: "/web-hosting" }}
+      >
+        <div className="flex gap-3 items-center justify-center mt-6">
+          <Image
+            src={"/assets/dollar.svg"}
+            alt={"dollar"}
+            width={30}
+            height={30}
+          />
+          <p className="text-sm md:text-base text-white/80">
+            30-Day Money-Back Guarantee. Cancel Anytime.
+          </p>
+        </div>
+      </Hero1>
 
-      <SectionWrapper id="different-hosting-plans" className="my-16 lg:my-24">
+      <SectionWrapper id="different-hosting-plans" className="mt-8 mb-16 lg:mt-12 lg:mb-24">
         <DifferentHostingPlans data={differentHostingPlansData} />
       </SectionWrapper>
 
@@ -78,7 +82,7 @@ const Home = () => {
         <DomainHero />
       </SectionWrapper>
 
-      <SectionWrapper className="my-16 lg:my-24">
+      <SectionWrapper className="mt-8 mb-16 lg:mt-12 lg:mb-24">
         <HostingForGrowth data={hostingForGrowthData} />
       </SectionWrapper>
 
@@ -86,19 +90,19 @@ const Home = () => {
         <WhyChooseHostFame />
       </SectionWrapper>
 
-      <SectionWrapper className="my-16 lg:my-24">
+      <SectionWrapper className="mt-8 mb-16 lg:mt-12 lg:mb-24">
         <HostingPlan />
       </SectionWrapper>
 
-      <SectionWrapper className="my-16 lg:my-24">
+      <SectionWrapper className="mt-8 mb-16 lg:mt-12 lg:mb-24">
         <HostingFlashSale />
       </SectionWrapper>
 
-      <SectionWrapper className="my-16 lg:my-24">
+      <SectionWrapper className="mt-8 mb-16 lg:mt-12 lg:mb-24">
         <DataCenters />
       </SectionWrapper>
 
-      <SectionWrapper className="my-16 lg:my-24">
+      <SectionWrapper className="mt-8 mb-16 lg:mt-12 lg:mb-24">
         <ExperienceHostfameAdvantage />
       </SectionWrapper>
 
@@ -107,79 +111,5 @@ const Home = () => {
   );
 };
 
-export function AnimationBanner() {
-  return (
-    <div
-      className={` lg:justify-center w-full max-w-md md:max-w-lg lg:max-w-xl  relative flex flex-col  items-center justify-end h-full`}
-    >
-      <Image
-        src={"/assets/hosting-01.svg"}
-        alt={"Home Banner"}
-        width={600}
-        height={600}
-        className={`object-contain   w-[50%]  top-bottom2`}
-        priority
-      />
-      <Image
-        src={"/assets/hosting.svg"}
-        width={600}
-        height={600}
-        alt="Hosting illustration"
-        className="absolute  -bottom-[30%]"
-      />
-      <Image
-        src={"/assets/left.svg"}
-        width={50}
-        height={100}
-        alt="Hosting illustration"
-        className="absolute  h-[50%] left-0 top-0 top-bottom"
-      />
-      <Image
-        src={"/assets/left.svg"}
-        width={50}
-        height={100}
-        alt="Hosting illustration"
-        className="absolute  h-[50%] right-0  -bottom-8 bottom-top"
-      />
-      <Image
-        src={"/assets/top.svg"}
-        width={50}
-        height={100}
-        alt="Hosting illustration"
-        className="absolute  h-[50%] left-8 -bottom-8 bottom-top"
-      />
-    </div>
-  );
-}
-
-function HomeCtaSection() {
-  return (
-    <section className=" space-y-6">
-      <section className=" flex gap-4 items-center justify-center lg:justify-start flex-wrap">
-        <WhiteButton href="#different-hosting-plans">Start My Hosting Now</WhiteButton>
-        
-        <Link
-          href={"/web-hosting"}
-          className="flex  text-lg items-center text-center max-lg:underline lg:gap-x-2 text-white font-bold"
-        >
-          Faster Website Starts Here
-          {/* <BsArrowRightShort size={24} className="hidden lg:block" /> */}
-        </Link>
-      </section>
-
-      <section className="flex gap-3 items-center justify-center lg:justify-start">
-        <Image
-          src={"/assets/dollar.svg"}
-          alt={"dollar"}
-          width={30}
-          height={30}
-        />
-        <p className="text-sm md:text-base text-nowrap">
-          30-Day Money-Back Guarantee. Cancel Anytime.
-        </p>
-      </section>
-    </section>
-  );
-}
 
 export default Home;

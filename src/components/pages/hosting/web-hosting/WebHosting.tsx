@@ -3,7 +3,7 @@ import SearchDomainName from "./searchDomainName/SearchDomainName";
 import SectionWrapper from "@/components/shared/wrappers/SectionWrapper";
 import WebHostingPartners from "./WebHostingPartners";
 import MoneyBack from "./MoneyBack";
-import { Banner } from "@/components/shared/banners/Banner";
+import Hero1 from "@/components/shared/hero/Hero1";
 import ReviewsSection from "./reviews/ReviewSection";
 import AdvancedFeatures from "./advance-features/AdvanceFeatures";
 import FaqSection from "../faqs/FaqSection";
@@ -20,69 +20,21 @@ import { CentralBannerTimer } from "@/components/shared/banners/CentralBannerTim
 const WebHosting = () => {
   return (
     <section className="">
-      {/* <PromoTopBar /> */}
-      <Banner
-        topTitle={{
-          content: "Limited Offer: 72% OFF Hosting",
-          className: " bg-white/10 backdrop-blur-md"
-        }}
-        heightClassName="min-h-screen"
+      <Hero1
+        badge="Limited Offer: 72% OFF Hosting"
         title={
           <>
-            Get Ultra-Fast
-            <br className="hidden md:block" />
-            <span className="">Hosting With 24/7 </span>
-            <br className="hidden md:block" />
-            <span className="">Expert Support</span>
+            <span className="whitespace-nowrap">Get Ultra-Fast Hosting</span>
+            <br />
+            <span className="bg-gradient-to-r from-white via-primary-extralight to-white bg-clip-text text-transparent whitespace-nowrap">with 24/7 Expert Support</span>
           </>
         }
-        image="/assets/web-hosting/webhero.webp"
-        imageProps={{ width: 700, height: 700 }}
-        classNameForImage="w-full max-w-[550px] xl:max-w-[650px]"
-        waveImage="/assets/web-hosting/banner-left-wave.png"
-        // countdownTarget={new Date(Date.now() + 15 * 60 * 60 * 1000)} // 15 hours
-        description={
-          <section className=" space-y-6">
-            <p>
-              Perfect for local businesses, stores, and pros <br />
-              who need speed, uptime, and real human help.
-            </p>
-
-            <div className="flex gap-8 md:gap-20">
-              <div className=" flex items-center gap-1 md:gap-2">
-                <Image
-                  src={"/assets/diamond.svg"}
-                  alt={"diamond"}
-                  width={40}
-                  height={40}
-                />
-                <p className="text-sm md:text-base">
-                  24/7 Chat & Call <br />
-                  30 Day Refund
-                </p>
-              </div>
-              <div className=" flex items-center gap-1 md:gap-2">
-                <Image
-                  src={"/assets/wordpress.svg"}
-                  alt={"wordpress"}
-                  width={40}
-                  height={40}
-                />
-                <p className="text-sm md:text-base">
-                  One Click WordPress <br /> No Hassle. No Stress.
-                </p>
-              </div>
-            </div>
-
-            {/* Add the timer here OR keep your existing placement */}
-            <CentralBannerTimer />
-          </section>
-        }
-        ctaSection={<WebHostingCtaSection />}
+        description={<CentralBannerTimer />}
+        primaryCta={{ text: "Get Started - Risk Free", href: "#web-hosting-pricing" }}
       />
       {/* <HostingBenefits /> */}
 
-      <SectionWrapper id="web-hosting-pricing" className="my-12 lg:my-16">
+      <SectionWrapper id="web-hosting-pricing" className="mt-24 lg:mt-32 mb-12 lg:mb-16">
         <WebhostingPricing />
       </SectionWrapper>
 
@@ -129,13 +81,4 @@ const WebHosting = () => {
   );
 };
 
-function WebHostingCtaSection() {
-  return (
-    <section className="flex items-center gap-6">
-      <WhiteButton href="#web-hosting-pricing" className="">
-        Get Started - Risk Free
-      </WhiteButton>
-    </section>
-  );
-}
 export default WebHosting;

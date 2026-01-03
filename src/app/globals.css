@@ -131,12 +131,84 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+/* Force light mode - override any dark mode that might be applied */
+html[data-theme="dark"],
+html.dark,
+[data-theme="dark"],
+.dark {
+  /* Override dark mode variables with light mode values */
+  --color-background: var(--background) !important;
+  --color-primary-adaptive: #2f9995 !important;
+  --color-white-background: white !important;
+  --color-text: black !important;
+  --color-text-accent: #111827 !important;
+  --color-description-text: #6b7280 !important;
+  --color-dark-description-text: #3b3f46 !important;
+  --color-gray-background: #f8fafc !important;
+  --color-border-light-gray: #e5e7eb !important;
+  --color-border-dark-gray: #3f3f46 !important;
+  --color-toggle: #1e2a3b !important;
+  --color-toggle-text: white !important;
+  --color-offer-bg: #ffcb2d !important;
+  --color-slider-background: white !important;
+  --color-card-background: white !important;
+  --color-offer-text: #364153 !important;
+  --color-dark-text: #4c5671 !important;
+  --color-primary-to-white: var(--primary) !important;
+}
+
+/* Disable all Tailwind dark mode classes */
+html[data-theme="dark"] *,
+html.dark *,
+[data-theme="dark"] *,
+.dark * {
+  background-color: inherit !important;
+  border-color: inherit !important;
+  color: inherit !important;
+}
+
+/* Force light backgrounds for common dark mode classes */
+.dark\:bg-gray-900,
+.dark\:bg-gray-800,
+.dark\:bg-gray-700,
+[data-theme="dark"] .dark\:bg-gray-900,
+[data-theme="dark"] .dark\:bg-gray-800,
+[data-theme="dark"] .dark\:bg-gray-700 {
+  background-color: white !important;
+}
+
+.dark\:border-gray-800,
+.dark\:border-gray-700,
+[data-theme="dark"] .dark\:border-gray-800,
+[data-theme="dark"] .dark\:border-gray-700 {
+  border-color: #e5e7eb !important;
+}
+
+.dark\:text-white,
+.dark\:text-gray-200,
+.dark\:text-gray-300,
+.dark\:text-gray-400,
+[data-theme="dark"] .dark\:text-white,
+[data-theme="dark"] .dark\:text-gray-200,
+[data-theme="dark"] .dark\:text-gray-300,
+[data-theme="dark"] .dark\:text-gray-400 {
+  color: #111827 !important;
+}
+
+/* Global override - force all elements to use light mode */
+* {
+  color-scheme: light !important;
 }
 
 body {
   /* background: var(--background);
   color: var(--text-foreground); */
   font-family: var(--font-geist), var(--font-geist-fallback), sans-serif;
+  background-color: var(--color-background) !important;
+  color: var(--color-text) !important;
 }
 
 /* Light mode (default) */

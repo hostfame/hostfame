@@ -2,7 +2,7 @@ import React from "react";
 import SectionWrapper from "@/components/shared/wrappers/SectionWrapper";
 import ManagedHostingThatGrows from "@/components/shared/sections/ManagedHostingThatGrows";
 import PrioritySupport from "../support/PrioritySupport";
-import { Banner } from "@/components/shared/banners/Banner";
+import Hero1 from "@/components/shared/hero/Hero1";
 import ReviewsSection from "../hosting/web-hosting/reviews/ReviewSection";
 import HostingForGrowth from "../home/HostingForGrowth";
 import { whatAreSpecialsData } from "@/data/whatAreSpecials.data";
@@ -20,31 +20,27 @@ import SearchDomainName from "../hosting/web-hosting/searchDomainName/SearchDoma
 const ManagedHosting = () => {
   return (
     <section className="">
-      <Banner
-        topTitle={{
-          content: "Managed VPS Hosting",
-          className: " bg-white/10 backdrop-blur-md",
-        }}
+      <Hero1
+        badge="Managed VPS Hosting"
         title={
           <>
             Powerful
             <br className="hidden md:block" />
-            Managed Hosting
+            <span className="bg-gradient-to-r from-white via-primary-extralight to-white bg-clip-text text-transparent">Managed Hosting</span>
             <br className="hidden md:block" />
             Built for Growth
           </>
         }
-        image="/assets/manage-hosting.png"
-        waveImage="/assets/web-hosting/banner-left-wave.png"
-        classNameForImage="w-[80%]"
-        // countdownTarget={new Date(Date.now() + 15 * 60 * 60 * 1000)} // 15 hours
-        // cta={{
-        //   text: "Claim Offer Now",
-        // }}
         description="Managed Hosting You Can Actually Count On"
-        imageProps={{ width: 400, height: 400 }}
-        // heightClassName="h-fit xl:h-[660px] xl:max-h-[660px]"
-        ctaSection={<VpsHostingCtaSection />}
+        primaryCta={{ text: "View Plan", href: "#manage-hosting-pricing" }}
+        secondaryCta={{ 
+          text: (
+            <>
+              Starting @ <DualPricing price="$27.99" pricebdt="৳2,799" /> /mo
+            </>
+          ), 
+          href: "#manage-hosting-pricing" 
+        }}
       />
       <SectionWrapper className="my-12 lg:my-16" id="manage-hosting-pricing">
         <Pricing data={manageHostingPricingData} toggleButton={true} />
@@ -78,21 +74,5 @@ const ManagedHosting = () => {
   );
 };
 
-export function VpsHostingCtaSection() {
-  return (
-    <section className="flex max-[460px]:flex-col flex-row items-center gap-6">
-      <WhiteButton href="#manage-hosting-pricing" className="!rounded">
-        View Plan
-      </WhiteButton>
-      <Link
-        href={"#"}
-        className="flex text-lg items-center text-center border-b  lg:gap-x-2 text-white font-bold"
-      >
-        Starting @ <DualPricing price="$27.99" pricebdt="৳2,799" />
-        /mo
-      </Link>
-    </section>
-  );
-}
 
 export default ManagedHosting;

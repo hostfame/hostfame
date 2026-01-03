@@ -20,9 +20,11 @@ export default function ToggleTheme({
 
   useEffect(() => {
     if (!mounted) return;
-    const current = theme === "system" ? systemTheme ?? resolvedTheme : theme;
-    if (current) localStorage.setItem("app-theme-mirror", current);
-  }, [theme, systemTheme, resolvedTheme, mounted]);
+    // Force light mode - always set to light
+    localStorage.setItem("app-theme", "light");
+    localStorage.setItem("app-theme-mirror", "light");
+    document.documentElement.setAttribute("data-theme", "light");
+  }, [mounted]);
 
   if (!mounted) {
     return (
@@ -37,23 +39,27 @@ export default function ToggleTheme({
     );
   }
 
-  const isDark = (resolvedTheme ?? theme) === "dark";
+  // Always show light mode icon since we're forcing light mode
+  const isDark = false;
 
   return (
     <button
       aria-label="Toggle theme"
       type="button"
-      onClick={() => setTheme(isDark ? "light" : "dark")}
-      title={`Switch to ${isDark ? "light" : "dark"} mode`}
+      onClick={(e) => {
+        e.preventDefault();
+        // Prevent theme toggle - force light mode
+        setTheme("light");
+        localStorage.setItem("app-theme", "light");
+        localStorage.setItem("app-theme-mirror", "light");
+        document.documentElement.setAttribute("data-theme", "light");
+      }}
+      title="Light mode (always enabled)"
       className={`p-2 rounded-full border transition 
         border-border-dark-gray/70 
         text-text ${className}`}
     >
-      {isDark ? (
-        <FiSun className={`w-4 lg:w-5 h-4 lg:h-5 text-text ${classNameForSunIcon}`} />
-      ) : (
-        <FiMoon className={`w-4 lg:w-5 h-4 lg:h-5 text-text ${classNameForMoonIcon}`} />
-      )}
+      <FiSun className={`w-4 lg:w-5 h-4 lg:h-5 text-text ${classNameForSunIcon}`} />
     </button>
   );
 }
