@@ -31,13 +31,30 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
     }
   };
 
-  // track scroll for transparent / sticky behavior
+  // track scroll for transparent / sticky behavior - optimized with RAF
   useEffect(() => {
-    const onScroll = () =>
-      setScrollY(window.scrollY || window.pageYOffset || 0);
+    let rafId: number;
+    let lastScrollY = 0;
+
+    const onScroll = () => {
+      if (rafId) return; // Skip if already scheduled
+      rafId = requestAnimationFrame(() => {
+        const currentScroll = window.scrollY || window.pageYOffset || 0;
+        // Only update state if threshold crossed (reduces re-renders)
+        if ((lastScrollY <= 70 && currentScroll > 70) || (lastScrollY > 70 && currentScroll <= 70)) {
+          setScrollY(currentScroll);
+        }
+        lastScrollY = currentScroll;
+        rafId = 0;
+      });
+    };
+
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+      if (rafId) cancelAnimationFrame(rafId);
+    };
   }, []);
 
   // close menus on desktop resize
@@ -52,13 +69,22 @@ const Navbar = ({ isTransparent }: { isTransparent?: boolean }) => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // lock body scroll when drawer open
+  // lock body scroll when drawer open - improved cleanup
   useEffect(() => {
     if (!isOpen) return;
-    const prev = document.body.style.overflow;
+
+    const scrollY = window.scrollY;
+    document.body.style.position = "fixed";
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.width = "100%";
     document.body.style.overflow = "hidden";
+
     return () => {
-      document.body.style.overflow = prev;
+      document.body.style.position = "";
+      document.body.style.top = "";
+      document.body.style.width = "";
+      document.body.style.overflow = "";
+      window.scrollTo(0, scrollY);
     };
   }, [isOpen]);
 
