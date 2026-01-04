@@ -101,7 +101,7 @@ export const webHostingPricingBdtData: PricingData = {
               // description: "SSH is not available on this plan. Upgrade to Pro or Business for advanced developer tools.",
             },
             {
-              name: "1-Click WP Installer",
+              name: "1-Click WordPress Installer",
               included: true
               // description: "Install WordPress instantly and start building your site in just a few minutes.",
             },
@@ -378,7 +378,7 @@ export const webHostingPricingBdtData: PricingData = {
               // description: "Enables developers to manage files, deployments, and scripts securely from the command line.",
             },
             {
-              name: "1-Click WP Installer",
+              name: "1-Click WordPress Installer",
               included: true
               // description: "Set up WordPress quickly and start building without technical complexity.",
             },
@@ -655,7 +655,7 @@ export const webHostingPricingBdtData: PricingData = {
               // description: "Full command-line access for developers to deploy and manage advanced projects."
             },
             {
-              name: "1-Click WP Installer",
+              name: "1-Click WordPress Installer",
               included: true
               // description: "Install WordPress instantly and launch enterprise projects quickly."
             },
@@ -1002,7 +1002,7 @@ export const wordpressHostingBdtPricingData: PricingData = {
               // description: "White-glove transfer of files and database with minimal downtime. Coordinated cutover windows and verification checklists. Ideal for time-sensitive launches."
             },
             {
-              name: "1-Click WP Installer",
+              name: "1-Click WordPress Installer",
               included: true
               // description: "Surfaces actionable recommendations for metadata, images, and critical CSS/JS. Prioritizes changes that move Core Web Vitals and search visibility. Reports show before/after impact."
             },
@@ -1313,7 +1313,7 @@ export const wordpressHostingBdtPricingData: PricingData = {
               // description: "White-glove transfer of files and database with minimal downtime. Coordinated cutover windows and verification checklists. Ideal for time-sensitive launches."
             },
             {
-              name: "1-Click WP Installer",
+              name: "1-Click WordPress Installer",
               included: true
               // description: "Surfaces actionable recommendations for metadata, images, and critical CSS/JS. Prioritizes changes that move Core Web Vitals and search visibility. Reports show before/after impact."
             },
@@ -1623,7 +1623,7 @@ export const wordpressHostingBdtPricingData: PricingData = {
               // description: "White-glove transfer of files and database with minimal downtime. Coordinated cutover windows and verification checklists. Ideal for time-sensitive launches."
             },
             {
-              name: "1-Click WP Installer",
+              name: "1-Click WordPress Installer",
               included: true
               // description: "Surfaces actionable recommendations for metadata, images, and critical CSS/JS. Prioritizes changes that move Core Web Vitals and search visibility. Reports show before/after impact."
             },

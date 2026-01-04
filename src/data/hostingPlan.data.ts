@@ -18,10 +18,10 @@ export const hostingPlans: HostingPlanProps[] = [
     name: "Web Hosting",
     startingAtLabel: "Starting At",
     price: "$1.99",
-    priceBdt: "৳199",
+    priceBdt: "৳299",
     priceSuffix: "/ Mo*",
     cta: "See Plans",
-    storage: "50 GB",
+    storage: "10 GB",
     email: "Unlimited",
     href: "/web-hosting",
     features: {

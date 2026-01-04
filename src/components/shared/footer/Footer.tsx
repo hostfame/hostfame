@@ -219,7 +219,7 @@ const Footer: React.FC = () => {
       <div className="relative z-10 border-t border-white/10 bg-primary-dark/50 dark:bg-black/50">
         <div className="mx-auto max-w-7xl px-[2%] py-5">
           <div className="flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/60">
-            <p>© 2025 Hostfame. All Rights Reserved.</p>
+            <p>© {new Date().getFullYear()} Hostfame. All Rights Reserved.</p>
             <div className="flex items-center gap-6">
               <Link href="/terms-of-services" className="hover:text-white transition-colors">
                 Terms

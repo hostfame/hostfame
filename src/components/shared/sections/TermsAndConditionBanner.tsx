@@ -215,14 +215,14 @@ export default function TermsOfServiceBanner({
         <Navbar isTransparent />
       </div>
 
-      <SectionWrapper className="relative mx-auto pt-20 pb-12 md:pt-24 md:pb-16">
+      <SectionWrapper className="relative mx-auto py-20 md:py-24">
         <div className="grid items-center gap-8 md:grid-cols-[1.3fr_.9fr]">
           {/* Left side - content */}
           <div className="flex flex-col h-full justify-between">
             <div className="space-y-4">
-              <h1 className="mb-4 flex items-center gap-3 text-3xl font-semibold tracking-tight text-white sm:text-4xl md:text-5xl">
-                <span className="inline-grid place-items-center rounded-2xl bg-white/15 p-2 backdrop-blur">
-                  <FiFileText className="h-7 w-7 sm:h-8 sm:w-8" />
+              <h1 className="mb-4 flex items-center gap-2.5 text-lg font-semibold tracking-tight text-white sm:text-xl md:text-2xl">
+                <span className="inline-grid place-items-center rounded-lg bg-white/15 p-1.5 backdrop-blur">
+                  <FiFileText className="h-4 w-4 sm:h-5 sm:w-5" />
                 </span>
                 {data.title}
               </h1>

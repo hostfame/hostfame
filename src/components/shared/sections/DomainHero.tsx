@@ -35,7 +35,7 @@ export default function DomainHero() {
           <LuGlobe className="w-5 h-5" />
           <span className="text-sm font-bold tracking-wide uppercase">Claim Your Territory</span>
         </div>
-        
+
         <h1 className="mx-auto max-w-3xl text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-black leading-tight tracking-tight">
           {data.title}
         </h1>
@@ -60,11 +60,10 @@ export default function DomainHero() {
                   key={item.tld}
                   className="transition-all duration-300 ease-in-out"
                 >
-                  <DomainLink className="group relative inline-flex w-[132px] hover:w-[153px] items-center gap-2 rounded-full border border-white/30 bg-white/15 px-4 py-2 text-sm text-white backdrop-blur-sm transition-all duration-300 ease-in-out hover:bg-white/25 hover:-translate-y-1 hover:shadow-lg">
+                  <DomainLink className="group relative inline-flex items-center gap-2 rounded-full border border-white/30 bg-white/15 px-4 py-2 text-sm text-white backdrop-blur-sm transition-all duration-300 ease-in-out hover:bg-white/25 hover:-translate-y-1 hover:shadow-lg">
                     <span className="font-bold">{item.tld}</span>
-                    Only
-                    <DualPricing price={item.price} pricebdt={item.priceBdt} />
-                    <FiSearch className="text-xs absolute group-hover:static opacity-0 scale-75 transition-all duration-300 ease-in-out group-hover:opacity-70 group-hover:scale-100 shrink-0" />
+                    <span className="whitespace-nowrap">Only <DualPricing price={item.price} pricebdt={item.priceBdt} /></span>
+                    <FiSearch className="text-xs opacity-0 scale-75 transition-all duration-300 ease-in-out group-hover:opacity-70 group-hover:scale-100 shrink-0 ml-1" />
                   </DomainLink>
                 </li>
               ))}

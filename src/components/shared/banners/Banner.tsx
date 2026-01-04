@@ -85,7 +85,7 @@ export const Banner: React.FC<BannerProps> = ({
 }) => {
   return (
     <section
-      className={`banner-bg justify-center -mt-[1px] items-center w-full text-white bg-no-repeat overflow-hidden min-h-screen relative ${promoTemplate ? " " : ""
+      className={`banner-bg flex flex-col -mt-[1px] w-full text-white bg-no-repeat overflow-hidden min-h-screen relative ${promoTemplate ? " " : ""
         } ${heightClassName} ${className}`}
       style={{
         backgroundPosition: "left center, center center",
@@ -102,83 +102,90 @@ export const Banner: React.FC<BannerProps> = ({
       <Navbar isTransparent />
       {promoTemplate && promoTemplate}
 
-      <SectionWrapper
-        className={`relative max-md:pt-20 max-md:pb-16 md:py-28 grid lg:grid-cols-2 gap-10 items-center ${containerClassName}`}
-      >
-        {/* Content - all animations happen together */}
-        <div className="space-y-7 text-center lg:text-left flex flex-col justify-center items-center lg:items-start animate-fade-in-up">
-          <p
-            className={`flex gap-2.5 items-center font-bold w-fit px-5 py-3 backdrop-blur-md rounded-full border border-white/30 bg-white/10 ${topTitle.className}`}
-          >
-            {topTitle.icon}{" "}
-            <span className={`text-lg tracking-wide ${topTitle.classNameForContent}`}>
-              {topTitle.content}
-            </span>
-          </p>
+      {/* Flex container for vertical centering */}
+      <div className="flex-1 flex items-center">
+        <SectionWrapper
+          className={`relative w-full grid lg:grid-cols-[1.1fr_0.9fr] gap-8 lg:gap-12 items-center py-8 md:py-12 ${containerClassName}`}
+        >
+          {/* Content - refined spacing and hierarchy */}
+          <div className="space-y-5 text-center lg:text-left flex flex-col justify-center items-center lg:items-start animate-fade-in-up">
+            {/* Badge - tighter connection to headline */}
+            <p
+              className={`flex gap-2 items-center font-semibold w-fit px-4 py-2 backdrop-blur-md rounded-full border border-white/30 bg-white/10 mb-3 ${topTitle.className}`}
+            >
+              {topTitle.icon}{" "}
+              <span className={`text-base tracking-wide ${topTitle.classNameForContent}`}>
+                {topTitle.content}
+              </span>
+            </p>
 
-          <h1
-            className={`text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black leading-[1.05] tracking-tight ${classNameForTitle}`}
-          >
-            {title}
-          </h1>
+            {/* Headline - bold and clear */}
+            <h1
+              className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-[1.08] tracking-tight ${classNameForTitle}`}
+            >
+              {title}
+            </h1>
 
-          {description && (
-            <div className="text-lg md:text-xl max-w-xl mx-auto lg:mx-0 text-white/90 leading-relaxed">
-              {description}
-            </div>
-          )}
+            {/* Description - optimal line length for readability */}
+            {description && (
+              <p className="text-base md:text-lg max-w-md lg:max-w-lg text-white/85 leading-relaxed">
+                {description}
+              </p>
+            )}
 
-          {lists.length > 0 && (
-            <ul className="space-y-3 flex flex-col items-center lg:items-start">
-              {lists.map((list) => (
-                <li
-                  key={list}
-                  className="flex items-center justify-center lg:justify-start gap-x-3 text-base md:text-lg"
-                >
-                  <span className="w-7 h-7 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/30">
-                    <IoCheckmark className="text-sm" />
-                  </span>
-                  {list}
-                </li>
-              ))}
-            </ul>
-          )}
+            {lists.length > 0 && (
+              <ul className="space-y-2.5 flex flex-col items-center lg:items-start pt-1">
+                {lists.map((list) => (
+                  <li
+                    key={list}
+                    className="flex items-center justify-center lg:justify-start gap-x-2.5 text-sm md:text-base"
+                  >
+                    <span className="w-6 h-6 rounded-full bg-white/20 backdrop-blur-sm flex items-center justify-center border border-white/30">
+                      <IoCheckmark className="text-xs" />
+                    </span>
+                    {list}
+                  </li>
+                ))}
+              </ul>
+            )}
 
-          {useCentralTimer && <CentralBannerTimer />}
-          {!useCentralTimer && typeof countdownTarget !== "undefined" && (
-            <BannerTimer target={countdownTarget} />
-          )}
+            {useCentralTimer && <CentralBannerTimer />}
+            {!useCentralTimer && typeof countdownTarget !== "undefined" && (
+              <BannerTimer target={countdownTarget} />
+            )}
 
-          {cta && !ctaSection && (
-            <div className="pt-4">
-              <CtaButton {...cta} className={`btn-adventure text-lg px-10 py-5 shadow-2xl shadow-black/20 ${cta.className ?? ""}`} />
-            </div>
-          )}
+            {/* Primary CTA - prominent and action-oriented */}
+            {cta && !ctaSection && (
+              <div className="pt-2">
+                <CtaButton {...cta} className={`btn-adventure text-base md:text-lg px-8 py-4 shadow-xl shadow-black/25 hover:shadow-2xl hover:scale-[1.02] transition-all duration-200 ${cta.className ?? ""}`} />
+              </div>
+            )}
 
-          {ctaSection && ctaSection}
-        </div>
-
-        {/* Right visual */}
-        {image && !imageComponent && (
-          <div
-            className={`hidden lg:flex justify-center lg:justify-end relative w-full max-w-md md:max-w-lg lg:max-w-xl animate-fade-in-up ${classNameForImageWrapper}`}
-          >
-            <div className="relative">
-              <Image
-                src={image}
-                alt={imageAlt}
-                width={imageProps?.width || 600}
-                height={imageProps?.height || 600}
-                className={`object-contain h-auto drop-shadow-2xl ${classNameForImage || "w-full"}`}
-                priority
-              />
-            </div>
+            {ctaSection && <div className="pt-2">{ctaSection}</div>}
           </div>
-        )}
-        <div className="hidden lg:block animate-fade-in-up">
-          {imageComponent}
-        </div>
-      </SectionWrapper>
+
+          {/* Right visual - refined positioning */}
+          {image && !imageComponent && (
+            <div
+              className={`hidden lg:flex justify-center lg:justify-center relative w-full animate-fade-in-up ${classNameForImageWrapper}`}
+            >
+              <div className="relative max-w-[480px] xl:max-w-[520px]">
+                <Image
+                  src={image}
+                  alt={imageAlt}
+                  width={imageProps?.width || 500}
+                  height={imageProps?.height || 500}
+                  className={`object-contain h-auto drop-shadow-2xl ${classNameForImage || "w-full"}`}
+                  priority
+                />
+              </div>
+            </div>
+          )}
+          <div className="hidden lg:flex justify-center animate-fade-in-up">
+            {imageComponent}
+          </div>
+        </SectionWrapper>
+      </div>
     </section>
   );
 };

@@ -23,12 +23,12 @@ const Contact = () => {
         cta={{
           text: "Claim Offer Now"
         }}
-        
+
         description="Have a question, need support, or just want to chat? Our team is available 24/7 to make sure you get the help you need,  quickly and easily."
         // heightClassName="h-fit lg:h-[550px] lg:max-h-[550px]"
         ctaSection={<ContactCtaSection />}
         imageProps={{ width: 400, height: 400 }}
-        image="/assets/contactbanner.svg"
+        image="/assets/banner__support__image.svg"
         // imageComponent={<AnimationBanner />}
         classNameForTitle="text-nowrap"
       />
@@ -60,7 +60,7 @@ const Contact = () => {
 //     <div
 //       className={` w-full relative  max-lg:mt-[14%] flex justify-center items-center  max-sm:scale-90`}
 //     >
-      
+
 //       <Image
 //         src={"/assets/banner__contact__image-sm3.svg"}
 //         width={70}
@@ -164,7 +164,7 @@ function ContactMediums() {
           Choose your preferred way to reach us. We&apos;re available 24/7 to help you.
         </p>
       </div>
-      
+
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {contactMediums.map((medium) => (
           <a
@@ -176,13 +176,13 @@ function ContactMediums() {
           >
             {/* Background gradient on hover */}
             <div className={`absolute inset-0 bg-gradient-to-br ${medium.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`} />
-            
+
             <div className="relative">
               {/* Icon */}
               <div className={`w-14 h-14 ${medium.iconBg} rounded-2xl flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition-transform duration-300`}>
                 <medium.icon className="w-7 h-7 text-white" />
               </div>
-              
+
               {/* Content */}
               <h3 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                 {medium.title}
@@ -190,7 +190,7 @@ function ContactMediums() {
               <p className="text-muted-foreground text-sm mb-5">
                 {medium.description}
               </p>
-              
+
               {/* Button */}
               <div className={`inline-flex items-center gap-2 bg-gradient-to-r ${medium.color} ${medium.hoverColor} text-white font-semibold px-5 py-2.5 rounded-xl transition-all duration-300`}>
                 <span>{medium.buttonText}</span>

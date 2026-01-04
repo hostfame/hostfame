@@ -66,6 +66,7 @@ export default function DomainSearchBox({
                 {ext}
               </option>
             ))}
+            <option value="others">others</option>
           </select>
           <span
             className="pointer-events-none absolute right-3 top-1/2 -translate-y-1/2 text-gray-500"
