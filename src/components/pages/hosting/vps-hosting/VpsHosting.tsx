@@ -32,13 +32,13 @@ const VpsHosting = () => {
         }
         description="Power your apps, websites, and projects with full root access, SSD storage, and 24/7 real human support."
         primaryCta={{ text: "View Plan", href: "#vps-hosting-pricing" }}
-        secondaryCta={{ 
+        secondaryCta={{
           text: (
             <>
-              Starting @ <DualPricing price="$19.99" pricebdt="৳1,999" /> /mo
+              Starting @ <DualPricing price="$9.99" pricebdt="৳999" /> /mo
             </>
-          ), 
-          href: "#vps-hosting-pricing" 
+          ),
+          href: "#vps-hosting-pricing"
         }}
       />
 

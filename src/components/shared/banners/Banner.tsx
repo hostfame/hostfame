@@ -103,7 +103,7 @@ export const Banner: React.FC<BannerProps> = ({
       {promoTemplate && promoTemplate}
 
       <SectionWrapper
-        className={`relative max-md:pt-8 max-md:pb-16 md:py-20 grid lg:grid-cols-2 gap-10 items-center ${containerClassName}`}
+        className={`relative max-md:pt-20 max-md:pb-16 md:py-28 grid lg:grid-cols-2 gap-10 items-center ${containerClassName}`}
       >
         {/* Content - all animations happen together */}
         <div className="space-y-7 text-center lg:text-left flex flex-col justify-center items-center lg:items-start animate-fade-in-up">

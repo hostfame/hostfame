@@ -24,7 +24,7 @@ const footerLinks = {
     { label: "Domain Pricing", href: "/domain" },
   ],
   company: [
-    { label: "About Us", href: "/about-us" },
+    { label: "About Us", href: "/about" },
     { label: "Contact", href: "/contact" },
     { label: "Support", href: "/support" },
     { label: "System Status", href: "/status" },

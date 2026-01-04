@@ -215,7 +215,7 @@ export default function TermsOfServiceBanner({
         <Navbar isTransparent />
       </div>
 
-      <SectionWrapper className="relative mx-auto pt-6 pb-12 md:pt-10 md:pb-16">
+      <SectionWrapper className="relative mx-auto pt-20 pb-12 md:pt-24 md:pb-16">
         <div className="grid items-center gap-8 md:grid-cols-[1.3fr_.9fr]">
           {/* Left side - content */}
           <div className="flex flex-col h-full justify-between">
